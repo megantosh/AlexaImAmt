@@ -1,0 +1,3 @@
+Remove items from repo (.gitignore)
+https://stackoverflow.com/questions/11124053/accidentally-committed-idea-directory-files-into-git
+https://plugins.jetbrains.com/plugin/7495--ignore
