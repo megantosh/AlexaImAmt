@@ -92,3 +92,10 @@ lambda fct has higher order than lex
 we want to map  each service (Perso) with an intent > each intent will have its slots (zeit)
 
 IAM: Identity access management
+
+
+
+
+Vor- und Nachteile:
+
+Slots cannot be imported, add manually
