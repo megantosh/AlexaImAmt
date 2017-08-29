@@ -100,3 +100,4 @@ Vor- und Nachteile:
 
 Slots cannot be imported, add manually
 undo/redo within intent not possible, within code only possible with restoration
+user has to spell the slot name properly? works bad in german/english
