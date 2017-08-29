@@ -99,3 +99,4 @@ IAM: Identity access management
 Vor- und Nachteile:
 
 Slots cannot be imported, add manually
+undo/redo within intent not possible, within code only possible with restoration
