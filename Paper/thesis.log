@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  3 FEB 2018 13:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  6 FEB 2018 01:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -861,15 +861,10 @@ emplate/TUBerlin_Logo_rot_hell.pdf> <./gfx/template/aot_logo.pdf>])
 (./input/00b_abstract_ack.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 31.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)) [2
+) [2
 
 
-]
-(./thesis.toc [3
+] (./thesis.toc [3
 
 ])
 \tf@toc=\write6
@@ -879,7 +874,8 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [5
+
+[5
 
 
 ] (./thesis.lot)
@@ -889,8 +885,7 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
  [6
 
 
-]
-(./input/01_introduction.tex
+] (./input/01_introduction.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
@@ -938,123 +933,133 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
 [3]) (./input/02_background.tex [4] [5]
 Chapter 2.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 39.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+\OT1/pcr/m/n/12 de / virtueller-[]assistent / virtueller-[]assistent-[]606279 .
+ php$[]
+ []
+
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 39.
+ine 42.
 
-Overfull \hbox (9.78773pt too wide) in paragraph at lines 39--39
+Overfull \hbox (9.78773pt too wide) in paragraph at lines 42--42
 [][][][]\OT1/ptm/m/n/12 explain 
  []
 
 
-Overfull \hbox (9.78773pt too wide) in paragraph at lines 39--39
+Overfull \hbox (9.78773pt too wide) in paragraph at lines 42--42
 [][][][]\OT1/ptm/m/n/12 explain 
  []
 
 
-Overfull \hbox (9.78773pt too wide) in paragraph at lines 39--39
+Overfull \hbox (9.78773pt too wide) in paragraph at lines 42--42
 [][][][]\OT1/ptm/m/n/12 explain 
  []
 
 
-Overfull \hbox (9.78773pt too wide) in paragraph at lines 39--39
+Overfull \hbox (9.78773pt too wide) in paragraph at lines 42--42
 [][][][]\OT1/ptm/m/n/12 explain 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 42.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 45.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
-LaTeX Font Info:    Try loading font information for U+mvs on input line 42.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
+LaTeX Font Info:    Try loading font information for U+mvs on input line 45.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/marvosym/umvs.fd)
-Overfull \hbox (11.9834pt too wide) in paragraph at lines 43--43
+Overfull \hbox (11.9834pt too wide) in paragraph at lines 46--46
 [][][][]\OT1/ptm/m/n/12 missing 
  []
 
 
-Overfull \hbox (5.29977pt too wide) in paragraph at lines 43--43
+Overfull \hbox (5.29977pt too wide) in paragraph at lines 46--46
 \OT1/ptm/m/n/12 quired 
  []
 
 
-Overfull \hbox (39.95668pt too wide) in paragraph at lines 43--43
+Overfull \hbox (39.95668pt too wide) in paragraph at lines 46--46
 \OT1/ptm/m/n/12 pers[]A\OMS/cmsy/m/n/12 {\OT1/ptm/m/n/12 nliche 
  []
 
 
-Overfull \hbox (11.28763pt too wide) in paragraph at lines 43--43
+Overfull \hbox (11.28763pt too wide) in paragraph at lines 46--46
 \OT1/ptm/m/n/12 sprache 
  []
 
 
-Overfull \hbox (11.9834pt too wide) in paragraph at lines 43--43
+Overfull \hbox (11.9834pt too wide) in paragraph at lines 46--46
 [][][][]\OT1/ptm/m/n/12 missing 
  []
 
 
-Overfull \hbox (5.29977pt too wide) in paragraph at lines 43--43
+Overfull \hbox (5.29977pt too wide) in paragraph at lines 46--46
 \OT1/ptm/m/n/12 quired 
  []
 
 
-Overfull \hbox (39.95668pt too wide) in paragraph at lines 43--43
+Overfull \hbox (39.95668pt too wide) in paragraph at lines 46--46
 \OT1/ptm/m/n/12 pers[]A\OMS/cmsy/m/n/12 {\OT1/ptm/m/n/12 nliche 
  []
 
 
-Overfull \hbox (11.28763pt too wide) in paragraph at lines 43--43
+Overfull \hbox (11.28763pt too wide) in paragraph at lines 46--46
 \OT1/ptm/m/n/12 sprache 
  []
 
 
-Overfull \hbox (11.9834pt too wide) in paragraph at lines 43--43
+Overfull \hbox (11.9834pt too wide) in paragraph at lines 46--46
 [][][][]\OT1/ptm/m/n/12 missing 
  []
 
 
-Overfull \hbox (5.29977pt too wide) in paragraph at lines 43--43
+Overfull \hbox (5.29977pt too wide) in paragraph at lines 46--46
 \OT1/ptm/m/n/12 quired 
  []
 
 
-Overfull \hbox (39.95668pt too wide) in paragraph at lines 43--43
+Overfull \hbox (39.95668pt too wide) in paragraph at lines 46--46
 \OT1/ptm/m/n/12 pers[]A\OMS/cmsy/m/n/12 {\OT1/ptm/m/n/12 nliche 
  []
 
 
-Overfull \hbox (11.28763pt too wide) in paragraph at lines 43--43
+Overfull \hbox (11.28763pt too wide) in paragraph at lines 46--46
 \OT1/ptm/m/n/12 sprache 
  []
 
 
-Overfull \hbox (11.9834pt too wide) in paragraph at lines 43--43
+Overfull \hbox (11.9834pt too wide) in paragraph at lines 46--46
 [][][][]\OT1/ptm/m/n/12 missing 
  []
 
 
-Overfull \hbox (5.29977pt too wide) in paragraph at lines 43--43
+Overfull \hbox (5.29977pt too wide) in paragraph at lines 46--46
 \OT1/ptm/m/n/12 quired 
  []
 
 
-Overfull \hbox (39.95668pt too wide) in paragraph at lines 43--43
+Overfull \hbox (39.95668pt too wide) in paragraph at lines 46--46
 \OT1/ptm/m/n/12 pers[]A\OMS/cmsy/m/n/12 {\OT1/ptm/m/n/12 nliche 
  []
 
 
-Overfull \hbox (11.28763pt too wide) in paragraph at lines 43--43
+Overfull \hbox (11.28763pt too wide) in paragraph at lines 46--46
 \OT1/ptm/m/n/12 sprache 
  []
-
-
-LaTeX Warning: Marginpar on page 6 moved.
 
 [6
 
-] [7]) (./input/04_main_part_2.tex
-Underfull \hbox (badness 10000) in paragraph at lines 108--1
+]
+
+LaTeX Warning: Marginpar on page 7 moved.
+
+[7]) (./input/04_main_part_2.tex
+Underfull \hbox (badness 10000) in paragraph at lines 111--1
 
  []
 
@@ -1065,12 +1070,28 @@ Chapter 3.
 ]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--28
+Underfull \hbox (badness 10000) in paragraph at lines 15--21
+[]$\OT1/pcr/m/n/12 https : / / en . wikipedia . org / wiki / Amazon _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--21
+\OT1/pcr/m/n/12 Alexa$[] []$https : / / medium . com / @robinjewsbury /
+ []
+
+
+Overfull \hbox (170.94608pt too wide) in paragraph at lines 15--21
+\OT1/pcr/m/n/12 how-[]to-[]create-[]bots-[]and-[]skills-[]for-[]facebook-[]mess
+enger-[]and-[]amazon-[]echo-[]4a03935eeca1$[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--29
 []$\OT1/pcr/m/n/12 https : / / stackoverflow . com / questions / 42982159 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--28
+Underfull \hbox (badness 10000) in paragraph at lines 25--29
 []$\OT1/pcr/m/n/12 https : / / aws . amazon . com / about-[]aws / whats-[]new /
  2017 / 09 /
  []
@@ -1080,24 +1101,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--28
 ]) (./input/05_evaluation.tex [11]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+\OT1/ptm/m/n/12 https://www.wien.gv.at/bot/ http://www.vienna.at/wienbot-chatbo
+t-der-stadt-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+\OT1/ptm/m/n/12 wien-informiert-als-virtueller-beamter/5590853 https://digitalc
+ity.wien/wienbot-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
 [12
 
 ]) (./input/06_conclusion.tex
-Underfull \hbox (badness 10000) in paragraph at lines 68--1
+Underfull \hbox (badness 10000) in paragraph at lines 72--1
 
  []
 
@@ -1128,13 +1161,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 19ECA8DB553BCAAF373DC85122AC4B22;2779.
+(rerunfilecheck)             Checksum: F268A6B3519BDC77C77489B14B024937;2795.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
  20495 strings out of 492985
  369380 string characters out of 6132585
- 464928 words of memory out of 5000000
+ 467947 words of memory out of 5000000
  23581 multiletter control sequences out of 15000+600000
  21479 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1145,10 +1178,10 @@ ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
 ve/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb>
-Output written on thesis.pdf (23 pages, 116468 bytes).
+Output written on thesis.pdf (23 pages, 117622 bytes).
 PDF statistics:
- 395 PDF objects out of 1000 (max. 8388607)
- 358 compressed objects within 4 object streams
+ 401 PDF objects out of 1000 (max. 8388607)
+ 364 compressed objects within 4 object streams
  73 named destinations out of 1000 (max. 500000)
  375 words of extra memory for PDF output out of 10000 (max. 10000000)
 
