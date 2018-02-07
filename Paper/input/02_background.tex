@@ -1,0 +1,143 @@
+\chapter{Background}
+%labels will help you to reference to certain images, tables, chapters, section, and so on...
+\label{background}
+\todo{related work: Wienbot / Singapore}
+
+
+
+\subsection{Topology of Bots}
+\textcolor{magenta}{
+	-use cases and purpose categories (leisure, productivity) - quick survey of respective 'AppStores'
+	-\href{https://www.npr.org/podcasts/510308/hidden-brain}{platforms}
+	-physical locations (home, office, car, phone, in a business)
+}
+
+\subsection{Information bots}
+\textcolor{magenta}{
+	- mention available service types (information system as a "webpage/database")\\
+	- vs an interactive bot that gives you customized information on demand
+	hier soll der D115 Anwendungsfall "Beauskunftung" kurz erl\"autert werden\\
+}
+\subsection{social bots}
+\textcolor{magenta}{
+	- with advantages / disadvantages\\
+	- fake news / online reviews\\
+}
+
+\subsection{bot-type}
+\textcolor{magenta}{
+	- use of ML
+	Handyversicherungsbeispiel\\
+	- from business perspective, the bot is aiming to sell more polices,\\ 
+	- the bot tries to determine if there is a nuance in the user's answer (machine acting as a judge!)
+	- e.g. ``how did the phone fall off``
+	- MKTG - Aufwand
+}
+
+%DELETEME: This chapter will cover all of your background information and related work. Background and related work are directly related to your thesis. Please do not place irrelevant content here which is a common mistake. Citing will be handled in the appendices.
+%
+%DELETEME: Background represents underlying knowledge that is required to understand your work. The expected knowledge level of your readers can be set to the one of a bachelor or master student who just finished his studies (depending on what kind of thesis you are writing). This means that you do not need to describe how computers work, unless your thesis topic is about this. Everything that an avarage alumni from your field of studies should know does not need to be described. It turn, background information that is very complex and content-wise very near to you problem, can be placed in the main parts. Everyting else should be written here. Note: it is important to connect each presented topic to your thesis. E.g. if you present the ISO/OSI layer model you should also write that this is needed to understand the protocols you plan to develop in the main parts.
+%
+%DELETEME: Related work respresents results from work that handled the same or a similar problem that you are addressing. This work might have used a different approach or might not have been that successful. Finding a paper / work that solved your problem in the same way you were planning to do is not good and you should contact your supervizor for solving this issue. Again, each paper / work has to be connected to your approach: other papers might have not chosen an optimal solution; they might not have been taking care of essential aspects; they might have chosen a different approach and you believe, yours will work better ...
+
+%###################################################################################
+%###################### Topic A             ########################################
+%###################################################################################
+\section{D115}
+\textcolor{magenta}{
+	- summarize infobroschuere\_ BMI08324\_screen\_barrierefrei.pdf\\
+	-Use case im Detail\\
+	-Welche Daten gibt es?\\	  
+	-Was sind die Erwartungen?\\ 	
+	- wie kann man die G\"ute des Systems beurteilen?\\   
+	- Meist sollte man in diesem Kapitel die L\"osung schon im Auge haben, um die Erwartungen so zu formulieren, dass die L\"osung auch geeignet ist?\\ 
+}
+
+
+%###################################################################################
+%###################### Topic B             ########################################
+%###################################################################################
+\section{Frameworks and Data Structures \textcolor{magenta}{(change title)}}
+
+\textcolor{magenta}{-AL: Ich w\"urde erst etwas die Algorithmen und Datenstrukturen (Textanalyse, JSON, ggf. Graphen beschreiben. 
+	-AL: Anschlie{\ss}end die Frameworks vorstellen\\ 
+	-AL: Wichtig ist: Aus den Beschreibungen eine Schlussfolgerung ableiten, welche Art von L\"osung entwickelt werden soll.\\
+for current bot: \\
+- Lucene \textbf{as the golden standard}: spell check, unscharfe suche, Tika / detect language / ... \\
+- Solr
+- explain what's an intent, whats a slot
+\url{https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}
+\url{https://www.itdz-berlin.de/}
+}
+
+
+\subsection{Intents and Slots} \todo{explain json}
+provided in JSON for value lookup, there are
+\begin{itemize}
+	\item 616 Intents as \lstinline|data|, each containing
+	\todo{missing variables e.g. are required papers, flag: persönliche Vorsprache ja nein, ...}
+	\begin{itemize}
+		\item \lstinline|<string> responsibility| denoting in which city halls a service is available
+		\item \lstinline|<boolean> responsibility_all| a flag set to true in case the service is available in all local authority offices / service points
+		\item \lstinline|<HTML list string> description| not unified and includes text
+		\item  \lstinline|<string> not unified and might need to have an \lstinline|int| added to it and set to 0 in case service is free
+		\item \lstinline|<int>residence|
+		\item \lstinline|<int>id|
+		\item \lstinline|representation|
+		\item \lstinline|<long>leika|
+		\item \lstinline|<string> process_time| need to derive minimum, average and maximum service times instead of a string, as well as conditions 
+		\item \lstinline|<string> name| the name of the service that would make sense to a human
+		\item \lstinline|<node> appointment| with 
+		\begin{itemize}
+			\item \lstinline|link| (Key value with URL to /terminveinbarung page) - check if orphan or if it is for each beh\"orde and in that case how it gets the right one
+		\end{itemize}	 
+		\item \lstinline|<node> locations| 
+		\begin{itemize}
+			\item \lstinline|hint|
+			\item \lstinline|<int> location| one of the 12 authorities
+			\item \lstinline|url| of that service at that authority
+			\item \lstinline|<node> appointment| (a second one)
+			\begin{itemize}
+				\item 
+			\end{itemize}
+		\end{itemize}
+		
+		\item \lstinline|<node> onlineprocessing|
+		\item \lstinline|<node> prerequisites|
+		\item \lstinline|<node> links|
+		\item \lstinline|<node> relation|
+		\item \lstinline|<node> legal|
+		\item \lstinline|<node> requirements|
+		\item \lstinline|<node> forms|
+		\item \lstinline|<node> authorities|
+		\item \lstinline|<node> meta|										
+	\end{itemize}
+\end{itemize}
+
+\section{currently deployed bot}
+
+
+\textcolor{magenta}{
+- dienstleistungen.json structure (finding the info through hierarchical nodes)\\
+- interpreting the nodes as intents
+- traversing the nodes (one level up then to next node)
+- no session/no persistence
+%x	x	x
+%ooo ooo ooo
+%try first, go to second (kosten, zeit, rechtsgrundlage, ..) skip one if it has already been suggested.. hinweis..that is built into the xml
+%
+%the live service is different than the one at DAI
+}
+
+%###################################################################################
+%###################### Topic C             ########################################
+%###################################################################################
+\section{Implementation Possibilities}
+
+\textcolor{magenta}{
+- structure of Hitlist on berlin.de  is provided by ITDZ -  as opposed to Versicherungsfirma z.B (ML tries to detect irregular patterns in case customer is lying).
+- unfortunately forums vs. FAQs did not work. if i want assistance, i want the customer to tell me the model number - and forums have mostly Schrott!\\
+what the bot curently achieved is at least not give wrong answers, sometimes says idk but it doesnt confuse u. same attitude like in german shops (nur unpassende antworten sind frustrierend!\\
+\\
+-Vorgehensweise: XML -> index \"uber Lucene - >solr knoten...based on sth like when i say \" am 10. august\" it gets me masalan events..aha august ist ein monat, monat relates to calendar, calendar relates to events
+}
