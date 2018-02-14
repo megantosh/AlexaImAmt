@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{zensus}
 {Amt f\"ur Statistik Berlin-Brandenburg}.
@@ -8,11 +8,34 @@
   August 2017.
 \newblock Accessed on 06.02.2018.
 
+\bibitem{alexapc18}
+{Brian Roemmele, Dave Isbitski}.
+\newblock {Episode 018 - A Voice First Future with Brian Roemmele}.
+\newblock {\em Alexa Dev Chat Podcast}, 11 2017.
+\newblock Accessed on 13/02/2018.
+
+\bibitem{wiki:nlp}
+Wikipedia contributors.
+\newblock History of natural language processing --- wikipedia{,} the free
+  encyclopedia, 2017.
+\newblock [Accessed 14 February 2018].
+
+\bibitem{wiki:gartnerreports}
+Wikipedia contributors.
+\newblock Usage share of operating systems --- wikipedia{,} the free
+  encyclopedia, 2018.
+\newblock [Accessed 14 February 2018].
+
 \bibitem{d115}
 {Gesch\"afts- und Koordinierungsstelle 115 im Bundesministerium des Innern}.
 \newblock \url{
   {https://www.115.de/SharedDocs/Publikationen/Service_Publikationen/Infomaterialien/infobroschuere\_\%20BMI08324\_screen\_barrierefrei.pdf?\_\_blob=publicationFile&v=8}},
   November 2013.
+
+\bibitem{voiceneurons}
+Tobias Grossmann, Regine Oberecker, Stefan Koch, and Angela D~Friederici.
+\newblock The developmental origins of voice processing in the human brain.
+\newblock 65:852--8, 03 2010.
 
 \bibitem{Starwars}
 {Judy Goldsmith and Nicholas Mattei}.

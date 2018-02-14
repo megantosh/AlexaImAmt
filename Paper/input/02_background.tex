@@ -1,38 +1,69 @@
 \chapter{Background}
 %labels will help you to reference to certain images, tables, chapters, section, and so on...
 \label{background}
-\todo{related work: Wienbot / Singapore}
 
+%###################################################################################
+%###################### Related work  ########################################
+%###################################################################################
 
-
-\subsection{Topology of Bots}
-\textcolor{magenta}{
-	-use cases and purpose categories (leisure, productivity) - quick survey of respective 'AppStores'
-	-\href{https://www.npr.org/podcasts/510308/hidden-brain}{platforms}
-	-physical locations (home, office, car, phone, in a business)
+\section{Related Work}
+\todo{
+	
+	\textbf{by platform:}\\
+	-API.ai\\
+	-Facebook Messenger Chatbots\\
+	-wit.ai\\
+	-motion.ai\\
+	\\
+	
+	\textbf{by purpose}\\
+	\textbf{Information bots}
+	\textcolor{magenta}{
+		- mention available service types (information system as a "webpage/database")\\
+		- vs an interactive bot that gives you customized information on demand
+		hier soll der D115 Anwendungsfall "Beauskunftung" kurz erl\"autert werden\\
+	}
+	\textbf{social bots}\\
+	\textcolor{magenta}{
+		- with advantages / disadvantages\\
+		- fake news / online reviews\\
+	}
+	
+	\textbf{more on AI in bots (optional)}
+	\textcolor{magenta}{
+		- use of ML\\
+		Handyversicherungsbeispiel\\
+		- from business perspective, the bot is aiming to sell more polices,\\ 
+		- the bot tries to determine if there is a nuance in the user's answer (machine acting as a judge!)
+		- e.g. ``how did the phone fall off``
+		- MKTG - Aufwand
+	}
+	
+	
+	\textbf{by use case:}
+	- Wienbot\\
+	- Singapore / LA /...\\
+	
+	
 }
 
-\subsection{Information bots}
-\textcolor{magenta}{
-	- mention available service types (information system as a "webpage/database")\\
-	- vs an interactive bot that gives you customized information on demand
-	hier soll der D115 Anwendungsfall "Beauskunftung" kurz erl\"autert werden\\
-}
-\subsection{social bots}
-\textcolor{magenta}{
-	- with advantages / disadvantages\\
-	- fake news / online reviews\\
+
+
+%###################################################################################
+%###################### State of the Art  ########################################
+%###################################################################################
+\section{State of the Art}
+\todo{	- difference alexa + AVS / Lex \& Polly\\
+
 }
 
-\subsection{bot-type}
-\textcolor{magenta}{
-	- use of ML
-	Handyversicherungsbeispiel\\
-	- from business perspective, the bot is aiming to sell more polices,\\ 
-	- the bot tries to determine if there is a nuance in the user's answer (machine acting as a judge!)
-	- e.g. ``how did the phone fall off``
-	- MKTG - Aufwand
-}
+
+\subsection{Node.js}
+\todo{why node js: event-driven, non-blocking I/O model}
+\subsection{Alexa Skills, Amazon Voice Services}
+\subsection{comparison to Amazon Lex / Amazon Polly}
+
+
 
 %DELETEME: This chapter will cover all of your background information and related work. Background and related work are directly related to your thesis. Please do not place irrelevant content here which is a common mistake. Citing will be handled in the appendices.
 %
@@ -72,7 +103,30 @@ for current bot: \\
 
 
 \subsection{Intents and Slots} \todo{explain json}
+
+%\Tree [.Dienstleistungen.json created [.VP [.V is ] NP ] ]
+%
+%\Tree[.Dienstleistungen.json 	
+%	[.NP [.Det \textit{the} ]
+%		[.N\1 [.N \textit{package} ]]]
+%	[.I\1 [.I \textsc{3sg.Pres} ]
+%		[.VP [.V\1 [.V \textit{is} ]
+%			 	   [.AP [.Deg \textit{really} ]
+%				  		[.A\1 [.A \textit{simple} ]
+%							  \qroof{\textit{to use}}.CP ]]]]]]]
+
 provided in JSON for value lookup, there are
+
+\begin{figure}[h!]
+	\caption{\lstinline|Dienstleistungen.json|  - Primary Nodes}
+	\includegraphics[width=\textwidth]{DLprim}
+\end{figure}
+
+\begin{figure}[h]
+	\caption{\lstinline|Dienstleistungen.json| - secondary Nodes}
+	\includegraphics[width=\textwidth]{DLsec}
+\end{figure}
+
 \begin{itemize}
 	\item 616 Intents as \lstinline|data|, each containing
 	\todo{missing variables e.g. are required papers, flag: persönliche Vorsprache ja nein, ...}
