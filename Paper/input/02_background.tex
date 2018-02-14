@@ -2,34 +2,46 @@
 %labels will help you to reference to certain images, tables, chapters, section, and so on...
 \label{background}
 
+%DELETEME: This chapter will cover all of your background information and related work. Background and related work are directly related to your thesis. Please do not place irrelevant content here which is a common mistake. Citing will be handled in the appendices.
+
+%DELETEME: Related work respresents results from work that handled the same or a similar problem that you are addressing. This work might have used a different approach or might not have been that successful. Finding a paper / work that solved your problem in the same way you were planning to do is not good and you should contact your supervizor for solving this issue. Again, each paper / work has to be connected to your approach: other papers might have not chosen an optimal solution; they might not have been taking care of essential aspects; they might have chosen a different approach and you believe, yours will work better ...
+
 %###################################################################################
 %###################### Related work  ########################################
 %###################################################################################
 
 \section{Related Work}
-\todo{
-	
+\todo{move / remove what is irrelevant
+	\textbf{topology of bots}\\
 	\textbf{by platform:}\\
 	-API.ai\\
 	-Facebook Messenger Chatbots\\
 	-wit.ai\\
 	-motion.ai\\
 	\\
+	\textbf{by category}\\
+	- leisure \\
+	- \href{https://www.forbes.com/sites/tomaslaurinavicius/2017/04/24/facebook-messenger-bots/\#4f61c16a66d8}{fun bots} and more\\
 	
+	- productivity\\
+	- what are classic use cases for their use with prominent examples? Booking tickets (KLM bot)\\
+	
+	- quick survey of respective 'AppStores'\\
+	\\
 	\textbf{by purpose}\\
-	\textbf{Information bots}
+	-physical locations (home, office, car, phone, in a business)\\
+	Information bots\\
 	\textcolor{magenta}{
 		- mention available service types (information system as a "webpage/database")\\
 		- vs an interactive bot that gives you customized information on demand
 		hier soll der D115 Anwendungsfall "Beauskunftung" kurz erl\"autert werden\\
 	}
-	\textbf{social bots}\\
+	social bots\\
 	\textcolor{magenta}{
 		- with advantages / disadvantages\\
 		- fake news / online reviews\\
 	}
-	
-	\textbf{more on AI in bots (optional)}
+	more on AI in bots (optional)\\
 	\textcolor{magenta}{
 		- use of ML\\
 		Handyversicherungsbeispiel\\
@@ -37,10 +49,10 @@
 		- the bot tries to determine if there is a nuance in the user's answer (machine acting as a judge!)
 		- e.g. ``how did the phone fall off``
 		- MKTG - Aufwand
-	}
+		}
 	
 	
-	\textbf{by use case:}
+	\textbf{by use case:}\\
 	- Wienbot\\
 	- Singapore / LA /...\\
 	
@@ -48,28 +60,35 @@
 }
 
 
-
+%DELETEME: Background represents underlying knowledge that is required to understand your work. The expected knowledge level of your readers can be set to the one of a bachelor or master student who just finished his studies (depending on what kind of thesis you are writing). This means that you do not need to describe how computers work, unless your thesis topic is about this. Everything that an avarage alumni from your field of studies should know does not need to be described. It turn, background information that is very complex and content-wise very near to you problem, can be placed in the main parts. Everyting else should be written here. Note: it is important to connect each presented topic to your thesis. E.g. if you present the ISO/OSI layer model you should also write that this is needed to understand the protocols you plan to develop in the main parts.
 %###################################################################################
 %###################### State of the Art  ########################################
 %###################################################################################
 \section{State of the Art}
-\todo{	- difference alexa + AVS / Lex \& Polly\\
 
+\subsection{Amazon Web Services and the Alexa Platform}
+\todo{	
+	-  Alexa Skills Kit+ Amazon Voice Services\\
+	- mention how ability to react to everything is centralized at alexa somewhere \textbf{talk about SKILLS}\\
+	- ability to retain sessions (explain requests/responses - GET/POST)\\
+	- fullfilling intents\\
+	- nested handlers\\
+		\\
+	- difference to Lex \& Polly\\
+- \href{https://www.youtube.com/watch?v=QxgdPI1B7rg}{Alexa Documentation}
+}
+
+\subsection{Node.js}
+
+AWS Lambda supports multiple runtime environments including Python, Java, C\# and Go. However, we use Node.js due to its event-driven nature and to take advantage of its non-blocking I/O model. Being single-threaded, Node.js guarantees high performance at large scale with large volumes of requests considered. With its JavaScript (ECMAScript) foundation, it is becoming a standard in web-apps. 
+\todo{
+	- Server-side, browser side (Chrome V8), App layer, data layer\\
+	- because it can read our JSON easily and fast
+	- talk about Methodenaufbau (syntax) and firing events
 }
 
 
-\subsection{Node.js}
-\todo{why node js: event-driven, non-blocking I/O model}
-\subsection{Alexa Skills, Amazon Voice Services}
-\subsection{comparison to Amazon Lex / Amazon Polly}
 
-
-
-%DELETEME: This chapter will cover all of your background information and related work. Background and related work are directly related to your thesis. Please do not place irrelevant content here which is a common mistake. Citing will be handled in the appendices.
-%
-%DELETEME: Background represents underlying knowledge that is required to understand your work. The expected knowledge level of your readers can be set to the one of a bachelor or master student who just finished his studies (depending on what kind of thesis you are writing). This means that you do not need to describe how computers work, unless your thesis topic is about this. Everything that an avarage alumni from your field of studies should know does not need to be described. It turn, background information that is very complex and content-wise very near to you problem, can be placed in the main parts. Everyting else should be written here. Note: it is important to connect each presented topic to your thesis. E.g. if you present the ISO/OSI layer model you should also write that this is needed to understand the protocols you plan to develop in the main parts.
-%
-%DELETEME: Related work respresents results from work that handled the same or a similar problem that you are addressing. This work might have used a different approach or might not have been that successful. Finding a paper / work that solved your problem in the same way you were planning to do is not good and you should contact your supervizor for solving this issue. Again, each paper / work has to be connected to your approach: other papers might have not chosen an optimal solution; they might not have been taking care of essential aspects; they might have chosen a different approach and you believe, yours will work better ...
 
 %###################################################################################
 %###################### Topic A             ########################################

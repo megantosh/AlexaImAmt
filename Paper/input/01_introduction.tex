@@ -52,13 +52,6 @@ And as long as we still do not exactly understand human intelligence yet, it is 
 %	- imagination about ablitiy to react to everything\\
 
 
-
-	- mention how these are centralized at alexa somewhere \textbf{SKILLS}\\
-	- \textbf{Related work}: what are classic use cases for their use with prominent examples? Booking tickets (KLM bot)\\
-	- \href{https://www.forbes.com/sites/tomaslaurinavicius/2017/04/24/facebook-messenger-bots/\#4f61c16a66d8}{fun bots} and more\\
-	- unfortunately forums and FAQ pages are not as effective as talking to a human.\\ 
-	- then again, as a customer, if I want assistance, I want the customer to tell me related information that he/she might not know, e.g. model number etc.
-	\\
 	\textbf{biased pros/cons}:\\
 	- it would speak as an advantage for bots if they can determine these things automatically z.B.\\
 	- besides, I could be a bit more sure in customer support scenario that a bot won't trick me\\
@@ -92,10 +85,30 @@ And as long as we still do not exactly understand human intelligence yet, it is 
 %DELETEME: Example for a chain: Mobile communication gets increasingly popular in the world (CITE sales on mobile communication infrastruce, mobile phones, or increasing number of mobile phones contracts). $\rightarrow$ Especially smartphones, which represent the next generation cellular phone (CITE), get more and more used for communicating not only with other people but also for connecting to the Internet for using various services (CITE). $\rightarrow$ Smartphone are comprehensive cellular phones that additional functionality due to their increased connection and processing capabilities (CITE). $\rightarrow$ Most smartphones offer an online application store for adding software to the devices which helps the users to customize their devices according to their needs, e.g. Android Market\footnote{\url{http://market.android.com}, visited on 05/08/2011}. $\rightarrow$ One problem about installing third-party software is that not all softwares try to help the user; $\rightarrow$ software with malicious intentions, so called malicious software (malware), can be a severe threat to smarpthone users. Some malwares delete files (EXAMPLE + CITE or footnote with URL) or even destroy devices (EXAMPLE + CITE or footnote with URL). $\rightarrow$ More and more smartphone malwares appeared in the last years (CITE). $\rightarrow$ Signature-based approaches work efficiently on known malware (CITE) but face serious drawbacks regarding unknown malware. $\rightarrow$ Oberheide et al.~\cite{oberheide:2008:cloudav} state that virus engines need an average time of 48 days until their databases get updated to be able to detect a certain unknown malware. $\rightarrow$ This in turn means that smartphone users stay unprotected for this time which can be seen as a severe threat. $\rightarrow$ Therefore, approaches are needed that are capable of detecting unknown malware for protecting the users against such threats.
 %DELETEME: This example showed how one could argue that alternative approaches for malware detection is required. The length of the motivation depends on the topics handled and can of course be longer. The principle I am describing is also shown on Figure~\ref{fig:writing}
 
+\inote{poorly written, juxtaopse human to machine etc.}
+%- unfortunately forums and FAQ pages are not as effective as talking to a human.\\ 
+%- then again, as a customer, if I want assistance, I want the customer to tell me related information that he/she might not know, e.g. model number etc.\\
+%- making the bot become something beyond a Q\&A:\\
 
+With the aforementioned, we try to think how voice assistants could come handy and what drives us to consider them instead of available alternatives.
+If we consider human workforce (i.e. customer service agents)on one hand, it is commonplace that these are the most expensive, the least available due to restrictive working hours and not always aware of the full circumstances related to an issue they are supposed to fixed or a question they are to answer. \inote{mention a few more associated cons}.
+On the other hand, information systems range from web pages (e.g. frequently asked questions section (FAQ), forums). These are in most cases even less effective than contacting a human as getting the proper information takes a lot of time, or the level of trustworthiness particularly in a forum is too low, the problem stated is too broad or too specific compared to the answer we are seeking. A user also usually could come across false positives in a search and rely on irrelevant information without knowing.
+furthermore, some case-related information might be required to have a proper understanding of a situation or a scenario and provide adequate answers. For Example, if a user would like to know if a certain accessory is compatible with their mobile device, they might need to give a model number, which they may or may not know.\\
 
+Internationalization is also another factor to take into account.
+\todo{continue\\
+- internationalization / customization based on Locale
+- why is it important?\\
+- many international users prefer a chatbot than a phone since the bot will commmunicate more accurately, will not have language probs if it understands the foreign lang etc.\\
+- what are other approaches to localization? refer to IRS lecture notes\\
+- use of translators, Stammsprache, etc., detecting the language and say it does not support it.\\ 
+\\
+- for facebook: implementing the three-answer suggestions to help user know what they say or alexa etc
+}
 
+It is therefore of high interest to maintain a system that could determine all these factors autonomously or with the least possible human interference such that that system supersedes the abilities of the classical Q\&A approach. We narrow this down with a scenario in the e-Government sector. \\
 
+\subsection{Our Scenario}
 \href{https://www.berlin.de}{Berlin.de} is an online one-stop-shop for appx. 3,7 million residents \cite{zensus} with \inote{hundreds/thousands} of visitors daily for information lookup, appointment bookings and even access to local news. As part of a federal modernization procedure with the help of the ministry of interior, D115 was launched in 2009 \cite{d115} as a phone service to help residents find relevant information about a public service or municipality, something that can be tricky if a person has no overview of the local government structure and still not always easy even with the help of search engines nowadays.
 \inote{leading sentence}.
 Meanwhile, statistics \cite{businsider} show that time spent on messaging apps already surpassed average uptime on social media , which indicates how the former is more desirable as a communication format on mobile platforms. It could therefore be worth exploring, how to offer D115 services in a fashion that takes advantage of conversational abilities beyond its human personnel. 
@@ -149,18 +162,8 @@ and puns\\
 -- conclusion: Although not impossible, it is a bit too far-fetched at this stage.\\
 }
 
-\todo{ \textbf{Topology of Bots}\\
-	-use cases and purpose categories (leisure, productivity) - quick survey of respective 'AppStores'\\
-	-\href{https://www.npr.org/podcasts/510308/hidden-brain}{platforms}\\
-	-physical locations (home, office, car, phone, in a business)
-}
 
-\todo{\textbf{Aufgabenstellung:}\\ 
-	1- es sollen die St\"arken und Schw\"achen eines solchen System zu analysieren. 
-	2- Es sollte zun\"achst eine Dienstleitung aus dem Berliner Service-Katalog mit dem Chatbot \"beauskunftet\" werden k\"onnen.\\
-	3- Nuancen beachten (e.g. 10243 / FHain)\\
-	4- Smalltalk F\"ahigkeiten
-}
+
 
 
 %\begin{figure}
@@ -179,25 +182,21 @@ and puns\\
 %###################### Approach and Goals  ########################################
 %###################################################################################
 \section{Approach and Goals}
-%DELETEME: In this section, you should cleary describe your approach that you are following in order to solve the underlaying problem of your thesis. Additionally, you should clearly state the goals of your work. This will not only help you supervizor to understand what you are doing, it will also help you to be sure on which topic you should evaluate.
+%DELETEME: In this section, you should cleary describe your approach that you are following in order to solve the underl*a*ying problem of your thesis. Additionally, you should clearly state the goals of your work. This will not only help you supervi*z*or to understand what you are doing, it will also help you to be sure on which topic you should evaluate.
 \textcolor{magenta}{
-	- making the bot become something beyond a Q\&A:\\
-	- \href{https://www.youtube.com/watch?v=QxgdPI1B7rg}{Alexa Documentation}\\
-	- retaining sessions (explain requests/responses - GET/POST)\\
-	- fullfilling intents\\
-	- nested handlers\\
-	\\
-	- for facebook: implementing the three-answer suggestions\\
-	\\
-	- internationalization / customization based on Locale
-	- why is it important?\\
-	- many international users prefer a chatbot than a phone since the bot will commmunicate more accurately, will not have language probs if it understands the foreign lang etc.\\
-	- what are other approaches to localization? refer to IRS lecture notes\\
-	- use of translators, Stammsprache, etc., detecting the language and say it does not support it.\\ 
-	\\
-	- Alexa Skill will work in germany in english and german -> add english after german\\
-	-AL: Anschlie{\ss}end soll das Ziel der Arbeit formuliert werden: Entwicklung und Evaluation eines Prototypen f\"ur den Anwendungsfall.\\
+	- Alexa Skill will work in germany in english and german -> add english after german
 }
+
+
+\todo{\textbf{Aufgabenstellung:}\\ 
+	-AL: Anschlie{\ss}end soll das Ziel der Arbeit formuliert werden: Entwicklung und Evaluation eines Prototypen f\"ur den Anwendungsfall.\\
+	\\
+	1- es sollen die St\"arken und Schw\"achen eines solchen System zu analysieren. 
+	2- Es sollte zun\"achst eine Dienstleitung aus dem Berliner Service-Katalog mit dem Chatbot \"beauskunftet\" werden k\"onnen.\\
+	3- Nuancen beachten (e.g. 10243 / FHain)\\
+	4- Smalltalk F\"ahigkeiten
+}
+
 
 %###################################################################################
 %###################### Structure of the Thesis ####################################
@@ -205,6 +204,8 @@ and puns\\
 \section{Structure of the Thesis}
 %DELETEME: This section does not require eloquent writing. It is just a presentation of what you will handle in each chapter starting with Chapter~\ref{background}.
 %
+
+
 This thesis endeavours to shed light on the following: In Chapter~\ref{background}, we discuss related work as currently available. We first show a few use cases for chat bots and voice assistants and their implementation. For that we consider \inote{the City of Vienna chat bot service \href{https://www.wien.gv.at/bot/}{''WienBot''} for German and Singapore/ \href{http://www.govtech.com/7-State-or-Local-Governments-Using-Amazon-Alexa.html}{LA/...} for English} and compare them to the current application available on \href{https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}{service.berlin.de}.
 We then introduce the Alexa platform and the idea behind Skills in chapter~\ref{mainone} and discuss how it can overcome a few struggles with respect to its counterparts \inote{like redundant boilerplate code, smalltalk, but also limitations}. We also present the frameworks we use in our own implementation, the prerequisites and the artefacts provided initially.
 Chapter~\ref{mainone} and~\ref{maintwo} represent a detailled analysis of our implementation. In particular, \inote{SOME MORE SENTENCES.

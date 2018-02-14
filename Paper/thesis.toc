@@ -2,33 +2,33 @@
 \contentsline {chapter}{List of Tables}{vii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Our Scenario}{4}{subsection.1.1.1}
 \contentsline {section}{\numberline {1.2}Approach and Goals}{5}{section.1.2}
 \contentsline {section}{\numberline {1.3}Structure of the Thesis}{5}{section.1.3}
 \contentsline {chapter}{\numberline {2}Background}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Related Work}{7}{section.2.1}
 \contentsline {section}{\numberline {2.2}State of the Art}{8}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Node.js}{8}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Alexa Skills, Amazon Voice Services}{8}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}comparison to Amazon Lex / Amazon Polly}{8}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}D115}{8}{section.2.3}
-\contentsline {section}{\numberline {2.4}Frameworks and Data Structures \leavevmode {\color {magenta}(change title)}}{8}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Intents and Slots}{8}{subsection.2.4.1}
-\contentsline {section}{\numberline {2.5}currently deployed bot}{10}{section.2.5}
-\contentsline {section}{\numberline {2.6}Implementation Possibilities}{10}{section.2.6}
-\contentsline {chapter}{\numberline {3}Implementation as Alexa Skill}{12}{chapter.3}
-\contentsline {section}{\numberline {3.1}All about Alexa}{12}{section.3.1}
-\contentsline {section}{\numberline {3.2}Difference Between Lex and Alexa Skills}{12}{section.3.2}
-\contentsline {section}{\numberline {3.3}APIs and SDKs}{13}{section.3.3}
-\contentsline {section}{\numberline {3.4}challenges}{13}{section.3.4}
-\contentsline {chapter}{\numberline {4}Implementation as Facebook Messenger Bot / Google Action}{14}{chapter.4}
-\contentsline {chapter}{\numberline {5}Evaluation}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}Results}{16}{section.5.1}
-\contentsline {section}{\numberline {5.2}Discussions}{16}{section.5.2}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{17}{chapter.6}
-\contentsline {section}{\numberline {6.1}Summary}{17}{section.6.1}
-\contentsline {section}{\numberline {6.2}Conclusion}{17}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Work}{17}{section.6.3}
-\contentsline {chapter}{Bibliography}{18}{section.6.3}
-\contentsline {chapter}{Appendices}{19}{chapter*.8}
-\contentsline {section}{Appendix A: Abbreviations}{20}{chapter*.9}
-\contentsline {section}{Appendix B: Glossary}{21}{section*.10}
+\contentsline {subsection}{\numberline {2.2.1}Amazon Web Services and the Alexa Platform}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Node.js}{9}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}D115}{9}{section.2.3}
+\contentsline {section}{\numberline {2.4}Frameworks and Data Structures \leavevmode {\color {magenta}(change title)}}{9}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Intents and Slots}{10}{subsection.2.4.1}
+\contentsline {section}{\numberline {2.5}currently deployed bot}{11}{section.2.5}
+\contentsline {section}{\numberline {2.6}Implementation Possibilities}{12}{section.2.6}
+\contentsline {chapter}{\numberline {3}Implementation as Alexa Skill}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}All about Alexa}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Difference Between Lex and Alexa Skills}{13}{section.3.2}
+\contentsline {section}{\numberline {3.3}APIs and SDKs}{14}{section.3.3}
+\contentsline {section}{\numberline {3.4}challenges}{14}{section.3.4}
+\contentsline {chapter}{\numberline {4}Skill 2}{15}{chapter.4}
+\contentsline {chapter}{\numberline {5}Evaluation}{16}{chapter.5}
+\contentsline {section}{\numberline {5.1}Results}{17}{section.5.1}
+\contentsline {section}{\numberline {5.2}Discussions}{17}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{18}{chapter.6}
+\contentsline {section}{\numberline {6.1}Summary}{18}{section.6.1}
+\contentsline {section}{\numberline {6.2}Conclusion}{18}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future Work}{18}{section.6.3}
+\contentsline {chapter}{Bibliography}{19}{section.6.3}
+\contentsline {chapter}{Appendices}{20}{chapter*.8}
+\contentsline {section}{Appendix A: Abbreviations}{21}{chapter*.9}
+\contentsline {section}{Appendix B: Glossary}{22}{section*.10}
