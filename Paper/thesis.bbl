@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{voicelabs}
+fka~VoiceLabs Alpine.ai, jan 2017.
+\newblock accessed on 16.02.2018.
+
 \bibitem{zensus}
 {Amt f\"ur Statistik Berlin-Brandenburg}.
 \newblock {Statistischer Bericht - A I 5 hj 1}.
@@ -26,6 +30,13 @@ Wikipedia contributors.
   encyclopedia, 2018.
 \newblock [Accessed 14 February 2018].
 
+\bibitem{gartnerpreds17}
+Gartner.
+\newblock Gartner reveals top predictions for it organizations and users in
+  2017 and beyond.
+\newblock Oct 2017.
+\newblock accessed on 15.02.2018.
+
 \bibitem{d115}
 {Gesch\"afts- und Koordinierungsstelle 115 im Bundesministerium des Innern}.
 \newblock \url{
@@ -35,7 +46,7 @@ Wikipedia contributors.
 \bibitem{voiceneurons}
 Tobias Grossmann, Regine Oberecker, Stefan Koch, and Angela D~Friederici.
 \newblock The developmental origins of voice processing in the human brain.
-\newblock 65:852--8, 03 2010.
+\newblock {\em Elsevier}, 65:852--8, 03 2010.
 
 \bibitem{Starwars}
 {Judy Goldsmith and Nicholas Mattei}.
@@ -44,6 +55,12 @@ Tobias Grossmann, Regine Oberecker, Stefan Koch, and Angela D~Friederici.
 \bibitem{businsider}
 {M. Ballve}.
 \newblock Messaging apps are now bigger than social networks, 2016.
+
+\bibitem{cnbcAlexa}
+NBC.
+\newblock Amazon's alexa had a breakout holiday — people even used echoes to
+  buy more echoes.
+\newblock Accessed on 15/02/2018.
 
 \bibitem{hiddenbrainpod}
 {Shankar Vedantam}.
@@ -57,9 +74,19 @@ Statista.
   from 2014 to 2020, November 2016.
 \newblock Accessed on 06.02.2018.
 
+\bibitem{searchblog}
+Laurie Sullivan.
+\newblock Gartner predicts 30% of searches without a screen in 4 years.
+\newblock 12 2017.
+\newblock accessed on 12.2.2018.
+
 \bibitem{Weizenbaum1976}
 Joseph Weizenbaum.
 \newblock {\em Computer Power and Human Reason: From Judgment to Calculation}.
 \newblock W. H. Freeman \& Co., New York, 1976.
+
+\bibitem{globalwebindex}
+Katie Young, June 2016.
+\newblock accessed on 16.02.2018.
 
 \end{thebibliography}

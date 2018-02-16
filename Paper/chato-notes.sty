@@ -29,6 +29,7 @@
 	\newcommand{\inote}[2][]{\def\@tmpsig{#1} \inred{$\lceil$} \inred{\sf #2} \inred{$\rfloor$} \ifx \@tmpsig \@empty \else \inred{$\blacktriangleleft$} \colorbox{MyRed}{\bfseries\sffamily\textcolor{white}{#1}} \fi}
 	\newcommand{\citemissing}[0]{\inred{[citation]}\xspace}
 	\newcommand{\tocite}[1]{\inred{[#1]}\xspace}
+	\newcommand{\sn}[0]{\inred{[Supervisor Note]}\xspace}
 }
 
 \DeclareOption{hide}{
@@ -37,6 +38,7 @@
 	\newcommand{\inote}[1]{}
 	\newcommand{\citemissing}[0]{}
 	\newcommand{\tocite}[0]{}
+	\newcommand{\sn}[0]{}
 }
 
 \ProcessOptions
