@@ -1,0 +1,23 @@
+{
+  "name": "faa-info",
+  "version": "1.0.0",
+  "description": "sample app for mini inquiries on airport info",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "alexa",
+    "skill"
+  ],
+  "author": "Mohamed Megahed, David Isbitski",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-app": "^4.2.1",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "lodash": "^4.17.5",
+    "mocha": "^5.0.1",
+    "request-promise": "^4.2.2"
+  }
+}
