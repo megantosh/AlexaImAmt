@@ -5,3 +5,13 @@ Paper Resources/Amazon + EULA/*
 Paper Resources/Guidelines + Examples/*
 Paper Resources/Notes + Meetings/*
 Paper old
+Paper/*.log
+Paper/*.aux
+Paper/*.blg
+Paper/*.lof
+Paper/*.lot
+Paper/*.out
+Paper/*.synctex.gz
+Paper/*.toc
+
+not on github
