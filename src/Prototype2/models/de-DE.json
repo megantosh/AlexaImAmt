@@ -1,0 +1,482 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "berlin d. e.",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "OpeningHoursIntent",
+          "slots": [
+            {
+              "name": "W_Frage",
+              "type": "W_Frage"
+            },
+            {
+              "name": "OfficeType",
+              "type": "OfficeType"
+            },
+            {
+              "name": "District",
+              "type": "District"
+            },
+            {
+              "name": "to",
+              "type": "to"
+            }
+          ],
+          "samples": [
+            "{W_Frage} kann ich {to} {OfficeType} {District}",
+            "{W_Frage} kann man {to} {OfficeType} {District}",
+            "{W_Frage} ist {OfficeType} {District} auf",
+            "{W_Frage} hat {OfficeType} {District} offen",
+            "{W_Frage} macht {OfficeType} {District} auf",
+            "{W_Frage} hat {OfficeType} {District} auf"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Ausländerbehörde",
+                "synonyms": [
+                  "LABO"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Krematorium"
+              }
+            },
+            {
+              "name": {
+                "value": "studierendenwerk",
+                "synonyms": [
+                  "studentenwerk"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Senatsverwaltung",
+                "synonyms": [
+                  "Verwaltung"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Landesamt",
+                "synonyms": [
+                  "Amt"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Justizvollzugsanstalt",
+                "synonyms": [
+                  "justizanstalt",
+                  "vollzugsanstalt",
+                  "Gefängnis",
+                  "JVA"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Jobcenter"
+              }
+            },
+            {
+              "name": {
+                "value": "IT Dienstleistungszentrum",
+                "synonyms": [
+                  "ITDZ"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Polizei"
+              }
+            },
+            {
+              "name": {
+                "value": "BVG",
+                "synonyms": [
+                  "Berliner Verkehrsgetriebe"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kammer",
+                "synonyms": [
+                  "Psychokammer",
+                  "Psychotherapeutenkammer",
+                  "Kammer für Psychologische Psychotherapeuten und Kinder- und Jugendlichenpsychotherapeuten",
+                  "Zahnärztekammer",
+                  "Vergabekammer",
+                  "Tierärztekammer",
+                  "Steuerberaterkammer",
+                  "Rechtsanwaltskammer",
+                  "Notarkammer",
+                  "Industrie - und Handelskammer",
+                  "Industriekammer",
+                  "Handelskammer",
+                  "Apothekenkammer",
+                  "Architektenkammer",
+                  "Baukammer",
+                  "Ärztekammer"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Amtsgericht"
+              }
+            },
+            {
+              "name": {
+                "value": "Finanzamt"
+              }
+            },
+            {
+              "name": {
+                "value": "Bezirksamt",
+                "synonyms": [
+                  "Sozialamt",
+                  "Ordnungsamt",
+                  "Gesundheitsamt",
+                  "Standesamt",
+                  "Bürgeramt"
+                ]
+              }
+            }
+          ],
+          "name": "OfficeType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Prenzlauer Berg"
+              }
+            },
+            {
+              "name": {
+                "value": "Treptow",
+                "synonyms": [
+                  "Treptow Köpenick"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Zehlendorf",
+                "synonyms": [
+                  "Steglitz Zehlendorf"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Steglitz",
+                "synonyms": [
+                  "Steglitz Zehlendorf"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Reinickendorf"
+              }
+            },
+            {
+              "name": {
+                "value": "Hellersdorf",
+                "synonyms": [
+                  "Marzahn Hellersdorf"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Marzahn",
+                "synonyms": [
+                  "Marzahn Hellersdorf"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Friedrichshain",
+                "synonyms": [
+                  "Friedrichshain Kreuzberg"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Wilmersdorf",
+                "synonyms": [
+                  "Charlottenburg Wilmersdorf"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Wedding"
+              }
+            },
+            {
+              "name": {
+                "value": "Tiergarten",
+                "synonyms": [
+                  "Mitte"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Tempelhof",
+                "synonyms": [
+                  "Tempelhof Schöneberg"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kreuzberg",
+                "synonyms": [
+                  "Friedrichshain Kreuzberg"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Spandau"
+              }
+            },
+            {
+              "name": {
+                "value": "Schöneberg",
+                "synonyms": [
+                  "Tempelhof Schöneberg"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Weißensee",
+                "synonyms": [
+                  "Pankow Weißensee"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Pankow",
+                "synonyms": [
+                  "Pankow Weißensee"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Neukölln"
+              }
+            },
+            {
+              "name": {
+                "value": "Mitte"
+              }
+            },
+            {
+              "name": {
+                "value": "Lichtenberg"
+              }
+            },
+            {
+              "name": {
+                "value": "Köpenick"
+              }
+            },
+            {
+              "name": {
+                "value": "Charlottenburg"
+              }
+            }
+          ],
+          "name": "District"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "zur"
+              }
+            },
+            {
+              "name": {
+                "value": "zu der"
+              }
+            },
+            {
+              "name": {
+                "value": "zu dem"
+              }
+            },
+            {
+              "name": {
+                "value": "in die"
+              }
+            },
+            {
+              "name": {
+                "value": "in das"
+              }
+            },
+            {
+              "name": {
+                "value": "in den"
+              }
+            },
+            {
+              "name": {
+                "value": "in dem"
+              }
+            },
+            {
+              "name": {
+                "value": "ins"
+              }
+            },
+            {
+              "name": {
+                "value": "zum"
+              }
+            }
+          ],
+          "name": "to"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "wie",
+                "synonyms": [
+                  "wie kann ich"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "wann",
+                "synonyms": [
+                  "wann ungefähr",
+                  "wann genau",
+                  "um welcher Uhrzeit",
+                  "um welche Uhrzeit",
+                  "Um wieviel Uhr"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Wo",
+                "synonyms": [
+                  "wo kann ich",
+                  "wo gibt es",
+                  "wo finde ich",
+                  "wo hat",
+                  "wo ist",
+                  "wo genau"
+                ]
+              }
+            }
+          ],
+          "name": "W_Frage"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "OpeningHoursIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "W_Frage",
+              "type": "W_Frage",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "OfficeType",
+              "type": "OfficeType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.872421365287.303725021511"
+              }
+            },
+            {
+              "name": "District",
+              "type": "District",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.872421365287.1495244739250"
+              }
+            },
+            {
+              "name": "to",
+              "type": "to",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.872421365287.1495244739250",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "In welchem Bezirk suchst du?"
+          },
+          {
+            "type": "PlainText",
+            "value": "In welchem Stadtteil genau?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.872421365287.303725021511",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Welche Art von öffentlicher Anstalt meintest du. Du kannst zum Beispiel Bürgeramt oder Finanzamt sagen"
+          }
+        ]
+      }
+    ]
+  }
+}
