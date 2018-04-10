@@ -28,7 +28,8 @@
       "custom": {
         "endpoint": {
           "sourceDir": "lambda/custom"
-        }
+        },
+        "interfaces": []
       }
     },
     "manifestVersion": "1.0"
