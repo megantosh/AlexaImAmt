@@ -1,0 +1,19 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.5ff4d7d8-4a7f-4f22-a35c-a748f3ac6814",
+      "was_cloned": false,
+      "merge": {
+        "manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "ask-custom-myPetMatch-default"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

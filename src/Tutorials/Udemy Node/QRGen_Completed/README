@@ -1,0 +1,5 @@
+Instructions | QRGEN | All About NodeJS by Sachin Bhatnagar
+-----------------------------------------------------------
+
+1. On the terminal run 'npm install' to install all dependencies.
+2. Run the app using 'node qr'
