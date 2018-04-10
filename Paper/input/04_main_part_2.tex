@@ -9,3 +9,58 @@
 https://console.dialogflow.com/api-client/ \\
 https://console.actions.google.com
 }
+
+
+
+Hey:
+
+do this set up as prerequisites first
+as a deployment script
+
+- install aws cli
+- install ask cli
+- set up a profile on AWS
+- ask init etc.
+
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+
+There is no AWS credential setup yet, do you want to continue the initialization?
+
+https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html
+
+
+
+Manage IAM roles (User, groups, rights, policies etc.)
+
+
+all logs go onto cloudwatch
+including when the request is not right etc...can be helpful to know what users want, beyond testing
+
+
+
+
+
+amazon does not disclose avaliable values for their slot types (lists), but they give you examples here
+https://developer.amazon.com/docs/custom-skills/slot-type-reference.html#h2_extend_types
+
+
+===
+
+finally, we had to resolve to the information publicly available to tailor custom scenarios
+
+
+
+ ===
+once you upload the new lambda, the old one is gone, unless you version it like this:
+https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html
+
+
+
+====
+
+first i got screwed over with this Big nerd ranch then this happened: alexa-skill module
+- so don't use this tutorial, although very helpful for a beginner and makes you understand what happens under the hood, it has been abstracted in many other function and the logic is no longer the same. - which explains why no one starred it
+
+https://github.com/matt-kruse/alexa-app
+
+https://www.bignerdranch.com/blog/developing-alexa-skills-locally-with-nodejs-deploying-your-skill-to-staging/
