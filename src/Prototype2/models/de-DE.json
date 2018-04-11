@@ -43,10 +43,30 @@
             "{W_Frage} macht {OfficeType} {District} auf",
             "{W_Frage} hat {OfficeType} {District} auf"
           ]
+        },
+        {
+          "name": "static_PersonalAusweisIntent",
+          "slots": [
+            {
+              "name": "Personalausweis",
+              "type": "Dienstleistung"
+            }
+          ],
+          "samples": [
+            "was brauche ich um einen {Personalausweis} zu beantragen",
+            "hole mir einen {Personalausweis}",
+            "wie kann ich einen {Personalausweis} beantragen",
+            "ich brauche einen neuen {Personalausweis}",
+            "wie bekommt man einen {Personalausweis}",
+            "was brauche ich um einen {Personalausweis} zu haben",
+            "wie beantrage ich einen {Personalausweis}",
+            "ich möchte einen {Personalausweis}"
+          ]
         }
       ],
       "types": [
         {
+          "name": "OfficeType",
           "values": [
             {
               "name": {
@@ -167,10 +187,10 @@
                 ]
               }
             }
-          ],
-          "name": "OfficeType"
+          ]
         },
         {
+          "name": "District",
           "values": [
             {
               "name": {
@@ -321,10 +341,10 @@
                 "value": "Charlottenburg"
               }
             }
-          ],
-          "name": "District"
+          ]
         },
         {
+          "name": "to",
           "values": [
             {
               "name": {
@@ -371,10 +391,10 @@
                 "value": "zum"
               }
             }
-          ],
-          "name": "to"
+          ]
         },
         {
+          "name": "W_Frage",
           "values": [
             {
               "name": {
@@ -409,8 +429,22 @@
                 ]
               }
             }
-          ],
-          "name": "W_Frage"
+          ]
+        },
+        {
+          "name": "Dienstleistung",
+          "values": [
+            {
+              "name": {
+                "value": "Personalausweis",
+                "synonyms": [
+                  "Ausweis",
+                  "PA",
+                  "Perso"
+                ]
+              }
+            }
+          ]
         }
       ]
     },
@@ -419,18 +453,20 @@
         {
           "name": "OpeningHoursIntent",
           "confirmationRequired": false,
+          "prompts": {},
           "slots": [
             {
               "name": "W_Frage",
               "type": "W_Frage",
+              "confirmationRequired": false,
               "elicitationRequired": false,
-              "confirmationRequired": false
+              "prompts": {}
             },
             {
               "name": "OfficeType",
               "type": "OfficeType",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.872421365287.303725021511"
               }
@@ -438,8 +474,8 @@
             {
               "name": "District",
               "type": "District",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.872421365287.1495244739250"
               }
@@ -447,8 +483,25 @@
             {
               "name": "to",
               "type": "to",
+              "confirmationRequired": false,
               "elicitationRequired": false,
-              "confirmationRequired": false
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "static_PersonalAusweisIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.206968314347"
+          },
+          "slots": [
+            {
+              "name": "Personalausweis",
+              "type": "Dienstleistung",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
             }
           ]
         }
@@ -474,6 +527,15 @@
           {
             "type": "PlainText",
             "value": "Welche Art von öffentlicher Anstalt meintest du. Du kannst zum Beispiel Bürgeramt oder Finanzamt sagen"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.206968314347",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ich verstehe du brauchst einen neuen {Personalausweis} und hast deinen alten nicht verloren. Ist das richtig?"
           }
         ]
       }
