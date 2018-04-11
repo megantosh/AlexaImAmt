@@ -1,5 +1,12 @@
+//enable ES6 functionality, be as strict as possible in treating vars/lets
 'use strict';
-var Alexa = require("alexa-sdk");
+const Alexa = require("alexa-sdk");
+const Helper = require("./lib/helper.js");
+const AlexaStrings = require("./lib/strings.js");
+// if resolving to an external endpoint
+//const https = require('https');
+// for logging. Take it from App_ID in Alexa Developer Console
+const APP_ID = 'amzn1.ask.skill.9c23a9d7-4b4e-4349-a7d6-d2ee05243a31';
 
 // For detailed tutorial on how to making a Alexa skill,
 // please visit us at http://alexa.design/build
@@ -7,37 +14,84 @@ var Alexa = require("alexa-sdk");
 
 exports.handler = function(event, context) {
     var alexa = Alexa.handler(event, context);
-    alexa.registerHandlers(handlers_de_DE, handlers_en_US);
+    var locale = event.request.locale;
+    console.log(event)
+    // registration for a multiligual skill - will define speech output based on locale
+    // an extended alexa.registerHandlers(handlers); //you can register multiple handlers at once
+    if (locale == 'de-DE'){
+        alexa.registerHandlers(DE_handlers);
+        console.log('registered german handler');
+    } else if (locale == 'fr-FR') {
+        alexa.registerHandlers(FR_handlers);
+        console.log('registered french handler');
+    } else { //basically if locale.toString().startsWith('en')
+        alexa.registerHandlers(EN_US_handlers);
+        console.log('registered US-English handler');
+    }
+    // was changed from alexa.APP_ID
+    alexa.appId = APP_ID;
     alexa.execute();
 };
 
-var handlers_en_US = {};
 
-var handlers_de_DE = {
+
+
+//we will check for the locale inside the request
+var DE_handlers = {
+
+    // 'NewSession': function() {
+    //     console.log("in NewSession");
+    //     // when you have a new session,
+    //     // this is where you'll
+    //     // optionally initialize
+    //
+    //     // after initializing, continue on
+    //     routeToIntent.call(this);
+    // },
+
+
     'LaunchRequest': function () {
+        console.log("in LaunchRequest");
         this.emit('SayHello');
     },
-    // 'HelloWorldIntent': function () {
-    //     this.emit('SayHello');
+    // 'MyNameIsIntent': function () {
+    //     this.emit('SayHelloName');
     // },
-    'MyNameIsIntent': function () {
-        this.emit('SayHelloName');
+    'static_PersonalAusweisIntent' : function () {
+        console.log("in Perso")
+        this.emit('sayPerso');
     },
+
     'openingHoursIntent': function () {
+        // delegate to Alexa to collect all the required slots
+        let isTestingWithSimulator = true; //autofill slots when using simulator, dialog management is only supported with a device
         this.emit('SayOpeningHours')
     },
 
-
-    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    //  Fulfillment //
 
     'SayHello': function () {
-        this.response.speak('Ich kann dir mit den zahlreichen Dienstleistungen der Stadt Berlin helfen! Was brauchst du genau?')
-        //probably remove. Tacky here and takes away the idea of "voice app"
-                     .cardRenderer('Willkommen beim virtuellen Service-Assistent der Stadt Berlin',
-                         'Disclaimer: Beta-Version - This skill is in no way affiliated with Berlin.de website' +
-                         ' - Alle Angaben ohne Gewähr');
+        //uncomment this for default option
+        //this.response.speak(spokenStrings.de.GREETING_TEXT[0]);
+        this.response.speak(Helper.getResponseUtterance(AlexaStrings.spokenStrings.de.GREETING_TEXT));
+
+        //TODO: can make her whisper here using ssml
+        // https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html
+        //https://stackoverflow.com/questions/41776014/how-to-correctly-specify-ssml-in-an-alexa-skill-lambda-function
+        this.response.listen('Talk to me in German.')
+        //if the card is made of two vars, then sth, else if 3 vars then title and image
+                     .cardRenderer(AlexaStrings.cardStrings.de.GREETING_TEXT[0], AlexaStrings.cardStrings.de.GREETING_TEXT[1]);
         this.emit(':responseReady');
     },
+    //TODO
+    'sayPerso': function () {
+        //var district = this.event.request.intent.slots.District.value;
+        this.response.speak('Skill wird gerade entwickelt') ;
+        this.emit(':responseReady')
+    },
+
+
+    //TODO
     'SayOpeningHours': function () {
         var district = this.event.request.intent.slots.District.value;
         this.response.speak('You are in ' + district);
@@ -55,18 +109,17 @@ var handlers_de_DE = {
 
 
 
-    ///////////////////////////////////////////////////////////////////////////////////////////////////
-
+    // Defaults + Housekeeping //
     'SessionEndedRequest' : function() {
         console.log('Session ended with reason: ' + this.event.request.reason);
     },
     'AMAZON.StopIntent' : function() {
-        this.response.speak('Bye');
+        this.response.speak(spokenStrings.de.STOP_TEXT);
         this.emit(':responseReady');
     },
     'AMAZON.HelpIntent' : function() {
-        this.response.speak("You can try: 'alexa, until when is Standesamt Friedrichshain-Kreuzberg open today'" +
-            "or 'alexa, ask hello world my name is awesome Aaron'");
+        this.response.speak(spokenStrings.en.HELP_TEXT);
+
         this.emit(':responseReady');
     },
     'AMAZON.CancelIntent' : function() {
@@ -74,7 +127,46 @@ var handlers_de_DE = {
         this.emit(':responseReady');
     },
     'Unhandled' : function() {
-        this.response.speak("Sorry, I didn't get that. You can try: 'alexa, how do I transfer my driving license to a german one?'" +
-            " or 'alexa, ask Berlin D. E. when is the nearest city hall open today.'");
+        this.response.speak(spokenStrings.en.HELP_TEXT);
     }
+
 };
+
+var EN_US_handlers = {
+    'HelloWorldIntent': function () {
+        this.emit('SayHello');
+    },
+    'SessionEndedRequest' : function() {
+        console.log('Session ended with reason: ' + this.event.request.reason);
+    },
+    'AMAZON.StopIntent' : function() {
+        this.response.speak(spokenStrings.en.STOP_TEXT);
+        this.emit(':responseReady');
+    },
+    'AMAZON.HelpIntent' : function() {
+        this.response.speak(spokenStrings.en.HELP_TEXT);
+        // should not stop here, but continue listning
+        this.emit(':responseReady');
+    },
+    'AMAZON.CancelIntent' : function() {
+        this.response.speak(spokenStrings.en.CANCEL_TEXT);
+        this.emit(':responseReady');
+    },
+    'Unhandled' : function() {
+        this.response.speak(spokenStrings.en.HELP_TEXT);
+    }
+
+};
+
+var FR_Handlers = {};
+
+
+
+
+
+
+
+
+
+
+

@@ -16,6 +16,14 @@
           "samples": []
         },
         {
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hello",
+            "say hello",
+            "say hello world"
+          ]
+        },
+        {
           "name": "MyNameIsIntent",
           "slots": [
             {
