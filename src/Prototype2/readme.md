@@ -31,3 +31,8 @@ In IntelliJ IDEA, to get the right syntax interpreter,
 make sure to activate ES6 features. You do so by going to **Preferences > Languages and Frameworks > JavaScript** 
 and select ECMAScript6 from the drop-down menu. I would go for the ckeck
 at prefer 'strict' mode (it's probably like 'use-strict').
+
+It might be necessary to create a Node module /project
+on the root folder. goto **File > Project Structure > Modules > + > create it**
+then 
+goto **File > Project Structure > Modules > Add Content Root**
