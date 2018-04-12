@@ -8,7 +8,7 @@
           "apis": {
             "custom": {
               "endpoint": {
-                "uri": "arn:aws:lambda:us-east-1:465576902433:function:ask-custom-Prototype2-default"
+                "uri": "arn:aws:lambda:eu-west-1:465576902433:function:ask-custom-Prototype2-default"
               }
             }
           }
