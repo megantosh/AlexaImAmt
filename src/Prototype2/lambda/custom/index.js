@@ -6,7 +6,8 @@ const AlexaStrings = require("./lib/strings.js");
 // if resolving to an external endpoint
 //const https = require('https');
 // for logging. Take it from App_ID in Alexa Developer Console
-const APP_ID = 'amzn1.ask.skill.9c23a9d7-4b4e-4349-a7d6-d2ee05243a31';
+// REMOVED HERE TO NOT COLLIDE WITH THE IRELAND INSTANCE!
+//const APP_ID = 'amzn1.ask.skill.9c23a9d7-4b4e-4349-a7d6-d2ee05243a31';
 
 // For detailed tutorial on how to making a Alexa skill,
 // please visit us at http://alexa.design/build
@@ -59,13 +60,18 @@ var DE_handlers = {
     //     this.emit('SayHelloName');
     // },
     'static_PersonalAusweisIntent' : function () {
-        console.log("in PersonalAusweisIntent")
-        this.emit('sayPersonalAusweisInfo'); //TODO then PA_kosten, then etc.
+        console.log("in PersonalAusweisIntent");
+        this.emit('SayPersonalAusweisInfo'); //TODO then PA_kosten, then etc.
     },
 
     'openingHoursIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = true; //autofill slots when using simulator, dialog management is only supported with a device
+
+        console.log("in OpeningHoursIntent");
+
+        //TODO get right opening hours
+
         this.emit('SayOpeningHours')
     },
 
@@ -85,9 +91,9 @@ var DE_handlers = {
         this.emit(':responseReady');
     },
     //TODO
-    'sayPersonalAusweisInfo': function () {
+    'SayPersonalAusweisInfo': function () {
         //var district = this.event.request.intent.slots.District.value;
-        this.response.speak(AlexaStrings.defaultSpokenStrings.de.WIP_TEXT);
+        this.response.speak(Helper.getRandomResponseUtterance(AlexaStrings.defaultSpokenStrings.de.WIP_TEXT));
         this.response.speak(AlexaStrings.Dienstleistung_IntentSpokenStrings.de.PersoIntent);
         this.emit(':responseReady')
     },
@@ -97,6 +103,9 @@ var DE_handlers = {
     'SayOpeningHours': function () {
         var district = this.event.request.intent.slots.District.value;
         this.response.speak('You are in ' + district);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.de.WIP_TEXT);
+        this.response.speak('Allerdings kann ich dir sagen, dass ein Bürgeramt in der Nähe bestimmt auf hat');
+
         this.emit(':responseReady')
     },
 

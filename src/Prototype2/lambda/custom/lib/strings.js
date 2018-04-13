@@ -47,7 +47,12 @@ exports.defaultSpokenStrings = {
                 "ich halte mich fern",
             ],
             CANCEL_TEXT: 'ich bin weg',
-            WIP_TEXT : 'Skill wird gerade entwickelt.'
+            WIP_TEXT : [
+                'Skill wird gerade entwickelt.',
+                'das berücksichtige ich gerne beim nächsten Milestone',
+                'ich mag es, wie du mich ausfragst. Du solltest eine Karriere im Usability Bereich in Erwägung ziehen.',
+                'ich werde zwar von einem mega entwickelt, aber leider geht das nicht mega schnell'
+                ]
         }
 }
 
@@ -118,8 +123,8 @@ exports.Dienstleistung_IntentSpokenStrings = {
         {
             //When less parameters are sent to request(options), it will resolve the default values.
             //TODO dynamic url resloution - routing
-            // PersoIntent : Helper.httpsGet(Helper.buildHttpGetOptions(base_url,'/dienstleistung/120703'))
-            PersoIntent: Helper.httpsGet('https://' + base_url + '/dienstleistung/120703/')
+            PersoIntent : Helper.httpsGet(Helper.buildHttpGetOptions(base_url,'/dienstleistung/120703'))
+            //PersoIntent: Helper.httpsGet('https://' + base_url + '/dienstleistung/120703/')
 
         },
     'en':

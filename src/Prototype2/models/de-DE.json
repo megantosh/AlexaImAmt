@@ -452,8 +452,10 @@
       "intents": [
         {
           "name": "OpeningHoursIntent",
-          "confirmationRequired": false,
-          "prompts": {},
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.452780748555"
+          },
           "slots": [
             {
               "name": "W_Frage",
@@ -536,6 +538,15 @@
           {
             "type": "PlainText",
             "value": "ich verstehe du brauchst einen neuen {Personalausweis} und hast deinen alten nicht verloren. Ist das richtig?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.452780748555",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "hast du gerade {W_Frage} und {to} und {OfficeType} und {District} gesagt?"
           }
         ]
       }

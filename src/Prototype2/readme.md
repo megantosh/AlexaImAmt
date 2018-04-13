@@ -52,6 +52,19 @@ https://spdx.org/licenses/
 
 #Manifest
 TODO: put samples etc
+###Beta Test
+Give access to skill beta testers by adding their email addresses. Once Beta Test is enabled, you can continue to edit your skill until you are ready to submit your skill for Amazon review.
+Beta Test is not available for this skill.
+The privacy and compliance settings you specified for this skill do not meet the requirements for Beta Test.
+The skill must be ready for submission before beta testing can be enabled.
+- not collecting private information - is location identified as such?
+
+####To qualify for beta testing you must fulfil these requirements:
+- skill.json is right
+    - Example phrases 101 (sample phrases in JSON)
+        - for each example you need to supply the invocation name and you need to have a sample utterance FOR THAT LANGUAGE
+        otherwise you get warnings.
+        
 
 ## Git
 repo angeben in package.json

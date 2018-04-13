@@ -1,7 +1,7 @@
 {
   "name": "skill-Berlin-D-E",
   "version": "1.0.0",
-  "description": "Bachelorarbeit Mohamed Megahed, TU Berlin, April 2018, Betreuer: Andreas Lommatzsch",
+  "description": "Bachelorarbeit Mohamed Megahed, TU Berlin, April 2018, Betreuer: Dr. Andreas Lommatzsch, Gutachter: Prof. Dr. Dr. h.c. Sahin Albayrak, Prof. Dr. Odej Kao",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
