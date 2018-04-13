@@ -1,0 +1,37 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "de-DE": {
+          "name": "Prototype2"
+        },
+        "en-US": {
+          "summary": "Skill für den Hauptstadtportal",
+          "examplePhrases": [
+            "Alexa öffne Berlin, DE",
+            "Alexa frag xyz",
+            "Alexa tell hello world my name is Peter"
+          ],
+          "name": "Prototype2",
+          "description": "Sample Full Description"
+        },
+        "fr-FR": {
+          "name": "Prototype2"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}
