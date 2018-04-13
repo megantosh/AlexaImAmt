@@ -52,3 +52,6 @@ https://spdx.org/licenses/
 
 #Manifest
 TODO: put samples etc
+
+## Git
+git clean -n is only a preview
