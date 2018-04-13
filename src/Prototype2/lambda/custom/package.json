@@ -1,11 +1,31 @@
 {
-  "name": "skill-sample-nodejs-hello-world",
+  "name": "skill-Berlin-D-E",
   "version": "1.0.0",
-  "description": "Hello world sample skill",
+  "description": "Bachelorarbeit Mohamed Megahed, TU Berlin, April 2018, Betreuer: Andreas Lommatzsch",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
+  "keywords": [
+    "SSDS",
+    "Virtueller Service Assistent",
+    "Stadtportal Berlin",
+    "Dialogsystem Alexa",
+    "DAI-Labor"
+  ],
+  "author": "Mohamed Megahed <mohamed.megahed@gmail.com> <mega@mail.tu-berlin.de>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/megantosh/AlexaImAmt.git"
+  },
+  "license": "AFL-2.0",
   "dependencies": {
-    "alexa-sdk": "^1.0.0"
+    "alexa-sdk": "^1.0.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "lodash": "^4.17.5",
+    "mocha": "^5.0.5",
+    "request-promise": "^4.2.2",
+    "request": "^2.34.0"
   }
 }

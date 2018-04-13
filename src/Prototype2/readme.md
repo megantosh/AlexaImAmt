@@ -36,3 +36,16 @@ It might be necessary to create a Node module /project
 on the root folder. goto **File > Project Structure > Modules > + > create it**
 then 
 goto **File > Project Structure > Modules > Add Content Root**
+
+
+##URLs
+
+https://service.berlin.de/standorte/
+
+https://service.berlin.de/dienstleistungen/
+
+https://service.berlin.de/behoerden/
+
+## License
+TODO: Agree on a license code from:
+https://spdx.org/licenses/
