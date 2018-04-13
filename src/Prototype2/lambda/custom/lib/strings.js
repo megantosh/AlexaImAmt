@@ -1,10 +1,17 @@
-// what Alexa would say. phrases or complete sentences
+// Things Alexa would say. phrases or complete sentences
 // use '?' to read a question
-// this.t = 'GREETINGS' to read the string properties
-// preferred method for multilingual skill
+// deprecated this.t = 'GREETINGS' to read the string properties
+// splitting preferred method for multilingual skill
 
+const Helper = require("./helper.js");
+//WARNING: appending 'http', 'https' breaks the URL object
+const base_url = 'service.berlin.de';
 
-exports.spokenStrings = {
+//****************************************************************
+// Defaults
+//****************************************************************
+
+exports.defaultSpokenStrings = {
     'en':
         {
             GREETING_TEXT: [
@@ -19,7 +26,8 @@ exports.spokenStrings = {
                 "always at your service.",
                 "I'll try to get better next time"
             ],
-            CANCEL_TEXT: 'OK, Bye'
+            CANCEL_TEXT: 'OK, Bye',
+            WIP_TEXT : 'Skill under development.'
         },
     'de':
         {
@@ -38,12 +46,13 @@ exports.spokenStrings = {
             STOP_TEXT: [
                 "ich halte mich fern",
             ],
-            CANCEL_TEXT: 'ich bin weg'
+            CANCEL_TEXT: 'ich bin weg',
+            WIP_TEXT : 'Skill wird gerade entwickelt.'
         }
 }
 
 //each card uses two variables. remember to reference them in the card by index
-exports.cardStrings = {
+exports.defaultCardStrings = {
     'de':
         {
             GREETING_TEXT: [
@@ -55,3 +64,75 @@ exports.cardStrings = {
     'en':
         {}
 }
+
+
+
+
+//TODO set default values - these are still from petmatch
+// This data is for testing purposes.
+// When isTestingWithSimulator is set to true
+// The slots will be auto loaded with this default data.
+// Set isTestingWithSimulator to false to disable to default data
+const defaultData = [
+    {
+        "name": "pet",
+        "value": "pooch",
+        "ERCode": "ER_SUCCESS_MATCH",
+        "ERValues": [
+            { "value": "dog" }
+        ]
+    },
+    {
+        "name": "energy",
+        "value": "play fetch with",
+        "ERCode": "ER_SUCCESS_MATCH",
+        "ERValues": [
+            { "value": "high" },
+        ]
+    },
+    {
+        "name": "size",
+        "value": "mini",
+        "ERCode": "ER_SUCCESS_MATCH",
+        "ERValues": [
+            { "value": "small" },
+            { "value": "tiny" }
+        ]
+    },
+    {
+        "name": "temperament",
+        "value": "guard",
+        "ERCode": "ER_SUCCESS_NO_MATCH",
+    },
+];
+
+
+//****************************************************************
+// Intent Maps
+//****************************************************************
+
+
+
+exports.Dienstleistung_IntentSpokenStrings = {
+    'de':
+        {
+            //When less parameters are sent to request(options), it will resolve the default values.
+            //TODO dynamic url resloution - routing
+            // PersoIntent : Helper.httpsGet(Helper.buildHttpGetOptions(base_url,'/dienstleistung/120703'))
+            PersoIntent: Helper.httpsGet('https://' + base_url + '/dienstleistung/120703/')
+
+        },
+    'en':
+        {
+            //TODO
+        }
+}
+
+//TODO get the formatted json and read the content
+//alternatively, get from the page the proper term and use the block/url
+// var getSearchContent = function (base_url, path, search_term) {
+//
+// }
+
+
+

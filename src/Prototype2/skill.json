@@ -6,10 +6,10 @@
           "name": "Prototype2"
         },
         "en-US": {
-          "summary": "Sample Short Description",
+          "summary": "Skill für den Hauptstadtportal",
           "examplePhrases": [
-            "Alexa open hello world",
-            "Alexa tell hello world I am Jeff",
+            "Alexa öffne Berlin, DE",
+            "Alexa frag xyz",
             "Alexa tell hello world my name is Peter"
           ],
           "name": "Prototype2",

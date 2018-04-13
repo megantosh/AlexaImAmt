@@ -34,6 +34,7 @@ exports.handler = function(event, context) {
 };
 
 
+//constructor for node tests
 
 
 //we will check for the locale inside the request
@@ -58,8 +59,8 @@ var DE_handlers = {
     //     this.emit('SayHelloName');
     // },
     'static_PersonalAusweisIntent' : function () {
-        console.log("in Perso")
-        this.emit('sayPerso');
+        console.log("in PersonalAusweisIntent")
+        this.emit('sayPersonalAusweisInfo'); //TODO then PA_kosten, then etc.
     },
 
     'openingHoursIntent': function () {
@@ -72,21 +73,22 @@ var DE_handlers = {
 
     'SayHello': function () {
         //uncomment this for default option
-        //this.response.speak(spokenStrings.de.GREETING_TEXT[0]);
-        this.response.speak(Helper.getResponseUtterance(AlexaStrings.spokenStrings.de.GREETING_TEXT));
+        //this.response.speak(AlexaStrings.defaultSpokenStrings.de.GREETING_TEXT[0]);
+        this.response.speak(Helper.getRandomResponseUtterance(AlexaStrings.defaultSpokenStrings.de.GREETING_TEXT));
 
         //TODO: can make her whisper here using ssml
         // https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html
         //https://stackoverflow.com/questions/41776014/how-to-correctly-specify-ssml-in-an-alexa-skill-lambda-function
         this.response.listen('Talk to me in German.')
         //if the card is made of two vars, then sth, else if 3 vars then title and image
-                     .cardRenderer(AlexaStrings.cardStrings.de.GREETING_TEXT[0], AlexaStrings.cardStrings.de.GREETING_TEXT[1]);
+            .cardRenderer(AlexaStrings.defaultCardStrings.de.GREETING_TEXT[0], AlexaStrings.defaultCardStrings.de.GREETING_TEXT[1]);
         this.emit(':responseReady');
     },
     //TODO
-    'sayPerso': function () {
+    'sayPersonalAusweisInfo': function () {
         //var district = this.event.request.intent.slots.District.value;
-        this.response.speak('Skill wird gerade entwickelt') ;
+        this.response.speak(AlexaStrings.defaultSpokenStrings.de.WIP_TEXT);
+        this.response.speak(AlexaStrings.Dienstleistung_IntentSpokenStrings.de.PersoIntent);
         this.emit(':responseReady')
     },
 
@@ -114,11 +116,11 @@ var DE_handlers = {
         console.log('Session ended with reason: ' + this.event.request.reason);
     },
     'AMAZON.StopIntent' : function() {
-        this.response.speak(spokenStrings.de.STOP_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.de.STOP_TEXT);
         this.emit(':responseReady');
     },
     'AMAZON.HelpIntent' : function() {
-        this.response.speak(spokenStrings.en.HELP_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.en.HELP_TEXT);
 
         this.emit(':responseReady');
     },
@@ -127,7 +129,7 @@ var DE_handlers = {
         this.emit(':responseReady');
     },
     'Unhandled' : function() {
-        this.response.speak(spokenStrings.en.HELP_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.en.HELP_TEXT);
     }
 
 };
@@ -140,20 +142,20 @@ var EN_US_handlers = {
         console.log('Session ended with reason: ' + this.event.request.reason);
     },
     'AMAZON.StopIntent' : function() {
-        this.response.speak(spokenStrings.en.STOP_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.en.STOP_TEXT);
         this.emit(':responseReady');
     },
     'AMAZON.HelpIntent' : function() {
-        this.response.speak(spokenStrings.en.HELP_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.en.HELP_TEXT);
         // should not stop here, but continue listning
         this.emit(':responseReady');
     },
     'AMAZON.CancelIntent' : function() {
-        this.response.speak(spokenStrings.en.CANCEL_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.en.CANCEL_TEXT);
         this.emit(':responseReady');
     },
     'Unhandled' : function() {
-        this.response.speak(spokenStrings.en.HELP_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.en.HELP_TEXT);
     }
 
 };

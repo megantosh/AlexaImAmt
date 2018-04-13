@@ -49,3 +49,6 @@ https://service.berlin.de/behoerden/
 ## License
 TODO: Agree on a license code from:
 https://spdx.org/licenses/
+
+#Manifest
+TODO: put samples etc
