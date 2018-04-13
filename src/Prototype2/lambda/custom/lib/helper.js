@@ -74,6 +74,11 @@ exports.httpsGet = function httpGet(options){
                 let response = returnData;
                 //TODO get the appropriate part from the website / json file
                 //TODO maybe pass it on for parsing, still dunno, depending on Solr endpoint
+                //TODO search for a string in an html then get the parent node / elements do not have ids, only class fel omm
+                //use str.search(/blue/i) - case insensitve
+                //get string from query / convert html to json (doesn't work per se)
+                //also maybe async like fetch would work: https://codeburst.io/4-ways-for-making-http-s-requests-with-node-js-c524f999942d
+
                 //let response = returnData.getElementsByClassName("body dienstleistung")[1];
                 console.log(response);
                 // let responsejson = JSON.parse(returnData);

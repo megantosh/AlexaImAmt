@@ -82,3 +82,6 @@ https://developer.amazon.com/docs/smapi/interaction-model-schema.html
 #install the ask-cli package on ur computer (globally)
 npm install -g ask-cli
 nmp install --update
+
+#ignoring big files larger than 100MB
+find . -size +100M | cat >> .gitignore
