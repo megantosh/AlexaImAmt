@@ -6,17 +6,36 @@
 
 %DELETEME: This chapter will cover all of your background information and related work. Background and related work are directly related to your thesis. Please do not place irrelevant content here which is a common mistake. Citing will be handled in the appendices.
 
-In this chapter we discuss Amazon's state-of-the-art strategy before moving on to related work in other archetypes as it is important to introduce the implementation scope of voice assistants bottom-up prior to exploring the current context within the same boundaries and compare it to other approaches in the larger context of conversational bots as a whole from a technical and user experience point of view. We start with the juxtaposition of Voice User Interface (VUI) to the Graphical User interface (GUI) with respect to cognition and behavioural design and bring implementation requirements to the table in section \ref{frameworks_structs}. 
-
+In this chapter we discuss Amazon's state-of-the-art strategy before moving on to related work in other archetypes as it is important to introduce the implementation scope of voice assistants bottom-up prior to exploring the current context within the same boundaries of voice assistants then compare it to other approaches in the larger context of conversational bots as a whole from a technical and user experience point of view. We start juxtaposition of Voice User Interface (VUI) to the Graphical User interface (GUI) with respect to cognition and behavioural design which gets us to define new terminological foundation that will follow throughout this thesis to then bring implementation requirements to the table in section \ref{frameworks_structs}. 
 
 
 %DELETEME: Background represents underlying knowledge that is required to understand your work. The expected knowledge level of your readers can be set to the one of a bachelor or master student who just finished his studies (depending on what kind of thesis you are writing). This means that you do not need to describe how computers work, unless your thesis topic is about this. Everything that an avarage alumni from your field of studies should know does not need to be described. It turn, background information that is very complex and content-wise very near to you problem, can be placed in the main parts. Everyting else should be written here. Note: it is important to connect each presented topic to your thesis. E.g. if you present the ISO/OSI layer model you should also write that this is needed to understand the protocols you plan to develop in the main parts.
 
-\subsection*{VUI vs. GUI} alexa podcast19
+\subsection*{VUI vs. GUI} 
+
+etkallem 3an el paradigm shift eli 7asal ma3 el mouse from cli if not already mentioned
+then 3an el smartphones and the wep from wap etc (deskop version, responsive design, two versions, em instead of pt, relative, starting with a tablet and a phone then anything relative to those then when the standards showed that there won't be an only 15 inch and a 12 inch there will be everything in between, we changed the idea to include continuous units in the spectrum and not only discrete units)
+\cite{alexa_19}
+different screens, different mobile experiences and what does it mean
+
+how do you think of designing voice when you have a mobile mindset
+how do you think about screens when you have a mobile mindset and thinking about voice
+subtle differnce
+
+
+
+\subsection{VUI Terminology} \todo{explain json}
+\begin{itemize}
+	\item[intent]
+	\item[utterance]
+	\item [slot]
+\end{itemize}
+
+
 gui in vui *card display* alexa podcast el adima that i heard while running i think
 
 
-
+imagine you have an intent and the label on th button says ok
 
 %#################################################################################
 %###################### State of the Art  ########################################
@@ -44,7 +63,7 @@ Alexa is a cloud-based voice service assistant platform by Amazon powering milli
 So far, though the separation of AWS and Alexa's environments is not linguistically intuitive with the company's name labelled on every service component \footnote{see Etymology \ref{etymology}}, \href{http://www.amazon.com}{Amazon.com, Inc.} offers an array of web services through AWS that summarize all building blocks necessary to operate Alexa as a software for end-users. Of course with the introduction of the aforementioned devices, it becomes intuitive to call these `Alexa devices' since their primary purpose is to operate as Alexa clients. We refer to Alexa here only as the service offered by Amazon to consumers. Consequently, although Alexa comes as a fully packaged service to end-users, we can reduce it to a compilation of many micro-services provided by AWS. As most of these are available separately in the form of Software as a Service (Saas), we conclude that AWS incorporates the following components required to make Alexa come together and becomes a consumer of its own web services platform. 
 
 \subsubsection*{Alexa's AWS Modules \inote{make logos as minipage objects or set as table}}
-%\inote{in print, make sure the following list goes on a spread (odd then even page number) for clarity}
+%\inote{in print, make sure the following list goes on a spread (odd then even page number) with the image at the end of it for clarity}
 
 listed in sequential order of importance, Alexa's service modules include but are not limited to: 
 
@@ -185,7 +204,19 @@ just like other common chat bot constructs, Alexa Skills Kit (ASK) divides the b
 
 \subsection*{Alexa Interfaces}
 
+\begin{table}[htbp]
+	\caption{Alexa Devices in Comparision}\label{alexaDeviceTable}
+	\centering
+	\begin{tabularx}{\textwidth}{ r | l l l l }
+		
+				& Echo Dot/Echo/Echo Plus/Tap & Echo Spot     & Echo Show     & FireTV \\ \hline
+		screen  & n                           & 2.5'' round 		  & 7.0'' 		  & via HDMI Display       \\
+%				&							  & (round)		  &				  &				\\
+		line out& y      					  & y             & via Bluetooth & via HDMI      \\
+	\end{tabularx}
+\end{table}
 
+%then comes el software 
 
 hardware \inote{just make a comparison table, which one has a screen, which one has which capabilities with alexa}
 Echo, Echo Dot, Tap, FireTV
@@ -373,13 +404,15 @@ AWS Lambda supports multiple runtime environments including Python, Java, C\# an
 }
 
 
+\subsection*{Solr}
+w lucene w tika w nutch wel habal da if required
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 %###################################################################################
-%###################### Topic A             ########################################
+%###################### Use Case in detail  ########################################
 %###################################################################################
 \section{The Analysed Scenario as a Use Case}
 \subsection*{D115}
@@ -395,7 +428,7 @@ AWS Lambda supports multiple runtime environments including Python, Java, C\# an
 
 
 
-\subsection{currently deployed bot}
+\subsection*{currently deployed bot}
 
 
 
@@ -411,7 +444,7 @@ AWS Lambda supports multiple runtime environments including Python, Java, C\# an
 	%the live service is different than the one at DAI
 }
 
-\subsection{Intents and Slots} \todo{explain json}
+%%%%%%%%%%%%%%%%%%%%%
 
 OnLaunch
 IntentHandler
@@ -430,6 +463,10 @@ account verlinkungen etc
 %							  \qroof{\textit{to use}}.CP ]]]]]]]
 
 provided in JSON for value lookup, there are
+
+
+explain how the json nodes map to intents and cores in solr etc
+
 
 \begin{figure}[h!]
 	\caption{\lstinline|Dienstleistungen.json|  - Primary Nodes}

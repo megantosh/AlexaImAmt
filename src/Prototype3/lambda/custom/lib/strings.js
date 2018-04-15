@@ -136,7 +136,7 @@ exports.Dienstleistung_IntentSpokenStrings = {
 
 
 
-
+//Oskar's suggestion
 export default defaultData;
 
 

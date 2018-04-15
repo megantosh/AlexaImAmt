@@ -60,7 +60,7 @@ var DE_handlers = {
 
     'LaunchRequest': function () {
         console.log("in LaunchRequest");
-bui    },
+    },
     // 'MyNameIsIntent': function () {
     //     this.emit('SayHelloName');
     // },
