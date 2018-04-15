@@ -133,6 +133,15 @@ exports.Dienstleistung_IntentSpokenStrings = {
         }
 }
 
+
+
+
+
+export default defaultData;
+
+
+
+
 //TODO get the formatted json and read the content
 //alternatively, get from the page the proper term and use the block/url
 // var getSearchContent = function (base_url, path, search_term) {

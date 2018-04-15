@@ -18,6 +18,11 @@ fka~VoiceLabs Alpine.ai, jan 2017.
 \newblock {\em Alexa Dev Chat Podcast}, 11 2017.
 \newblock Accessed on 13/02/2018.
 
+\bibitem{aws:lex_webinar}
+Amazon Web Services~Webinar Channel.
+\newblock Introducing amazon lex: Service for building voice/text chatbots -
+  march 2017 aws online tech talks.
+
 \bibitem{wiki:nlp}
 Wikipedia contributors.
 \newblock History of natural language processing --- wikipedia{,} the free
@@ -62,6 +67,9 @@ NBC.
   buy more echoes.
 \newblock Accessed on 15/02/2018.
 
+\bibitem{aws_website}
+Amazon~Web Services.
+
 \bibitem{hiddenbrainpod}
 {Shankar Vedantam}.
 \newblock {Radio Replay: I, Robot}.
@@ -84,6 +92,10 @@ Laurie Sullivan.
 Joseph Weizenbaum.
 \newblock {\em Computer Power and Human Reason: From Judgment to Calculation}.
 \newblock W. H. Freeman \& Co., New York, 1976.
+
+\bibitem{wiki:mvc}
+Wikipedia.
+\newblock Model-view-controller.
 
 \bibitem{globalwebindex}
 Katie Young, June 2016.

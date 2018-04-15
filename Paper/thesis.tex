@@ -28,6 +28,8 @@
 \usepackage[show]{chato-notes} %note/todo/inote/citeMissing - change to [hide]
 \usepackage{qtree}
 
+\usepackage{wrapfig, lipsum} %for wrapping
+
 %depth of section
 \setcounter{secnumdepth}{4}
 %depth of TOC
@@ -59,6 +61,20 @@
 \setcounter{tocdepth}{3}
 %This is needed for entering URLs for harvard citation style
 %\renewcommand{\harvardurl}{URL: \url}
+
+
+
+%as suggested by https://tex.stackexchange.com/questions/304205/center-image-to-page-inside-enumerate
+% but could use something like this: https://tex.stackexchange.com/questions/149418/changepage-packages-adjustwidth-environment-adjusts-only-left-margin
+\usepackage{changepage}
+\makeatletter
+\newenvironment{restoretext}%
+{\@parboxrestore%
+	\begin{adjustwidth}{}{\rightmargin}%
+	}{\end{adjustwidth}
+}
+\makeatother
+
 
 
 %###################################################################################

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  14 APR 2018 01:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  15 APR 2018 05:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -850,24 +850,41 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 \qroofy=\count148
 \@qrscratchbox=\box52
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen156
+\WF@size=\dimen157
+\c@WF@wrappedlines=\count149
+\WF@box=\box53
+\WF@everypar=\toks27
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count150
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count151
+\cp@tempcnt=\count152
+)
 (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 83.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -905,19 +922,19 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box53
-Package hyperref Info: Link coloring OFF on input line 67.
+\AtBeginShipoutBox=\box54
+Package hyperref Info: Link coloring OFF on input line 83.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count149
+\c@section@level=\count153
 )
-LaTeX Info: Redefining \ref on input line 67.
-LaTeX Info: Redefining \pageref on input line 67.
-LaTeX Info: Redefining \nameref on input line 67.
+LaTeX Info: Redefining \ref on input line 83.
+LaTeX Info: Redefining \pageref on input line 83.
+LaTeX Info: Redefining \nameref on input line 83.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write4
@@ -926,17 +943,17 @@ LaTeX Info: Redefining \nameref on input line 67.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count150
-\scratchdimen=\dimen156
-\scratchbox=\box54
-\nofMPsegments=\count151
-\nofMParguments=\count152
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count153
-\MPscratchDim=\dimen157
-\MPnumerator=\count154
-\makeMPintoPDFobject=\count155
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count154
+\scratchdimen=\dimen158
+\scratchbox=\box55
+\nofMPsegments=\count155
+\nofMParguments=\count156
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count157
+\MPscratchDim=\dimen159
+\MPnumerator=\count158
+\makeMPintoPDFobject=\count159
+\everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -957,8 +974,9 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count156
+\c@lstlisting=\count160
 
 (./input/00a_title_page.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 22.
@@ -971,13 +989,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<gfx/template/TUBerlin_Logo_rot_hell.pdf, id=147, 4741.715pt x 3529.185pt>
+<gfx/template/TUBerlin_Logo_rot_hell.pdf, id=138, 4741.715pt x 3529.185pt>
 File: gfx/template/TUBerlin_Logo_rot_hell.pdf Graphic file (type pdf)
 <use gfx/template/TUBerlin_Logo_rot_hell.pdf>
 Package pdftex.def Info: gfx/template/TUBerlin_Logo_rot_hell.pdf  used on input
  line 23.
 (pdftex.def)             Requested size: 62.73549pt x 46.68877pt.
-<gfx/template/aot_logo.pdf, id=148, 838.2025pt x 535.86098pt>
+<gfx/template/aot_logo.pdf, id=139, 838.2025pt x 535.86098pt>
 File: gfx/template/aot_logo.pdf Graphic file (type pdf)
 <use gfx/template/aot_logo.pdf>
 Package pdftex.def Info: gfx/template/aot_logo.pdf  used on input line 23.
@@ -1002,8 +1020,11 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 70--71
 emplate/TUBerlin_Logo_rot_hell.pdf> <./gfx/template/aot_logo.pdf>])
 (./input/00b_abstract_ack.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
+ [2
 
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 29--31
 
  []
@@ -1021,8 +1042,7 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <12> not available
 (Font)              Font shape `OT1/phv/b/sc' tried instead on input line 36.
- [2
-
+ [3
 
 ]
 Underfull \hbox (badness 2050) in paragraph at lines 49--50
@@ -1046,9 +1066,9 @@ Underfull \hbox (badness 1014) in paragraph at lines 55--57
 wicklung mit dem
  []
 
-[3
+[4
 
-] [4]
+] [5]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 71.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <10.95> not available
@@ -1072,31 +1092,31 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
 LaTeX Font Info:    Font shape `OMS/phv/bx/sc' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 75.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 72--76
+Underfull \hbox (badness 10000) in paragraph at lines 72--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--76
+Underfull \hbox (badness 10000) in paragraph at lines 72--92
 
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 72--76
+Underfull \hbox (badness 5189) in paragraph at lines 72--92
 []\OT1/phv/b/sc/12 [Supervisor Note] Bitte Be-treuernot-izen auch im Flie^^Y-te
 xt
  []
 
-[5
+[6
 
-] (./thesis.toc [6
+] (./thesis.toc [7
 
 ])
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
- [7] (./thesis.lof
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 4.
+ [8] (./thesis.lof
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 6.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -1104,7 +1124,7 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- [8
+ [9
 
 
 ]
@@ -1112,7 +1132,7 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
- [9
+ [10
 
 
 ] (./input/01_introduction.tex
@@ -1194,68 +1214,135 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--209
 
 [5]) (./input/02_background.tex [6]
 Chapter 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
-
- []
-
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
 [7
 
-]
-LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
+] [8]
+<gfx/awslogos/lexlogo.png, id=358, 71.26625pt x 79.29625pt>
+File: gfx/awslogos/lexlogo.png Graphic file (type png)
+<use gfx/awslogos/lexlogo.png>
+Package pdftex.def Info: gfx/awslogos/lexlogo.png  used on input line 60.
+(pdftex.def)             Requested size: 28.4527pt x 31.29807pt.
+<gfx/awslogos/pollylogo.png, id=364, 88.33pt x 74.2775pt>
+File: gfx/awslogos/pollylogo.png Graphic file (type png)
+<use gfx/awslogos/pollylogo.png>
+Package pdftex.def Info: gfx/awslogos/pollylogo.png  used on input line 73.
+(pdftex.def)             Requested size: 30.15984pt x 25.60762pt.
+<gfx/awslogos/transcribelogo.png, id=369, 84.315pt x 60.4659pt>
+File: gfx/awslogos/transcribelogo.png Graphic file (type png)
+<use gfx/awslogos/transcribelogo.png>
+Package pdftex.def Info: gfx/awslogos/transcribelogo.png  used on input line 84
+.
+(pdftex.def)             Requested size: 34.14351pt x 25.60677pt.
+<gfx/awslogos/lambdalogo.png, id=375, 50.1875pt x 54.2025pt>
+File: gfx/awslogos/lambdalogo.png Graphic file (type png)
+<use gfx/awslogos/lambdalogo.png>
+Package pdftex.def Info: gfx/awslogos/lambdalogo.png  used on input line 95.
+(pdftex.def)             Requested size: 22.76259pt x 25.6075pt.
+ [9 <./gfx/awslogos/lexlogo.png> <./gfx/awslogos/pollylogo.png> <./gfx/awslogos
+/transcribelogo.png> <./gfx/awslogos/lambdalogo.png>]
+<gfx/awslogos/cloudwatchlogo.png, id=393, 82.3075pt x 59.22125pt>
+File: gfx/awslogos/cloudwatchlogo.png Graphic file (type png)
+<use gfx/awslogos/cloudwatchlogo.png>
+Package pdftex.def Info: gfx/awslogos/cloudwatchlogo.png  used on input line 10
+7.
+(pdftex.def)             Requested size: 35.85118pt x 25.6074pt.
+<gfx/awslogos/cognitologo.png, id=397, 93.34875pt x 61.22874pt>
+File: gfx/awslogos/cognitologo.png Graphic file (type png)
+<use gfx/awslogos/cognitologo.png>
+Package pdftex.def Info: gfx/awslogos/cognitologo.png  used on input line 119.
+(pdftex.def)             Requested size: 38.69484pt x 24.1846pt.
+<gfx/awslogos/cognitologo_old.jpg, id=401, 140.525pt x 166.6225pt>
+File: gfx/awslogos/cognitologo_old.jpg Graphic file (type jpg)
+<use gfx/awslogos/cognitologo_old.jpg>
+Package pdftex.def Info: gfx/awslogos/cognitologo_old.jpg  used on input line 1
+30.
+(pdftex.def)             Requested size: 21.62247pt x 25.60503pt.
+<gfx/workflows/awstools.png, id=404, 2190.1825pt x 1247.66125pt>
+File: gfx/workflows/awstools.png Graphic file (type png)
+<use gfx/workflows/awstools.png>
+Package pdftex.def Info: gfx/workflows/awstools.png  used on input line 141.
+(pdftex.def)             Requested size: 421.10086pt x 239.87569pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--108
-
+Overfull \hbox (2.84718pt too wide) in paragraph at lines 141--142
+ [][] 
  []
 
-[8]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 113.
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-
- []
+[10 <./gfx/awslogos/cloudwatchlogo.png> <./gfx/awslogos/cognitologo.png> <./gfx
+/awslogos/cognitologo_old.jpg> <./gfx/workflows/awstools.png>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 162.
 
 
-LaTeX Warning: Reference `intents' on page 9 undefined on input line 133.
-
-[9]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 135.
-
- (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 135.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 162.
+ [11]
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
-\OT1/pcr/m/n/12 de / virtueller-[]assistent / virtueller-[]assistent-[]606279 .
- php$[]
+LaTeX Warning: Reference `intents' on page 12 undefined on input line 179.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--254
+
  []
 
-[10]
-<gfx/DLprim.png, id=348, 1577.895pt x 489.83pt>
-File: gfx/DLprim.png Graphic file (type png)
-<use gfx/DLprim.png>
-Package pdftex.def Info: gfx/DLprim.png  used on input line 206.
-(pdftex.def)             Requested size: 418.25368pt x 129.83423pt.
-<gfx/DLsec.png, id=349, 3356.54pt x 360.34625pt>
-File: gfx/DLsec.png Graphic file (type png)
-<use gfx/DLsec.png>
-Package pdftex.def Info: gfx/DLsec.png  used on input line 211.
-(pdftex.def)             Requested size: 418.25368pt x 44.9002pt.
+[12]
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 299.
 
-Overfull \hbox (8.46072pt too wide) in paragraph at lines 216--216
- [] 
- []
-
-[11 <./gfx/DLprim.png> <./gfx/DLsec.png>] [12]) (./input/03_main_part_1.tex
-Underfull \hbox (badness 10000) in paragraph at lines 281--1
+Underfull \hbox (badness 10000) in paragraph at lines 299--299
 
  []
 
 [13]
+Overfull \hbox (9.26846pt too wide) in paragraph at lines 309--309
+[]\OT1/ptm/m/n/12 Figure 2.2:
+ []
+
+File: gfx/template/aot_logo.pdf Graphic file (type pdf)
+<use gfx/template/aot_logo.pdf>
+Package pdftex.def Info: gfx/template/aot_logo.pdf  used on input line 310.
+(pdftex.def)             Requested size: 71.13188pt x 45.4699pt.
+
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 310--311
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+\OT1/pcr/m/n/12 de / virtueller-[]assistent / virtueller-[]assistent-[]606279 .
+ php$[]
+ []
+
+[14] [15]
+<gfx/DLprim.png, id=451, 1577.895pt x 489.83pt>
+File: gfx/DLprim.png Graphic file (type png)
+<use gfx/DLprim.png>
+Package pdftex.def Info: gfx/DLprim.png  used on input line 436.
+(pdftex.def)             Requested size: 418.25368pt x 129.83423pt.
+<gfx/DLsec.png, id=452, 3356.54pt x 360.34625pt>
+File: gfx/DLsec.png Graphic file (type png)
+<use gfx/DLsec.png>
+Package pdftex.def Info: gfx/DLsec.png  used on input line 441.
+(pdftex.def)             Requested size: 418.25368pt x 44.9002pt.
+
+Overfull \hbox (8.46072pt too wide) in paragraph at lines 446--446
+ [] 
+ []
+
+[16 <./gfx/DLprim.png> <./gfx/DLsec.png>]) (./input/03_main_part_1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 498--1
+
+ []
+
+[17] [18]
 Chapter 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1292,9 +1379,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--29
  2017 / 09 /
  []
 
-[14
+[19
 
-]) (./input/04_main_part_2.tex [15]
+]) (./input/04_main_part_2.tex [20]
 Chapter 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1306,7 +1393,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 lls-kit-command-
  []
 
-[16
+[21
 
 ]) (./input/05_evaluation.tex
 Underfull \hbox (badness 10000) in paragraph at lines 66--1
@@ -1314,7 +1401,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--1
 ally-with-nodejs-
  []
 
-[17]
+[22]
 Chapter 5.
 
 Underfull \hbox (badness 1412) in paragraph at lines 17--17
@@ -1344,7 +1431,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 ity.wien/wienbot-
  []
 
-[18
+[23
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 66--67
@@ -1356,14 +1443,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--1
 
  []
 
-[19]
+[24]
 Chapter 6.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 34--101
+Underfull \hbox (badness 10000) in paragraph at lines 34--117
 
  []
 
-[20
+[25
 
 ] (./thesis.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 8--14
@@ -1378,46 +1465,46 @@ f$[]\OT1/ptm/m/n/12 , Au-gust
  []
 
 
-Underfull \hbox (badness 5231) in paragraph at lines 41--45
+Underfull \hbox (badness 5231) in paragraph at lines 46--50
 []\OT1/ptm/m/n/12 Gesch[]afts- und Koordinier-ungss-telle 115 im Bundesmin-is-t
 erium des In-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--45
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
 \OT1/ptm/m/n/12 nern.  []$\OT1/pcr/m/n/12 {https : / / www . 115 . de / SharedD
 ocs / Publikationen /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--45
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
 \OT1/pcr/m/n/12 Service _ Publikationen / Infomaterialien / infobroschuere _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--45
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
 \OT1/pcr/m/n/12 %20BMI08324 _ screen _ barrierefrei . pdf ? _ _ blob =
  []
 
-[21
+[26
 
 
-]) (./input/07_appendix.tex [22] [23
+]) (./input/07_appendix.tex [27] [28
 
-]
-Overfull \hbox (399.70566pt too wide) in paragraph at lines 66--98
+] [29]
+Overfull \hbox (399.70566pt too wide) in paragraph at lines 72--110
 []  
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 116.
- [24]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 116.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
+ [30]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 116.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 116.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 1260DAC15920B0C0C5B7C8CE97C772CA;2273.
+(rerunfilecheck)             Checksum: 9FA6EE4AF2A2F917F3DF54C079CADE0A;2141.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1425,29 +1512,50 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 116.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 11342 strings out of 492985
- 161846 string characters out of 6132585
- 289382 words of memory out of 5000000
- 14569 multiletter control sequences out of 15000+600000
- 45207 words of font info for 99 fonts, out of 8000000 for 9000
+ 11732 strings out of 492985
+ 167419 string characters out of 6132585
+ 382714 words of memory out of 5000000
+ 14899 multiletter control sequences out of 15000+600000
+ 51370 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,10n,42p,1965b,1375s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
-urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
-utmri8a.pfb>
-Output written on thesis.pdf (33 pages, 263862 bytes).
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/ur
+w/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/ut
+mri8a.pfb>
+Output written on thesis.pdf (40 pages, 786476 bytes).
 PDF statistics:
- 481 PDF objects out of 1000 (max. 8388607)
- 428 compressed objects within 5 object streams
- 93 named destinations out of 1000 (max. 500000)
- 309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 596 PDF objects out of 1000 (max. 8388607)
+ 512 compressed objects within 6 object streams
+ 123 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 

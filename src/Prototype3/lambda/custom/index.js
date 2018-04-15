@@ -1,4 +1,4 @@
-//enable ES6 functionality, be as strict as possible in treating vars/lets
+//enable ES6 functionality, be as strict as possible in treating vars/lets  //import from
 'use strict';
 const Alexa = require("alexa-sdk");
 const Helper = require("./lib/helper.js");
@@ -40,7 +40,7 @@ exports.handler = function(event, context) {
     alexa.execute();
 };
 
-
+AlexaStrings
 //constructor for node tests
 
 
@@ -60,8 +60,7 @@ var DE_handlers = {
 
     'LaunchRequest': function () {
         console.log("in LaunchRequest");
-        this.emit('SayHello');
-    },
+bui    },
     // 'MyNameIsIntent': function () {
     //     this.emit('SayHelloName');
     // },
