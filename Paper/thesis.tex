@@ -28,6 +28,10 @@
 \usepackage[show]{chato-notes} %note/todo/inote/citeMissing - change to [hide]
 \usepackage{qtree}
 
+
+\usepackage{mathtools}% underbraces maybe etc
+\usepackage{minted}
+%\usepackage{pygmentize}
 \usepackage{wrapfig, lipsum} %for wrapping
 \usepackage{tabularx} %tables gamila khales
 %depth of section
@@ -100,8 +104,30 @@
 \addcontentsline{toc}{chapter}{List of Tables}
 \newpage
 \listoftables
+
+%abbreviations go in appendix
 %physical constants
 %list of symbols
+
+%%from LatexTemplates
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS PAGE DESIGN
+%----------------------------------------------------------------------------------------
+
+%\newcommand{\abbrevname}{List of Abbreviations}
+%\providecaptionname{english,british,american}{\abbrevname}{List of Abbreviations}
+%\providecaptionname{ngerman,german,austrian,naustrian}{\abbrevname}{Abk\"urzungsverzeichnis}
+%\NewDocumentEnvironment{abbreviations}{ m }{%
+%	\ifbool{nolistspace}{\begingroup\singlespacing}{}
+%	\ifbool{listtoc}{\addchap{\abbrevname}}{\addchap*{\abbrevname}}
+%	\begin{longtable}{#1}
+%	}{%
+%	\end{longtable}
+%	\addtocounter{table}{-1} % Don't count this table as one of the document tables
+%	\ifbool{nolistspace}{\endgroup}{}
+%}
+
+
 
 
 %__________________________Main_Content______________________________________________

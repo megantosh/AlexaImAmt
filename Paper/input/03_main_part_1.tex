@@ -1,6 +1,95 @@
-\chapter{Skill Implementation: \inote{Dienstabfrage}}
+\chapter{Skill Design} %\inote{ (was: Implementation) Dienstabfrage}}
 \label{mainone}
 %DELETEME: In this chapter you start addressing your actual problem. Therefore, it makes often sense to make a detailed problem analysis first (if not done in introduction). You should be sure about what to do and how. As writtin in the background part, it might also make sense to include complex background information or papers you are basing on in this analysis. If you are solving a software problem, you should follow the state of the art of software development which basically includes: problem analysis, design, implementation, testing, and deployment. Maintenance is often also described but I believe this will not be required for most theses. Code should be placed in the appendix unless it is solving an essential aspect of your work.
+
+\todo{
+	intro on structure of chapter\\
+- to then elaborate on implementation requirements in section \ref{frameworks_structs}. 
+}
+
+we say first decision was to go for alexa so we see what we kind of frameworks we need around it
+
+\todo{
+	then talk about how you researched on alexa's available skills and found out that the e-Government sector is underrepresented and hence you chose this as ur analyzed scenario.\\
+	%%% move to section \ref{choiceOfPlatform}
+	fluidly contiuning from intro and background:\\
+	- since among Apple and Google it hast the voice-first devices best equipped for its platform, a user base larger then its competition and provides the most mature API and SDKs.\\
+	
+	- We choose this skill scenario since it is underrepresented in that pie chart. ... 
+	- amazon as a platform is compared to apple and google readiest (check ref voicelabs)
+}
+
+\todo{
+	%this is mostly repeating intro saying that you found a solution for the requirements
+	- ..it would speak as an advantage for bots if they can determine these things automatically..\\
+	%	mentioned earlier - imagination about ablitiy to react to everything\\
+	- currently most tasks revolve around performing tasks like setting an alarm, 
+	%	to perform task like - mention top 10 and a few more stats / tech review
+	- answer suggestions functionality in chatbot equivalent
+	- next step is to get around the user's frustration by making the bot at least more human.	
+	
+	- Alexa Skill will work in Germany in english and german -> add english after german
+}
+
+\section{Frameworks and Data Structures}~\label{frameworks_structs}
+
+
+\textcolor{magenta}{-AL: Ich w\"urde erst etwas die Algorithmen und Datenstrukturen (Textanalyse, JSON, ggf. Graphen beschreiben. 
+	-AL: Anschlie{\ss}end die Frameworks vorstellen\\ 
+	-AL: Wichtig ist: Aus den Beschreibungen eine Schlussfolgerung ableiten, welche Art von L\"osung entwickelt werden soll.\\
+	for current bot: \\
+	- Lucene \textbf{as the golden standard}: spell check, unscharfe suche, Tika / detect language / ... \\
+	- Solr
+	- explain what's an intent, whats a slot
+	\url{https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}
+	\url{https://www.itdz-berlin.de/}
+}
+
+
+
+%###################################################################################
+%###################### Topic B             ########################################
+%###################################################################################
+
+\subsection*{Node.js}
+
+AWS Lambda supports multiple runtime environments including Python, Java, C\# and Go. We decide to use Node.js due to its event-driven nature and to take advantage of its non-blocking I/O model. Being single-threaded, Node.js guarantees high performance at large scale with large volumes of requests considered. With its JavaScript (ECMAScript) foundation, no wonder it is becoming a standard in web-apps. Hence, the decision also comes due to the richness of develpers' experience with the implementation for Alexa Skills.
+\todo{
+	- Server-side, browser side (Chrome V8), App layer, data layer\\
+	- because it can read our JSON easily and fast
+	- talk about Methodenaufbau (syntax) and firing events
+	- Event driven like listener-observer model, emit
+	
+}
+
+%###################################################################################
+%###################### Topic B             ########################################
+%###################################################################################
+
+\subsection*{SolR}
+w lucene w tika w nutch wel habal da if required
+
+using state of the art standards in TF/IDF for seach queries
+
+-Vorgehensweise: XML/JSON //- index über Lucene //- SolR Knoten...based on sth like when i say  ``am 10. august'  it gets me masalan events..aha august ist ein monat, monat relates to calendar, calendar relates to events
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \textcolor{magenta}{
 - as an example for voice\\
@@ -11,7 +100,9 @@
 -scopes and granularity
 }
 
-\section{All about Alexa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% changer
+%\section{All about Alexa} %outdated
 \url{https://en.wikipedia.org/wiki/Amazon_Alexa}
 \url{https://medium.com/@robinjewsbury/how-to-create-bots-and-skills-for-facebook-messenger-and-amazon-echo-4a03935eeca1}
 \textcolor{magenta}{
@@ -21,14 +112,11 @@
 
 \textcolor{red}{Perez, Sarah (3 June 2016). "Amazon Alexa now has over 1,000 Functions, up from 135 in January". TechCrunch. Retrieved 5 August 2016.}
 
-\section{Difference Between Lex and Alexa Skills}  
-\url{https://stackoverflow.com/questions/42982159/differences-between-using-lex-and-alexa#URL}\\
-\url{https://aws.amazon.com/lex/faqs/}\\
-\url{https://aws.amazon.com/about-aws/whats-new/2017/09/export-your-amazon-lex-chatbot-to-the-alexa-skills-kit/}\\
-\textcolor{magenta}{Amazon Lex is a service for building conversational interfaces using voice and text. Powered by the same conversational engine as Alexa, Amazon Lex provides high quality speech recognition and language understanding capabilities, enabling addition of sophisticated, natural language \'chatbots\' to new and existing applications. Amazon Lex reduces multi-platform development effort, allowing you to easily publish your speech or text chatbots to mobile devices and multiple chat services, like Facebook Messenger, Slack, Kik, or Twilio SMS. Native interoperability with AWS Lambda, AWS MobileHub and Amazon CloudWatch and easy integration with many other services on the AWS platform including Amazon Cognito, and Amazon DynamoDB makes bot development effortless.}
 
 
-\section{APIs and SDKs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% changer
+%\section{APIs and SDKs}
 
 \textcolor{magenta}{
 - swagger for handling JSON requests?\\
@@ -50,3 +138,17 @@
 Error: There was a problem with your request: "werden?" in the sample utterance "TestIntent was soll aus dieser Skill werden?" is invalid. Sample utterances can consist of only unicode characters, spaces, periods for abbreviations, underscores, possessive apostrophes, and hyphens.
 
 do not use "?"
+
+
+
+\section{Design Guidelines}
+\label{designGuide}
+
+Memory (Session, Context)
+
+Entity Resolution 
+
+Interaction Model
+
+
+gui in vui *card display* alexa podcast el adima that i heard while running i think

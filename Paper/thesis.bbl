@@ -1,8 +1,24 @@
 \begin{thebibliography}{10}
 
+\bibitem{voicelabs:trends}
+{Adam Marchick, Alpine.ai}.
+\newblock Voice search trends.
+\newblock \url{https://alpine.ai/voice-search-trends/}, Apr 2018.
+\newblock Accessed on 16.04.2018.
+
 \bibitem{voicelabs}
-fka~VoiceLabs Alpine.ai, jan 2017.
-\newblock accessed on 16.02.2018.
+{Alpine.ai (VoiceLabs)}.
+\newblock The 2017 voice report.
+\newblock \url{https://alpine.ai/2017/01/15/the-2017-voice-report-by-alpine/},
+  January 2017.
+\newblock Accessed on 16.02.2018.
+
+\bibitem{aws:lex_webinar}
+{Amazon Web Services Webinar Channel}.
+\newblock Introducing amazon lex: Service for building voice/text chatbots -
+  march 2017 aws online tech talks.
+\newblock \url{https://youtu.be/tAKbXEsZ4Iw?t=4m14s}, March 2017.
+\newblock Accessed on 15.04.2018.
 
 \bibitem{zensus}
 {Amt f\"ur Statistik Berlin-Brandenburg}.
@@ -15,32 +31,57 @@ fka~VoiceLabs Alpine.ai, jan 2017.
 \bibitem{alexapc18}
 {Brian Roemmele, Dave Isbitski}.
 \newblock {Episode 018 - A Voice First Future with Brian Roemmele}.
-\newblock {\em Alexa Dev Chat Podcast}, 11 2017.
-\newblock Accessed on 13/02/2018.
+\newblock {\em Alexa Dev Chat Podcast}, November 2017.
+\newblock Accessed on 13.02.2018.
 
-\bibitem{aws:lex_webinar}
-Amazon Web Services~Webinar Channel.
-\newblock Introducing amazon lex: Service for building voice/text chatbots -
-  march 2017 aws online tech talks.
+\bibitem{alexa_19}
+{Brian Roemmele, Dave Isbitski}.
+\newblock {Episode 019 - Looking back at the Year in Voice and What's Next}.
+\newblock {\em Alexa Dev Chat Podcast}, 11 2017.
+\newblock Accessed on 13.02.2018.
+
+\bibitem{wiki:mvc}
+Wikipedia contributors.
+\newblock Model-view-controller.
+\newblock
+  \url{https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller}.
 
 \bibitem{wiki:nlp}
 Wikipedia contributors.
 \newblock History of natural language processing --- wikipedia{,} the free
-  encyclopedia, 2017.
-\newblock [Accessed 14 February 2018].
+  encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=History_of_natural_language_processing&oldid=795750930},
+  2017.
+\newblock Accessed on 14.02.2018.
 
 \bibitem{wiki:gartnerreports}
 Wikipedia contributors.
 \newblock Usage share of operating systems --- wikipedia{,} the free
-  encyclopedia, 2018.
-\newblock [Accessed 14 February 2018].
+  encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Usage_share_of_operating_systems&oldid=825514016},
+  2018.
+\newblock Accessed on 14.02.2018.
+
+\bibitem{alexaDesignGuide}
+Alexa Skills~Kit documentation.
+\newblock \url{https://alexa.design/build}.
 
 \bibitem{gartnerpreds17}
 Gartner.
 \newblock Gartner reveals top predictions for it organizations and users in
   2017 and beyond.
-\newblock Oct 2017.
-\newblock accessed on 15.02.2018.
+\newblock \url{https://www.gartner.com/newsroom/id/3482117}, October 2017.
+\newblock Accessed on 15.02.2018.
+
+\bibitem{dai:cl}
+{Georg Berger, RBB Online}.
+\newblock Geniale köpfe - wohnen der zukunft.
+\newblock
+  \url{https://rbb-online.de/abenschau/archiv/20180416_1930/sahin-Albayrak.html},
+  April 2018.
+\newblock Accessed on 16.14.2018.
 
 \bibitem{d115}
 {Gesch\"afts- und Koordinierungsstelle 115 im Bundesministerium des Innern}.
@@ -55,20 +96,30 @@ Tobias Grossmann, Regine Oberecker, Stefan Koch, and Angela D~Friederici.
 
 \bibitem{Starwars}
 {Judy Goldsmith and Nicholas Mattei}.
-\newblock Science fiction as an introduction to ai research, 2011.
+\newblock Science fiction as an introduction to ai research.
+\newblock
+  \url{https://pdfs.semanticscholar.org/fdd1/41aac65e9c412e7804b930ca81db327c26b5.pdf},
+  2011.
 
 \bibitem{businsider}
 {M. Ballve}.
-\newblock Messaging apps are now bigger than social networks, 2016.
+\newblock Messaging apps are now bigger than social networks.
+\newblock \url
+  {http://www.businessinsider.de/the-messaging-app-report-2015-11?r=US&IR=T},
+  September 2016.
+\newblock Accessed on 17.02.2018.
 
 \bibitem{cnbcAlexa}
 NBC.
 \newblock Amazon's alexa had a breakout holiday — people even used echoes to
   buy more echoes.
-\newblock Accessed on 15/02/2018.
+\newblock
+  \url{https://www.cnbc.com/2017/12/26/how-many-amazon-alexa-echoes-were-sold-over-the-2017-holidays.html}.
+\newblock Accessed on 15.02.2018.
 
 \bibitem{aws_website}
 Amazon~Web Services.
+\newblock \url{https://aws.amazon.com/}.
 
 \bibitem{hiddenbrainpod}
 {Shankar Vedantam}.
@@ -79,26 +130,30 @@ Amazon~Web Services.
 \bibitem{statistasmartphones}
 Statista.
 \newblock Smartphone user penetration as percentage of total global population
-  from 2014 to 2020, November 2016.
+  from 2014 to 2020.
+\newblock
+  \url{https://www.statista.com/statistics/203734/global-smartphone-penetration-per-capita-since-2005/},
+  November 2016.
 \newblock Accessed on 06.02.2018.
 
 \bibitem{searchblog}
 Laurie Sullivan.
 \newblock Gartner predicts 30% of searches without a screen in 4 years.
-\newblock 12 2017.
-\newblock accessed on 12.2.2018.
+\newblock
+  \url{https://www.mediapost.com/publications/article/291913/gartner-predicts-30-of-searches-without-a-screen.html},
+  December 2017.
+\newblock Accessed on 12.2.2018.
 
 \bibitem{Weizenbaum1976}
 Joseph Weizenbaum.
 \newblock {\em Computer Power and Human Reason: From Judgment to Calculation}.
 \newblock W. H. Freeman \& Co., New York, 1976.
 
-\bibitem{wiki:mvc}
-Wikipedia.
-\newblock Model-view-controller.
-
 \bibitem{globalwebindex}
-Katie Young, June 2016.
-\newblock accessed on 16.02.2018.
+Katie Young.
+\newblock
+  \url{https://blog.globalwebindex.net/chart-of-the-day/25-of-16-24s-use-voice-search-on-mobile/},
+  June 2016.
+\newblock Accessed on 16.02.2018.
 
 \end{thebibliography}

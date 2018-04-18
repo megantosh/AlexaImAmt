@@ -3,61 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
 The style file: plain.bst
 Database file #1: input/mybib.bib
-Repeated entry---line 135 of file input/mybib.bib
- : @article{alexapc18
- :                   ,
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 190 of file input/mybib.bib
- :  
- :  date = {6 Mar 2017},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 196 of file input/mybib.bib
- : @misc{aws:lex_webinar
- :                      ,
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "alexa_19"
-Warning--empty journal in gartnerpreds17
-Warning--empty journal in searchblog
-You've used 19 entries,
+You've used 23 entries,
             2118 wiz_defined-function locations,
-            587 strings with 6330 characters,
-and the built_in function-call counts, 4061 in all, are:
-= -- 366
-> -- 149
+            617 strings with 8018 characters,
+and the built_in function-call counts, 5083 in all, are:
+= -- 494
+> -- 177
 < -- 0
-+ -- 64
-- -- 44
-* -- 162
-:= -- 693
-add.period$ -- 53
-call.type$ -- 19
-change.case$ -- 74
++ -- 77
+- -- 52
+* -- 194
+:= -- 877
+add.period$ -- 81
+call.type$ -- 23
+change.case$ -- 90
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 151
-empty$ -- 406
-format.name$ -- 44
-if$ -- 860
+cite$ -- 23
+duplicate$ -- 176
+empty$ -- 499
+format.name$ -- 52
+if$ -- 1097
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 6
-newline$ -- 94
-num.names$ -- 38
-pop$ -- 150
+int.to.str$ -- 23
+missing$ -- 5
+newline$ -- 130
+num.names$ -- 46
+pop$ -- 176
 preamble$ -- 1
-purify$ -- 60
+purify$ -- 72
 quote$ -- 0
-skip$ -- 143
+skip$ -- 147
 stack$ -- 0
-substring$ -- 111
-swap$ -- 17
+substring$ -- 132
+swap$ -- 23
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 74
-warning$ -- 2
-while$ -- 39
-width$ -- 21
-write$ -- 180
-(There were 3 error messages)
+type$ -- 90
+warning$ -- 0
+while$ -- 47
+width$ -- 25
+write$ -- 254

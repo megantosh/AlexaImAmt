@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  18 APR 2018 05:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  19 APR 2018 00:41
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
@@ -850,61 +850,384 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 \qroofy=\count148
 \@qrscratchbox=\box52
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2017/10/30 v1.20 mathematical typesetting tools
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count149
+\calc@Bcount=\count150
+\calc@Adimen=\dimen156
+\calc@Bdimen=\dimen157
+\calc@Askip=\skip128
+\calc@Bskip=\skip129
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count151
+\calc@Cskip=\skip130
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count152
+\l_MT_multwidth_dim=\dimen158
+\origjot=\skip131
+\l_MT_shortvdotswithinadjustabove_dim=\dimen159
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen160
+\l_MT_above_intertext_sep=\dimen161
+\l_MT_below_intertext_sep=\dimen162
+\l_MT_above_shortintertext_sep=\dimen163
+\l_MT_below_shortintertext_sep=\dimen164
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2017/07/08 v1.3.1 fvextra - extensions and patches for fancyvr
+b
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/11/22 v2.5 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count153
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count154
+\FV@InFile=\read1
+\FV@TabBox=\box53
+\c@FancyVerbLine=\count155
+\FV@StepNumber=\count156
+\FV@OutFile=\write4
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count157
+\output=\toks27
+\linenoprevgraf=\count158
+\linenumbersep=\dimen165
+\linenumberwidth=\dimen166
+\c@linenumber=\count159
+\c@pagewiselinenumber=\count160
+\c@LN@truepage=\count161
+\c@internallinenumber=\count162
+\c@internallinenumbers=\count163
+\quotelinenumbersep=\dimen167
+\bframerule=\dimen168
+\bframesep=\dimen169
+\bframebox=\box54
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count164
+\c@FV@TrueTabCounter=\count165
+\FV@TabBox@Group=\box55
+\FV@TmpLength=\skip132
+\c@FV@HighlightLinesStart=\count166
+\c@FV@HighlightLinesStop=\count167
+\FV@LoopCount=\count168
+\FV@NCharsBox=\box56
+\FV@BreakIndent=\dimen170
+\FV@BreakIndentNChars=\count169
+\FV@BreakSymbolSepLeft=\dimen171
+\FV@BreakSymbolSepLeftNChars=\count170
+\FV@BreakSymbolSepRight=\dimen172
+\FV@BreakSymbolSepRightNChars=\count171
+\FV@BreakSymbolIndentLeft=\dimen173
+\FV@BreakSymbolIndentLeftNChars=\count172
+\FV@BreakSymbolIndentRight=\dimen174
+\FV@BreakSymbolIndentRightNChars=\count173
+\c@FancyVerbLineBreakLast=\count174
+\FV@LineBox=\box57
+\FV@LineIndentBox=\box58
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 67.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/catchfile.sty
+Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
+)
+runsystem(uname -s > "thesis.w18")...executed.
+
+
+(./thesis.w18)
+runsystem(rm -- "thesis.w18")...executed.
+
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write5
+\integerpart=\count175
+\decimalpart=\count176
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip133
+\fb@frw=\dimen175
+\fb@frh=\dimen176
+\FrameRule=\dimen177
+\FrameSep=\dimen178
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count177
+\float@exts=\toks28
+\float@box=\box59
+\@float@everytoks=\toks29
+\@floatcapt=\box60
+)
+\minted@appexistsfile=\read2
+\minted@bgbox=\box61
+\minted@code=\write6
+\c@minted@FancyVerbLineTemp=\count178
+\c@minted@pygmentizecounter=\count179
+\@float@every@listing=\toks30
+\c@listing=\count180
+)
+runsystem(mkdir -p _minted-thesis)...executed.
+
+
 (/usr/local/texlive/2016/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen156
-\WF@size=\dimen157
-\c@WF@wrappedlines=\count149
-\WF@box=\box53
-\WF@everypar=\toks27
+\wrapoverhang=\dimen179
+\WF@size=\dimen180
+\c@WF@wrappedlines=\count181
+\WF@box=\box62
+\WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count150
+\c@lips@count=\count182
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
-\col@sep=\dimen158
-\extrarowheight=\dimen159
-\NC@list=\toks28
-\extratabsurround=\skip128
-\backup@length=\skip129
+\col@sep=\dimen181
+\extrarowheight=\dimen182
+\NC@list=\toks32
+\extratabsurround=\skip134
+\backup@length=\skip135
 )
-\TX@col@width=\dimen160
-\TX@old@table=\dimen161
-\TX@old@col=\dimen162
-\TX@target=\dimen163
-\TX@delta=\dimen164
-\TX@cols=\count151
-\TX@ftn=\toks29
+\TX@col@width=\dimen183
+\TX@old@table=\dimen184
+\TX@old@col=\dimen185
+\TX@target=\dimen186
+\TX@delta=\dimen187
+\TX@cols=\count183
+\TX@ftn=\toks33
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count152
-\cp@tempcnt=\count153
+\c@cp@cntr=\count184
+\cp@tempcnt=\count185
 )
+runsystem(which pygmentize && touch thesis.aex)...executed.
+
+runsystem(rm thesis.aex)...executed.
+
+
 (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 83.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 87.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 87.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -941,38 +1264,38 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 83.
+\AtBeginShipoutBox=\box63
+Package hyperref Info: Link coloring OFF on input line 87.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count154
+\c@section@level=\count186
 )
-LaTeX Info: Redefining \ref on input line 83.
-LaTeX Info: Redefining \pageref on input line 83.
-LaTeX Info: Redefining \nameref on input line 83.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
 
 (./thesis.out) (./thesis.out)
-\@outlinefile=\write4
-\openout4 = `thesis.out'.
+\@outlinefile=\write7
+\openout7 = `thesis.out'.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count155
-\scratchdimen=\dimen165
-\scratchbox=\box55
-\nofMPsegments=\count156
-\nofMParguments=\count157
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count158
-\MPscratchDim=\dimen166
-\MPnumerator=\count159
-\makeMPintoPDFobject=\count160
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count187
+\scratchdimen=\dimen188
+\scratchbox=\box64
+\nofMPsegments=\count188
+\nofMParguments=\count189
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count190
+\MPscratchDim=\dimen189
+\MPnumerator=\count191
+\makeMPintoPDFobject=\count192
+\everyMPtoPDFconversion=\toks35
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -992,10 +1315,11 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count161
+\c@lstlisting=\count193
 
 (./input/00a_title_page.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 22.
@@ -1008,13 +1332,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<gfx/template/TUBerlin_Logo_rot_hell.pdf, id=142, 4741.715pt x 3529.185pt>
+<gfx/template/TUBerlin_Logo_rot_hell.pdf, id=151, 4741.715pt x 3529.185pt>
 File: gfx/template/TUBerlin_Logo_rot_hell.pdf Graphic file (type pdf)
 <use gfx/template/TUBerlin_Logo_rot_hell.pdf>
 Package pdftex.def Info: gfx/template/TUBerlin_Logo_rot_hell.pdf  used on input
  line 23.
 (pdftex.def)             Requested size: 62.73549pt x 46.68877pt.
-<gfx/template/aot_logo.pdf, id=143, 838.2025pt x 535.86098pt>
+<gfx/template/aot_logo.pdf, id=152, 838.2025pt x 535.86098pt>
 File: gfx/template/aot_logo.pdf Graphic file (type pdf)
 <use gfx/template/aot_logo.pdf>
 Package pdftex.def Info: gfx/template/aot_logo.pdf  used on input line 23.
@@ -1040,14 +1364,11 @@ emplate/TUBerlin_Logo_rot_hell.pdf> <./gfx/template/aot_logo.pdf>])
 (./input/00b_abstract_ack.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 14.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 14.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
-
 Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
@@ -1152,25 +1473,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--117
 ] (./thesis.toc [7
 
 ])
-\tf@toc=\write5
-\openout5 = `thesis.toc'.
+\tf@toc=\write8
+\openout8 = `thesis.toc'.
 
  [8] (./thesis.lof
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 6.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 5.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ))
-\tf@lof=\write6
-\openout6 = `thesis.lof'.
+\tf@lof=\write9
+\openout9 = `thesis.lof'.
 
  [9
 
 
 ]
 (./thesis.lot)
-\tf@lot=\write7
-\openout7 = `thesis.lot'.
+\tf@lot=\write10
+\openout10 = `thesis.lot'.
 
  [10
 
@@ -1212,283 +1533,273 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--83
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 87.
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
+Underfull \hbox (badness 10000) in paragraph at lines 101--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--119
+Underfull \hbox (badness 10000) in paragraph at lines 114--124
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 120--126
+Underfull \hbox (badness 10000) in paragraph at lines 125--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--133
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
 
  []
-
-
-LaTeX Warning: Reference `??' on page 4 undefined on input line 147.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 169--173
+Underfull \hbox (badness 10000) in paragraph at lines 162--166
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--236
-
- []
-
-) (./input/02_background.tex [6] [7]
+[5] [6]) (./input/02_background.tex [7]
 Chapter 2.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
 [8
 
 ] [9]
-<gfx/awslogos/lexlogo.png, id=374, 71.26625pt x 79.29625pt>
-File: gfx/awslogos/lexlogo.png Graphic file (type png)
-<use gfx/awslogos/lexlogo.png>
-Package pdftex.def Info: gfx/awslogos/lexlogo.png  used on input line 87.
-(pdftex.def)             Requested size: 28.4527pt x 31.29807pt.
-<gfx/awslogos/pollylogo.png, id=380, 88.33pt x 74.2775pt>
-File: gfx/awslogos/pollylogo.png Graphic file (type png)
-<use gfx/awslogos/pollylogo.png>
-Package pdftex.def Info: gfx/awslogos/pollylogo.png  used on input line 100.
-(pdftex.def)             Requested size: 30.15984pt x 25.60762pt.
- [10 <./gfx/awslogos/lexlogo.png>]
-<gfx/awslogos/transcribelogo.png, id=395, 84.315pt x 60.4659pt>
-File: gfx/awslogos/transcribelogo.png Graphic file (type png)
-<use gfx/awslogos/transcribelogo.png>
-Package pdftex.def Info: gfx/awslogos/transcribelogo.png  used on input line 11
-1.
-(pdftex.def)             Requested size: 34.14351pt x 25.60677pt.
-<gfx/awslogos/lambdalogo.png, id=401, 50.1875pt x 54.2025pt>
-File: gfx/awslogos/lambdalogo.png Graphic file (type png)
-<use gfx/awslogos/lambdalogo.png>
-Package pdftex.def Info: gfx/awslogos/lambdalogo.png  used on input line 122.
-(pdftex.def)             Requested size: 22.76259pt x 25.6075pt.
-<gfx/awslogos/cloudwatchlogo.png, id=405, 82.3075pt x 59.22125pt>
-File: gfx/awslogos/cloudwatchlogo.png Graphic file (type png)
-<use gfx/awslogos/cloudwatchlogo.png>
-Package pdftex.def Info: gfx/awslogos/cloudwatchlogo.png  used on input line 13
-4.
-(pdftex.def)             Requested size: 35.85118pt x 25.6074pt.
-<gfx/awslogos/cognitologo.png, id=409, 93.34875pt x 61.22874pt>
-File: gfx/awslogos/cognitologo.png Graphic file (type png)
-<use gfx/awslogos/cognitologo.png>
-Package pdftex.def Info: gfx/awslogos/cognitologo.png  used on input line 146.
-(pdftex.def)             Requested size: 38.69484pt x 24.1846pt.
-<gfx/awslogos/cognitologo_old.jpg, id=413, 140.525pt x 166.6225pt>
-File: gfx/awslogos/cognitologo_old.jpg Graphic file (type jpg)
-<use gfx/awslogos/cognitologo_old.jpg>
-Package pdftex.def Info: gfx/awslogos/cognitologo_old.jpg  used on input line 1
-57.
-(pdftex.def)             Requested size: 21.62247pt x 25.60503pt.
- [11 <./gfx/awslogos/pollylogo.png> <./gfx/awslogos/transcribelogo.png> <./gfx/
-awslogos/lambdalogo.png> <./gfx/awslogos/cloudwatchlogo.png> <./gfx/awslogos/co
-gnitologo.png>]
-<gfx/workflows/awstools.png, id=430, 2190.1825pt x 1247.66125pt>
-File: gfx/workflows/awstools.png Graphic file (type png)
-<use gfx/workflows/awstools.png>
-Package pdftex.def Info: gfx/workflows/awstools.png  used on input line 168.
-(pdftex.def)             Requested size: 421.10086pt x 239.87569pt.
-
-Overfull \hbox (2.84718pt too wide) in paragraph at lines 168--169
- [][] 
- []
-
-[12 <./gfx/awslogos/cognitologo_old.jpg> <./gfx/workflows/awstools.png>]
-
-LaTeX Warning: Reference `intents' on page 13 undefined on input line 206.
-
-
-Overfull \hbox (4.6391pt too wide) in alignment at lines 224--224
-[][][][][] 
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 293--293
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
-
- []
-
-[15]
-Overfull \hbox (9.26846pt too wide) in paragraph at lines 357--357
-[]\OT1/ptm/m/n/12 Figure 2.2:
- []
-
-File: gfx/template/aot_logo.pdf Graphic file (type pdf)
-<use gfx/template/aot_logo.pdf>
-Package pdftex.def Info: gfx/template/aot_logo.pdf  used on input line 358.
-(pdftex.def)             Requested size: 71.13188pt x 45.4699pt.
-
-Overfull \hbox (28.45276pt too wide) in paragraph at lines 358--359
-[][] 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 76.
+ [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 138--143
+[]$\OT1/pcr/m/n/12 https : / / developer . amazon . com / docs / custom-[]skill
+s /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--385
-
+Underfull \hbox (badness 10000) in paragraph at lines 138--143
+[]$\OT1/pcr/m/n/12 https : / / developer . amazon . com / docs / smapi /
  []
 
-[16]
-<gfx/DLprim.png, id=464, 1577.895pt x 489.83pt>
-File: gfx/DLprim.png Graphic file (type png)
-<use gfx/DLprim.png>
-Package pdftex.def Info: gfx/DLprim.png  used on input line 462.
-(pdftex.def)             Requested size: 418.25368pt x 129.83423pt.
+
+Underfull \hbox (badness 4156) in paragraph at lines 138--143
+\OT1/pcr/m/n/12 interaction-[]model-[]schema . html$[] \OT1/ptm/m/n/12 We cover
+ here an ex-cerpt of ba-sic
+ []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \hbox (badness 10000) in alignment at lines 171--171
+[][][][] 
+ []
 
-<gfx/DLsec.png, id=465, 3356.54pt x 360.34625pt>
-File: gfx/DLsec.png Graphic file (type png)
-<use gfx/DLsec.png>
-Package pdftex.def Info: gfx/DLsec.png  used on input line 467.
-(pdftex.def)             Requested size: 418.25368pt x 44.9002pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Overfull \hbox (8.46072pt too wide) in paragraph at lines 472--472
+[12] [13]
+<gfx/awslogos/lexlogo.png, id=420, 71.26625pt x 79.29625pt>
+File: gfx/awslogos/lexlogo.png Graphic file (type png)
+<use gfx/awslogos/lexlogo.png>
+Package pdftex.def Info: gfx/awslogos/lexlogo.png  used on input line 226.
+(pdftex.def)             Requested size: 28.4527pt x 31.29807pt.
+<gfx/awslogos/pollylogo.png, id=426, 88.33pt x 74.2775pt>
+File: gfx/awslogos/pollylogo.png Graphic file (type png)
+<use gfx/awslogos/pollylogo.png>
+Package pdftex.def Info: gfx/awslogos/pollylogo.png  used on input line 239.
+(pdftex.def)             Requested size: 30.15984pt x 25.60762pt.
+<gfx/awslogos/transcribelogo.png, id=431, 84.315pt x 60.4659pt>
+File: gfx/awslogos/transcribelogo.png Graphic file (type png)
+<use gfx/awslogos/transcribelogo.png>
+Package pdftex.def Info: gfx/awslogos/transcribelogo.png  used on input line 25
+0.
+(pdftex.def)             Requested size: 34.14351pt x 25.60677pt.
+ [14 <./gfx/awslogos/lexlogo.png> <./gfx/awslogos/pollylogo.png>]
+Overfull \hbox (8.46072pt too wide) in paragraph at lines 254--254
  [] 
  []
 
-[17] [18 <./gfx/DLprim.png> <./gfx/DLsec.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 524--525
+<gfx/awslogos/lambdalogo.png, id=446, 50.1875pt x 54.2025pt>
+File: gfx/awslogos/lambdalogo.png Graphic file (type png)
+<use gfx/awslogos/lambdalogo.png>
+Package pdftex.def Info: gfx/awslogos/lambdalogo.png  used on input line 263.
+(pdftex.def)             Requested size: 22.76259pt x 25.6075pt.
+<gfx/awslogos/cloudwatchlogo.png, id=450, 82.3075pt x 59.22125pt>
+File: gfx/awslogos/cloudwatchlogo.png Graphic file (type png)
+<use gfx/awslogos/cloudwatchlogo.png>
+Package pdftex.def Info: gfx/awslogos/cloudwatchlogo.png  used on input line 27
+5.
+(pdftex.def)             Requested size: 35.85118pt x 25.6074pt.
+<gfx/awslogos/cognitologo.png, id=454, 93.34875pt x 61.22874pt>
+File: gfx/awslogos/cognitologo.png Graphic file (type png)
+<use gfx/awslogos/cognitologo.png>
+Package pdftex.def Info: gfx/awslogos/cognitologo.png  used on input line 287.
+(pdftex.def)             Requested size: 38.69484pt x 24.1846pt.
+<gfx/awslogos/cognitologo_old.jpg, id=458, 140.525pt x 166.6225pt>
+File: gfx/awslogos/cognitologo_old.jpg Graphic file (type jpg)
+<use gfx/awslogos/cognitologo_old.jpg>
+Package pdftex.def Info: gfx/awslogos/cognitologo_old.jpg  used on input line 2
+98.
+(pdftex.def)             Requested size: 21.62247pt x 25.60503pt.
+<gfx/workflows/awstools.png, id=461, 2190.1825pt x 1247.66125pt>
+File: gfx/workflows/awstools.png Graphic file (type png)
+<use gfx/workflows/awstools.png>
+Package pdftex.def Info: gfx/workflows/awstools.png  used on input line 309.
+(pdftex.def)             Requested size: 421.10086pt x 239.87569pt.
+
+Overfull \hbox (2.84718pt too wide) in paragraph at lines 309--310
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15 <./gfx/awslogos/transcribelogo.png> <./gfx/awslogos/lambdalogo.png> <./gfx/
+awslogos/cloudwatchlogo.png> <./gfx/awslogos/cognitologo.png> <./gfx/awslogos/c
+ognitologo_old.jpg>] [16 <./gfx/workflows/awstools.png>]
+\openout6 = `thesis.pyg'.
+
+
+(./_minted-thesis/default-pyg-prefix.pygstyle)
+(./_minted-thesis/default.pygstyle)
+(./_minted-thesis/5BFDEE9953668F9CC4773097397D3CEF9F014CDCC252D787938A66F94A2C2
+8CF.pygtex) [17]
+Overfull \hbox (4.6391pt too wide) in alignment at lines 361--361
+[][][][][] 
+ []
+
+[18
+
+]
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 468.
+
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 468--468
 
  []
 
-) (./input/03_main_part_1.tex [19]
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--544
+
+ []
+
+[20]
+<gfx/DLprim.png, id=515, 1577.895pt x 489.83pt>
+File: gfx/DLprim.png Graphic file (type png)
+<use gfx/DLprim.png>
+Package pdftex.def Info: gfx/DLprim.png  used on input line 582.
+(pdftex.def)             Requested size: 418.25368pt x 129.83423pt.
+<gfx/DLsec.png, id=516, 3356.54pt x 360.34625pt>
+File: gfx/DLsec.png Graphic file (type png)
+<use gfx/DLsec.png>
+Package pdftex.def Info: gfx/DLsec.png  used on input line 587.
+(pdftex.def)             Requested size: 418.25368pt x 44.9002pt.
+
+Overfull \hbox (8.46072pt too wide) in paragraph at lines 592--592
+ [] 
+ []
+
+[21 <./gfx/DLprim.png> <./gfx/DLsec.png>]
+Overfull \hbox (8.46072pt too wide) in paragraph at lines 593--593
+ [] 
+ []
+
+[22]) (./input/03_main_part_1.tex [23]
 Chapter 3.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\inote' on input line 1.
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
 
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <24.88> not available
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 1.
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 \OT1/pcr/m/n/12 de / virtueller-[]assistent / virtueller-[]assistent-[]606279 .
  php$[]
  []
 
-[20
+[24
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 78--84
-[]$\OT1/pcr/m/n/12 https : / / en . wikipedia . org / wiki / Amazon _
+Underfull \hbox (badness 10000) in paragraph at lines 106--112
+[][]$\OT1/pcr/m/n/12 https : / / en . wikipedia . org / wiki / Amazon _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--84
+Underfull \hbox (badness 10000) in paragraph at lines 106--112
 \OT1/pcr/m/n/12 Alexa$[] []$https : / / medium . com / @robinjewsbury /
  []
 
 
-Overfull \hbox (170.94608pt too wide) in paragraph at lines 78--84
+Overfull \hbox (170.94608pt too wide) in paragraph at lines 106--112
 \OT1/pcr/m/n/12 how-[]to-[]create-[]bots-[]and-[]skills-[]for-[]facebook-[]mess
 enger-[]and-[]amazon-[]echo-[]4a03935eeca1$[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--92
-[]$\OT1/pcr/m/n/12 https : / / stackoverflow . com / questions / 42982159 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--92
-[]$\OT1/pcr/m/n/12 https : / / aws . amazon . com / about-[]aws / whats-[]new /
- 2017 / 09 /
- []
-
-[21]) (./input/04_main_part_2.tex [22]
+[25]) (./input/04_main_part_2.tex [26]
 Chapter 4.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\inote' on input line 1.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 []\OT1/ptm/m/n/12 https://developer.amazon.com/docs/smapi/quick-start-alexa-ski
 lls-kit-command-
  []
 
-[23
+[27
 
-]) (./input/05_evaluation.tex
-Underfull \hbox (badness 10000) in paragraph at lines 66--1
+]
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 []\OT1/ptm/m/n/12 https://www.bignerdranch.com/blog/developing-alexa-skills-loc
 ally-with-nodejs-
  []
 
-[24]
+) (./input/05_evaluation.tex [28]
 Chapter 5.
 
-Underfull \hbox (badness 1412) in paragraph at lines 17--17
+Underfull \hbox (badness 1412) in paragraph at lines 19--19
 \OT1/phv/m/n/10.95 time series a-b test-ing weight-ing use of cor-rel-a-tions i
 n the legal sys-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 \OT1/ptm/m/n/12 https://www.wien.gv.at/bot/ http://www.vienna.at/wienbot-chatbo
 t-der-stadt-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 \OT1/ptm/m/n/12 wien-informiert-als-virtueller-beamter/5590853 https://digitalc
 ity.wien/wienbot-
  []
 
-[25
+[29
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
 ) (./input/06_conclusion.tex
-Underfull \hbox (badness 10000) in paragraph at lines 88--1
+Underfull \hbox (badness 10000) in paragraph at lines 90--1
 
  []
 
-[26]
+[30] [31]
 Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-) [27
+) [32
 
 ] (./thesis.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 24--30
@@ -1503,152 +1814,175 @@ f$[]\OT1/ptm/m/n/12 , Au-gust
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--51
+Underfull \hbox (badness 10000) in paragraph at lines 50--57
 \OT1/pcr/m/n/12 title = History _ of _ natural _ language _ processing & oldid 
 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--60
+Underfull \hbox (badness 10000) in paragraph at lines 59--66
 \OT1/pcr/m/n/12 Usage _ share _ of _ operating _ systems & oldid = 825514016$[]
 \OT1/ptm/m/n/12 , 2018.
  []
 
+[33
 
-Underfull \hbox (badness 5446) in paragraph at lines 69--75
+
+]
+Underfull \hbox (badness 5446) in paragraph at lines 79--85
 []\OT1/ptm/m/n/12 Georg Ber-ger, RBB On-line.  Gen-iale k[]opfe - wohnen der zu
 kunft.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--75
+Underfull \hbox (badness 10000) in paragraph at lines 79--85
 []$\OT1/pcr/m/n/12 https : / / rbb-[]online . de / abenschau / archiv / 2018041
 6 _ 1930 /
  []
 
-[28
 
-
-]
-Underfull \hbox (badness 5231) in paragraph at lines 77--81
+Underfull \hbox (badness 5231) in paragraph at lines 87--91
 []\OT1/ptm/m/n/12 Gesch[]afts- und Koordinier-ungss-telle 115 im Bundesmin-is-t
 erium des In-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--81
+Underfull \hbox (badness 10000) in paragraph at lines 87--91
 \OT1/ptm/m/n/12 nern.  []$\OT1/pcr/m/n/12 {https : / / www . 115 . de / SharedD
 ocs / Publikationen /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--81
+Underfull \hbox (badness 10000) in paragraph at lines 87--91
 \OT1/pcr/m/n/12 Service _ Publikationen / Infomaterialien / infobroschuere _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--81
+Underfull \hbox (badness 10000) in paragraph at lines 87--91
 \OT1/pcr/m/n/12 %20BMI08324 _ screen _ barrierefrei . pdf ? _ _ blob =
  []
 
 
-Underfull \hbox (badness 3058) in paragraph at lines 88--93
+Underfull \hbox (badness 3058) in paragraph at lines 98--103
 []\OT1/ptm/m/n/12 Judy Gold-smith and Nich-olas Mat-tei.  Sci-ence fic-tion as 
 an in-tro-duc-
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 88--93
+Underfull \hbox (badness 1237) in paragraph at lines 98--103
 \OT1/ptm/m/n/12 tion to ai re-search.  []$\OT1/pcr/m/n/12 https : / / pdfs . se
 manticscholar . org / fdd1 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--101
+Underfull \hbox (badness 10000) in paragraph at lines 105--111
 \OT1/pcr/m/n/12 businessinsider . de / the-[]messaging-[]app-[]report-[]2015-[]
 11 ? r =
  []
 
 
-Underfull \hbox (badness 3364) in paragraph at lines 103--109
+Underfull \hbox (badness 3364) in paragraph at lines 113--119
 []\OT1/ptm/m/n/12 NBC.  Amazon's al-exa had a break-out hol-i-day | people even
  used
  []
 
 
-Overfull \hbox (59.01299pt too wide) in paragraph at lines 103--109
+Overfull \hbox (59.01299pt too wide) in paragraph at lines 113--119
 \OT1/pcr/m/n/12 how-[]many-[]amazon-[]alexa-[]echoes-[]were-[]sold-[]over-[]the
 -[]2017-[]holidays .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--128
+Underfull \hbox (badness 10000) in paragraph at lines 131--138
 \OT1/pcr/m/n/12 global-[]smartphone-[]penetration-[]per-[]capita-[]since-[]2005
 /$[]\OT1/ptm/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--136
+Underfull \hbox (badness 10000) in paragraph at lines 140--146
 []\OT1/ptm/m/n/12 Laurie Sul-li-van.  Gart-ner pre-dicts 30 []$\OT1/pcr/m/n/12 
 https : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--136
+Underfull \hbox (badness 10000) in paragraph at lines 140--146
 \OT1/pcr/m/n/12 mediapost . com / publications / article / 291913 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--136
+Underfull \hbox (badness 10000) in paragraph at lines 140--146
 \OT1/pcr/m/n/12 gartner-[]predicts-[]30-[]of-[]searches-[]without-[]a-[]screen 
 . html$[]\OT1/ptm/m/n/12 ,
  []
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 149--154
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 153--158
 []\OT1/ptm/m/n/12 Katie Young.  []$\OT1/pcr/m/n/12 https : / / blog . globalweb
 index . net /
  []
 
 
-Overfull \hbox (26.513pt too wide) in paragraph at lines 149--154
+Overfull \hbox (26.513pt too wide) in paragraph at lines 153--158
 \OT1/pcr/m/n/12 chart-[]of-[]the-[]day / 25-[]of-[]16-[]24s-[]use-[]voice-[]sea
 rch-[]on-[]mobile/$[]\OT1/ptm/m/n/12 ,
  []
 
-) (./input/07_appendix.tex [30] [31
+) (./input/07_appendix.tex [35]
+Underfull \hbox (badness 1342) in paragraph at lines 22--26
+[]\OT1/ptm/m/n/12 Amazon Lex is a ser-vice for build-ing con-ver-sa-tional in-t
+er-faces us-ing voice
+ []
 
-] [32]
-Overfull \hbox (399.70566pt too wide) in paragraph at lines 73--111
+
+Underfull \hbox (badness 1052) in paragraph at lines 22--26
+\OT1/ptm/m/n/12 ap-plic-a-tions. Amazon Lex re-duces multi-platform de-vel-op-m
+ent ef-fort, al-low-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--26
+\OT1/ptm/m/n/12 in-form-a-tion: []$\OT1/pcr/m/n/12 https : / / stackoverflow . 
+com / questions / 42982159 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--26
+[]$\OT1/pcr/m/n/12 https : / / aws . amazon . com / about-[]aws / whats-[]new /
+ 2017 / 09 /
+ []
+
+[36
+
+] [37]
+Overfull \hbox (399.70566pt too wide) in paragraph at lines 89--129
 []  
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
- [33]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
+ [38]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 783A6EB0F2D9EC932D5EB9A9372A6E31;2199.
+(rerunfilecheck)             Checksum: B9E8343E605872A2748CB0DB2180E37F;2193.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+runsystem(rm thesis.pyg)...executed.
 
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
  ) 
 Here is how much of TeX's memory you used:
- 11846 strings out of 492985
- 168774 string characters out of 6132585
- 384696 words of memory out of 5000000
- 14994 multiletter control sequences out of 15000+600000
- 54853 words of font info for 117 fonts, out of 8000000 for 9000
+ 15771 strings out of 492985
+ 244261 string characters out of 6132585
+ 514530 words of memory out of 5000000
+ 18813 multiletter control sequences out of 15000+600000
+ 48708 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,12n,42p,1965b,1377s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,16n,52p,1965b,1379s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1671,19 +2005,21 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
 , replaced by a fixed one
 
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2016/texmf-dist/fon
-ts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
-1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
-s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on thesis.pdf (43 pages, 803313 bytes).
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/f
+onts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/ut
+mr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (48 pages, 847507 bytes).
 PDF statistics:
- 662 PDF objects out of 1000 (max. 8388607)
- 574 compressed objects within 6 object streams
- 133 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 731 PDF objects out of 1000 (max. 8388607)
+ 632 compressed objects within 7 object streams
+ 145 named destinations out of 1000 (max. 500000)
+ 357 words of extra memory for PDF output out of 10000 (max. 10000000)
 
