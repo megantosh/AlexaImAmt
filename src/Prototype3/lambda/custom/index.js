@@ -19,6 +19,20 @@ const APP_ID = 'amzn1.ask.skill.64e518f2-a728-4fdb-97a1-6f086f864692';
 // please visit us at http://alexa.design/build
 
 
+
+
+
+
+// prefer to define parameters like ‘:responseReady’ to make autoComplete  and  code snippets easy on any basic IDE
+// and avoid typos, however it is not necessary if it makes code more complicated.
+
+const nodeEvents = {
+    'RESPONSE_READY': ':responseReady'
+}
+
+
+
+
 exports.handler = function(event, context) {
     var alexa = Alexa.handler(event, context);
     var locale = event.request.locale;
@@ -44,7 +58,10 @@ AlexaStrings
 //constructor for node tests
 
 
-//we will check for the locale inside the request
+//we will not  check for the locale inside the request, but register the handler
+// based on the locale instead at the beginning. see above
+
+//TODO Aufenthaltstitel example deutsch
 var DE_handlers = {
 
     // 'NewSession': function() {
@@ -93,14 +110,14 @@ var DE_handlers = {
         this.response.listen('This is a reprompt.')
         //if the card is made of two vars, then sth, else if 3 vars then title and image
             .cardRenderer(AlexaStrings.defaultCardStrings.de.GREETING_TEXT[0], AlexaStrings.defaultCardStrings.de.GREETING_TEXT[1]);
-        this.emit(':responseReady');
+        this.emit(nodeEvents.RESPONSE_READY);
     },
     //TODO
     'SayPersonalAusweisInfo': function () {
         //var district = this.event.request.intent.slots.District.value;
         this.response.speak(Helper.getRandomResponseUtterance(AlexaStrings.defaultSpokenStrings.de.WIP_TEXT));
         this.response.speak(AlexaStrings.Dienstleistung_IntentSpokenStrings.de.PersoIntent);
-        this.emit(':responseReady')
+        this.emit(nodeEvents.RESPONSE_READY)
     },
 
 
@@ -111,7 +128,7 @@ var DE_handlers = {
         this.response.speak(Helper.getRandomResponseUtterance(AlexaStrings.defaultSpokenStrings.de.WIP_TEXT));
         this.response.speak('Allerdings kann ich dir sagen, dass ein Bürgeramt in der Nähe bestimmt auf hat');
 
-        this.emit(':responseReady')
+        this.emit(nodeEvents.RESPONSE_READY)
     },
 
 
@@ -120,7 +137,7 @@ var DE_handlers = {
         var name = this.event.request.intent.slots.name.value;
         this.response.speak('Hello ' + name)
             .cardRenderer('hello world', 'hello ' + name);
-        this.emit(':responseReady');
+        this.emit(nodeEvents.RESPONSE_READY);
     },
 
 
@@ -131,22 +148,25 @@ var DE_handlers = {
     },
     'AMAZON.StopIntent' : function() {
         this.response.speak(AlexaStrings.defaultSpokenStrings.de.STOP_TEXT);
-        this.emit(':responseReady');
+        this.emit(nodeEvents.RESPONSE_READY);
     },
     'AMAZON.HelpIntent' : function() {
         this.response.speak(AlexaStrings.defaultSpokenStrings.en.HELP_TEXT);
 
-        this.emit(':responseReady');
+        this.emit(nodeEvents.RESPONSE_READY);
     },
     'AMAZON.CancelIntent' : function() {
         this.response.speak('Bye');
-        this.emit(':responseReady');
+        this.emit(nodeEvents.RESPONSE_READY);
     },
     'Unhandled' : function() {
         this.response.speak(AlexaStrings.defaultSpokenStrings.en.HELP_TEXT);
     }
 
 };
+
+
+//TODO Aufenthaltstitel example
 
 var EN_US_handlers = {
     'HelloWorldIntent': function () {
@@ -157,16 +177,16 @@ var EN_US_handlers = {
     },
     'AMAZON.StopIntent' : function() {
         this.response.speak(AlexaStrings.defaultSpokenStrings.en.STOP_TEXT);
-        this.emit(':responseReady');
+        this.emit(nodeEvents.RESPONSE_READY);
     },
     'AMAZON.HelpIntent' : function() {
         this.response.speak(AlexaStrings.defaultSpokenStrings.en.HELP_TEXT);
         // should not stop here, but continue listning
-        this.emit(':responseReady');
+        this.emit(nodeEvents.RESPONSE_READY);
     },
     'AMAZON.CancelIntent' : function() {
         this.response.speak(AlexaStrings.defaultSpokenStrings.en.CANCEL_TEXT);
-        this.emit(':responseReady');
+        this.emit(nodeEvents.RESPONSE_READY);
     },
     'Unhandled' : function() {
         this.response.speak(AlexaStrings.defaultSpokenStrings.en.HELP_TEXT);

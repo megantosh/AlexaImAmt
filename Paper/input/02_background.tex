@@ -11,7 +11,7 @@ In this chapter we discuss Amazon's state-of-the-art strategy before moving on t
 
 %DELETEME: Background represents underlying knowledge that is required to understand your work. The expected knowledge level of your readers can be set to the one of a bachelor or master student who just finished his studies (depending on what kind of thesis you are writing). This means that you do not need to describe how computers work, unless your thesis topic is about this. Everything that an avarage alumni from your field of studies should know does not need to be described. It turn, background information that is very complex and content-wise very near to you problem, can be placed in the main parts. Everyting else should be written here. Note: it is important to connect each presented topic to your thesis. E.g. if you present the ISO/OSI layer model you should also write that this is needed to understand the protocols you plan to develop in the main parts.
 
-\subsection*{VUI vs. GUI} 
+\section{GUI vs. VUI} 
 
 etkallem 3an el paradigm shift eli 7asal ma3 el mouse from cli if not already mentioned
 then 3an el smartphones and the wep from wap etc (deskop version, responsive design, two versions, em instead of pt, relative, starting with a tablet and a phone then anything relative to those then when the standards showed that there won't be an only 15 inch and a 12 inch there will be everything in between, we changed the idea to include continuous units in the spectrum and not only discrete units)
@@ -24,7 +24,7 @@ subtle differnce
 
 
 
-\subsection{VUI Terminology} \todo{explain json}
+\subsection{Terminology} \todo{explain json}
 \begin{itemize}
 	\item[intent]
 	\item[utterance]
@@ -36,6 +36,13 @@ gui in vui *card display* alexa podcast el adima that i heard while running i th
 
 
 imagine you have an intent and the label on th button says ok
+
+
+
+\todo{don't mention you're using lambda until design chapter 3}
+
+
+
 
 %#################################################################################
 %###################### State of the Art  ########################################
@@ -51,7 +58,6 @@ As throughout the course of this thesis these major changes occurred, %including
 %do some kind of changelog later
  we will go over the workarounds and circumventions to retain a working version of the software we present, discuss
 
-
 \subsubsection*{AWS}
 Amazon Web Services is a Cloud Computing service provider with a complete set of services to help build and run web applications ``reliably and securely at a cost and scale'' according to one's independent needs. \cite{aws_website}
 It comes with agile abilities to adjust to various solution at a flexible scheme with benefits like multiple server farms globally (operating under different legal contracts with respect to data security and user privacy), caching, NoSQL, DevOps and so forth.
@@ -60,9 +66,11 @@ It comes with agile abilities to adjust to various solution at a flexible scheme
 \subsubsection*{Alexa}
 Alexa is a cloud-based voice service assistant platform by Amazon powering millions of devices \inote{with {number of requests} {daily|monthly}} on its own-branded devices like the Echo, Echo Dot, Tap, FireTV as well as cross-platform through mobile apps available through  \href{https://itunes.apple.com/de/app/amazon-alexa/id944011620?l=en&mt=8}{Apple's AppStore for iOS} and  \href{https://play.google.com/store/apps/details?id=com.amazon.dee.app&hl=en}{Google Play Store for Android} devices. Unlike Apple's approach with Siri for instance \footnote{as know from its policy on  new software and hardware products like the case with the iPhone, the Mac, etc.}, where including support for third-party integration on iOS's Service Development Kit (SDK), Amazon decided with the launch of Alexa to include non-Amazon developers right from the start by introducing a multitude of (SDKs) around the platform as part of AWS, e.g. Alexa Skills Kit SDK discussed further below.
 
-So far, though the separation of AWS and Alexa's environments is not linguistically intuitive with the company's name labelled on every service component \footnote{see Etymology \ref{etymology}}, \href{http://www.amazon.com}{Amazon.com, Inc.} offers an array of web services through AWS that summarize all building blocks necessary to operate Alexa as a software for end-users. Of course with the introduction of the aforementioned devices, it becomes intuitive to call these `Alexa devices' since their primary purpose is to operate as Alexa clients. We refer to Alexa here only as the service offered by Amazon to consumers. Consequently, although Alexa comes as a fully packaged service to end-users, we can reduce it to a compilation of many micro-services provided by AWS. As most of these are available separately in the form of Software as a Service (Saas), we conclude that AWS incorporates the following components required to make Alexa come together and becomes a consumer of its own web services platform. 
+So far, though the separation of AWS and Alexa's environments is not linguistically intuitive with the company's name labelled on every service component \footnote{see Etymology in Annex \ref{etymology}}, \href{http://www.amazon.com}{Amazon.com, Inc.} offers an array of web services through AWS that summarize all building blocks necessary to operate Alexa as a software for end-users. Of course with the introduction of the aforementioned devices, it becomes intuitive to call these `Alexa devices' since their primary purpose is to operate as Alexa clients. We refer to Alexa here only as the service offered by Amazon to consumers. Consequently, although Alexa comes as a fully packaged service to end-users, we can reduce it to a compilation of many micro-services provided by AWS. As most of these are available separately in the form of Software as a Service (Saas), we conclude that AWS incorporates the following components required to make Alexa come together and becomes a consumer of its own web services platform. 
 
-\subsubsection*{Alexa's AWS Modules \inote{make logos as minipage objects or set as table}}
+%\cleardoublepage
+
+\subsubsection*{Alexa's AWS Modules \inote{make logos as minipage objects or set as table / problem with footnotes}}
 %\inote{in print, make sure the following list goes on a spread (odd then even page number) with the image at the end of it for clarity}
 
 listed in sequential order of importance, Alexa's service modules include but are not limited to: 
@@ -75,7 +83,7 @@ listed in sequential order of importance, Alexa's service modules include but ar
 	
 	\begin{restoretext}
 		\begin{flushright}
-			%\includegraphics[width=\linewidth,height=1cm]{template/aot_logo}
+
 			\includegraphics[width=1cm,height=1.1cm]{awslogos/lexlogo}
 		\end{flushright}
 
@@ -206,13 +214,13 @@ just like other common chat bot constructs, Alexa Skills Kit (ASK) divides the b
 
 \begin{table}[htbp]
 	\caption{Alexa Devices in Comparision}\label{alexaDeviceTable}
-	\centering
-	\begin{tabularx}{\textwidth}{ r | l l l l }
+	\begin{tabularx}{\textwidth}{  r | l l l l  }
 		
-				& Echo Dot/Echo/Echo Plus/Tap & Echo Spot     & Echo Show     & FireTV \\ \hline
-		screen  & n                           & 2.5'' round 		  & 7.0'' 		  & via HDMI Display       \\
-%				&							  & (round)		  &				  &				\\
-		line out& y      					  & y             & via Bluetooth & via HDMI      \\
+		category		& Speaker							& Tablet	& SmartHome	& TV	\\ \hline \hline \\
+		curr. models	& \shortstack[l]{Tap, Echo \\ - Dot, - Plus}     & \shortstack[l]{Echo Show \\ Kindle Fire}    & Echo Spot & FireTV Stick \\ \hline \\
+		screen  		& no      & 7.0'' 		& 2.5'' round				&  HDMI Display      \\ \hline \\
+		line out		& yes      					        & \shortstack[l]{E. Show: Bluetooth \\ Kindle: yes} & 	yes & \shortstack{via HDMI \\ \textcolor{white}{text} }      \\ \hline \\
+		Alexa launch 	& voice	cmd					& \shortstack[l]{K. 7, - HD 8:  btn press \\ - HD 10: voice cmd} & voice cmd & \shortstack{btn press \\ \textcolor{white}{text} }
 	\end{tabularx}
 \end{table}
 
@@ -331,7 +339,16 @@ While we have no access to AskGeorgia
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Choice of Platform} %comparison AWS vs. el ba2i
 
+here you can talk about alternatives like Microsoft, etc, compare pricing scheme, say why you chose alexa (for its popularity mainly and 3ashan Api.ai et3amal abl keda
+w 3ashan it's a whole established ecosystem. ma3 el ta7afozat eno amazon has an obscure position to data and privacy vs. siri masalan.
+3ashan ma3 siri me7tag iOS knowledge
+
+w ba2a 7aga like Maintain context(sesions), Intent chaining (khodlak kam screenshot men Azure)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 These include lex for.... so-called `Skills' It comes with
 
@@ -377,36 +394,8 @@ Intent fulfilment \label{intent_fulfilment}
 %###################################################################################
 %###################### Topic B             ########################################
 %###################################################################################
-\section{Frameworks and Data Structures}\label{frameworks_structs}
 
-
-\textcolor{magenta}{-AL: Ich w\"urde erst etwas die Algorithmen und Datenstrukturen (Textanalyse, JSON, ggf. Graphen beschreiben. 
-	-AL: Anschlie{\ss}end die Frameworks vorstellen\\ 
-	-AL: Wichtig ist: Aus den Beschreibungen eine Schlussfolgerung ableiten, welche Art von L\"osung entwickelt werden soll.\\
-for current bot: \\
-- Lucene \textbf{as the golden standard}: spell check, unscharfe suche, Tika / detect language / ... \\
-- Solr
-- explain what's an intent, whats a slot
-\url{https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}
-\url{https://www.itdz-berlin.de/}
-}
-
-
-
-
-\subsection*{Node.js}
-
-AWS Lambda supports multiple runtime environments including Python, Java, C\# and Go. We decide to use Node.js due to its event-driven nature and to take advantage of its non-blocking I/O model. Being single-threaded, Node.js guarantees high performance at large scale with large volumes of requests considered. With its JavaScript (ECMAScript) foundation, no wonder it is becoming a standard in web-apps. Hence, the decision also comes due to the richness of develpers' experience with the implementation for Alexa Skills.
-\todo{
-	- Server-side, browser side (Chrome V8), App layer, data layer\\
-	- because it can read our JSON easily and fast
-	- talk about Methodenaufbau (syntax) and firing events
-}
-
-
-\subsection*{Solr}
-w lucene w tika w nutch wel habal da if required
-
+%% moved to Chapter 3
 
 
 
@@ -533,3 +522,16 @@ what the bot curently achieved is at least not give wrong answers, sometimes say
 \\
 -Vorgehensweise: XML -> index \"uber Lucene - >solr knoten...based on sth like when i say \" am 10. august\" it gets me masalan events..aha august ist ein monat, monat relates to calendar, calendar relates to events
 }
+
+
+
+
+
+
+
+
+
+
+
+%Durchgestrichene bzw. lokalisierte/umbennante TODOs
+%Done: Move node to implementation and don’t mention that you’re using lambda until In implementation chapter k

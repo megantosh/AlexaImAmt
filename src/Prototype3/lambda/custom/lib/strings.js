@@ -126,6 +126,9 @@ exports.Dienstleistung_IntentSpokenStrings = {
             PersoIntent : Helper.httpsGet(Helper.buildHttpGetOptions(base_url,'/dienstleistung/120703'))
             //PersoIntent: Helper.httpsGet('https://' + base_url + '/dienstleistung/120703/')
 
+            // TODO: lambda solr server beta3 andreas, dont forget to set the timeout in ask console
+            // or Lambda frontend for a high time otherwise u might never get an answer
+
         },
     'en':
         {
@@ -150,3 +153,11 @@ export default defaultData;
 
 
 
+// when the user asks a question - get the “questionmark” from the transcribed string then answer:
+//     Kenn ich nicht, aber lass und auf das wesentliche konzentieren
+// Gute Frage, aber …
+// Das ist ja ein Statement, aber..
+// Das sagt mit bestimmt was im einer zeitnahen Zukunft
+// TODO: then log ig as a missed intent
+
+// TODO: Smalltalk core einbinden.
