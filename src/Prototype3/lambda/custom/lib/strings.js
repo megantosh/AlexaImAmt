@@ -161,3 +161,4 @@ export default defaultData;
 // TODO: then log ig as a missed intent
 
 // TODO: Smalltalk core einbinden.
+http://newsreel-edu.aot.tu-berlin.de/solr/smalltalk/select?q=willst&wt=json&indent=true

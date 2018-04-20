@@ -44,6 +44,23 @@ function routeToIntent() {
 // Webservice Calls
 // ***********************************
 
+
+
+function buildPubSvcMatchOptions(slotValues) {
+    const params = buildPetMatchParams(slotValues);
+    const port = 443;
+    return buildHttpGetOptions(petMatchApi.hostname, petMatchApi.pets, port, params);
+}
+
+//TODO configure to right slot values within interaction model
+function buildPubSvcMatchParams(slotValues) {
+    let params = [
+        ["SSET",
+            `canine-${slotValues.energy.resolved}-${slotValues.size.resolved}-${slotValues.temperament.resolved}`]
+    ];
+    return params;
+}
+
 // make an https get request call resolve upon completion and reject if there's an error using a promise.
 exports.httpsGet = function httpGet(options){
     return new Promise(function(resolve, reject) {
@@ -106,8 +123,12 @@ exports.buildHttpGetOptions = function buildHttpGetOptions(host, path, port){ //
         hostname: host,
         path: path,
         port: port, // when a null is passedn, uses by default port 443 for HTTPSecure
-        method: 'GET'
-    };
+        method: 'GET',
+        username: 'personal-assistent',
+        password: 'AlexaAlexa0815.',
+        auth_type: 'Basic' //+ new Buffer(username + ":" + password).toString("base64");
+
+};
     // } else {
     //     let options = {
     //         hostname: host,

@@ -5,6 +5,7 @@
 \todo{
 	intro on structure of chapter\\
 - to then elaborate on implementation requirements in section \ref{frameworks_structs}. 
+- functional requirements (although this is not OCL now, but requiring an SSL cert.) / non-functional (bot muss höflich sein)
 }
 
 we say first decision was to go for alexa so we see what we kind of frameworks we need around it
@@ -55,10 +56,11 @@ we say first decision was to go for alexa so we see what we kind of frameworks w
 
 AWS Lambda supports multiple runtime environments including Python, Java, C\# and Go. We decide to use Node.js due to its event-driven nature and to take advantage of its non-blocking I/O model. Being single-threaded, Node.js guarantees high performance at large scale with large volumes of requests considered. With its JavaScript (ECMAScript) foundation, no wonder it is becoming a standard in web-apps. Hence, the decision also comes due to the richness of develpers' experience with the implementation for Alexa Skills.
 \todo{
+	- start with saying that the other group doing the facebook bot explored a bit on python with flask, so we wanted to enrich the knowledge base\\
 	- Server-side, browser side (Chrome V8), App layer, data layer\\
-	- because it can read our JSON easily and fast
-	- talk about Methodenaufbau (syntax) and firing events
-	- Event driven like listener-observer model, emit
+	- because it can read our JSON easily and fast\\
+	- talk about Methodenaufbau (syntax) and firing events\\
+	- Event driven like listener-observer model, emit\\
 	
 }
 
@@ -73,6 +75,21 @@ using state of the art standards in TF/IDF for seach queries
 
 -Vorgehensweise: XML/JSON //- index über Lucene //- SolR Knoten...based on sth like when i say  ``am 10. august'  it gets me masalan events..aha august ist ein monat, monat relates to calendar, calendar relates to events
 
+
+
+
+
+\subsection*{Alternatives}
+Setup in Java using Maven:
+\url{https://github.com/alexa/alexa-skills-kit-sdk-for-java/wiki/Setting-Up-The-ASK-SDK}
+
+\begin{minted}{java}
+<dependency>
+<groupId>com.amazon.alexa</groupId>
+<artifactId>ask-sdk</artifactId>
+<version>2.0.2</version>
+</dependency>
+\end{minted}
 
 
 

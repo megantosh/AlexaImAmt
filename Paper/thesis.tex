@@ -34,6 +34,63 @@
 %\usepackage{pygmentize}
 \usepackage{wrapfig, lipsum} %for wrapping
 \usepackage{tabularx} %tables gamila khales
+
+
+
+%%%%%%%%%%%%%%%% for good code
+%% from https://tex.stackexchange.com/questions/112559/box-around-minted-environment
+\usepackage[]{minted}
+\usepackage{tcolorbox}
+\usepackage{lineno}
+\def\gobble#1{}
+\renewcommand\DeleteFile[1]{}
+\usepackage{xparse}
+\ExplSyntaxOn
+\box_new:N \l_fvrb_box
+\tl_new:N \l_fvrb_tl
+
+\RenewDocumentCommand \FancyVerbFormatLine { m }
+{
+	\hbox_set:Nn \l_fvrb_box { #1 }
+	\dim_compare:nNnTF { \box_wd:N \l_fvrb_box }>{ \linewidth }
+	{%box to big 
+		\tl_set:Nn \l_fvrb_tl { #1 }
+		\fvrb_use_tl:N \l_fvrb_tl
+	} 
+	{%box fits
+		\box_use:N \l_fvrb_box
+	}
+}
+
+\cs_new:Npn \fvrb_use_tl:N  #1
+{
+	\group_begin:
+	\null\hfill\vbox_set:Nn \l_fvrb_box
+	{\hsize=\linewidth
+		\renewcommand\thelinenumber
+		{
+			\ifnum\value{linenumber}=1\relax\else
+			$\rightarrow$
+			\fi
+		}
+		\begin{internallinenumbers}
+			\advance\hsize by -2em
+			\hspace*{-2em}\tl_use:N #1
+		\end{internallinenumbers}
+	}
+	\box_use:N \l_fvrb_box
+	\group_end:
+}
+
+\ExplSyntaxOff
+
+
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{minted}{\begin{tcolorbox}}%
+	\AfterEndEnvironment{minted}{\end{tcolorbox}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %depth of section
 \setcounter{secnumdepth}{4}
 %depth of TOC
