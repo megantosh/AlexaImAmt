@@ -91,6 +91,53 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+% for mint inside tables
+%https://tex.stackexchange.com/questions/372053/using-mintinline-inside-tabu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tabu}
+\tabuDisableCommands{%
+	\renewcommand\mintinline[2]{\texttt{\detokenize{#2}}}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%https://tex.stackexchange.com/questions/6260/how-to-draw-box-around-text-that-contains-a-verbatim-block
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.callouts} 
+
+\pgfkeys{%
+	/calloutquote/.cd,
+	width/.code                   =  {\def\calloutquotewidth{#1}},
+	position/.code                =  {\def\calloutquotepos{#1}}, 
+	author/.code                  =  {\def\calloutquoteauthor{#1}},
+	/calloutquote/.unknown/.code   =  {\let\searchname=\pgfkeyscurrentname
+		\pgfkeysalso{\searchname/.try=#1,                                
+			/tikz/\searchname/.retry=#1},\pgfkeysalso{\searchname/.try=#1,
+			/pgf/\searchname/.retry=#1}}
+}  
+
+
+\newcommand\calloutquote[2][]{%
+	\pgfkeys{/calloutquote/.cd,
+		width               = 5cm,
+		position            = {(0,-1)},
+		author              = {}}
+	\pgfqkeys{/calloutquote}{#1}                   
+	\node [rectangle callout,callout relative pointer={\calloutquotepos},text width=\calloutquotewidth,/calloutquote/.cd,
+	#1] (tmpcall) at (0,0) {#2};
+	\node at (tmpcall.pointer){\calloutquoteauthor};    
+}  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %depth of section
 \setcounter{secnumdepth}{4}
 %depth of TOC

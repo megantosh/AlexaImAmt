@@ -9,32 +9,33 @@
 \contentsline {chapter}{\numberline {2}Background}{8}{chapter.2}
 \contentsline {section}{\numberline {2.1}GUI vs. VUI}{8}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Terminology}{10}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}State of the Art}{12}{section.2.2}
+\contentsline {section}{\numberline {2.2}State of the Art}{13}{section.2.2}
 \contentsline {section}{\numberline {2.3}Related Work}{20}{section.2.3}
 \contentsline {section}{\numberline {2.4}Choice of Platform}{21}{section.2.4}
 \contentsline {section}{\numberline {2.5}The Analysed Scenario as a Use Case}{22}{section.2.5}
-\contentsline {chapter}{\numberline {3}Skill Design}{25}{chapter.3}
-\contentsline {section}{\numberline {3.1}Frameworks and Data Structures}{26}{section.3.1}
+\contentsline {chapter}{\numberline {3}Skill Design}{24}{chapter.3}
+\contentsline {section}{\numberline {3.1}Frameworks and Data Structures}{25}{section.3.1}
 \contentsline {section}{\numberline {3.2}challenges}{27}{section.3.2}
-\contentsline {section}{\numberline {3.3}Design Guidelines}{28}{section.3.3}
-\contentsline {chapter}{\numberline {4}Skill Implementation}{29}{chapter.4}
-\contentsline {section}{\numberline {4.1}Setup}{29}{section.4.1}
-\contentsline {section}{\numberline {4.2}Code Analysis}{29}{section.4.2}
-\contentsline {section}{\numberline {4.3}Deployment}{29}{section.4.3}
-\contentsline {section}{\numberline {4.4}Approval and Publishing}{29}{section.4.4}
-\contentsline {section}{\numberline {4.5}Debugging / Troubleshooting}{29}{section.4.5}
-\contentsline {section}{\numberline {4.6}Documentation Updates}{29}{section.4.6}
-\contentsline {chapter}{\numberline {5}Evaluation}{31}{chapter.5}
-\contentsline {section}{\numberline {5.1}Alexa in General}{31}{section.5.1}
-\contentsline {section}{\numberline {5.2}Metrics}{31}{section.5.2}
-\contentsline {section}{\numberline {5.3}Results}{32}{section.5.3}
-\contentsline {section}{\numberline {5.4}Discussions}{32}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{34}{chapter.6}
-\contentsline {section}{\numberline {6.1}Summary}{34}{section.6.1}
-\contentsline {section}{\numberline {6.2}Conclusion}{34}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Work}{34}{section.6.3}
-\contentsline {chapter}{Bibliography}{35}{section.6.3}
-\contentsline {chapter}{Appendices}{37}{chapter*.26}
-\contentsline {section}{Annex}{38}{chapter*.27}
-\contentsline {section}{Appendix A: Abbreviations}{39}{section*.29}
-\contentsline {section}{Appendix B: Glossary}{40}{section*.30}
+\contentsline {section}{\numberline {3.3}Design Guidelines and Documentations}{27}{section.3.3}
+\contentsline {section}{\numberline {3.4}Best Practices}{27}{section.3.4}
+\contentsline {chapter}{\numberline {4}Skill Implementation}{36}{chapter.4}
+\contentsline {section}{\numberline {4.1}Setup}{36}{section.4.1}
+\contentsline {section}{\numberline {4.2}Code Analysis}{36}{section.4.2}
+\contentsline {section}{\numberline {4.3}Deployment}{36}{section.4.3}
+\contentsline {section}{\numberline {4.4}Approval and Publishing}{36}{section.4.4}
+\contentsline {section}{\numberline {4.5}Debugging / Troubleshooting}{36}{section.4.5}
+\contentsline {section}{\numberline {4.6}Documentation Updates}{36}{section.4.6}
+\contentsline {chapter}{\numberline {5}Evaluation}{38}{chapter.5}
+\contentsline {section}{\numberline {5.1}Alexa in General}{38}{section.5.1}
+\contentsline {section}{\numberline {5.2}Metrics}{38}{section.5.2}
+\contentsline {section}{\numberline {5.3}Results}{39}{section.5.3}
+\contentsline {section}{\numberline {5.4}Discussions}{40}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}Summary}{41}{section.6.1}
+\contentsline {section}{\numberline {6.2}Conclusion}{41}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future Work}{41}{section.6.3}
+\contentsline {chapter}{Bibliography}{42}{section.6.3}
+\contentsline {chapter}{Appendices}{44}{chapter*.29}
+\contentsline {section}{Annex}{45}{chapter*.30}
+\contentsline {section}{Appendix A: Abbreviations}{49}{section*.33}
+\contentsline {section}{Appendix B: Glossary}{50}{section*.34}

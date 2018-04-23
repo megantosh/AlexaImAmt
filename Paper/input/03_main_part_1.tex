@@ -5,6 +5,7 @@
 \todo{
 	intro on structure of chapter\\
 - to then elaborate on implementation requirements in section \ref{frameworks_structs}. 
+- on Skill design: \href{https://medium.com/the-mission/nobody-cares-about-your-amazon-alexa-skill-ac14bd080327}{nobody cares abt ur skill}
 - functional requirements (although this is not OCL now, but requiring an SSL cert.) / non-functional (bot muss höflich sein)
 }
 
@@ -20,6 +21,11 @@ we say first decision was to go for alexa so we see what we kind of frameworks w
 	- amazon as a platform is compared to apple and google readiest (check ref voicelabs)
 }
 
+
+\todo{
+It's important to say that they do not transcribe, but do term weighting etc, a black box, and that we will not hear everything right, just as we as humans do not}
+
+
 \todo{
 	%this is mostly repeating intro saying that you found a solution for the requirements
 	- ..it would speak as an advantage for bots if they can determine these things automatically..\\
@@ -32,10 +38,11 @@ we say first decision was to go for alexa so we see what we kind of frameworks w
 	- Alexa Skill will work in Germany in english and german -> add english after german
 }
 
-\section{Frameworks and Data Structures}~\label{frameworks_structs}
 
 
-\textcolor{magenta}{-AL: Ich w\"urde erst etwas die Algorithmen und Datenstrukturen (Textanalyse, JSON, ggf. Graphen beschreiben. 
+
+\todo{MAGENTA\\
+	-AL: Ich w\"urde erst etwas die Algorithmen und Datenstrukturen (Textanalyse, JSON, ggf. Graphen beschreiben). \\
 	-AL: Anschlie{\ss}end die Frameworks vorstellen\\ 
 	-AL: Wichtig ist: Aus den Beschreibungen eine Schlussfolgerung ableiten, welche Art von L\"osung entwickelt werden soll.\\
 	for current bot: \\
@@ -45,8 +52,7 @@ we say first decision was to go for alexa so we see what we kind of frameworks w
 	\url{https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}
 	\url{https://www.itdz-berlin.de/}
 }
-
-
+\section{Frameworks and Data Structures}~\label{frameworks_structs}
 
 %###################################################################################
 %###################### Topic B             ########################################
@@ -54,9 +60,10 @@ we say first decision was to go for alexa so we see what we kind of frameworks w
 
 \subsection*{Node.js}
 
-AWS Lambda supports multiple runtime environments including Python, Java, C\# and Go. We decide to use Node.js due to its event-driven nature and to take advantage of its non-blocking I/O model. Being single-threaded, Node.js guarantees high performance at large scale with large volumes of requests considered. With its JavaScript (ECMAScript) foundation, no wonder it is becoming a standard in web-apps. Hence, the decision also comes due to the richness of develpers' experience with the implementation for Alexa Skills.
+
+AWS Lambda supports multiple runtime environments including Python, Java, C\# and Go. We decide to use Node.js, a JavaScript (ECMAScript 6) framework due to its event-driven nature and to take advantage of its non-blocking I/O model. Being single-threaded, Node.js guarantees high performance at large scale with large volumes of requests considered. With its JavaScript (ECMAScript) foundation, no wonder it is becoming a standard in web-apps. Hence, the decision also comes due to the richness of develpers' experience with the implementation for Alexa Skills.
 \todo{
-	- start with saying that the other group doing the facebook bot explored a bit on python with flask, so we wanted to enrich the knowledge base\\
+	- start with saying that the other group doing the facebook bot explored a bit on python with flask, so we wanted to enrich the knowledge base (we mention this in \textbf{additional API }and \textbf{Choice of platform})\\
 	- Server-side, browser side (Chrome V8), App layer, data layer\\
 	- because it can read our JSON easily and fast\\
 	- talk about Methodenaufbau (syntax) and firing events\\
@@ -68,7 +75,7 @@ AWS Lambda supports multiple runtime environments including Python, Java, C\# an
 %###################### Topic B             ########################################
 %###################################################################################
 
-\subsection*{SolR}
+\subsection*{Apache Solr}
 w lucene w tika w nutch wel habal da if required
 
 using state of the art standards in TF/IDF for seach queries
@@ -80,8 +87,7 @@ using state of the art standards in TF/IDF for seach queries
 
 
 \subsection*{Alternatives}
-Setup in Java using Maven:
-\url{https://github.com/alexa/alexa-skills-kit-sdk-for-java/wiki/Setting-Up-The-ASK-SDK}
+Setup in Java using Maven \footnote{\url{https://github.com/alexa/alexa-skills-kit-sdk-for-java/wiki/Setting-Up-The-ASK-SDK}}
 
 \begin{minted}{java}
 <dependency>
@@ -94,6 +100,14 @@ Setup in Java using Maven:
 
 
 
+\subsubsection*{Additional APIs}
+
+\todo{- Sayspring: helps developers prototype and build the voice interfaces for their Amazon Alexa and Google Assistant apps. \\
+
+- swagger\\
+
+- Flask
+}
 
 
 
@@ -105,10 +119,7 @@ Setup in Java using Maven:
 
 
 
-
-
-
-\textcolor{magenta}{
+\todo{MAGENTA\\
 - as an example for voice\\
 -System Specifications\\
 -System Structure\\
@@ -140,6 +151,11 @@ Setup in Java using Maven:
 - \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs}
 }
 
+
+\subsection*{Description of the Interaction}
+\todo{seqence diagram as found in -inbox-}
+
+
 \section{challenges}
 
 \textcolor{magenta}{
@@ -158,14 +174,333 @@ do not use "?"
 
 
 
-\section{Design Guidelines}
+\section{Design Guidelines and Documentations}
 \label{designGuide}
 
-Memory (Session, Context)
+\todo{
+	list all guidelines and docus here\\
+	Memory (Session, Context) \\
+	Entity Resolution \\
+	Interaction Model
+}
 
-Entity Resolution 
-
-Interaction Model
 
 
-gui in vui *card display* alexa podcast el adima that i heard while running i think
+
+\section{Best Practices}
+
+Throughout the model building process, we come across various nuances and details that might look subtle from a programming point of view. However, they very much can enrich or completely spoil the user experience, resulting in the users not returning to use our Skill again and can be an acceleration towards 1-Star reviews.
+
+Based on our own exploration and through a growing voice design guide offered to Alexa developers \footnote{\url{https://alexa.design/guide}} as well as personal recommendation from Alexa evangelist Memo Döring \cite{memo:devDay}, we share a few good practices to consider before starting and throughout the development process. These are concerned partly with building the interaction model, as well as with the fulfilment back-end. Many of them also apply to voice assistants other than Alexa
+
+\begin{enumerate}
+
+\item \textbf{Design before Implementation}\\
+Since the Skill code usually starts small, it might be tempting to just work in iterations, develop for one scenario and then think of what else is needed as we go.
+As with any complex piece of software, it is very important to have a clear focus on the sequence of our workflow. Design takes an important role in this since it is the base upon which we build our Skill. If we have a bad design, we will end up getting stuck during the implementation. Good voice design means writing down full conversation flows, sentence variations, highlighting order of words, eliminating unnecessary utterances that could result in overfitting, letting Alexa deal with the dialogue management instead of using too many utterances.
+
+In the code part, it might be useful to use routers, intercepts, or both.
+Routers can be thought of as `super-handlers' that would route our words to an intent, no matter what we say in whichever order. They can be thought of as keyword-sensitive listeners. Intercepts can be thought of blocks as code that would perform before and/or after a certain router takes us to a certain intent.
+
+The initial checklist can grow quickly and immensely but can also become very theoretical. Therefore, it is for every developer to figure out how to move to the VUI paradigm step by step with regard to what is important to them.
+
+
+
+\item \textbf{Natural Language Conversation}\\
+When we are prompting for values, they are in a canonical order for how words should be structured when we have multiple adjectives. For instance in English we would say:
+\[
+	the 
+\overbrace{big}^\text{size} \cdot
+\underbrace{brown}_\text{colour}
+\ bear 
+\]
+
+\noindent because saying ``big'' and ``brown'' in the reverse order would not make much sense. Similarly, there is the rule of place before time, which results in sentences like: 
+	\[
+	\overbrace{every \ Saturday}^\text{time} \cdot
+		I \ go \ to  \cdot
+	\underbrace{univerysity}_\text{place} \cdot
+	\quad \textrm{or} \quad
+	I \ go \ to 
+	\underbrace{univerysity}_\text{place} \cdot
+	\overbrace{every \ Saturday}^\text{time}
+	\]
+
+Many other examples are not actual rules, but more de facto	in the language, so we would use them because of our linguistic logic justifies it as a right pattern, which eventually make us speak a language. There are many rules regarding shapes, abstract concepts. When we build programmatically, it is possible to get lost in the order of words in a sentence or even in the order of sentences.
+
+Of course since this changes in every language, it is important not to take one language model and just fit it into another language, since there is much more that goes into that. For instance, it would not be very common to take a `en-US' language model and fit it into a French one, where the temperature scales or other units are made for another locale.
+
+
+\item \textbf{Question wording}\\
+There is nothing more important a Skill can do, than asking the right questions. This does not only concern the formulation of the question, but also the purpose of the question. E.g. it would not be necessary to get a user's geolocation, if they ask for the weather, since the postal code is enough information to take from them as weather would not change dramatically within a district or an area. Collecting GPS coordinates from an Echo Device for instance is not an option, since these are not equipped with one. So, if we need approximate location, asking for precise location is bad practice.
+
+Further, asking for long numbers, such as Model / Serial numbers is not good either, since the user will very rarely get that right. A Skill for tracking packages, where the user needs to spell out the tracking number is likely to fail and the user might just go and track it in a browser. This translates immediately into a loss since they will no longer use the Skill. We need to make speech happen without pauses so that the system understands it as one sentence altogether. Given that there is a lot more happening under the hood than transcription, Alexa works better with words and sentences than one-off numbers and letters. 
+
+\item \textbf{Context is King}\\
+Alexa provides many tools for handling context, such as session attributes. This makes invoking a Skill for the first time be handled differently than the second time the same Skill is invoked. For instance if we say:
+
+
+
+\begin{quotation}
+\textit{	``I want to bake a cake''}
+\end{quotation}
+
+\noindent Alexa should respond with something like
+
+
+
+\begin{quotation}
+	\flushright
+\textit{	``Okay, you need \{ingredient1\}, \{ingredient2\}, ...''}
+\end{quotation}
+
+
+\noindent then when we get back to Alexa an hour later, it should retain the context from last time to continue asking after invocation something like
+
+%\flushright
+%\begin{tikzpicture}
+%\calloutquote[author=User,width=10cm,position={(1,-0.5)},fill=red!30,rounded corners]{ An algorithm must be seen to be believed.}
+%\end{tikzpicture} 
+
+\begin{quotation}
+	\flushright
+\textit{	``Did you get the ingredients?''}
+\end{quotation}
+
+and proceed to the recipe only once the user answers with a 
+
+ \begin{quotation}
+\textit{	``yes''}
+ \end{quotation}
+
+
+\noindent and not restart the Skill from the beginning. In the meantime, we are not listening to the user. Just as it is embarrassing to a person to forget someone's name right after they meet them, not retaining the context of when the user was last seen using the Skill can make it sound dull and a bad way to communicate since it gives the impression of not being reliable. A user could think if Alexa cannot retain the simplest information, they would not trust doing more complicated things with it.
+
+Maintaining context is important between sessions is just as important as across multiple sessions. For instance, greeting the user the first few times, should not sound like the same greeting after a month of daily usage. The user does not want to know every time how to use the skill for instance. Removing an extended greeting message saves the user time.
+
+Moreover, retaining session should also be considered within an intent, such that if we say
+
+ \begin{quotation}
+	\textit{	``Did Tom Hanks win the Oscars this year?''}
+\end{quotation}
+
+ \begin{quotation}
+ 	\flushright
+%	\textit{	``Yes, in 1995 as a best actor in Forrest Gump, 1999 in Saving Private Ryan, ...''}
+	\textit{``No.''}
+\end{quotation}
+
+
+\noindent and then follow with a question asking
+
+ \begin{quotation}
+	\textit{	``What about Katja Benrath?''}
+\end{quotation}
+
+
+\noindent Alexa should still understand that we are asking within the \mintinline{java}{'OscarsIntent'} and differentiate between an \mintinline{java}{'actor'} slot and a \mintinline{java}{'director'} slot to match it within the same intent to the right query response.
+This is only doable by retaining context.
+
+
+\item \textbf{Localisation} \\
+Before we avail our skill to another country, it is important to check that the other country does not already have its own skill before we do double the amount of work. And as discussed above, things like linguistic and local changes beyond the classical imperial/metric systems (e.g. shoe sizes) could come into account.
+
+\item \textbf{Asking for permission} \\
+As mentioned above about taking the least necessary information to give the user the right answer, we want to manage a good balance on the trade-off between security on usability. If we ask the user to make complicated passwords and use tokens etc, no one will use our software. If we make the software too easily accessible, we might jeopardise its success for security problems. Same applies to the downside between functionality to levering specificity. As we do not want Alexa to spill a secret, we would not want to have someone in the room walking accidentally past hearing Alexa say how much money is in our bank account. So Alexa should not in that case start the Skill with your account balance in the greeting message. We also do not want our neighbour next door be able to unlock our car with a generic command or one they may overhear.
+
+\item \textbf{One Breath}\\
+If we cannot speak out a sentence Alexa can say in one breath, it is too long and should be broken down. Same goes for what Alexa would expect as input. %Audible also doesn't use voice synthesizers to read out books
+So we should speak out a list in one go, but instead list up to three items and prompt the use to ask for more if they want. Context in that respect is also important. If our Skill wants to list public offices nearby, it does not make sense sometimes to mention the office if it is not open by the time we would get there for instance. That's why APIs have to be studied well before they are just linked to a Skill unlike the case with GUI where the user can scroll
+
+Opposite to the GUI paradigm, more is not necessarily better.
+
+\item \textbf{Relevance and Repetition}\\
+
+We want the user to know with subtle hints that we are talking in the Skill about the same thing without repeating our text over and over. Implicit confirmations are good practices sometimes and bad at other times depending on the time and the focus we need to give out to hear a certain sentence. For instance for a purchase, we want to hear it in a full sentence. For just a slot confirmation for instance it may be better to repeat it in the next sentence.
+
+Example:
+
+
+ \begin{quotation}
+	\textit{	``What time does today's Lufthansa flight arrive from Cairo?''}
+\end{quotation}
+
+
+\begin{quotation}
+	\flushright
+	\textit{	``LH 583 arrives to Cairo today at 7:40 PM ''} \\
+\end{quotation}
+
+	and not just\\
+\begin{quotation}
+	\flushright
+
+	\textit{``7:40 PM''} 
+\end{quotation}
+
+This allows us without unnecessary back and forth confirmations to make sure that Alexa understood us right, since if she got a wrong airport code for \textbf{Cairns (CNS)} instead of \textbf{Cairo (CAI)} her answer would be:
+
+ \begin{quotation}
+ 	\flushright
+	\textit{	``LH 779 arrives to Cairns via Singapore today at 5:40 AM ''}
+\end{quotation}
+
+
+This avoids a scenario, where Alexa would sound cumbersome by asking
+
+\begin{quotation}
+\flushright
+\textit{	``Did you just ask about flights from Cairo?''}
+\end{quotation}
+
+or even worse
+
+\begin{quotation}
+	\flushright
+\textit{	`` Are you sure you want to check flights from Cairo today?''}
+\end{quotation}
+
+If we want to add session retention to this scenario to make it more relevant, Alexa could also check next time we open the skill if we want to book the flight we just checked since it is likely to be still in our interest.
+
+As for repetition, it makes more sense to remove repeating words that the user has to say and the sentences Alexa says. This can be done by changing boilerplate strings in the code to arrays where it becomes less predictable what Alexa would say next time we open the skill.
+
+Here is a code example from our implementation:
+
+\begin{minted}{javascript}
+GREETING_TEXT: [
+'Ich kann dir mit den zahlreichen Dienstleistungen der Stadt Berlin helfen! ',
+'Möchtest Du dich über Öffnungszeiten oder eine Dienstleistung informieren?',
+'Willkommen in dem Hauptstadtportal. Was kann ich für dich tun?'
+]
+\end{minted}
+
+\begin{minted}{javascript}
+//choose one Utterance for Alexa to respond with.
+exports.getRandomResponseUtterance = function(inputArray) {
+const randomUtterance =  Math.floor(Math.random() * inputArray.length);
+return inputArray[randomUtterance];
+}
+\end{minted}
+
+To make it even more situation-dependent, think of a Skill for instance that would add to its greeting on friday a 
+
+
+\begin{quotation}
+	\flushright
+	\textit{	`` Have a nice weekend.''}
+\end{quotation}
+
+or if the user was not on the Skill lately, Alexa can present what the Skill can do since his/her last visit
+
+
+
+
+
+\item \textbf{The Opposite of GUI}\\
+Whenever we think of wanting to teach the user to stick to something, we should try to eliminate the thought. With a GUI, it is important to keep the interface consistent. A prevalent example is when Microsoft changed its Office Layout and it was hard to re-teach the users to the new layout, icons and ribbons view. In GUI it is usually preferred to avoid this consistence since it breaks the monotony and the repetition problem mentioned above.
+
+\item \textbf{Speech Synthesis Markup Language (SSML) and Other Effects}\\
+SSML is a great industry-standard tool to make sound variations and add human-like effects to the conversation and are encouraged. Although not all tags are supported by all systems, Alexa offers an broad range of sounds.
+
+We should hence not exclude use of audio clips etc, music, music and speech together. Alexa also integrates Speechcons. These are certain words or phrases pronounced by Alexa more expressively. Here is an example of how these look different to a string:
+
+\begin{minted}{xml}
+<speak>
+Sometimes when I think of all those best practices, I just say,
+<say-as interpret-as="interjection"> Horray. </say-as> 
+</speak>
+\end{minted}
+
+Speechcons are available in German \footnote{\url{https://developer.amazon.com/docs/custom-skills/speechcon-reference-interjections-english-us.html}} and English \footnote{\url{https://developer.amazon.com/docs/custom-skills/speechcon-reference-interjections-german.html}}
+
+Also, Polly can change the sound of the character behind Alexa, which is commonly used in games with multiple users.
+
+Timeline markers are a helpful feature with lists as well, e.g. when saying 
+
+\begin{quotation}
+	\flushright
+	\textit{	`` First, ...'', ``Second'', ``At the end''}
+\end{quotation}
+
+
+
+
+\item \textbf{Flavours, Pointers, Acknowledgement of Feedback}\\
+Giving the user a feeling that they are not talking to a rigid machine, or even adding more `manners' to the language, like when we want to ask Alexa to buy some clothes for us, she would sound better if she says 
+
+
+\begin{quotation}
+	\flushright
+	\textit{	`` Sure, what size?''}
+\end{quotation}
+
+
+rather than just 
+
+
+\begin{quotation}
+	\flushright
+	\textit{	`` What size?''}
+\end{quotation}
+
+
+
+Adding pointers like `this', `that', `your', ... personalise the experience and wrap up the sentence more elegantly. Additionally, adding transitions like 
+\begin{quotation}
+	\flushright
+	\textit{	`` \textbf{Now}, we're going to talk about ...''}
+\end{quotation}
+
+
+
+\item \textbf{Building flexible Paths}\\
+Also known as the graph- vs. frame-based design problem, since we have no idea what the user will say and cannot limit their choices through certain buttons on a screen etc, we want to be as captive as we can to what they say. For instance, a good Alexa Skill should be able to handle when the user says
+
+\begin{quotation}
+
+	\textit{	``I want \{blue\} \{Nike\} \{Hi-Tops\} ''}
+\end{quotation}
+
+and also when they say 
+
+\begin{quotation}
+
+	\textit{	``What are the trendy sneakers in stores''}
+\end{quotation}
+
+Also considering that the user could get too familiar with the Skill and use even more complex thinking with it, they might in the middle want to restart the search process for the perfect product. The Skill should therefore be flexible enough to cope with that. This translates into a more horizontal design as opposed to just following a workflow where the user will be asked only about a colour then a size then an item before they get to their product. Used in many advanced interactive voice response (IVR), there is also extensive documentation on this design field that goes beyond the scope of this thesis.
+%guidelines on this topic from other providers than Amazon who have longer history in the field. 
+
+
+
+\item Voice-First, Voice-First, Voice-First, Multi-Modal\\
+
+%gui in vui *card display* alexa podcast el adima that i heard while running i think
+Although there is enough emphasis to the voice-first approach throughout this work, it is also important to take advantage of using a screen whenever \textbf{necessary}, not whenever \textbf{possible}. Making a screen a supplement that the user does not have to depend on is vital to the user experience, since we need to go from the worst case of a lazy or even almost paralysed user who would not immediately jump to a TV screen when they are asked to do so by Alexa. The cards presented on screen should only reinforce what we say and not diverge at any time or provide important information that is not present in voice. This is as much GUI as we want to integrate in our VUI using Alexa and might change in a different context for niched markets with special cases for Alexa or other voice assistants.
+
+
+\item \textbf{Modularizing the Skills}\\
+It is sometimes better to build small Skills each performing a single action and connect them together with the same APIs rather than building one gigantic skill that expects too many utterances that could render it futile. One example is to make a Pizza menu Skill and another Pizza order Skill that depends on the data from the Pizza menu app. Each would have a separate \mintinline{java}{LaunchIntent} enforcing a separation of concerns.
+
+
+\item \textbf{Invocation Name}\\
+
+While Alexa's presence in Germany is fairly recent giving a freer choice of names, it is pivotal to the Skill that it has a name users can remember easily. The key is not just in selecting the key, but also testing what Alexa interprets it for. A Skill name like `four miles' can be mistranscribed as `for my's' or `form isles'. Checking the speech history in the Alexa App (for the end-user) helps determine if these mistranscriptions happen too often.
+
+
+\item \textbf{Designing for Natural Conversation}\\
+%blind spots in our head we lose sight of
+By having other users test the Skill conversation throughout the development process, many unnecessary scenarios can be circumvented and new ones unveil. The way we speak are blueprints of our verbal biases, as the way we use certain vocabulary is related to where we live, our own ideology or character, and who were interact with. We are used to only our own language or way conversation. As flexible as this can be, learning from others' missed intents can be helpful at all times. For instance, if we design a Skill to say a first name, someone might make the Skill say `Günther' or `Jacks' while someone else could make it say `Mama' or `Daddy', which are not in the predefined slot list \mintinline{java}{AMAZON\_DE.FirstName} (we discuss lists thoroughly in Chapter \ref{maintwo}). Checking when and how a Skill fails is of great value to enhancing it.
+
+\item \text{Keeping it Simple}\\
+
+A Skill that uses 1000 intents is more likely to break. If we can break these down into more modular intents, we avoid the risk. Same goes for utterances. While it is possible to make a lot of these, it is most of the time better practice to make use of dialogue management and entity resolution and reduces false negatives.
+
+
+\item \text{Allowing Surprises}\\
+Even when the user says words that do not match to an intent, although we do not want to handle that, we should still be able to respond with an answer that is equally random to the user as they are random to Alexa. E.g. if we launch a Skill checking for flights and we ask it to order pizza, we can still educate the user about a new thing they were not expected to hear or give them a joke. Since the user was expecting to challenge or break the Skill, they would get surprised if they end up learning about something new or have a laugh instead.
+
+%find in the log that this is one of the strange uses to our skill and route it to a response that would make the user laugh or just be surpirsed.
+
+
+\end{enumerate}

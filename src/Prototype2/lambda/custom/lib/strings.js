@@ -123,7 +123,8 @@ exports.Dienstleistung_IntentSpokenStrings = {
         {
             //When less parameters are sent to request(options), it will resolve the default values.
             //TODO dynamic url resloution - routing
-            PersoIntent : Helper.httpsGet(Helper.buildHttpGetOptions(base_url,'/dienstleistung/120703'))
+//            PersoIntent : Helper.httpsGet(Helper.buildHttpGetOptions(base_url,'/dienstleistung/120703'))
+            PersoIntent: "Soll ich dir die nötigen Voraussetzungen dazu sagen?"
             //PersoIntent: Helper.httpsGet('https://' + base_url + '/dienstleistung/120703/')
 
         },

@@ -1,0 +1,30 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "la mairie de berlin",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "BonjourIntent",
+          "samples": [
+            "adfeq fdfadf asdd",
+            "rthdadfasrgadf",
+            "adfasqwe",
+            "eefgsdfgsff"
+          ]
+        }
+      ]
+    }
+  }
+}

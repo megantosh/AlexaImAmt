@@ -1,0 +1,183 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "berlin service",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AufenthaltstitelIntent",
+          "samples": []
+        },
+        {
+          "name": "BafoegIntent",
+          "samples": []
+        },
+        {
+          "name": "ApprobationIntent",
+          "samples": []
+        },
+        {
+          "name": "z_generalIntent",
+          "slots": [
+            {
+              "name": "Dienstleistung",
+              "type": "EN_LIST_OF_PUBLIC_SVCS_BLN"
+            },
+            {
+              "name": "prerequisites",
+              "type": "EN_YES_NO_FLAG",
+              "samples": [
+                "{prerequisites} please"
+              ]
+            }
+          ],
+          "samples": [
+            "how do i {Dienstleistung}",
+            "i want to {Dienstleistung}",
+            "i would like to {Dienstleistung}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "no",
+                "synonyms": [
+                  "nay",
+                  "of course not",
+                  "nah"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "yes",
+                "synonyms": [
+                  "hell yeah",
+                  "why not",
+                  "sure",
+                  "oh yeah"
+                ]
+              }
+            }
+          ],
+          "name": "EN_YES_NO_FLAG"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "file tax returns",
+                "synonyms": [
+                  "declare my income tax",
+                  "do my tax declaration",
+                  "tax declaration"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Registration",
+                "synonyms": [
+                  "register my house",
+                  "register myself",
+                  "house registration",
+                  "anmeldugn"
+                ]
+              }
+            }
+          ],
+          "name": "EN_LIST_OF_PUBLIC_SVCS_BLN"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "dutch"
+              }
+            },
+            {
+              "name": {
+                "value": "swiss"
+              }
+            },
+            {
+              "name": {
+                "value": "british"
+              }
+            },
+            {
+              "name": {
+                "value": "turkish"
+              }
+            },
+            {
+              "name": {
+                "value": "german"
+              }
+            },
+            {
+              "name": {
+                "value": "egyptian"
+              }
+            }
+          ],
+          "name": "EN_LIST_OF_CITIZENSHIPS"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "z_generalIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "Dienstleistung",
+              "type": "EN_LIST_OF_PUBLIC_SVCS_BLN",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "prerequisites",
+              "type": "EN_YES_NO_FLAG",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.16881132673.702738330326"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.16881132673.702738330326",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "shall we go over the requirements for this service?"
+          },
+          {
+            "type": "PlainText",
+            "value": "would you like me to tell you what you need for that?"
+          }
+        ]
+      }
+    ]
+  }
+}

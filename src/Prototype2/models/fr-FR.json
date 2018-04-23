@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "berlin d. e.",
+      "invocationName": "mairie de berlin",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -22,7 +22,8 @@
             "merci"
           ]
         }
-      ]
+      ],
+      "types": []
     }
   }
 }

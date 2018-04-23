@@ -2,8 +2,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Interaction between AWS modules in the use case of a ``Coffee Bot'' based on reference \cite {aws:lex_webinar} \relax }}{16}{figure.caption.14}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces \lstinline |Dienstleistungen.json| - Primary Nodes\relax }}{22}{figure.caption.21}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces \lstinline |Dienstleistungen.json| - secondary Nodes\relax }}{22}{figure.caption.22}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - Primary Nodes\relax }}{23}{figure.caption.21}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - secondary Nodes\relax }}{23}{figure.caption.22}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

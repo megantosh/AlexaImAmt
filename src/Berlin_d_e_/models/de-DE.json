@@ -1,0 +1,898 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "bär leen",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "probieren wir es erneuert",
+            "probieren wir es nochmal",
+            "lass uns nochmal versuchen"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "sag mir ein paar beispiele",
+            "die Dienstleistung habe ich nicht im kopf",
+            "kenn den namen nicht",
+            "weiss nicht was ich genau suche",
+            "ich weiss nicht was ich suche",
+            "hilf mir auf die Spur",
+            "Hilfe"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "okay das reicht",
+            "alles klar",
+            "sei still",
+            "hör auf"
+          ]
+        },
+        {
+          "name": "ApprobationIntent",
+          "slots": [
+            {
+              "name": "BerufGesundheit",
+              "type": "LIST_OF_BerufGesudheit",
+              "samples": [
+                "ein {BerufGesundheit} soll es sein",
+                "ein {BerufGesundheit}",
+                "{BerufGesundheit}"
+              ]
+            },
+            {
+              "name": "pruefungInBerlin",
+              "type": "YES_NO_FLAG",
+              "samples": [
+                "{pruefungInBerlin}"
+              ]
+            }
+          ],
+          "samples": [
+            "ich brauche eine zulassung als {BerufGesundheit}",
+            "wie kann ich mich zum {BerufGesundheit} zertifizieren",
+            "ich möchte mich als {BerufGesundheit} zertifizieren lassen",
+            "ich will {BerufGesundheit} werden",
+            "ich möchte eine approbation als {BerufGesundheit}"
+          ]
+        },
+        {
+          "name": "Anmeldung_WohnungIntent",
+          "slots": [
+            {
+              "name": "book_appointment_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "YES_NO_FLAG"
+            }
+          ],
+          "samples": [
+            "was ist eine anmeldung",
+            "wie melde ich mich an",
+            "wie kann ich mich in Berlin anmelden",
+            "mich in Berlin anmelden",
+            "meine Wohnung anmelden",
+            "eine Anmeldung machen",
+            "meine Familie anmelden",
+            "Wohnsitz anmelden",
+            "jemanden anmelden",
+            "mein Freund anmelden",
+            "meine Freundin anmelden",
+            "eine Wohnung anmelden",
+            "mich anmelden",
+            "Wohnungsanmeldung"
+          ]
+        },
+        {
+          "name": "z_generalIntent",
+          "slots": [
+            {
+              "name": "Dienstleistung",
+              "type": "LIST_OF_PUBLIC_SVCS_BLN",
+              "samples": [
+                "antrag auf {Dienstleistung}",
+                "ich möchte {Dienstleistung}",
+                "{Dienstleistung}"
+              ]
+            },
+            {
+              "name": "extension_flag",
+              "type": "YES_NO_FLAG",
+              "samples": [
+                "{extension_flag}"
+              ]
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "YES_NO_FLAG"
+            }
+          ],
+          "samples": [
+            "ich möchte {Dienstleistung}"
+          ]
+        },
+        {
+          "name": "AufenthaltstitelIntent",
+          "slots": [
+            {
+              "name": "registered_in_berlin",
+              "type": "YES_NO_FLAG",
+              "samples": [
+                "{registered_in_berlin}"
+              ]
+            },
+            {
+              "name": "citizenship",
+              "type": "DE_LIST_OF_CITIZENSHIPS",
+              "samples": [
+                "ich habe einen {citizenship} pass",
+                "mit der {citizenship}",
+                "ich bin {citizenship}",
+                "ich komme aus {citizenship}",
+                "{citizenship}"
+              ]
+            },
+            {
+              "name": "residence_purpose",
+              "type": "DE_LIST_OF_RESIDENCE_PURPOSES",
+              "samples": [
+                "ich {residence_purpose}",
+                "ich werde {residence_purpose}",
+                "ich möchte {residence_purpose}",
+                "{residence_purpose}"
+              ]
+            },
+            {
+              "name": "extension_flag",
+              "type": "YES_NO_FLAG",
+              "samples": [
+                "{extension_flag}"
+              ]
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "YES_NO_FLAG",
+              "samples": [
+                "{prerequisites_flag}"
+              ]
+            },
+            {
+              "name": "partner_eu_flag",
+              "type": "YES_NO_FLAG"
+            }
+          ],
+          "samples": [
+            "ich will meine Aufenthalt in Deutschland verlänger",
+            "ich möchte meinen Aufenthaltstitel verlängern",
+            "ich will meinen Aufenthaltstitel länger machen",
+            "ich möchte zur Ausländerbehörde",
+            "kann ich meinen Aufenthaltstitel jetzt verlängern",
+            "ich will zum Labo"
+          ]
+        },
+        {
+          "name": "BafoegIntent",
+          "slots": [
+            {
+              "name": "bafoegType",
+              "type": "LIST_OF_BAFOEG_TYPES"
+            },
+            {
+              "name": "pupil_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "azubi_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "abroad_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "YES_NO_FLAG",
+              "samples": [
+                "{prerequisites_flag}"
+              ]
+            }
+          ],
+          "samples": [
+            "ich möchte {bafoegType}",
+            "ich will bafög beantragen",
+            "Ich möchte Bafög"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "325443",
+              "name": {
+                "value": "Zahnarzt",
+                "synonyms": [
+                  "Zahnärztin"
+                ]
+              }
+            },
+            {
+              "id": "325445",
+              "name": {
+                "value": "Tierarzt",
+                "synonyms": [
+                  "Tierärztin"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Therapeut",
+                "synonyms": [
+                  "Therapeutin"
+                ]
+              }
+            },
+            {
+              "id": "327859",
+              "name": {
+                "value": "Psychologischer Psychotherapeut",
+                "synonyms": [
+                  "Psychologische Psychotherapeutin"
+                ]
+              }
+            },
+            {
+              "id": "327857",
+              "name": {
+                "value": "Kinder - und Jugendlichenpsychotherapeut",
+                "synonyms": [
+                  "JugendlichenTherapeutin",
+                  "Kindertherapeutin",
+                  "Therapeutin für Jugendliche und Kinder",
+                  "Therapeutin für Kinder und Jugendliche",
+                  "Therapeutin für Jugendliche",
+                  "Therapeutin für Kinder",
+                  "JugendlichenTherapeut",
+                  "Kindertherapeut",
+                  "Therapeut für Jugendliche und Kinder",
+                  "Therapeut für Kinder und Jugendliche",
+                  "Therapeut für Jugendliche",
+                  "Therapeut für Kinder"
+                ]
+              }
+            },
+            {
+              "id": "325435",
+              "name": {
+                "value": "Apotheker",
+                "synonyms": [
+                  "Apothekerin"
+                ]
+              }
+            },
+            {
+              "id": "325389",
+              "name": {
+                "value": "Arzt",
+                "synonyms": [
+                  "Doktor",
+                  "Ärztin"
+                ]
+              }
+            }
+          ],
+          "name": "LIST_OF_BerufGesudheit"
+        },
+        {
+          "values": [
+            {
+              "id": "FALSE",
+              "name": {
+                "value": "nein",
+                "synonyms": [
+                  "natürlich nicht",
+                  "definitiv nicht",
+                  "auf keinen fall",
+                  "nee du",
+                  "nee",
+                  "nö"
+                ]
+              }
+            },
+            {
+              "id": "TRUE",
+              "name": {
+                "value": "ja",
+                "synonyms": [
+                  "ja schon",
+                  "selbstverständlich",
+                  "aber ja",
+                  "natürlich",
+                  "sicher",
+                  "jawohl",
+                  "jaaa",
+                  "jo",
+                  "jap",
+                  "yeah",
+                  "yep"
+                ]
+              }
+            }
+          ],
+          "name": "YES_NO_FLAG"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "steuererklärung abgeben",
+                "synonyms": [
+                  "steuern",
+                  "steuererklärung"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Hund anmelden"
+              }
+            },
+            {
+              "name": {
+                "value": "Reisepass beantragen"
+              }
+            },
+            {
+              "name": {
+                "value": "Personalausweis beantragen",
+                "synonyms": [
+                  "perso beantragen",
+                  "perso"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Hort-Gutschein - Erweiterung"
+              }
+            },
+            {
+              "name": {
+                "value": "Anmeldung einer Wohnung",
+                "synonyms": [
+                  "was ist eine anmeldung",
+                  "wie melde ich mich an",
+                  "wie kann ich mich in Berlin anmelden",
+                  "mich in Berlin anmelden",
+                  "meine Wohnung anmelden",
+                  "eine Anmeldung machen",
+                  "meine Familie anmelden",
+                  "Wohnsitz anmelden",
+                  "jemanden anmelden",
+                  "mein Freund anmelden",
+                  "meine Freundin anmelden",
+                  "eine Wohnung anmelden",
+                  "mich anmelden",
+                  "Wohnungsanmeldung"
+                ]
+              }
+            }
+          ],
+          "name": "LIST_OF_PUBLIC_SVCS_BLN"
+        },
+        {
+          "values": [
+            {
+              "id": "324282",
+              "name": {
+                "value": "Aufenthaltskarte für Familienangehörige von Bürgern der EU (außer Deutschland) und des EWR - Ausstellung",
+                "synonyms": [
+                  "Aufenthalt EU Familien Mitglied",
+                  "Aufenthaltskarte Familienmitglied EU",
+                  "Aufenthaltskarte EU"
+                ]
+              }
+            },
+            {
+              "id": "324659",
+              "name": {
+                "value": "Blaue Karte EU",
+                "synonyms": [
+                  "EU aufenthaltstitel",
+                  "blue Card",
+                  "Blaue Karte"
+                ]
+              }
+            },
+            {
+              "id": "305244",
+              "name": {
+                "value": "Studium",
+                "synonyms": [
+                  "Studiumvisum",
+                  "fürs Studium",
+                  "zum Studium"
+                ]
+              }
+            },
+            {
+              "id": "324859",
+              "name": {
+                "value": "aus humanitären Gründen",
+                "synonyms": [
+                  "Migrant",
+                  "Flüchtling",
+                  "Asylant",
+                  "Asyl"
+                ]
+              }
+            }
+          ],
+          "name": "DE_LIST_OF_RESIDENCE_PURPOSES"
+        },
+        {
+          "values": [
+            {
+              "id": "CH",
+              "name": {
+                "value": "Schweiz",
+                "synonyms": [
+                  "helvetica",
+                  "schweizerisch",
+                  "schweizerische",
+                  "schweizerin",
+                  "schweizer",
+                  "schwiez"
+                ]
+              }
+            },
+            {
+              "id": "GB",
+              "name": {
+                "value": "Großbritannien",
+                "synonyms": [
+                  "nordire",
+                  "welsch",
+                  "schotin",
+                  "schote",
+                  "schottisch",
+                  "englisch",
+                  "britannier",
+                  "britannien",
+                  "britische",
+                  "britisch",
+                  "britin",
+                  "brite"
+                ]
+              }
+            },
+            {
+              "id": "TK",
+              "name": {
+                "value": "Türkei",
+                "synonyms": [
+                  "turkisch",
+                  "türisch",
+                  "türkin",
+                  "türke"
+                ]
+              }
+            },
+            {
+              "id": "NL",
+              "name": {
+                "value": "Niederlande",
+                "synonyms": [
+                  "niederländin",
+                  "Niederländer",
+                  "holländin",
+                  "holländerin",
+                  "holländer"
+                ]
+              }
+            },
+            {
+              "id": "EG",
+              "name": {
+                "value": "ägypten",
+                "synonyms": [
+                  "ägyptische",
+                  "ägypterin",
+                  "ägypter",
+                  "ägyptisch"
+                ]
+              }
+            },
+            {
+              "id": "DE",
+              "name": {
+                "value": "deutschland",
+                "synonyms": [
+                  "schland",
+                  "deutsche",
+                  "deutsch"
+                ]
+              }
+            }
+          ],
+          "name": "DE_LIST_OF_CITIZENSHIPS"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "studium",
+                "synonyms": [
+                  "bafög für studierende",
+                  "studi bafög",
+                  "hochschul bafög",
+                  "uni Bafög",
+                  "bafög fürs Studium",
+                  "keins",
+                  "ganz normal bafög",
+                  "Studenten Bafög",
+                  "ein normaler Bafög",
+                  "keinen davon",
+                  "keins davon"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "auslands bafög"
+              }
+            },
+            {
+              "name": {
+                "value": "meister bafög",
+                "synonyms": [
+                  "Ausbildungsförderung bei beruflicher Aufstiegsfortbildung"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "schüler bafög"
+              }
+            },
+            {
+              "name": {
+                "value": "studenten Bafög",
+                "synonyms": [
+                  "studierenden Bafög"
+                ]
+              }
+            }
+          ],
+          "name": "LIST_OF_BAFOEG_TYPES"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ApprobationIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "BerufGesundheit",
+              "type": "LIST_OF_BerufGesudheit",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.731925008572.784370516716"
+              }
+            },
+            {
+              "name": "pruefungInBerlin",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.194404890129.1162370056458"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Anmeldung_WohnungIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "book_appointment_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            }
+          ]
+        },
+        {
+          "name": "z_generalIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "Dienstleistung",
+              "type": "LIST_OF_PUBLIC_SVCS_BLN",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.37057223086.1411141577006"
+              }
+            },
+            {
+              "name": "extension_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.113281863374.444968324898"
+              }
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            }
+          ]
+        },
+        {
+          "name": "AufenthaltstitelIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "registered_in_berlin",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.705370932563.596480606902"
+              }
+            },
+            {
+              "name": "citizenship",
+              "type": "DE_LIST_OF_CITIZENSHIPS",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.705370932563.1089481707959"
+              }
+            },
+            {
+              "name": "residence_purpose",
+              "type": "DE_LIST_OF_RESIDENCE_PURPOSES",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.705370932563.1198061985282"
+              }
+            },
+            {
+              "name": "extension_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.705370932563.650345028907"
+              }
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.705370932563.860066613759"
+              }
+            },
+            {
+              "name": "partner_eu_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            }
+          ]
+        },
+        {
+          "name": "BafoegIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "bafoegType",
+              "type": "LIST_OF_BAFOEG_TYPES",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.168106136677.669735754293"
+              }
+            },
+            {
+              "name": "pupil_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "azubi_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "abroad_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.170695308429.1485160893156"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.731925008572.784370516716",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ich verstehe du suchst nach einer Approbation für einen akademischen Beruf im Gesundheitswesen. Welcher soll der sein?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.194404890129.1162370056458",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ich gehe davon aus, dass deine Examen in Berlin waren?"
+          },
+          {
+            "type": "PlainText",
+            "value": "und deine prüfung dafür ist schon in Berlin bestanden?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Hast du dafür deine Prüfung in Berlin abgelegt?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.705370932563.596480606902",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Du weißt wahrscheinlich schon, dass du dafür in Berlin angemeldet sein musst. Bist du in Berlin schon angemeldet?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Um diese Angelegenheit zu bearbeiten, musst du in Berlin angemeldet sein. Bist du in Berlin angemeldet?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.705370932563.1089481707959",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Super. ich brauche etwas mehr information über dich, wenn ich darf. Ich gehe davon aus, du verrätst mir nur die Staatsbürgerschaft, mit der du den Antrag stellen willst.  Also.. Was ist deine Staatsbürgerschaft?"
+          },
+          {
+            "type": "PlainText",
+            "value": "OK, mit welcher Staatsbürgerschaft willst du verfahren?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.705370932563.1198061985282",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "und was ist der Aufenthaltszweck?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.705370932563.860066613759",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "soll ich dir was über die Voraussetzungen dazu erzählen?"
+          },
+          {
+            "type": "PlainText",
+            "value": "magst du dich über die Voraussetztungen informieren?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.705370932563.650345028907",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ist das eine Verlängerung eines bestehenden Aufenthaltstitels?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.170695308429.1485160893156",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "soll ich dir was über die Voraussetzungen dazu erzählen?"
+          },
+          {
+            "type": "PlainText",
+            "value": "magst du dich über die Voraussetztungen informieren?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.113281863374.444968324898",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ist es dein erster Antrag?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.168106136677.750157661408",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ist das für einen Schüler?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.168106136677.669735754293",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ich kann dir bei mehrere Bafög-Dienste helfen. Ist das für einen Schüler, einen Auszubildenden, fürs Ausland oder keins davon?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.37057223086.1411141577006",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "welche Dienstleistung meinst du genau?"
+          }
+        ]
+      }
+    ]
+  }
+}

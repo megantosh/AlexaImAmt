@@ -1,0 +1,23 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "de-DE": {
+          "name": "Berlin d. e."
+        },
+        "en-US": {
+          "name": "Berlin d. e."
+        },
+        "fr-FR": {
+          "name": "Berlin d. e."
+        }
+      }
+    },
+    "apis": {
+      "custom": {
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}

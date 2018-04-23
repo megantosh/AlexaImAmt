@@ -41,7 +41,13 @@ Hence, we need to differentiate between GUI design an that of a VUI. Since  we c
 
 \todo{If this needs more explanation, start a sentence like this: ``Imagine you have an intent resembling the label on th button for ``ok''. with a function linked to it to perform a commit action, ...''}
 
-\todo{It's important to understand that we are at the beginnings of VUI design, but are making progress, e.g. VUIs should become seamless in an approach like this: \href{https://techcrunch.com/2017/08/30/amazon-and-microsoft-agree-their-voice-assistants-will-talk-to-each-other/}{Amazon and Microsoft agree their voice assistants will talk (to each other)}}
+\todo{It's important to understand that we are at the beginnings of VUI design, but are making progress, e.g. VUIs - should become seamless in an approach like this: \href{https://techcrunch.com/2017/08/30/amazon-and-microsoft-agree-their-voice-assistants-will-talk-to-each-other/}{Amazon and Microsoft agree their voice assistants will talk (to each other)}\\
+- additional plugins are in the making, giving individual touch of sound based on profile (Alexa Podcast on the way to BXL)\\
+- \href{https://recast.ai/blog/art-of-bot-design/}{art of bot design}\\
+- \href{https://chatbotsmagazine.com/19-best-practices-for-building-chatbots-3c46274501b2}{best practices}
+}
+
+
 
 \inote{is this okay here or should it go in an appendix?}
 \todo{
@@ -143,7 +149,8 @@ We cover here an excerpt of basic elements that we will later see more or less i
 
 
 
-\todo{explain json (this and LeiKa's) zu Ende}
+\todo{explain json (this and LeiKa's) zu Ende\\
+mention Alexa Voice Service and Products\\}
 
 \begin{table}[h]
 \caption{\href{https://developer.amazon.com/docs/smapi/interaction-model-schema.html}{Interaction Model Schema (Skill Management API)~\cite{alexaDesignGuide} }}\label{interactionModel}
@@ -477,11 +484,14 @@ what the bot curently achieved is at least not give wrong answers, sometimes say
 \section{Choice of Platform} %comparison AWS vs. el ba2i
 \label{choiceOfPlatform}
 \todo{
-here you can talk about alternatives like Microsoft, etc, compare \textbf{pricing scheme}, say why you chose alexa (for its popularity mainly and 3ashan Api.ai et3amal abl keda
-w 3ashan it's a whole established ecosystem. ma3 el ta7afozat eno amazon has an obscure position to data and privacy vs. siri masalan.
-3ashan ma3 siri me7tag iOS knowledge
+here you can talk about alternatives like Microsoft, etc, compare \textbf{pricing scheme}, say why you chose alexa (for its popularity mainly and 3ashan Api.ai et3amal abl keda\\
+w 3ashan it's a whole established ecosystem. ma3 el ta7afozat eno amazon has an obscure position to data and privacy vs. siri masalan.\\
+3ashan ma3 siri me7tag iOS knowledge\\
 
-w ba2a 7aga like Maintain context(sesions), Intent chaining (khodlak kam screenshot men Azure)
+w ba2a 7aga like Maintain context(sesions), Intent chaining (khodlak kam screenshot men Azure)\\
+
+- on top of that, alexa does this cool thing where it gives\\
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -496,7 +506,7 @@ w ba2a 7aga like Maintain context(sesions), Intent chaining (khodlak kam screens
 	
 	\textbf{Intent fulfilment}
 %	-  Alexa Skills Kit+ Amazon Voice Services\\
-	- mention how ability to react to everything is centralized at alexa somewhere \textbf{talk about SKILLS}\\
+	- mention how ability to react to everything is centralized at alexa somewhere \textbf{i.e. talk about SKILLS}\\
 	- ability to retain sessions (explain requests/responses - GET/POST)\\
 	- fullfilling intents\\
 	- nested handlers\\
@@ -504,10 +514,9 @@ w ba2a 7aga like Maintain context(sesions), Intent chaining (khodlak kam screens
 		skill service: code - business logic - handles json requests
 		skil interface: configuration (developer portal)
 		\\
-	- difference to Lex \& Polly\\
-	\href{https://stackoverflow.com/questions/42982159/differences-between-using-lex-and-alexa}{diff alexa lex}
+	- difference to Lex \& Polly : \href{https://stackoverflow.com/questions/42982159/differences-between-using-lex-and-alexa}{diff alexa lex} \\
 		
-	- Major prob: lex is not in german
+	- Major prob: lex is not in german\\
 - \href{https://www.youtube.com/watch?v=QxgdPI1B7rg}{Alexa Documentation}
 }
 
@@ -533,12 +542,12 @@ w ba2a 7aga like Maintain context(sesions), Intent chaining (khodlak kam screens
 \section{The Analysed Scenario as a Use Case}
 
 \subsection*{D115 and The Currently Deployed ``Virtual Service Assistant''}
-todo{
+\todo{
 	- summarize infobroschuere\_ BMI08324\_screen\_barrierefrei.pdf\\
 	-Use case im Detail\\
 	-Welche Daten gibt es?\\	  
 	-Was sind die Erwartungen?\\ 	
-	- wie kann man die G\"ute des Systems beurteilen?\\   
+	- wie kann man die G\"ute des Systems beurteilen? \textbf{do not forget the surveyu made}\\   
 	- Meist sollte man in diesem Kapitel die L\"osung schon im Auge haben, um die Erwartungen so zu formulieren, dass die L\"osung auch geeignet ist?\\ 
 }
 
@@ -546,11 +555,13 @@ todo{
 
 
 \todo{
-\textbf{current berlin.de bot}
+\textbf{current berlin.de bot}\\
 	- dienstleistungen.json structure (finding the info through hierarchical nodes)\\
-	- interpreting the nodes as intents
-	- traversing the nodes (one level up then to next node)
-	- no session/no persistence
+	- interpreting the nodes as intents\\
+	- traversing the nodes (one level up then to next node)\\
+	- no session/no persistence\\
+	- explain how the json nodes map to intents and cores in solr etc
+	
 	%x	x	x
 	%ooo ooo ooo
 	%try first, go to second (kosten, zeit, rechtsgrundlage, ..) skip one if it has already been suggested.. hinweis..that is built into the xml
@@ -571,65 +582,98 @@ todo{
 %				  		[.A\1 [.A \textit{simple} ]
 %							  \qroof{\textit{to use}}.CP ]]]]]]]
 
-provided in JSON for value lookup, there are
 
 
-explain how the json nodes map to intents and cores in solr etc
 
 
 \begin{figure}[h!]
-	\caption{\lstinline|Dienstleistungen.json|  - Primary Nodes}
+	\caption{\mintinline{java}{Dienstleistungen.json}  - Primary Nodes}
 	\includegraphics[width=\textwidth]{DLprim}
 \end{figure}
 
 \begin{figure}[h]
-	\caption{\lstinline|Dienstleistungen.json| - secondary Nodes}
+	\caption{\mintinline{java}{Dienstleistungen.json} - secondary Nodes}
 	\includegraphics[width=\textwidth]{DLsec}
 \end{figure}
 
-\begin{itemize}
-	\item started with 616 Intents in \lstinline|data| node (now 685 or so), each containing
+
+
+provided in JSON for value lookup, the structure of the file is as follows: there are \inote{carry on - the structure}
+
+
+started with 616 Intents in \lstinline|data| node (now 685 or so), each containing \inote{}
 	\todo{missing variables e.g. are required papers, flag: persönliche Vorsprache ja nein, ...}
 	\todo {change this into a table and add a tree list like the interaction model in appendix}
-	\begin{itemize}
-		\item \lstinline|<string> responsibility| denoting in which city halls a service is available
-		\item \lstinline|<boolean> responsibility_all| a flag set to true in case the service is available in all local authority offices / service points
-		\item \lstinline|<HTML list string> description| not unified and includes text
-		\item  \lstinline|<string> not unified and might need to have an \lstinline|int| added to it and set to 0 in case service is free
-		\item \lstinline|<int>residence|
-		\item \lstinline|<int>id|
-		\item \lstinline|representation|
-		\item \lstinline|<long>leika|
-		\item \lstinline|<string> process_time| need to derive minimum, average and maximum service times instead of a string, as well as conditions 
-		\item \lstinline|<string> name| the name of the service that would make sense to a human
-		\item \lstinline|<node> appointment| with 
-		\begin{itemize}
-			\item \lstinline|link| (Key value with URL to /terminveinbarung page) - check if orphan or if it is for each beh\"orde and in that case how it gets the right one
-		\end{itemize}	 
-		\item \lstinline|<node> locations| 
-		\begin{itemize}
-			\item \lstinline|hint|
-			\item \lstinline|<int> location| one of the 12 authorities
-			\item \lstinline|url| of that service at that authority
-			\item \lstinline|<node> appointment| (a second one)
-			\begin{itemize}
-				\item 
-			\end{itemize}
-		\end{itemize}
+
+\begin{table}[htbp]
+	\caption{relevant nodes in query results \mintinline{java}{Dienstleistungen.json} - Description}
+	\label{dienstleistung:descr}
+	\begin{tabu} to \linewidth {  r | l | l | l }
+		key & type & ex. Value & description\\ \hline
 		
-		\item \lstinline|<node> onlineprocessing|
-		\item \lstinline|<node> prerequisites|
-		\item \lstinline|<node> links|
-		\item \lstinline|<node> relation|
-		\item \lstinline|<node> legal|
-		\item \lstinline|<node> requirements|
-		\item \lstinline|<node> forms|
-		\item \lstinline|<node> authorities|
-		\item \lstinline|<node> meta|										
-	\end{itemize}
-\end{itemize}
-
-
+		\mintinline{json}{id} & \mintinline{json}{int} & 326233 & public service ID on \href{https://service.berlin.de}{service.berlin.de} \\
+		
+		\mintinline{json}{d115URL} & URL \mintinline{json}{string} & ''https://service.berlin.de/dienstleistung/326233/'' & link to public service URL on  \href{https://service.berlin.de}{service.berlin.de} \\
+		
+		\mintinline{json}{d115Name} & \mintinline{json}{string} & Fiktionsbescheinigung & public service name as listed on \href{https://service.berlin.de}{service.berlin.de/dienstleistungen} \\		
+		
+		\mintinline{json}{ssdsAll} & \mintinline{json}{string} & ... & additional captive search terms, synonyms used by Virtueller Bürgerassistent. Found to be helpful in conversations with the chatbot \\		
+		
+		\mintinline{json}{d115Description} & \mintinline{json}{string} & ... & Introductory paragraph from the service web page. 
+		Includes HTML tags \\ %like <\backslash br> and <ul ...> \\		
+		
+		
+%		
+%		\mintinline{json}{d115Synonym} & \mintinline{json}{string} & ... & captive search terms, synonyms created by Virtueller Bürgerassistent \\		
+%		
+%		\mintinline{json}{d115Position} & \mintinline{json}{string} & ... & captive search terms, synonyms used by Virtueller Bürgerassistent \\		
+%		
+%		\mintinline{json}{d115InfoLaw} & \mintinline{json}{string} & ... & Legal base for offering this public service \\		
+%		
+%		\mintinline{json}{ssdsAll} & \mintinline{json}{string} & ... & captive search terms, synonyms used by Virtueller Bürgerassistent \\		
+%		
+%		\mintinline{json}{ssdsAll} & \mintinline{json}{string} & ... & captive search terms, synonyms used by Virtueller Bürgerassistent \\		
+%		
+%		
+%		
+%		
+%		
+%		
+%		
+%		\mintinline{java}{string} & \mintinline{java}{responsibility}  & denoting in which city halls a service is available\\
+%		\mintinline{java}{boolean} & \mintinline{java}{responsibility_all} & a flag set to true in case the service is available in all local authority offices / service points\\
+%		
+%%	\mintinline{java}{HTML list string} & \mintinline{java}{ description} &  not unified and includes text \\
+%%%		\item  \lstinline|<string> not unified and might need to have an \lstinline|int| added to it and set to 0 in case service is free
+%		\mintinline{java}{int} & \mintinline{java}{residence} & \\
+%		\mintinline{java}{int} & \mintinline{java}{id} & \\
+%		x & \mintinline{java}{representation}  & x\\
+%		\mintinline{java}{long} & \mintinline{java}{leika}  & \\
+%		\mintinline{java}{string} & \mintinline{java}{process_time}  &  need to derive minimum, average and maximum service times instead of a string, as well as conditions\\
+%		\mintinline{java}{string} & \mintinline{java}{name} & the name of the service that would make sense to a human \\
+%		\mintinline{java}{node} & \mintinline{java}{appointment}  &  \\ 		
+%%		% then inner node 
+%%%		\begin{itemize}
+%%%			\item \lstinline|link| (Key value with URL to /terminveinbarung page) - check if orphan or if it is for each beh\"orde and in that case how it gets the right one
+%%%		\end{itemize}	 
+%		\mintinline{java}{node} & \mintinline{java}{locations}  & \\ 
+%%		% then inner node
+%%%
+%%			\mintinline{java}{hint}
+%			\mintinline{java}{int} & \mintinline{java}{sth} & location| one of the 12 authorities \\
+%%%			\item \lstinline|url| of that service at that authority
+%			\mintinline{java}{node} & \mintinline{java}{appointment} & (a second one)	 \\	
+%		\mintinline{java}{node} & \mintinline{java}{onlineprocessing}  & \\
+%		\mintinline{java}{node} & \mintinline{java}{prerequisites} & \\
+%		\mintinline{java}{node} & \mintinline{java}{links} & \\
+%		\mintinline{java}{node} & \mintinline{java}{relation}  & \\
+%		\mintinline{java}{node} & \mintinline{java}{legal}  & \\
+%		\mintinline{java}{node} & \mintinline{java}{requirements}  & \\
+%		\mintinline{java}{node} & \mintinline{java}{forms}  & \\
+%		\mintinline{java}{node} & \mintinline{java}{authorities}  & \\
+%		\mintinline{java}{node} & \mintinline{java}{meta}  & \\
+	\end{tabu}
+\end{table}
 
 %###################################################################################
 %###################### Topic C             ########################################

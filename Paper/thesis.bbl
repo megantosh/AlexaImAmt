@@ -34,12 +34,6 @@
 \newblock {\em Alexa Dev Chat Podcast}, November 2017.
 \newblock Accessed on 13.02.2018.
 
-\bibitem{alexa_19}
-{Brian Roemmele, Dave Isbitski}.
-\newblock {Episode 019 - Looking back at the Year in Voice and What's Next}.
-\newblock {\em Alexa Dev Chat Podcast}, 11 2017.
-\newblock Accessed on 13.02.2018.
-
 \bibitem{wiki:mvc}
 Wikipedia contributors.
 \newblock Model-view-controller.
@@ -108,6 +102,12 @@ Tobias Grossmann, Regine Oberecker, Stefan Koch, and Angela D~Friederici.
   {http://www.businessinsider.de/the-messaging-app-report-2015-11?r=US&IR=T},
   September 2016.
 \newblock Accessed on 17.02.2018.
+
+\bibitem{memo:devDay}
+{Memo Döring}.
+\newblock Alexa dev days.
+\newblock \url{http://alexadevday.com/BER/DevPortal}, April 2018.
+\newblock remarks in Workshop.
 
 \bibitem{cnbcAlexa}
 NBC.
