@@ -1,33 +1,24 @@
-
-
 exports.languageStrings = {
     'en': {
         'translation': {
-            'WELCOME1' : 'Welcome to bär leen!',
-            'WELCOME2' : 'Greetings!',
-            'WELCOME3' : 'Hello there!',
-            'HELP'    : 'You can say help, stop, or cancel. ',
-            'STOP'    : 'Goodbye!'
+            'WELCOME1': 'Welcome to bär leen!',
+            'WELCOME2': 'Greetings!',
+            'WELCOME3': 'Hello there!',
+            'HELP': 'You can say help, stop, or cancel. ',
+            'STOP': 'Goodbye!'
         }
     }
     , 'de-DE': {
-        'translation' : {
-            'WELCOME'   : 'Moin aus Irland.',
+        'translation': {
+            'WELCOME': 'Moin aus Irland.',
         }
     }
     , 'fr-FR': {
-        'translation' : {
-            'WELCOME'   : 'Japanese Welcome etc.'
+        'translation': {
+            'WELCOME': 'Japanese Welcome etc.'
         }
     }
 };
-
-
-
-
-
-
-
 
 
 const Helper = require("./helper.js");
@@ -47,15 +38,15 @@ exports.defaultSpokenStrings = {
 
             ],
             HELP_TEXT: //"You can try: 'alexa, until when is Standesamt Friedrichshain-Kreuzberg open today'" +
-            "Try asking me how to get your visa extended",
+                "Try asking me how to get your visa extended",
             UNHANDLED_TEXT: "Sorry, I didn't get that. You can try: 'alexa, how do I transfer my driving license to a german one?'" +
             " or 'alexa, ask Berlin D. E. when is the nearest city hall open today?'",
-            STOP_TEXT: [
+            STOP_TEXT: '',
+            CANCEL_TEXT: [
                 "always at your service.",
                 "I'll try to get better next time"
             ],
-            CANCEL_TEXT: 'OK, Bye',
-            WIP_TEXT : 'Skill under development.'
+            WIP_TEXT: "I'll find out about that and be ready for your question soon"
         },
     'de':
         {
@@ -75,7 +66,7 @@ exports.defaultSpokenStrings = {
                 "ich halte mich fern",
             ],
             CANCEL_TEXT: 'ich bin weg',
-            WIP_TEXT : [
+            WIP_TEXT: [
                 'Skill wird gerade entwickelt.',
                 'das berücksichtige ich gerne beim nächsten Milestone',
                 'ich mag es, wie du mich ausfragst. Du solltest eine Karriere im Usability Bereich in Erwägung ziehen.',
@@ -83,8 +74,6 @@ exports.defaultSpokenStrings = {
             ]
         }
 }
-
-
 
 
 //TODO set default values - these are still from petmatch
@@ -98,7 +87,7 @@ const defaultData = [
         "value": "pooch",
         "ERCode": "ER_SUCCESS_MATCH",
         "ERValues": [
-            { "value": "dog" }
+            {"value": "dog"}
         ]
     },
     {
@@ -106,7 +95,7 @@ const defaultData = [
         "value": "play fetch with",
         "ERCode": "ER_SUCCESS_MATCH",
         "ERValues": [
-            { "value": "high" },
+            {"value": "high"},
         ]
     },
     {
@@ -114,8 +103,8 @@ const defaultData = [
         "value": "mini",
         "ERCode": "ER_SUCCESS_MATCH",
         "ERValues": [
-            { "value": "small" },
-            { "value": "tiny" }
+            {"value": "small"},
+            {"value": "tiny"}
         ]
     },
     {
@@ -131,13 +120,12 @@ const defaultData = [
 //****************************************************************
 
 
-
 exports.Dienstleistung_IntentSpokenStrings = {
     'de':
         {
             //When less parameters are sent to request(options), it will resolve the default values.
             //TODO dynamic url resloution - routing
-            PersoIntent : Helper.httpsGet(Helper.buildHttpGetOptions(base_url,'/dienstleistung/120703'))
+            PersoIntent: Helper.httpsGet(Helper.buildHttpGetOptions(base_url, '/dienstleistung/120703'))
             //PersoIntent: Helper.httpsGet('https://' + base_url + '/dienstleistung/120703/')
 
             // TODO: lambda solr server beta3 andreas, dont forget to set the timeout in ask console
@@ -151,12 +139,8 @@ exports.Dienstleistung_IntentSpokenStrings = {
 }
 
 
-
-
 //Oskar's suggestion
 export default defaultData;
-
-
 
 
 //TODO get the formatted json and read the content
@@ -164,7 +148,6 @@ export default defaultData;
 // var getSearchContent = function (base_url, path, search_term) {
 //
 // }
-
 
 
 // when the user asks a question - get the “questionmark” from the transcribed string then answer:
