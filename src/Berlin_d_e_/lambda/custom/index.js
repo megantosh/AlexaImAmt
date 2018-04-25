@@ -234,6 +234,7 @@ const DE_handlers = {
         console.log("Speech output: ", speechOutput);
 
         //TODO insert switch cases / if/else for each service caught from the params
+        Helper.httpGet()
 
         this.response.speak(speechOutput);
         this.emit(':responseReady');
@@ -532,6 +533,9 @@ const EN_US_handlers = {
         if (!filledSlots) {
             return;
         }
+
+        //TODO replace ist das dein erster Antrag with the respective question and
+        // do not delegate this to the interaction model - via check dialogState
 
         console.log("filled slots: " + JSON.stringify(filledSlots));
         // at this point, we know that all required slots are filled.

@@ -13,7 +13,8 @@ const https = require("https");
 
 
 
-//TODO add comments
+//TODO read about what each of them says and explain here:
+//https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md
 exports.nodeEvents = {
 
     //Called after the response is built but before it is returned to the Alexa service. Calls :saveState.
