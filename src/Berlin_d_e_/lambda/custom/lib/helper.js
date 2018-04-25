@@ -229,7 +229,7 @@ exports.delegateSlotCollection = function delegateSlotCollection() {
 // the user for clarification. Disambiguate slot will loop through all slots and
 // elicit confirmation for the first slot it sees that resolves to more than
 // one value.
-exports.disambiguateSlot = function disambiguateSlot() {
+function disambiguateSlot() {
     let currentIntent = this.event.request.intent;
 
     Object.keys(this.event.request.intent.slots).forEach(function(slotName) {
@@ -276,7 +276,7 @@ exports.disambiguateSlot = function disambiguateSlot() {
 
 // Given the request an slot name, slotHasValue returns the slot value if one
 // was given for `slotName`. Otherwise returns false.
-exports.slotHasValue = function slotHasValue(request, slotName) {
+function slotHasValue(request, slotName) {
 
     let slot = request.intent.slots[slotName];
 
@@ -293,4 +293,82 @@ exports.slotHasValue = function slotHasValue(request, slotName) {
         //we didn't get a value in the slot.
         return false;
     }
+}
+
+
+
+
+//TODO twilio SMS, book appointment page, ...
+
+
+
+
+
+
+// ***********************************
+// ** Webservice Calls
+// ***********************************
+
+// make an http get request calls resolve upon completion and reject if there's an error.
+// returns a promise -
+exports.httpGet = function httpGet(options){
+    return new Promise(function(resolve, reject) {
+        let request = https.request(options, response => {
+            response.setEncoding('utf8');
+            let returnData = "";
+
+            if (response.statusCode < 200 || response.statusCode >= 300) {
+                // we must return in this case
+                // otherwise reject runs on the next tick and we'll get an error
+                // when res.on('end') tries to parse the JSON.
+                return reject(new Error(`${response.statusCode}: ${response.req.getHeader('host')} ${response.req.path}`));
+            }
+
+            response.on('data', chunk => {
+                returnData = returnData + chunk;
+            });
+
+            response.on('end', () => {
+                // we have now received the raw return data in the returnData variable.
+                // We can see it in the log output via:
+                // console.log(JSON.stringify(returnData))
+                // we may need to parse through it to extract the needed data
+
+                let response = JSON.parse(returnData);
+                // this will execute whatever the block of code that was passed to
+                // httpGet and pass the JSON `response` to it.
+                resolve(response);
+            });
+
+            response.on('error', error => {
+                reject(error);
+            });
+        });
+        request.end();
+    });
+}
+
+// Creates the options object for an HTTPs GET Request
+// Returns an object.
+exports.buildHttpGetOptions = function buildHttpGetOptions(host, path, port, params) {
+    let options = {
+        hostname: host,
+        path: path + buildQueryString(params),
+        port: port,
+        method: 'GET'
+    };
+    return options;
+}
+
+
+//TODO might (not) need export! - complete with petmatch params
+// Given a list of parameters it builds the query string for a request.
+// Returns URI encoded string of parameters.
+function buildQueryString(params) {
+    let paramList = '';
+    params.forEach( (paramGroup, index) => {
+        paramList += `${ index == 0 ? '?' : '&'}${encodeURIComponent(paramGroup[0])}=${encodeURIComponent(paramGroup[1])}`;
+    });
+    return paramList;
+
 }

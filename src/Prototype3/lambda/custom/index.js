@@ -101,21 +101,21 @@ var DE_handlers = {
 
     'SayHello': function () {
         //uncomment this for default option
-        //this.response.speak(AlexaStrings.defaultSpokenStrings.de.GREETING_TEXT[0]);
-        this.response.speak(Helper.getRandomResponseUtterance(AlexaStrings.defaultSpokenStrings.de.GREETING_TEXT));
+        //this.response.speak(AlexaStrings.defaultSpokenStrings.de.INTRO_GREETING_TEXT[0]);
+        this.response.speak(Helper.getRandomResponseUtterance(AlexaStrings.defaultSpokenStrings.de.INTRO_GREETING_TEXT));
 
         //TODO: can make her whisper here using ssml
         // https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html
         //https://stackoverflow.com/questions/41776014/how-to-correctly-specify-ssml-in-an-alexa-skill-lambda-function
         this.response.listen('This is a reprompt.')
         //if the card is made of two vars, then sth, else if 3 vars then title and image
-            .cardRenderer(AlexaStrings.defaultCardStrings.de.GREETING_TEXT[0], AlexaStrings.defaultCardStrings.de.GREETING_TEXT[1]);
+            .cardRenderer(AlexaStrings.defaultCardStrings.de.INTRO_GREETING_TEXT[0], AlexaStrings.defaultCardStrings.de.INTRO_GREETING_TEXT[1]);
         this.emit(nodeEvents.RESPONSE_READY);
     },
     //TODO
     'SayPersonalAusweisInfo': function () {
         //var district = this.event.request.intent.slots.District.value;
-        this.response.speak(Helper.getRandomResponseUtterance(AlexaStrings.defaultSpokenStrings.de.WIP_TEXT));
+        this.response.speak(Helper.getRandomResponseUtterance(AlexaStrings.defaultSpokenStrings.de.INTRO_WIP_TEXT));
         this.response.speak(AlexaStrings.Dienstleistung_IntentSpokenStrings.de.PersoIntent);
         this.emit(nodeEvents.RESPONSE_READY)
     },
@@ -125,7 +125,7 @@ var DE_handlers = {
     'SayOpeningHours': function () {
         // var district = this.event.request.intent.slots.District.value;
         // this.response.speak('You are in ' + district);
-        this.response.speak(Helper.getRandomResponseUtterance(AlexaStrings.defaultSpokenStrings.de.WIP_TEXT));
+        this.response.speak(Helper.getRandomResponseUtterance(AlexaStrings.defaultSpokenStrings.de.INTRO_WIP_TEXT));
         this.response.speak('Allerdings kann ich dir sagen, dass ein Bürgeramt in der Nähe bestimmt auf hat');
 
         this.emit(nodeEvents.RESPONSE_READY)
@@ -147,11 +147,11 @@ var DE_handlers = {
         console.log('Session ended with reason: ' + this.event.request.reason);
     },
     'AMAZON.StopIntent' : function() {
-        this.response.speak(AlexaStrings.defaultSpokenStrings.de.STOP_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.de.INTRO_STOP_TEXT);
         this.emit(nodeEvents.RESPONSE_READY);
     },
     'AMAZON.HelpIntent' : function() {
-        this.response.speak(AlexaStrings.defaultSpokenStrings.en.HELP_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.en.INTRO_HELP_TEXT);
 
         this.emit(nodeEvents.RESPONSE_READY);
     },
@@ -160,7 +160,7 @@ var DE_handlers = {
         this.emit(nodeEvents.RESPONSE_READY);
     },
     'Unhandled' : function() {
-        this.response.speak(AlexaStrings.defaultSpokenStrings.en.HELP_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.en.INTRO_HELP_TEXT);
     }
 
 };
@@ -176,20 +176,20 @@ var EN_US_handlers = {
         console.log('Session ended with reason: ' + this.event.request.reason);
     },
     'AMAZON.StopIntent' : function() {
-        this.response.speak(AlexaStrings.defaultSpokenStrings.en.STOP_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.en.INTRO_STOP_TEXT);
         this.emit(nodeEvents.RESPONSE_READY);
     },
     'AMAZON.HelpIntent' : function() {
-        this.response.speak(AlexaStrings.defaultSpokenStrings.en.HELP_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.en.INTRO_HELP_TEXT);
         // should not stop here, but continue listning
         this.emit(nodeEvents.RESPONSE_READY);
     },
     'AMAZON.CancelIntent' : function() {
-        this.response.speak(AlexaStrings.defaultSpokenStrings.en.CANCEL_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.en.INTRO_CANCEL_TEXT);
         this.emit(nodeEvents.RESPONSE_READY);
     },
     'Unhandled' : function() {
-        this.response.speak(AlexaStrings.defaultSpokenStrings.en.HELP_TEXT);
+        this.response.speak(AlexaStrings.defaultSpokenStrings.en.INTRO_HELP_TEXT);
     }
 
 };

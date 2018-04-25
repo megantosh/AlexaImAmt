@@ -1,6 +1,7 @@
 const Helper = require("./helper.js");
 // //WARNING: appending 'http', 'https' breaks the URL object
-const base_url = 'service.berlin.de';
+const base_solr_url = 'newsreel-edu.aot.tu-berlin.de/solr/'
+const base_web_url = 'service.berlin.de';
 const invocationName = "Berlin";
 
 module.exports = {
@@ -11,53 +12,52 @@ module.exports = {
 
     'en':
         {
-            GREETING_TEXT: [
+            INTRO_GREETING_TEXT: [
                 'Welcome to Berlin. Can I help you with a public service?',
                 'I can help you with a few public services around Berlin.',
                 "Let's get you up and running in Berlin"
             ],
-            HELP_TEXT: [
+            INTRO_HELP_TEXT: [
                 //"You can try: 'alexa, until when is Standesamt Friedrichshain-Kreuzberg open today'" +
                 "Try asking me how to get your visa extended",
                 "You can try asking me something like: 'How can I transfer my license to a german one' ",
                 "I offer help on public service matters. But I must say I am more fluent in German." +
                 "How about you try asking me about visa matters?"
             ],
-            UNHANDLED_TEXT: ["Sorry, I didn't get that. You can try: 'alexa, how do I transfer my driving license to a german one?'" +
+            INTRO_UNHANDLED_TEXT: ["Sorry, I didn't get that. You can try: 'alexa, how do I transfer my driving license to a german one?'" +
             " or 'alexa, ask " + invocationName +
             //" when is the nearest city hall open today?'",
             "How do I get my visa extended.",
             "The skill did not quite understand what you wanted.  Do you want to try something else? "
             ]
             ,
-            STOP_TEXT: '',
-            CANCEL_TEXT: [
+            INTRO_STOP_TEXT: '',
+            INTRO_CANCEL_TEXT: [
                 "always at your service.",
                 "I'll try to get better next time"
             ],
-            WIP_TEXT: "I'll find out about that and be ready for your question soon"
+            INTRO_WIP_TEXT: "I'll find out about that and be ready for your question soon"
         },
     'de':
         {
-            GREETING_TEXT: [
+            INTRO_GREETING_TEXT: [
                 'Ich kann dir mit den zahlreichen Dienstleistungen der Stadt Berlin helfen! ' +
                 'worüber möchtest du dich informieren?',
                 //'Über welche Dienstleistung möchtest du dich informieren?',
                 //'Möchtest Du dich über Öffnungszeiten oder eine Dienstleistung informieren?',
                 'Willkommen in dem Hauptstadtportal. Was kann ich für dich tun?'
             ],
-            HELP_TEXT: "Du kannst mich nach einer Dienstleistung fragen." +
-            "Probiere zum Beispiel 'Anmeldung einer Wohnung' oder 'Ich möchte eine Wohnung anmelden.",
-            UNHANDLED_TEXT: [
+            INTRO_HELP_TEXT: "Du kannst mich nach einem Dienstleistunf fragen, die du zum Beispiel im Bürgeramt erledigen würdest." +
+            "Probiere mal 'Anmeldung einer Wohnung' oder 'Ich möchte eine Wohnung anmelden.",
+            INTRO_UNHANDLED_TEXT: [
                 "Sorry, das habe ich nicht verstanden. Probiere mal: 'alexa, wann hat das Bürgeramt Venus auf?'" +
                 " oder 'Alexa, frag Berlin D. E. wann hat das Bürgeramt in der Nähe auf heute'.'",
                 'Pardon, das habe ich nicht richtig mitbekommen.'
             ],
-            STOP_TEXT: [
-                "ich halte mich fern",
-            ],
-            CANCEL_TEXT: 'ich bin weg',
-            WIP_TEXT: [
+            INTRO_STOP_TEXT: '',
+            INTRO_CANCEL_TEXT: 'ich bin weg',
+            INTRO_WIP_TEXT: [
+                //TODO - change before submission
                 'Skill wird gerade entwickelt.',
                 'das berücksichtige ich gerne beim nächsten Milestone',
                 'ich mag es, wie du mich ausfragst. Du solltest eine Karriere im Usability Bereich in Erwägung ziehen.',

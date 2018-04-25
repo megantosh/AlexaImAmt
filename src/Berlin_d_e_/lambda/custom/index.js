@@ -206,6 +206,8 @@ const DE_handlers = {
 
         this.emit(':responseReady');
     },
+    //This intent deals with D115 services No:
+    //
     'DL_AufenthaltstitelIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
@@ -221,7 +223,7 @@ const DE_handlers = {
 
         console.log(JSON.stringify(slotValues));
 
-
+        //TODO - remove
         let speechOutput = 'You have filled 5 required slots. ' +
             'registered_in_berlin resolved to,  ' + slotValues.registered_in_berlin.resolved + '. ' +
             'citizenship resolved to,  ' + slotValues.citizenship.resolved + '. ' +
@@ -230,11 +232,16 @@ const DE_handlers = {
             'prerequisites_flag resolved to,  ' + slotValues.prerequisites_flag.resolved + '. ' ;
 
         console.log("Speech output: ", speechOutput);
+
+        //TODO insert switch cases / if/else for each service caught from the params
+
         this.response.speak(speechOutput);
         this.emit(':responseReady');
 
         this.emit(':responseReady');
     },
+
+    //This Intent deals with services :
     'DL_BafoegIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
@@ -392,20 +399,21 @@ const DE_handlers = {
     },
     //TODO: Make Alexa ask for help only the first few times
     'LaunchRequest': function () {
+        //another sample
         //" <audio src='https://s3.amazonaws.com/my-ssml-samples/Flourish.mp3' /> "
-
-        let start = " OK <audio src='https://s3.eu-central-1.amazonaws.com/megantosh/RegioSound-48kbps.mp3' /> " +
-            Helper.randomphrase(Speech.de.GREETING_TEXT);
+        let startConversation = " OK <audio src='https://s3.eu-central-1.amazonaws.com/megantosh/RegioSound-48kbps.mp3' /> " +
+            Helper.randomphrase(Speech.de.INTRO_GREETING_TEXT);
 
         this.response
-        this.emit(':ask', start, 'did that just work?');
-        //     .listen('Hmm.. ' + Helper.randomphrase(Speech.de.HELP_TEXT));
-        // this.emit(':responseReady');
+        this.emit(':ask', startConversation, 'did that just work?');
+        // need a real Echo to check this!
+        //     .listen('Hmm.. ' + Helper.randomphrase(Speech.de.INTRO_HELP_TEXT));
+        this.emit(':responseReady');
     },
     'Unhandled': function () {
         this.response
-            .speak(Speech.de.UNHANDLED_TEXT)
-            .listen(Helper.randomphrase(Speech.de.UNHANDLED_TEXT));
+            .speak(Speech.de.INTRO_UNHANDLED_TEXT)
+            .listen(Helper.randomphrase(Speech.de.INTRO_UNHANDLED_TEXT));
     }};
 
 
@@ -598,15 +606,18 @@ const EN_US_handlers = {
         this.emit(':responseReady');
     },
     'LaunchRequest': function () {
+        let startConversation = " OK <audio src='https://s3.eu-central-1.amazonaws.com/megantosh/RegioSound-48kbps.mp3' /> " +
+            Helper.randomphrase(Speech.en.INTRO_GREETING_TEXT);
+
         this.response
-            .speak(Helper.randomphrase(Speech.en.GREETING_TEXT))
-            .listen('Let us try again, ' + Helper.randomphrase(Speech.en.HELP_TEXT));
+        this.emit(':ask', startConversation, 'did that just work?');
+            // .listen('Let us try again, ' + Helper.randomphrase(Speech.en.INTRO_HELP_TEXT));
         this.emit(':responseReady');
     },
     'Unhandled': function () {
         this.response
-            .speak(Helper.randomphrase(Speech.en.UNHANDLED_TEXT))
-            .listen(Helper.randomphrase(Speech.en.UNHANDLED_TEXT));
+            .speak(Helper.randomphrase(Speech.en.INTRO_UNHANDLED_TEXT))
+            .listen(Helper.randomphrase(Speech.en.INTRO_UNHANDLED_TEXT));
     }};
 
 

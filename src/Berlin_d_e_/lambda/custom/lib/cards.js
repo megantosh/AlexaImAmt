@@ -11,7 +11,7 @@ exports.welcomeCardImg = {
 exports.defaultCardStrings = {
     'de':
         {
-            GREETING_TEXT: [
+            INTRO_GREETING_TEXT: [
                 'Willkommen beim virtuellen Service-Assistent der Stadt Berlin',
                 'Disclaimer: Beta Version - This skill is in no way affiliated with Berlin.de website' + ' - Alle Angaben ohne Gewähr'
             ]
