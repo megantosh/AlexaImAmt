@@ -346,7 +346,7 @@ const DE_handlers = {
 
 
 
-
+//TODO wienbotIntents
 
 
 
@@ -393,6 +393,36 @@ const EN_US_handlers = {
 
         this.emit(':responseReady');
     },
+
+    //TODO: what to do with *staatenlos, ungeklärt Syr/Kurd/Palästinenser (Siehe JSON_semi ready)
+    // how to handle côte d'Ivoire (Ivory coast, Elfenbeinküste), overseas territory
+    'DL_FahrerlaubnisIntent' : function () {
+        // delegate to Alexa to collect all the required slots
+        let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
+        let filledSlots = delegateSlotCollection.call(this, isTestingWithSimulator);
+
+        if (!filledSlots) {
+            return;
+        }
+
+        console.log("filled slots: " + JSON.stringify(filledSlots));
+        // at this point, we know that all required slots are filled.
+        let slotValues = getSlotValues(filledSlots);
+
+        console.log(JSON.stringify(slotValues));
+
+
+        let speechOutput = 'You have filled 1 required slots. ' +
+            'country_of_license resolved to,  ' + slotValues.country_of_license.resolved + '. ' ;
+
+        console.log("Speech output: ", speechOutput);
+        this.response.speak(speechOutput);
+        this.emit(':responseReady');
+
+        this.emit(':responseReady');
+    },
+
+
     'BafoegIntent': function () {
         let say = 'Hello from BafoegIntent. ';
 

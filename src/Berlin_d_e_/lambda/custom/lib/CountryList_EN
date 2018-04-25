@@ -1,0 +1,1436 @@
+//TODO disambiguations in Country Names and nationality Synonyms (E.g. Dutch, British, Turkomen)
+
+[
+  {
+    "id": "423",
+    "name": {
+      "value": "Afghanistan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "287",
+    "name": {
+      "value": "Egypt",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "121",
+    "name": {
+      "value": "Albania",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "221",
+    "name": {
+      "value": "Algeria",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "123",
+    "name": {
+      "value": "Andorra",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "223",
+    "name": {
+      "value": "Angola",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "320",
+    "name": {
+      "value": "Antigua and Barbuda",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "274",
+    "name": {
+      "value": "Equatorial Guinea",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "323",
+    "name": {
+      "value": "Argentina",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "422",
+    "name": {
+      "value": "Armenia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "425",
+    "name": {
+      "value": "Azerbaijan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "225",
+    "name": {
+      "value": "Ethiopia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "523",
+    "name": {
+      "value": "Australia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "324",
+    "name": {
+      "value": "Bahamas",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "424",
+    "name": {
+      "value": "Bahrain",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "460",
+    "name": {
+      "value": "Bangladesh",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "322",
+    "name": {
+      "value": "Barbados",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "169",
+    "name": {
+      "value": "Belarus",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "330",
+    "name": {
+      "value": "Belize",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "229",
+    "name": {
+      "value": "Benin",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "426",
+    "name": {
+      "value": "Bhutan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "326",
+    "name": {
+      "value": "Bolivia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "122",
+    "name": {
+      "value": "Bosnia and Herzegovina",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "227",
+    "name": {
+      "value": "Botswana",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "327",
+    "name": {
+      "value": "Brazil",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "295",
+    "name": {
+      "value": "British Overseas Territory in Africa",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "395",
+    "name": {
+      "value": "British Overseas Territory in America",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "495",
+    "name": {
+      "value": "British Overseas Territory in Asia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "595",
+    "name": {
+      "value": "British Overseas Territory in Australia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "195",
+    "name": {
+      "value": "British Overseas Territory in Europe",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "429",
+    "name": {
+      "value": "Brunei Darussalam",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "258",
+    "name": {
+      "value": "Burkina Faso",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "291",
+    "name": {
+      "value": "Burundi",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "332",
+    "name": {
+      "value": "Chile",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "479",
+    "name": {
+      "value": "China",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "527",
+    "name": {
+      "value": "Cook Islands",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "334",
+    "name": {
+      "value": "Costa Rica",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "231",
+    "name": {
+      "value": "Côte d'Ivoire",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "333",
+    "name": {
+      "value": "Dominica",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "335",
+    "name": {
+      "value": "Dominican Republic",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "230",
+    "name": {
+      "value": "Djibouti",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "336",
+    "name": {
+      "value": "Ecuador",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "337",
+    "name": {
+      "value": "El Salvador",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "224",
+    "name": {
+      "value": "Eritrea",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "526",
+    "name": {
+      "value": "Fiji",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "236",
+    "name": {
+      "value": "Gabon",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "237",
+    "name": {
+      "value": "Gambia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "430",
+    "name": {
+      "value": "Georgia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "238",
+    "name": {
+      "value": "Ghana",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "340",
+    "name": {
+      "value": "Grenada",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "345",
+    "name": {
+      "value": "Guatemala",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "261",
+    "name": {
+      "value": "Guinea",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "259",
+    "name": {
+      "value": "Guinea-Bissau",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "328",
+    "name": {
+      "value": "Guyana",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "346",
+    "name": {
+      "value": "Haiti",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "347",
+    "name": {
+      "value": "Honduras",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "436",
+    "name": {
+      "value": "India",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "437",
+    "name": {
+      "value": "Indonesia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "438",
+    "name": {
+      "value": "Iraq",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "439",
+    "name": {
+      "value": "Iran, Islamic Republic",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "441",
+    "name": {
+      "value": "Israel",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "355",
+    "name": {
+      "value": "Jamaica",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "442",
+    "name": {
+      "value": "Japan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "421",
+    "name": {
+      "value": "Yemen",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "445",
+    "name": {
+      "value": "Jordan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "446",
+    "name": {
+      "value": "Cambodia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "262",
+    "name": {
+      "value": "Cameroon",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "348",
+    "name": {
+      "value": "Canada",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "242",
+    "name": {
+      "value": "Cape Verde",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "444",
+    "name": {
+      "value": "Kazakhstan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "447",
+    "name": {
+      "value": "Qatar",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "243",
+    "name": {
+      "value": "Kenya",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "450",
+    "name": {
+      "value": "Kyrgyzstan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "530",
+    "name": {
+      "value": "Kiribati",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "349",
+    "name": {
+      "value": "Colombia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "244",
+    "name": {
+      "value": "Comoros",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "246",
+    "name": {
+      "value": "Congo, Democratic Republic",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "434",
+    "name": {
+      "value": "Korea, Democratic People's Republic",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "467",
+    "name": {
+      "value": "Korea, Republic",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "150",
+    "name": {
+      "value": "Kosovo",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "351",
+    "name": {
+      "value": "Cuba",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "448",
+    "name": {
+      "value": "Kuwait",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "449",
+    "name": {
+      "value": "Laos, Democratic People's Republic",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "226",
+    "name": {
+      "value": "Lesotho",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "451",
+    "name": {
+      "value": "Lebanon",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "247",
+    "name": {
+      "value": "Liberia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "248",
+    "name": {
+      "value": "Libya",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "249",
+    "name": {
+      "value": "Madagascar",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "256",
+    "name": {
+      "value": "Malawi",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "482",
+    "name": {
+      "value": "Malaysia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "454",
+    "name": {
+      "value": "Maldives",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "251",
+    "name": {
+      "value": "Mali",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "252",
+    "name": {
+      "value": "Morocco",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "544",
+    "name": {
+      "value": "Marshall Islands",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "239",
+    "name": {
+      "value": "Mauritania",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "253",
+    "name": {
+      "value": "Mauritius",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "144",
+    "name": {
+      "value": "Macedonia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "353",
+    "name": {
+      "value": "Mexico",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "545",
+    "name": {
+      "value": "Micronesia, Feder. States",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "146",
+    "name": {
+      "value": "Moldova, Republic",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "147",
+    "name": {
+      "value": "Monaco",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "457",
+    "name": {
+      "value": "Mongolia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "140",
+    "name": {
+      "value": "Montenegro",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "254",
+    "name": {
+      "value": "Mozambique",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "427",
+    "name": {
+      "value": "Myanmar",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "267",
+    "name": {
+      "value": "Namibia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "531",
+    "name": {
+      "value": "Nauru",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "458",
+    "name": {
+      "value": "Nepal",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "536",
+    "name": {
+      "value": "New Zealand",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "354",
+    "name": {
+      "value": "Nicaragua",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "255",
+    "name": {
+      "value": "Niger",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "232",
+    "name": {
+      "value": "Nigeria",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "533",
+    "name": {
+      "value": "Niue",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "525",
+    "name": {
+      "value": "Northern Mariana Islands",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "456",
+    "name": {
+      "value": "Oman",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "461",
+    "name": {
+      "value": "Pakistan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "537",
+    "name": {
+      "value": "Palau",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "357",
+    "name": {
+      "value": "Panama",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "538",
+    "name": {
+      "value": "Papua New Guinea",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "359",
+    "name": {
+      "value": "Paraguay",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "361",
+    "name": {
+      "value": "Peru",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "462",
+    "name": {
+      "value": "Philippines",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "265",
+    "name": {
+      "value": "Rwanda",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "160",
+    "name": {
+      "value": "Russian Federation",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "524",
+    "name": {
+      "value": "Solomon Islands",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "257",
+    "name": {
+      "value": "Zambia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "543",
+    "name": {
+      "value": "Samoa",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "156",
+    "name": {
+      "value": "San Marino",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "268",
+    "name": {
+      "value": "Sao Tome and Principe",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "472",
+    "name": {
+      "value": "Saudi Arabia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "269",
+    "name": {
+      "value": "Senegal",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "170",
+    "name": {
+      "value": "Serbia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "271",
+    "name": {
+      "value": "Seychelles",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "272",
+    "name": {
+      "value": "Sierra Leone",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "233",
+    "name": {
+      "value": "Zimbabwe",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "474",
+    "name": {
+      "value": "Singapore",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "273",
+    "name": {
+      "value": "Somalia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "299",
+    "name": {
+      "value": "other African states",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "399",
+    "name": {
+      "value": "other American states",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "499",
+    "name": {
+      "value": "other Asian states",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "599",
+    "name": {
+      "value": "other Australian states",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "199",
+    "name": {
+      "value": "other European states",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "431",
+    "name": {
+      "value": "Sri Lanka",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "370",
+    "name": {
+      "value": "St. Kitts and Nevis",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "366",
+    "name": {
+      "value": "St. Lucia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "369",
+    "name": {
+      "value": "St. Vincent and the Grenadines",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "263",
+    "name": {
+      "value": "South Africa",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "276",
+    "name": {
+      "value": "Sudan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "278",
+    "name": {
+      "value": "South Sudan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "364",
+    "name": {
+      "value": "Suriname",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "281",
+    "name": {
+      "value": "Swaziland",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "475",
+    "name": {
+      "value": "Syria (family name A - E)",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "473",
+    "name": {
+      "value": "Syria (family name F - Z)",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "470",
+    "name": {
+      "value": "Tajikistan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "465",
+    "name": {
+      "value": "Taiwan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "282",
+    "name": {
+      "value": "Tanzania, Association Republic",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "476",
+    "name": {
+      "value": "Thailand",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "483",
+    "name": {
+      "value": "Timor-Leste",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "283",
+    "name": {
+      "value": "Togo",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "541",
+    "name": {
+      "value": "Tonga",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "371",
+    "name": {
+      "value": "Trinidad and Tobago",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "284",
+    "name": {
+      "value": "Chad",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "285",
+    "name": {
+      "value": "Tunisia",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "163",
+    "name": {
+      "value": "Turkey",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "471",
+    "name": {
+      "value": "Turkmenistan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "540",
+    "name": {
+      "value": "Tuvalu",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "286",
+    "name": {
+      "value": "Uganda",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "166",
+    "name": {
+      "value": "Ukraine",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "365",
+    "name": {
+      "value": "Uruguay",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "477",
+    "name": {
+      "value": "Uzbekistan",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "532",
+    "name": {
+      "value": "Vanuatu",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "167",
+    "name": {
+      "value": "Vatican City",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "367",
+    "name": {
+      "value": "Venezuela",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "469",
+    "name": {
+      "value": "United Arab Emirates",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "368",
+    "name": {
+      "value": "United States of America",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "432",
+    "name": {
+      "value": "Vietnam",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "289",
+    "name": {
+      "value": "Central African Republic",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Iceland",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Liechtenstein",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Norway",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Belgium",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Bulgaria",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Denmark",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Estonia",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Finland",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "France",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Greece",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Ireland",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Italy",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Croatia",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Lettlan",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Lithuania",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Luxembourg",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Malta",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Netherlands",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Austria",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Poland",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Portugal",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Romania",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Sweden",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Slovakia",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Slovenia",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Spain",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Czech Republic",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Hungary",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "United Kingdom",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Cyprus",
+      "synonyms": []
+    }
+  },
+  {
+    "name": {
+      "value": "Germany",
+      "synonyms": []
+    }
+  },
+  {
+    "id": "158",
+    "name": {
+      "value": "Switzerland",
+      "synonyms": []
+    }
+  }
+]
