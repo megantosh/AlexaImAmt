@@ -485,6 +485,9 @@ what the bot curently achieved is at least not give wrong answers, sometimes say
 \label{choiceOfPlatform}
 \todo{
 here you can talk about alternatives like Microsoft, etc, compare \textbf{pricing scheme}, say why you chose alexa (for its popularity mainly and 3ashan Api.ai et3amal abl keda\\
+-AWS Lambda is free for the first one million calls per month\\
+-need to manage any SSL certificates when using AWS Lambda (since the Alexa Skills Kit is a trusted trigger).\\
+\url{https://developer.amazon.com/blogs/post/Tx213D2XQIYH864/announcing-the-alexa-skills-kit-for-node-js} very imp\\
 w 3ashan it's a whole established ecosystem. ma3 el ta7afozat eno amazon has an obscure position to data and privacy vs. siri masalan.\\
 3ashan ma3 siri me7tag iOS knowledge\\
 
@@ -493,6 +496,38 @@ w ba2a 7aga like Maintain context(sesions), Intent chaining (khodlak kam screens
 - on top of that, alexa does this cool thing where it gives\\
 
 }
+
+
+
+Before deciding to develop for Alexa, we consider several options and evaluate their advantages and suitability for our requirements.
+
+
+\begin{table}
+	\begin{tabularx}{\linewidth}{r | l l l}
+		& Alexa / AWS & API.ai & Microsoft Azure \\ \hline
+		price & First million calls free & free & free \\
+	\end{tabularx}
+\end{table}
+
+With Alexa as our choice, we agree to acknowledge the following considerations:
+
+
+
+
+\subsubsection*{Availability}
+
+We choose to offer our skill only in Germany because our Skill's functionality is specific only within this geographical region. For that we configure the Skill to handle English (US) and German.
+
+\begin{quotation}
+
+\item The skill is available only in the German skill store, due to the selected country distribution.
+\item The skill can be used by customers in Germany who have set their devices to use German.
+\item The skill can be used by customers in Germany who have set their devices to use English (UK).
+\item The skill cannot be used by customers in Germany who have set their devices to use English (US) or any other language.
+\item The skill cannot be used by customers in any other country, regardless of the language they've selected for their devices.
+
+\end{quotation}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

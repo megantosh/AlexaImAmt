@@ -33,7 +33,7 @@
           ]
         },
         {
-          "name": "ApprobationIntent",
+          "name": "DL_ApprobationIntent",
           "slots": [
             {
               "name": "BerufGesundheit",
@@ -50,6 +50,26 @@
               "samples": [
                 "{pruefungInBerlin}"
               ]
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "costs_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "YES_NO_FLAG"
             }
           ],
           "samples": [
@@ -61,36 +81,7 @@
           ]
         },
         {
-          "name": "Anmeldung_WohnungIntent",
-          "slots": [
-            {
-              "name": "book_appointment_flag",
-              "type": "YES_NO_FLAG"
-            },
-            {
-              "name": "prerequisites_flag",
-              "type": "YES_NO_FLAG"
-            }
-          ],
-          "samples": [
-            "was ist eine anmeldung",
-            "wie melde ich mich an",
-            "wie kann ich mich in Berlin anmelden",
-            "mich in Berlin anmelden",
-            "meine Wohnung anmelden",
-            "eine Anmeldung machen",
-            "meine Familie anmelden",
-            "Wohnsitz anmelden",
-            "jemanden anmelden",
-            "mein Freund anmelden",
-            "meine Freundin anmelden",
-            "eine Wohnung anmelden",
-            "mich anmelden",
-            "Wohnungsanmeldung"
-          ]
-        },
-        {
-          "name": "z_generalIntent",
+          "name": "DL_generalIntent",
           "slots": [
             {
               "name": "Dienstleistung",
@@ -110,19 +101,41 @@
             },
             {
               "name": "prerequisites_flag",
-              "type": "YES_NO_FLAG"
+              "type": "YES_NO_FLAG",
+              "samples": [
+                "{prerequisites_flag}"
+              ]
             },
             {
               "name": "book_appointment_flag",
               "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "costs_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "YES_NO_FLAG"
             }
           ],
           "samples": [
+            "{processing_time_flag} die {Dienstleistung}",
+            "{costs_flag} die {Dienstleistung}",
+            "{processing_time_flag} ein {Dienstleistung}",
+            "{costs_flag} ein {Dienstleistung}",
+            "{prerequisites_flag} die {Dienstleistung}",
+            "{prerequisites_flag} meine {Dienstleistung}",
+            "{prerequisites_flag} ein {Dienstleistung}",
             "ich möchte {Dienstleistung}"
           ]
         },
         {
-          "name": "AufenthaltstitelIntent",
+          "name": "DL_AufenthaltstitelIntent",
           "slots": [
             {
               "name": "registered_in_berlin",
@@ -130,6 +143,10 @@
               "samples": [
                 "{registered_in_berlin}"
               ]
+            },
+            {
+              "name": "partner_eu_flag",
+              "type": "YES_NO_FLAG"
             },
             {
               "name": "citizenship",
@@ -146,6 +163,7 @@
               "name": "residence_purpose",
               "type": "DE_LIST_OF_RESIDENCE_PURPOSES",
               "samples": [
+                "ich bin {residence_purpose}",
                 "ich {residence_purpose}",
                 "ich werde {residence_purpose}",
                 "ich möchte {residence_purpose}",
@@ -167,37 +185,44 @@
               ]
             },
             {
-              "name": "partner_eu_flag",
+              "name": "required_docs_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "costs_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "processing_time_flag",
               "type": "YES_NO_FLAG"
             }
           ],
           "samples": [
+            "{prerequisites_flag} meine Aufenthalt in Deutschland verlängern",
+            "{prerequisites_flag} meinen Aufenthaltstitel verlängern",
             "ich will meine Aufenthalt in Deutschland verlänger",
             "ich möchte meinen Aufenthaltstitel verlängern",
             "ich will meinen Aufenthaltstitel länger machen",
-            "ich möchte zur Ausländerbehörde",
-            "kann ich meinen Aufenthaltstitel jetzt verlängern",
-            "ich will zum Labo"
+            "kann ich meinen Aufenthaltstitel jetzt verlängern"
           ]
         },
         {
-          "name": "BafoegIntent",
+          "name": "DL_BafoegIntent",
           "slots": [
             {
               "name": "bafoegType",
-              "type": "LIST_OF_BAFOEG_TYPES"
-            },
-            {
-              "name": "pupil_flag",
-              "type": "YES_NO_FLAG"
-            },
-            {
-              "name": "azubi_flag",
-              "type": "YES_NO_FLAG"
-            },
-            {
-              "name": "abroad_flag",
-              "type": "YES_NO_FLAG"
+              "type": "LIST_OF_BAFOEG_TYPES",
+              "samples": [
+                "für {bafoegType}",
+                "keine Ahnung ich bin {bafoegType}",
+                "keine ahnung {bafoegType}",
+                "ich bin {bafoegType}",
+                "{bafoegType}"
+              ]
             },
             {
               "name": "prerequisites_flag",
@@ -205,6 +230,26 @@
               "samples": [
                 "{prerequisites_flag}"
               ]
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "costs_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "YES_NO_FLAG"
+            },
+            {
+              "name": "extension_flag",
+              "type": "YES_NO_FLAG"
             }
           ],
           "samples": [
@@ -212,13 +257,65 @@
             "ich will bafög beantragen",
             "Ich möchte Bafög"
           ]
+        },
+        {
+          "name": "LOC_Intent",
+          "slots": [
+            {
+              "name": "office_type",
+              "type": "DE_LIST_OF_OFFICE_TYPES"
+            },
+            {
+              "name": "office_name",
+              "type": "DE_LIST_OF_OFFICE_NAMES_BERLIN"
+            },
+            {
+              "name": "district_single_name",
+              "type": "LIST_OF_SINGLE_DISTRICTS_BERLIN"
+            },
+            {
+              "name": "district_combo_name",
+              "type": "LIST_OF_COMBO_DISTRICTS"
+            }
+          ],
+          "samples": [
+            "ich will zum {office_type}",
+            "ich möchte zur {office_type}"
+          ]
+        },
+        {
+          "name": "ST_FutureTodos",
+          "slots": [
+            {
+              "name": "futureIntent",
+              "type": "List_Todos"
+            },
+            {
+              "name": "DogName",
+              "type": "AMAZON.US_FIRST_NAME"
+            }
+          ],
+          "samples": [
+            "wie finde ich {DogName}",
+            "ich habe meine Meldebscheinigung verloren",
+            "ich brauche eine {futureIntent}",
+            "ich möchte {futureIntent}",
+            "wo kann ich {futureIntent}",
+            "ich habe mein hund verloren",
+            "wie ich meinen verlorenen hund finden kann",
+            "wie kann ich meinen verlorenen hund finden",
+            "wo ist mein hund verblieben"
+          ]
+        },
+        {
+          "name": "ST_BerlinIntents",
+          "samples": []
         }
       ],
       "types": [
         {
           "values": [
             {
-              "id": "325443",
               "name": {
                 "value": "Zahnarzt",
                 "synonyms": [
@@ -227,7 +324,6 @@
               }
             },
             {
-              "id": "325445",
               "name": {
                 "value": "Tierarzt",
                 "synonyms": [
@@ -244,7 +340,6 @@
               }
             },
             {
-              "id": "327859",
               "name": {
                 "value": "Psychologischer Psychotherapeut",
                 "synonyms": [
@@ -253,7 +348,6 @@
               }
             },
             {
-              "id": "327857",
               "name": {
                 "value": "Kinder - und Jugendlichenpsychotherapeut",
                 "synonyms": [
@@ -273,7 +367,6 @@
               }
             },
             {
-              "id": "325435",
               "name": {
                 "value": "Apotheker",
                 "synonyms": [
@@ -282,7 +375,6 @@
               }
             },
             {
-              "id": "325389",
               "name": {
                 "value": "Arzt",
                 "synonyms": [
@@ -315,6 +407,15 @@
               "name": {
                 "value": "ja",
                 "synonyms": [
+                  "wie viel Zeit braucht",
+                  "wie lange braucht",
+                  "wieviel kostet",
+                  "warum nicht",
+                  "bitte",
+                  "was brauche ich für",
+                  "wie lange dauert",
+                  "was kostet",
+                  "wie kann ich",
                   "ja schon",
                   "selbstverständlich",
                   "aber ja",
@@ -420,6 +521,7 @@
               "name": {
                 "value": "Studium",
                 "synonyms": [
+                  "student",
                   "Studiumvisum",
                   "fürs Studium",
                   "zum Studium"
@@ -576,13 +678,280 @@
             }
           ],
           "name": "LIST_OF_BAFOEG_TYPES"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Technische Universität Berlin",
+                "synonyms": [
+                  "TU Berlin"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Senatsverwaltung"
+              }
+            },
+            {
+              "name": {
+                "value": "IT Dienstleistungszentrum"
+              }
+            },
+            {
+              "name": {
+                "value": "amtsanwaltschaft"
+              }
+            },
+            {
+              "name": {
+                "value": "staatsanwaltschaft"
+              }
+            },
+            {
+              "name": {
+                "value": "Amtsgericht",
+                "synonyms": [
+                  "gericht"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "La Ge So",
+                "synonyms": [
+                  "sosial",
+                  "social",
+                  "sociale",
+                  "Landesamt für Gesundheit und Soziales"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Bezirksamt"
+              }
+            },
+            {
+              "name": {
+                "value": "Bürgeramt"
+              }
+            },
+            {
+              "name": {
+                "value": "Finanzamt"
+              }
+            },
+            {
+              "name": {
+                "value": "Ausländerbehörde",
+                "synonyms": [
+                  "Labo"
+                ]
+              }
+            }
+          ],
+          "name": "DE_LIST_OF_OFFICE_TYPES"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "ist gerade nicht nützlich als Liste"
+              }
+            },
+            {
+              "name": {
+                "value": "purpur"
+              }
+            }
+          ],
+          "name": "LIST_OF_SINGLE_DISTRICTS_BERLIN"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Treptow-Köpenick",
+                "synonyms": [
+                  "Schöneweide",
+                  "köpenick"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Tempelhof-Schöneberg",
+                "synonyms": [
+                  "Lichtenrade",
+                  "Schöneberg",
+                  "Tempelhof"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Steglitz-Zehlendorf",
+                "synonyms": [
+                  "Zehlendorf",
+                  "Steglitz",
+                  "Lankwitz"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Spandau",
+                "synonyms": [
+                  "Falkenhagener Feld",
+                  "Wasserstadt",
+                  "Kladow"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Reinickendorf",
+                "synonyms": [
+                  "Heiligensee",
+                  "Märkisches Viertel",
+                  "Tegel",
+                  "Hermsdorf",
+                  "Reinickendorf Ost"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Pankow",
+                "synonyms": [
+                  "Buch",
+                  "Karow",
+                  "Weißensee",
+                  "Prenzlauer Berg"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Neukölln",
+                "synonyms": [
+                  "Blaschkoallee",
+                  "Sonnenallee",
+                  "Zwickauer Damm",
+                  "Alt Buckow",
+                  "Rudow"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Mitte",
+                "synonyms": [
+                  "Wedding",
+                  "Tiergarten"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Marzahn-Hellersdorf",
+                "synonyms": [
+                  "Marzahner Promenade",
+                  "Helle Mitte",
+                  "Biesdorf"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Lichtenberg",
+                "synonyms": [
+                  "Zentrum Ikraus",
+                  "Am Obersee",
+                  "Käthe Kern",
+                  "Anton Saefkow",
+                  "Große Leege ",
+                  "Alt Hohen Schön Hausen",
+                  "Tierparkcenter",
+                  "Normannen",
+                  "Egon - Erwin Kirsch ",
+                  "Neu Hohen Schön Hausen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Friedrichshain-Kreuzberg",
+                "synonyms": [
+                  "Schlesische Straße",
+                  "Frankfurter Allee",
+                  "Kreuzberg",
+                  "Yorkstraße"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Charlottenburg-Wilmersdorf",
+                "synonyms": [
+                  "Halemweg",
+                  "Heerstraße",
+                  "Hohenzollerndamm",
+                  "Wilmersdorfer"
+                ]
+              }
+            }
+          ],
+          "name": "LIST_OF_COMBO_DISTRICTS"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "pur"
+              }
+            }
+          ],
+          "name": "DE_LIST_OF_OFFICE_NAMES_BERLIN"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "angeln gehen"
+              }
+            },
+            {
+              "name": {
+                "value": "kirsche pflücken gehen"
+              }
+            },
+            {
+              "name": {
+                "value": "wandern gehen"
+              }
+            },
+            {
+              "name": {
+                "value": "Baden gehen"
+              }
+            },
+            {
+              "name": {
+                "value": "Wohnung"
+              }
+            }
+          ],
+          "name": "List_Todos"
         }
       ]
     },
     "dialog": {
       "intents": [
         {
-          "name": "ApprobationIntent",
+          "name": "DL_ApprobationIntent",
           "confirmationRequired": false,
           "slots": [
             {
@@ -606,25 +975,7 @@
           ]
         },
         {
-          "name": "Anmeldung_WohnungIntent",
-          "confirmationRequired": false,
-          "slots": [
-            {
-              "name": "book_appointment_flag",
-              "type": "YES_NO_FLAG",
-              "elicitationRequired": false,
-              "confirmationRequired": false
-            },
-            {
-              "name": "prerequisites_flag",
-              "type": "YES_NO_FLAG",
-              "elicitationRequired": false,
-              "confirmationRequired": false
-            }
-          ]
-        },
-        {
-          "name": "z_generalIntent",
+          "name": "DL_generalIntent",
           "confirmationRequired": false,
           "slots": [
             {
@@ -648,11 +999,32 @@
             {
               "name": "prerequisites_flag",
               "type": "YES_NO_FLAG",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.871265382017.1447005972347"
+              }
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "YES_NO_FLAG",
               "elicitationRequired": false,
               "confirmationRequired": false
             },
             {
-              "name": "book_appointment_flag",
+              "name": "costs_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "processing_time_flag",
               "type": "YES_NO_FLAG",
               "elicitationRequired": false,
               "confirmationRequired": false
@@ -660,7 +1032,7 @@
           ]
         },
         {
-          "name": "AufenthaltstitelIntent",
+          "name": "DL_AufenthaltstitelIntent",
           "confirmationRequired": false,
           "slots": [
             {
@@ -671,6 +1043,12 @@
               "prompts": {
                 "elicitation": "Elicit.Slot.705370932563.596480606902"
               }
+            },
+            {
+              "name": "partner_eu_flag",
+              "type": "YES_NO_FLAG",
+              "elicitationRequired": false,
+              "confirmationRequired": false
             },
             {
               "name": "citizenship",
@@ -707,17 +1085,11 @@
               "prompts": {
                 "elicitation": "Elicit.Slot.705370932563.860066613759"
               }
-            },
-            {
-              "name": "partner_eu_flag",
-              "type": "YES_NO_FLAG",
-              "elicitationRequired": false,
-              "confirmationRequired": false
             }
           ]
         },
         {
-          "name": "BafoegIntent",
+          "name": "DL_BafoegIntent",
           "confirmationRequired": false,
           "slots": [
             {
@@ -728,24 +1100,6 @@
               "prompts": {
                 "elicitation": "Elicit.Slot.168106136677.669735754293"
               }
-            },
-            {
-              "name": "pupil_flag",
-              "type": "YES_NO_FLAG",
-              "elicitationRequired": false,
-              "confirmationRequired": false
-            },
-            {
-              "name": "azubi_flag",
-              "type": "YES_NO_FLAG",
-              "elicitationRequired": false,
-              "confirmationRequired": false
-            },
-            {
-              "name": "abroad_flag",
-              "type": "YES_NO_FLAG",
-              "elicitationRequired": false,
-              "confirmationRequired": false
             },
             {
               "name": "prerequisites_flag",
@@ -831,7 +1185,7 @@
           },
           {
             "type": "PlainText",
-            "value": "magst du dich über die Voraussetztungen informieren?"
+            "value": "magst du dich über die Voraussetzungen informieren?"
           }
         ]
       },
@@ -890,6 +1244,15 @@
           {
             "type": "PlainText",
             "value": "welche Dienstleistung meinst du genau?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.871265382017.1447005972347",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "wollen wir die voraussetzungen gemeinsam durchgehen?"
           }
         ]
       }

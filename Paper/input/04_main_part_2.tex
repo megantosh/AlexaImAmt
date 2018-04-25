@@ -7,6 +7,14 @@ HTTP(S) endpoint:
 \url{http://newsreel-edu.aot.tu-berlin.de/solr/#/d115}
 
 
+
+With the JSON we have, we try to maximise its use, but we need to consider that with starting a Skill, it is better to start from scratch sometimes and as we go, we see what is the relevant information that we can integrate into our Skill.
+
+We analyze the output of Virtueller Bürgerassistent and realize it makes less sense to start with that, so we refer to the underlying endpoint. Since this is the Solr Server that delivers JSON objects and is more realistic to maneuver, we analyse the queries we can get from there. and try to fit it into our interaction model.
+
+Then we move on to the interaction model. On paper, we draft the use-cases to determine what are our intents first to group these into fewer intents than the services we have. Given that there are many public services related to a similar case, we design our Skill to make it possible to group them into less intents. The advantage of this is that it allows us to at least have fewer 'ServiceIntents' than the ever growing number of services, which means that we want to also be able to track new services as they get inserted into the catalogue to be able to either map them to old intents by extending these, or to introduce new intents if this does not work.
+
+
 \section{Code Analysis}
 
 \section{Deployment}

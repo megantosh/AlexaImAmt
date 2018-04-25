@@ -16,8 +16,27 @@
           "samples": []
         },
         {
-          "name": "AufenthaltstitelIntent",
-          "samples": []
+          "name": "DL_AufenthaltstitelIntent",
+          "slots": [
+            {
+              "name": "prerequisites_flag",
+              "type": "EN_YES_NO_FLAG"
+            },
+            {
+              "name": "extension_flag",
+              "type": "EN_YES_NO_FLAG"
+            },
+            {
+              "name": "visa_type",
+              "type": "EN_LIST_OF_RESIDENCE_PURPOSES"
+            }
+          ],
+          "samples": [
+            "{prerequisites_flag} get my visa {extension_flag}",
+            "{prerequisites_flag} {extension_flag} my residence permit",
+            "{prerequisites_flag} {extension_flag} my {visa_type}",
+            "{prerequisites_flag} {extension_flag} my visa"
+          ]
         },
         {
           "name": "BafoegIntent",
@@ -28,7 +47,7 @@
           "samples": []
         },
         {
-          "name": "z_generalIntent",
+          "name": "DL_generalIntent",
           "slots": [
             {
               "name": "Dienstleistung",
@@ -43,9 +62,40 @@
             }
           ],
           "samples": [
+            "how can i do my {Dienstleistung}",
             "how do i {Dienstleistung}",
             "i want to {Dienstleistung}",
             "i would like to {Dienstleistung}"
+          ]
+        },
+        {
+          "name": "ST_BerlinQuestions",
+          "samples": []
+        },
+        {
+          "name": "ST_FutureTODOs",
+          "slots": [
+            {
+              "name": "DogName",
+              "type": "AMAZON.US_FIRST_NAME"
+            },
+            {
+              "name": "futureIntent",
+              "type": "Todo_List"
+            }
+          ],
+          "samples": [
+            "I need an apartment",
+            "where can I {futureIntent}",
+            "I want to go bathing",
+            "I need a house",
+            "I lost my Meldebscheinigung",
+            "where do I find {DogName}",
+            "where did my dog go",
+            "where do I find my lost dog",
+            "how can I find my dog",
+            "I lost my dog",
+            "ich habe ein Kind bekommen wo kann ich eine geburtsurkunde beantragen"
           ]
         }
       ],
@@ -66,6 +116,12 @@
               "name": {
                 "value": "yes",
                 "synonyms": [
+                  "extended",
+                  "renew",
+                  "renewed",
+                  "extend",
+                  "how much does it cost to",
+                  "how do I",
                   "hell yeah",
                   "why not",
                   "sure",
@@ -82,8 +138,8 @@
               "name": {
                 "value": "file tax returns",
                 "synonyms": [
+                  "steuer erklärung",
                   "declare my income tax",
-                  "do my tax declaration",
                   "tax declaration"
                 ]
               }
@@ -92,10 +148,10 @@
               "name": {
                 "value": "Registration",
                 "synonyms": [
+                  "anmeldung",
                   "register my house",
                   "register myself",
-                  "house registration",
-                  "anmeldugn"
+                  "house registration"
                 ]
               }
             }
@@ -136,13 +192,65 @@
             }
           ],
           "name": "EN_LIST_OF_CITIZENSHIPS"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "angeln gehen",
+                "synonyms": [
+                  "angeln"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "allergien",
+                "synonyms": [
+                  "info zu allergien bekommen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "baden gehen",
+                "synonyms": [
+                  "baden"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kirsche pflücken gehen",
+                "synonyms": [
+                  "kirsche pflücken"
+                ]
+              }
+            }
+          ],
+          "name": "Todo_List"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "family reunification visa"
+              }
+            },
+            {
+              "name": {
+                "value": "blue card"
+              }
+            }
+          ],
+          "name": "EN_LIST_OF_RESIDENCE_PURPOSES"
         }
       ]
     },
     "dialog": {
       "intents": [
         {
-          "name": "z_generalIntent",
+          "name": "DL_generalIntent",
           "confirmationRequired": false,
           "slots": [
             {
