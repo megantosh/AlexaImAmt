@@ -28,7 +28,7 @@ exports.handler = function(event, context, callback) {
     // was changed from alexa.APP_ID in old API
     alexa.appId = APP_ID;
 
-    alexa.resources = Speech.defaultSpokenStrings;
+    //alexa.resources = Speech.defaultSpokenStrings;
 
 
     var locale = event.request.locale;
@@ -54,6 +54,71 @@ exports.handler = function(event, context, callback) {
     //to be understood like "Start skill after constructor completed"
     alexa.execute();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ===== Strings =====
+const defaultSpokenStrings = {
+    'en':
+        {
+            GREETING_TEXT: [
+                'Welcome to Berlin',
+                'I can help you with a few public services.'
+
+            ],
+            HELP_TEXT: //"You can try: 'alexa, until when is Standesamt Friedrichshain-Kreuzberg open today'" +
+                "Try asking me how to get your visa extended",
+            UNHANDLED_TEXT: "Sorry, I didn't get that. You can try: 'alexa, how do I transfer my driving license to a german one?'" +
+            " or 'alexa, ask Berlin D. E. when is the nearest city hall open today?'",
+            STOP_TEXT: '',
+            CANCEL_TEXT: [
+                "always at your service.",
+                "I'll try to get better next time"
+            ],
+            WIP_TEXT: "I'll find out about that and be ready for your question soon"
+        },
+    'de':
+        {
+            GREETING_TEXT: [
+                'Ich kann dir mit den zahlreichen Dienstleistungen der Stadt Berlin helfen! ' +
+                'Möchtest Du dich über Öffnungszeiten oder eine Dienstleistung informieren?',
+                'Willkommen in dem Hauptstadtportal. Was kann ich für dich tun?'
+            ],
+            HELP_TEXT: "Du kannst mich nach einer Dienstleistung fragen." +
+            "Probiere zum Beispiel 'Anmeldung einer Wohnung' oder 'Ich möchte eine Wohnung anmelden.",
+            UNHANDLED_TEXT: [
+                "Sorry, das habe ich nicht verstanden. Probiere mal: 'alexa, wann hat das Bürgeramt Venus auf?'" +
+                " oder 'Alexa, frag Berlin D. E. wann hat das Bürgeramt in der Nähe auf heute'.'",
+                'Pardon, das habe ich nicht richtig mitbekommen.'
+            ],
+            STOP_TEXT: [
+                "ich halte mich fern",
+            ],
+            CANCEL_TEXT: 'ich bin weg',
+            WIP_TEXT: [
+                'Skill wird gerade entwickelt.',
+                'das berücksichtige ich gerne beim nächsten Milestone',
+                'ich mag es, wie du mich ausfragst. Du solltest eine Karriere im Usability Bereich in Erwägung ziehen.',
+                'ich werde zwar von einem mega entwickelt, aber leider geht das nicht mega schnell'
+            ]
+        }
+};
+
+
+
+
+
+
 
 //the name we use to access this skill
 //ber lin works better tan bär leen (has to consist of at least two words
@@ -327,20 +392,20 @@ const DE_handlers = {
     },
     //TODO: Make Alexa ask for help only the first few times
     'LaunchRequest': function () {
-       // let say =  Helper.randomphrase(
-            //[this.t('WELCOME1'),this.t('WELCOME2'),this.t('WELCOME3')] )  + ' ' + this.t('HELP');
+        //" <audio src='https://s3.amazonaws.com/my-ssml-samples/Flourish.mp3' /> "
+
+        let start = " OK <audio src='https://s3.eu-central-1.amazonaws.com/megantosh/RegioSound-48kbps.mp3' /> " +
+            Helper.randomphrase(Speech.de.GREETING_TEXT);
 
         this.response
-            .speak(Helper.randomphrase(Speech.defaultSpokenStrings.de.GREETING_TEXT))
-            .listen('Hmm.. ' + Helper.randomphrase(Speech.defaultSpokenStrings.de.HELP_TEXT));
-
-        this.emit(':responseReady');
+        this.emit(':ask', start, 'did that just work?');
+        //     .listen('Hmm.. ' + Helper.randomphrase(Speech.de.HELP_TEXT));
+        // this.emit(':responseReady');
     },
     'Unhandled': function () {
-       // let say = 'The skill did not quite understand what you wanted.  Do you want to try something else? ';
         this.response
-            .speak(Speech.defaultSpokenStrings.de.UNHANDLED_TEXT)
-            .listen(Helper.randomphrase(Speech.defaultSpokenStrings.de.UNHANDLED_TEXT));
+            .speak(Speech.de.UNHANDLED_TEXT)
+            .listen(Helper.randomphrase(Speech.de.UNHANDLED_TEXT));
     }};
 
 
@@ -533,18 +598,15 @@ const EN_US_handlers = {
         this.emit(':responseReady');
     },
     'LaunchRequest': function () {
-        let say = Helper.randomPhrase([this.t('WELCOME1'),this.t('WELCOME2'),this.t('WELCOME3')] )  + ' ' + this.t('HELP');
         this.response
-            .speak(say)
-            .listen('try again, ' + say);
-
+            .speak(Helper.randomphrase(Speech.en.GREETING_TEXT))
+            .listen('Let us try again, ' + Helper.randomphrase(Speech.en.HELP_TEXT));
         this.emit(':responseReady');
     },
     'Unhandled': function () {
-        let say = 'The skill did not quite understand what you wanted.  Do you want to try something else? ';
         this.response
-            .speak(say)
-            .listen(say);
+            .speak(Helper.randomphrase(Speech.en.UNHANDLED_TEXT))
+            .listen(Helper.randomphrase(Speech.en.UNHANDLED_TEXT));
     }};
 
 
