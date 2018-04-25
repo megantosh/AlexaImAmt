@@ -309,11 +309,13 @@
         },
         {
           "name": "ST_BerlinIntents",
+          "slots": [],
           "samples": []
         }
       ],
       "types": [
         {
+          "name": "LIST_OF_BerufGesudheit",
           "values": [
             {
               "name": {
@@ -383,10 +385,10 @@
                 ]
               }
             }
-          ],
-          "name": "LIST_OF_BerufGesudheit"
+          ]
         },
         {
+          "name": "YES_NO_FLAG",
           "values": [
             {
               "id": "FALSE",
@@ -430,10 +432,10 @@
                 ]
               }
             }
-          ],
-          "name": "YES_NO_FLAG"
+          ]
         },
         {
+          "name": "LIST_OF_PUBLIC_SVCS_BLN",
           "values": [
             {
               "name": {
@@ -489,10 +491,10 @@
                 ]
               }
             }
-          ],
-          "name": "LIST_OF_PUBLIC_SVCS_BLN"
+          ]
         },
         {
+          "name": "DE_LIST_OF_RESIDENCE_PURPOSES",
           "values": [
             {
               "id": "324282",
@@ -540,10 +542,10 @@
                 ]
               }
             }
-          ],
-          "name": "DE_LIST_OF_RESIDENCE_PURPOSES"
+          ]
         },
         {
+          "name": "DE_LIST_OF_CITIZENSHIPS",
           "values": [
             {
               "id": "CH",
@@ -627,10 +629,10 @@
                 ]
               }
             }
-          ],
-          "name": "DE_LIST_OF_CITIZENSHIPS"
+          ]
         },
         {
+          "name": "LIST_OF_BAFOEG_TYPES",
           "values": [
             {
               "name": {
@@ -676,10 +678,10 @@
                 ]
               }
             }
-          ],
-          "name": "LIST_OF_BAFOEG_TYPES"
+          ]
         },
         {
+          "name": "DE_LIST_OF_OFFICE_TYPES",
           "values": [
             {
               "name": {
@@ -751,10 +753,10 @@
                 ]
               }
             }
-          ],
-          "name": "DE_LIST_OF_OFFICE_TYPES"
+          ]
         },
         {
+          "name": "LIST_OF_SINGLE_DISTRICTS_BERLIN",
           "values": [
             {
               "name": {
@@ -766,10 +768,10 @@
                 "value": "purpur"
               }
             }
-          ],
-          "name": "LIST_OF_SINGLE_DISTRICTS_BERLIN"
+          ]
         },
         {
+          "name": "LIST_OF_COMBO_DISTRICTS",
           "values": [
             {
               "name": {
@@ -903,20 +905,20 @@
                 ]
               }
             }
-          ],
-          "name": "LIST_OF_COMBO_DISTRICTS"
+          ]
         },
         {
+          "name": "DE_LIST_OF_OFFICE_NAMES_BERLIN",
           "values": [
             {
               "name": {
                 "value": "pur"
               }
             }
-          ],
-          "name": "DE_LIST_OF_OFFICE_NAMES_BERLIN"
+          ]
         },
         {
+          "name": "List_Todos",
           "values": [
             {
               "name": {
@@ -943,8 +945,7 @@
                 "value": "Wohnung"
               }
             }
-          ],
-          "name": "List_Todos"
+          ]
         }
       ]
     },
@@ -953,12 +954,13 @@
         {
           "name": "DL_ApprobationIntent",
           "confirmationRequired": false,
+          "prompts": {},
           "slots": [
             {
               "name": "BerufGesundheit",
               "type": "LIST_OF_BerufGesudheit",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.731925008572.784370516716"
               }
@@ -966,8 +968,8 @@
             {
               "name": "pruefungInBerlin",
               "type": "YES_NO_FLAG",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.194404890129.1162370056458"
               }
@@ -977,12 +979,13 @@
         {
           "name": "DL_generalIntent",
           "confirmationRequired": false,
+          "prompts": {},
           "slots": [
             {
               "name": "Dienstleistung",
               "type": "LIST_OF_PUBLIC_SVCS_BLN",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.37057223086.1411141577006"
               }
@@ -990,8 +993,8 @@
             {
               "name": "extension_flag",
               "type": "YES_NO_FLAG",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.113281863374.444968324898"
               }
@@ -999,8 +1002,8 @@
             {
               "name": "prerequisites_flag",
               "type": "YES_NO_FLAG",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.871265382017.1447005972347"
               }
@@ -1008,38 +1011,43 @@
             {
               "name": "book_appointment_flag",
               "type": "YES_NO_FLAG",
+              "confirmationRequired": false,
               "elicitationRequired": false,
-              "confirmationRequired": false
+              "prompts": {}
             },
             {
               "name": "costs_flag",
               "type": "YES_NO_FLAG",
+              "confirmationRequired": false,
               "elicitationRequired": false,
-              "confirmationRequired": false
+              "prompts": {}
             },
             {
               "name": "required_docs_flag",
               "type": "YES_NO_FLAG",
+              "confirmationRequired": false,
               "elicitationRequired": false,
-              "confirmationRequired": false
+              "prompts": {}
             },
             {
               "name": "processing_time_flag",
               "type": "YES_NO_FLAG",
+              "confirmationRequired": false,
               "elicitationRequired": false,
-              "confirmationRequired": false
+              "prompts": {}
             }
           ]
         },
         {
           "name": "DL_AufenthaltstitelIntent",
           "confirmationRequired": false,
+          "prompts": {},
           "slots": [
             {
               "name": "registered_in_berlin",
               "type": "YES_NO_FLAG",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.705370932563.596480606902"
               }
@@ -1047,14 +1055,15 @@
             {
               "name": "partner_eu_flag",
               "type": "YES_NO_FLAG",
+              "confirmationRequired": false,
               "elicitationRequired": false,
-              "confirmationRequired": false
+              "prompts": {}
             },
             {
               "name": "citizenship",
               "type": "DE_LIST_OF_CITIZENSHIPS",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.705370932563.1089481707959"
               }
@@ -1062,8 +1071,8 @@
             {
               "name": "residence_purpose",
               "type": "DE_LIST_OF_RESIDENCE_PURPOSES",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.705370932563.1198061985282"
               }
@@ -1071,8 +1080,8 @@
             {
               "name": "extension_flag",
               "type": "YES_NO_FLAG",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.705370932563.650345028907"
               }
@@ -1080,8 +1089,8 @@
             {
               "name": "prerequisites_flag",
               "type": "YES_NO_FLAG",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.705370932563.860066613759"
               }
@@ -1091,12 +1100,13 @@
         {
           "name": "DL_BafoegIntent",
           "confirmationRequired": false,
+          "prompts": {},
           "slots": [
             {
               "name": "bafoegType",
               "type": "LIST_OF_BAFOEG_TYPES",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.168106136677.669735754293"
               }
@@ -1104,8 +1114,8 @@
             {
               "name": "prerequisites_flag",
               "type": "YES_NO_FLAG",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.170695308429.1485160893156"
               }

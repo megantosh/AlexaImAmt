@@ -40,10 +40,12 @@
         },
         {
           "name": "BafoegIntent",
+          "slots": [],
           "samples": []
         },
         {
           "name": "ApprobationIntent",
+          "slots": [],
           "samples": []
         },
         {
@@ -70,6 +72,7 @@
         },
         {
           "name": "ST_BerlinQuestions",
+          "slots": [],
           "samples": []
         },
         {
@@ -101,6 +104,7 @@
       ],
       "types": [
         {
+          "name": "EN_YES_NO_FLAG",
           "values": [
             {
               "name": {
@@ -129,10 +133,10 @@
                 ]
               }
             }
-          ],
-          "name": "EN_YES_NO_FLAG"
+          ]
         },
         {
+          "name": "EN_LIST_OF_PUBLIC_SVCS_BLN",
           "values": [
             {
               "name": {
@@ -155,10 +159,10 @@
                 ]
               }
             }
-          ],
-          "name": "EN_LIST_OF_PUBLIC_SVCS_BLN"
+          ]
         },
         {
+          "name": "EN_LIST_OF_CITIZENSHIPS",
           "values": [
             {
               "name": {
@@ -190,10 +194,10 @@
                 "value": "egyptian"
               }
             }
-          ],
-          "name": "EN_LIST_OF_CITIZENSHIPS"
+          ]
         },
         {
+          "name": "Todo_List",
           "values": [
             {
               "name": {
@@ -227,10 +231,10 @@
                 ]
               }
             }
-          ],
-          "name": "Todo_List"
+          ]
         },
         {
+          "name": "EN_LIST_OF_RESIDENCE_PURPOSES",
           "values": [
             {
               "name": {
@@ -242,8 +246,7 @@
                 "value": "blue card"
               }
             }
-          ],
-          "name": "EN_LIST_OF_RESIDENCE_PURPOSES"
+          ]
         }
       ]
     },
@@ -252,18 +255,20 @@
         {
           "name": "DL_generalIntent",
           "confirmationRequired": false,
+          "prompts": {},
           "slots": [
             {
               "name": "Dienstleistung",
               "type": "EN_LIST_OF_PUBLIC_SVCS_BLN",
+              "confirmationRequired": false,
               "elicitationRequired": false,
-              "confirmationRequired": false
+              "prompts": {}
             },
             {
               "name": "prerequisites",
               "type": "EN_YES_NO_FLAG",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.16881132673.702738330326"
               }

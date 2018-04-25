@@ -327,19 +327,20 @@ const DE_handlers = {
     },
     //TODO: Make Alexa ask for help only the first few times
     'LaunchRequest': function () {
-        let say =  Helper.randomphrase(
-            [this.t('WELCOME1'),this.t('WELCOME2'),this.t('WELCOME3')] )  + ' ' + this.t('HELP');
+       // let say =  Helper.randomphrase(
+            //[this.t('WELCOME1'),this.t('WELCOME2'),this.t('WELCOME3')] )  + ' ' + this.t('HELP');
+
         this.response
-            .speak(say)
-            .listen('try again, ' + say);
+            .speak(Helper.randomphrase(Speech.defaultSpokenStrings.de.GREETING_TEXT))
+            .listen('Hmm.. ' + Helper.randomphrase(Speech.defaultSpokenStrings.de.HELP_TEXT));
 
         this.emit(':responseReady');
     },
     'Unhandled': function () {
-        let say = 'The skill did not quite understand what you wanted.  Do you want to try something else? ';
+       // let say = 'The skill did not quite understand what you wanted.  Do you want to try something else? ';
         this.response
-            .speak(say)
-            .listen(say);
+            .speak(Speech.defaultSpokenStrings.de.UNHANDLED_TEXT)
+            .listen(Helper.randomphrase(Speech.defaultSpokenStrings.de.UNHANDLED_TEXT));
     }};
 
 
@@ -351,7 +352,7 @@ const DE_handlers = {
 
 
 // Skill logic in English (US) =======================================================================================
-// const invocationName = "berlin service";
+// const invocationName = "ber lynn", no longer "berlin service";
 const EN_US_handlers = {
     'AMAZON.CancelIntent': function () {
 

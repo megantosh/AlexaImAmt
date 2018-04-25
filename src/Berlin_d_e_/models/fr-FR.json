@@ -34,19 +34,21 @@
             "eefgsdfgsff"
           ]
         }
-      ]
+      ],
+      "types": []
     },
     "dialog": {
       "intents": [
         {
           "name": "BonjourIntent",
           "confirmationRequired": false,
+          "prompts": {},
           "slots": [
             {
               "name": "anySlot",
               "type": "AMAZON.City",
-              "elicitationRequired": true,
               "confirmationRequired": false,
+              "elicitationRequired": true,
               "prompts": {
                 "elicitation": "Elicit.Slot.409256152443.867994699775"
               }
