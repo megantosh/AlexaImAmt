@@ -30,13 +30,16 @@ When we use written text, be it in a document or a street sign, or any label, we
 %voice message in airport - you can do your activity unobstructed
 %%%%%%%%%%%%%%%%%%%%%
 \subsection{Utility of Voice}
-The utility of Voice comes handy with a different paradigm in numerous settings. 
-For a passenger at the airport or between meeting rooms in an office, 
-%it is equally as helpful 
+The utility of Voice comes handy with its different paradigm in numerous settings. 
+For a passenger at the airport or an employee between meetings, 
+%it is equally as helpful f
 %as it would be for a  rushing to a meeting.
 it can be more effective to ask questions through conversation than transform them into a query then type them on a screen,
 %someone about the information you need quickly if you can ask it in a precise sentence quicker than you would write it, 
 or visually navigate on a web page / mobile application until we reach the information we want. 
+Today, this goes further beyond the simple use-cases to become an integral part of our fast-paced life, where we see companies like Ecobee getting around 40 percent of their sales through voice-based AI \cite{mit:Alexa} since their embrace about two years ago. The 10-year-old company's CEO elaborates that their customer “[...] have to fight traffic to get home, and then they have to feed the kids, diaper the baby, and who knows what else. [Ecobee] give them a hands-free way of getting something done while they’re in the midst of other tasks.”
+
+
 Also, in terms of accessibility, blindness could sometimes make voice the only possible way to navigate or be aware of one's surroundings, e.g. a blind person crossing a street depends on the sounds coming from cars and traffic lights.
 In that sense, voice can allow people to do their activities free-handed and unobstructed by actively engaging into reading activity, for instance having to look on a screen.
 As our ambitions in connectivity become more complex, we have become more dependent on our phones in the last decade.
@@ -58,21 +61,66 @@ Hence, we need to differentiate between GUI design and that of a VUI. Since  we 
 
 \inote{is this okay here or should it go in an appendix?}
 \sn{andreas doesn't like to have more work done in this part. maybe put some of it in conclusion or remove completely, but i know you won't lol}
-\todo{
-	- \textbf{Why can't robots understand us:} language ambiguities - the need to understand context\\
---Syntactical: Homonyme\\ %fly, fly,  presently I’ll present you a present - now, give, gift
---Semantic:  Methaphors, %“it’s raining cats and dogs”
-sarcasm, %“oh yea, sounds very exciting”
-and puns\\
---dialects: enunciations\\
---underlying grammar\\ %“what makes you abcd just now, ELIZA
---underlying sentiment\\
--\textbf{NLP Progress:} How does it help in enriching the bot experience\\
---neural networks: help understanding language patterns and get better over time\\
---thought vectors: helps connect different words with related meaingns\\
---- link: fortschritt, und systemgrenzen heutzutage (kurze Sätze etc)
-}
 
+\subsection{Why can't AI understand us}
+
+AI has made giants leaps in the last few years. Thanks to neural networks, bayesian approaches in classification, decision trees and many other theories, we are capable of performing rigorous analyses on datasets
+Considering that speech is one of the most complex forms of such, there are still various challenges that do not have a single strategy to tackle.
+
+\begin{quotation}
+What makes voice-based AI so appealing to consumers is its promise to conform to us, to respond to the way we speak—and think—without requiring us to type on a keyboard or screen. That’s also what makes it so technically difficult to build. We aren’t at all orderly when we talk. Instead, we interrupt ourselves. We let thoughts dangle. We use words, nods, and grunts in odd ways, and we assume that we’re making sense even when we aren’t \cite{mit:Alexa}.
+\end{quotation}
+
+When speech meets AI, there are a lot of language ambiguities to deal with and multiple contexts to understand. Since this is a field by its own and not the scope of this thesis, we only go briefly over a few categorical examples:
+\begin{itemize}
+	\item \textbf{Sytanx}: homonyms such as ``I \textit{present} you a \textit{present}.'' or ``The \textit{fly} wants to \textit{fly}''
+	%homophones, homograph
+	
+	\item \textbf{Sematics}: metaphors, sarcasm, puns such as ``it’s raining cats and dogs''
+	
+	\item \textbf{Underlying Sentiment}: such as ``oh yeah, sounds very exciting'' when it's not.
+	
+	\item \textbf{Dialects}: enunciation such as \textipa{[dI"vE|9pm9nt]} \textit{(British)} and \textipa{[d9v"|Apm9nt]} \textit{(Indian)}
+
+\end{itemize}
+
+%\end{itemize}
+%
+%\begin{table}[h]
+%	\begin{tabularx}{\textwidth}{r l l}
+%		Syntax & Homonyms & \shortstack[l]{``I \textbf{present} you a \textbf{present}.''\\ ``The \textbf{fly} wants to \textbf{fly}''}\\
+%		Semantic & Metaphors
+%	\end{tabularx}
+%	
+%\end{table}
+%
+
+%\todo{
+%	- \textbf{Why can't robots understand us:} language ambiguities - the need to understand context\\ the facebook vid\\
+%--Syntactical: Homonyme\\ %fly, fly,  presently I’ll present you a present - now, give, gift
+%--Semantic:  Methaphors, %“it’s raining cats and dogs”
+%sarcasm, %“oh yea, sounds very exciting”
+%and puns\\
+%--dialects: enunciations\\
+%--underlying grammar\\ %“what makes you abcd just now, ELIZA
+%--underlying sentiment\\
+
+%-\textbf{NLP Progress:} How does it help in enriching the bot experience\\
+%--neural networks: help understanding language patterns and get better over time\\
+%--thought vectors: helps connect different words with related meaingns\\
+%--- link: fortschritt, und systemgrenzen heutzutage (kurze Sätze etc)
+%}
+
+While Machine Learning (ML) enables us to decode phrases not in the classical way in the past by randomly guessing the whole expression, our speech datasets grow and require analysis in further breadth and depth to deliver a sustainable Natural Language Understanding (NLU) engine.
+So far, in the past six years our primary approach has changed due to the little progress made with it. Instead of trying to understand exact meanings, we work from
+``imperfect matches at the outset, followed by rapid fine-tuning of provisional guesses'' \cite{mit:Alexa}. The learning part is involved by reinterpreting missed expressions \cite{aws:lex_webinar}. 
+On one hand, Neural Networks help us understand language patterns and better the more frequently we use them. Thought Vectors are on the other hand control the connection of different words with their related meanings, which helps with homonyms for instance.
+
+Depending on the system, it is therefore a rule of thumb that most AI-powered personal assistants like Siri or Alexa are in their early learning phases. In order to be able to make use of them in the future, the painful immaturity part has to come in effect. This limits us for instance to using short sentences to lessen the probability of the system misunderstanding us. And so, naturally, what distinguishes a good system from a better one is how fast it learns.
+
+
+%a person whos a bit deaf and cant hear us. it happens with ppl too ya3ni}
+Interestingly, a side effect of this indeterministic technique is that the voice assistant inadvertently simulates a person, who can sometimes not hear us, asks us to repeat a sentence or explain it in a different way. Although this is the same idea that a good system should have minimal fault tolerance, it is unprecedented to tackle a computer system on the consumer level with the idea that we might very much hit or miss the action we want to perform. On the other hand, though premature, it is evidence that a human has much more authority to a machine-powered brain.
 
 
 Yet, although it might seem at the beginning that moving between both paradigms is easy, the more detailed system design gets, the trickier it becomes to transform GUI elements into text. Particularly with long texts. We will go over this in more detail about voice design guidelines in Section \ref{designGuide}.
@@ -136,7 +184,7 @@ As the intention the user pursues with a spoken sentence. This translates to the
 	\[
 	\overbrace{My \ brother} \cdot
 	\overbrace{wants \ to \ order} \cdot
-	\overbrace{ a + tall + cof\!fee.}
+	\overbrace{ a + tall + cof \!fee.}
 	\]
 	
 	it is not important to they system to understand at this stage who is going to drink the coffee. It should be more concerned with the intent; making the coffee, e g. sending a signal or instruction to a coffee machine.
@@ -466,6 +514,9 @@ while the hardware models stated above are possibilities for testing, too, they 
 	- LeiKa
 
 While we have no access to AskGeorgia from the German Amazon Store, we use the US store. %tab3an di f amrika fal mawdou3 mokhtalef, bas el fekra here is el design not the exact content
+\\
+witlingo: which builds voice-driven apps of all sorts for banks, universities, law firms, and others.\\
+aaron.ai
 
 }
 \todo{

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  26 APR 2018 03:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  26 APR 2018 14:21
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1192,6 +1192,26 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \TX@cols=\count183
 \TX@ftn=\toks33
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tipa/tipa.sty
+Package: tipa 2002/08/08 TIPA version 1.1
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tipa/t3enc.def
+File: t3enc.def 2001/12/31 T3 encoding
+Now handling font encoding T3 ...
+... no UTF-8 mapping file for font encoding T3
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 357.
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ot1enc.def
+File: ot1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding OT1 on input line 48.
+)))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2017/09/14 version 4.11 text color boxes
 
@@ -1620,7 +1640,7 @@ Package: xparse 2017/12/05 L3 Experimental document command parser
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
-. Redefining command \FancyVerbFormatLine with sig. 'm' on line 63.
+. Redefining command \FancyVerbFormatLine with sig. 'm' on line 67.
 .................................................
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tabu/tabu.sty
@@ -1728,28 +1748,35 @@ runsystem(which pygmentize && touch thesis.aex)...executed.
 (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 191.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 191.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 195.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 195.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 191.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 195.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 195.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tipa/t3cmr.fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 195.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
@@ -1790,7 +1817,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box104
-Package hyperref Info: Link coloring OFF on input line 191.
+Package hyperref Info: Link coloring OFF on input line 195.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1799,9 +1826,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count370
 )
-LaTeX Info: Redefining \ref on input line 191.
-LaTeX Info: Redefining \pageref on input line 191.
-LaTeX Info: Redefining \nameref on input line 191.
+LaTeX Info: Redefining \ref on input line 195.
+LaTeX Info: Redefining \pageref on input line 195.
+LaTeX Info: Redefining \nameref on input line 195.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write10
@@ -1857,13 +1884,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<gfx/template/TUBerlin_Logo_rot_hell.pdf, id=182, 4741.715pt x 3529.185pt>
+<gfx/template/TUBerlin_Logo_rot_hell.pdf, id=194, 4741.715pt x 3529.185pt>
 File: gfx/template/TUBerlin_Logo_rot_hell.pdf Graphic file (type pdf)
 <use gfx/template/TUBerlin_Logo_rot_hell.pdf>
 Package pdftex.def Info: gfx/template/TUBerlin_Logo_rot_hell.pdf  used on input
  line 23.
 (pdftex.def)             Requested size: 62.73549pt x 46.68877pt.
-<gfx/template/aot_logo.pdf, id=183, 838.2025pt x 535.86098pt>
+<gfx/template/aot_logo.pdf, id=195, 838.2025pt x 535.86098pt>
 File: gfx/template/aot_logo.pdf Graphic file (type pdf)
 <use gfx/template/aot_logo.pdf>
 Package pdftex.def Info: gfx/template/aot_logo.pdf  used on input line 23.
@@ -1905,15 +1932,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
 Package xcolor Warning: Incompatible color definition on input line 36.
 
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 36.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1phv.fd
-File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
-)
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <12> not available
 (Font)              Font shape `OT1/phv/b/sc' tried instead on input line 36.
-
 
 Package xcolor Warning: Incompatible color definition on input line 36.
 
@@ -2029,13 +2051,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--131
 
 ] (./thesis.toc
 
-Package xcolor Warning: Incompatible color definition on input line 15.
+Package xcolor Warning: Incompatible color definition on input line 16.
 
 
-Package xcolor Warning: Incompatible color definition on input line 15.
+Package xcolor Warning: Incompatible color definition on input line 16.
 
 
-Package xcolor Warning: Incompatible color definition on input line 15.
+Package xcolor Warning: Incompatible color definition on input line 16.
 
 [7
 
@@ -2178,46 +2200,41 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 55.
+Package xcolor Warning: Incompatible color definition on input line 58.
 
 
-Package xcolor Warning: Incompatible color definition on input line 55.
+Package xcolor Warning: Incompatible color definition on input line 58.
 
 
-Package xcolor Warning: Incompatible color definition on input line 55.
+Package xcolor Warning: Incompatible color definition on input line 58.
 
 
-Package xcolor Warning: Incompatible color definition on input line 59.
+Package xcolor Warning: Incompatible color definition on input line 62.
 
 
-Package xcolor Warning: Incompatible color definition on input line 59.
+Package xcolor Warning: Incompatible color definition on input line 62.
 
 
-Package xcolor Warning: Incompatible color definition on input line 59.
+Package xcolor Warning: Incompatible color definition on input line 62.
 
 
-Package xcolor Warning: Incompatible color definition on input line 60.
-
-
-Package xcolor Warning: Incompatible color definition on input line 74.
-
-
-Package xcolor Warning: Incompatible color definition on input line 74.
-
-
-Package xcolor Warning: Incompatible color definition on input line 74.
+Package xcolor Warning: Incompatible color definition on input line 63.
 
 [9]
+LaTeX Font Info:    Try loading font information for T3+ptm on input line 83.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/tipa/t3ptm.fd
+File: t3ptm.fd 2001/12/31 TIPA font definitions
+) [10]
 
-Package xcolor Warning: Incompatible color definition on input line 103.
+Package xcolor Warning: Incompatible color definition on input line 151.
 
 
-Underfull \hbox (badness 1009) in paragraph at lines 103--104
+Underfull \hbox (badness 1009) in paragraph at lines 151--152
 []\OT1/phv/b/sc/12 [\OT1/phv/b/sl/12 Supervisor\OT1/phv/b/sc/12 ] An-dreas sug-
 gests hoch-stufen - clear split re-
  []
 
-[10]
+[11]
 \openout6 = `thesis.pyg'.
 
 
@@ -2247,42 +2264,55 @@ gests hoch-stufen - clear split re-
 
 
 (./_minted-thesis/CB572C793C8C84679308221685659F9BC510B94EE6CCF891C78770A70AACE
-74D.pygtex) [11]
+74D.pygtex)
 
-Package xcolor Warning: Incompatible color definition on input line 172.
+LaTeX Warning: Command \! invalid in math mode on input line 178.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+LaTeX Warning: Command \! invalid in math mode on input line 178.
 
- []
+
+LaTeX Warning: Command \! invalid in math mode on input line 187.
+
+
+LaTeX Warning: Command \! invalid in math mode on input line 187.
 
 [12]
 
-Package xcolor Warning: Incompatible color definition on input line 179.
+Package xcolor Warning: Incompatible color definition on input line 220.
 
 
-Package xcolor Warning: Incompatible color definition on input line 179.
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
+
+ []
+
+[13]
+
+Package xcolor Warning: Incompatible color definition on input line 227.
 
 
-Package xcolor Warning: Incompatible color definition on input line 179.
+Package xcolor Warning: Incompatible color definition on input line 227.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
+Package xcolor Warning: Incompatible color definition on input line 227.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 [][][] []$\OT1/pcr/m/n/10 https : / / developer . amazon . com / docs / custom-
 []skills /
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 193.
+Package xcolor Warning: Incompatible color definition on input line 241.
 
 
-Package xcolor Warning: Incompatible color definition on input line 193.
+Package xcolor Warning: Incompatible color definition on input line 241.
 
 
-Package xcolor Warning: Incompatible color definition on input line 193.
+Package xcolor Warning: Incompatible color definition on input line 241.
 
 
-Underfull \hbox (badness 10000) in alignment at lines 218--218
+Underfull \hbox (badness 10000) in alignment at lines 266--266
 [][][][] 
  []
 
@@ -2290,278 +2320,279 @@ Underfull \hbox (badness 10000) in alignment at lines 218--218
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package xcolor Warning: Incompatible color definition on input line 226.
+Package xcolor Warning: Incompatible color definition on input line 274.
 
 
-Package xcolor Warning: Incompatible color definition on input line 226.
+Package xcolor Warning: Incompatible color definition on input line 274.
 
 
-Package xcolor Warning: Incompatible color definition on input line 226.
+Package xcolor Warning: Incompatible color definition on input line 274.
 
 
-Package xcolor Warning: Incompatible color definition on input line 238.
+Package xcolor Warning: Incompatible color definition on input line 286.
 
 
-Package xcolor Warning: Incompatible color definition on input line 240.
+Package xcolor Warning: Incompatible color definition on input line 288.
 
 
-Package xcolor Warning: Incompatible color definition on input line 240.
+Package xcolor Warning: Incompatible color definition on input line 288.
 
 
-Package xcolor Warning: Incompatible color definition on input line 240.
-
-[13]
-
-Package xcolor Warning: Incompatible color definition on input line 255.
-
-
-Package xcolor Warning: Incompatible color definition on input line 255.
-
-
-Package xcolor Warning: Incompatible color definition on input line 255.
+Package xcolor Warning: Incompatible color definition on input line 288.
 
 [14]
 
-Package xcolor Warning: Incompatible color definition on input line 261.
-
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 261.
-
-Package xcolor Warning: Incompatible color definition on input line 261.
+Package xcolor Warning: Incompatible color definition on input line 303.
 
 
-Package xcolor Warning: Incompatible color definition on input line 261.
+Package xcolor Warning: Incompatible color definition on input line 303.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\inote' on input line 261.
+Package xcolor Warning: Incompatible color definition on input line 303.
 
 [15]
 
-Package xcolor Warning: Incompatible color definition on input line 303.
+Package xcolor Warning: Incompatible color definition on input line 309.
+
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 309.
+
+Package xcolor Warning: Incompatible color definition on input line 309.
 
 
-Package xcolor Warning: Incompatible color definition on input line 303.
+Package xcolor Warning: Incompatible color definition on input line 309.
 
 
-Package xcolor Warning: Incompatible color definition on input line 303.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\inote' on input line 309.
+
+[16]
+
+Package xcolor Warning: Incompatible color definition on input line 351.
 
 
-Overfull \hbox (8.46072pt too wide) in paragraph at lines 303--303
+Package xcolor Warning: Incompatible color definition on input line 351.
+
+
+Package xcolor Warning: Incompatible color definition on input line 351.
+
+
+Overfull \hbox (8.46072pt too wide) in paragraph at lines 351--351
  [] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 306.
+Package xcolor Warning: Incompatible color definition on input line 354.
 
 
-Package xcolor Warning: Incompatible color definition on input line 306.
+Package xcolor Warning: Incompatible color definition on input line 354.
 
 
-Package xcolor Warning: Incompatible color definition on input line 306.
+Package xcolor Warning: Incompatible color definition on input line 354.
 
 
-Package xcolor Warning: Incompatible color definition on input line 321.
+Package xcolor Warning: Incompatible color definition on input line 369.
 
 
-Package xcolor Warning: Incompatible color definition on input line 321.
+Package xcolor Warning: Incompatible color definition on input line 369.
 
 
-Package xcolor Warning: Incompatible color definition on input line 321.
+Package xcolor Warning: Incompatible color definition on input line 369.
 
 
-Package xcolor Warning: Incompatible color definition on input line 327.
+Package xcolor Warning: Incompatible color definition on input line 375.
 
 
-Package xcolor Warning: Incompatible color definition on input line 327.
+Package xcolor Warning: Incompatible color definition on input line 375.
 
 
-Package xcolor Warning: Incompatible color definition on input line 327.
+Package xcolor Warning: Incompatible color definition on input line 375.
 
-[16]
-<gfx/workflows/awstools.png, id=530, 2190.1825pt x 1247.66125pt>
+[17]
+<gfx/workflows/awstools.png, id=554, 2190.1825pt x 1247.66125pt>
 File: gfx/workflows/awstools.png Graphic file (type png)
 <use gfx/workflows/awstools.png>
-Package pdftex.def Info: gfx/workflows/awstools.png  used on input line 372.
+Package pdftex.def Info: gfx/workflows/awstools.png  used on input line 420.
 (pdftex.def)             Requested size: 421.10086pt x 239.87569pt.
 
-Overfull \hbox (2.84718pt too wide) in paragraph at lines 372--373
+Overfull \hbox (2.84718pt too wide) in paragraph at lines 420--421
  [][] 
  []
 
-[17 <./gfx/workflows/awstools.png>]
+[18 <./gfx/workflows/awstools.png>]
 \openout6 = `thesis.pyg'.
 
 
 (./_minted-thesis/5BFDEE9953668F9CC4773097397D3CEF9F014CDCC252D787938A66F94A2C2
 8CF.pygtex)
 
-Package xcolor Warning: Incompatible color definition on input line 400.
+Package xcolor Warning: Incompatible color definition on input line 448.
 
 
-Package xcolor Warning: Incompatible color definition on input line 400.
+Package xcolor Warning: Incompatible color definition on input line 448.
 
 
-Package xcolor Warning: Incompatible color definition on input line 400.
-
-[18]
-
-Package xcolor Warning: Incompatible color definition on input line 409.
-
-
-Package xcolor Warning: Incompatible color definition on input line 409.
-
-
-Package xcolor Warning: Incompatible color definition on input line 409.
+Package xcolor Warning: Incompatible color definition on input line 448.
 
 [19]
-Overfull \hbox (4.6391pt too wide) in alignment at lines 424--424
+
+Package xcolor Warning: Incompatible color definition on input line 457.
+
+
+Package xcolor Warning: Incompatible color definition on input line 457.
+
+
+Package xcolor Warning: Incompatible color definition on input line 457.
+
+[20]
+Overfull \hbox (4.6391pt too wide) in alignment at lines 472--472
 [][][][][] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 470.
+Package xcolor Warning: Incompatible color definition on input line 521.
 
 
-Package xcolor Warning: Incompatible color definition on input line 470.
+Package xcolor Warning: Incompatible color definition on input line 521.
 
 
-Package xcolor Warning: Incompatible color definition on input line 470.
+Package xcolor Warning: Incompatible color definition on input line 521.
 
-[20
+[21
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 472.
+Package xcolor Warning: Incompatible color definition on input line 523.
 
 
-Package xcolor Warning: Incompatible color definition on input line 472.
+Package xcolor Warning: Incompatible color definition on input line 523.
 
 
-Package xcolor Warning: Incompatible color definition on input line 472.
+Package xcolor Warning: Incompatible color definition on input line 523.
 
 
-Package xcolor Warning: Incompatible color definition on input line 512.
+Package xcolor Warning: Incompatible color definition on input line 563.
 
 
-Package xcolor Warning: Incompatible color definition on input line 512.
+Package xcolor Warning: Incompatible color definition on input line 563.
 
 
-Package xcolor Warning: Incompatible color definition on input line 512.
+Package xcolor Warning: Incompatible color definition on input line 563.
+
+[22]
+
+Package xcolor Warning: Incompatible color definition on input line 583.
 
 
-Package xcolor Warning: Incompatible color definition on input line 532.
+Package xcolor Warning: Incompatible color definition on input line 583.
 
 
-Package xcolor Warning: Incompatible color definition on input line 532.
+Package xcolor Warning: Incompatible color definition on input line 583.
 
-
-Package xcolor Warning: Incompatible color definition on input line 532.
-
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 532.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 583.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 532--532
+Underfull \hbox (badness 10000) in paragraph at lines 583--583
 
  []
 
-[21]
 
-Package xcolor Warning: Incompatible color definition on input line 538.
-
-
-Package xcolor Warning: Incompatible color definition on input line 538.
+Package xcolor Warning: Incompatible color definition on input line 589.
 
 
-Package xcolor Warning: Incompatible color definition on input line 538.
+Package xcolor Warning: Incompatible color definition on input line 589.
 
 
-Package xcolor Warning: Incompatible color definition on input line 555.
+Package xcolor Warning: Incompatible color definition on input line 589.
+
+[23]
+
+Package xcolor Warning: Incompatible color definition on input line 606.
 
 
-Package xcolor Warning: Incompatible color definition on input line 555.
+Package xcolor Warning: Incompatible color definition on input line 606.
 
 
-Package xcolor Warning: Incompatible color definition on input line 555.
+Package xcolor Warning: Incompatible color definition on input line 606.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 555--555
+Underfull \hbox (badness 10000) in paragraph at lines 606--606
 []$\OT1/pcr/m/n/10.95 https : / / developer . amazon . com / blogs / post / Tx2
 13D2XQIYH864 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 555--555
+Underfull \hbox (badness 10000) in paragraph at lines 606--606
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 555--555
+Underfull \hbox (badness 10000) in paragraph at lines 606--606
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 555--555
+Underfull \hbox (badness 10000) in paragraph at lines 606--606
 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 566--566
+Underfull \hbox (badness 10000) in alignment at lines 617--617
 [][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 575--577
+Underfull \hbox (badness 10000) in paragraph at lines 626--628
 []$\OT1/pcr/m/n/12 https : / / developer . amazon . com / docs / custom-[]skill
 s /
  []
 
 
-Underfull \hbox (badness 5667) in paragraph at lines 575--577
+Underfull \hbox (badness 5667) in paragraph at lines 626--628
 \OT1/pcr/m/n/12 develop-[]skills-[]in-[]multiple-[]languages . html$[] \OT1/ptm
 /m/n/12 We choose to of-fer
  []
 
-[22]
+[24]
 
-Package xcolor Warning: Incompatible color definition on input line 613.
-
-
-Package xcolor Warning: Incompatible color definition on input line 613.
+Package xcolor Warning: Incompatible color definition on input line 664.
 
 
-Package xcolor Warning: Incompatible color definition on input line 613.
+Package xcolor Warning: Incompatible color definition on input line 664.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--613
-
- []
+Package xcolor Warning: Incompatible color definition on input line 664.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--613
+Underfull \hbox (badness 10000) in paragraph at lines 664--664
 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 644.
+Underfull \hbox (badness 10000) in paragraph at lines 664--664
+
+ []
 
 
-Package xcolor Warning: Incompatible color definition on input line 644.
+Package xcolor Warning: Incompatible color definition on input line 695.
 
 
-Package xcolor Warning: Incompatible color definition on input line 644.
-
-[23]
-
-Package xcolor Warning: Incompatible color definition on input line 662.
+Package xcolor Warning: Incompatible color definition on input line 695.
 
 
-Package xcolor Warning: Incompatible color definition on input line 662.
+Package xcolor Warning: Incompatible color definition on input line 695.
 
 
-Package xcolor Warning: Incompatible color definition on input line 662.
+Package xcolor Warning: Incompatible color definition on input line 713.
+
+[25]
+
+Package xcolor Warning: Incompatible color definition on input line 713.
+
+
+Package xcolor Warning: Incompatible color definition on input line 713.
 
 \openout6 = `thesis.pyg'.
 
@@ -2573,10 +2604,10 @@ Package xcolor Warning: Incompatible color definition on input line 662.
 
 (./_minted-thesis/E6013E15CCAF9B0A9FC563669848521BC510B94EE6CCF891C78770A70AACE
 74D.pygtex)
-<gfx/DLprim.png, id=594, 1577.895pt x 489.83pt>
+<gfx/DLprim.png, id=621, 1577.895pt x 489.83pt>
 File: gfx/DLprim.png Graphic file (type png)
 <use gfx/DLprim.png>
-Package pdftex.def Info: gfx/DLprim.png  used on input line 683.
+Package pdftex.def Info: gfx/DLprim.png  used on input line 734.
 (pdftex.def)             Requested size: 418.25368pt x 129.83423pt.
 \openout6 = `thesis.pyg'.
 
@@ -2588,47 +2619,47 @@ Package pdftex.def Info: gfx/DLprim.png  used on input line 683.
 
 (./_minted-thesis/E6013E15CCAF9B0A9FC563669848521BC510B94EE6CCF891C78770A70AACE
 74D.pygtex)
-<gfx/DLsec.png, id=595, 3356.54pt x 360.34625pt>
+<gfx/DLsec.png, id=622, 3356.54pt x 360.34625pt>
 File: gfx/DLsec.png Graphic file (type png)
 <use gfx/DLsec.png>
-Package pdftex.def Info: gfx/DLsec.png  used on input line 688.
+Package pdftex.def Info: gfx/DLsec.png  used on input line 739.
 (pdftex.def)             Requested size: 418.25368pt x 44.9002pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 693.
+Package xcolor Warning: Incompatible color definition on input line 744.
 
 
-Package xcolor Warning: Incompatible color definition on input line 693.
+Package xcolor Warning: Incompatible color definition on input line 744.
 
 
-Package xcolor Warning: Incompatible color definition on input line 693.
+Package xcolor Warning: Incompatible color definition on input line 744.
 
 
-Package xcolor Warning: Incompatible color definition on input line 696.
+Package xcolor Warning: Incompatible color definition on input line 747.
 
 
-Package xcolor Warning: Incompatible color definition on input line 696.
+Package xcolor Warning: Incompatible color definition on input line 747.
 
 
-Package xcolor Warning: Incompatible color definition on input line 696.
+Package xcolor Warning: Incompatible color definition on input line 747.
 
 
-Package xcolor Warning: Incompatible color definition on input line 697.
+Package xcolor Warning: Incompatible color definition on input line 748.
 
 
-Package xcolor Warning: Incompatible color definition on input line 697.
+Package xcolor Warning: Incompatible color definition on input line 748.
 
 
-Package xcolor Warning: Incompatible color definition on input line 697.
+Package xcolor Warning: Incompatible color definition on input line 748.
 
 
-Package xcolor Warning: Incompatible color definition on input line 698.
+Package xcolor Warning: Incompatible color definition on input line 749.
 
 
-Package xcolor Warning: Incompatible color definition on input line 698.
+Package xcolor Warning: Incompatible color definition on input line 749.
 
 
-Package xcolor Warning: Incompatible color definition on input line 698.
+Package xcolor Warning: Incompatible color definition on input line 749.
 
 \openout6 = `thesis.pyg'.
 
@@ -2690,11 +2721,12 @@ Package xcolor Warning: Incompatible color definition on input line 698.
 
 (./_minted-thesis/B80FA55B1234F1935CEA559D9EFBC39A70CC6C1C1E15B6F542B78520F42B0
 135.pygtex)
-Overfull \hbox (678.08066pt too wide) in paragraph at lines 703--768
+Overfull \hbox (678.08066pt too wide) in paragraph at lines 754--819
 [][] 
  []
 
-[24 <./gfx/DLprim.png> <./gfx/DLsec.png>]) (./input/03_main_part_1.tex [25]
+) (./input/03_main_part_1.tex [26 <./gfx/DLprim.png> <./gfx/DLsec.png>]
+[27]
 Chapter 3.
 
 Package xcolor Warning: Incompatible color definition on input line 10.
@@ -2740,7 +2772,7 @@ Package xcolor Warning: Incompatible color definition on input line 39.
 
 Package xcolor Warning: Incompatible color definition on input line 54.
 
-[26
+[28
 
 ]
 
@@ -2779,7 +2811,7 @@ t-[]sdk-[]for-[]java / wiki /
 
 
 (./_minted-thesis/AF4C065876AF203D3D379FBB8964AF8FC510B94EE6CCF891C78770A70AACE
-74D.pygtex) [27]
+74D.pygtex) [29]
 
 Package xcolor Warning: Incompatible color definition on input line 110.
 
@@ -2827,7 +2859,7 @@ enger-[]and-[]amazon-[]echo-[]4a03935eeca1$[]
 
 Package xcolor Warning: Incompatible color definition on input line 156.
 
-[28]
+[30]
 
 Package xcolor Warning: Incompatible color definition on input line 156.
 
@@ -2858,13 +2890,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--192
 m/n/10.95 https://developer.amazon.com/designing-for-voice/what-alexa-
  []
 
-[29]
+[31]
 Overfull \hbox (16.72562pt too wide) detected at line 231
 [] \OMS/cmsy/m/n/12 ^^A\OML/cmm/m/it/12 I go to \OMS/cmsy/m/n/12 ^^A [] ^^A [] 
 \OML/cmm/m/it/12 I go to [] \OMS/cmsy/m/n/12 ^^A []
  []
 
-[30]
+[32]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 258.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
@@ -2872,7 +2904,7 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 258.
- [31]
+ [33]
 \openout6 = `thesis.pyg'.
 
 
@@ -2891,7 +2923,7 @@ File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 
 
 (./_minted-thesis/644FE98BA9F50FEB84377B1C3D5D2FD6C510B94EE6CCF891C78770A70AACE
-74D.pygtex) [32]
+74D.pygtex) [34]
 Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
@@ -2901,7 +2933,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
-[33]
+[35]
 \openout4 = `thesis.pyg'.
 
 
@@ -2944,7 +2976,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
 loor([]Math[].random()
  []
 
-) [34]
+) [36]
 \openout4 = `thesis.pyg'.
 
 
@@ -2972,7 +3004,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 418--418
 ]skills /
  []
 
-[35]
+[37]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 455.
 
@@ -2984,7 +3016,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 480--481
 
 
 (./_minted-thesis/B13339B6BB77F4EE2FE52F89B5411468C510B94EE6CCF891C78770A70AACE
-74D.pygtex) [36]
+74D.pygtex) [38]
 Underfull \hbox (badness 10000) in paragraph at lines 490--491
 
  []
@@ -2998,7 +3030,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 499--500
 
  []
 
-[37]) (./input/04_main_part_2.tex [38]
+[39]) (./input/04_main_part_2.tex [40]
 Chapter 4.
 
 Package xcolor Warning: Incompatible color definition on input line 36.
@@ -3035,7 +3067,7 @@ Package xcolor Warning: Incompatible color definition on input line 36.
 
 Package xcolor Warning: Incompatible color definition on input line 36.
 
-[39
+[41
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 47--49
@@ -3055,7 +3087,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
 lls-kit-command-
  []
 
-[40]
+[42]
 Underfull \hbox (badness 10000) in paragraph at lines 116--117
 []\OT1/ptm/m/n/12 https://www.bignerdranch.com/blog/developing-alexa-skills-loc
 ally-with-nodejs-
@@ -3070,7 +3102,7 @@ Package xcolor Warning: Incompatible color definition on input line 125.
 
 Package xcolor Warning: Incompatible color definition on input line 125.
 
-) (./input/05_evaluation.tex [41]
+) (./input/05_evaluation.tex [43]
 Chapter 5.
 
 Package xcolor Warning: Incompatible color definition on input line 19.
@@ -3117,7 +3149,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--39
 tps : / / umfrage .
  []
 
-[42
+[44
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
@@ -3146,19 +3178,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
-[43]) (./input/06_conclusion.tex
-Underfull \hbox (badness 10000) in paragraph at lines 110--1
+[45]
+
+Package xcolor Warning: Incompatible color definition on input line 99.
+
+
+Package xcolor Warning: Incompatible color definition on input line 99.
+
+
+Package xcolor Warning: Incompatible color definition on input line 99.
+
+) (./input/06_conclusion.tex
+Underfull \hbox (badness 10000) in paragraph at lines 119--1
 
  []
 
-[44]
+[46]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+Underfull \hbox (badness 5217) in paragraph at lines 12--15
+[][]$\OT1/pcr/m/n/12 http : / / www-[]personal . umich . edu / []cellis / heter
+onym . html$[] \OT1/ptm/m/n/12 ho-
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 20.
+
+
+Package xcolor Warning: Incompatible color definition on input line 20.
+
+
+Package xcolor Warning: Incompatible color definition on input line 20.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-) [45
+) [47
 
 ] (./thesis.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 24--30
@@ -3173,126 +3230,138 @@ f$[]\OT1/ptm/m/n/12 , Au-gust
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--51
+Underfull \hbox (badness 10000) in paragraph at lines 32--37
+[]\OT1/ptm/m/n/12 George An-ders.  \al-exa, un-der-stand me".  []$\OT1/pcr/m/n/
+12 https : / / www .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--37
+\OT1/pcr/m/n/12 technologyreview . com / s / 608571 / alexa-[]understand-[]me/$
+[]\OT1/ptm/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--58
 \OT1/pcr/m/n/12 title = History _ of _ natural _ language _ processing & oldid 
 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--60
+Underfull \hbox (badness 10000) in paragraph at lines 60--67
 \OT1/pcr/m/n/12 Usage _ share _ of _ operating _ systems & oldid = 825514016$[]
 \OT1/ptm/m/n/12 , 2018.
  []
 
-[46
+[48
 
 
 ]
-Underfull \hbox (badness 5446) in paragraph at lines 73--79
+Underfull \hbox (badness 5446) in paragraph at lines 80--86
 []\OT1/ptm/m/n/12 Georg Ber-ger, RBB On-line.  Gen-iale k[]opfe - wohnen der zu
 kunft.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--79
+Underfull \hbox (badness 10000) in paragraph at lines 80--86
 []$\OT1/pcr/m/n/12 https : / / rbb-[]online . de / abenschau / archiv / 2018041
 6 _ 1930 /
  []
 
 
-Underfull \hbox (badness 5231) in paragraph at lines 81--85
+Underfull \hbox (badness 5231) in paragraph at lines 88--92
 []\OT1/ptm/m/n/12 Gesch[]afts- und Koordinier-ungss-telle 115 im Bundesmin-is-t
 erium des In-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--85
+Underfull \hbox (badness 10000) in paragraph at lines 88--92
 \OT1/ptm/m/n/12 nern.  []$\OT1/pcr/m/n/12 https : / / www . 115 . de / SharedDo
 cs / Publikationen /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--85
+Underfull \hbox (badness 10000) in paragraph at lines 88--92
 \OT1/pcr/m/n/12 Service _ Publikationen / Infomaterialien / infobroschuere _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--85
+Underfull \hbox (badness 10000) in paragraph at lines 88--92
 \OT1/pcr/m/n/12 %20BMI08324 _ screen _ barrierefrei . pdf ? _ _ blob =
  []
 
 
-Underfull \hbox (badness 3058) in paragraph at lines 92--97
+Underfull \hbox (badness 3058) in paragraph at lines 99--104
 []\OT1/ptm/m/n/12 Judy Gold-smith and Nich-olas Mat-tei.  Sci-ence fic-tion as 
 an in-tro-duc-
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 92--97
+Underfull \hbox (badness 1237) in paragraph at lines 99--104
 \OT1/ptm/m/n/12 tion to ai re-search.  []$\OT1/pcr/m/n/12 https : / / pdfs . se
 manticscholar . org / fdd1 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--105
+Underfull \hbox (badness 10000) in paragraph at lines 106--112
 \OT1/pcr/m/n/12 businessinsider . de / the-[]messaging-[]app-[]report-[]2015-[]
 11 ? r =
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 107--111
+Underfull \hbox (badness 1472) in paragraph at lines 114--118
 []\OT1/ptm/m/n/12 Memo D[]oring.  Al-exa dev days.  []$\OT1/pcr/m/n/12 http : /
  / alexadevday . com / BER /
  []
 
 
-Underfull \hbox (badness 3364) in paragraph at lines 113--119
+Underfull \hbox (badness 3364) in paragraph at lines 120--126
 []\OT1/ptm/m/n/12 NBC.  Amazon's al-exa had a break-out hol-i-day | people even
  used
  []
 
 
-Overfull \hbox (59.01299pt too wide) in paragraph at lines 113--119
+Overfull \hbox (59.01299pt too wide) in paragraph at lines 120--126
 \OT1/pcr/m/n/12 how-[]many-[]amazon-[]alexa-[]echoes-[]were-[]sold-[]over-[]the
 -[]2017-[]holidays .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--138
+Underfull \hbox (badness 10000) in paragraph at lines 138--145
 \OT1/pcr/m/n/12 global-[]smartphone-[]penetration-[]per-[]capita-[]since-[]2005
 /$[]\OT1/ptm/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--146
+Underfull \hbox (badness 10000) in paragraph at lines 147--153
 []\OT1/ptm/m/n/12 Laurie Sul-li-van.  Gart-ner pre-dicts 30 []$\OT1/pcr/m/n/12 
 https : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--146
+Underfull \hbox (badness 10000) in paragraph at lines 147--153
 \OT1/pcr/m/n/12 mediapost . com / publications / article / 291913 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--146
+Underfull \hbox (badness 10000) in paragraph at lines 147--153
 \OT1/pcr/m/n/12 gartner-[]predicts-[]30-[]of-[]searches-[]without-[]a-[]screen 
 . html$[]\OT1/ptm/m/n/12 ,
  []
 
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 153--158
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 160--165
 []\OT1/ptm/m/n/12 Katie Young.  []$\OT1/pcr/m/n/12 https : / / blog . globalweb
 index . net /
  []
 
 
-Overfull \hbox (26.513pt too wide) in paragraph at lines 153--158
+Overfull \hbox (26.513pt too wide) in paragraph at lines 160--165
 \OT1/pcr/m/n/12 chart-[]of-[]the-[]day / 25-[]of-[]16-[]24s-[]use-[]voice-[]sea
 rch-[]on-[]mobile/$[]\OT1/ptm/m/n/12 ,
  []
 
-) (./input/07_appendix.tex [48]
+) (./input/07_appendix.tex [50]
 
 Package xcolor Warning: Incompatible color definition on input line 14.
 
@@ -3335,9 +3404,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--26
  2017 / 09 /
  []
 
-[49
+[51
 
-] [50]
+] [52]
 \openout4 = `thesis.pyg'.
 
 
@@ -3492,7 +3561,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 \OT1/pcr/m/n/12 Fiktionsbescheinigung gilt immer nur in Verbindung
  []
 
-) [51
+) [53
 
 ]
 \openout4 = `thesis.pyg'.
@@ -3551,33 +3620,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 d
  []
 
-) [52] [53
+) [54] [55
 
 ]
-Overfull \hbox (399.70566pt too wide) in paragraph at lines 210--250
+Overfull \hbox (399.70566pt too wide) in paragraph at lines 217--257
 []  
  []
 
-) [54]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 262.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 262.
+) [56]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 266.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 266.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 262.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 262.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 266.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 266.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: CB07661610FAD4F46F3179DCFCDB400B;2771.
+(rerunfilecheck)             Checksum: D7B00BF16993809CDC60CC680EC36E66;2991.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 262.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 266.
  ) 
 Here is how much of TeX's memory you used:
- 36814 strings out of 492985
- 703324 string characters out of 6132585
- 897764 words of memory out of 5000000
- 39417 multiletter control sequences out of 15000+600000
- 583356 words of font info for 126 fonts, out of 8000000 for 9000
+ 37841 strings out of 492985
+ 715364 string characters out of 6132585
+ 904111 words of memory out of 5000000
+ 40418 multiletter control sequences out of 15000+600000
+ 584821 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,18n,73p,10370b,1382s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not ex
@@ -3622,11 +3691,12 @@ lvetic/uhvbo8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic
 /uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (64 pages, 891621 bytes).
+ve/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/tipa/xipa10.pfb>
+Output written on thesis.pdf (66 pages, 901639 bytes).
 PDF statistics:
- 948 PDF objects out of 1000 (max. 8388607)
- 835 compressed objects within 9 object streams
- 209 named destinations out of 1000 (max. 500000)
- 390 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 982 PDF objects out of 1000 (max. 8388607)
+ 866 compressed objects within 9 object streams
+ 213 named destinations out of 1000 (max. 500000)
+ 414 words of extra memory for PDF output out of 10000 (max. 10000000)
 
