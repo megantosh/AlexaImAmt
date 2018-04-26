@@ -24,24 +24,25 @@
 \BOOKMARK [0][-]{chapter.4}{Skill Implementation}{}% 24
 \BOOKMARK [1][-]{section.4.1}{Setup}{chapter.4}% 25
 \BOOKMARK [2][-]{subsection.4.1.1}{requirements}{section.4.1}% 26
-\BOOKMARK [1][-]{section.4.2}{Code Analysis}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.3}{Deployment}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.4}{Approval and Publishing}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.5}{Debugging / Troubleshooting}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.6}{Documentation Updates}{chapter.4}% 31
-\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 32
-\BOOKMARK [1][-]{section.5.1}{Alexa in General}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.2}{Metrics}{chapter.5}% 34
-\BOOKMARK [1][-]{section.5.3}{Results}{chapter.5}% 35
-\BOOKMARK [1][-]{section.5.4}{Discussions}{chapter.5}% 36
-\BOOKMARK [0][-]{chapter.6}{Conclusion and Future Work}{}% 37
-\BOOKMARK [1][-]{section.6.1}{Summary}{chapter.6}% 38
-\BOOKMARK [1][-]{section.6.2}{Conclusion}{chapter.6}% 39
-\BOOKMARK [1][-]{section.6.3}{Future Work}{chapter.6}% 40
-\BOOKMARK [0][-]{section.6.3}{Bibliography}{}% 41
-\BOOKMARK [0][-]{chapter*.39}{Appendices}{}% 42
-\BOOKMARK [1][-]{chapter*.40}{Product Branding Etymology}{chapter*.39}% 43
-\BOOKMARK [1][-]{section*.41}{Lex vs. Alexa Skills}{chapter*.39}% 44
-\BOOKMARK [1][-]{section*.42}{JSON Query code structure}{chapter*.39}% 45
-\BOOKMARK [1][-]{section*.43}{Abbreviations}{chapter*.39}% 46
-\BOOKMARK [1][-]{section*.44}{Glossary}{chapter*.39}% 47
+\BOOKMARK [1][-]{section.4.2}{step-by-step}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.3}{Code Analysis}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.4}{Deployment}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.5}{Approval and Publishing}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.6}{Debugging / Troubleshooting}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.7}{Documentation Updates}{chapter.4}% 32
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 33
+\BOOKMARK [1][-]{section.5.1}{Alexa in General}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.2}{Metrics}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.3}{Results}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.4}{Discussions}{chapter.5}% 37
+\BOOKMARK [0][-]{chapter.6}{Conclusion and Future Work}{}% 38
+\BOOKMARK [1][-]{section.6.1}{Summary}{chapter.6}% 39
+\BOOKMARK [1][-]{section.6.2}{Conclusion}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.3}{Future Work}{chapter.6}% 41
+\BOOKMARK [0][-]{section.6.3}{Bibliography}{}% 42
+\BOOKMARK [0][-]{chapter*.39}{Appendices}{}% 43
+\BOOKMARK [1][-]{chapter*.40}{Product Branding Etymology}{chapter*.39}% 44
+\BOOKMARK [1][-]{section*.41}{Lex vs. Alexa Skills}{chapter*.39}% 45
+\BOOKMARK [1][-]{section*.42}{JSON Query code structure}{chapter*.39}% 46
+\BOOKMARK [1][-]{figure.caption.44}{Abbreviations}{chapter*.39}% 47
+\BOOKMARK [1][-]{section*.45}{Glossary}{chapter*.39}% 48

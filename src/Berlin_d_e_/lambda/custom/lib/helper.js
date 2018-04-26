@@ -8,8 +8,18 @@ const https = require("https");
 //alternatively, use fetch module in case of cookies handling, redirect etc
 //const fetchUrl = require("fetch").fetchUrl;
 
+const langStrings = require("alexa-sdk")
+
+exports.handler = function(event, context, callback) {
+    let alexa = Alexa.handler(event, context);
+    // was changed from alexa.APP_ID in old API
+    alexa.appId = APP_ID;
+
+    //alexa.resources = Speech.defaultSpokenStrings;
 
 
+
+}
 
 
 
@@ -62,7 +72,30 @@ exports.nodeEvents = {
 
 
 
-//  ===== Helper Functions partially from AWS ============================================================================================n
+
+
+//  ==== Code Patterns ===============================================================================================
+
+// format:
+// this.emit(:${action}, 'responseContent').
+// {
+//     //event, answer
+//     this.emit(':tell', 'Hello World!');
+//     //event, prompt, reprompt
+//     this.emit(':ask', 'What would you like to do?', 'Please say that again?');
+// }
+// {
+//     this.response.speak('Hello World!');
+//     this.emit(':responseReady');
+//
+//     this.response.speak('What would you like to do?')
+//         .listen('Please say that again?');
+//     this.emit(':responseReady');
+// }
+
+
+
+//  ===== Helper Functions partially from AWS =========================================================================
 
 exports.randomphrase = function randomPhrase(myArray) {
     return(myArray[Math.floor(Math.random() * myArray.length)]);
@@ -196,7 +229,7 @@ exports.getSlotValues = function getSlotValues (filledSlots) {
 // This function delegates multi-turn dialogs to Alexa.
 // For more information about dialog directives see the link below.
 // https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html
-exports.delegateSlotCollection = function delegateSlotCollection() {
+exports.delegateSlotCollection = function delegateSlotCollection(currentLocale) {
     console.log("in delegateSlotCollection");
     console.log("current dialogState: " + this.event.request.dialogState);
 
@@ -208,14 +241,14 @@ exports.delegateSlotCollection = function delegateSlotCollection() {
         // for which you have defaults, then return Dialog.Delegate with this
         // updated intent in the updatedIntent property
 
-        disambiguateSlot.call(this);
+        disambiguateSlot(currentLocale).call(this);
         console.log("disambiguated: " + JSON.stringify(this.event));
         this.emit(":delegate", updatedIntent);
     } else if (this.event.request.dialogState !== "COMPLETED") {
         console.log("in not completed");
         //console.log(JSON.stringify(this.event));
 
-        disambiguateSlot.call(this);
+        disambiguateSlot(currentLocale).call(this);
         this.emit(":delegate", updatedIntent);
     } else {
         console.log("in completed");
@@ -230,10 +263,11 @@ exports.delegateSlotCollection = function delegateSlotCollection() {
 // the user for clarification. Disambiguate slot will loop through all slots and
 // elicit confirmation for the first slot it sees that resolves to more than
 // one value.
-function disambiguateSlot() {
+function disambiguateSlot(currLoc) {
     let currentIntent = this.event.request.intent;
 
     Object.keys(this.event.request.intent.slots).forEach(function(slotName) {
+        let currentLocale = currLoc;
         let currentSlot = this.event.request.intent.slots[slotName];
         let slotValue = slotHasValue(this.event.request, currentSlot.name);
         if (currentSlot.confirmationStatus !== 'CONFIRMED' &&
@@ -248,7 +282,16 @@ function disambiguateSlot() {
                 // want a small or tiny dog?" to get the user to tell you
                 // specifically what type mini dog (small mini or tiny mini).
                 if ( currentSlot.resolutions.resolutionsPerAuthority[0].values.length > 1) {
-                    let prompt = 'Which would you like';
+
+                    //TODO give based on language
+                    let localePrompt;
+
+                    if (currentLocale === 'de-DE'){
+                        localePrompt = 'ich habe mehrere Treffer';
+                    } else if (currentLocale === 'en-US') {
+                        localePrompt =  'Which would you like';
+                    }
+                    let prompt = localePrompt;
                     let size = currentSlot.resolutions.resolutionsPerAuthority[0].values.length;
                     currentSlot.resolutions.resolutionsPerAuthority[0].values.forEach(function(element, index, arr) {
                         prompt += ` ${(index == size -1) ? ' or' : ' '} ${element.value.name}`;
@@ -356,10 +399,10 @@ exports.httpGet = function httpGet(options){
 
 // Creates the options object for an HTTPs GET Request
 // Returns an object.
-exports.buildHttpGetOptions = function buildHttpGetOptions(host, path, port, params) {
+exports.buildHttpGetOptions = function buildHttpGetOptions(host, path, port) { //, params) {
     let options = {
         hostname: host,
-        path: path + buildQueryString(params),
+        path: path, //+ buildQueryString(params),
         port: port,
         method: 'GET'
     };

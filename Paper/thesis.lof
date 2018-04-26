@@ -2,9 +2,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Interaction Between AWS Modules (Coffee Bot)}}{18}{figure.caption.22}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - Primary Nodes\relax }}{26}{figure.caption.31}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - secondary Nodes\relax }}{26}{figure.caption.32}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - Primary Nodes\relax }}{25}{figure.caption.31}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - secondary Nodes\relax }}{25}{figure.caption.32}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces HTTPS Request Body}}{58}{figure.caption.44}

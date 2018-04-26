@@ -114,7 +114,7 @@ When speech meets AI, there are a lot of language ambiguities to deal with and m
 While Machine Learning (ML) enables us to decode phrases not in the classical way in the past by randomly guessing the whole expression, our speech datasets grow and require analysis in further breadth and depth to deliver a sustainable Natural Language Understanding (NLU) engine.
 So far, in the past six years our primary approach has changed due to the little progress made with it. Instead of trying to understand exact meanings, we work from
 ``imperfect matches at the outset, followed by rapid fine-tuning of provisional guesses'' \cite{mit:Alexa}. The learning part is involved by reinterpreting missed expressions \cite{aws:lex_webinar}. 
-On one hand, Neural Networks help us understand language patterns and better the more frequently we use them. Thought Vectors are on the other hand control the connection of different words with their related meanings, which helps with homonyms for instance.
+On one hand, neural networks help us understand language patterns and better the more frequently we use them, but can fail in the case of homonyms. \cite{mit:AILang} Thought Vectors on the other hand complement them by controlling the connection of different words with their related meanings %, which helps with homonyms for instance.
 
 Depending on the system, it is therefore a rule of thumb that most AI-powered personal assistants like Siri or Alexa are in their early learning phases. In order to be able to make use of them in the future, the painful immaturity part has to come in effect. This limits us for instance to using short sentences to lessen the probability of the system misunderstanding us. And so, naturally, what distinguishes a good system from a better one is how fast it learns.
 
@@ -148,11 +148,9 @@ We divide the building model into intents%~\ref{intents}
  and slots %~\ref{slots}. 
 The Fulfilment part is taken care of through a back-end endpoint containing the programming and business logic to the interface, which also validate the slots before sending it onwards, similar to what JavaScript checks would do on a website. %We make the following words clear:
 
-\sn{Andreas suggests hochstufen - clear split required?}
+%\sn{Andreas suggests hochstufen - clear split required?}
 \subsection{Terminology}
-Before we discuss later our choice of platform, we already unveiled in Chapter \ref{introduction} that Alexa will be the underlying system. Thus we cap the elementary definitions of voice assistants with distinct Alexa-specific concepts
-
-We give meaning to the terms: 
+Before we discuss later our choice of platform, we already unveiled in Chapter \ref{introduction} that Alexa will be the underlying system. Thus we cap the elementary definitions of voice assistants with distinct Alexa-specific concepts and give meaning to the following terms: 
 
 \subsubsection*{Intent}~\label{intents}
 As the intention the user pursues with a spoken sentence. This translates to the action being executed upon the user's command based on mapping his/her words to this action.
@@ -164,29 +162,35 @@ As the intention the user pursues with a spoken sentence. This translates to the
 	As a variable fo a certain type we define in our programme that belongs to a category of items. For instance, when someone says they would like to order a \textit{large} coffee, they assume that there is the option to have a small coffee, too. And so large and small refer both to the size of the coffee. Programmatically, we define \mintinline{java}{large} and \mintinline{java}{small} to be of type \mintinline{java}{size} of the coffee. Similarly, if there is the option to order a tea and a Cappuccino, it would be only fair to define \mintinline{java}{cappuccino} and \mintinline{java}{tea} to be of type \mintinline{java}{beverage}. Consequently, \textbf{slots} can be defined to any part of the sentence, where a parameter (here beverage or size) can be grouped into \textbf{slot types}. 
 
 %\end{itemize}
-	
+
+%avoid using since you won't get indents easily	
+%	\begin{minipage}{\linewidth}
+
 	This idea is to be handled with care, though, since technically in most languages we can define a subject, a predicate and an object. Here is an example in English:
 	
-	
+	% \! for negative spaces in math should be avoided as they do not work consistently
+	% check here: https://tex.stackexchange.com/questions/67912/large-negative-spaces
 	\[
 	\underbrace{I}_\text{subject} \cdot
 	\underbrace{would \ like  \ to \ have}_\text{predicate} \cdot
 	\underbrace{
 		\overbrace{{a}}^\text{number of items} +		
-		\overbrace{large}_\text{size} +
-		\overbrace{cof \! fee.}^\text{beverage}
+		\overbrace{lar\!ge}_\text{size} +
+		\overbrace{cof \mkern-3mu fee.}^\text{beverage}
 	}_\text{object} 
 	\]
 	
 	When we design a voice system from scratch, we might have to make it understand how each of these sentence elements can be interchanged with another one of the same slot type. However, since utterances build on they idea of slot types, we can make delegate the system to understand what is important from the sentence through slot types and what other interoperable words are not relevant. In this example, if we say:
 	
-
+% \! for negative spaces in math should be avoided as they do not work consistently
 	\[
 	\overbrace{My \ brother} \cdot
 	\overbrace{wants \ to \ order} \cdot
-	\overbrace{ a + tall + cof \!fee.}
+	\overbrace{ a + tall + cof\mkern-3mu fee.}
 	\]
 	
+%	\end{minipage}
+
 	it is not important to they system to understand at this stage who is going to drink the coffee. It should be more concerned with the intent; making the coffee, e g. sending a signal or instruction to a coffee machine.
 	 
 	Ultimately, it is up to us to draw the line on where we want to define a variable slot, that is relevant to the sentence being said by the user in context at a certain time in the conversation flow and where certain sentences would be as a whole giving the same intent
@@ -606,6 +610,18 @@ w ba2a 7aga like Maintain context(sesions), Intent chaining (khodlak kam screens
 }
 
 
+\todo{
+	
+	from a user point of view:
+\url{https://www.technologyreview.com/s/608571/alexa-understand-me/}
+SUSTAINED CONVERSATION\\
+In studies, AI platforms by Google, Apple, Microsoft, and Amazon all show different strengths. Google Assistant is the best on wide-ranging search commands. Apple’s Siri and Microsoft’s Cortana have other talents. Alexa does particularly well with shopping commands.\\
+
+Darren austin: \url{https://venturebeat.com/2017/06/27/how-amazons-alexa-hooks-you/}
+Alexa’s broader success resides in its ability to alleviate the stresses of an overbooked life. It’s the companion that’s always ready to engage.\\
+
+}
+
 
 Before deciding to develop for Alexa, we consider several options and evaluate their advantages and suitability for our requirements.
 
@@ -613,7 +629,7 @@ Before deciding to develop for Alexa, we consider several options and evaluate t
 \begin{table}
 	\begin{tabularx}{\linewidth}{r | l l l}
 		& Alexa / AWS & API.ai & Microsoft Azure \\ \hline
-		price & First million calls free & free & free \\
+		price & First million calls free per month & free & free \\
 	\end{tabularx}
 \end{table}
 

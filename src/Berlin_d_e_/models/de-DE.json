@@ -1701,7 +1701,11 @@
             },
             {
               "name": {
-                "value": "Dänemark"
+                "value": "Dänemark",
+                "synonyms": [
+                  "däne",
+                  "dänin"
+                ]
               }
             },
             {

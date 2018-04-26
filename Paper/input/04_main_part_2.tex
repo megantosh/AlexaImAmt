@@ -3,16 +3,30 @@
 
 \section{Setup}
 
+
+step by step code analysis
+
+\url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md}
 \subsection{requirements}
 
 for audio
-ffmpeg -i <input-file> -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 <output-file.mp3>
+
+json format https://stackoverflow.com/questions/41776014/how-to-correctly-specify-ssml-in-an-alexa-skill-lambda-function
+
 
 
 HTTP(S) endpoint:
 \url{http://newsreel-edu.aot.tu-berlin.de/solr/#/d115}
 
 
+references:
+
+\url{https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html#audio}
+
+
+
+blogs:
+\url{https://developer.amazon.com/post/Tx3FXYSTHS579WO/Announcing-New-Alexa-Skills-Kit-ASK-Features-SSML-Audio-Tags-and-Developer-Porta}
 
 With the JSON we have, we try to maximise its use, but we need to consider that with starting a Skill, it is better to start from scratch sometimes and as we go, we see what is the relevant information that we can integrate into our Skill.
 
@@ -35,7 +49,35 @@ scenarios:
 	%	\item[scenario 4] \inote{yet to be decided or if to implement}
 \end{itemize}}
 
+
+\section{step-by-step}
+
+start with interaction model
+then use builder
+then fulfill functions
+
+
+steps to git commit
+deploy
+clone
+change in browser
+change offline
+
 \section{Code Analysis}
+
+from \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md}
+The difference between :ask/listen and :tell/speak is that after a :tell/speak action, the session is ended without waiting for the user to provide more input. We will compare the two ways using response or using responseBuilder to create the response object in next section.
+
+
+
+
+jsons sent/received in appendix
+\ref{jsonFromAlexa}
+
+
+
+
+problems with countrylist
 
 \section{Deployment}
 

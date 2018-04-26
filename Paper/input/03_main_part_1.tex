@@ -62,14 +62,15 @@ It's important to say that they do not transcribe, but do term weighting etc, a 
 
 
 AWS Lambda supports multiple runtime environments including Python, Java, C\# and Go. We decide to use Node.js, a JavaScript (ECMAScript 6) framework due to its event-driven nature and to take advantage of its non-blocking I/O model. Being single-threaded, Node.js guarantees high performance at large scale with large volumes of requests considered. With its JavaScript (ECMAScript) foundation, no wonder it is becoming a standard in web-apps. Hence, the decision also comes due to the richness of develpers' experience with the implementation for Alexa Skills.
-\todo{
+\todo{ below }
 	- start with saying that the other group doing the facebook bot explored a bit on python with flask, so we wanted to enrich the knowledge base (we mention this in \textbf{additional API }and \textbf{Choice of platform})\\
 	- Server-side, browser side (Chrome V8), App layer, data layer\\
 	- because it can read our JSON easily and fast\\
 	- talk about Methodenaufbau (syntax) and firing events\\
 	- Event driven like listener-observer model, emit\\
-	
-}
+	- list emits table here: \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md#response-vs-responsebuilder}\\
+	- explain directives, we use dialog directives like this: \url{https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html#delegate}	
+
 
 %###################################################################################
 %###################### Topic B             ########################################
@@ -106,13 +107,24 @@ Setup in Java using Maven \footnote{\url{https://github.com/alexa/alexa-skills-k
 
 - swagger\\
 
-- Flask
+- Flask\\
+
+
+-oauth for acct liking https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html
+
+- mp3 encoding
+ffmpeg -i <input-file> -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 <output-file.mp3>
+
+for ssml builder npm lib to avoid \&amp etc
+\url{https://npm.runkit.com/ssml-builder}
+
+
 }
 
 
 
 
-
+answethepublic.com
 
 
 

@@ -1,6 +1,12 @@
 // Author: Mohamed Megahed
 
 
+//Step-by-step recommendation:
+//start with interaction model
+//then use builder: http://alexa.design/skillcode
+//then fulfill functions
+
+
 'use strict'; //Optional, but allows vars etc for ES6
 
 
@@ -9,6 +15,7 @@ const Helper = require("./lib/helper.js");
 const Speech = require("./lib/speeches.js");
 const Card = require("./lib/cards.js");
 
+const http = require('http');
 
 
 
@@ -37,12 +44,14 @@ exports.handler = function(event, context, callback) {
     // an extended alexa.registerHandlers(handlers, h1, h2); //you can register multiple handlers at once like here
     if (locale == 'de-DE'){
         alexa.registerHandlers(DE_handlers);
+        exports.OPTIONS_TEXT = 'Ich habe mehrere Treffer';
         console.log('registered german handler');
     } else if (locale == 'fr-FR') {
         alexa.registerHandlers(FR_handlers);
         console.log('registered french handler');
     } else { //basically if locale.toString().startsWith('en')
         alexa.registerHandlers(EN_US_handlers);
+        exports.OPTIONS_TEXT = 'Ich habe mehrere Treffer';
         console.log('registered US-English handler');
     }
     // TODO - so far Alexa doesn't store info and does not need persistence
@@ -68,53 +77,53 @@ exports.handler = function(event, context, callback) {
 
 
 // ===== Strings =====
-const defaultSpokenStrings = {
-    'en':
-        {
-            GREETING_TEXT: [
-                'Welcome to Berlin',
-                'I can help you with a few public services.'
-
-            ],
-            HELP_TEXT: //"You can try: 'alexa, until when is Standesamt Friedrichshain-Kreuzberg open today'" +
-                "Try asking me how to get your visa extended",
-            UNHANDLED_TEXT: "Sorry, I didn't get that. You can try: 'alexa, how do I transfer my driving license to a german one?'" +
-            " or 'alexa, ask Berlin D. E. when is the nearest city hall open today?'",
-            STOP_TEXT: '',
-            CANCEL_TEXT: [
-                "always at your service.",
-                "I'll try to get better next time"
-            ],
-            WIP_TEXT: "I'll find out about that and be ready for your question soon"
-        },
-    'de':
-        {
-            GREETING_TEXT: [
-                'Ich kann dir mit den zahlreichen Dienstleistungen der Stadt Berlin helfen! ' +
-                'Möchtest Du dich über Öffnungszeiten oder eine Dienstleistung informieren?',
-                'Willkommen in dem Hauptstadtportal. Was kann ich für dich tun?'
-            ],
-            HELP_TEXT: "Du kannst mich nach einer Dienstleistung fragen." +
-            "Probiere zum Beispiel 'Anmeldung einer Wohnung' oder 'Ich möchte eine Wohnung anmelden.",
-            UNHANDLED_TEXT: [
-                "Sorry, das habe ich nicht verstanden. Probiere mal: 'alexa, wann hat das Bürgeramt Venus auf?'" +
-                " oder 'Alexa, frag Berlin D. E. wann hat das Bürgeramt in der Nähe auf heute'.'",
-                'Pardon, das habe ich nicht richtig mitbekommen.'
-            ],
-            STOP_TEXT: [
-                "ich halte mich fern",
-            ],
-            CANCEL_TEXT: 'ich bin weg',
-            WIP_TEXT: [
-                'Skill wird gerade entwickelt.',
-                'das berücksichtige ich gerne beim nächsten Milestone',
-                'ich mag es, wie du mich ausfragst. Du solltest eine Karriere im Usability Bereich in Erwägung ziehen.',
-                'ich werde zwar von einem mega entwickelt, aber leider geht das nicht mega schnell'
-            ]
-        }
-};
-
-
+// const defaultSpokenStrings = {
+//     'en':
+//         {
+//             GREETING_TEXT: [
+//                 'Welcome to Berlin',
+//                 'I can help you with a few public services.'
+//
+//             ],
+//             HELP_TEXT: //"You can try: 'alexa, until when is Standesamt Friedrichshain-Kreuzberg open today'" +
+//                 "Try asking me how to get your visa extended",
+//             UNHANDLED_TEXT: "Sorry, I didn't get that. You can try: 'alexa, how do I transfer my driving license to a german one?'" +
+//             " or 'alexa, ask Berlin D. E. when is the nearest city hall open today?'",
+//             STOP_TEXT: '',
+//             CANCEL_TEXT: [
+//                 "always at your service.",
+//                 "I'll try to get better next time"
+//             ],
+//             WIP_TEXT: "I'll find out about that and be ready for your question soon"
+//         },
+//     'de':
+//         {
+//             GREETING_TEXT: [
+//                 'Ich kann dir mit den zahlreichen Dienstleistungen der Stadt Berlin helfen! ' +
+//                 'Möchtest Du dich über Öffnungszeiten oder eine Dienstleistung informieren?',
+//                 'Willkommen in dem Hauptstadtportal. Was kann ich für dich tun?'
+//             ],
+//             HELP_TEXT: "Du kannst mich nach einer Dienstleistung fragen." +
+//             "Probiere zum Beispiel 'Anmeldung einer Wohnung' oder 'Ich möchte eine Wohnung anmelden.",
+//             UNHANDLED_TEXT: [
+//                 "Sorry, das habe ich nicht verstanden. Probiere mal: 'alexa, wann hat das Bürgeramt Venus auf?'" +
+//                 " oder 'Alexa, frag Berlin D. E. wann hat das Bürgeramt in der Nähe auf heute'.'",
+//                 'Pardon, das habe ich nicht richtig mitbekommen.'
+//             ],
+//             STOP_TEXT: [
+//                 "ich halte mich fern",
+//             ],
+//             CANCEL_TEXT: 'ich bin weg',
+//             WIP_TEXT: [
+//                 'Skill wird gerade entwickelt.',
+//                 'das berücksichtige ich gerne beim nächsten Milestone',
+//                 'ich mag es, wie du mich ausfragst. Du solltest eine Karriere im Usability Bereich in Erwägung ziehen.',
+//                 'ich werde zwar von einem mega entwickelt, aber leider geht das nicht mega schnell'
+//             ]
+//         }
+// };
+//
+//
 
 
 
@@ -150,10 +159,12 @@ const DE_handlers = {
 
         this.emit(':responseReady');
     },
+
+    //https://www.berlin.de/lageso/gesundheit/berufe-im-gesundheitswesen/akademisch/
     'DL_ApprobationIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
-        let filledSlots = Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
+        let filledSlots = Helper.delegateSlotCollection('de-DE').call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -168,7 +179,7 @@ const DE_handlers = {
 
         let speechOutput = 'You have filled 2 required slots. ' +
             'BerufGesundheit resolved to,  ' + slotValues.BerufGesundheit.resolved + '. ' +
-            'pruefungInBerlin resolved to,  ' + slotValues.pruefungInBerlin.resolved + '. ' ;
+            'pruefungInBerlin resolved to,  ' + slotValues.pruefungInBerlin.resolved + '. ';
 
         console.log("Speech output: ", speechOutput);
         this.response.speak(speechOutput);
@@ -177,12 +188,11 @@ const DE_handlers = {
         this.emit(':responseReady');
     },
 
-
-
+    // Anything else like Perso, etc. Check DE_LIST_OF_PUB_SVCs
     'DL_generalIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
-        let filledSlots = Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
+        let filledSlots = Helper.delegateSlotCollection('de-DE').call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -194,11 +204,16 @@ const DE_handlers = {
 
         console.log(JSON.stringify(slotValues));
 
+        //TODO if personalausweis,  interrupt the "ist es dein erster Antrag"
+        // and proceed with something else but also get the other required slots after
+        // since it is a bit unexpected to think that Alexa works only with 16 year-olds
+        // oder recently eingebürgerte menschen haha
+
 
         let speechOutput = 'You have filled 3 required slots. ' +
             'Dienstleistung resolved to,  ' + slotValues.Dienstleistung.resolved + '. ' +
             'extension_flag resolved to,  ' + slotValues.extension_flag.resolved + '. ' +
-            'prerequisites_flag resolved to,  ' + slotValues.prerequisites_flag.resolved + '. ' ;
+            'prerequisites_flag resolved to,  ' + slotValues.prerequisites_flag.resolved + '. ';
 
         console.log("Speech output: ", speechOutput);
         this.response.speak(speechOutput);
@@ -208,10 +223,20 @@ const DE_handlers = {
     },
     //This intent deals with D115 services No:
     //
+    //TODO ssml flüstern oder so
+    //https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html
+
+    //TODO with ifElse forward to right intent if certain slots are fulfilled
+    // a handler (like launchrequest) forwards with :
+    // inside 'LaunchAufenthaltRequest': function() {
+    // if slot value equals egyptian:
+    // this.emit('HelloWorldIntent'); else waddih le bta3et el familienmitglieder z.B
+    // }
+
     'DL_AufenthaltstitelIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
-        let filledSlots = Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
+        let filledSlots = Helper.delegateSlotCollection('de-DE').call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -246,7 +271,7 @@ const DE_handlers = {
     'DL_BafoegIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
-        let filledSlots =  Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
+        let filledSlots =  Helper.delegateSlotCollection('de-DE').call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -462,6 +487,8 @@ const EN_US_handlers = {
 
         this.emit(':responseReady');
     },
+
+    // https://formular.berlin.de/xima-forms-29/get/14963116144270000?mandantid=/OTVBerlin_LABO_XIMA/000-01/instantiationTasks.properties
     'DL_AufenthaltstitelIntent': function () {
         let say = 'Hello from DL_AufenthaltstitelIntent. ';
 
@@ -476,6 +503,11 @@ const EN_US_handlers = {
 
     //TODO: what to do with *staatenlos, ungeklärt Syr/Kurd/Palästinenser (Siehe JSON_semi ready)
     // how to handle côte d'Ivoire (Ivory coast, Elfenbeinküste), overseas territory
+    // list of nats w synonyms https://www.ef.com/english-resources/english-grammar/nationalities/
+
+    // TODO: you want to make a card that shows sth like the brie skill with autos and services related:
+    // https://developer.amazon.com/designing-for-voice/what-alexa-says/
+
     // 'DL_FahrerlaubnisIntent' : function () {
     //     // delegate to Alexa to collect all the required slots
     //     let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
@@ -525,10 +557,12 @@ const EN_US_handlers = {
 
         this.emit(':responseReady');
     },
+
+
     'DL_generalIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
-        let filledSlots = Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
+        let filledSlots = Helper.delegateSlotCollection('en-US').call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -565,6 +599,9 @@ const EN_US_handlers = {
         this.emit(':responseReady');
     },
     'ST_FutureTODOs': function () {
+
+        //TODO case- kirschen pflücken: geh auf https://mundraub.org/ - hat gute tips
+
         let say = 'Hello from ST_FutureTODOs. ';
 
         var slotStatus = '';
@@ -609,9 +646,55 @@ const EN_US_handlers = {
 
         this.emit(':responseReady');
     },
+
+    //This is the entry point of the conversation - trigger invocation name
     'LaunchRequest': function () {
+        // what does berlin sound like? http://www.dw.com/en/berlin-24-7-the-sound-of-berlin/a-42603411
+        //more info on using SSML:
+        //https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html#audio
         let startConversation = " OK <audio src='https://s3.eu-central-1.amazonaws.com/megantosh/RegioSound-48kbps.mp3' /> " +
             Helper.randomphrase(Speech.en.INTRO_GREETING_TEXT);
+
+
+
+        // //TODO experiment area
+        //
+        // console.log(Helper.buildHttpGetOptions("https://personal-assistent:AlexaAlexa0815.@newsreel-edu.aot.tu-berlin.de/solr/", "d115/select?q=personalausweis&wt=json&indent=true", 443));
+        //
+        // console.log('this is more important');
+        //
+        // //console.log('https://personal-assistent:AlexaAlexa0815.@newsreel-edu.aot.tu-berlin.de/solr/d115/select?q=personalausweis&wt=json&indent=true');
+        //
+        // console.log(Helper.httpGet(Helper.buildHttpGetOptions("https://personal-assistent:AlexaAlexa0815.@newsreel-edu.aot.tu-berlin.de/solr/", "d115/select?q=personalausweis&wt=json&indent=true", 443)));
+        //
+        // console.log(getAstrosHttp(data));
+        //
+
+
+
+        // getAstrosHttp((data) => {
+        //
+        //     var outputSpeech = `There are currently ${data.response.length} astronauts in space. `;
+            // for (var i = 0; i < data.people.length; i++) {
+            //     if (i === 0) {
+            //         //first record
+            //         outputSpeech = outputSpeech + 'Their names are: ' + data.people[i].name + ', '
+            //     } else if (i === data.people.length - 1) {
+            //         //last record
+            //         outputSpeech = outputSpeech + 'and ' + data.people[i].name + '.'
+            //     } else {
+            //         //middle record(s)
+            //         outputSpeech = outputSpeech + data.people[i].name + ', '
+            //     }
+            // }
+        //
+        //     this.emit(':tell', outputSpeech);
+        // })
+
+
+
+
+
 
         this.response
         this.emit(':ask', startConversation, 'did that just work?');
@@ -622,13 +705,55 @@ const EN_US_handlers = {
         this.response
             .speak(Helper.randomphrase(Speech.en.INTRO_UNHANDLED_TEXT))
             .listen(Helper.randomphrase(Speech.en.INTRO_UNHANDLED_TEXT));
-    }};
+    }
+    };
 
 
 // ====== End of Skill ==============================================================================================
 
 
+function getAstrosHttp(callback) {
+    //http://api.open-notify.org/astros.json
+    //http://newsreel-edu.aot.tu-berlin.de/solr/d115/select?q=personalausweis&wt=json&indent=true
+    var options = {
+        //host: 'api.open-notify.org',
+        host: "newsreel-edu.aot.tu-berlin.de/solr/",
+        port: 80,
+        //path: '/astros.json',
+        path: "d115/select?q=personalausweis&wt=json&indent=true",
+        method: 'GET',
+        auth: "personal-assistent:AlexaAlexa0815."
+    };
+//
+//     var username = 'personal-assistent';
+//     var password = 'AlexaAlexa0815.';
+//     var auth = 'Basic ' + Buffer.from(username + ':' + password).toString('base64');
+// // new Buffer() is deprecated from v6
+//
+// // auth is: 'Basic VGVzdDoxMjM='
+//
+//     var header = {'Host': 'https://newsreel-edu.aot.tu-berlin.de/solr', 'Authorization': auth};
+//     var request = client.request('GET', '/', header);
 
+    // var req = http.request(options, res => {
+    var req = http.request(options, res => {
+        res.setEncoding('utf8');
+        var returnData = "";
+
+        res.on('data', chunk => {
+            returnData = returnData + chunk;
+        });
+
+        res.on('end', () => {
+            var result = JSON.parse(returnData);
+
+            callback(result);
+
+        });
+
+    });
+    req.end();
+}
 
 
 

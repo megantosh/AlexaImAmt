@@ -147,6 +147,80 @@ Flüchtlinge im Sinne von § 23 Abs. 4 S. 1 AufenthG</li></ul>",
 
 \clearpage
 
+
+deep learning:
+
+There’s an obvious problem with applying deep learning to language. It’s that words are arbitrary symbols, and as such they are fundamentally different from imagery.
+https://www.technologyreview.com/s/602094/ais-language-problem/
+. Two words can be similar in meaning while containing completely different letters, for instance; and the same word can mean various things in different contexts.
+
+
+
+
+
+%\footnote{\url{https://developer.amazon.com/docs/custom-skills/request-and-response-json-reference.html#request-body-syntax}}
+\begin{figure}[h]
+	\caption[HTTPS Request Body]{Request Body Syntax}
+	\label{jsonFromAlexa}
+	\begin{minted}{json}
+	{
+	"version": "1.0",
+	"session": {
+	"new": true,
+	"sessionId": "amzn1.echo-api.session.[unique-value]",
+	"application": {
+	"applicationId": "amzn1.ask.skill.[unique-value]"
+	},
+	"attributes": {
+	"key": "string value"
+	},
+	"user": {
+	"userId": "amzn1.ask.account.[unique-value]",
+	"accessToken": "Atza|AAAAAAAA...",
+	"permissions": {
+	"consentToken": "ZZZZZZZ..."
+	}
+	}
+	},
+	"context": {
+	"System": {
+	"device": {
+	"deviceId": "string",
+	"supportedInterfaces": {
+	"AudioPlayer": {}
+	}
+	},
+	"application": {
+	"applicationId": "amzn1.ask.skill.[unique-value]"
+	},
+	"user": {
+	"userId": "amzn1.ask.account.[unique-value]",
+	"accessToken": "Atza|AAAAAAAA...",
+	"permissions": {
+	"consentToken": "ZZZZZZZ..."
+	}
+	},
+	"apiEndpoint": "https://api.amazonalexa.com",
+	"apiAccessToken": "AxThk..."
+	},
+	"AudioPlayer": {
+	"playerActivity": "PLAYING",
+	"token": "audioplayer-token",
+	"offsetInMilliseconds": 0
+	}
+	},
+	"request": {}
+	}
+	
+	\end{minted}
+\end{figure}
+
+
+
+
+
+
+
 %###################################################################################
 %###################### Appendix A          ########################################
 %###################################################################################

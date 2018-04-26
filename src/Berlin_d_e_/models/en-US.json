@@ -65,7 +65,7 @@
           ],
           "samples": [
             "how can i do my {Dienstleistung}",
-            "how do i {Dienstleistung}",
+            "{prerequisites} {Dienstleistung}",
             "i want to {Dienstleistung}",
             "i would like to {Dienstleistung}"
           ]
@@ -146,18 +146,21 @@
               "name": {
                 "value": "yes",
                 "synonyms": [
-                  "how costly is it",
-                  "how to",
                   "extended",
                   "renew",
                   "renewed",
                   "extend",
                   "how much does it cost to",
+                  "how costly is it",
                   "how do I",
+                  "how to",
+                  "how can I",
                   "hell yeah",
                   "why not",
                   "sure",
-                  "oh yeah"
+                  "oh yeah",
+                  "please do",
+                  "of course"
                 ]
               }
             }
@@ -183,7 +186,9 @@
                   "anmeldung",
                   "register my house",
                   "register myself",
-                  "house registration"
+                  "house registration",
+                  "get my Anmeldung done",
+                  "get my Anmeldung"
                 ]
               }
             }
@@ -1353,7 +1358,8 @@
               "name": {
                 "value": "Denmark",
                 "synonyms": [
-                  "danish"
+                  "danish",
+                  "dane"
                 ]
               }
             },
