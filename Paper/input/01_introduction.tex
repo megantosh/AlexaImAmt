@@ -150,8 +150,8 @@ In that respect, not only is region-specificity important, but also being able t
 Especially in businesses where it's difficult to hire skilled foreign-language speaking personnel, a voice assistant can overcome this challenge as it would communicate more accurately and will not have language problems.
 The customer is then given the option to avoid an inconvenient experience with the typical scenario with a call centre representatives where neither of both parties understands the other.
 For those who have minimal understanding of the language, there are possibly also options to provide help in the native language if the user is given the options he/she can answer a prompt with. At the very least, a VUI could still give feedback to the user of wether it understands the language or not, since algorithms for detecting a language are not as complex as answering the question once the language and its dialect (also known as locale) is deciphered. %understood.
-All of which are optimal use cases for ML approaches and algorithms such as term weighting discussed in section \ref{discussions} based on simpler approaches to localization from an original text, such the corpus-based mapping approach. WordNet is one such example. %Auch: Stammsprache,...refer to IRS lecture notes
-Finally, giving the user clues on what to answer with is also a helpful tool, as we will also discuss in bot design (chapter \ref{mainone})
+All of which are optimal use cases for ML approaches and algorithms such as term weighting discussed in Section \ref{discussions} based on simpler approaches to localization from an original text, such the corpus-based mapping approach. WordNet is one such example. %Auch: Stammsprache,...refer to IRS lecture notes
+Finally, giving the user clues on what to answer with is also a helpful tool, as we will also discuss in bot design (Chapter \ref{mainone})
 
 
 
@@ -159,7 +159,10 @@ Finally, giving the user clues on what to answer with is also a helpful tool, as
 %%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Analyzed Scenario}
-\href{https://www.berlin.de}{Berlin.de} is an online one-stop-shop for approximately 3,7 million residents of the German capital\cite{zensus} with \inote{hundreds/thousands} of visitors daily for information lookup, appointment bookings and even access to local news. As part of a federal modernization procedure with the help of the German Ministry of Interior, D115 was launched in 2009 \cite{d115} as a phone service to help residents find relevant information about a public service or municipality, something that can be tricky if a person has no overview of the local government structure and still not always easy even with the help of search engines nowadays with the array of public services provided.
+\href{https://www.berlin.de}{Berlin.de} is an online one-stop-shop for approximately 3,7 million residents of the German capital\cite{zensus} with thousands of visitors daily for information lookup, appointment bookings and even access to local news.
+%on its website
+%and particularly a few hunderds of which are users of the Virtual Citizen Assistant.
+As part of a federal modernization procedure with the help of the German Ministry of Interior, D115 was launched in 2009 \cite{d115} as a phone service to help residents find relevant information about a public service or municipality, something that can be tricky if a person has no overview of the local government structure and still not always easy even with the help of search engines nowadays with the array of public services provided.
 To promote information accessibility, D115 continuously aims at expanding its reach and services.
 It is therefore worth exploring, how to offer D115 services in a fashion that takes advantage of conversational abilities beyond its human personnel or online city portals. 
 \\
@@ -219,7 +222,7 @@ In the following thesis, we take these factors into consideration and narrow the
 voice assistants platforms like Siri, Bixby, etc. and frameworks such as Microsoft Azure Bot Framework, Amazon Lex and API.ai,
 and present a solution that caters for the local municipality of Berlin, Germany.
 
-For this we choose to present our solution using Alexa based on our criteria in section \ref{choiceOfPlatform}.
+For this we choose to present our solution using Alexa based on our criteria in Section \ref{choiceOfPlatform}.
 
 With an agile approach, we present functional code for running and deploying the aforementioned service on Amazon's voice assistant through a so-called ``Alexa Skill'' and analyse the strengths and weaknesses of choosing this platform. We start by exploring the available public services on \href{https://service.berlin.de}{https://service.berlin.de} 
 to understand how to implement our Skill. 
@@ -231,12 +234,13 @@ Further, we test the Skill using unit tests for the code and usability tests for
 In the code, we alread have the advantage of many small-talk abilities since we build on top of Alexa's existing and continually expanding database for question-answer models.
 \inote{mention that this could get you out of the skill in the pro/con section.}
 
+\sn{besser ganze Sätze,bullets tamam}
 In summary, these goals were defined for the system:
 
 \begin{itemize}
 	\item understand user's requests about public services through different sentence formulations
 	\item deliver relevant information based on the service requested
-	\item communicate with an endpoint that builds on the service catalogue of Berlin.de's ``Virtueller Service Assistent''
+	\item communicate with an endpoint that builds on the service catalogue of Berlin.de's ``Virtueller Bürgerassistent''
 	\item produce a scalable, modular system that can be extended in the future
 \end{itemize}
 
@@ -276,26 +280,33 @@ Further requirements are discussed in Chapter~\ref{mainone}.
 %DELETEME: This section does not require eloquent writing. It is just a presentation of what you will handle in each chapter starting with Chapter~\ref{background}.
 %
 
-This thesis endeavours to shed light on the following: In Chapter~\ref{background}, 
-we first introduce the Alexa platform and the idea behind Skills then discuss related work as currently available. Going beyond related work in the field, we show a few comparative %exemplary
-implementations for a chatbot and a voice assistant For that we consider \textbf{the City of Vienna chatbot service \href{https://www.wien.gv.at/bot/}{``WienBot''}} given that it also uses German and the Alexa Skill \textbf{``AskGeorgia''} for a comparison in English. We compare them to the current chatbot application ``Virtueller Service Assistent'' available on \href{https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}{service.berlin.de}, which we build our work on with the same underlying technology using Apache Solr.
+%This thesis endeavours to shed light on the following: 
+This thesis is organised as follows:
+In Chapter~\ref{background}, 
+we first introduce in section \ref{choiceOfPlatform} the available platforms and explain why we choose Amazon, going over the idea behind Alexa Skills.
+% then discuss related work as currently available. Going beyond 
+From there in section \ref{relatedWork} we show some related work according to our use case in the public sector %we show a few comparative %exemplary
+%implementations for 
+%in the form of a chatbot and a voice assistant in English- and German-speaking context. 
+for Vienna, Austria and Georgia, USA.
+We compare them to the current chatbot application ``Virtueller Bürgerassistent'' available on \href{https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}{service.berlin.de}, which we build our work on with the same underlying technology using Apache Solr.
 
 %for German and Singapore/ \href{http://www.govtech.com/7-State-or-Local-Governments-Using-Amazon-Alexa.html}{LA/...} for English} 
-In chapter~\ref{mainone} we introduce our design to the Skill and discuss how it can overcome a few struggles with respect to redundant boilerplate code, smalltalk abilities and briefly highlight some limitations on the system limitations. We also present the frameworks and Application Programming Interfaces (APIs) we use in our own implementation, the prerequisites and the artefacts provided initially through a breakdown into the following \inote{4}
-scenarios:
-\begin{itemize}
-	\item a general scenario of predefined categories related to any service \tocite{hier schon erwähnen? \inote{(prerequisites, costs, documents, ...)}}
-	\item special application on \textbf{Residence Registration} - ``Anmeldung einer Wohnung''
-	\item special application on \textbf{Applying for a Residence Permit} - mutliple services related to ``Aufenthaltstitel''
-	\item ``car registration'' -  special application on \textbf{Car Registration''} - multiple services  related to ``Kraftfahrzeug (KFZ)''
-%	\item[scenario 4] \inote{yet to be decided or if to implement}
-\end{itemize}
+In Chapter~\ref{mainone} we introduce our design to the Skill and discuss how it 
+%can overcome a few struggles with respect to 
+addresses
+redundant boilerplate code, smalltalk abilities and briefly highlight some limitations on the system limitations. We also present the frameworks and Application Programming Interfaces (APIs) we use in our own implementation, the prerequisites and the artefacts provided initially through a breakdown into several cases simulating common uses on Berlin's city portal.
+
 
 %its counterparts \inote{like , , but also limitations}. 
-Chapter ~\ref{maintwo} represents a detailed analysis of our implementation solution. In particular, how we deal with individual public services in the interaction model from front-end and back-end perspective, how we connect the web services together and analytically document the code structure, endpoints in addition to the deployment process. The related code is available on \href{https://www.github.com/megantosh/AlexaImAmt}{GitHub} \footnote{\url{https://www.github.com/megantosh/AlexaImAmt} \todo{make sure this is final URL and is public before printing}} with a digital copy attached to this work. 
+Chapter ~\ref{maintwo} 
+%represents a detailed analysis of 
+explains our implementation solution. We elaborate in particular on how we deal with individual public services in the interaction model from front-end and back-end perspective, how we connect the web services together and analytically document the code structure, endpoints in addition to the deployment process. The related code is available on \href{https://www.github.com/megantosh/AlexaImAmt}{GitHub} \footnote{\url{https://www.github.com/megantosh/AlexaImAmt} \todo{make sure this is final URL and is public before printing}} with a digital copy attached to this work. 
 
 Chapter~\ref{evaluation} evaluates our implementation with respect to our target in the defined %\inote{4-5} 
 use cases. We base our evaluation models on a survey we conduct that helps us specify requirement details, as well as automated tests provided by the framewor we use in addition to usability, performance and unit tests. 
-In Chapter~\ref{conclusion}, we conclude with how the implementation of this e-Government solution is attainable through Alexa and where future works can be directed. 
+
+In Chapter~\ref{conclusion}, we conclude the work focusing on how our implementation %of this e-Government solution 
+is attainable through Alexa and where future works can be directed for an e-Government solution.
 %Chapter~\ref{appendices} gives additional related information on the topic of this thesis.}
 %to head

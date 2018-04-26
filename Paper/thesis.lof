@@ -1,9 +1,9 @@
 \select@language {UKenglish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Interaction between AWS modules in the use case of a ``Coffee Bot'' based on reference \cite {aws:lex_webinar} \relax }}{16}{figure.caption.14}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - Primary Nodes\relax }}{23}{figure.caption.23}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - secondary Nodes\relax }}{23}{figure.caption.24}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Interaction Between AWS Modules (Coffee Bot)}}{17}{figure.caption.22}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - Primary Nodes\relax }}{24}{figure.caption.31}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - secondary Nodes\relax }}{24}{figure.caption.32}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

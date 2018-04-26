@@ -299,7 +299,12 @@ function slotHasValue(request, slotName) {
 
 
 
-//TODO twilio SMS, book appointment page, ...
+//TODO twilio SMS with link to book appointment page (CAPTCHA is in the way),
+
+//TODO parser to tell alexa which is the next free appointment...
+//this is possible with the class calendar on the website
+// siehe Note #hhibody > div:nth-child(3) > div.collapsible-body > div.calendar-table > div.row-fluid
+
 
 
 

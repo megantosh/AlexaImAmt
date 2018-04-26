@@ -3,6 +3,12 @@
 
 \section{Setup}
 
+\subsection{requirements}
+
+for audio
+ffmpeg -i <input-file> -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 <output-file.mp3>
+
+
 HTTP(S) endpoint:
 \url{http://newsreel-edu.aot.tu-berlin.de/solr/#/d115}
 
@@ -14,6 +20,20 @@ We analyze the output of Virtueller Bürgerassistent and realize it makes less s
 
 Then we move on to the interaction model. On paper, we draft the use-cases to determine what are our intents first to group these into fewer intents than the services we have. Given that there are many public services related to a similar case, we design our Skill to make it possible to group them into less intents. The advantage of this is that it allows us to at least have fewer 'ServiceIntents' than the ever growing number of services, which means that we want to also be able to track new services as they get inserted into the catalogue to be able to either map them to old intents by extending these, or to introduce new intents if this does not work.
 
+
+
+\todo{ moved from intro\\
+
+
+our now more than \inote{4}
+scenarios:
+\begin{itemize}
+	\item a general scenario of predefined categories related to any service \tocite{hier schon erwähnen? \inote{(prerequisites, costs, documents, ...)}}
+	\item special application on \textbf{Residence Registration} - ``Anmeldung einer Wohnung''
+	\item special application on \textbf{Applying for a Residence Permit} - mutliple services related to ``Aufenthaltstitel''
+	\item ``car registration'' -  special application on \textbf{Car Registration''} - multiple services  related to ``Kraftfahrzeug (KFZ)''
+	%	\item[scenario 4] \inote{yet to be decided or if to implement}
+\end{itemize}}
 
 \section{Code Analysis}
 

@@ -7,7 +7,7 @@
 %DELETEME: This chapter will cover all of your background information and related work. Background and related work are directly related to your thesis. Please do not place irrelevant content here which is a common mistake. Citing will be handled in the appendices.
 
 In this chapter we discuss Amazon's state-of-the-art strategy before moving on to related work in other archetypes as it is important to introduce the implementation scope of voice assistants bottom-up prior to exploring the current context within the same boundaries of voice assistants then compare it to other approaches in the larger context of conversational bots as a whole from a technical and user experience point of view. We start with a juxtaposition of Voice User Interface (VUI) to the Graphical User interface (GUI) respective to cognition and behavioural design which gets us to define new terminological foundation that will follow throughout this thesis.
-%moved to chapter 3: to then elaborate on implementation requirements in section \ref{frameworks_structs}. 
+%moved to chapter 3: to then elaborate on implementation requirements in Section \ref{frameworks_structs}. 
 
 
 %DELETEME: Background represents underlying knowledge that is required to understand your work. The expected knowledge level of your readers can be set to the one of a bachelor or master student who just finished his studies (depending on what kind of thesis you are writing). This means that you do not need to describe how computers work, unless your thesis topic is about this. Everything that an avarage alumni from your field of studies should know does not need to be described. It turn, background information that is very complex and content-wise very near to you problem, can be placed in the main parts. Everyting else should be written here. Note: it is important to connect each presented topic to your thesis. E.g. if you present the ISO/OSI layer model you should also write that this is needed to understand the protocols you plan to develop in the main parts.
@@ -19,27 +19,34 @@ In this chapter we discuss Amazon's state-of-the-art strategy before moving on t
 
 \section{GUI vs. VUI} 
 
-Visuals and Sounds can both communicate the same message even though the medium used is completely different. One one hand, the premise that ``a picture is worth a thousand words'' can be valid based on the image but only assumes that we want to give a clear image to the receiver. Communication through voice, on the other hand, can generally allow more room for interpretation. We think of an example where you would watch a football game on TV vs. the same game on radio, where listening to it allows each person in the audience group to imagine a different game for themselves, even though the match result are the same.
+Visuals and Sounds can both communicate the same message even though they use a  completely different medium. One one hand, the premise that ``a picture is worth a thousand words'' can be valid based on the image but only assumes that we want to give a clear picture to the receiver. Communication through voice, on the other hand, can generally allow more room for interpretation. We think of an example where you would watch a football game on TV vs. the same game on radio, where listening to it allows each person in the audience group to imagine a different game for themselves, even though the match result are the same.
 
 
 %%%Image
 
-When we use written text, be it in a document or a street sign, or any label, we seek to mostly assure that all receivers understand the same message with a universal codification of what we want to express through the language we use. In this process, language becomes the common ground for understanding and the short written text becomes purposefully designed to give in the best case a message not open to interpretation and so a foundation for an agreement or contract between the source and the destination of the message. It is a good medium of reference. 
+When we use written text, be it in a document or a street sign, or any label, we seek to mostly assure that all receivers understand the same message with a universal codification of what we want to express through the language we use. In this process, language becomes the common denominator for understanding and the short written text becomes purposefully designed to give in the best case a message not open to interpretation and so a foundation for an agreement or contract between the source and the destination of the message. It is a good medium of reference. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %voice message in airport - you can do your activity unobstructed
 %%%%%%%%%%%%%%%%%%%%%
+\subsection{Utility of Voice}
 The utility of Voice comes handy with a different paradigm in numerous settings. 
-Say you are at an airport and want to catch your flight, or rushing to catch a meeting. Would it not be more effective to ask someone on the information you need quickly if you can ask it in a precise sentence quicker than you would write it, or visually navigate on a web page / app till you reach the information you want? Also, in terms of accessibility, blindness could sometimes make voice the only possible way to navigate or be aware of one's surroundings, e.g. a blind person crossing a street depends on the sounds coming from cars and traffic lights.
+For a passenger at the airport or between meeting rooms in an office, 
+%it is equally as helpful 
+%as it would be for a  rushing to a meeting.
+it can be more effective to ask questions through conversation than transform them into a query then type them on a screen,
+%someone about the information you need quickly if you can ask it in a precise sentence quicker than you would write it, 
+or visually navigate on a web page / mobile application until we reach the information we want. 
+Also, in terms of accessibility, blindness could sometimes make voice the only possible way to navigate or be aware of one's surroundings, e.g. a blind person crossing a street depends on the sounds coming from cars and traffic lights.
 In that sense, voice can allow people to do their activities free-handed and unobstructed by actively engaging into reading activity, for instance having to look on a screen.
 As our ambitions in connectivity become more complex, we have become more dependent on our phones in the last decade.
 This is where use of a Voice User Interface could have the advantage of liberate us from the constant usage of our smartphones and moving from one screen to another. 
 However, it is noteworthy that the trade-off between information exchange visually and through audio comes at a price. While both have their own advantages and disadvantages, it is important to understand that the context in which the medium is used is an important factor.
 
-Hence, we need to differentiate between GUI design an that of a VUI. Since  we come froma GUI background thanks to the World Wide Web standards with HTML and CSS, it might not be most intuitive to apply the same concepts on VUI design simply since we start from the mindset that the GUI dictates how to use the software and the user has to understand this interface and deal with it as is.
+Hence, we need to differentiate between GUI design and that of a VUI. Since  we come from a GUI background thanks to the World Wide Web standards with HTML and CSS, it might not be most intuitive to apply the same concepts on VUI design simply since we start from the mindset that the GUI dictates how to use the software and the user has to understand this interface and deal with it as is.
 
 
-\todo{If this needs more explanation, start a sentence like this: ``Imagine you have an intent resembling the label on th button for ``ok''. with a function linked to it to perform a commit action, ...''}
+
 
 \todo{It's important to understand that we are at the beginnings of VUI design, but are making progress, e.g. VUIs - should become seamless in an approach like this: \href{https://techcrunch.com/2017/08/30/amazon-and-microsoft-agree-their-voice-assistants-will-talk-to-each-other/}{Amazon and Microsoft agree their voice assistants will talk (to each other)}\\
 - additional plugins are in the making, giving individual touch of sound based on profile (Alexa Podcast on the way to BXL)\\
@@ -50,6 +57,7 @@ Hence, we need to differentiate between GUI design an that of a VUI. Since  we c
 
 
 \inote{is this okay here or should it go in an appendix?}
+\sn{andreas doesn't like to have more work done in this part. maybe put some of it in conclusion or remove completely, but i know you won't lol}
 \todo{
 	- \textbf{Why can't robots understand us:} language ambiguities - the need to understand context\\
 --Syntactical: Homonyme\\ %fly, fly,  presently I’ll present you a present - now, give, gift
@@ -67,25 +75,45 @@ and puns\\
 
 
 
-Yet, although it might seem at the beginning that moving between both paradigms is easy, the more detailed system design gets, the trickier it becomes to transform GUI elements into text. Particularly with long texts. We will go over this in more detail about voice design guidelines in section \ref{designGuide}.
+Yet, although it might seem at the beginning that moving between both paradigms is easy, the more detailed system design gets, the trickier it becomes to transform GUI elements into text. Particularly with long texts. We will go over this in more detail about voice design guidelines in Section \ref{designGuide}.
 
-Having the interface disappear is therefore a game changer for as soon as the users does not have direct instructions on how to deal with it, they start to improvise, or rather move away from the idea that the interface constrains them to the illusion that they define that interface and can control it. For instance, the user knows that they have to press only on a certain area of the screen to activate a button and actively move the mouse to that part. In voice, the user is uninhibited in what they say and the system has to understand the \textit{intention}%~\ref{intents} 
+\subsection{VUI Semantics}
+
+Having the visual or haptic interface disappear is therefore a game changer for as soon as the user does not have direct instructions on how to deal with it, they start to improvise, or rather move away from the idea that the interface constrains them to the illusion that they define that interface and can control it. For instance, the user knows that they have to press only on a certain area of the screen to activate a button and actively move the mouse to that part. 
+%Parallel to this in GUI; 
+In other words,
+when a user sees a  `save' button on a dialogue box, they relate to it in their head that the functionality behind that button lies in committing and keeping a persistent copy of the current state of the parent file to that dialogue. The label `save' describes in a visually expressive fashion what the user can or cannot do within this \textit{dialogue state}.
+
+
+%Imagine you have an intent resembling the label on th button for ``ok''. with a function linked to it to perform a commit action, ...''}
+%  
+
+In voice on the contrary, a user is uninhibited in what they can and cannot say and the system is supposed to understand the \textit{intention}%~\ref{intents} 
 of the user with \textit{the formulation}%~\ref{utterances} 
- they just used. 
-For us to hold on to that sentence, we need to define the lexis we use for voice design. 
-Just like most common chat bot constructs, Alexa Skills Kit (ASK) divides the building model into intents%~\ref{intents}
+they just used.
+
+%For us to hold on to that sentence, 
+In order to translate the aforementioned with less ambiguity, we need to define the lexis we use for voice design utilized in most common chatbot and voice assistants constructs. 
+%Just like most common chatbot constructs, Alexa Skills Kit (ASK) 
+We divide the building model into intents%~\ref{intents}
 , utterances%~\ref{utterances}
-and slots %~\ref{slots}. 
-The Fulfilment part is taken care of through a back-end endpoint containing the programming and business logic to the interface, which also validate the slots before sending it onwards, similar to what JavaScript checks would do on a website. We make the following words clear:
+ and slots %~\ref{slots}. 
+The Fulfilment part is taken care of through a back-end endpoint containing the programming and business logic to the interface, which also validate the slots before sending it onwards, similar to what JavaScript checks would do on a website. %We make the following words clear:
 
+\sn{Andreas suggests hochstufen - clear split required?}
+\subsection{Terminology}
+Before we discuss later our choice of platform, we already unveiled in Chapter \ref{introduction} that Alexa will be the underlying system. Thus we cap the elementary definitions of voice assistants with distinct Alexa-specific concepts
 
-\subsection{Terminology} 
-\begin{itemize}
-	\item[intent]~\label{intents} The intention the user pursues with a spoken sentence. This translates to the action being executed upon the user's command based on mapping his/her words to this action.
+We give meaning to the terms: 
+
+\subsubsection*{Intent}~\label{intents}
+As the intention the user pursues with a spoken sentence. This translates to the action being executed upon the user's command based on mapping his/her words to this action.
 	
-	\item[utterance]~\label{utterances} the wording a user picks to express his intent. For instance, to set the volume on a TV to quieter, we could say ``turn it down a nudge'', ``It's too loud'' or ``lower the volume''. Although all three sentences have the same meaning, linguistically, they are fully unrelated and only context makes us understand them, e.g. we have to know that ``it'' refers to the TV set in close proximity.
+	\subsubsection*{Utterance}~\label{utterances}
+	As the wording a user picks to express his intent. For instance, to set the volume on a TV to quieter, we could say ``turn it down a nudge'', ``It's too loud'' or ``lower the volume''. Although all three sentences have the same meaning, linguistically, they are fully unrelated and only context makes us understand them, e.g. we have to know that ``it'' refers to the TV set in close proximity.
 	
-	\item [slot]~\label{slots} a variable fo a certain type we define in our programme that belongs to a category of items. For instance, when someone says they would like to order a \textit{big} coffee, they assume that there is the option to have a small coffee, too. And so big and small refer both to the size of the coffee. Programmatically, we define \lstinline|big| and \lstinline|small| to be of type \lstinline|size| of the coffee. Similarly, if there is the option to order a tea and a Cappuccino, it would be only fair to define \lstinline|cappuccino| and \lstinline|tea| to be of type \lstinline|beverage|. Consequently, \textbf{slots} can be defined to any part of the sentence, where a parameter (here beverage or size) can be grouped into \textbf{slot types}. 
+	\subsubsection*{Slot}~\label{slots}
+	As a variable fo a certain type we define in our programme that belongs to a category of items. For instance, when someone says they would like to order a \textit{large} coffee, they assume that there is the option to have a small coffee, too. And so large and small refer both to the size of the coffee. Programmatically, we define \mintinline{java}{large} and \mintinline{java}{small} to be of type \mintinline{java}{size} of the coffee. Similarly, if there is the option to order a tea and a Cappuccino, it would be only fair to define \mintinline{java}{cappuccino} and \mintinline{java}{tea} to be of type \mintinline{java}{beverage}. Consequently, \textbf{slots} can be defined to any part of the sentence, where a parameter (here beverage or size) can be grouped into \textbf{slot types}. 
 
 %\end{itemize}
 	
@@ -97,8 +125,8 @@ The Fulfilment part is taken care of through a back-end endpoint containing the 
 	\underbrace{would \ like  \ to \ have}_\text{predicate} \cdot
 	\underbrace{
 		\overbrace{{a}}^\text{number of items} +		
-		\overbrace{big}_\text{size} +
-		\overbrace{coffee.}^\text{beverage}
+		\overbrace{large}_\text{size} +
+		\overbrace{cof \! fee.}^\text{beverage}
 	}_\text{object} 
 	\]
 	
@@ -108,7 +136,7 @@ The Fulfilment part is taken care of through a back-end endpoint containing the 
 	\[
 	\overbrace{My \ brother} \cdot
 	\overbrace{wants \ to \ order} \cdot
-	\overbrace{ a + tall + coffee.}
+	\overbrace{ a + tall + cof\!fee.}
 	\]
 	
 	it is not important to they system to understand at this stage who is going to drink the coffee. It should be more concerned with the intent; making the coffee, e g. sending a signal or instruction to a coffee machine.
@@ -116,9 +144,18 @@ The Fulfilment part is taken care of through a back-end endpoint containing the 
 	Ultimately, it is up to us to draw the line on where we want to define a variable slot, that is relevant to the sentence being said by the user in context at a certain time in the conversation flow and where certain sentences would be as a whole giving the same intent
 	
 	
-	\item[synonym] a word that has the same meaning of another word that fills a slot. For instance, if we assume that a user says ``I want a \textbf{cup of jolt}'' they system should still be able to understand that they want a standard coffee. If, however, the user defines the type of coffee beans they want, such as `java' or `arabica', the system should still be able to differentiate between these and not consider them both as the plain `standard coffee', fulfilling a different intent. 
-		
-\end{itemize}
+	\subsubsection*{Synonym}
+	As a word that has the same meaning of another word that fills a slot. For instance, if we assume that a user says ``I want a \textbf{cup of jolt}'' they system should still be able to understand that they want a standard coffee. If, however, the user defines the type of coffee beans they want, such as `java' or `arabica', the system should still be able to differentiate between these and not consider them both as the plain `standard coffee', fulfilling a different intent. 
+	
+	\subsubsection*{Dialogue State}
+	
+	\subsubsection*{Dialogue Directives}
+	
+	\subsubsection*{Over-answering}
+	
+	\subsubsection*{Entity Resolution}	
+
+	\subsubsection*{Persistence}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\todo{
@@ -132,29 +169,32 @@ The Fulfilment part is taken care of through a back-end endpoint containing the 
 %	- different screens, different mobile experiences and what does it mean
 %}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sn{muss evtl weg}
 With these introductory definitions we try to lay out a foundation for a standard, which is still in an experimental phase. Much like when tablets and smartphones were introduced to the market, the languages and framework used to render GUIs for the users had to adapt, e.g. with HTML5 and CSS3. In that transition, the experimental phase can be considered when browsers had to render a different page depending on the client. It started with a certain few screen resolutions that can be fixed, to offering a desktop and a mobile version and finally to the spreading of responsive design, the MPEG4 H.264 codec for video and so forth. When screen sizes and aspect ratios became also so diverse that it was hard to keep track of, website designers saw the importance of using different relative measuring units to present the website correctly (e.g. percentages for CSS classes, ems for fonts, etc.)
 
 
-Since we mention context, in voice design we notice that the essence of an implementation lies in being able to think with a user mindset. In that respect, the developer of a voice design automatically becomes a designer to some extent. Part of that process is to understand where and when is the user going to request a certain intent. This helps us figure out how to offer the best user experience. For instance, it can be sometimes more effective to integrate the GUI inside the VUI, where the user gets to see relevant images, text or other elements related to the spoken responses by the visual assistant.
+Since we mention context, in voice design we notice that the essence of an implementation lies in being able to think with a user mindset. In that respect, the developer of a voice design automatically becomes a designer to some extent. Part of that process is to understand where and when is the user going to request a certain intent. This helps us figure out how to offer the best user experience. For instance, it can be sometimes more effective to integrate the GUI inside the VUI, where the user gets to see relevant images, text or other elements related to the spoken responses by the visual assistant.\\
 
 
-As we present our solution in the Alexa environment, we would like to familiarize ourselves with further terms that apply specifically to that platform. This is a prerequisite to understand the script building the interaction model with the user and helps us understand the code templates provided throughout the development process. % and is represented in a JSON format
-For more information, please visit the Alexa Skill Design Guide at
+\todo{just a carriage return or add title? want to introduce here interaction model, dialog state, persistence, ...}
 
-\noindent \url{https://developer.amazon.com/docs/custom-skills/create-the-interaction-model-for-your-skill.html}\\
-and\\
-\noindent
-\url{https://developer.amazon.com/docs/smapi/interaction-model-schema.html}
+As we present our solution in the Alexa environment, we would like to familiarize ourselves with further terms that apply specifically to that platform. This is a prerequisite to understand the script building the \textit{interaction model} with the user and helps us understand the code templates provided throughout the development process. % and is represented in a JSON format
+For more information, please visit the \textsc{Alexa Skill Design Guide.} \footnote{ \url{https://developer.amazon.com/docs/custom-skills/create-the-interaction-model-for-your-skill.html} and\\
+	\noindent
+	\url{https://developer.amazon.com/docs/smapi/interaction-model-schema.html}}
+
+
 We cover here an excerpt of basic elements that we will later see more or less in the same structure of the JSON file containing the interaction model:
 
 
 
-\todo{explain json (this and LeiKa's) zu Ende\\
+\todo{close paragraph above\\
+explain json (this and LeiKa's) zu Ende\\
 mention Alexa Voice Service and Products\\}
 
 \begin{table}[h]
-\caption{\href{https://developer.amazon.com/docs/smapi/interaction-model-schema.html}{Interaction Model Schema (Skill Management API)~\cite{alexaDesignGuide} }}\label{interactionModel}
-	\begin{tabularx}{\textwidth}{|l | l l l }
+\caption[Interaction Model Schema]{\href{https://developer.amazon.com/docs/smapi/interaction-model-schema.html}{Interaction Model Schema (Skill Management API)~\cite{alexaDesignGuide} }}\label{interactionModel}
+	\begin{tabularx}{\textwidth}{|l | l l l | }
 	Field	&	Type	&	Description		&	Required \\ \hline
 \lstinline|languageModel| &	object	& Conversational primitives for the skill	& yes\\
 \_\_\lstinline|invocationName| &	object	& Invocation name of the skill	& yes\\
@@ -173,7 +213,7 @@ prompts & & & \\
 \_\_ id  & & & \\
 \_\_\_\_variations  & & & \\
 \_\_\_\_\_\_type  & & & \\
-\_\_\_\_\_\_value  & & & \\
+\_\_\_\_\_\_value  & & & \\ \hline
 			
 	\end{tabularx}			
 \end{table}
@@ -195,7 +235,9 @@ prompts & & & \\
 %#################################################################################
 \section{State of the Art}
 
-
+\sn{intro sentence}
+\todo{remove much from above \\
+start with "proceding with Alexa, we introduce the backbone that operates it ...}
 \subsection*{Amazon Web Services (AWS) + Alexa}
 
 
@@ -205,7 +247,7 @@ As throughout the course of this thesis these major changes occurred, %including
  we will go over the workarounds and circumventions to retain a working version of the software we present, discuss
 
 \subsubsection*{AWS}
-Amazon Web Services is a Cloud Computing service provider with a complete set of services to help build and run web applications ``reliably and securely at a cost and scale'' according to one's independent needs. \cite{aws_website}
+Amazon Web Services is a Cloud Computing service provider with a complete set of services to help build and run web applications ``reliably and securely at a cost and scale'' according to one's independent needs \cite{aws_website}.
 It comes with agile abilities to adjust to various solution at a flexible scheme with benefits like multiple server farms globally (operating under different legal contracts with respect to data security and user privacy), caching, NoSQL, DevOps and so forth.
 
 
@@ -216,7 +258,7 @@ So far, though the separation of AWS and Alexa's environments is not linguistica
 
 %\cleardoublepage
 
-\subsubsection*{Alexa's AWS Modules \inote{make logos as minipage objects or set as table / problem with footnotes}}
+\subsection{AWS Modules as Alexa's Building Blocks \inote{make logos as minipage objects or set as table / problem with footnotes}}
 %\inote{in print, make sure the following list goes on a spread (odd then even page number) with the image at the end of it for clarity}
 
 listed in sequential order of importance, Alexa's service modules include but are not limited to: 
@@ -226,37 +268,37 @@ listed in sequential order of importance, Alexa's service modules include but ar
 	\item[\href{https://aws.amazon.com/lex/}{\textbf{Lex}} \footnote{\url{https://aws.amazon.com/lex}}] \textit{for conversational interfaces using Natural Language Understanding, Text-to-Speech and Speech-to-Text} \\
 	``a service for building conversational interfaces into any application using voice and text''\cite{aws_website}.
 	While Lex is the most important backbone to make Alexa possible and can be a main operator of another software package to create a whole new category of voice assistants and conversational bots independent from Alexa, Siri etc., development for Lex was not available in German at the time of this research. We therefore decide to use the Alexa Skills Kit, which take advantage of Lex and the other components described below. Lex and Alexa use the same deep learning techniques for natural language processing with the workflow described with the example in figure \ref{lex_interactionExample}. For more information on Lex and its difference to Alexa, please refer to Annex \ref{lexAlexa}.
-	
-	\begin{restoretext}
-		\begin{flushright}
-
-			\includegraphics[width=1cm,height=1.1cm]{awslogos/lexlogo}
-		\end{flushright}
-
-	\end{restoretext}
+%	
+%	\begin{restoretext}
+%		\begin{flushright}
+%
+%			\includegraphics[width=1cm,height=1.1cm]{awslogos/lexlogo}
+%		\end{flushright}
+%
+%	\end{restoretext}
 
 	
 	
 	\item[\href{https://aws.amazon.com/polly/}{\textbf{Polly}} \footnote{\url{https://aws.amazon.com/polly}}] \textit{for speech synthesis\\}
 	another ``service turn[ing] text into lifelike speech, allowing [developers] to create applications that talk'' \cite{aws_website} wile harnessing the power of deep learning. It is more or less the mouthpiece of Alexa built on top of speech synthesis algorithms.
 	
-	
-	\begin{restoretext}
-		\begin{flushright}
-		\includegraphics[width=1.06cm,height=0.9cm]{awslogos/pollylogo}
-		\end{flushright}
-	\end{restoretext}
+%	
+%	\begin{restoretext}
+%		\begin{flushright}
+%		\includegraphics[width=1.06cm,height=0.9cm]{awslogos/pollylogo}
+%		\end{flushright}
+%	\end{restoretext}
 	
 	
 	\item[\href{https://aws.amazon.com/transcribe/}{\textbf{Transcribe}} \footnote{\url{https://aws.amazon.com/transcribe}}] \textit{for automatic speech recognition using Speech-to-Text}\\
 	which ``makes it easy for developers to add speech-to-text capability to [...] applications'' \cite{aws_website}. With Transcribe we are able to get text out of the user's voice before passing it into a format Alexa's backend would understand.
 	
-	
-	\begin{restoretext}
-\begin{flushright}
-	\includegraphics[width=1.2cm,height=0.9cm]{awslogos/transcribelogo}
-\end{flushright}
-	\end{restoretext}
+%	
+%	\begin{restoretext}
+%\begin{flushright}
+%	\includegraphics[width=1.2cm,height=0.9cm]{awslogos/transcribelogo}
+%\end{flushright}
+%	\end{restoretext}
 	
 \todo{don't mention I'm using lambda until design chapter 3}
 
@@ -264,54 +306,68 @@ listed in sequential order of importance, Alexa's service modules include but ar
 	Although Lambda is a versatile ``service [built] for a variety of real-time serverless data processing systems'' \cite{aws_website}, \inote{we use it / it can be used} as an integrated server instance to host our back-end code for intent fulfilment%\ref{intent_fulfilment}.
 	We might as well use just any other privately or cloud-based server solution to host our code and use it as an endpoint for our software, however choosing Lambda takes away the overhead of linking the front-end with the back-end of the program we develop (an Alexa Skill as we describe below). 
 	
-	
-	\begin{restoretext}
-\begin{flushright}
-	\includegraphics[width=0.8cm,height=0.9cm]{awslogos/lambdalogo}
-\end{flushright}
-	\end{restoretext}
+%	
+%	\begin{restoretext}
+%\begin{flushright}
+%	\includegraphics[width=0.8cm,height=0.9cm]{awslogos/lambdalogo}
+%\end{flushright}
+%	\end{restoretext}
+%
+
+
+
+
+\item[\href{https://aws.amazon.com/dynamodb/}{\textbf{DynamoDB}} \footnote{\url{https://aws.amazon.com/dynamodb}}] \textit{for persistence storage}\\
+acting as a nosql database table ...Although Lambda is a versatile ``service [built] for a variety of real-time serverless data processing systems'' \cite{aws_website}, \inote{we use it / it can be used} as an integrated server instance to host our back-end code for intent fulfilment%\ref{intent_fulfilment}.
+We might as well use just any other privately or cloud-based server solution to host our code and use it as an endpoint for our software, however choosing Lambda takes away the overhead of linking the front-end with the back-end of the program we develop (an Alexa Skill as we describe below). 
+
+
+
+\item[\href{https://aws.amazon.com/s3/}{\textbf{S3}} \footnote{\url{https://aws.amazon.com/s3}}] \textit{for resource storage}\\
+standing for simple storage service, ...Although Lambda is a versatile ``service [built] for a variety of real-time serverless data processing systems'' \cite{aws_website}, \inote{we use it / it can be used} as an integrated server instance to host our back-end code for intent fulfilment%\ref{intent_fulfilment}.
+We might as well use just any other privately or cloud-based server solution to host our code and use it as an endpoint for our software, however choosing Lambda takes away the overhead of linking the front-end with the back-end of the program we develop (an Alexa Skill as we describe below). 
 
 
 	\item[\href{https://aws.amazon.com/iam/}{\textbf{CloudWatch}} \footnote{\url{https://aws.amazon.com/cloudwatch}}]
 	\textit{for event logging}\\
-	CloudWatch acts like the console for an operating system. It monitors all low-level events happening within the AWS sphere. In combination with Lambda it comes as handy tool to log events resulting at runtime once a Lambda instance is called and its code being executed.
+	CloudWatch acts like the console for an operating system. It monitors all low-level events happening within the AWS sphere. In combination with Lambda it comes as handy tool to log events resulting at runtime once a Lambda instance is called and its code being executed and is used for debugging.
 	
 	
-	\begin{restoretext}
-\begin{flushright}
-	\includegraphics[width=1.26cm,height=0.9cm]{awslogos/cloudwatchlogo}
-\end{flushright}
-	\end{restoretext}
+%	\begin{restoretext}
+%\begin{flushright}
+%	\includegraphics[width=1.26cm,height=0.9cm]{awslogos/cloudwatchlogo}
+%\end{flushright}
+%	\end{restoretext}
 
 
 	\item[\href{https://aws.amazon.com/iam/}{\textbf{IAM}} \footnote{\url{https://aws.amazon.com/iam}}]
 	\textit{for identity access management within AWS}\\
 	Identity Access Management (IAM) is a secondary service module regulating in the Alexa context in combination with Lambda the routing rights between internal Amazon endpoints. It also ensures compliance policies are enforced within and between AWS modules, as well as between AWS modules and other external services.
-	
-	
-	\begin{restoretext}
-\begin{flushright}
-	\includegraphics[width=1.36cm,height=0.85cm]{awslogos/cognitologo}
-\end{flushright}
-	\end{restoretext}
+%	
+%	
+%	\begin{restoretext}
+%\begin{flushright}
+%	\includegraphics[width=1.36cm,height=0.85cm]{awslogos/cognitologo}
+%\end{flushright}
+%	\end{restoretext}
 
 
 	\item[\href{https://aws.amazon.com/cognito/}{\textbf{Cognito}} \footnote{\url{https://aws.amazon.com/cognito}}]
 	\textit{for identity access management beyond AWS}\\
 	like the rest of AWS's platform, Cognito is a scalable service module to perform user authentication and can be used in combination with an external endpoint instead of Lambda.
 	
-		\begin{restoretext}
-\begin{flushright}
-	\includegraphics[width=0.76cm,height=0.9cm]{awslogos/cognitologo_old}
-\end{flushright}
-	\end{restoretext}
+%		\begin{restoretext}
+%\begin{flushright}
+%	\includegraphics[width=0.76cm,height=0.9cm]{awslogos/cognitologo_old}
+%\end{flushright}
+%	\end{restoretext}
 	
 \end{enumerate}
 
 %\newpage
 
 \begin{figure}[h]
-	\caption{Interaction between AWS modules in the use case of a ``Coffee Bot'' based on reference \cite{aws:lex_webinar} }\label{lex_interactionExample}
+	\caption[Interaction Between AWS Modules (Coffee Bot)]{Interaction between AWS modules in the use case of a ``Coffee Bot'' based on reference \cite{aws:lex_webinar} }\label{lex_interactionExample}
 	\centering
 	\includegraphics[width=14.8cm]{workflows/awstools.png}
 \end{figure}
@@ -401,7 +457,7 @@ while the hardware models stated above are possibilities for testing, too, they 
 %DELETEME: Related work respresents results from work that handled the same or a similar problem that you are addressing. This work might have used a different approach or might not have been that successful. Finding a paper / work that solved your problem in the same way you were planning to do is not good and you should contact your supervizor for solving this issue. Again, each paper / work has to be connected to your approach: other papers might have not chosen an optimal solution; they might not have been taking care of essential aspects; they might have chosen a different approach and you believe, yours will work better ...
 
 \section{Related Work}
-
+\label{relatedWork}
 \todo{
 	
 	\textbf{eingehen auf}\\
@@ -412,7 +468,8 @@ while the hardware models stated above are possibilities for testing, too, they 
 While we have no access to AskGeorgia from the German Amazon Store, we use the US store. %tab3an di f amrika fal mawdou3 mokhtalef, bas el fekra here is el design not the exact content
 
 }
-
+\todo{
+For that we consider \textbf{the City of Vienna chatbot service \href{https://www.wien.gv.at/bot/}{``WienBot''}} given that it also uses German and the Alexa Skill \textbf{``\href{https://www.amazon.com/GeorgiaGov-Interactive-GTA-Ask/dp/B074XBQGTQ}{AskGeorgia}''} for a comparison in English.}
 
 \todo{move / remove what is irrelevant
 	In this section, we conduct a short survey of problems we can face with natural language
@@ -515,7 +572,7 @@ With Alexa as our choice, we agree to acknowledge the following considerations:
 
 
 \subsubsection*{Availability}
-
+\url{https://developer.amazon.com/docs/custom-skills/develop-skills-in-multiple-languages.html}
 We choose to offer our skill only in Germany because our Skill's functionality is specific only within this geographical region. For that we configure the Skill to handle English (US) and German.
 
 \begin{quotation}
@@ -576,7 +633,7 @@ We choose to offer our skill only in Germany because our Skill's functionality i
 %###################################################################################
 \section{The Analysed Scenario as a Use Case}
 
-\subsection*{D115 and The Currently Deployed ``Virtual Service Assistant''}
+\subsection*{D115 and The Currently Deployed ``Virtual Bürgerassistent''}
 \todo{
 	- summarize infobroschuere\_ BMI08324\_screen\_barrierefrei.pdf\\
 	-Use case im Detail\\
