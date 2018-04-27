@@ -8,18 +8,7 @@ const https = require("https");
 //alternatively, use fetch module in case of cookies handling, redirect etc
 //const fetchUrl = require("fetch").fetchUrl;
 
-const langStrings = require("alexa-sdk")
 
-exports.handler = function(event, context, callback) {
-    let alexa = Alexa.handler(event, context);
-    // was changed from alexa.APP_ID in old API
-    alexa.appId = APP_ID;
-
-    //alexa.resources = Speech.defaultSpokenStrings;
-
-
-
-}
 
 
 
@@ -229,7 +218,7 @@ exports.getSlotValues = function getSlotValues (filledSlots) {
 // This function delegates multi-turn dialogs to Alexa.
 // For more information about dialog directives see the link below.
 // https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html
-exports.delegateSlotCollection = function delegateSlotCollection(currentLocale) {
+exports.delegateSlotCollection = function delegateSlotCollection() {
     console.log("in delegateSlotCollection");
     console.log("current dialogState: " + this.event.request.dialogState);
 
@@ -241,14 +230,14 @@ exports.delegateSlotCollection = function delegateSlotCollection(currentLocale) 
         // for which you have defaults, then return Dialog.Delegate with this
         // updated intent in the updatedIntent property
 
-        disambiguateSlot(currentLocale).call(this);
+        disambiguateSlot.call(this);
         console.log("disambiguated: " + JSON.stringify(this.event));
         this.emit(":delegate", updatedIntent);
     } else if (this.event.request.dialogState !== "COMPLETED") {
         console.log("in not completed");
         //console.log(JSON.stringify(this.event));
 
-        disambiguateSlot(currentLocale).call(this);
+        disambiguateSlot.call(this);
         this.emit(":delegate", updatedIntent);
     } else {
         console.log("in completed");
@@ -263,11 +252,11 @@ exports.delegateSlotCollection = function delegateSlotCollection(currentLocale) 
 // the user for clarification. Disambiguate slot will loop through all slots and
 // elicit confirmation for the first slot it sees that resolves to more than
 // one value.
-function disambiguateSlot(currLoc) {
+function disambiguateSlot() {
     let currentIntent = this.event.request.intent;
+    let currentLocale = this.event.request.locale;
 
     Object.keys(this.event.request.intent.slots).forEach(function(slotName) {
-        let currentLocale = currLoc;
         let currentSlot = this.event.request.intent.slots[slotName];
         let slotValue = slotHasValue(this.event.request, currentSlot.name);
         if (currentSlot.confirmationStatus !== 'CONFIRMED' &&
@@ -283,15 +272,16 @@ function disambiguateSlot(currLoc) {
                 // specifically what type mini dog (small mini or tiny mini).
                 if ( currentSlot.resolutions.resolutionsPerAuthority[0].values.length > 1) {
 
-                    //TODO give based on language
-                    let localePrompt;
+                    //give based on language
+                    let prompt;
+                    if (currentLocale == 'en-US') {
+                        console.log('looking for disambiguations in english')
+                        prompt = 'Which would you like';
+                    } else if (currentLocale == 'de-DE') {
+                        console.log('wir suchen disambiguations auf deutsch')
+                        prompt = 'ich habe mehrere Treffer.  ';
+                    } else prompt = 'ermm ';
 
-                    if (currentLocale === 'de-DE'){
-                        localePrompt = 'ich habe mehrere Treffer';
-                    } else if (currentLocale === 'en-US') {
-                        localePrompt =  'Which would you like';
-                    }
-                    let prompt = localePrompt;
                     let size = currentSlot.resolutions.resolutionsPerAuthority[0].values.length;
                     currentSlot.resolutions.resolutionsPerAuthority[0].values.forEach(function(element, index, arr) {
                         prompt += ` ${(index == size -1) ? ' or' : ' '} ${element.value.name}`;

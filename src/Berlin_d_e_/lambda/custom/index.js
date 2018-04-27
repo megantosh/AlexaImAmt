@@ -44,14 +44,12 @@ exports.handler = function(event, context, callback) {
     // an extended alexa.registerHandlers(handlers, h1, h2); //you can register multiple handlers at once like here
     if (locale == 'de-DE'){
         alexa.registerHandlers(DE_handlers);
-        exports.OPTIONS_TEXT = 'Ich habe mehrere Treffer';
         console.log('registered german handler');
     } else if (locale == 'fr-FR') {
         alexa.registerHandlers(FR_handlers);
         console.log('registered french handler');
     } else { //basically if locale.toString().startsWith('en')
         alexa.registerHandlers(EN_US_handlers);
-        exports.OPTIONS_TEXT = 'Ich habe mehrere Treffer';
         console.log('registered US-English handler');
     }
     // TODO - so far Alexa doesn't store info and does not need persistence
@@ -164,7 +162,7 @@ const DE_handlers = {
     'DL_ApprobationIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
-        let filledSlots = Helper.delegateSlotCollection('de-DE').call(this, isTestingWithSimulator);
+        let filledSlots = Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -192,7 +190,7 @@ const DE_handlers = {
     'DL_generalIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
-        let filledSlots = Helper.delegateSlotCollection('de-DE').call(this, isTestingWithSimulator);
+        let filledSlots = Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -236,7 +234,7 @@ const DE_handlers = {
     'DL_AufenthaltstitelIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
-        let filledSlots = Helper.delegateSlotCollection('de-DE').call(this, isTestingWithSimulator);
+        let filledSlots = Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -271,7 +269,7 @@ const DE_handlers = {
     'DL_BafoegIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
-        let filledSlots =  Helper.delegateSlotCollection('de-DE').call(this, isTestingWithSimulator);
+        let filledSlots =  Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -562,7 +560,7 @@ const EN_US_handlers = {
     'DL_generalIntent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
-        let filledSlots = Helper.delegateSlotCollection('en-US').call(this, isTestingWithSimulator);
+        let filledSlots = Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
