@@ -356,6 +356,7 @@
               "name": {
                 "value": "Zahnarzt",
                 "synonyms": [
+                  "arzt",
                   "Zahnärztin"
                 ]
               }
@@ -364,22 +365,19 @@
               "name": {
                 "value": "Tierarzt",
                 "synonyms": [
+                  "arzt",
                   "Tierärztin"
                 ]
               }
             },
             {
               "name": {
-                "value": "Therapeut",
+                "value": "Psychotherapeut",
                 "synonyms": [
-                  "Therapeutin"
-                ]
-              }
-            },
-            {
-              "name": {
-                "value": "Psychologischer Psychotherapeut",
-                "synonyms": [
+                  "psychologin",
+                  "psychologen",
+                  "psycholog",
+                  "Psychologischer Psycholog",
                   "Psychologische Psychotherapeutin"
                 ]
               }

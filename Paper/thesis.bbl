@@ -13,13 +13,6 @@
   January 2017.
 \newblock Accessed on 16.02.2018.
 
-\bibitem{aws:lex_webinar}
-{Amazon Web Services Webinar Channel}.
-\newblock Introducing amazon lex: Service for building voice/text chatbots -
-  march 2017 aws online tech talks.
-\newblock \url{https://youtu.be/tAKbXEsZ4Iw?t=4m14s}, March 2017.
-\newblock Accessed on 15.04.2018.
-
 \bibitem{zensus}
 {Amt f\"ur Statistik Berlin-Brandenburg}.
 \newblock {Statistischer Bericht - A I 5 hj 1}.
@@ -30,10 +23,18 @@
 
 \bibitem{mit:Alexa}
 George Anders.
-\newblock “alexa, understand me”.
+\newblock {“Alexa, Understand Me”}.
 \newblock \url{https://www.technologyreview.com/s/608571/alexa-understand-me/},
   August 2017.
 \newblock Accessed on 21.04.2018.
+
+\bibitem{freiheit:digitalisierung}
+{Annett Witte, Friedrich-Naumann-Stiftung für die Freiheit}.
+\newblock {Freiheit.org -Digitalisierung}.
+\newblock
+  \url{https://http://shop.freiheit.org/download/P2@591/97725/FreiheitDigital_02_web.pdf},
+  June 2016.
+\newblock Accessed on 28.04.2018.
 
 \bibitem{alexapc18}
 {Brian Roemmele, Dave Isbitski}.
@@ -94,6 +95,13 @@ Gartner.
 Tobias Grossmann, Regine Oberecker, Stefan Koch, and Angela D~Friederici.
 \newblock The developmental origins of voice processing in the human brain.
 \newblock {\em Elsevier}, 65:852--8, 03 2010.
+
+\bibitem{aws:lex_webinar}
+{Hira Niranjan, Amazon Web Services Webinar Channel}.
+\newblock Introducing amazon lex: Service for building voice/text chatbots -
+  march 2017 aws online tech talks.
+\newblock \url{https://youtu.be/tAKbXEsZ4Iw?t=4m14s}, March 2017.
+\newblock Accessed on 15.04.2018.
 
 \bibitem{Starwars}
 {Judy Goldsmith and Nicholas Mattei}.

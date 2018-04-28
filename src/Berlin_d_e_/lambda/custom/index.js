@@ -735,6 +735,7 @@ function getAstrosHttp(callback) {
 
     // var req = http.request(options, res => {
     var req = http.request(options, res => {
+        // console.log(http.request.getHeader())
         res.setEncoding('utf8');
         var returnData = "";
 
@@ -752,7 +753,6 @@ function getAstrosHttp(callback) {
     });
     req.end();
 }
-
 
 
 
