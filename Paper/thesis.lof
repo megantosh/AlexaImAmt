@@ -1,14 +1,14 @@
 \select@language {UKenglish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - Primary Nodes\relax }}{12}{figure.caption.10}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - secondary Nodes\relax }}{12}{figure.caption.11}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - Primary Nodes\relax }}{12}{figure.caption.11}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \mintinline {java}{Dienstleistungen.json} - secondary Nodes\relax }}{13}{figure.caption.12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Interaction Between AWS Modules (Coffee Bot)}}{27}{figure.caption.28}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Interaction Between AWS Modules (Coffee Bot)}}{28}{figure.caption.30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces HTTPS Request Body}}{64}{figure.caption.42}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces HTTPS Request Body}}{65}{figure.caption.44}

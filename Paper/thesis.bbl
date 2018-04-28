@@ -70,6 +70,9 @@ Wikipedia contributors.
 Alexa Skills~Kit documentation.
 \newblock \url{https://alexa.design/build}.
 
+\bibitem{dries:georgia}
+{Dries Buytaert}.
+
 \bibitem{gartnerpreds17}
 Gartner.
 \newblock Gartner reveals top predictions for it organizations and users in
@@ -125,6 +128,14 @@ Will Knight.
   {http://www.businessinsider.de/the-messaging-app-report-2015-11?r=US&IR=T},
   September 2016.
 \newblock Accessed on 17.02.2018.
+
+\bibitem{forbes:govOutreach}
+{Matt Anthes, Forbes Agency Council}.
+\newblock {Social Media As A Vital Engagement Platform For Government
+  Outreach}.
+\newblock
+  \url{https://www.forbes.com/sites/forbesagencycouncil/2017/10/02/social-media-as-a-vital-engagement-platform-for-government-outreach/#72dcbe864b29},
+  Oct 2017.
 
 \bibitem{memo:devDay}
 {Memo Döring}.

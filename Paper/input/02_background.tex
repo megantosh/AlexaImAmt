@@ -5,22 +5,25 @@
 
 \chapter{Background and Related Work}
 \label{relatedWork} 
-\todo{check the label with the old and new texts after restructure}
+
+
 
 
 
 %DELETEME: This chapter will cover all of your background information and related work. Background and related work are directly related to your thesis. Please do not place irrelevant content here which is a common mistake. Citing will be handled in the appendices.
 
-\todo{redo}
-In this chapter we discuss Amazon's state-of-the-art strategy
-%before moving on to related work in other archetypes 
-as it is important to introduce the implementation scope of voice assistants 
-top down
-%bottom-up 
-prior to exploring the current context 
-%within the same boundaries of voice assistants 
-%then 
-after comparing it to other approaches in the larger context of conversational bots as a whole from a technical and user experience point of view. 
+%\todo{check the label with the old and new texts after restructure}
+
+
+%In this chapter we discuss Amazon's state-of-the-art strategy
+%%before moving on to related work in other archetypes 
+%as it is important to introduce the implementation scope of voice assistants 
+%top down
+%%bottom-up 
+%prior to exploring the current context 
+%%within the same boundaries of voice assistants 
+%%then 
+%after comparing it to other approaches in the larger context of conversational bots as a whole from a technical and user experience point of view. 
 
 
 %moved to gui section
@@ -38,7 +41,7 @@ after comparing it to other approaches in the larger context of conversational b
 
 
 %#############################################################################
-%###################### Related work  ########################################
+%###################### Related work (Bkgrd) ########################################
 %#############################################################################
 
 %DELETEME: Related work respresents results from work that handled the same or a similar problem that you are addressing. This work might have used a different approach or might not have been that successful. Finding a paper / work that solved your problem in the same way you were planning to do is not good and you should contact your supervizor for solving this issue. Again, each paper / work has to be connected to your approach: other papers might have not chosen an optimal solution; they might not have been taking care of essential aspects; they might have chosen a different approach and you believe, yours will work better ...
@@ -46,40 +49,44 @@ after comparing it to other approaches in the larger context of conversational b
 %\chapter{Related Work}
 %\label{relatedWork}
 
-\todo{intro sentences}
+As our motivation stems from the unstoppable worldwide trends of digitalisation, in this chapter we discuss current application categories
+with respect to chatbots and voice assistans
+and talk about governments' efforts in keeping up with these trends as part of their 
+modernisation stream
+%technology streams 
+%in governments 
+in the age of social media, Internet of Things (IoT) and the interaction between both.
+We then show relevant examples in our context of voice assistants.
 
-\section{Digitilasation in the Public Sector}
-\todo{bring up the Freiheit.org chart \cite{freiheit:digitalisierung}\\ 
-	Talk about digitalisation in general (how there are talks in DE about autonomous driving and the related regulations - ref Haase)\\
-	say that Germany cut in 2016 after UK, US, AT and even Bahrain short in e-government operations\\ bass}
 
-\section{Worldwide Examples of Bots in E-Government}
-\todo{
-	
-	\textbf{eingehen auf}\\
-	- Wienbot\\
-	- Singapore / LA / Ask Georgia...\\
-	- LeiKa
-	
-	While we have no access to AskGeorgia from the German Amazon Store, we use the US store. %tab3an di f amrika fal mawdou3 mokhtalef, bas el fekra here is el design not the exact content
-	\\
-	witlingo: which builds voice-driven apps of all sorts for banks, universities, law firms, and others.\\
-	aaron.ai\\
-	
-	say you chose wienbot and askgeorgia as german and english counterparts
-	
+
+
+\section{Topology of Chatbots and Voice Assistants}
+
+Chatbots have become available and more accessible to develop through numerous platform (for the same platform (Facebook), for your own platform(Lex), just a tool (Flask)). We no longer have to come up with the whole infrastructure.\\
+
+\textbf{by platform:}
+-API.ai / 
+Facebook Messenger Chatbots /	
+-wit.ai /
+-motion.ai / Flask\\
+
+
+
+\href{https://techcrunch.com/2017/08/30/amazon-and-microsoft-agree-their-voice-assistants-will-talk-to-each-other/}{Amazon and Microsoft agree their voice assistants will talk (to each other)}\\
+- additional plugins are in the making, giving individual touch of sound based on profile (Alexa Podcast on the way to BXL)\\
+
+
+\todo{It's important to understand that we are at the beginnings of VUI design, but are making progress, e.g. VUIs - should become seamless in an approach like this: - \href{https://recast.ai/blog/art-of-bot-design/}{art of bot design}\\
+	- \href{https://chatbotsmagazine.com/19-best-practices-for-building-chatbots-3c46274501b2}{best practices}
 }
-\todo{
-	For that we consider \textbf{the City of Vienna chatbot service \href{https://www.wien.gv.at/bot/}{``WienBot''}} given that it also uses German and the Alexa Skill \textbf{``\href{https://www.amazon.com/GeorgiaGov-Interactive-GTA-Ask/dp/B074XBQGTQ}{AskGeorgia}''} for a comparison in English.}
 
-\todo{move / remove what is irrelevant
-	In this section, we conduct a short survey of problems we can face with natural language
-	\subsection*{topology of bots}
-	\textbf{by platform:}
-	-API.ai / 
-	Facebook Messenger Chatbots /	
-	-wit.ai /
-	-motion.ai / Flask
+
+
+\todo{%move / remove what is irrelevant
+	%	In this section, we conduct a short survey of problems we can face with natural language
+	
+	
 	\textbf{by category}\\
 	- leisure /
 	- \href{https://www.forbes.com/sites/tomaslaurinavicius/2017/04/24/facebook-messenger-bots/\#4f61c16a66d8}{fun bots}  / 
@@ -108,8 +115,9 @@ after comparing it to other approaches in the larger context of conversational b
 		- the bot tries to determine if there is a nuance in the user's answer (machine acting as a judge!)
 		- e.g. ``how did the phone fall off``
 		- MKTG - Aufwand
-	}
-	IFTTT Applets for voice commands
+	}\\
+	IFTTT Applets for voice commands\\
+	IFTTT didn't work because it was semi automated. you needed to zwischgreifen (Ivo Lehrter)
 }
 
 
@@ -117,26 +125,94 @@ after comparing it to other approaches in the larger context of conversational b
 
 
 
-\todo{ 2 \P \\
-	
-	\textbf{- Chatbot vs. human: }
-	%what we used to do with facets vs a search mask predicting possible facets - we are at a stage where bots are like altavista..u tell alexa to open a skill like u tell altavista to look in pics or go to lexisnexis to do reserach. we are yet to reach the state of watson like google is to searches
-	Analyze differences between bot and human response\\
-	%human says long sentences and there is a fluid transition between dialog and monologue 
-	-disadvantage: a bot wants a sentence broken down in small pieces to avoid errors in lengthy interpretation\\
-	% otherwise, error margin too large.\\
-	% this has to do with human language complexity.\\
-	- \textbf{wrap-up:} can bots replace serivces offered by humans?
-	-- mention transition from facets (Altavista) to metasearches to all-in-one (Google). \\
-	-- chatbots as enablers in customer service industry\\
-	-- conclusion: Although not impossible, it is a bit too far-fetched at this stage.\\
-}
+
+
+
+
+
+
+
+\section{Digitalisation in the Public Sector}
+
+There is no doubt that social media has changed the shape of our society in the last twelve years. Not only by affecting the way we communicate, but also by generating immense amounts of data, creating new jobs and disrupting economies en masse.
+Meanwhile, governments are continuously striving to market their image in more creative ways than ever to target more segments in society. From what used to be a novelty, politicians' tweets are now a highlight in main news sections. The sudden interest % of governments in social media 
+can be seen as an attempt to become more transparent and reach more public awareness. It is more likely for instance that a 15-year old would find out about a public figure (including a president) by following their story on Instagram than by reading news about them on dedicated news website.
+
+This is ultimately because the social media platform, as part of many new technologies are designed with the focus of reach in mind much more than only availing information to the target.
+We distinguish between the pull-based model of information retrieval, where a person would actively look for certain information, vs. the push model, where the information is `thrown' to the user without them actively asking for it, usually by subscribing to the source or news outlet. Unsurprisingly, such platforms become a key player in redefining fame, identity and image.
+
+The push-model is a new strategy to dissemination of knowledge, which governments also decided to embrace \cite{forbes:govOutreach} to bridge the gap in their outreach to the public. 
+Although the digitalisation trend in governments generally emerges from the desire to expand infrastructure for information exchange, digital media has now become an integral part of it, too, making it inseparable from many institutions compositions. 
+
+In Germany, while many advanced milestones in digitalisation were attained in the last years, such as eliminating paper in many government bodies and seeking renewable energy as a foundation of scale to power an exponentially growing number of devices in the country with a reduced carbon footprint, the aspect of digital media has been neglected compared to other countries.
+According to numbers from the United Nations' E-Government Development Index in 2014, Germany ranked 21st with an average of 0.79 of its services provided or operated digitally, substantially outranked by the United Kingdom, the United States, Austria, Israel and Bahrain with a world average of 0.47 \cite{freiheit:digitalisierung}.
+In an age where we
+take the internet for granted,
+we also expect to have multiple communication channels open to government representatives and public authorities. 
+%just like we 
+%it for granted to be able to check flight delays on a designated platform, we also expect to constantly have immediate access to a communication channel with local and global representatives.
+
+%Governments targets in social media have become  digitalisation 
+%it started with social media-now want to give a face and experience(kan2oho sherka) not only by eliminating paper 
+% eliminating carbon footprint. almania w heya gamda keda w bte3mel atomkraft nein danke
+%\todo{bring up the Freiheit.org chart \cite{freiheit:digitalisierung}\\ 
+%	Talk about digitalisation in general (how there are talks in DE about autonomous driving and the related regulations - ref Haase)\\
+%	say that \\ bass}
+Hence, out of public interest, governments are advised not only to focus on digitising their internal structure, but also their representation on the public sphere.
+Especially at times of change like with the introduction of autonomous driving and the regulations related to it, transparency is a continuous expectation from the people. As stated above, since transparency heavily relies on public presence, which in turn depends on availing more communication platforms, voice assistant services are definitely worthy of consideration in that context.
+
+
+
+
+\section{Worldwide Examples of Bots in E-Government}
+
+
 
 \todo{
-	- structure of Hitlist on berlin.de  is provided by ITDZ -  as opposed to Versicherungsfirma z.B (ML tries to detect irregular patterns in case customer is lying).
-	- unfortunately forums vs. FAQs did not work. if i want assistance, i want the customer to tell me the model number - and forums have mostly Schrott!\\
-	what the bot curently achieved is at least not give wrong answers, sometimes says idk but it doesnt confuse u. same attitude like in lmny shops (nur unpassende antworten sind frustrierend!\\
+	WitLingo: which builds voice-driven apps of all sorts for banks, universities, law firms, and others.\\
+	aaron.ai use cases (local examples)\\
+	
+	\textbf{eingehen auf} Singapore / LA /.. as cities that have a higher index of e-gov and use chatbots\\
+
+%	say you chose wienbot and askgeorgia as german and english counterparts
 }
+
+
+
+	For this research we consider the City of Vienna chatbot service \href{https://www.wien.gv.at/bot/}{\textsc{WienBot}\footnote{\url{https://www.wien.gv.at/bot/}}} given that it uses German 
+	and the Alexa Skill \href{https://www.amazon.com/GeorgiaGov-Interactive-GTA-Ask/dp/B074XBQGTQ}{\textsc{GeorgiaGov}}\footnote{\url{https://www.amazon.com/GeorgiaGov-Interactive-GTA-Ask/dp/B074XBQGTQ}} for a comparison in US English, as we examine both languages in our development process.
+
+\subsection*{\textsc{WienBot}}
+developed for Vienna, Austria
+	mention who they are developed by etc. Aquaponics etc
+\todo{pics of interface and conversation}
+
+
+
+
+%\todo{
+%	\\
+%	Ask GeorgiaGov is developed by that company (get source)
+%}
+\subsection*{\textsc{GeorgiaGov}}
+developed for Georgia, USA
+	mention who they are developed by etc. Aquaponics etc
+\todo{pics of conversation}
+
+\begin{quotation}
+The state of Georgia has always been on the forefront of web accessibility. For example, from 2002 until 2006, Georgia piloted a time-limited text-to-speech telephony service which would allow website information and popular services like driver's license renewal to be offered to citizens
+\end{quotation} \cite{dries:georgia}
+
+
+	While we are less interested in the content delivered through the voice assistant and have no access to AskGeorgia from the German Amazon Store, we use the US store for our conversation testing purpose to pick the relevant design of flow of conversation. %tab3an di f amrika fal mawdou3 mokhtalef, bas el fekra here is el design not the exact content
+
+
+
+
+
+
+
+
 
 
 
@@ -156,8 +232,22 @@ after comparing it to other approaches in the larger context of conversational b
 %###################################################################################
 \section{Berlin as a Use Case}
 
+
+
+
+\todo{
+	- structure of Hitlist on berlin.de  is provided by ITDZ -  as opposed to Versicherungsfirma z.B (ML tries to detect irregular patterns in case customer is lying).
+	- unfortunately forums vs. FAQs did not work. if i want assistance, i want the customer to tell me the model number - and forums have mostly Schrott!\\
+	what the bot curently achieved is at least not give wrong answers, sometimes says idk but it doesnt confuse u. same attitude like in lmny shops (nur unpassende antworten sind frustrierend!\\
+}
+
+
+
+
+
 %\subsection*{D115 and The Currently Deployed ``Virtual Bürgerassistent''}
 \todo{
+	- LeiKa
 	- summarize infobroschuere\_ BMI08324\_screen\_barrierefrei.pdf\\
 	-Use case im Detail\\
 	-Welche Daten gibt es?\\	  
@@ -167,8 +257,15 @@ after comparing it to other approaches in the larger context of conversational b
 }
 
 
+\todo{
+say that the bot is developed as a webapp using groovy.\\
 
-say that the bot is developed as a webapp using groovy
+if anything about AllInclusive is to be mentioned, it should go here or before it can go in implementation section.\\
+
+We cover here an excerpt of basic elements that we will later see more or less in the same structure of the JSON file containing the interaction model:\\
+
+
+}
 
 \todo{
 	\textbf{current berlin.de bot}\\
@@ -403,16 +500,11 @@ Hence, we need to differentiate between GUI design and that of a VUI. Since  we 
 
 
 
-\todo{It's important to understand that we are at the beginnings of VUI design, but are making progress, e.g. VUIs - should become seamless in an approach like this: \href{https://techcrunch.com/2017/08/30/amazon-and-microsoft-agree-their-voice-assistants-will-talk-to-each-other/}{Amazon and Microsoft agree their voice assistants will talk (to each other)}\\
-- additional plugins are in the making, giving individual touch of sound based on profile (Alexa Podcast on the way to BXL)\\
-- \href{https://recast.ai/blog/art-of-bot-design/}{art of bot design}\\
-- \href{https://chatbotsmagazine.com/19-best-practices-for-building-chatbots-3c46274501b2}{best practices}
-}
+\todo{ghaleban mesh mazbouta hena ba3d el refactoring eli 7asal}
 
 
-
-\inote{is this okay here or should it go in an appendix?}
-\sn{andreas doesn't like to have more work done in this part. maybe put some of it in conclusion or remove completely, but i know you won't lol}
+%\inote{is this okay here or should it go in an appendix?}
+%\sn{andreas doesn't like to have more work done in this part. maybe put some of it in conclusion or remove completely, but i know you won't lol}
 
 \section{Why Can't AI understand us}
 
@@ -423,7 +515,7 @@ Considering that speech is one of the most complex forms of such, there are stil
 What makes voice-based AI so appealing to consumers is its promise to conform to us, to respond to the way we speak—and think—without requiring us to type on a keyboard or screen. That’s also what makes it so technically difficult to build. We aren’t at all orderly when we talk. Instead, we interrupt ourselves. We let thoughts dangle. We use words, nods, and grunts in odd ways, and we assume that we’re making sense even when we aren’t \cite{mit:Alexa}.
 \end{quotation}
 
-When speech meets AI, there are a lot of language ambiguities to deal with and multiple contexts to understand. Since this is a field by its own and not the scope of this thesis, we only go briefly over a few categorical examples:
+When speech meets AI, there are a lot of language ambiguities to deal with and multiple contexts to understand. Since this is a field by its own and the amount of problems we can face with understanding natural language is unlimited, it is not the scope of this thesis. We only briefly survey a few categorical examples in the following:
 \begin{itemize}
 	\item \textbf{Sytanx}: homonyms such as ``I \textit{present} you a \textit{present}.'' or ``The \textit{fly} wants to \textit{fly}''
 	%homophones, homograph
@@ -477,6 +569,23 @@ Interestingly, a side effect of this indeterministic technique is that the voice
 
 Yet, although it might seem at the beginning that moving between both paradigms is easy, the more detailed system design gets, the trickier it becomes to transform GUI elements into text. Particularly with long texts. We will go over this in more detail about voice design guidelines in Section \ref{designGuide}.
 
+
+
+\todo{ 
+	this is a refactored todo. read in context and see if it fits here\\
+%	2 \P \\
+	
+	\textbf{- Chatbot vs. human: }
+	%what we used to do with facets vs a search mask predicting possible facets - we are at a stage where bots are like altavista..u tell alexa to open a skill like u tell altavista to look in pics or go to lexisnexis to do reserach. we are yet to reach the state of watson like google is to searches
+	Analyze differences between bot and human response\\
+	%human says long sentences and there is a fluid transition between dialog and monologue 
+	-disadvantage: a bot wants a sentence broken down in small pieces to avoid errors in lengthy interpretation\\
+	% otherwise, error margin too large.\\
+	% this has to do with human language complexity.\\
+}
+
+
+
 \section{VUI Semantics}
 
 Having the visual or haptic interface disappear is therefore a game changer for as soon as the user does not have direct instructions on how to deal with it, they start to improvise, or rather move away from the idea that the interface constrains them to the illusion that they define that interface and can control it. For instance, the user knows that they have to press only on a certain area of the screen to activate a button and actively move the mouse to that part. 
@@ -502,15 +611,16 @@ The Fulfilment part is taken care of through a back-end endpoint containing the 
 
 %\sn{Andreas suggests hochstufen - clear split required?}
 \section{Terminology}
-Before we discuss our choice of platform in Section \ref{choiceOfPlatform}, we already unveiled in Chapter \ref{introduction} that Alexa will be the underlying system. Thus we cap the elementary definitions of voice assistants with distinct Alexa-specific concepts and give meaning to the following terms: 
+%Before we discuss our choice of platform in Section \ref{choiceOfPlatform}, 
+We already unveiled in Section \ref{approachgoals} that Alexa will be the underlying system. Thus we cap the elementary definitions of voice assistants with distinct Alexa-specific concepts and give meaning to the following terms: 
 
 	\subsection*{Intent}~\label{intents}
 	As the intention the user pursues with a spoken sentence. This translates to the action being executed upon the user's command based on mapping his/her words to this action.
 	
-	\subsubsection*{Utterance}~\label{utterances}
+	\subsection*{Utterance}~\label{utterances}
 	As the wording a user picks to express his intent. For instance, to set the volume on a TV to quieter, we could say ``turn it down a nudge'', ``It's too loud'' or ``lower the volume''. Although all three sentences have the same meaning, linguistically, they are fully unrelated and only context makes us understand them, e.g. we have to know that ``it'' refers to the TV set in close proximity.
 	
-	\subsubsection*{Slot}~\label{slots}
+	\subsection*{Slot}~\label{slots}
 	As a variable fo a certain type we define in our programme that belongs to a category of items. For instance, when someone says they would like to order a \textit{large} coffee, they assume that there is the option to have a small coffee, too. And so large and small refer both to the size of the coffee. Programmatically, we define \mintinline{java}{large} and \mintinline{java}{small} to be of type \mintinline{java}{size} of the coffee. Similarly, if there is the option to order a tea and a Cappuccino, it would be only fair to define \mintinline{java}{cappuccino} and \mintinline{java}{tea} to be of type \mintinline{java}{beverage}. Consequently, \textbf{slots} can be defined to any part of the sentence, where a parameter (here beverage or size) can be grouped into \textbf{slot types}. 
 
 %\end{itemize}
@@ -548,20 +658,22 @@ Before we discuss our choice of platform in Section \ref{choiceOfPlatform}, we a
 	Ultimately, it is up to us to draw the line on where we want to define a variable slot, that is relevant to the sentence being said by the user in context at a certain time in the conversation flow and where certain sentences would be as a whole giving the same intent
 	
 	
-	\subsubsection*{Synonym}
+	\subsection*{Synonym}
 	As a word that has the same meaning of another word that fills a slot. For instance, if we assume that a user says ``I want a \textbf{cup of jolt}'' they system should still be able to understand that they want a standard coffee. If, however, the user defines the type of coffee beans they want, such as `java' or `arabica', the system should still be able to differentiate between these and not consider them both as the plain `standard coffee', fulfilling a different intent. 
 	
-	\subsubsection*{Dialogue State}
+	\subsection*{Dialogue State}
 	
-	\subsubsection*{Dialogue Directives}
+	\subsection*{Dialogue Directives}
 	
-	\subsubsection*{Entity Resolution}	
+	\subsection*{Entity Resolution}	
 	
-	\subsubsection*{Fulfilment}
+	\subsection*{Fulfilment}
 	
-	\subsubsection*{Over-answering}
+	\subsection*{Interaction Model}
+	
+	\subsection*{Over-answering}
 
-	\subsubsection*{Persistence}
+	\subsection*{Persistence and Memory}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\todo{
@@ -604,32 +716,42 @@ Before we discuss our choice of platform in Section \ref{choiceOfPlatform}, we a
 it started with RSS and HTML stardards upgrade and now it's totally obvious where it goes.\\
 no one uses RSS, but facebook and the idea of a feed would have not been born have we not started with RSS\\
 }
+
+\todo{	
+	- \textbf{wrap-up:} can bots replace serivces offered by humans?
+	-- mention transition from facets (Altavista) to metasearches to all-in-one (Google). \\
+	-- chatbots as enablers in customer service industry\\
+	-- conclusion: Although not impossible, it is a bit too far-fetched at this stage.\\}
+
 With these introductory definitions we try to lay out a foundation for a standard, which is still in an experimental phase. Much like when tablets and smartphones were introduced to the market, the languages and framework used to render GUIs for the users had to adapt, e.g. with HTML5 and CSS3. In that transition, the experimental phase can be considered when browsers had to render a different page depending on the client. It started with a certain few screen resolutions that can be fixed, to offering a desktop and a mobile version and finally to the spreading of responsive design, the MPEG4 H.264 codec for video and so forth. When screen sizes and aspect ratios became also so diverse that it was hard to keep track of, website designers saw the importance of using different relative measuring units to present the website correctly (e.g. percentages for CSS classes, ems for fonts, etc.)
 
 
 Since we mention context, in voice design we notice that the essence of an implementation lies in being able to think with a user mindset. In that respect, the developer of a voice design automatically becomes a designer to some extent. Part of that process is to understand where and when is the user going to request a certain intent. This helps us figure out how to offer the best user experience. For instance, it can be sometimes more effective to integrate the GUI inside the VUI, where the user gets to see relevant images, text or other elements related to the spoken responses by the visual assistant.\\
 
 
-\todo{just a carriage return or add title? want to introduce here interaction model, dialog state, persistence, ...}
+\todo{ - refactored chunck check if it makes sense in context
+	%just a carriage return or add title? want to introduce here interaction model, dialog state, persistence, ...}
+}
 
 % As we present our solution in the Alexa environment and %, we would like to 
 After familiarising ourselves with definitions %terms
 that apply specifically to the Alexa platform,
 %This was a prerequisite 
 we are now able to understand the script building the \textit{interaction model} with the user. %and 
-This helps us understand the code templates provided throughout the development process %. and is 
+This helps us understand the code %templates 
+format and schema provided throughout the development process %. and is 
 represented in JSON format. 
 More information on the interaction model is availabe on the \textsc{Alexa Skill Design Guide.} \footnote{ \url{https://developer.amazon.com/docs/custom-skills/create-the-interaction-model-for-your-skill.html} and\\
 	\noindent
 	\url{https://developer.amazon.com/docs/smapi/interaction-model-schema.html}}
 
 
-We cover here an excerpt of basic elements that we will later see more or less in the same structure of the JSON file containing the interaction model:
 
 
 
 \todo{close paragraph above\\
-explain json (this and LeiKa's) zu Ende\\
+explain json % (this and LeiKa's) 
+zu Ende\\
 mention Alexa Voice Service and Products\\}
 
 \begin{table}[h]
@@ -663,7 +785,7 @@ prompts & & & \\
 
 
 
-\todo{should I introduce concepts like entity resolution here already?}
+%\todo{should I introduce concepts like entity resolution here already?}
 
 
 
@@ -730,11 +852,12 @@ prompts & & & \\
 
 Before deciding to develop for Alexa, we consider several options and evaluate their advantages and suitability for our requirements.
 
+\todo{elaborate on pricing model in details}
 
 \begin{table}
 	\begin{tabularx}{\linewidth}{r | l l l}
-		& Alexa / AWS & API.ai & Microsoft Azure \\ \hline
-		price & First million calls free per month & free & free \\
+		& Alexa  & API.ai & Microsoft Azure \\ \hline
+		price & free \footnote{Creating the skill is free, if using AWS to host the backend part (via Lambda): First million calls free per month} & free & free \\
 	\end{tabularx}
 \end{table}
 
@@ -833,7 +956,7 @@ It comes with agile abilities to adjust to various solution at a flexible scheme
 
 
 \subsection*{Alexa}
-Alexa is a cloud-based voice service assistant platform by Amazon powering millions of devices \inote{with \{number of requests\} {daily|monthly}} on its own-branded devices like the Echo, Echo Dot, Tap, FireTV as well as cross-platform through mobile apps available through  \href{https://itunes.apple.com/de/app/amazon-alexa/id944011620?l=en&mt=8}{Apple's AppStore for iOS} and  \href{https://play.google.com/store/apps/details?id=com.amazon.dee.app&hl=en}{Google Play Store for Android} devices. Unlike Apple's approach with Siri for instance \footnote{as know from its policy on  new software and hardware products like the case with the iPhone, the Mac, etc.}, where including support for third-party integration on iOS's Service Development Kit (SDK), Amazon decided with the launch of Alexa to include non-Amazon developers right from the start by introducing a multitude of (SDKs) around the platform as part of AWS, e.g. Alexa Skills Kit SDK discussed further below.
+Alexa is a cloud-based voice service assistant platform by Amazon powering millions of devices \inote{with \{number of requests\} {daily|monthly}} on its own-branded IoT devices like the Echo, Echo Dot, Tap, FireTV as well as cross-platform through mobile apps available through  \href{https://itunes.apple.com/de/app/amazon-alexa/id944011620?l=en&mt=8}{Apple's AppStore for iOS} and  \href{https://play.google.com/store/apps/details?id=com.amazon.dee.app&hl=en}{Google Play Store for Android} devices. Unlike Apple's approach with Siri for instance \footnote{as know from its policy on  new software and hardware products like the case with the iPhone, the Mac, etc.}, where including support for third-party integration on iOS's Service Development Kit (SDK), Amazon decided with the launch of Alexa to include non-Amazon developers right from the start by introducing a multitude of (SDKs) around the platform as part of AWS, e.g. Alexa Skills Kit SDK discussed further below.
 
 So far, though the separation of AWS and Alexa's environments is not linguistically intuitive with the company's name labelled on every service component \footnote{see Etymology in Annex \ref{etymology}}, \href{http://www.amazon.com}{Amazon.com, Inc.} offers an array of web services through AWS that summarize all building blocks necessary to operate Alexa as a software for end-users. Of course with the introduction of the aforementioned devices, it becomes intuitive to call these `Alexa devices' since their primary purpose is to operate as Alexa clients. We refer to Alexa here only as the service offered by Amazon to consumers. Consequently, although Alexa comes as a fully packaged service to end-users, we can reduce it to a compilation of many micro-services provided by AWS. As most of these are available separately in the form of Software as a Service (Saas), we conclude that AWS incorporates the following components required to make Alexa come together and becomes a consumer of its own web services platform. 
 
@@ -885,7 +1008,8 @@ listed in sequential order of importance, Alexa's service modules include but ar
 % \todo{don't mention I'm using lambda until design chapter 3}
 
 	\item[\href{https://aws.amazon.com/lambda/}{\textbf{Lambda}} \footnote{\url{https://aws.amazon.com/lambda}}] \textit{for intent fulfilment}\\
-	Although Lambda is a versatile ``service [built] for a variety of real-time serverless data processing systems'' \cite{aws_website}, it can be used as an integrated server instance to host back-end code for intent fulfilment. %\ref{intent_fulfilment}.
+	Although Lambda is a versatile ``service [built] for a variety of real-time serverless data processing systems'' \cite{aws_website}, it can be used as an integrated server instance to host back-end code for intent fulfilment.\\	 %\ref{intent_fulfilment}.
+	\textbf{Pricing:} First Million calls are free. Billing charges per operation millisecond.
 
 	
 %	
@@ -897,11 +1021,11 @@ listed in sequential order of importance, Alexa's service modules include but ar
 %
 
 
-
+%\todo{Dynamo not LAmbda here!!}
 
 \item[\href{https://aws.amazon.com/dynamodb/}{\textbf{DynamoDB}} \footnote{\url{https://aws.amazon.com/dynamodb}}] \textit{for persistence storage}\\
-acting as a nosql database table ...Although Lambda is a versatile ``service [built] for a variety of real-time serverless data processing systems'' \cite{aws_website}, \inote{we use it / it can be used} as an integrated server instance to host our back-end code for intent fulfilment%\ref{intent_fulfilment}.
-We might as well use just any other privately or cloud-based server solution to host our code and use it as an endpoint for our software, however choosing Lambda takes away the overhead of linking the front-end with the back-end of the program we develop (an Alexa Skill as we describe below). 
+Acting as a very fast NoSQL database service while also using tables,
+Dynamo is very scalable and can be primarily used in the context of Alexa as a persistence holder for data collected during the interaction with the user to give Alexa a `memory'.
 
 
 

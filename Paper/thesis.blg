@@ -3,44 +3,50 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
 The style file: plain.bst
 Database file #1: input/mybib.bib
-You've used 26 entries,
+I was expecting a `,' or a `}'---line 256 of file input/mybib.bib
+ : 
+ : howpublished = {\url{https://dri.es/think-beyond-with-acquia-labs}}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 28 entries,
             2118 wiz_defined-function locations,
-            636 strings with 8487 characters,
-and the built_in function-call counts, 5744 in all, are:
-= -- 560
-> -- 198
+            644 strings with 8807 characters,
+and the built_in function-call counts, 6135 in all, are:
+= -- 593
+> -- 212
 < -- 0
-+ -- 86
-- -- 58
-* -- 216
-:= -- 984
-add.period$ -- 93
-call.type$ -- 26
-change.case$ -- 102
++ -- 92
+- -- 62
+* -- 229
+:= -- 1047
+add.period$ -- 97
+call.type$ -- 28
+change.case$ -- 109
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 194
-empty$ -- 570
-format.name$ -- 58
-if$ -- 1246
+cite$ -- 28
+duplicate$ -- 208
+empty$ -- 614
+format.name$ -- 62
+if$ -- 1331
 int.to.chr$ -- 0
-int.to.str$ -- 26
+int.to.str$ -- 28
 missing$ -- 4
-newline$ -- 148
-num.names$ -- 52
-pop$ -- 205
+newline$ -- 156
+num.names$ -- 56
+pop$ -- 221
 preamble$ -- 1
-purify$ -- 81
+purify$ -- 87
 quote$ -- 0
-skip$ -- 164
+skip$ -- 183
 stack$ -- 0
-substring$ -- 147
-swap$ -- 26
+substring$ -- 157
+swap$ -- 28
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 102
+type$ -- 110
 warning$ -- 0
-while$ -- 53
-width$ -- 28
-write$ -- 290
+while$ -- 57
+width$ -- 30
+write$ -- 305
+(There was 1 error message)
