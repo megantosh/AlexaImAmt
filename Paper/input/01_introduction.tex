@@ -38,8 +38,8 @@
 % to technology, retaining a certain ranking within a business sector is influenced by trust. 
 
 
-With over a third of the world's population projected to own a smartphone in 2018 \cite{statistasmartphones} and a substantial fraction thereof using smarthome gadgets and appliances on a daily basis, the role of Artificial Intelligence (AI) has become more interesting than ever in many disciplines including but not limited to productivity and entertainment.
-Many technologies we take for granted today, such as dictation and word prediction, recommender systems or other digital analytics depend on Machine Learning and Natural Language Processing techniques that were only made possible thanks to the high computational power shipped in most devices gradually overtaking the consumer market.
+With over a third of the world's population projected to own a smartphone in 2018 \cite{statistasmartphones} and a substantial fraction thereof using smarthome gadgets and appliances on a daily and even hourly basis, the role of Artificial Intelligence (AI) has become more interesting than ever in many disciplines including but not limited to productivity and entertainment.
+Many technologies we take for granted today, such as dictation and word prediction, recommender systems or other digital analytics depend on Machine Learning (ML) and Natural Language Processing (NLP) techniques that were only made possible thanks to the high computational power shipped in most devices gradually overtaking the consumer market.
 This transition also facilitated the introduction of a new form of interaction through conversation with the hardware, paving the way to an aspiration modern societies have been striving globally \cite{Starwars}.
 %%	- one option: besides Sci-Fi films; Her, Breakfast at tiffany's, Network
 %%	- funnel towards Motivation...modularization and Einteilung of the paper
@@ -218,30 +218,37 @@ All of which leads to thinking how providing voice assistants and/or a chatbots 
 %}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\inote{refactor}
-In the following thesis, we take these factors into consideration and narrow them down to fit our tailored scenario in the e-Government sector. We start by surveying industry-standard %prominent 
-voice assistants platforms like Siri, Bixby, etc. and frameworks such as Microsoft Azure Bot Framework, Amazon Lex and API.ai,
-and present a solution that caters for the local municipality of Berlin, Germany.
+In the following thesis, we take these factors into consideration and narrow them down to fit our scenario tailored for the e-Government sector. We start by surveying industry-standard %prominent 
+voice assistants platforms 
+%like Siri, Bixby, etc. \inote{put bixby somewhere else and be more precise on what u did based on section choice of platform} 
+and frameworks
+%such as Microsoft Azure Bot Framework, Amazon Lex and API.ai,
+and present a solution that caters for the local municipality of Berlin, Germany. For this we choose to present our solution using the Alexa platform based on our criteria in Section \ref{choiceOfPlatform}.
 
-For this we choose to present our solution using Alexa based on our criteria in Section \ref{choiceOfPlatform}.
-
-With an agile approach, we present functional code for running and deploying the aforementioned service on Amazon's voice assistant through a so-called ``Alexa Skill'' and analyse the strengths and weaknesses of choosing this platform. We start by exploring the available public services on \href{https://service.berlin.de}{https://service.berlin.de} 
+With an agile approach, we present functional code for running and deploying the aforementioned service on Amazon's voice assistant through a so-called \textsc{Alexa Skill} (referred to here from here on as `Skill') and analyse the strengths and weaknesses of choosing this option. We start by exploring information on the public services offered through \href{https://service.berlin.de}{https://service.berlin.de} 
 to understand how to implement our Skill. 
-We then choose a set of examples with different levels of implementation difficulty to prototype how all current and future \href{https://service.berlin.de}{Berlin.de}'s 
-services should be handled using knowledge from existing databases.
-Difficulty is expressed in the required knowledge of the Skill to perform a user's request. \inote{This includes for instance abilities like the system to understand the district location intended by the user through a postal code input.}
+We then choose a set of exemplary public services use cases with different levels of implementation difficulty to prototype how all current and future \href{https://service.berlin.de}{Berlin.de}'s 
+services should be handled using knowledge from an existing database operating the current \textsc{Virtual Citizen Assistant} developed by the Information Retrieval and Machine Learning Competence Centre of the Technical University of Berlin's Distributed Artificial Intelligence Laboratory.
+Difficulty is expressed as the required knowledge by the Skill to perform a user's request. This includes for instance the system's abilities to understand the district location intended by the user through only a postal code input.
 
-Further, we test the Skill using unit tests for the code and usability tests for the interaction model especially with the ability to identify and deal with.
-In the code, we alread have the advantage of many small-talk abilities since we build on top of Alexa's existing and continually expanding database for question-answer models.
-\inote{mention that this could get you out of the skill in the pro/con section.}
+Further, we test the Skill using unit tests for the code and usability tests for the interaction model especially with the ability to identify and deal with different inputs from various users].
+In the implementation, we already have the advantage of being part of Alexa's system to entertain the user with
+many small-talk abilities 
+%since we build on top of Alexa's 
+which allows us to build on its existing and continually expanding database for question-answer models.
 
-\sn{besser ganze Sätze,bullets tamam}
+
+%\sn{besser ganze Sätze,bullets tamam}
 In summary, these goals were defined for the system:
 
 \begin{itemize}
-	\item understand user's requests about public services through different sentence formulations
-	\item deliver relevant information based on the service requested
-	\item communicate with an endpoint that builds on the service catalogue of Berlin.de's ``Virtueller Bürgerassistent''
-	\item produce a scalable, modular system that can be extended in the future
+	\item We want to understand user's requests about public services through different sentence formulations.
+	
+	\item We want to deliver differently relevant parts of information based on the service requested (e.g. cost, processing time).
+	
+	\item We want to communicate with an API endpoint that builds on the service catalogue of Berlin.de's \textsc{Virtual Citizen Assistant}.
+	
+	\item We want to produce a scalable, modular system that can be extended in the future.
 \end{itemize}
 
 Further requirements are discussed in Chapter~\ref{mainone}.
@@ -282,26 +289,50 @@ Further requirements are discussed in Chapter~\ref{mainone}.
 
 %This thesis endeavours to shed light on the following: 
 This thesis is organised as follows:
-In Chapter~\ref{background}, 
-we first introduce in section \ref{choiceOfPlatform} the available platforms and explain why we choose Amazon, going over the idea behind Alexa Skills.
-% then discuss related work as currently available. Going beyond 
-From there in section \ref{relatedWork} we show some related work according to our use case in the public sector %we show a few comparative %exemplary
+In Chapter~\ref{relatedWork} %background}, 
+we talk about use cases of chatbots and voice assistants in the public sector, 
+show related work 
+and introduce comparative examples
+through e-Government solutions in
+Vienna, Austria and Georgia, USA.
+We compare them to the current chatbot application \textsc{Virtual Citizen Assistant (Virtueller Bürgerassistent)} available on \href{https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}{service.berlin.de} \footnote{\url{https://service.berlin.de/virtueller-assistent/}}, which we build our work on with the same underlying technology using Apache Solr.
+
+%we first introduce in Section 
+%
+
+Going beyond an analysis of the voice user interface paradigm in 
+\inote{Chapter} \ref{guivsvui}
+%then
+We shed light within the State of The Art context in 
+\inote{Chapter} \ref{stateofzart} 
+on the available platforms in Section \ref{choiceOfPlatform} and explain why we choose Amazon, going over the idea behind Alexa's Skills
+and explain the structure of Amazon and Amazon Web Services Ecosystem to operate Alexa in \inote{Chapter}
+
+%
+% then discuss related work as currently available. 
+%
+%From there in Section \ref{relatedWork} we show some related work according to our use case in the public sector %we show a few comparative %exemplary
+%
 %implementations for 
 %in the form of a chatbot and a voice assistant in English- and German-speaking context. 
-for Vienna, Austria and Georgia, USA.
-We compare them to the current chatbot application ``Virtueller Bürgerassistent'' available on \href{https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}{service.berlin.de}, which we build our work on with the same underlying technology using Apache Solr.
-
+%for Vienna, Austria and Georgia, USA.
+%
+%
 %for German and Singapore/ \href{http://www.govtech.com/7-State-or-Local-Governments-Using-Amazon-Alexa.html}{LA/...} for English} 
-In Chapter~\ref{mainone} we introduce our design to the Skill and discuss how it 
+
+
+In Chapter~\ref{mainone} we introduce our design of the Skill and discuss how it 
 %can overcome a few struggles with respect to 
 addresses
-redundant boilerplate code, smalltalk abilities and briefly highlight some limitations on the system limitations. We also present the frameworks and Application Programming Interfaces (APIs) we use in our own implementation, the prerequisites and the artefacts provided initially through a breakdown into several cases simulating common uses on Berlin's city portal.
+redundant boilerplate code, small-talk abilities and briefly highlight some limitations of the system. We also present the frameworks and Application Programming Interfaces (APIs) we use in our own implementation, the prerequisites and artefacts provided initially through a breakdown into several cases simulating top common uses on Berlin's city portal \inote{mention section when it's written}.
 
 
 %its counterparts \inote{like , , but also limitations}. 
 Chapter ~\ref{maintwo} 
 %represents a detailed analysis of 
-explains our implementation solution. We elaborate in particular on how we deal with individual public services in the interaction model from front-end and back-end perspective, how we connect the web services together and analytically document the code structure, endpoints in addition to the deployment process. The related code is available on \href{https://www.github.com/megantosh/AlexaImAmt}{GitHub} \footnote{\url{https://www.github.com/megantosh/AlexaImAmt} \todo{make sure this is final URL and is public before printing}} with a digital copy attached to this work. 
+explains our implementation solution. We elaborate in particular on how we deal with individual public services in the interaction model from front-end and back-end perspective, how we connect the web services together and analytically document the code structure, endpoints in addition to the deployment process.
+
+The related implementation code is available on \href{https://www.github.com/megantosh/AlexaImAmt}{GitHub} \footnote{\url{https://www.github.com/megantosh/AlexaImAmt} \todo{make sure this is final URL and is public before printing}} with a digital copy attached to this work. 
 
 Chapter~\ref{evaluation} evaluates our implementation with respect to our target in the defined %\inote{4-5} 
 use cases. We base our evaluation models on a survey we conduct that helps us specify requirement details, as well as automated tests provided by the framewor we use in addition to usability, performance and unit tests. 

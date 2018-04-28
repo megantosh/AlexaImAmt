@@ -6,44 +6,49 @@
 \contentsline {section}{\numberline {1.2}The Analyzed Scenario}{5}{section.1.2}
 \contentsline {section}{\numberline {1.3}Approach and Goals}{6}{section.1.3}
 \contentsline {section}{\numberline {1.4}Structure of the Thesis}{7}{section.1.4}
-\contentsline {chapter}{\numberline {2}Background}{8}{chapter.2}
-\contentsline {section}{\numberline {2.1}GUI vs. VUI}{8}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Utility of Voice}{9}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Why can't AI understand us}{10}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}VUI Semantics}{11}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Terminology}{11}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}State of the Art}{15}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}AWS Modules as Alexa's Building Blocks \inote {make logos as minipage objects or set as table / problem with footnotes}}{16}{subsection.2.2.1}
-\contentsline {section}{\numberline {2.3}Related Work}{21}{section.2.3}
-\contentsline {section}{\numberline {2.4}Choice of Platform}{23}{section.2.4}
-\contentsline {section}{\numberline {2.5}The Analysed Scenario as a Use Case}{25}{section.2.5}
-\contentsline {chapter}{\numberline {3}Skill Design}{27}{chapter.3}
-\contentsline {section}{\numberline {3.1}Frameworks and Data Structures}{28}{section.3.1}
-\contentsline {section}{\numberline {3.2}challenges}{30}{section.3.2}
-\contentsline {section}{\numberline {3.3}Design Guidelines and Documentations}{31}{section.3.3}
-\contentsline {section}{\numberline {3.4}Best Practices}{31}{section.3.4}
-\contentsline {chapter}{\numberline {4}Skill Implementation}{40}{chapter.4}
-\contentsline {section}{\numberline {4.1}Setup}{40}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}requirements}{40}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}step-by-step}{41}{section.4.2}
-\contentsline {section}{\numberline {4.3}Code Analysis}{41}{section.4.3}
-\contentsline {section}{\numberline {4.4}Deployment}{42}{section.4.4}
-\contentsline {section}{\numberline {4.5}Approval and Publishing}{42}{section.4.5}
-\contentsline {section}{\numberline {4.6}Debugging / Troubleshooting}{42}{section.4.6}
-\contentsline {section}{\numberline {4.7}Documentation Updates}{42}{section.4.7}
-\contentsline {chapter}{\numberline {5}Evaluation}{44}{chapter.5}
-\contentsline {section}{\numberline {5.1}Alexa in General}{44}{section.5.1}
-\contentsline {section}{\numberline {5.2}Metrics}{44}{section.5.2}
-\contentsline {section}{\numberline {5.3}Results}{45}{section.5.3}
-\contentsline {section}{\numberline {5.4}Discussions}{46}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{47}{chapter.6}
-\contentsline {section}{\numberline {6.1}Summary}{47}{section.6.1}
-\contentsline {section}{\numberline {6.2}Conclusion}{47}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Work}{47}{section.6.3}
-\contentsline {chapter}{Bibliography}{49}{section.6.3}
-\contentsline {chapter}{Appendices}{51}{chapter*.39}
-\contentsline {section}{Product Branding Etymology}{52}{chapter*.40}
-\contentsline {section}{Lex vs. Alexa Skills}{52}{section*.41}
-\contentsline {section}{JSON Query code structure}{54}{section*.42}
-\contentsline {section}{Abbreviations}{56}{figure.caption.44}
-\contentsline {section}{Glossary}{57}{section*.45}
+\contentsline {chapter}{\numberline {2}Background and Related Work}{8}{chapter.2}
+\contentsline {section}{\numberline {2.1}Digitilasation in the Public Sector}{8}{section.2.1}
+\contentsline {section}{\numberline {2.2}Worldwide Examples of Bots in E-Government}{8}{section.2.2}
+\contentsline {section}{\numberline {2.3}Berlin as a Use Case}{11}{section.2.3}
+\contentsline {chapter}{\numberline {3}GUI vs. VUI}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Utility of Voice}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Why Can't AI understand us}{14}{section.3.2}
+\contentsline {section}{\numberline {3.3}VUI Semantics}{16}{section.3.3}
+\contentsline {section}{\numberline {3.4}Terminology}{16}{section.3.4}
+\contentsline {chapter}{\numberline {4}State of the Art}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Analogies to the Introduction of Web 2.0}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Choice of Platform}{21}{section.4.2}
+\contentsline {chapter}{\numberline {5}Amazon's Ecosystem}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Amazon Web Services (AWS) + Alexa}{23}{section.5.1}
+\contentsline {section}{\numberline {5.2}AWS Modules as Alexa's Building Blocks }{24}{section.5.2}
+\contentsline {section}{\numberline {5.3}Alexa Interfaces}{29}{section.5.3}
+\contentsline {chapter}{\numberline {6}Skill Design}{31}{chapter.6}
+\contentsline {section}{\numberline {6.1}Frameworks and Data Structures}{32}{section.6.1}
+\contentsline {section}{\numberline {6.2}challenges}{34}{section.6.2}
+\contentsline {section}{\numberline {6.3}Design Guidelines and Documentations}{35}{section.6.3}
+\contentsline {section}{\numberline {6.4}Best Practices}{35}{section.6.4}
+\contentsline {chapter}{\numberline {7}Skill Implementation}{44}{chapter.7}
+\contentsline {section}{\numberline {7.1}Setup}{44}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}requirements}{44}{subsection.7.1.1}
+\contentsline {section}{\numberline {7.2}step-by-step}{45}{section.7.2}
+\contentsline {section}{\numberline {7.3}Code Analysis}{45}{section.7.3}
+\contentsline {section}{\numberline {7.4}Deployment}{46}{section.7.4}
+\contentsline {section}{\numberline {7.5}Approval and Publishing}{46}{section.7.5}
+\contentsline {section}{\numberline {7.6}Debugging / Troubleshooting}{46}{section.7.6}
+\contentsline {section}{\numberline {7.7}Documentation Updates}{46}{section.7.7}
+\contentsline {chapter}{\numberline {8}Evaluation}{48}{chapter.8}
+\contentsline {section}{\numberline {8.1}Alexa in General}{48}{section.8.1}
+\contentsline {section}{\numberline {8.2}Metrics}{48}{section.8.2}
+\contentsline {section}{\numberline {8.3}Results}{49}{section.8.3}
+\contentsline {section}{\numberline {8.4}Discussions}{50}{section.8.4}
+\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{52}{chapter.9}
+\contentsline {section}{\numberline {9.1}Summary}{52}{section.9.1}
+\contentsline {section}{\numberline {9.2}Conclusion}{52}{section.9.2}
+\contentsline {section}{\numberline {9.3}Future Work}{52}{section.9.3}
+\contentsline {chapter}{Bibliography}{54}{section.9.3}
+\contentsline {chapter}{Appendices}{56}{chapter*.36}
+\contentsline {section}{Product Branding Etymology}{57}{chapter*.37}
+\contentsline {section}{Lex vs. Alexa Skills}{57}{section*.38}
+\contentsline {section}{JSON Query code structure}{59}{section*.39}
+\contentsline {section}{Abbreviations}{61}{figure.caption.41}
+\contentsline {section}{Glossary}{62}{section*.42}
