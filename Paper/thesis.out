@@ -9,45 +9,46 @@
 \BOOKMARK [1][-]{section.2.1}{Digitilasation in the Public Sector}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.2}{Worldwide Examples of Bots in E-Government}{chapter.2}% 10
 \BOOKMARK [1][-]{section.2.3}{Berlin as a Use Case}{chapter.2}% 11
-\BOOKMARK [0][-]{chapter.3}{GUI vs. VUI}{}% 12
-\BOOKMARK [1][-]{section.3.1}{Utility of Voice}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{Why Can't AI understand us}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.3}{VUI Semantics}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.4}{Terminology}{chapter.3}% 16
-\BOOKMARK [0][-]{chapter.4}{State of the Art}{}% 17
-\BOOKMARK [1][-]{section.4.1}{Analogies to the Introduction of Web 2.0}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.2}{Choice of Platform}{chapter.4}% 19
-\BOOKMARK [0][-]{chapter.5}{Amazon's Ecosystem}{}% 20
-\BOOKMARK [1][-]{section.5.1}{Amazon Web Services \(AWS\) + Alexa}{chapter.5}% 21
-\BOOKMARK [1][-]{section.5.2}{AWS Modules as Alexa's Building Blocks }{chapter.5}% 22
-\BOOKMARK [1][-]{section.5.3}{Alexa Interfaces}{chapter.5}% 23
-\BOOKMARK [0][-]{chapter.6}{Skill Design}{}% 24
-\BOOKMARK [1][-]{section.6.1}{Frameworks and Data Structures}{chapter.6}% 25
-\BOOKMARK [1][-]{section.6.2}{challenges}{chapter.6}% 26
-\BOOKMARK [1][-]{section.6.3}{Design Guidelines and Documentations}{chapter.6}% 27
-\BOOKMARK [1][-]{section.6.4}{Best Practices}{chapter.6}% 28
-\BOOKMARK [0][-]{chapter.7}{Skill Implementation}{}% 29
-\BOOKMARK [1][-]{section.7.1}{Setup}{chapter.7}% 30
-\BOOKMARK [2][-]{subsection.7.1.1}{requirements}{section.7.1}% 31
-\BOOKMARK [1][-]{section.7.2}{step-by-step}{chapter.7}% 32
-\BOOKMARK [1][-]{section.7.3}{Code Analysis}{chapter.7}% 33
-\BOOKMARK [1][-]{section.7.4}{Deployment}{chapter.7}% 34
-\BOOKMARK [1][-]{section.7.5}{Approval and Publishing}{chapter.7}% 35
-\BOOKMARK [1][-]{section.7.6}{Debugging / Troubleshooting}{chapter.7}% 36
-\BOOKMARK [1][-]{section.7.7}{Documentation Updates}{chapter.7}% 37
-\BOOKMARK [0][-]{chapter.8}{Evaluation}{}% 38
-\BOOKMARK [1][-]{section.8.1}{Alexa in General}{chapter.8}% 39
-\BOOKMARK [1][-]{section.8.2}{Metrics}{chapter.8}% 40
-\BOOKMARK [1][-]{section.8.3}{Results}{chapter.8}% 41
-\BOOKMARK [1][-]{section.8.4}{Discussions}{chapter.8}% 42
-\BOOKMARK [0][-]{chapter.9}{Conclusion and Future Work}{}% 43
-\BOOKMARK [1][-]{section.9.1}{Summary}{chapter.9}% 44
-\BOOKMARK [1][-]{section.9.2}{Conclusion}{chapter.9}% 45
-\BOOKMARK [1][-]{section.9.3}{Future Work}{chapter.9}% 46
-\BOOKMARK [0][-]{section.9.3}{Bibliography}{}% 47
-\BOOKMARK [0][-]{chapter*.36}{Appendices}{}% 48
-\BOOKMARK [1][-]{chapter*.37}{Product Branding Etymology}{chapter*.36}% 49
-\BOOKMARK [1][-]{section*.38}{Lex vs. Alexa Skills}{chapter*.36}% 50
-\BOOKMARK [1][-]{section*.39}{JSON Query code structure}{chapter*.36}% 51
-\BOOKMARK [1][-]{figure.caption.41}{Abbreviations}{chapter*.36}% 52
-\BOOKMARK [1][-]{section*.42}{Glossary}{chapter*.36}% 53
+\BOOKMARK [0][-]{chapter.3}{The Voice as a User Interface}{}% 12
+\BOOKMARK [1][-]{section.3.1}{GUI vs. VUI}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.2}{Utility of Voice}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.3}{Why Can't AI understand us}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.4}{VUI Semantics}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.5}{Terminology}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{State of the Art}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Analogies to the Introduction of Web 2.0}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{Choice of Platform}{chapter.4}% 20
+\BOOKMARK [0][-]{chapter.5}{Amazon's Ecosystem}{}% 21
+\BOOKMARK [1][-]{section.5.1}{Amazon Web Services \(AWS\) + Alexa}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.2}{AWS Modules as Alexa's Building Blocks }{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.3}{Alexa Interfaces}{chapter.5}% 24
+\BOOKMARK [0][-]{chapter.6}{Skill Design}{}% 25
+\BOOKMARK [1][-]{section.6.1}{Frameworks and Data Structures}{chapter.6}% 26
+\BOOKMARK [1][-]{section.6.2}{challenges}{chapter.6}% 27
+\BOOKMARK [1][-]{section.6.3}{Design Guidelines and Documentations}{chapter.6}% 28
+\BOOKMARK [1][-]{section.6.4}{Best Practices}{chapter.6}% 29
+\BOOKMARK [0][-]{chapter.7}{Skill Implementation}{}% 30
+\BOOKMARK [1][-]{section.7.1}{Setup}{chapter.7}% 31
+\BOOKMARK [2][-]{subsection.7.1.1}{requirements}{section.7.1}% 32
+\BOOKMARK [1][-]{section.7.2}{step-by-step}{chapter.7}% 33
+\BOOKMARK [1][-]{section.7.3}{Code Analysis}{chapter.7}% 34
+\BOOKMARK [1][-]{section.7.4}{Deployment}{chapter.7}% 35
+\BOOKMARK [1][-]{section.7.5}{Approval and Publishing}{chapter.7}% 36
+\BOOKMARK [1][-]{section.7.6}{Debugging / Troubleshooting}{chapter.7}% 37
+\BOOKMARK [1][-]{section.7.7}{Documentation Updates}{chapter.7}% 38
+\BOOKMARK [0][-]{chapter.8}{Evaluation}{}% 39
+\BOOKMARK [1][-]{section.8.1}{Alexa in General}{chapter.8}% 40
+\BOOKMARK [1][-]{section.8.2}{Metrics}{chapter.8}% 41
+\BOOKMARK [1][-]{section.8.3}{Results}{chapter.8}% 42
+\BOOKMARK [1][-]{section.8.4}{Discussions}{chapter.8}% 43
+\BOOKMARK [0][-]{chapter.9}{Conclusion and Future Work}{}% 44
+\BOOKMARK [1][-]{section.9.1}{Summary}{chapter.9}% 45
+\BOOKMARK [1][-]{section.9.2}{Conclusion}{chapter.9}% 46
+\BOOKMARK [1][-]{section.9.3}{Future Work}{chapter.9}% 47
+\BOOKMARK [0][-]{section.9.3}{Bibliography}{}% 48
+\BOOKMARK [0][-]{chapter*.37}{Appendices}{}% 49
+\BOOKMARK [1][-]{chapter*.38}{Product Branding Etymology}{chapter*.37}% 50
+\BOOKMARK [1][-]{section*.39}{Lex vs. Alexa Skills}{chapter*.37}% 51
+\BOOKMARK [1][-]{section*.40}{JSON Query code structure}{chapter*.37}% 52
+\BOOKMARK [1][-]{figure.caption.42}{Abbreviations}{chapter*.37}% 53
+\BOOKMARK [1][-]{section*.43}{Glossary}{chapter*.37}% 54

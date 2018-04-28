@@ -555,9 +555,11 @@ Before we discuss our choice of platform in Section \ref{choiceOfPlatform}, we a
 	
 	\subsubsection*{Dialogue Directives}
 	
-	\subsubsection*{Over-answering}
-	
 	\subsubsection*{Entity Resolution}	
+	
+	\subsubsection*{Fulfilment}
+	
+	\subsubsection*{Over-answering}
 
 	\subsubsection*{Persistence}
 
@@ -589,7 +591,7 @@ Before we discuss our choice of platform in Section \ref{choiceOfPlatform}, we a
 
 
 
-\todo{intro sentence - alexa from user and developer scht}
+\todo{intro sentence}
 
 
 
@@ -700,7 +702,7 @@ prompts & & & \\
 }
 \todo{
 	here you can talk about alternatives like Microsoft, etc, compare \textbf{pricing scheme}, say why you chose alexa (for its popularity mainly and 3ashan Api.ai et3amal abl keda\\
-	-AWS Lambda is free for the first one million calls per month\\
+	%-AWS Lambda is free for the first one million calls per month\\
 	-need to manage any SSL certificates when using AWS Lambda (since the Alexa Skills Kit is a trusted trigger).\\
 	\url{https://developer.amazon.com/blogs/post/Tx213D2XQIYH864/announcing-the-alexa-skills-kit-for-node-js} very imp\\
 	w 3ashan it's a whole established ecosystem. ma3 el ta7afozat eno amazon has an obscure position to data and privacy vs. siri masalan.\\
@@ -802,7 +804,8 @@ We choose to offer our skill only in Germany because our Skill's functionality i
 start with "proceding with Alexa, we introduce the backbone that operates it ...}
 
 \chapter{Amazon's Ecosystem}
-
+\label{amznecosys}
+% alexa from user and developer sicht
 
 
 In this chapter we discuss Amazon's state-of-the-art strategy
@@ -879,11 +882,11 @@ listed in sequential order of importance, Alexa's service modules include but ar
 %\end{flushright}
 %	\end{restoretext}
 	
-\todo{don't mention I'm using lambda until design chapter 3}
+% \todo{don't mention I'm using lambda until design chapter 3}
 
 	\item[\href{https://aws.amazon.com/lambda/}{\textbf{Lambda}} \footnote{\url{https://aws.amazon.com/lambda}}] \textit{for intent fulfilment}\\
-	Although Lambda is a versatile ``service [built] for a variety of real-time serverless data processing systems'' \cite{aws_website}, \inote{we use it / it can be used} as an integrated server instance to host our back-end code for intent fulfilment%\ref{intent_fulfilment}.
-	We might as well use just any other privately or cloud-based server solution to host our code and use it as an endpoint for our software, however choosing Lambda takes away the overhead of linking the front-end with the back-end of the program we develop (an Alexa Skill as we describe below). 
+	Although Lambda is a versatile ``service [built] for a variety of real-time serverless data processing systems'' \cite{aws_website}, it can be used as an integrated server instance to host back-end code for intent fulfilment. %\ref{intent_fulfilment}.
+
 	
 %	
 %	\begin{restoretext}
