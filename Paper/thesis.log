@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  30 APR 2018 02:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  30 APR 2018 02:57
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2147,59 +2147,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--139
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 162--169
+Underfull \hbox (badness 10000) in paragraph at lines 163--170
 
  []
 
 [5]
 
-Package xcolor Warning: Incompatible color definition on input line 235.
+Package xcolor Warning: Incompatible color definition on input line 236.
 
 [6]
 
-Package xcolor Warning: Incompatible color definition on input line 305.
+Package xcolor Warning: Incompatible color definition on input line 306.
 
 
-Package xcolor Warning: Incompatible color definition on input line 305.
+Package xcolor Warning: Incompatible color definition on input line 306.
 
 
-Package xcolor Warning: Incompatible color definition on input line 305.
+Package xcolor Warning: Incompatible color definition on input line 306.
 
 
-Package xcolor Warning: Incompatible color definition on input line 308.
+Package xcolor Warning: Incompatible color definition on input line 309.
 
 
-Package xcolor Warning: Incompatible color definition on input line 308.
+Package xcolor Warning: Incompatible color definition on input line 309.
 
 
-Package xcolor Warning: Incompatible color definition on input line 308.
+Package xcolor Warning: Incompatible color definition on input line 309.
 
 
-Package xcolor Warning: Incompatible color definition on input line 310.
+Package xcolor Warning: Incompatible color definition on input line 311.
 
 
-Package xcolor Warning: Incompatible color definition on input line 310.
+Package xcolor Warning: Incompatible color definition on input line 311.
 
 
-Package xcolor Warning: Incompatible color definition on input line 310.
+Package xcolor Warning: Incompatible color definition on input line 311.
 
 
-Package xcolor Warning: Incompatible color definition on input line 328.
+Package xcolor Warning: Incompatible color definition on input line 329.
 
 
-Package xcolor Warning: Incompatible color definition on input line 328.
+Package xcolor Warning: Incompatible color definition on input line 329.
 
 
-Package xcolor Warning: Incompatible color definition on input line 328.
+Package xcolor Warning: Incompatible color definition on input line 329.
 
 
-Package xcolor Warning: Incompatible color definition on input line 336.
+Package xcolor Warning: Incompatible color definition on input line 337.
 
 
-Package xcolor Warning: Incompatible color definition on input line 336.
+Package xcolor Warning: Incompatible color definition on input line 337.
 
 
-Package xcolor Warning: Incompatible color definition on input line 336.
+Package xcolor Warning: Incompatible color definition on input line 337.
 
 ) (./input/02_background.tex [7]
 Chapter 2.
@@ -4036,7 +4036,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--236
 Overfull \vbox (8.531pt too high) has occurred while \output is active []
 
  [71]
-Overfull \hbox (244.26054pt too wide) in paragraph at lines 351--391
+Overfull \hbox (273.7205pt too wide) in paragraph at lines 351--399
 []  
  []
 
@@ -4058,10 +4058,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 266.
  ) 
 Here is how much of TeX's memory you used:
- 38013 strings out of 492985
- 721048 string characters out of 6132585
- 912590 words of memory out of 5000000
- 40479 multiletter control sequences out of 15000+600000
+ 38014 strings out of 492985
+ 721056 string characters out of 6132585
+ 912655 words of memory out of 5000000
+ 40480 multiletter control sequences out of 15000+600000
  585147 words of font info for 127 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,18n,73p,10370b,1357s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -4117,10 +4117,10 @@ local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/tex
 live/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2016/texmf-dis
 t/fonts/type1/public/tipa/xipa10.pfb>
-Output written on thesis.pdf (82 pages, 1310784 bytes).
+Output written on thesis.pdf (82 pages, 1310782 bytes).
 PDF statistics:
- 1279 PDF objects out of 1440 (max. 8388607)
- 1135 compressed objects within 12 object streams
+ 1280 PDF objects out of 1440 (max. 8388607)
+ 1136 compressed objects within 12 object streams
  278 named destinations out of 1000 (max. 500000)
  504 words of extra memory for PDF output out of 10000 (max. 10000000)
 
