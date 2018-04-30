@@ -2,6 +2,79 @@
 \label{mainone}
 %DELETEME: In this chapter you start addressing your actual problem. Therefore, it makes often sense to make a detailed problem analysis first (if not done in introduction). You should be sure about what to do and how. As writtin in the background part, it might also make sense to include complex background information or papers you are basing on in this analysis. If you are solving a software problem, you should follow the state of the art of software development which basically includes: problem analysis, design, implementation, testing, and deployment. Maintenance is often also described but I believe this will not be required for most theses. Code should be placed in the appendix unless it is solving an essential aspect of your work.
 
+
+
+\todo{\textit{moved from availability section in choice of platform:}\\
+We choose to offer our skill only in Germany because our Skill's functionality is specific only within this geographical region. For that we configure the Skill to handle English (US) and German.\\
+Consequently we will two interaction models and two handlers. \\
+say why we do it like this 3ashan each language group has a different interest although we can do a handler function for two languages but we prefer not to 3ashan ne3melha schöne und nicht systematische implementierung.
+}
+
+
+
+
+
+
+
+
+
+
+
+\begin{table}[h]
+	\caption[Interaction Model Schema]{\href{https://developer.amazon.com/docs/smapi/interaction-model-schema.html}{Interaction Model Schema (Skill Management API)~\cite{alexaDesignGuide} }}\label{interactionModel}
+	\begin{tabularx}{\textwidth}{|l | l l l | }
+		Field	&	Type	&	Description		&	Required \\ \hline
+		\lstinline|languageModel| &	object	& Conversational primitives for the skill	& yes\\
+		\_\_\lstinline|invocationName| &	object	& Invocation name of the skill	& yes\\
+		\_\_\lstinline|intents| &	array	& Intents and their slots	& yes\\
+		\_\_\_\_\lstinline|slots| (Intent Slots) & array & List of slots within the intent	& no\\
+		\_\_\lstinline|types| &	array	& Custom slot types		& no\\
+		\_\_\lstinline|samples|	& array	 & Sample utterances for the intent	& no\\
+		
+		dialog & & & \\
+		elicitationRequired & & & \\
+		elicitation & & & \\
+		type (slot type) & & & \\
+		name (slot name) & & & \\
+		
+		prompts & & & \\
+		\_\_ id  & & & \\
+		\_\_\_\_variations  & & & \\
+		\_\_\_\_\_\_type  & & & \\
+		\_\_\_\_\_\_value  & & & \\ \hline
+		
+	\end{tabularx}			
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \todo{
 	intro on structure of chapter\\
 - to then elaborate on implementation requirements in section \ref{frameworks_structs}. 
@@ -59,9 +132,9 @@ It's important to say that they do not transcribe, but do term weighting etc, a 
 %###################################################################################
 
 \subsection*{Node.js}
-
-
-AWS Lambda supports multiple runtime environments including Python, Java, C\# and Go. We decide to use Node.js, a JavaScript (ECMAScript 6) framework due to its event-driven nature and to take advantage of its non-blocking I/O model. Being single-threaded, Node.js guarantees high performance at large scale with large volumes of requests considered. With its JavaScript (ECMAScript) foundation, no wonder it is becoming a standard in web-apps. Hence, the decision also comes due to the richness of develpers' experience with the implementation for Alexa Skills.
+\label{nodejs:def}
+%Framework built on top of JavaScript
+Out of the languages supported by ASK and Lambda, we decide to use Node.js, a JavaScript (ECMAScript 6) framework due to its event-driven nature and to take advantage of its non-blocking I/O model. Being single-threaded, Node.js guarantees high performance at large scale with large volumes of requests considered. With its JavaScript (ECMAScript) foundation, no wonder it is becoming a standard in web-apps. Hence, the decision also comes due to the richness of develpers' experience with the implementation for Alexa Skills.
 
 
 \todo{ below }
@@ -203,16 +276,38 @@ do not use "?"
 
 
 
-\section{Best Practices}
-\todo{https://developer.amazon.com/designing-for-voice/what-alexa-says/}
+\chapter{Design Best Practices}
+
+
+
+\todo{since this was too long it has to go into a chapter by itself. now it needs to be put in groups of 3 points\\
+then eventually add best practices at the end - note below\\
+Achtung baby: don't put this chapter behind implementation as we want to show the implentation of that ``good design''
+}
+
+
+\todo{It's important to understand that we are at the beginnings of VUI design, but are making progress, e.g. VUIs - should become seamless in an approach like this: - \href{https://recast.ai/blog/art-of-bot-design/}{art of bot design}\\
+	- \href{https://chatbotsmagazine.com/19-best-practices-for-building-chatbots-3c46274501b2}{best practices}
+}
+
+
+
+\todo{\url{https://developer.amazon.com/designing-for-voice/what-alexa-says/}
 available here even though i wrote my own things!!
 \url{https://developer.amazon.com/designing-for-voice/design-process/}
 \url{https://developer.amazon.com/designing-for-voice/voice-design-checklist/}
 
+\inote{this is intro paragraph for only skills. kammello 3ala el ba2i ba2a}
+
+%\inote{intro sentence: we talk about best practices for alexa then for chatbots allgemein (ergänzung through possible answers etc.)}
+}
 
 Throughout the model building process, we come across various nuances and details that might look subtle from a programming point of view. However, they very much can enrich or completely spoil the user experience, resulting in the users not returning to use our Skill again and can be an acceleration towards 1-Star reviews.
 
 Based on our own exploration and through a growing voice design guide offered to Alexa developers \footnote{\url{https://alexa.design/guide}} as well as personal recommendation from Alexa evangelist Memo Döring \cite{memo:devDay}, we share a few good practices to consider before starting and throughout the development process. These are concerned partly with building the interaction model, as well as with the fulfilment back-end. Many of them also apply to voice assistants other than Alexa
+
+
+
 
 \begin{enumerate}
 

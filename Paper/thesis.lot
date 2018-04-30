@@ -1,12 +1,13 @@
 \select@language {UKenglish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces relevant nodes in query results \mintinline {java}{Dienstleistungen.json} - Description\relax }}{13}{table.caption.13}
+\contentsline {table}{\numberline {2.1}{\ignorespaces relevant nodes in query results \mintinline {java}{Dienstleistungen.json} - Description\relax }}{15}{table.caption.15}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Interaction Model Schema}}{22}{table.caption.25}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Alexa Devices in Comparision\relax }}{31}{table.caption.32}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Alexa Devices in Comparision}}{33}{table.caption.39}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Interaction Model Schema}}{36}{table.caption.42}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
