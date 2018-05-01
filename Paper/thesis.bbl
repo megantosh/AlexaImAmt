@@ -74,6 +74,14 @@ Alexa Skills~Kit documentation.
 {Dries Buytaert}.
 \newblock \url{https://dri.es/think-beyond-with-acquia-labs}.
 
+\bibitem{uxbot}
+{Eunji “Jinny” Seo}.
+\newblock {19 Best UX Practices for Building Chatbots}.
+\newblock
+  \url{https://chatbotsmagazine.com/19-best-practices-for-building-chatbots-3c46274501b2},
+  {January} {2017}.
+\newblock Online Resource. Accessed on 10.03.2018.
+
 \bibitem{gartnerpreds17}
 Gartner.
 \newblock Gartner reveals top predictions for it organizations and users in
@@ -136,6 +144,12 @@ Will Knight.
   \url{https://www.technologyreview.com/s/602094/ais-language-problem/}, August
   2016.
 \newblock Online Resource. Accessed on 26.04.2018.
+
+\bibitem{botbestbractis}
+{Lucas Deschamps}.
+\newblock {The Art of Bot Design}.
+\newblock \url{https://recast.ai/blog/art-of-bot-design/}, {November} {2017}.
+\newblock Online Resource. Accessed on 10.03.2018.
 
 \bibitem{businsider}
 {M. Ballve}.

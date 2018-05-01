@@ -1,26 +1,103 @@
 \chapter{Skill Implementation}%: \inote{Kosten-/Terminabfrage}}
 \label{maintwo}
 
+In this chapter we present our implementation and hands-on experience throughout.
+The code is available on \inote{github, the new amazon account? ...}
+There are many ways to perform a setup, several languages we can use to programme 
+our Skill and throughout the development process some of these steps were changed. We present the most recent interfaces and implementation possibility using Node.js on AWS Lambda, However, this is very likely to change in a near future.
+
 \section{Setup}
 
 
 \todo{codechunks different labeling??
 }
 
+\subsection*{Minimum Requirements}
+\begin{itemize}
+	\item[Amazon Account] We use it in conjunction with AWS and the Alexa Developer Console \footnote{create one from anywhere on the Amazon Website, e.g. here \url{https://aws.amazon.com/de/resources/create-account/}}
+	
+	\item[Command Line] - \textbf{Python 3} or\textbf{ Ruby 4} need to be installed as a foundation for ASK CLI and AWS CLI.\\
+	- A package manager such as Pip Installs Packages (\textbf{PIP}) for Python or \textbf{RubyGems} for Ruby.\\
+	- Depending on OS, further packages and package managers might need to be installed, e.g. Command-Line Tools for Xcode and Homebrew on the Mac. This will be prompted throughout the installation.
+	\inote{brew, easyinstall python / win}
+	
+	
+	\item[API] Our endpoint provides us with JSON responses to the queries we do through a RESTful interface from within our Lambda function (back-end code) \footnote{rechable on:\url{https://newsreel-edu.aot.tu-berlin.de/solr}}.
+	
+	\item[Audio] An encoder to create 48kpbs constant bitrate MP3-Format. ffmpeg\footnote{convert by running \lstinline|$ ffmpeg -i <inFile> -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 <outFile.mp3>|} or Audacity \footnote{\url{http://www.audacityteam.org/}} can be used to convert to an Alexa-friendly file format like in the \textsc{ASK Documentation}\footnote{\url{https://developer.amazon.com/de/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html\#h3_converting_mp3}}.
+	
+\end{itemize}
+
+
+\subsection*{Creating AWS Credentials}
+
+With the Amazon account we just created (or already have), we will proceed with extending it to become a developer account. As we move within the free tier of AWS, no charges were applied. However, a credit card might be required for eventual future billings if the tier limitations were exceeded. We mention pricing schemes in Section \ref{choiceOfPlatform} \footnote{More information on pricing available on: \url{https://aws.amazon.com/de/pricing/}}. 
+
+\subsubsection*{Generating Access Keys}~\label{accesskeys}
+Linking happens through a private and public key pair - the \textbf{access key}.
+Combination of an \textit{access key ID} (like \lstinline|AK..7EXAMPLE|) and a \textit{secret access key} (e.g \lstinline|{wJalrXUt..I/K7..G/bPx..YEXAMPLEKEY|). We use access keys to sign API requests that you make to AWS.
+
+Creating Access Keys is described in the \textsc{AWS Documentation}\footnote{\url{https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html}}
+
+
+\subsection*{Initialising The Development Environment}
+
+As minimum package requirements can vary a lot between one OS and another, using a virtual machine is suggested for teams. AWS offers Elastic Compute Cloud (EC2) as a service for virtual machines in the cloud. Although this step is mainly for performing command-line prompts later on, if opting for that, it is convenient to avail a web browser inside the virtual machine instance. Otherwise for browser communication the tool we are going to use will generate links that we would need to copy and paste into a browser outside of the virtual machine to link it with the Amazon account we use.
+
+
+\subsection*{Installing Command-Line Tools}
+
+\begin{minted}[linenos,tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{bash}
+	$ which node			#check if installed
+	$ which npm			 #check if installed
+	$ which python		#check if installed
+	$ which ruby			#check if installed if proceeding with rbenv
+	$ python --version #we use 3.5.3
+	$ node --version	 #we use 7.3.0
+	$ npm --version 	 #we use 4.1.1
+	$ pip install aws-cli #Amazon Web Services Command Line Interface
+	$ aws --version		#check successful installation. We use aws-cli/1.15.1 Python/3.5.2 Darwin/15.6.0 botocore/1.10.1
+	$ npm install ask-cli| #Alexa Skills Cit Command Line Interface
+	$ ask --version	  #we use 1.1.6
+\end{minted}
+
+
+
+
+%\begin{minted}[linenos,tabsize=2,breaklines]{bash}
+
+
+
+
+\subsection*{Understanding the API Query parameters}
+HTTP(S) endpoint:
+\url{http://newsreel-edu.aot.tu-berlin.de/solr/#/d115}
+
+Rest Query
+Solr Syntax (only url. he knows solr better than i do)
+
+
+
+
+
+
+
 
 step by step code analysis
 
 \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md}
-\subsection{requirements}
 
-for audio
+
+
+
+%\subsection*{requirements}
+
+for audio (old)
 
 json format https://stackoverflow.com/questions/41776014/how-to-correctly-specify-ssml-in-an-alexa-skill-lambda-function
 
 
 
-HTTP(S) endpoint:
-\url{http://newsreel-edu.aot.tu-berlin.de/solr/#/d115}
 
 
 references:
@@ -34,7 +111,7 @@ blogs:
 
 With the JSON we have, we try to maximise its use, but we need to consider that with starting a Skill, it is better to start from scratch sometimes and as we go, we see what is the relevant information that we can integrate into our Skill.
 
-We analyze the output of Virtueller Bürgerassistent and realize it makes less sense to start with that, so we refer to the underlying endpoint. Since this is the Solr Server that delivers JSON objects and is more realistic to maneuver, we analyse the queries we can get from there. and try to fit it into our interaction model.
+We analyze the output of the \textsc{Virtual Citizen Assistant } and realize it makes less sense to start with that, so we refer to the underlying endpoint. Since this is the Solr Server that delivers JSON objects and is more realistic to maneuver, we analyse the queries we can get from there. and try to fit it into our interaction model.
 
 Then we move on to the interaction model. On paper, we draft the use-cases to determine what are our intents first to group these into fewer intents than the services we have. Given that there are many public services related to a similar case, we design our Skill to make it possible to group them into less intents. The advantage of this is that it allows us to at least have fewer 'ServiceIntents' than the ever growing number of services, which means that we want to also be able to track new services as they get inserted into the catalogue to be able to either map them to old intents by extending these, or to introduce new intents if this does not work.
 
@@ -57,7 +134,7 @@ scenarios:
 
 
 
-\todo{moved from AWS Microservices list\\
+\todo{moved from AWS Micro-services list\\
 
 	We might as well use just our own, any other privately or cloud-based server solution to host our code and use it as an endpoint for our software, however choosing Lambda takes away the overhead of linking the front-end with the back-end of the Skill %program we develop (an Alexa Skill as we describe below). 
 
@@ -88,6 +165,13 @@ if u use a browser, remember to keep the session active otherwise your model mig
 
 \section{Code Analysis}
 
+
+
+\subsection{Creating SSML and Audio}
+
+\url{https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html#audio}
+
+
 from \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md}
 The difference between :ask/listen and :tell/speak is that after a :tell/speak action, the session is ended without waiting for the user to provide more input. We will compare the two ways using response or using responseBuilder to create the response object in next section.
 
@@ -100,8 +184,6 @@ jsons sent/received in appendix
 
 
 
-problems with countrylist
- cote d'ivoir, südsee (british territories overseas, ...)
 
 
 legal things like the EU-partner rule.
@@ -166,6 +248,30 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 There is no AWS credential setup yet, do you want to continue the initialization?
 
 https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

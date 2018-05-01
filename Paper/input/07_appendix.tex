@@ -36,13 +36,13 @@ More information: \url{https://stackoverflow.com/questions/42982159/differences-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-deep learning:
+\todo{
+cp deep learning:\\
 
 There’s an obvious problem with applying deep learning to language. It’s that words are arbitrary symbols, and as such they are fundamentally different from imagery.
 https://www.technologyreview.com/s/602094/ais-language-problem/
 . Two words can be similar in meaning while containing completely different letters, for instance; and the same word can mean various things in different contexts.
-
+}
 
 
 
@@ -53,15 +53,24 @@ https://www.technologyreview.com/s/602094/ais-language-problem/
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 
-\section*{Documentation}
+\section*{Documentation (Base) URLs}
 
+\todo{use a base url to avoid extensive text in footnotes with href such that a click would still redirect right\\ -kbase \\ -Alexa blogs}
 \subsection*{AWS}
-AWS Glossary\\ 
+AWS Glossary\\ \t{a\t{ws}}\href{www.apple.com}{\lstinline|/doing-something\#hej|}
 \url{https://docs.aws.amazon.com/general/latest/gr/glos-chap.html}
 
+\subsection*{ASK}
 
+ASK Documentation\\ \t{a\t{sk}}\href{   }{\lstinline|   |}
+\url{https://developer.amazon.com/docs/custom-skills/}
 
+%\t{a\t{sk}}\href{   }{\lstinline|   |}
 
+%find \url{https://developer.amazon.com/docs/custom-skills
+% replace with \t{a\t{sk}}\href{\url{https://developer.amazon.com/docs/custom-skills}{\lstinline|   
+
+%then |}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -71,52 +80,47 @@ AWS Glossary\\
 \section*{Outtakes from a JSON query node}
 \label{query:dl}
 
-\begin{minted}{javascript}
+HTML Tags inside Text
+\begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{json}
 
-{
-"d115Description": "Eine Fiktionsbescheinigung wird ausgestellt, wenn über einen beantragten Aufenthaltstitel noch nicht entschieden werden kann, z. B. weil<br />\n<br />\n<ul class=\"list\"><li>Unterlagen fehlen oder die Ausländerakte nicht vorliegt,</li>
-[...]
+{ "d115Description": "Eine Fiktionsbescheinigung wird ausgestellt, wenn über einen beantragten Aufenthaltstitel noch nicht entschieden werden kann, z. B. weil<br />\n<br />\n<ul class=\"list\"><li> ... Ausländerakte ... liegt,</li> ...
 \end{minted}
 
-\begin{minted}{javascript}
-{"d115Synonym": ["Aufenthaltserlaubnis",
-"Aufenthaltstitel","vorläufig", 
-"Visum","Fiktionsbescheinigung"
-]
+Ambiguous words that can be a plus for the Virtual Citizen Assistant but become irrelevant or confusing for the Skill (e.g. \mintinline{text}{Fiktionsbescheinigung})
+\begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{json}
+{... "d115Synonym": [
+"Aufenthaltserlaubnis","Aufenthaltstitel","vorläufig",
+"Visum","Fiktionsbescheinigung"] ...
 \end{minted}
 
-\begin{minted}{javascript}
-"d115InfoLaw": ["§ 81 Aufenthaltsgesetz - AufenthG 
-::: false ::: http://www.gesetze-im-internet.de/
-aufenthg_2004/__81.html"],
+Inconsistent or unconventional text encoding (e.g. \mintinline{text}{::: false :::} )
+\begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{json}
+{... "d115InfoLaw": ["§ 81 Aufenthaltsgesetz - AufenthG  ::: false ::: http://www.geset...net.de/aufenthg_2004/__81.html"] ...
 \end{minted}
 
-\begin{minted}{javascript}
-"d115Prerequisites": [
-"Persönliche Vorsprache ist erforderlich ::: false ::: ",
+Text gets lost in translation from reading to speaking or is hard to read out loud
+\begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{json}
+{... "d115Prerequisites": [ "Persönliche Vorsprache ist erforderlich ::: false ::: ",
 "Rechtmäßiger Aufenthalt mit oder ohne Aufenthaltstitel ::: Zum Zeitpunkt des Antrags muss die Antragstellerin oder der Antragsteller entweder<br />\n<br />\n<ul class=\"list\"><li>einen gültigen Aufenthaltstitel (Aufenthaltserlaubnis oder nationales Visum für längerfristige Aufenthalte - Kategorie D - ) [...]",
 "Antrag auf Aufenthaltstitel ::: Eine Fiktionsbescheinigung wird nur dann ausgestellt, wenn [...] ::: ",
-"Hauptwohnsitz in Berlin ::: false ::: "
-]
+"Hauptwohnsitz in Berlin ::: false ::: "] ...
 \end{minted}
 
-\begin{minted}{javascript}
-"d115Requirements": [
-"Bisheriger Aufenthaltstitel ::: Soweit vorhanden, ist der bisherige Aufenthaltstitel mitzubringen, z.B. der elektronische Aufenthaltstitel (eAT). ::: ",
+\begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{json}
+{... "d115Requirements": [ "Bisheriger Aufenthaltstitel ::: Soweit vorhanden, ist der bisherige Aufenthaltstitel mitzubringen, z.B. der elektronische Aufenthaltstitel (eAT). ::: ",
 "Nachweis über den Hauptwohnsitz in Berlin ::: <ul class=\"list\"><li>Bescheinigung über die Anmeldung der Wohnung (Meldebestätigung) <strong>oder</strong></li><li>Mietvertrag und Einzugsbestätigung des Vermieters</li></ul>Mehr zum Thema im Abschnitt „Weiterführende Informationen“ ::: ",
-"Gültiger Pass oder Passersatz ::: Eine Fiktionsbescheinigung gilt immer nur in Verbindung mit einem gültigen Pass oder Passersatz. ::: "
-]
+"..."] ...
 \end{minted}
 
-
-\begin{minted}{javascript}
-"d115Fees": "Ab dem 01.09.2017:<br />\n<br />\n<ul class=\"list\"><li>Für Erwachsene: 13,00 Euro</li><li>Für Minderjährige: 6,50 Euro</li></ul>Gebührenfrei für<br />\n<ul class=\"list\"><li>Türkische Staatsangehörige</li><li>Asylberechtigte</li><li>
+Not a single readable item price
+\begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{json}
+{..."d115Fees": "Ab dem 01.09.2017:<br />\n<br />\n<ul class=\"list\"><li>Für Erwachsene: 13,00 Euro</li><li>Für Minderjährige: 6,50 Euro</li></ul>Gebührenfrei für<br />\n<ul class=\"list\"><li>Türkische Staatsangehörige</li><li>Asylberechtigte</li><li>
 Ausländer, die im Bundesgebiet die Rechtsstellung ausländischer Flüchtlinge oder subsidiär Schutzberechtigter genießen</li><li>Resettlement-
-Flüchtlinge im Sinne von § 23 Abs. 4 S. 1 AufenthG</li></ul>",
+Flüchtlinge im Sinne von § 23 Abs. 4 S. 1 AufenthG</li></ul>" ...
 \end{minted}
 
-\begin{minted}{javascript}
-"d115ProcessTime": "Die Fiktionsbescheinigung wird bei Vorsprache ausgestellt."
+\begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{json}
+{..."d115ProcessTime": "Die Fiktionsbescheinigung wird bei Vorsprache ausgestellt." ...
 \end{minted}
 
 %
@@ -189,13 +193,24 @@ Flüchtlinge im Sinne von § 23 Abs. 4 S. 1 AufenthG</li></ul>",
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 
+%\todo{check tcolorbox and mited manuals for headings etc}
+%\begin{tcblisting}{<tcb options>,
+%		minted language=<language>,
+%		minted style=<style>,
+%		minted options={<option list>} }
+%	<code>
+%\end{tcblisting}
+
+
+
 
 %\todo{3ashan beyetghayarou bsr3a}
 % DO NOT INDENT OR PLAY AROUND HERE LEST THE CODE ZERSCHIESST SICH
 \begin{figure}[H]
-	\caption[HTTPS Request Body]{Request Body Syntax as of 26.04.2018 }
+	\caption[HTTPS Request Body Syntax]{Request Body (26.04.2018) }
 	\label{jsonFromAlexa}
-\begin{minted}{json}
+
+\begin{minted}[linenos,tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{json}
 {"version": "1.0",
  "session": {
   "new": true,
@@ -233,7 +248,8 @@ Flüchtlinge im Sinne von § 23 Abs. 4 S. 1 AufenthG</li></ul>",
 	\end{minted}
 \end{figure}
 
-source: \textsc{ASK Documentation} \footnote{\url{https://developer.amazon.com/docs/custom-skills/request-and-response-json-reference.html\#request-body-syntax}}
+Can be used to generate tests in Lambda.\\
+source: \textsc{ASK Documentation} \footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills}{\lstinline|/request-and-response-json-reference.html\#request-body-syntax|}}
 
 
 
@@ -293,11 +309,16 @@ source: \textsc{ASK Documentation} \footnote{\url{https://developer.amazon.com/d
 \textbf{IoT}	&	Internet of Things\\
 \textbf{IVR}	&	Interactive Voice Response\\
 
+\textbf{JSON}	&	JavaScript Object Notation\\
+
+\textbf{kbps}	&	kilobits per second\\
+
 \textbf{LeiKa}	&	Leistungskatalog der öffentlichen Verwaltung \\
 & (public administration service catalogue)\\
 
 
 \textbf{ML}		&	Machine Learning\\
+\textbf{MP3}	&	Moving Picture Experts Group Layer-3 Audio (MPEG-3)\\
 \textbf{MVC}	&	Model-View-Controller\\
 \textbf{MVP}	&	Minimum Viable Product\\
 
@@ -305,6 +326,7 @@ source: \textsc{ASK Documentation} \footnote{\url{https://developer.amazon.com/d
 \textbf{NLU}	&	Natural Language Understanding\\
 \textbf{NPM}	&	Node Package Manager\\
 
+\textbf{OS}		&	Operating System\\
 \textbf{OSI}	&	Online Services Index\\
 \textbf{ROI}	&	Return on Investment\\
 \textbf{SSML}	&	Speech Synthesis Markup Language\\
@@ -349,6 +371,9 @@ source: \textsc{ASK Documentation} \footnote{\url{https://developer.amazon.com/d
 
 \begin{flushleft}
 \begin{tabular}{ll}
+
+\textbf{Access Key}			&	 	\ref{accesskeys}\\
+
 
 \textbf{Alexa}				&		\ref{alexa:def}\\
 \textbf{Alexa Skill}		&		\ref{alexa:def}\\
