@@ -20,7 +20,7 @@
 \contentsline {chapter}{\numberline {4}State of the Art}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}Analogies to the Introduction of Web 2.0}{23}{section.4.1}
 \contentsline {section}{\numberline {4.2}Development Models and Platforms}{24}{section.4.2}
-\contentsline {section}{\numberline {4.3}Choice of Platform}{24}{section.4.3}
+\contentsline {section}{\numberline {4.3}Choice of Platform}{25}{section.4.3}
 \contentsline {chapter}{\numberline {5}Amazon's Ecosystem}{27}{chapter.5}
 \contentsline {section}{\numberline {5.1}Amazon Web Services + Alexa}{27}{section.5.1}
 \contentsline {section}{\numberline {5.2}AWS Modules as Alexa's Building Blocks }{28}{section.5.2}

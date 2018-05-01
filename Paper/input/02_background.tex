@@ -119,7 +119,9 @@ Moreover, SearchMetrics' upcoming report has a section dedicated to voice search
 
 
 
-
+%###################################################################################
+%###################### E-GOVs           ########################################
+%###################################################################################
 
 \section{Digitalisation in the Public Sector}
 
@@ -266,20 +268,6 @@ the Information Retrieval and Machine Learning Competence Centre of the Technica
 	-Was sind die Erwartungen?\\ 	
 }
 
-We cover here an excerpt of basic elements that we will later see more or less in the same structure of the JSON file containing the interaction model:\\
-
-
-
-\begin{figure}[h!]
-	\caption{\mintinline{java}{Dienstleistungen.json}  - Primary Nodes}
-	\includegraphics[width=\textwidth]{DLprim}
-\end{figure}
-
-\begin{figure}[h]
-	\caption{\mintinline{java}{Dienstleistungen.json} - secondary Nodes}
-	\includegraphics[width=\textwidth]{DLsec}
-\end{figure}
-
 
 \todo{
 	\textbf{current berlin.de bot}\\
@@ -304,72 +292,36 @@ We cover here an excerpt of basic elements that we will later see more or less i
 
 
 
-\todo{\textbf{summary and ausblick}\\
-	- static system as the Dienstleistungen do not change regularly\\
-	-  as opposed to Versicherungsfirma z.B (ML tries to detect irregular patterns in case customer is lying).
-	- unfortunately forums vs. FAQs did not work. if i want assistance, i want the customer to tell me the model number - and forums have mostly Schrott!\\
-	- what the bot curently achieved is at least not give wrong answers, sometimes says idk but it doesnt confuse u. %same attitude like in lmny shops 
-	- we talked about this in intro chapter. see if u want to mention again with a diff angle\\
-	-(nur unpassende antworten sind frustrierend!)\\
-}
+We cover here an excerpt of basic elements that we will later see more or less in the same structure of the JSON file containing the interaction model:\\
 
 
 
 
-
-%\subsection*{D115 and The Currently Deployed ``Virtual Bürgerassistent''}
-%\todo{
-%	- LeiKa
-
-%	-Use case im Detail\\
-%	- wie kann man die G\"ute des Systems beurteilen? \textbf{do not forget the surveyu made}\\   
-%	- Meist sollte man in diesem Kapitel die L\"osung schon im Auge haben, um die Erwartungen so zu formulieren, dass die L\"osung auch geeignet ist?\\ 
-%}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%
-
-%\Tree [.Dienstleistungen.json created [.VP [.V is ] NP ] ]
-%
-%\Tree[.Dienstleistungen.json 	
-%	[.NP [.Det \textit{the} ]
-%		[.N\1 [.N \textit{package} ]]]
-%	[.I\1 [.I \textsc{3sg.Pres} ]
-%		[.VP [.V\1 [.V \textit{is} ]
-%			 	   [.AP [.Deg \textit{really} ]
-%				  		[.A\1 [.A \textit{simple} ]
-%							  \qroof{\textit{to use}}.CP ]]]]]]]
-
-
-
-
-
-
-%provided in JSON for value lookup, the structure of the file is as follows: there are \inote{carry on - the structure}
-
-
-started with 616 Intents in \lstinline|data| node (now 685 or so), each containing \inote{Tableau}
-\todo{missing variables e.g. are required papers, flag: persönliche Vorsprache ja nein, ...}
 \todo {change this into a table and add a tree list like the interaction model in appendix}
 
 \begin{table}[htbp]
 	\caption{relevant nodes in query results \mintinline{java}{Dienstleistungen.json} - Description}
 	\label{dienstleistung:descr}
-	\begin{tabu} to \linewidth {  r | l | l | l }
-		key & type & ex. Value & description\\ \hline
+	\begin{tabu} to \textwidth{|X|X|X|X[2]|}
+		key & type & ex. Value & description\\ \hline \hline
 		
-		\mintinline{json}{id} & \mintinline{json}{int} & 326233 & public service ID on \href{https://service.berlin.de}{service.berlin.de} \\
+		\lstinline|id| & \lstinline|int| & 326233 & public service ID % on \href{https://service.berlin.de}{service.berlin.de} 
+		\\
 		
-		\mintinline{json}{d115URL} & URL \mintinline{json}{string} & ''https://service.berlin.de/dienstleistung/326233/'' & link to public service URL on  \href{https://service.berlin.de}{service.berlin.de} \\
+		\lstinline|d115URL| & %URL 
+		\lstinline|string| & %''https://service.berlin.de/dienstleistung/326233/'' 
+		& link to public service URL % on  \href{https://service.berlin.de}{service.berlin.de} 
+		\\
 		
-		\mintinline{json}{d115Name} & \mintinline{json}{string} & Fiktionsbescheinigung & public service name as listed on \href{https://service.berlin.de}{service.berlin.de/dienstleistungen} \\		
+		\lstinline|d115Name| & \lstinline|string| &  FxionsB. % Fiktionsbescheinigung 
+		& public service name %as listed on \href{https://service.berlin.de}{service.berlin.de/dienstleistungen} 
+		\\		
 		
-		\mintinline{json}{ssdsAll} & \mintinline{json}{string} & ... & additional captive search terms, synonyms used by Virtueller Bürgerassistent. Found to be helpful in conversations with the chatbot \\		
+		\lstinline|ssdsAll| & \lstinline|string| & ... & \shortstack[l]{additional captive search terms,\\ synonyms used by Virtueller \\ Bürgerassistent. Found to be \\ helpful in conversations \\ with the chatbot} \\		
 		
-		\mintinline{json}{d115Description} & \mintinline{json}{string} & ... & Introductory paragraph from the service web page. 
-		Includes HTML tags \\ %like <\backslash br> and <ul ...> \\		
+		\lstinline|d115Description| & \lstinline|string| & ... & \shortstack[l]{Introductory paragraph from \\the service web page \\ 
+		Includes HTML tags}
+		\\ %like <\backslash br> and <ul ...> \\		
 		
 		
 		%		
@@ -425,26 +377,33 @@ started with 616 Intents in \lstinline|data| node (now 685 or so), each containi
 \end{table}
 
 
+%%%%%%%%%%%%%%%%%%%%
+%provided in JSON for value lookup, the structure of the file is as follows: there are \inote{carry on - the structure}
 
 
+%%%%%%%%%%%%%%%%%%%%%
 
-
-
-
-
-
-
-
-
-
-%#################################################################################
-%###################### State of the Art  ########################################
-%%#################################################################################
-%\chapter{State of the Art}
+%\Tree [.Dienstleistungen.json created [.VP [.V is ] NP ] ]
 %
-%\sn{intro sentence}
-%
-%
+%\Tree[.Dienstleistungen.json 	
+%	[.NP [.Det \textit{the} ]
+%		[.N\1 [.N \textit{package} ]]]
+%	[.I\1 [.I \textsc{3sg.Pres} ]
+%		[.VP [.V\1 [.V \textit{is} ]
+%			 	   [.AP [.Deg \textit{really} ]
+%				  		[.A\1 [.A \textit{simple} ]
+%							  \qroof{\textit{to use}}.CP ]]]]]]]
+
+
+
+
+\todo{
+	\textbf{API analysis}
+	- missing variables e.g. are required papers, \\
+	- flag: persönliche Vorsprache ja nein, ...\\
+	- started with 616 Intents %in \lstinline|data| node 
+	(now 685 or so), each containing \inote{Tableau}\\
+	- should I include the JSON samples from Appendix here? or just refer to them?}
 
 
 
@@ -452,11 +411,6 @@ started with 616 Intents in \lstinline|data| node (now 685 or so), each containi
 
 
 
-%###################################################################################
-%###################### Topic B             ########################################
-%###################################################################################
-
-%% moved to Chapter 3
 
 
 
@@ -466,8 +420,42 @@ started with 616 Intents in \lstinline|data| node (now 685 or so), each containi
 
 
 
+\begin{figure}[h!]
+	\caption{\mintinline{java}{Dienstleistungen.json}  - Primary Nodes}
+	\includegraphics[width=\textwidth]{DLprim}
+\end{figure}
+
+\begin{figure}[h]
+	\caption{\mintinline{java}{Dienstleistungen.json} - secondary Nodes}
+	\includegraphics[width=\textwidth]{DLsec}
+\end{figure}
 
 
+
+
+
+
+\todo{\textbf{summary and ausblick}\\
+	- static system as the Dienstleistungen do not change regularly\\
+	-  as opposed to Versicherungsfirma z.B (ML tries to detect irregular patterns in case customer is lying).
+	- unfortunately forums vs. FAQs did not work. if i want assistance, i want the customer to tell me the model number - and forums have mostly Schrott!\\
+	- what the bot curently achieved is at least not give wrong answers, sometimes says idk but it doesnt confuse u. %same attitude like in lmny shops 
+	- we talked about this in intro chapter. see if u want to mention again with a diff angle\\
+	-(nur unpassende antworten sind frustrierend!)\\
+}
+
+
+
+
+
+%\subsection*{D115 and The Currently Deployed ``Virtual Bürgerassistent''}
+%\todo{
+%	- LeiKa
+
+%	-Use case im Detail\\
+%	- wie kann man die G\"ute des Systems beurteilen? \textbf{do not forget the surveyu made}\\   
+%	- Meist sollte man in diesem Kapitel die L\"osung schon im Auge haben, um die Erwartungen so zu formulieren, dass die L\"osung auch geeignet ist?\\ 
+%}
 
 
 
@@ -702,20 +690,23 @@ We already unveiled in Section \ref{approachgoals} that Alexa will be the underl
 	
 	\subsection*{Dialogue State}~\label{dialogState}
 	Like with a state machine, when we have a conversation with Alexa, the dialogue goes into states \mintinline{java}{STARTED}, \mintinline{java}{IN_PROGRESS} or \mintinline{java}{COMPLETED} in the \mintinline{java}{dialogState} property of the JSONs being exchanged with the Alexa client (e.g. an Echo Dot). This is helpful for delegating the dialogue to Alexa or handling it in our own code especially in a \hyperlink{multiturn:def}{multi-turn conversation}. More details about this interaction available in the \textsc{ASK documentation} \footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html\#scenario-delegate}{\lstinline|/dialog-interface-reference.html\#scenario-delegate|}}
+	
+	
+	\todo{finish these. {More than just Amazon's def}}
 
-	\subsection*{Dialogue Directives}
+	\subsection*{Dialogue Directives}~\label{directives:def}
 	
 	\subsection*{Entity Resolution}~\label{entityRes:def}	
 	
-	\subsection*{Fulfilment}
+	\subsection*{Fulfilment}~\label{fulfillment:def}
 	
 	\subsection*{Interaction Model}~\label{interactionMdl:def}
 	
 	\subsection*{Multi-Turn Conversation}~\label{multiturn:def}
 	
-	\subsection*{Over-answering}
+	\subsection*{Over-answering}~\label{entityRes:def}
 
-	\subsection*{Persistence and Memory}
+	\subsection*{Persistence and Memory}~\label{entityRes:def}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\todo{
@@ -736,6 +727,12 @@ We already unveiled in Section \ref{approachgoals} that Alexa will be the underl
 
 
 
+
+
+
+%#################################################################################
+%###################### State of the Art  ########################################
+%%#################################################################################
 
 
 
@@ -787,98 +784,80 @@ With these introductory definitions we try to lay out a foundation for a standar
 
 Chatbots have become available and more accessible to develop through numerous platform (for the same platform (Facebook), for your own platform(Lex), just a tool (Flask)). We no longer have to come up with the whole infrastructure.\\
 
-\todo{\textbf{by platform:}
-	-API.ai / 
-	Facebook Messenger Chatbots /	
-	-wit.ai /
+\todo{\textbf{by platform:}\\
+	-API.ai \\
+	Facebook Messenger Chatbots \\
+	-wit.ai \\
 	-motion.ai / Flask\\
 	
-	
-	
+	-this could belong here or somewhere else\\
 	\href{https://techcrunch.com/2017/08/30/amazon-and-microsoft-agree-their-voice-assistants-will-talk-to-each-other/}{Amazon and Microsoft agree their voice assistants will talk (to each other)}\\
 	- additional plugins are in the making, giving individual touch of sound based on profile (Alexa Podcast on the way to BXL)\\
 }
 
 
+\todo{moved from intro (was too detailed for up there):\\
+	- like Siri, Bixby, etc. \inote{put bixby somewhere else and be more precise on what u did based on section choice of platform} \\
+	- such as Microsoft Azure Bot Framework, Amazon Lex and API.ai,
+	- Amazon has an obscure position to data and privacy vs. siri e.g. (GDPR).\\
+	- some screenshots from Azure etc.\\
+	
+}
 
+
+\todo{
+	
+	from a user point of view:\\
+	\url{https://www.technologyreview.com/s/608571/alexa-understand-me/}
+	SUSTAINED CONVERSATION\\
+	In studies, AI platforms by Google, Apple, Microsoft, and Amazon all show different strengths. Google Assistant is the best on wide-ranging search commands. Apple’s Siri and Microsoft’s Cortana have other talents. Alexa does particularly well with shopping commands.\\
+	
+	Darren austin:\\ \url{https://venturebeat.com/2017/06/27/how-amazons-alexa-hooks-you/}
+	Alexa’s broader success resides in its ability to alleviate the stresses of an overbooked life. It’s the companion that’s always ready to engage.\\
+	
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Choice of Platform} %comparison AWS vs. el ba2i
 \label{choiceOfPlatform}
 
-\todo{I'll have to introduce skills in this section for the first time. reference it in glossary in two places. here and later in Alexa + skills}
-
-\todo{moved from intro(was too detailed for up there):\\
-	like Siri, Bixby, etc. \inote{put bixby somewhere else and be more precise on what u did based on section choice of platform} 
-	such as Microsoft Azure Bot Framework, Amazon Lex and API.ai,
+\todo{I'll have to introduce Skills `officially' in this section for the first time (mentioned already with Georgia as app-like).\\
+	reference it in glossary in two places. here and later in Alexa + skills
 }
+
+
 \todo{
-	here you can talk about alternatives like Microsoft, etc, compare \textbf{pricing scheme}, say why you chose alexa (for its popularity mainly and 3ashan Api.ai et3amal abl keda\\
+	here you can talk about alternatives like Microsoft, etc, compare \textbf{pricing scheme}, say why you chose Alexa (for its popularity mainly and because Api.ai was used in prev. proj.\\
 	%-AWS Lambda is free for the first one million calls per month\\
 	-need to manage any SSL certificates when using AWS Lambda (since the Alexa Skills Kit is a trusted trigger).\\
-	\url{https://developer.amazon.com/blogs/post/Tx213D2XQIYH864/announcing-the-alexa-skills-kit-for-node-js} very imp\\
-	w 3ashan it's a whole established ecosystem. ma3 el ta7afozat eno amazon has an obscure position to data and privacy vs. siri masalan.\\
-	3ashan ma3 siri me7tag iOS knowledge\\
+	- \url{https://developer.amazon.com/blogs/post/Tx213D2XQIYH864/announcing-the-alexa-skills-kit-for-node-js} having an SDK is very imp (unavailable for C\# e.g.)\\
+	- bec. AWS is a whole established ecosystem.
+	- developing for Siri would require iOS knowledge on top\\
+	- Talk about features like Maintaining context(sesions), \textbf{Intent chaining}\\
+
 	
-	w ba2a 7aga like Maintain context(sesions), Intent chaining (khodlak kam screenshot men Azure)\\
-	
-	- on top of that, alexa does this cool thing where it gives\\
+%	- on top of that, alexa does this cool thing where it gives\\
 	
 }
 
 
-\todo{
-	
-	from a user point of view:
-	\url{https://www.technologyreview.com/s/608571/alexa-understand-me/}
-	SUSTAINED CONVERSATION\\
-	In studies, AI platforms by Google, Apple, Microsoft, and Amazon all show different strengths. Google Assistant is the best on wide-ranging search commands. Apple’s Siri and Microsoft’s Cortana have other talents. Alexa does particularly well with shopping commands.\\
-	
-	Darren austin: \url{https://venturebeat.com/2017/06/27/how-amazons-alexa-hooks-you/}
-	Alexa’s broader success resides in its ability to alleviate the stresses of an overbooked life. It’s the companion that’s always ready to engage.\\
-	
-}
 
 
 Before deciding to develop for Alexa, we consider several options and evaluate their advantages and suitability for our requirements.
 
 \todo{elaborate on pricing model in details}
 
-\begin{table}
-	\begin{tabularx}{\linewidth}{r | l l l}
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{r | l l l}
 		& Alexa  & API.ai & Microsoft Azure \\ \hline
 		price & free \footnote{Creating the skill is free, if using AWS to host the backend part (via Lambda): First million calls free per month} & free & free \\
 	\end{tabularx}
 \end{table}
 
-With Alexa as our choice, we agree to acknowledge the following considerations:
 
 
-
-
-\subsubsection*{Availability}
-\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/develop-skills-in-multiple-languages.html}{\lstinline|/develop-skills-in-multiple-languages.html|}
-
-
-\begin{quotation}
-	
-	\item The skill is available only in the German skill store, due to the selected country distribution.
-	\item The skill can be used by customers in Germany who have set their devices to use German.
-	\item The skill can be used by customers in Germany who have set their devices to use English (UK).
-	\item The skill cannot be used by customers in Germany who have set their devices to use English (US) or any other language.
-	\item The skill cannot be used by customers in any other country, regardless of the language they've selected for their devices.
-	
-\end{quotation}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
+%%%%%%%%%%%%
 
 \todo{	
 	
@@ -901,6 +880,38 @@ With Alexa as our choice, we agree to acknowledge the following considerations:
 
 
 %%%%%%%
+
+
+
+
+
+
+With Alexa as our choice, we agree to acknowledge the following considerations:
+
+
+
+
+\subsubsection*{Availability (CP) \footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/develop-skills-in-multiple-languages.html}{\lstinline|/develop-skills-in-multiple-languages.html|}}}
+
+
+\begin{itemize}
+	
+	\item available only in the German skill store, due to the selected country distribution.
+	\item can be used by customers in Germany who have set their devices to use German.
+	\item can be used by customers in Germany who have set their devices to use English (UK).
+	\item cannot be used by customers in Germany who have set their devices to use English (US) or any other language.
+	\item cannot be used by customers in any other country, regardless of the language they've selected for their devices.
+	
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
 
 
 
