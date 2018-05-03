@@ -281,7 +281,7 @@ function slotHasValue(request, slotName) {
 
 // make an http get request calls resolve upon completion and reject if there's an error.
 // returns a promise -
-exports.httpGet = function httpGet(options){
+exports.httpsGet = function httpsGet(options){
     return new Promise(function(resolve, reject) {
         let request = https.request(options, response => {
             response.setEncoding('utf8');
@@ -301,7 +301,7 @@ exports.httpGet = function httpGet(options){
             response.on('end', () => {
                 // we have now received the raw return data in the returnData variable.
                 // We can see it in the log output via:
-                // console.log(JSON.stringify(returnData))
+                console.log(JSON.stringify(returnData))
                 // we may need to parse through it to extract the needed data
 
                 let response = JSON.parse(returnData);
@@ -320,15 +320,18 @@ exports.httpGet = function httpGet(options){
 
 // Creates the options object for an HTTPs GET Request
 // Returns an object.
-exports.buildHttpGetOptions = function buildHttpGetOptions(host, path, port) { //, params) {
+exports.buildHttpGetOptions = function buildHttpGetOptions(params) {
     let options = {
-        hostname: host,
-        path: path, //+ buildQueryString(params),
-        port: port,
-        method: 'GET'
+        hostname: "newsreel-edu.aot.tu-berlin.de",
+        path: "/solr/d115/" + params, //buildQueryString(params),
+        // port: port,
+        method: 'GET',
+        rejectUnauthorized: false,
+        auth: "personal-assistent:AlexaAlexa0815."
     };
     return options;
 }
+
 
 
 //TODO might (not) need export! - complete with petmatch params
@@ -342,3 +345,188 @@ function buildQueryString(params) {
     return paramList;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Language Model  for reference
+var interactionModel = [
+    {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+    },
+    {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+    },
+    {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+    },
+    {
+        "name": "DL_AufenthaltstitelIntent",
+        "slots": [],
+        "samples": []
+    },
+    {
+        "name": "BafoegIntent",
+        "slots": [],
+        "samples": []
+    },
+    {
+        "name": "ApprobationIntent",
+        "slots": [],
+        "samples": []
+    },
+    {
+        "name": "DL_generalIntent",
+        "slots": [
+            {
+                "name": "Dienstleistung",
+                "type": "EN_LIST_OF_PUBLIC_SVCS_BLN"
+            },
+            {
+                "name": "prerequisites",
+                "type": "EN_YES_NO_FLAG",
+                "samples": [
+                    "{prerequisites} please"
+                ]
+            }
+        ],
+        "samples": [
+            "how do i {Dienstleistung}",
+            "i want to {Dienstleistung}",
+            "i would like to {Dienstleistung}"
+        ]
+    },
+    {
+        "name": "ST_BerlinQuestions",
+        "slots": [],
+        "samples": []
+    },
+    {
+        "name": "ST_FutureTODOs",
+        "slots": [
+            {
+                "name": "DogName",
+                "type": "AMAZON.US_FIRST_NAME"
+            },
+            {
+                "name": "futureIntent",
+                "type": "Todo_List"
+            }
+        ],
+        "samples": [
+            "I need an apartment",
+            "where can I {futureIntent}",
+            "I want to go bathing",
+            "I need a house",
+            "I lost my Meldebscheinigung",
+            "where do I find {DogName}",
+            "where did my dog go",
+            "where do I find my lost dog",
+            "how can I find my dog",
+            "I lost my dog",
+            "ich habe ein Kind bekommen wo kann ich eine geburtsurkunde beantragen"
+        ]
+    },
+    {
+        "name": "LaunchRequest"
+    }
+];
+
+
+
+var intentsReference = [
+    {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+    },
+    {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+    },
+    {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+    },
+    {
+        "name": "DL_AufenthaltstitelIntent",
+        "slots": [],
+        "samples": []
+    },
+    {
+        "name": "BafoegIntent",
+        "slots": [],
+        "samples": []
+    },
+    {
+        "name": "ApprobationIntent",
+        "slots": [],
+        "samples": []
+    },
+    {
+        "name": "DL_generalIntent",
+        "slots": [
+            {
+                "name": "Dienstleistung",
+                "type": "EN_LIST_OF_PUBLIC_SVCS_BLN"
+            },
+            {
+                "name": "prerequisites",
+                "type": "EN_YES_NO_FLAG",
+                "samples": [
+                    "{prerequisites} please"
+                ]
+            }
+        ],
+        "samples": [
+            "how do i {Dienstleistung}",
+            "i want to {Dienstleistung}",
+            "i would like to {Dienstleistung}"
+        ]
+    },
+    {
+        "name": "ST_BerlinQuestions",
+        "slots": [],
+        "samples": []
+    },
+    {
+        "name": "ST_FutureTODOs",
+        "slots": [
+            {
+                "name": "DogName",
+                "type": "AMAZON.US_FIRST_NAME"
+            },
+            {
+                "name": "futureIntent",
+                "type": "Todo_List"
+            }
+        ],
+        "samples": [
+            "I need an apartment",
+            "where can I {futureIntent}",
+            "I want to go bathing",
+            "I need a house",
+            "I lost my Meldebscheinigung",
+            "where do I find {DogName}",
+            "where did my dog go",
+            "where do I find my lost dog",
+            "how can I find my dog",
+            "I lost my dog",
+            "ich habe ein Kind bekommen wo kann ich eine geburtsurkunde beantragen"
+        ]
+    },
+    {
+        "name": "LaunchRequest"
+    }
+];

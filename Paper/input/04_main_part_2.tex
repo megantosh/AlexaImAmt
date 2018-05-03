@@ -14,7 +14,7 @@ our Skill and throughout the development process some of these steps were change
 
 \subsection*{Minimum Requirements}
 \begin{itemize}
-	\item[Amazon Account] We use it in conjunction with AWS and the Alexa Developer Console \footnote{create one from anywhere on the Amazon Website, e.g. here \url{https://aws.amazon.com/de/resources/create-account/}}
+	\item[Amazon Account] We use it in conjunction with AWS and the Alexa Developer Console \footnote{create one from anywhere on the Amazon Website, e.g. here \url{https://aws.amazon.com/de/resources/create-account/}} as well as to test our skill. Once we activate our account on the developer console, the skills we develop become automatically reachable on any Alexa-enabled device linked to our account (as an end-user).
 	
 	\item[Command Line] - \textbf{Python 3} or\textbf{ Ruby 4} need to be installed as a foundation for ASK CLI and AWS CLI.\\
 	- A package manager such as Pip Installs Packages (\textbf{PIP}) for Python or \textbf{RubyGems} for Ruby.\\
@@ -147,7 +147,7 @@ scenarios:
 
 
 
-\section{step-by-step}
+%\section{step-by-step}
 
 start with interaction model
 then use builder
@@ -163,14 +163,27 @@ change offline
 
 if u use a browser, remember to keep the session active otherwise your model might get lost in the POST
 
-\section{Code Analysis}
-
+%\section{Code Analysis}
+\section[Features]{Feature Implementations}
 
 
 \subsection{Creating SSML and Audio}
 
+
 \url{https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html#audio}
 
+
+
+\subsection{Checking the Next available appointment}
+
+Although this is a proof of concept, with an API extension from ITDZ's side, it is equally easy to implement a feature to look up next available appointments.
+The actual booking would require Alexa to send POST requests and persistently retain these on the API's side with the option to impement another feature to save the same appointment to the calendar linked to the Amazon account used with this Alexa instance. This might require account linking, too, if we need to pass the appointment data through the Skill to an online personal calendar endpoint, bypassing Alexa itself.
+
+Booking an appointment happens for now only through Berlin.de's website by starting at either \href{https://service.berlin.de/terminvereinbarung/termin/}{the appointment booking page} \footnote{\url{https://service.berlin.de/terminvereinbarung/termin/}} which links to the actual booking pages via choosing the service or the location where the service 
+
+
+
+\section{Code Analysis}
 
 from \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md}
 The difference between :ask/listen and :tell/speak is that after a :tell/speak action, the session is ended without waiting for the user to provide more input. We will compare the two ways using response or using responseBuilder to create the response object in next section.
@@ -200,19 +213,36 @@ el mawdou3 mo3aqqad but codified here
 
 
 
+\section{Testing}
+
+continuous testing during development, noch nicht evaulation, although the same techniques are pretty much used afterwards. Requires 10 users a day to generate
+
+\todo{history API - Dave isbitzkis tweet}
+\mintinline{bash}{$ ask api intent-requests-history <-s|--skill-id <skillId>> [--filters <value>] [--max-results <value>] [--sort-direction <value>] [--sort-field <value>] [--next-token <value>]}
 
 
 
+\url{https://developer.amazon.com/docs/smapi/ask-cli-command-reference.html#intent-requests-history-subcommand}
+
+
+https://developer.amazon.com/docs/smapi/intent-request-history.html
 
 
 \section{Deployment}
 
 \section{Approval and Publishing}
+\label{approval}
 	Continuous Skill Approval is the process of Amazon deciding whether each uploaded version / update is still fit for purpose, make the skill better or worse in conjunction with other skills on the Store % or change things to worse partly
 	
 	\todo{mention that 3ashan homa store w keda fal mawdou3 lazem yekoun mo7kam w 7agat homa bey7ebouha and the reasons why things could get rejected according to their policy and some scenarios}
 
 \section{Debugging / Troubleshooting}
+
+\todo{API TLS certificate. No base64
+	just \mintinline{javascript}{rejectUnauthorized: false}
+	
+}
+
 
 \section{Documentation Updates}
 https://www.gitbook.com/join/tu-berlin/-LAZYgGmoeaEZGb8cYg2

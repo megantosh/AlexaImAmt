@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  1 MAY 2018 03:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  3 MAY 2018 04:04
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -645,8 +645,8 @@ File: pdftex.def 2017/12/07 v1.0i Graphics/color driver for pdftex
 \Gin@req@height=\dimen138
 \Gin@req@width=\dimen139
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/subfig/subfig.sty
-Package: subfig 2005/06/28 ver: 1.3 subfig package
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -665,38 +665,27 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \c@ContinuedFloat=\count127
 Package caption Info: hyperref package is loaded.
 )
-\c@KVtest=\count128
-\sf@farskip=\skip47
-\sf@captopadj=\dimen147
-\sf@capskip=\skip48
-\sf@nearskip=\skip49
-\c@subfigure=\count129
-\c@subfigure@save=\count130
-\c@lofdepth=\count131
-\c@subtable=\count132
-\c@subtable@save=\count133
-\c@lotdepth=\count134
-\sf@top=\skip50
-\sf@bottom=\skip51
+\c@subfigure=\count128
+\c@subtable=\count129
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count135
+\lst@mode=\count130
 \lst@gtempboxa=\box28
 \lst@token=\toks23
-\lst@length=\count136
-\lst@currlwidth=\dimen148
-\lst@column=\count137
-\lst@pos=\count138
-\lst@lostspace=\dimen149
-\lst@width=\dimen150
-\lst@newlines=\count139
-\lst@lineno=\count140
-\lst@maxwidth=\dimen151
+\lst@length=\count131
+\lst@currlwidth=\dimen147
+\lst@column=\count132
+\lst@pos=\count133
+\lst@lostspace=\dimen148
+\lst@width=\dimen149
+\lst@newlines=\count134
+\lst@lineno=\count135
+\lst@maxwidth=\dimen150
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count141
-\lst@skipnumbers=\count142
+\c@lstnumber=\count136
+\lst@skipnumbers=\count137
 \lst@framebox=\box29
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
@@ -706,10 +695,10 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
-\multirow@colwidth=\skip52
-\multirow@cntb=\count143
-\multirow@dima=\skip53
-\bigstrutjot=\dimen152
+\multirow@colwidth=\skip47
+\multirow@cntb=\count138
+\multirow@dima=\skip48
+\bigstrutjot=\dimen151
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
@@ -741,12 +730,12 @@ Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
 File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
 \pIIe@GRAPH=\toks24
-\@arclen=\dimen153
-\@arcrad=\dimen154
-\@tempdimd=\dimen155
+\@arclen=\dimen152
+\@arcrad=\dimen153
+\@tempdimd=\dimen154
 )
-\c@treecount=\count144
-\c@branchcount=\count145
+\c@treecount=\count139
+\c@branchcount=\count140
 \parentbox=\box30
 \treebox=\box31
 \treeboxone=\box32
@@ -769,85 +758,85 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 \treeboxeighteen=\box49
 \treeboxnineteen=\box50
 \treeboxtwenty=\box51
-\treeoffsetone=\skip54
-\treeoffsettwo=\skip55
-\treeoffsetthree=\skip56
-\treeoffsetfour=\skip57
-\treeoffsetfive=\skip58
-\treeoffsetsix=\skip59
-\treeoffsetseven=\skip60
-\treeoffseteight=\skip61
-\treeoffsetnine=\skip62
-\treeoffsetten=\skip63
-\treeoffseteleven=\skip64
-\treeoffsettwelve=\skip65
-\treeoffsetthirteen=\skip66
-\treeoffsetfourteen=\skip67
-\treeoffsetfifteen=\skip68
-\treeoffsetsixteen=\skip69
-\treeoffsetseventeen=\skip70
-\treeoffseteighteen=\skip71
-\treeoffsetnineteen=\skip72
-\treeoffsettwenty=\skip73
-\treeshiftone=\skip74
-\treeshifttwo=\skip75
-\treeshiftthree=\skip76
-\treeshiftfour=\skip77
-\treeshiftfive=\skip78
-\treeshiftsix=\skip79
-\treeshiftseven=\skip80
-\treeshifteight=\skip81
-\treeshiftnine=\skip82
-\treeshiftten=\skip83
-\treeshifteleven=\skip84
-\treeshifttwelve=\skip85
-\treeshiftthirteen=\skip86
-\treeshiftfourteen=\skip87
-\treeshiftfifteen=\skip88
-\treeshiftsixteen=\skip89
-\treeshiftseventeen=\skip90
-\treeshifteighteen=\skip91
-\treeshiftnineteen=\skip92
-\treeshifttwenty=\skip93
-\treewidthone=\skip94
-\treewidthtwo=\skip95
-\treewidththree=\skip96
-\treewidthfour=\skip97
-\treewidthfive=\skip98
-\treewidthsix=\skip99
-\treewidthseven=\skip100
-\treewidtheight=\skip101
-\treewidthnine=\skip102
-\treewidthten=\skip103
-\treewidtheleven=\skip104
-\treewidthtwelve=\skip105
-\treewidththirteen=\skip106
-\treewidthfourteen=\skip107
-\treewidthfifteen=\skip108
-\treewidthsixteen=\skip109
-\treewidthseventeen=\skip110
-\treewidtheighteen=\skip111
-\treewidthnineteen=\skip112
-\treewidthtwenty=\skip113
-\daughteroffsetone=\skip114
-\daughteroffsettwo=\skip115
-\daughteroffsetthree=\skip116
-\daughteroffsetfour=\skip117
-\branchwidthone=\skip118
-\branchwidthtwo=\skip119
-\branchwidththree=\skip120
-\branchwidthfour=\skip121
-\parentoffset=\skip122
-\treeoffset=\skip123
-\daughteroffset=\skip124
-\branchwidth=\skip125
-\parentwidth=\skip126
-\treewidth=\skip127
+\treeoffsetone=\skip49
+\treeoffsettwo=\skip50
+\treeoffsetthree=\skip51
+\treeoffsetfour=\skip52
+\treeoffsetfive=\skip53
+\treeoffsetsix=\skip54
+\treeoffsetseven=\skip55
+\treeoffseteight=\skip56
+\treeoffsetnine=\skip57
+\treeoffsetten=\skip58
+\treeoffseteleven=\skip59
+\treeoffsettwelve=\skip60
+\treeoffsetthirteen=\skip61
+\treeoffsetfourteen=\skip62
+\treeoffsetfifteen=\skip63
+\treeoffsetsixteen=\skip64
+\treeoffsetseventeen=\skip65
+\treeoffseteighteen=\skip66
+\treeoffsetnineteen=\skip67
+\treeoffsettwenty=\skip68
+\treeshiftone=\skip69
+\treeshifttwo=\skip70
+\treeshiftthree=\skip71
+\treeshiftfour=\skip72
+\treeshiftfive=\skip73
+\treeshiftsix=\skip74
+\treeshiftseven=\skip75
+\treeshifteight=\skip76
+\treeshiftnine=\skip77
+\treeshiftten=\skip78
+\treeshifteleven=\skip79
+\treeshifttwelve=\skip80
+\treeshiftthirteen=\skip81
+\treeshiftfourteen=\skip82
+\treeshiftfifteen=\skip83
+\treeshiftsixteen=\skip84
+\treeshiftseventeen=\skip85
+\treeshifteighteen=\skip86
+\treeshiftnineteen=\skip87
+\treeshifttwenty=\skip88
+\treewidthone=\skip89
+\treewidthtwo=\skip90
+\treewidththree=\skip91
+\treewidthfour=\skip92
+\treewidthfive=\skip93
+\treewidthsix=\skip94
+\treewidthseven=\skip95
+\treewidtheight=\skip96
+\treewidthnine=\skip97
+\treewidthten=\skip98
+\treewidtheleven=\skip99
+\treewidthtwelve=\skip100
+\treewidththirteen=\skip101
+\treewidthfourteen=\skip102
+\treewidthfifteen=\skip103
+\treewidthsixteen=\skip104
+\treewidthseventeen=\skip105
+\treewidtheighteen=\skip106
+\treewidthnineteen=\skip107
+\treewidthtwenty=\skip108
+\daughteroffsetone=\skip109
+\daughteroffsettwo=\skip110
+\daughteroffsetthree=\skip111
+\daughteroffsetfour=\skip112
+\branchwidthone=\skip113
+\branchwidthtwo=\skip114
+\branchwidththree=\skip115
+\branchwidthfour=\skip116
+\parentoffset=\skip117
+\treeoffset=\skip118
+\daughteroffset=\skip119
+\branchwidth=\skip120
+\parentwidth=\skip121
+\treewidth=\skip122
 \qta=\toks25
 \qtb=\toks26
-\nbranches=\count146
-\qroofx=\count147
-\qroofy=\count148
+\nbranches=\count141
+\qroofx=\count142
+\qroofy=\count143
 \@qrscratchbox=\box52
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mathtools.sty
@@ -855,16 +844,16 @@ Package: mathtools 2017/10/30 v1.20 mathematical typesetting tools
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count149
-\calc@Bcount=\count150
-\calc@Adimen=\dimen156
-\calc@Bdimen=\dimen157
-\calc@Askip=\skip128
-\calc@Bskip=\skip129
+\calc@Acount=\count144
+\calc@Bcount=\count145
+\calc@Adimen=\dimen155
+\calc@Bdimen=\dimen156
+\calc@Askip=\skip123
+\calc@Bskip=\skip124
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count151
-\calc@Cskip=\skip130
+\calc@Ccount=\count146
+\calc@Cskip=\skip125
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
@@ -873,15 +862,15 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count152
-\l_MT_multwidth_dim=\dimen158
-\origjot=\skip131
-\l_MT_shortvdotswithinadjustabove_dim=\dimen159
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen160
-\l_MT_above_intertext_sep=\dimen161
-\l_MT_below_intertext_sep=\dimen162
-\l_MT_above_shortintertext_sep=\dimen163
-\l_MT_below_shortintertext_sep=\dimen164
+\g_MT_multlinerow_int=\count147
+\l_MT_multwidth_dim=\dimen157
+\origjot=\skip126
+\l_MT_shortvdotswithinadjustabove_dim=\dimen158
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen159
+\l_MT_above_intertext_sep=\dimen160
+\l_MT_below_intertext_sep=\dimen161
+\l_MT_above_shortintertext_sep=\dimen162
+\l_MT_below_shortintertext_sep=\dimen163
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
@@ -895,18 +884,18 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/11/22 v2.5 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count153
+\etb@tempcnta=\count148
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count154
+\FV@CodeLineNo=\count149
 \FV@InFile=\read1
 \FV@TabBox=\box53
-\c@FancyVerbLine=\count155
-\FV@StepNumber=\count156
+\c@FancyVerbLine=\count150
+\FV@StepNumber=\count151
 \FV@OutFile=\write4
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/upquote/upquote.sty
@@ -1071,41 +1060,41 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count157
+\linenopenalty=\count152
 \output=\toks27
-\linenoprevgraf=\count158
-\linenumbersep=\dimen165
-\linenumberwidth=\dimen166
-\c@linenumber=\count159
-\c@pagewiselinenumber=\count160
-\c@LN@truepage=\count161
-\c@internallinenumber=\count162
-\c@internallinenumbers=\count163
-\quotelinenumbersep=\dimen167
-\bframerule=\dimen168
-\bframesep=\dimen169
+\linenoprevgraf=\count153
+\linenumbersep=\dimen164
+\linenumberwidth=\dimen165
+\c@linenumber=\count154
+\c@pagewiselinenumber=\count155
+\c@LN@truepage=\count156
+\c@internallinenumber=\count157
+\c@internallinenumbers=\count158
+\quotelinenumbersep=\dimen166
+\bframerule=\dimen167
+\bframesep=\dimen168
 \bframebox=\box54
 LaTeX Info: Redefining \\ on input line 3056.
 )
-\c@FV@TrueTabGroupLevel=\count164
-\c@FV@TrueTabCounter=\count165
+\c@FV@TrueTabGroupLevel=\count159
+\c@FV@TrueTabCounter=\count160
 \FV@TabBox@Group=\box55
-\FV@TmpLength=\skip132
-\c@FV@HighlightLinesStart=\count166
-\c@FV@HighlightLinesStop=\count167
-\FV@LoopCount=\count168
+\FV@TmpLength=\skip127
+\c@FV@HighlightLinesStart=\count161
+\c@FV@HighlightLinesStop=\count162
+\FV@LoopCount=\count163
 \FV@NCharsBox=\box56
-\FV@BreakIndent=\dimen170
-\FV@BreakIndentNChars=\count169
-\FV@BreakSymbolSepLeft=\dimen171
-\FV@BreakSymbolSepLeftNChars=\count170
-\FV@BreakSymbolSepRight=\dimen172
-\FV@BreakSymbolSepRightNChars=\count171
-\FV@BreakSymbolIndentLeft=\dimen173
-\FV@BreakSymbolIndentLeftNChars=\count172
-\FV@BreakSymbolIndentRight=\dimen174
-\FV@BreakSymbolIndentRightNChars=\count173
-\c@FancyVerbLineBreakLast=\count174
+\FV@BreakIndent=\dimen169
+\FV@BreakIndentNChars=\count164
+\FV@BreakSymbolSepLeft=\dimen170
+\FV@BreakSymbolSepLeftNChars=\count165
+\FV@BreakSymbolSepRight=\dimen171
+\FV@BreakSymbolSepRightNChars=\count166
+\FV@BreakSymbolIndentLeft=\dimen172
+\FV@BreakSymbolIndentLeftNChars=\count167
+\FV@BreakSymbolIndentRight=\dimen173
+\FV@BreakSymbolIndentRightNChars=\count168
+\c@FancyVerbLineBreakLast=\count169
 \FV@LineBox=\box57
 \FV@LineIndentBox=\box58
 )
@@ -1129,22 +1118,22 @@ runsystem(rm -- "thesis.w18")...executed.
 (/usr/local/texlive/2016/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/local/texlive/2016/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write5
-\integerpart=\count175
-\decimalpart=\count176
+\integerpart=\count170
+\decimalpart=\count171
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip133
-\fb@frw=\dimen175
-\fb@frh=\dimen176
-\FrameRule=\dimen177
-\FrameSep=\dimen178
+\OuterFrameSep=\skip128
+\fb@frw=\dimen174
+\fb@frh=\dimen175
+\FrameRule=\dimen176
+\FrameSep=\dimen177
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count177
+\c@float@type=\count172
 \float@exts=\toks28
 \float@box=\box59
 \@float@everytoks=\toks29
@@ -1153,43 +1142,43 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \minted@appexistsfile=\read2
 \minted@bgbox=\box61
 \minted@code=\write6
-\c@minted@FancyVerbLineTemp=\count178
-\c@minted@pygmentizecounter=\count179
+\c@minted@FancyVerbLineTemp=\count173
+\c@minted@pygmentizecounter=\count174
 \@float@every@listing=\toks30
-\c@listing=\count180
+\c@listing=\count175
 )
 runsystem(mkdir -p _minted-thesis)...executed.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen179
-\WF@size=\dimen180
-\c@WF@wrappedlines=\count181
+\wrapoverhang=\dimen178
+\WF@size=\dimen179
+\c@WF@wrappedlines=\count176
 \WF@box=\box62
 \WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count182
+\c@lips@count=\count177
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
-\col@sep=\dimen181
-\extrarowheight=\dimen182
+\col@sep=\dimen180
+\extrarowheight=\dimen181
 \NC@list=\toks32
-\extratabsurround=\skip134
-\backup@length=\skip135
+\extratabsurround=\skip129
+\backup@length=\skip130
 )
-\TX@col@width=\dimen183
-\TX@old@table=\dimen184
-\TX@old@col=\dimen185
-\TX@target=\dimen186
-\TX@delta=\dimen187
-\TX@cols=\count183
+\TX@col@width=\dimen182
+\TX@old@table=\dimen183
+\TX@old@col=\dimen184
+\TX@target=\dimen185
+\TX@delta=\dimen186
+\TX@cols=\count178
 \TX@ftn=\toks33
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tipa/tipa.sty
@@ -1220,8 +1209,8 @@ Package: tcolorbox 2017/09/14 version 4.11 text color boxes
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
 \pgfutil@everybye=\toks34
-\pgfutil@tempdima=\dimen188
-\pgfutil@tempdimb=\dimen189
+\pgfutil@tempdima=\dimen187
+\pgfutil@tempdimb=\dimen188
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
@@ -1246,20 +1235,20 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 ode.tex
 \pgfkeys@tmptoks=\toks37
 ))
-\pgf@x=\dimen190
-\pgf@y=\dimen191
-\pgf@xa=\dimen192
-\pgf@ya=\dimen193
-\pgf@xb=\dimen194
-\pgf@yb=\dimen195
-\pgf@xc=\dimen196
-\pgf@yc=\dimen197
+\pgf@x=\dimen189
+\pgf@y=\dimen190
+\pgf@xa=\dimen191
+\pgf@ya=\dimen192
+\pgf@xb=\dimen193
+\pgf@yb=\dimen194
+\pgf@xc=\dimen195
+\pgf@yc=\dimen196
 \w@pgf@writea=\write7
 \r@pgf@reada=\read3
-\c@pgf@counta=\count184
-\c@pgf@countb=\count185
-\c@pgf@countc=\count186
-\c@pgf@countd=\count187
+\c@pgf@counta=\count179
+\c@pgf@countb=\count180
+\c@pgf@countc=\count181
+\c@pgf@countd=\count182
 \t@pgf@toka=\toks38
 \t@pgf@tokb=\toks39
 \t@pgf@tokc=\toks40
@@ -1280,8 +1269,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count188
-\pgfsyssoftpath@bigbuffer@items=\count189
+\pgfsyssoftpath@smallbuffer@items=\count183
+\pgfsyssoftpath@bigbuffer@items=\count184
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -1310,8 +1299,8 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen198
-\pgfmath@count=\count190
+\pgfmath@dimen=\dimen197
+\pgfmath@count=\count185
 \pgfmath@box=\box64
 \pgfmath@toks=\toks41
 \pgfmath@stack@operand=\toks42
@@ -1336,37 +1325,37 @@ code.tex)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count191
+\c@pgfmathroundto@lastzeros=\count186
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen199
-\pgf@picmaxx=\dimen256
-\pgf@picminy=\dimen257
-\pgf@picmaxy=\dimen258
-\pgf@pathminx=\dimen259
-\pgf@pathmaxx=\dimen260
-\pgf@pathminy=\dimen261
-\pgf@pathmaxy=\dimen262
-\pgf@xx=\dimen263
-\pgf@xy=\dimen264
-\pgf@yx=\dimen265
-\pgf@yy=\dimen266
-\pgf@zx=\dimen267
-\pgf@zy=\dimen268
+\pgf@picminx=\dimen198
+\pgf@picmaxx=\dimen199
+\pgf@picminy=\dimen256
+\pgf@picmaxy=\dimen257
+\pgf@pathminx=\dimen258
+\pgf@pathmaxx=\dimen259
+\pgf@pathminy=\dimen260
+\pgf@pathmaxy=\dimen261
+\pgf@xx=\dimen262
+\pgf@xy=\dimen263
+\pgf@yx=\dimen264
+\pgf@yy=\dimen265
+\pgf@zx=\dimen266
+\pgf@zy=\dimen267
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen269
-\pgf@path@lasty=\dimen270
+\pgf@path@lastx=\dimen268
+\pgf@path@lasty=\dimen269
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen271
-\pgf@shorten@start@additional=\dimen272
+\pgf@shorten@end@additional=\dimen270
+\pgf@shorten@start@additional=\dimen271
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
@@ -1374,19 +1363,19 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box65
 \pgf@hbox=\box66
 \pgf@layerbox@main=\box67
-\pgf@picture@serial@count=\count192
+\pgf@picture@serial@count=\count187
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen273
+\pgflinewidth=\dimen272
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen274
-\pgf@pt@y=\dimen275
-\pgf@pt@temp=\dimen276
+\pgf@pt@x=\dimen273
+\pgf@pt@y=\dimen274
+\pgf@pt@temp=\dimen275
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
@@ -1403,13 +1392,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen277
+\pgfarrowsep=\dimen276
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen278
-\pgf@sys@shading@range@num=\count193
+\pgf@max=\dimen277
+\pgf@sys@shading@range@num=\count188
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -1444,8 +1433,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen279
-\pgf@nodesepend=\dimen280
+\pgf@nodesepstart=\dimen278
+\pgf@nodesepend=\dimen279
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
@@ -1466,9 +1455,9 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@upperbox=\box71
 \tcb@lowerbox=\box72
 \tcb@phantombox=\box73
-\c@tcbbreakpart=\count194
-\c@tcblayer=\count195
-\tcolorbox@number=\count196
+\c@tcbbreakpart=\count189
+\c@tcblayer=\count190
+\tcolorbox@number=\count191
 \tcb@temp=\box74
 \tcb@temp=\box75
 \tcb@temp=\box76
@@ -1482,32 +1471,32 @@ Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box78
-\sift@deathcycles=\count197
-\@vwid@loff=\dimen281
-\@vwid@roff=\dimen282
+\sift@deathcycles=\count192
+\@vwid@loff=\dimen280
+\@vwid@roff=\dimen281
 )
-\c@taburow=\count198
-\tabu@nbcols=\count199
-\tabu@cnt=\count266
-\tabu@Xcol=\count267
-\tabu@alloc=\count268
-\tabu@nested=\count269
-\tabu@target=\dimen283
-\tabu@spreadtarget=\dimen284
-\tabu@naturalX=\dimen285
-\tabucolX=\dimen286
-\tabu@Xsum=\dimen287
-\extrarowdepth=\dimen288
-\abovetabulinesep=\dimen289
-\belowtabulinesep=\dimen290
-\tabustrutrule=\dimen291
+\c@taburow=\count193
+\tabu@nbcols=\count194
+\tabu@cnt=\count195
+\tabu@Xcol=\count196
+\tabu@alloc=\count197
+\tabu@nested=\count198
+\tabu@target=\dimen282
+\tabu@spreadtarget=\dimen283
+\tabu@naturalX=\dimen284
+\tabucolX=\dimen285
+\tabu@Xsum=\dimen286
+\extrarowdepth=\dimen287
+\abovetabulinesep=\dimen288
+\belowtabulinesep=\dimen289
+\tabustrutrule=\dimen290
 \tabu@thebody=\toks46
 \tabu@footnotes=\toks47
 \tabu@box=\box79
 \tabu@arstrutbox=\box80
 \tabu@hleads=\box81
 \tabu@vleads=\box82
-\tabu@cellskip=\skip136
+\tabu@cellskip=\skip131
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
@@ -1519,8 +1508,8 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen292
-\pgffor@skip=\dimen293
+\pgffor@iter=\dimen291
+\pgffor@skip=\dimen292
 \pgffor@stack=\toks48
 \pgffor@toks=\toks49
 ))
@@ -1531,32 +1520,32 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count270
-\pgfplotmarksize=\dimen294
+\pgf@plot@mark@count=\count199
+\pgfplotmarksize=\dimen293
 )
-\tikz@lastx=\dimen295
-\tikz@lasty=\dimen296
-\tikz@lastxsaved=\dimen297
-\tikz@lastysaved=\dimen298
-\tikzleveldistance=\dimen299
-\tikzsiblingdistance=\dimen300
+\tikz@lastx=\dimen294
+\tikz@lasty=\dimen295
+\tikz@lastxsaved=\dimen296
+\tikz@lastysaved=\dimen297
+\tikzleveldistance=\dimen298
+\tikzsiblingdistance=\dimen299
 \tikz@figbox=\box83
 \tikz@figbox@bg=\box84
 \tikz@tempbox=\box85
 \tikz@tempbox@bg=\box86
-\tikztreelevel=\count271
-\tikznumberofchildren=\count272
-\tikznumberofcurrentchild=\count273
-\tikz@fig@count=\count274
+\tikztreelevel=\count266
+\tikznumberofchildren=\count267
+\tikznumberofcurrentchild=\count268
+\tikz@fig@count=\count269
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count275
-\pgfmatrixcurrentcolumn=\count276
-\pgf@matrix@numberofcolumns=\count277
+\pgfmatrixcurrentrow=\count270
+\pgfmatrixcurrentcolumn=\count271
+\pgf@matrix@numberofcolumns=\count272
 )
-\tikz@expandcount=\count278
+\tikz@expandcount=\count273
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -1572,53 +1561,46 @@ File: pgflibraryshapes.symbols.code.tex 2013/09/11 v3.0.1a (rcs-revision 1.6)
 )))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count279
-\cp@tempcnt=\count280
+\c@cp@cntr=\count274
+\cp@tempcnt=\count275
 )
 runsystem(which pygmentize && touch thesis.aex)...executed.
 
 runsystem(rm thesis.aex)...executed.
 
 
-(./thesis.aux
-
-LaTeX Warning: Label `entityRes:def' multiply defined.
-
-
-LaTeX Warning: Label `entityRes:def' multiply defined.
-
-)
+(./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 208.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 208.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 209.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 209.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 208.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 208.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 209.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 209.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 208.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 209.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
@@ -1659,18 +1641,18 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box87
-Package hyperref Info: Link coloring OFF on input line 208.
+Package hyperref Info: Link coloring OFF on input line 209.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count281
+\c@section@level=\count276
 )
-LaTeX Info: Redefining \ref on input line 208.
-LaTeX Info: Redefining \pageref on input line 208.
-LaTeX Info: Redefining \nameref on input line 208.
+LaTeX Info: Redefining \ref on input line 209.
+LaTeX Info: Redefining \pageref on input line 209.
+LaTeX Info: Redefining \nameref on input line 209.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write10
@@ -1679,16 +1661,16 @@ LaTeX Info: Redefining \nameref on input line 208.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count282
-\scratchdimen=\dimen301
+\scratchcounter=\count277
+\scratchdimen=\dimen300
 \scratchbox=\box88
-\nofMPsegments=\count283
-\nofMParguments=\count284
+\nofMPsegments=\count278
+\nofMParguments=\count279
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count285
-\MPscratchDim=\dimen302
-\MPnumerator=\count286
-\makeMPintoPDFobject=\count287
+\MPscratchCnt=\count280
+\MPscratchDim=\dimen301
+\MPnumerator=\count281
+\makeMPintoPDFobject=\count282
 \everyMPtoPDFconversion=\toks51
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1708,12 +1690,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count288
+\c@lstlisting=\count283
 
 ABD: EveryShipout initializing macros (./input/00a_title_page.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 22.
@@ -1726,13 +1707,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<gfx/template/TUBerlin_Logo_rot_hell.pdf, id=243, 4741.715pt x 3529.185pt>
+<gfx/template/TUBerlin_Logo_rot_hell.pdf, id=223, 4741.715pt x 3529.185pt>
 File: gfx/template/TUBerlin_Logo_rot_hell.pdf Graphic file (type pdf)
 <use gfx/template/TUBerlin_Logo_rot_hell.pdf>
 Package pdftex.def Info: gfx/template/TUBerlin_Logo_rot_hell.pdf  used on input
  line 23.
 (pdftex.def)             Requested size: 62.73549pt x 46.68877pt.
-<gfx/template/aot_logo.pdf, id=244, 838.2025pt x 535.86098pt>
+<gfx/template/aot_logo.pdf, id=224, 838.2025pt x 535.86098pt>
 File: gfx/template/aot_logo.pdf Graphic file (type pdf)
 <use gfx/template/aot_logo.pdf>
 Package pdftex.def Info: gfx/template/aot_logo.pdf  used on input line 23.
@@ -1920,12 +1901,7 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
  [9
 
 
-] (./thesis.lot
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/E6013E15CCAF9B0A9FC563669848521BC510B94EE6CCF891C78770A70AACE
-74D.pygtex))
+] (./thesis.lot)
 \tf@lot=\write13
 \openout13 = `thesis.lot'.
 
@@ -1995,6 +1971,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--170
 
 [5]
 
+LaTeX Warning: Reference `choiceOfPlatform' on page 6 undefined on input line 2
+28.
+
+
 Package xcolor Warning: Incompatible color definition on input line 236.
 
 [6]
@@ -2017,13 +1997,23 @@ Package xcolor Warning: Incompatible color definition on input line 309.
 Package xcolor Warning: Incompatible color definition on input line 309.
 
 
-Package xcolor Warning: Incompatible color definition on input line 311.
+LaTeX Warning: Reference `stateofzart' on page 7 undefined on input line 309.
+
+
+LaTeX Warning: Reference `choiceOfPlatform' on page 7 undefined on input line 3
+10.
 
 
 Package xcolor Warning: Incompatible color definition on input line 311.
 
 
 Package xcolor Warning: Incompatible color definition on input line 311.
+
+
+Package xcolor Warning: Incompatible color definition on input line 311.
+
+
+LaTeX Warning: Reference `amznecosys' on page 7 undefined on input line 311.
 
 
 Package xcolor Warning: Incompatible color definition on input line 329.
@@ -2045,1698 +2035,62 @@ Package xcolor Warning: Incompatible color definition on input line 337.
 
 ) (./input/02_background.tex [7]
 Chapter 2.
-
-Package xcolor Warning: Incompatible color definition on input line 71.
-
-
-Package xcolor Warning: Incompatible color definition on input line 71.
-
-
-Package xcolor Warning: Incompatible color definition on input line 71.
-
-
-Package xcolor Warning: Incompatible color definition on input line 110.
-
-
-Package xcolor Warning: Incompatible color definition on input line 110.
-
-
-Package xcolor Warning: Incompatible color definition on input line 110.
-
 [8
 
-] [9]
-<gfx/Govcharts/TopTenEUeGov.png, id=511, 662.475pt x 315.1775pt>
+]
+<gfx/voicegrows.png, id=474, 102.3825pt x 254.9525pt>
+File: gfx/voicegrows.png Graphic file (type png)
+<use gfx/voicegrows.png>
+Package pdftex.def Info: gfx/voicegrows.png  used on input line 86.
+(pdftex.def)             Requested size: 57.13228pt x 142.26378pt.
+<gfx/messaging_apps_social_networks.png, id=478, 651.43375pt x 412.54124pt>
+File: gfx/messaging_apps_social_networks.png Graphic file (type png)
+<use gfx/messaging_apps_social_networks.png>
+Package pdftex.def Info: gfx/messaging_apps_social_networks.png  used on input 
+line 90.
+(pdftex.def)             Requested size: 224.64548pt x 142.26378pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 107.
+
+
+Package xcolor Warning: Incompatible color definition on input line 107.
+
+
+Package xcolor Warning: Incompatible color definition on input line 107.
+
+[9 <./gfx/voicegrows.png> <./gfx/messaging_apps_social_networks.png>]
+<gfx/Govcharts/TopTenEUeGov.png, id=494, 662.475pt x 315.1775pt>
 File: gfx/Govcharts/TopTenEUeGov.png Graphic file (type png)
 <use gfx/Govcharts/TopTenEUeGov.png>
-Package pdftex.def Info: gfx/Govcharts/TopTenEUeGov.png  used on input line 150
+Package pdftex.def Info: gfx/Govcharts/TopTenEUeGov.png  used on input line 189
 .
 (pdftex.def)             Requested size: 418.25368pt x 198.98608pt.
  [10 <./gfx/Govcharts/TopTenEUeGov.png>]
-<gfx/Govcharts/osicopy.png, id=525, 607.5498pt x 138.2766pt>
+<gfx/Govcharts/osicopy.png, id=508, 607.5498pt x 138.2766pt>
 File: gfx/Govcharts/osicopy.png Graphic file (type png)
 <use gfx/Govcharts/osicopy.png>
-Package pdftex.def Info: gfx/Govcharts/osicopy.png  used on input line 161.
+Package pdftex.def Info: gfx/Govcharts/osicopy.png  used on input line 205.
 (pdftex.def)             Requested size: 418.25368pt x 95.19572pt.
  [11 <./gfx/Govcharts/osicopy.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 210--210
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
 [][][][]$\OT1/pcr/m/n/10 https : / / www . amazon . com / GeorgiaGov-[]Interact
 ive-[]GTA-[]Ask / dp /
  []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 212.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 212.
-
-Package xcolor Warning: Incompatible color definition on input line 213.
-
-
-Package xcolor Warning: Incompatible color definition on input line 213.
-
-
-Package xcolor Warning: Incompatible color definition on input line 213.
-
-
-Package xcolor Warning: Incompatible color definition on input line 218.
-
-
-Package xcolor Warning: Incompatible color definition on input line 218.
-
-
-Package xcolor Warning: Incompatible color definition on input line 218.
-
-
-Package xcolor Warning: Incompatible color definition on input line 229.
-
-
-Package xcolor Warning: Incompatible color definition on input line 229.
-
-
-Package xcolor Warning: Incompatible color definition on input line 229.
-
 [12]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 256.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 256.
 
-Package xcolor Warning: Incompatible color definition on input line 260.
 
+Package xcolor Warning: Incompatible color definition on input line 257.
 
-Package xcolor Warning: Incompatible color definition on input line 260.
 
+Package xcolor Warning: Incompatible color definition on input line 257.
 
-Package xcolor Warning: Incompatible color definition on input line 260.
 
+Package xcolor Warning: Incompatible color definition on input line 257.
 
-Package xcolor Warning: Incompatible color definition on input line 269.
-
-
-Package xcolor Warning: Incompatible color definition on input line 269.
-
-
-Package xcolor Warning: Incompatible color definition on input line 269.
-
-
-Package xcolor Warning: Incompatible color definition on input line 291.
-
-
-Package xcolor Warning: Incompatible color definition on input line 291.
-
-
-Package xcolor Warning: Incompatible color definition on input line 291.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 300.
-
-
-Package xcolor Warning: Incompatible color definition on input line 300.
-
-
-Package xcolor Warning: Incompatible color definition on input line 300.
-
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/E6013E15CCAF9B0A9FC563669848521BC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/E6013E15CCAF9B0A9FC563669848521BC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-Overfull \hbox (4.18465pt too wide) in paragraph at lines 376--376
-[][]| 
- []
-
-
-Overfull \hbox (6.1653pt too wide) in paragraph at lines 376--376
-[][][]
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 406.
-
-
-Package xcolor Warning: Incompatible color definition on input line 406.
-
-
-Package xcolor Warning: Incompatible color definition on input line 406.
-
-
-Package xcolor Warning: Incompatible color definition on input line 406.
-
-
-Package xcolor Warning: Incompatible color definition on input line 406.
-
-
-Package xcolor Warning: Incompatible color definition on input line 406.
-
-[13]
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/E6013E15CCAF9B0A9FC563669848521BC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/E6013E15CCAF9B0A9FC563669848521BC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-<gfx/DLprim.png, id=570, 1577.895pt x 489.83pt>
-File: gfx/DLprim.png Graphic file (type png)
-<use gfx/DLprim.png>
-Package pdftex.def Info: gfx/DLprim.png  used on input line 425.
-(pdftex.def)             Requested size: 418.25368pt x 129.83423pt.
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/E6013E15CCAF9B0A9FC563669848521BC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/E6013E15CCAF9B0A9FC563669848521BC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-<gfx/DLsec.png, id=571, 3356.54pt x 360.34625pt>
-File: gfx/DLsec.png Graphic file (type png)
-<use gfx/DLsec.png>
-Package pdftex.def Info: gfx/DLsec.png  used on input line 430.
-(pdftex.def)             Requested size: 418.25368pt x 44.9002pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package xcolor Warning: Incompatible color definition on input line 445.
-
-
-Package xcolor Warning: Incompatible color definition on input line 445.
-
-
-Package xcolor Warning: Incompatible color definition on input line 445.
-
-[14 <./gfx/DLprim.png>] [15 <./gfx/DLsec.png>]
-Chapter 3.
-[16
-
-]
-
-Package xcolor Warning: Incompatible color definition on input line 527.
-
-
-Package xcolor Warning: Incompatible color definition on input line 527.
-
-
-Package xcolor Warning: Incompatible color definition on input line 527.
-
-[17]
-LaTeX Font Info:    Try loading font information for T3+ptm on input line 551.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/tipa/t3ptm.fd
-File: t3ptm.fd 2001/12/31 TIPA font definitions
-) [18]
-
-Package xcolor Warning: Incompatible color definition on input line 609.
-
-
-Package xcolor Warning: Incompatible color definition on input line 609.
-
-
-Package xcolor Warning: Incompatible color definition on input line 609.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 609--609
-
- []
-
-[19]
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/4E86D530212A0800BAFEF2F0EA6CA76CC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/D15DBFCB847653913855E21370D83AF1C510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/645D0AC840C62F57C46E38CEF1567426C510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/01E952E37A2BAFD483EEE8ECA20F4091C510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/2E962C52C007FD0F14FE6E1D56D50DE5C510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/CB572C793C8C84679308221685659F9BC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-
-LaTeX Warning: Command \! invalid in math mode on input line 667.
-
-
-LaTeX Warning: Command \! invalid in math mode on input line 667.
-
-[20]
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/FB18621D1EEE1AE26438996D10C8206DC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/33990CDFC03A57AF011FEA94E502FEDAC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/B744A899F6B083B485BCFFD7C92925C0C510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/C98F6356D0A4C1F6A3F452E5D7C6C2DEC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 692.
-
- (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlptm.fd
-File: omlptm.fd 
-)
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 692.
-
-
-Package xcolor Warning: Incompatible color definition on input line 695.
-
-
-Package xcolor Warning: Incompatible color definition on input line 695.
-
-
-Package xcolor Warning: Incompatible color definition on input line 695.
-
-[21] [22]
-Chapter 4.
-
-Package xcolor Warning: Incompatible color definition on input line 745.
-
-
-Package xcolor Warning: Incompatible color definition on input line 745.
-
-
-Package xcolor Warning: Incompatible color definition on input line 745.
-
-
-Package xcolor Warning: Incompatible color definition on input line 757.
-
-
-Package xcolor Warning: Incompatible color definition on input line 757.
-
-
-Package xcolor Warning: Incompatible color definition on input line 757.
-
-
-Package xcolor Warning: Incompatible color definition on input line 763.
-
-
-Package xcolor Warning: Incompatible color definition on input line 763.
-
-
-Package xcolor Warning: Incompatible color definition on input line 763.
-
-
-Package xcolor Warning: Incompatible color definition on input line 765.
-
-[23
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 785--786
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 796.
-
-
-Package xcolor Warning: Incompatible color definition on input line 796.
-
-
-Package xcolor Warning: Incompatible color definition on input line 796.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 805.
-
-
-Package xcolor Warning: Incompatible color definition on input line 805.
-
-
-Package xcolor Warning: Incompatible color definition on input line 805.
-
-
-Package xcolor Warning: Incompatible color definition on input line 805.
-
-
-Package xcolor Warning: Incompatible color definition on input line 805.
-
-
-Package xcolor Warning: Incompatible color definition on input line 805.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 805--805
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 818.
-
-
-Package xcolor Warning: Incompatible color definition on input line 818.
-
-
-Package xcolor Warning: Incompatible color definition on input line 818.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 818--818
-[]$\OT1/pcr/m/n/10.95 https : / / www . technologyreview . com / s / 608571 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 818--818
-
- []
-
-
-Overfull \hbox (39.48375pt too wide) in paragraph at lines 818--818
-[]$\OT1/pcr/m/n/10.95 https : / / venturebeat . com / 2017 / 06 / 27 / how-[]am
-azons-[]alexa-[]hooks-[]you/$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 818--818
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 827.
-
-[24]
-
-Package xcolor Warning: Incompatible color definition on input line 827.
-
-
-Package xcolor Warning: Incompatible color definition on input line 827.
-
-
-Package xcolor Warning: Incompatible color definition on input line 842.
-
-
-Package xcolor Warning: Incompatible color definition on input line 842.
-
-
-Package xcolor Warning: Incompatible color definition on input line 842.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 842--842
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 849.
-
-
-Package xcolor Warning: Incompatible color definition on input line 849.
-
-
-Package xcolor Warning: Incompatible color definition on input line 849.
-
-
-Underfull \hbox (badness 10000) in alignment at lines 855--855
-[][][][] 
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 878.
-
-
-Package xcolor Warning: Incompatible color definition on input line 878.
-
-
-Package xcolor Warning: Incompatible color definition on input line 878.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 878--878
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 878--878
-
- []
-
-[25] [26]
-Chapter 5.
-
-Package xcolor Warning: Incompatible color definition on input line 935.
-
-
-Package xcolor Warning: Incompatible color definition on input line 935.
-
-
-Package xcolor Warning: Incompatible color definition on input line 935.
-
-
-Package xcolor Warning: Incompatible color definition on input line 966.
-
-
-Package xcolor Warning: Incompatible color definition on input line 966.
-
-
-Package xcolor Warning: Incompatible color definition on input line 966.
-
-[27
-
-]
-
-Package xcolor Warning: Incompatible color definition on input line 978.
-
-
-Package xcolor Warning: Incompatible color definition on input line 978.
-
-
-Package xcolor Warning: Incompatible color definition on input line 978.
-
-[28] [29]
-<gfx/workflows/awstools.png, id=749, 2190.1825pt x 1247.66125pt>
-File: gfx/workflows/awstools.png Graphic file (type png)
-<use gfx/workflows/awstools.png>
-Package pdftex.def Info: gfx/workflows/awstools.png  used on input line 1090.
-(pdftex.def)             Requested size: 421.10086pt x 239.87569pt.
-
-Overfull \hbox (2.84718pt too wide) in paragraph at lines 1090--1091
- [][] 
- []
-
-[30 <./gfx/workflows/awstools.png>]
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/36082ED73973BD473BADE249D1A4683CC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/458D5F1AFC81AE7291A7AAAD852DC12AC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/83E352593DCF03D993FD671C0E367875C510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/83E352593DCF03D993FD671C0E367875C510B94EE6CCF891C78770A70AACE
-74D.pygtex) [31]
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/84BAC63250C717BA79BCF13AD28E726B70CC6C1C1E15B6F542B78520F42B0
-135.pygtex)
-
-Package xcolor Warning: Incompatible color definition on input line 1152.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1152.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1152.
-
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/FEB60E339F153C0B660804AB955A23EC70CC6C1C1E15B6F542B78520F42B0
-135.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/132E2194045C27EA32ACC64D4B42F31A70CC6C1C1E15B6F542B78520F42B0
-135.pygtex) [32]
-Overfull \hbox (0.87128pt too wide) in alignment at lines 1186--1186
-[][][][][] 
- []
-
-[33]
-Overfull \hbox (24.91327pt too wide) detected at line 1240
-[]\OML/cmm/m/it/12 ;     []    []    []
- []
-
-) (./input/03_main_part_1.tex [34]
-Chapter 6.
-
-Package xcolor Warning: Incompatible color definition on input line 11.
-
-
-Package xcolor Warning: Incompatible color definition on input line 11.
-
-
-Package xcolor Warning: Incompatible color definition on input line 11.
-
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 11.
-
-Underfull \hbox (badness 10000) in alignment at lines 46--46
-[][][][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package xcolor Warning: Incompatible color definition on input line 83.
-
-
-Package xcolor Warning: Incompatible color definition on input line 83.
-
-
-Package xcolor Warning: Incompatible color definition on input line 83.
-
-
-Package xcolor Warning: Incompatible color definition on input line 95.
-
-
-Package xcolor Warning: Incompatible color definition on input line 95.
-
-
-Package xcolor Warning: Incompatible color definition on input line 95.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 99.
-
-
-Package xcolor Warning: Incompatible color definition on input line 99.
-
-
-Package xcolor Warning: Incompatible color definition on input line 99.
-
-[35
-
-]
-
-Package xcolor Warning: Incompatible color definition on input line 112.
-
-
-Package xcolor Warning: Incompatible color definition on input line 112.
-
-
-Package xcolor Warning: Incompatible color definition on input line 112.
-
-
-Package xcolor Warning: Incompatible color definition on input line 127.
-
-
-Package xcolor Warning: Incompatible color definition on input line 127.
-
-
-Package xcolor Warning: Incompatible color definition on input line 127.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--127
-\OT1/pcr/m/n/10.95 de / virtueller-[]assistent / virtueller-[]assistent-[]60627
-9 . php$[]
- []
-
-[36]
-
-Package xcolor Warning: Incompatible color definition on input line 140.
-
-
-Package xcolor Warning: Incompatible color definition on input line 140.
-
-
-Package xcolor Warning: Incompatible color definition on input line 140.
-
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 148.
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--149
-\OT1/ptm/m/n/12 - list emits table here: []$\OT1/pcr/m/n/12 https : / / github 
-. com / alexa /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--149
-\OT1/pcr/m/n/12 alexa-[]skills-[]kit-[]sdk-[]for-[]nodejs / blob / master / Rea
-dme . md #
- []
-
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
-[][][][]$\OT1/pcr/m/n/10 https : / / github . com / alexa / alexa-[]skills-[]ki
-t-[]sdk-[]for-[]java / wiki /
- []
-
-\openout4 = `thesis.pyg'.
-
-
-(./_minted-thesis/AF4C065876AF203D3D379FBB8964AF8FC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-
-Package xcolor Warning: Incompatible color definition on input line 198.
-
-
-Package xcolor Warning: Incompatible color definition on input line 198.
-
-
-Package xcolor Warning: Incompatible color definition on input line 198.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
-[]\OT1/phv/m/n/10.95 -oauth for acct lik-ing https://developer.amazon.com/docs/
-custom-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 217.
-
-
-Package xcolor Warning: Incompatible color definition on input line 217.
-
-
-Package xcolor Warning: Incompatible color definition on input line 217.
-
-[38]
-Underfull \hbox (badness 10000) in paragraph at lines 222--228
-[][]$\OT1/pcr/m/n/12 https : / / en . wikipedia . org / wiki / Amazon _
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 222--228
-\OT1/pcr/m/n/12 Alexa$[] []$https : / / medium . com / @robinjewsbury /
- []
-
-
-Overfull \hbox (170.94608pt too wide) in paragraph at lines 222--228
-\OT1/pcr/m/n/12 how-[]to-[]create-[]bots-[]and-[]skills-[]for-[]facebook-[]mess
-enger-[]and-[]amazon-[]echo-[]4a03935eeca1$[]
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 244.
-
-
-Package xcolor Warning: Incompatible color definition on input line 244.
-
-
-Package xcolor Warning: Incompatible color definition on input line 244.
-
-
-Package xcolor Warning: Incompatible color definition on input line 276.
-
-[39]
-
-Package xcolor Warning: Incompatible color definition on input line 276.
-
-
-Package xcolor Warning: Incompatible color definition on input line 276.
-
-[40]
-Chapter 7.
-[41
-
-] [42]
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 378.
-
- (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 378.
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/7B4A5A71E3B14DF158C7C689F391B3D11F2D8067E0A256B6FCF34360A44AF
-D35.pygtex)
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
- [43]
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/500188ED87670224B61FF3114159A75AC510B94EE6CCF891C78770A70AACE
-74D.pygtex
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 2.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1pcr.fd
-File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-))
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/DF1F7D4CF3B8941AECF8DCD5E7CDB56EC510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/644FE98BA9F50FEB84377B1C3D5D2FD6C510B94EE6CCF891C78770A70AACE
-74D.pygtex) [44]
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
- [45]
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-\openout4 = `thesis.pyg'.
-
-
-(./_minted-thesis/1629E591734E8C2893B304783B01A5975A82DC94FB77EA8342E1841C38248
-09C.pygtex)
-\openout4 = `thesis.pyg'.
-
-
-(./_minted-thesis/7DE98DED7D4BBDAE66BAFF50BF7D581A5A82DC94FB77EA8342E1841C38248
-09C.pygtex
-LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 2.
-LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 3.
-)
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
- [46]
-\openout4 = `thesis.pyg'.
-
-
-(./_minted-thesis/F9A8F609A7EB11EA3A8717EF48063AD44FB10B10B791C57329A7D07DCDE6A
-9DA.pygtex)
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
- [47]
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 683.
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
- [48]
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/B13339B6BB77F4EE2FE52F89B5411468C510B94EE6CCF891C78770A70AACE
-74D.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/4A3570BEA845536AF21A676119D3F205C510B94EE6CCF891C78770A70AACE
-74D.pygtex) [49]
-<gfx/k-means-clustering-on-spherical-data-1v2.png, id=939, 527.9725pt x 399.492
-5pt>
-File: gfx/k-means-clustering-on-spherical-data-1v2.png Graphic file (type png)
-<use gfx/k-means-clustering-on-spherical-data-1v2.png>
-Package pdftex.def Info: gfx/k-means-clustering-on-spherical-data-1v2.png  used
- on input line 773.
-(pdftex.def)             Requested size: 227.62204pt x 172.2295pt.
- [50 <./gfx/k-means-clustering-on-spherical-data-1v2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 784--787
-
- []
-
-) (./input/04_main_part_2.tex [51]
-Chapter 8.
-
-Package xcolor Warning: Incompatible color definition on input line 5.
-
-
-Package xcolor Warning: Incompatible color definition on input line 5.
-
-
-Package xcolor Warning: Incompatible color definition on input line 5.
-
-
-Package xcolor Warning: Incompatible color definition on input line 13.
-
-
-Package xcolor Warning: Incompatible color definition on input line 13.
-
-
-Package xcolor Warning: Incompatible color definition on input line 13.
-
-
-Package xcolor Warning: Incompatible color definition on input line 22.
-
-
-Package xcolor Warning: Incompatible color definition on input line 22.
-
-
-Package xcolor Warning: Incompatible color definition on input line 22.
-
-[52
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-[][][][]$\OT1/pcr/m/n/10 https : / / developer . amazon . com / de / docs / cus
-tom-[]skills /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-\OT1/pcr/m/n/10 speech-[]synthesis-[]markup-[]language-[]ssml-[]reference . htm
-l # h3 _ converting _
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--40
-[][][][]$\OT1/pcr/m/n/10 https : / / docs . aws . amazon . com / general / late
-st / gr /
- []
-
-\openout4 = `thesis.pyg'.
-
-[53]
-(./_minted-thesis/C03619F9EE204A2ED0ABEDBCD7DD1A1D9F014CDCC252D787938A66F94A2C2
-8CF.pygtex)
-Overfull \hbox (12.27097pt too wide) in paragraph at lines 88--89
-[][]$\OT1/pcr/m/n/12 https : / / github . com / alexa / alexa-[]skills-[]kit-[]
-sdk-[]for-[]nodejs /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-[]\OT1/ptm/m/n/12 json format https://stackoverflow.com/questions/41776014/how-
-to-correctly-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
-[][]$\OT1/pcr/m/n/12 https : / / developer . amazon . com / docs / custom-[]ski
-lls /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
-\OT1/pcr/m/n/12 speech-[]synthesis-[]markup-[]language-[]ssml-[]reference . htm
-l #
- []
-
-
-Overfull \hbox (163.74608pt too wide) in paragraph at lines 109--111
-\OT1/pcr/m/n/12 Announcing-[]New-[]Alexa-[]Skills-[]Kit-[]ASK-[]Features-[]SSML
--[]Audio-[]Tags-[]and-[]Developer-[]Porta$[] 
- []
-
-[54]
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 131.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1phv.fd
-File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
-)
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 141.
-
-
-Package xcolor Warning: Incompatible color definition on input line 141.
-
-
-Package xcolor Warning: Incompatible color definition on input line 141.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
-[]$\OT1/pcr/m/n/12 https : / / developer . amazon . com / docs / custom-[]skill
-s /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
-\OT1/pcr/m/n/12 speech-[]synthesis-[]markup-[]language-[]ssml-[]reference . htm
-l #
- []
-
-[55]
-Overfull \hbox (37.87878pt too wide) in paragraph at lines 175--177
-[]\OT1/ptm/m/n/12 from []$\OT1/pcr/m/n/12 https : / / github . com / alexa / al
-exa-[]skills-[]kit-[]sdk-[]for-[]nodejs /
- []
-
-
-Underfull \hbox (badness 5302) in paragraph at lines 189--194
-\OT1/ptm/m/n/12 co-di-fied here []$\OT1/pcr/m/n/12 https : / / eur-[]lex . euro
-pa . eu / legal-[]content / EN / TXT /
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 213.
-
-
-Package xcolor Warning: Incompatible color definition on input line 213.
-
-
-Package xcolor Warning: Incompatible color definition on input line 213.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--220
-\OT1/ptm/m/n/12 https://www.gitbook.com/join/tu-berlin/-LAZYgGmoeaEZGb8cYg2 htt
-ps://tu-
- []
-
-
-Underfull \hbox (badness 4454) in paragraph at lines 232--234
-[]\OT1/ptm/m/n/12 Solr has to be se-cure []$\OT1/pcr/m/n/12 https : / / docs . 
-aws . amazon . com / AmazonS3 /
- []
-
-[56]
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
-[]\OT1/ptm/m/n/12 https://developer.amazon.com/docs/smapi/quick-start-alexa-ski
-lls-kit-command-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
-[]\OT1/ptm/m/n/12 https://www.bignerdranch.com/blog/developing-alexa-skills-loc
-ally-with-nodejs-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 320.
-
-
-Package xcolor Warning: Incompatible color definition on input line 320.
-
-
-Package xcolor Warning: Incompatible color definition on input line 320.
-
-
-Package xcolor Warning: Incompatible color definition on input line 327.
-
-
-Package xcolor Warning: Incompatible color definition on input line 327.
-
-
-Package xcolor Warning: Incompatible color definition on input line 327.
-
-
-Package xcolor Warning: Incompatible color definition on input line 327.
-
-
-Package xcolor Warning: Incompatible color definition on input line 327.
-
-
-Package xcolor Warning: Incompatible color definition on input line 327.
-
-) (./input/05_evaluation.tex [57]
-Chapter 9.
-
-Package xcolor Warning: Incompatible color definition on input line 11.
-
-
-Package xcolor Warning: Incompatible color definition on input line 11.
-
-
-Package xcolor Warning: Incompatible color definition on input line 11.
-
-
-Package xcolor Warning: Incompatible color definition on input line 24.
-
-
-Package xcolor Warning: Incompatible color definition on input line 24.
-
-
-Package xcolor Warning: Incompatible color definition on input line 24.
-
-
-Package xcolor Warning: Incompatible color definition on input line 30.
-
-
-Package xcolor Warning: Incompatible color definition on input line 30.
-
-
-Package xcolor Warning: Incompatible color definition on input line 30.
-
-
-Package xcolor Warning: Incompatible color definition on input line 45.
-
-
-Package xcolor Warning: Incompatible color definition on input line 45.
-
-
-Package xcolor Warning: Incompatible color definition on input line 45.
-
-
-Underfull \hbox (badness 1412) in paragraph at lines 45--45
-\OT1/phv/m/n/10.95 time series a-b test-ing weight-ing use of cor-rel-a-tions i
-n the legal sys-
- []
-
-
-Underfull \hbox (badness 4981) in paragraph at lines 45--45
-\OT1/phv/m/n/10.95 - see how many use the skill after pub-lish-ing tiny-url.com
-/AlexaBln
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
-[]$\OT1/pcr/m/n/10.95 https : / / umfrage . hu-[]berlin . de / index . php / 87
-9458 ? lang = en$[]
- []
-
-[58
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-\OT1/ptm/m/n/12 https://www.wien.gv.at/bot/ http://www.vienna.at/wienbot-chatbo
-t-der-stadt-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-\OT1/ptm/m/n/12 wien-informiert-als-virtueller-beamter/5590853 https://digitalc
-ity.wien/wienbot-
- []
-
-[59]
-
-Package xcolor Warning: Incompatible color definition on input line 106.
-
-
-Package xcolor Warning: Incompatible color definition on input line 106.
-
-
-Package xcolor Warning: Incompatible color definition on input line 106.
-
-
-Package xcolor Warning: Incompatible color definition on input line 115.
-
-
-Package xcolor Warning: Incompatible color definition on input line 115.
-
-
-Package xcolor Warning: Incompatible color definition on input line 115.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
-[]\OT1/phv/m/n/10.95 alexa ask geor-gia if u cant in-stall it, here is a video 
-ht-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 140.
-
-
-Package xcolor Warning: Incompatible color definition on input line 140.
-
-
-Package xcolor Warning: Incompatible color definition on input line 140.
-
-[60]) (./input/06_conclusion.tex [61]
-Chapter 10.
-
-Underfull \hbox (badness 5217) in paragraph at lines 12--15
-[][]$\OT1/pcr/m/n/12 http : / / www-[]personal . umich . edu / []cellis / heter
-onym . html$[] \OT1/ptm/m/n/12 ho-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 20.
-
-
-Package xcolor Warning: Incompatible color definition on input line 20.
-
-
-Package xcolor Warning: Incompatible color definition on input line 20.
-
-[62
-
-]) [63] (./thesis.bbl
-Underfull \hbox (badness 1226) in paragraph at lines 4--8
-\OT1/pcr/m/n/12 voice-[]search-[]trends/$[]\OT1/ptm/m/n/12 , April 2018.  On-li
-ne Re-source. Ac-cessed on
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--23
-\OT1/pcr/m/n/12 / / www . statistik-[]berlin-[]brandenburg . de / publikationen
- /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--23
-\OT1/pcr/m/n/12 stat _ berichte / 2017 / SB _ A01-[]05-[]00 _ 2017h01 _ BE . pd
-f$[]\OT1/ptm/m/n/12 , Au-gust
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
-[]\OT1/ptm/m/n/12 George An-ders.  \Al-exa, Un-der-stand Me".  []$\OT1/pcr/m/n/
-12 https : / / www .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
-\OT1/pcr/m/n/12 technologyreview . com / s / 608571 / alexa-[]understand-[]me/$
-[]\OT1/ptm/m/n/12 ,
- []
-
-
-Underfull \hbox (badness 1484) in paragraph at lines 32--38
-[]\OT1/ptm/m/n/12 Annett Witte, Friedrich-Naumann-Stiftung f[]ur die Freiheit. 
- Freiheit.org -
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--59
-\OT1/pcr/m/n/12 title = History _ of _ natural _ language _ processing & oldid 
-=
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--68
-\OT1/pcr/m/n/12 Usage _ share _ of _ operating _ systems & oldid = 825514016$[]
-\OT1/ptm/m/n/12 , 2018.
- []
-
-[64
-
-
-]
-Overfull \hbox (4.77208pt too wide) in paragraph at lines 74--76
-[]\OT1/ptm/m/n/12 Dries Buytaert.  []$\OT1/pcr/m/n/12 https : / / dri . es / th
-ink-[]beyond-[]with-[]acquia-[]labs$[]\OT1/ptm/m/n/12 . 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--84
-[]\OT1/ptm/m/n/12 Eunji \Jinny" Seo.  19 Best UX Prac-tices for Build-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--84
-\OT1/ptm/m/n/12 ing Chat-bots.  []$\OT1/pcr/m/n/12 https : / / chatbotsmagazine
- . com /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--84
-\OT1/pcr/m/n/12 19-[]best-[]practices-[]for-[]building-[]chatbots-[]3c46274501b
-2$[]\OT1/ptm/m/n/12 ,
- []
-
-
-Underfull \hbox (badness 5446) in paragraph at lines 93--99
-[]\OT1/ptm/m/n/12 Georg Ber-ger, RBB On-line.  Gen-iale k[]opfe - wohnen der zu
-kunft.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--99
-[]$\OT1/pcr/m/n/12 https : / / rbb-[]online . de / abenschau / archiv / 2018041
-6 _ 1930 /
- []
-
-
-Underfull \hbox (badness 2221) in paragraph at lines 93--99
-\OT1/pcr/m/n/12 sahin-[]Albayrak . html$[]\OT1/ptm/m/n/12 , April 2018.  On-lin
-e Re-source. Ac-cessed on
- []
-
-
-Underfull \hbox (badness 5231) in paragraph at lines 101--105
-[]\OT1/ptm/m/n/12 Gesch[]afts- und Koordinier-ungss-telle 115 im Bundesmin-is-t
-erium des In-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--105
-\OT1/ptm/m/n/12 nern.  []$\OT1/pcr/m/n/12 https : / / www . 115 . de / SharedDo
-cs / Publikationen /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--105
-\OT1/pcr/m/n/12 Service _ Publikationen / Infomaterialien / infobroschuere _
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--105
-\OT1/pcr/m/n/12 %20BMI08324 _ screen _ barrierefrei . pdf ? _ _ blob =
- []
-
-
-Underfull \hbox (badness 6157) in paragraph at lines 119--123
-[]\OT1/ptm/m/n/12 Humboldt In-nov-a-tion.  []$\OT1/pcr/m/n/12 http : / / www . 
-existstartupgermany . com /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--132
-\OT1/pcr/m/n/12 de / 2017 / 08 / 09 / google-[]home-[]analyse-[]voice-[]search/
-$[]\OT1/ptm/m/n/12 , Au-gust
- []
-
-
-Underfull \hbox (badness 3058) in paragraph at lines 134--139
-[]\OT1/ptm/m/n/12 Judy Gold-smith and Nich-olas Mat-tei.  Sci-ence fic-tion as 
-an in-tro-duc-
- []
-
-
-Underfull \hbox (badness 1237) in paragraph at lines 134--139
-\OT1/ptm/m/n/12 tion to ai re-search.  []$\OT1/pcr/m/n/12 https : / / pdfs . se
-manticscholar . org / fdd1 /
- []
-
-[65]
-Underfull \hbox (badness 10000) in paragraph at lines 155--161
-\OT1/pcr/m/n/12 businessinsider . de / the-[]messaging-[]app-[]report-[]2015-[]
-11 ? r =
- []
-
-
-Underfull \hbox (badness 2726) in paragraph at lines 169--175
-[]\OT1/ptm/m/n/12 Matt An-thes, For-bes Agency Coun-cil.  So-cial Me-dia As A V
-i-tal En-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--175
-\OT1/ptm/m/n/12 gage-ment Plat-form For Gov-ern-ment Out-reach.  []$\OT1/pcr/m/
-n/12 https : / / www .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--175
-\OT1/pcr/m/n/12 forbes . com / sites / forbesagencycouncil / 2017 / 10 / 02 /
- []
-
-
-Overfull \hbox (101.71297pt too wide) in paragraph at lines 169--175
-\OT1/pcr/m/n/12 social-[]media-[]as-[]a-[]vital-[]engagement-[]platform-[]for-[
-]government-[]outreach /
- []
-
-
-Underfull \hbox (badness 1472) in paragraph at lines 184--188
-[]\OT1/ptm/m/n/12 Memo D[]oring.  Al-exa dev days.  []$\OT1/pcr/m/n/12 http : /
- / alexadevday . com / BER /
- []
-
-
-Underfull \hbox (badness 3364) in paragraph at lines 196--202
-[]\OT1/ptm/m/n/12 NBC.  Amazon's al-exa had a break-out hol-i-day | people even
- used
- []
-
-
-Overfull \hbox (59.01299pt too wide) in paragraph at lines 196--202
-\OT1/pcr/m/n/12 how-[]many-[]amazon-[]alexa-[]echoes-[]were-[]sold-[]over-[]the
--[]2017-[]holidays .
- []
-
-[66]
-Underfull \hbox (badness 10000) in paragraph at lines 221--228
-\OT1/pcr/m/n/12 global-[]smartphone-[]penetration-[]per-[]capita-[]since-[]2005
-/$[]\OT1/ptm/m/n/12 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--241
-[]\OT1/ptm/m/n/12 Laurie Sul-li-van.  Gart-ner pre-dicts 30 []$\OT1/pcr/m/n/12 
-https : / / www .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--241
-\OT1/pcr/m/n/12 mediapost . com / publications / article / 291913 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--241
-\OT1/pcr/m/n/12 gartner-[]predicts-[]30-[]of-[]searches-[]without-[]a-[]screen 
-. html$[]\OT1/ptm/m/n/12 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--256
-\OT1/ptm/m/n/12 Sur-vey 2016, E-Government in Sup-port of Sus-tain-able De-vel-
-op-ment.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--256
-[]$\OT1/pcr/m/n/12 http : / / workspace . unpan . org / sites / Internet / Docu
-ments /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--276
-[]\OT1/ptm/m/n/12 Katie Young.  []$\OT1/pcr/m/n/12 https : / / blog . globalweb
-index . net /
- []
-
-
-Overfull \hbox (26.513pt too wide) in paragraph at lines 271--276
-\OT1/pcr/m/n/12 chart-[]of-[]the-[]day / 25-[]of-[]16-[]24s-[]use-[]voice-[]sea
-rch-[]on-[]mobile/$[]\OT1/ptm/m/n/12 ,
- []
-
-) (./input/07_appendix.tex [67]
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
-[][][] \OT1/ptm/m/n/10 More in-form-a-tion: []$\OT1/pcr/m/n/10 https : / / stac
-koverflow . com / questions / 42982159 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
-[]$\OT1/pcr/m/n/10 https : / / aws . amazon . com / about-[]aws / whats-[]new /
- 2017 / 09 /
- []
-
-[68
-
-]
-
-Package xcolor Warning: Incompatible color definition on input line 45.
-
-
-Package xcolor Warning: Incompatible color definition on input line 45.
-
-
-Package xcolor Warning: Incompatible color definition on input line 45.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
-
- []
-
-[69]
-
-Package xcolor Warning: Incompatible color definition on input line 58.
-
-
-Package xcolor Warning: Incompatible color definition on input line 58.
-
-
-Package xcolor Warning: Incompatible color definition on input line 58.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--62
-[]\OT1/ptm/m/n/12 a[]ws[][][][][][][][][][][][][][][][][][][][][][] []$\OT1/pcr
-/m/n/12 https : / / docs . aws . amazon . com / general /
- []
-
-[70
-
-]
-\openout4 = `thesis.pyg'.
-
-
-(./_minted-thesis/FC1D227E3D39E2751241B92F85E9FC2B70CC6C1C1E15B6F542B78520F42B0
-135.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/04A57C6CD13557AD003296F91725C7AF1F2D8067E0A256B6FCF34360A44AF
-D35.pygtex)
-\openout4 = `thesis.pyg'.
-
-
-(./_minted-thesis/641CDF669679CDE3A279D701FC7B559970CC6C1C1E15B6F542B78520F42B0
-135.pygtex)
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/0981292B146FAB18F5CC14F7B54C271B1F2D8067E0A256B6FCF34360A44AF
-D35.pygtex)
-\openout4 = `thesis.pyg'.
-
-
-(./_minted-thesis/0674DA4E8B03547947DFE5909B4B471D70CC6C1C1E15B6F542B78520F42B0
-135.pygtex)
-\openout4 = `thesis.pyg'.
-
-
-(./_minted-thesis/4DDFC9C722643AA972B5DDB7F0F1FFA070CC6C1C1E15B6F542B78520F42B0
-135.pygtex)
-\openout4 = `thesis.pyg'.
-
-
-(./_minted-thesis/D9F8A9D5215DE16AD79794AF3134552670CC6C1C1E15B6F542B78520F42B0
-135.pygtex)
-\openout4 = `thesis.pyg'.
-
- [71
-
-]
-(./_minted-thesis/5717B739518D0C87191CEBF94DF2F74670CC6C1C1E15B6F542B78520F42B0
-135.pygtex)
-\openout4 = `thesis.pyg'.
-
-
-(./_minted-thesis/CF86C601301CE959A1906C21D25137A570CC6C1C1E15B6F542B78520F42B0
-135.pygtex) [72]
-\openout4 = `thesis.pyg'.
-
-
-(./_minted-thesis/413A7D5746DCFB8CBAAAFB8EDE82EB2B70CC6C1C1E15B6F542B78520F42B0
-135.pygtex) [73
-
-] [74]
-Overfull \vbox (66.53094pt too high) has occurred while \output is active []
-
-
-[75]
-Overfull \hbox (273.7205pt too wide) in paragraph at lines 373--424
-[]  
- []
-
-) [76]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
- (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 279.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B6AA1A4ABF57D0B76BB2FF06CC316E18;3795.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-runsystem(rm thesis.pyg)...executed.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 279.
- ) 
-Here is how much of TeX's memory you used:
- 29964 strings out of 492985
- 551058 string characters out of 6132585
- 773418 words of memory out of 5000000
- 32438 multiletter control sequences out of 15000+600000
- 58981 words of font info for 119 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 54i,19n,73p,1965b,1547s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{multiturn:def} has been referenced but does not exi
-st, replaced by a fixed one
-
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2016/texmf-dist/f
-onts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
-e1/urw/courier/ucrro8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/
-helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helveti
-c/uhvbo8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr
-8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2016/texmf-dist/f
-onts/type1/public/tipa/xipa10.pfb>
-Output written on thesis.pdf (86 pages, 1399247 bytes).
-PDF statistics:
- 1367 PDF objects out of 1440 (max. 8388607)
- 1216 compressed objects within 13 object streams
- 305 named destinations out of 1000 (max. 500000)
- 525 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+<gfx/4Bots.png, id=540, 3013.2575pt 

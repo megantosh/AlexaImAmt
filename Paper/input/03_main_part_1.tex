@@ -136,6 +136,18 @@ It's important to say that they do not transcribe, but do term weighting etc, a 
 %Framework built on top of JavaScript
 Out of the languages supported by ASK and Lambda, we decide to use Node.js, a JavaScript (ECMAScript 6) framework due to its event-driven nature and to take advantage of its non-blocking I/O model. Being single-threaded, Node.js guarantees high performance at large scale with large volumes of requests considered. With its JavaScript (ECMAScript) foundation, no wonder it is becoming a standard in web-apps. Hence, the decision also comes due to the richness of develpers' experience with the implementation for Alexa Skills.
 
+The concept behind modularisation in Node.js is to keep Node's core small, efficient and tight in terms of functionality it provides. There are three kind of modules:
+
+\begin{itemize}
+\item Built-in modules that are part of Node core. These are mostly for essential things like reading and writing into the file system, making requests.
+
+\item third-party modules. Up for development by the community
+
+\item local modules
+
+\end{itemize}
+
+
 
 \todo{ below }
 
@@ -166,7 +178,7 @@ using state of the art standards in TF/IDF for seach queries
 \subsection*{Alternatives}
 Setup in Java using Maven \footnote{\url{https://github.com/alexa/alexa-skills-kit-sdk-for-java/wiki/Setting-Up-The-ASK-SDK}}
 
-\begin{minted}{java}
+\begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{java}
 <dependency>
 <groupId>com.amazon.alexa</groupId>
 <artifactId>ask-sdk</artifactId>
@@ -302,9 +314,9 @@ Throughout the model building process, we come across various nuances and detail
 
 It's important to understand and acknowledge that we are at the beginnings of VUI design, but are making very fast progress. The design process is full of swings and roundabouts, so we sometimes have to set our expectations a bit low sometimes, not expect fully optimised perfomance and many side effects sometimes.
   
-Based on our own exploration and through a growing voice design guide offered to Alexa developers \footnote{\url{https://alexa.design/guide} \\ \href{https://developer.amazon.com/designing-for-voice/what-alexa-says/}{\lstinline|//developer.amazon.com/designing-for-voice/voice-design-checklist|}\\
-	\href{https://developer.amazon.com/designing-for-voice/design-process/}{\lstinline|//developer.amazon.com/designing-for-voice/voice-design-checklist|}\\
-	\href{https://developer.amazon.com/designing-for-voice/voice-design-checklist}{\lstinline|//developer.amazon.com/designing-for-voice/voice-design-checklist|}
+Based on our own exploration and through a growing voice design guide offered to Alexa developers \footnote{\url{https://alexa.design/guide} \\ \href{https://developer.amazon.com/designing-for-voice/what-alexa-says/}{\lstinline|https://developer.amazon.com/designing-for-voice/what-alexa-says|}\\
+	\href{https://developer.amazon.com/designing-for-voice/design-process/}{\lstinline|https://developer.amazon.com/designing-for-voice//design-process/|}\\
+	\href{https://developer.amazon.com/designing-for-voice/voice-design-checklist}{\lstinline|https://developer.amazon.com/designing-for-voice/voice-design-checklist|}
 } as well as personal recommendation from Alexa evangelist Memo Döring \cite{memo:devDay}, we share a few good practices to consider before starting and throughout the development process. These are concerned partly with building the interaction model, as well as with the fulfilment back-end. Many of them also apply to voice assistants other than Alexa
 
 
@@ -358,7 +370,7 @@ Alexa provides many tools for handling context, such as session attributes. This
 
 %\begin{quotation}
 \begin{tikzpicture}
-\calloutquote[width=4.7cm,position={(-0.7,0.2)},fill=lightgray!50,rounded corners]{
+\calloutquote[author=User,width=4.5cm,position={(-0.7,0.2)},fill=lightgray!50,rounded corners]{
 
 \textit{	``I want to bake a cake''}
 }
@@ -373,7 +385,7 @@ Alexa provides many tools for handling context, such as session attributes. This
 %\begin{quotation}
 \begin{flushright}
 \begin{tikzpicture}
-\calloutquote[width=9.3cm,position={(0.5,0.2)},fill=gray!50,rounded corners]{
+\calloutquote[author=Alexa,width=9.1cm,position={(0.5,0.2)},fill=gray!50,rounded corners]{
 \textit{	``Okay, you need \{ingredient1\}, \{ingredient2\}, ...''}
 }
 \end{tikzpicture}
@@ -405,7 +417,7 @@ Alexa provides many tools for handling context, such as session attributes. This
 % \begin{quotation}
 
 \begin{tikzpicture}
-\calloutquote[width=2.7cm,position={(-0.7,0.2)},fill=lightgray!50,rounded corners]{
+\calloutquote[width=1.5cm,position={(-0.7,0.2)},fill=lightgray!50,rounded corners]{
 
 \textit{	``yes''}
 }
@@ -781,7 +793,7 @@ Moreover, if we are able to find in a log (works in case of using Alexa with Lam
 
 
 \subsection*{Showing Clear Structure}
-One of the revolutionary changes we witnessed since the introduction of GUIs in any major OS was the `main menu'. Appearing in the form of the Start Menu on Windows, the Apple Menu and the Dock on the Mac, the functionality of this button was so intuitive, that most keyboards include it as a physical button. Similarly, already with the launch of the first mobile phones, the option of going back to a main screen was always present (with the hangup button) and moved on to more advanced operating systems from most Symbian and Blackberry devices to now the Home Button on Smartphones. As it is ``second nature for us to look for a home button whenever we want a fresh start'' \cite{uxbot}. While using keywords like `help' or `start over' can be effective, it depends on the how we train the user to adapt to the use of these words.
+One of the revolutionary changes we witnessed since the introduction of GUIs in any major OS was the `main menu'. Appearing in the form of the Start Menu on Windows, the Apple Menu and the Dock on the Mac, the functionality of this button was so intuitive, that most keyboards include it as a physical button. Similarly, already with the launch of the first mobile phones, the option of going back to a main screen was always present (with the hangup button) and moved on to more advanced operating systems from most Symbian and Blackberry devices to now the Home Button on smartphones. As it is ``second nature for us to look for a home button whenever we want a fresh start'' \cite{uxbot}. While using keywords like `help' or `start over' can be effective, it depends on the how we train the user to adapt to the use of these words.
 An effective way of giving the user an idea about a possible next step is to provide answers to the questions the bot gives including a small percentage (i.e. one every max. five answers) that would lead the user to a fresh start or even dedicating an extra button for that function.
 \\
 

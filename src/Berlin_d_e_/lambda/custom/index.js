@@ -1,6 +1,5 @@
 // Author: Mohamed Megahed
 
-
 //Step-by-step recommendation:
 //start with interaction model
 //then use builder: http://alexa.design/skillcode
@@ -9,25 +8,22 @@
 
 'use strict'; //Optional, but allows vars etc for ES6
 
-
-
 const Helper = require("./lib/helper.js");
 const Speech = require("./lib/speeches.js");
 const Card = require("./lib/cards.js");
 
 const http = require('http');
-
-
-
-
+const https = require('https');
+const url = require("url");
+const Alexa = require("alexa-sdk");
+const AWS = require("aws-sdk");
 
 //replace with respective Skill ID from dev console (OPTIONAL).
 const APP_ID = 'amzn1.ask.skill.d7732837-fab2-42ff-a152-4eb0fc4ee646';
-
-const Alexa = require("alexa-sdk");
-const https = require("https");
-const AWS = require("aws-sdk");
+//force use Ireland Server (at the time of dev, this was the closes
 AWS.config.update({region: "eu-west-1"});
+
+const hamada= "http://newsreel-edu.aot.tu-berlin.de/solr/d115/select?q=personalausweis&wt=json&indent=true";
 
 
 exports.handler = function(event, context, callback) {
@@ -36,7 +32,6 @@ exports.handler = function(event, context, callback) {
     alexa.appId = APP_ID;
 
     //alexa.resources = Speech.defaultSpokenStrings;
-
 
     var locale = event.request.locale;
     console.log(event)
@@ -62,81 +57,43 @@ exports.handler = function(event, context, callback) {
     alexa.execute();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-// ===== Strings =====
-// const defaultSpokenStrings = {
-//     'en':
-//         {
-//             GREETING_TEXT: [
-//                 'Welcome to Berlin',
-//                 'I can help you with a few public services.'
-//
-//             ],
-//             HELP_TEXT: //"You can try: 'alexa, until when is Standesamt Friedrichshain-Kreuzberg open today'" +
-//                 "Try asking me how to get your visa extended",
-//             UNHANDLED_TEXT: "Sorry, I didn't get that. You can try: 'alexa, how do I transfer my driving license to a german one?'" +
-//             " or 'alexa, ask Berlin D. E. when is the nearest city hall open today?'",
-//             STOP_TEXT: '',
-//             CANCEL_TEXT: [
-//                 "always at your service.",
-//                 "I'll try to get better next time"
-//             ],
-//             WIP_TEXT: "I'll find out about that and be ready for your question soon"
-//         },
-//     'de':
-//         {
-//             GREETING_TEXT: [
-//                 'Ich kann dir mit den zahlreichen Dienstleistungen der Stadt Berlin helfen! ' +
-//                 'Möchtest Du dich über Öffnungszeiten oder eine Dienstleistung informieren?',
-//                 'Willkommen in dem Hauptstadtportal. Was kann ich für dich tun?'
-//             ],
-//             HELP_TEXT: "Du kannst mich nach einer Dienstleistung fragen." +
-//             "Probiere zum Beispiel 'Anmeldung einer Wohnung' oder 'Ich möchte eine Wohnung anmelden.",
-//             UNHANDLED_TEXT: [
-//                 "Sorry, das habe ich nicht verstanden. Probiere mal: 'alexa, wann hat das Bürgeramt Venus auf?'" +
-//                 " oder 'Alexa, frag Berlin D. E. wann hat das Bürgeramt in der Nähe auf heute'.'",
-//                 'Pardon, das habe ich nicht richtig mitbekommen.'
-//             ],
-//             STOP_TEXT: [
-//                 "ich halte mich fern",
-//             ],
-//             CANCEL_TEXT: 'ich bin weg',
-//             WIP_TEXT: [
-//                 'Skill wird gerade entwickelt.',
-//                 'das berücksichtige ich gerne beim nächsten Milestone',
-//                 'ich mag es, wie du mich ausfragst. Du solltest eine Karriere im Usability Bereich in Erwägung ziehen.',
-//                 'ich werde zwar von einem mega entwickelt, aber leider geht das nicht mega schnell'
-//             ]
-//         }
-// };
-//
-//
-
-
-
-
-
-//the name we use to access this skill
-//ber lin works better tan bär leen (has to consist of at least two words
+//the old name we use to access this skill
+//has to consist of at least two words
+//ber lin works better tan bär leen
 // const invocationName = "bär leen";
+
+//what Alexa will do if we get into any of the keys found in de_DE.json
+//german interaction model
 const DE_handlers = {
+
+
+    //TODO: Make Alexa ask for help only the first few times
+    'LaunchRequest': function () {
+        //another sample
+        //" <audio src='https://s3.amazonaws.com/my-ssml-samples/Flourish.mp3' /> "
+        let startConversation = " OK <audio src='https://s3.eu-central-1.amazonaws.com/megantosh/RegioSound-48kbps.mp3' /> " +
+            Helper.randomphrase(Speech.de.INTRO_GREETING_TEXT);
+
+        this.response
+        this.emit(':ask', startConversation, Speech.de.HELP_TEXT);
+        // need a real Echo to check this!
+        //     .listen('Hmm.. ' + Helper.randomphrase(Speech.de.INTRO_HELP_TEXT));
+        this.emit(':responseReady');
+    },
+    'Unhandled': function () {
+        this.response
+            .speak(Speech.de.INTRO_UNHANDLED_TEXT)
+            .listen(Helper.randomphrase(Speech.de.INTRO_UNHANDLED_TEXT));
+    },
+
     'AMAZON.CancelIntent': function () {
         this.response
+        //TODO
             .speak('Tschüss');
 
         this.emit(':responseReady');
     },
+
     'AMAZON.HelpIntent': function () {
 
         var CustomIntents = Helper.getCustomIntents();
@@ -157,6 +114,11 @@ const DE_handlers = {
 
         this.emit(':responseReady');
     },
+
+
+
+
+
 
     //https://www.berlin.de/lageso/gesundheit/berufe-im-gesundheitswesen/akademisch/
     'DL_ApprobationIntent': function () {
@@ -421,24 +383,7 @@ const DE_handlers = {
 
         this.emit(':responseReady');
     },
-    //TODO: Make Alexa ask for help only the first few times
-    'LaunchRequest': function () {
-        //another sample
-        //" <audio src='https://s3.amazonaws.com/my-ssml-samples/Flourish.mp3' /> "
-        let startConversation = " OK <audio src='https://s3.eu-central-1.amazonaws.com/megantosh/RegioSound-48kbps.mp3' /> " +
-            Helper.randomphrase(Speech.de.INTRO_GREETING_TEXT);
-
-        this.response
-        this.emit(':ask', startConversation, 'did that just work?');
-        // need a real Echo to check this!
-        //     .listen('Hmm.. ' + Helper.randomphrase(Speech.de.INTRO_HELP_TEXT));
-        this.emit(':responseReady');
-    },
-    'Unhandled': function () {
-        this.response
-            .speak(Speech.de.INTRO_UNHANDLED_TEXT)
-            .listen(Helper.randomphrase(Speech.de.INTRO_UNHANDLED_TEXT));
-    }};
+};
 
 
 
@@ -450,6 +395,10 @@ const DE_handlers = {
 //
 // future Dienstleistungen:
 // parken
+
+
+
+
 
 
 
@@ -653,7 +602,9 @@ const EN_US_handlers = {
         let startConversation = " OK <audio src='https://s3.eu-central-1.amazonaws.com/megantosh/RegioSound-48kbps.mp3' /> " +
             Helper.randomphrase(Speech.en.INTRO_GREETING_TEXT);
 
+        let hamada= "http://newsreel-edu.aot.tu-berlin.de/solr/d115/select?q=personalausweis&wt=json&indent=true";
 
+        console.log("in LaunchIntent");
 
         // //TODO experiment area
         //
@@ -669,73 +620,103 @@ const EN_US_handlers = {
         //
 
 
-
-        // getAstrosHttp((data) => {
-        //
-        //     var outputSpeech = `There are currently ${data.response.length} astronauts in space. `;
-            // for (var i = 0; i < data.people.length; i++) {
-            //     if (i === 0) {
-            //         //first record
-            //         outputSpeech = outputSpeech + 'Their names are: ' + data.people[i].name + ', '
-            //     } else if (i === data.people.length - 1) {
-            //         //last record
-            //         outputSpeech = outputSpeech + 'and ' + data.people[i].name + '.'
-            //     } else {
-            //         //middle record(s)
-            //         outputSpeech = outputSpeech + data.people[i].name + ', '
-            //     }
-            // }
-        //
-        //     this.emit(':tell', outputSpeech);
-        // })
+        // var hamada = https.request("https://newsreel-edu.aot.tu-berlin.de/solr/");
+        // console.log(hamada.getHeader);
 
 
 
+        Helper.httpsGet(Helper.buildHttpGetOptions("select?q=personalausweis&wt=json&indent=true"))
+            .then(
+                response => {
+                    console.log(" RESULTS: ", JSON.stringify(response));
+
+                    let elMegaout = JSON.stringify(response.response.numFound);
+                    console.log(elMegaout);
 
 
+    //                let pastMatch = buildPastMatchObject(response, slotValues);
+    //                saveValue.call(this, { data: pastMatch, fieldName: 'past_matches', append: true});
+                    // You can uncomment these lines to render an image of a dog.
+                    // It will appear in the companion app. See Part 3 Extra Credit
+                    // for more details: https://developer.amazon.com/docs/custom-skills/include-a-card-in-your-skills-response.html
+                    // let dogBreedImage = {
+                    //    "smallImageUrl": "Replace with image url",
+                    //    "largeImageUrl": "Replace with image url"
+                    // };
+                    // this.response.cardRenderer('Your pet match is ...', `A ${response.result[0].breed}`,
+                    //                            dogBreedImage);
+    //
+                   if( response.response.numFound > 0 ) {
+                       this.response.speak("So a ${response.response.numFound}" + elMegaout);
+    //                        + slotValues.size.resolved + " "
+    //                        + slotValues.temperament.resolved + " "
+    //                        + slotValues.energy.resolved
+    //                        + " energy dog sounds good for you. Consider a "
+    //                        + response.result[0].breed);
+                   } else {
+                       this.response.speak("I'm sorry I could not find a match for a "
+    //                        + slotValues.size.resolved + " "
+    //                        + slotValues.temperament.resolved + " "
+    //                        + slotValues.energy.resolved
+                           + " dog");
+                   }
 
-        this.response
-        this.emit(':ask', startConversation, 'did that just work?');
-            // .listen('Let us try again, ' + Helper.randomphrase(Speech.en.INTRO_HELP_TEXT));
-        this.emit(':responseReady');
-    },
+                    console.log("response: ", response);
+
+                }
+            ).catch( error => {
+                console.log(error);
+                this.response.speak("I'm really sorry. I'm unable to access part of my memory. Please try again later.");
+                // Part 3: Extra Credit 3: save all the slots and create an
+                // utterance so the user can pick up where they left off
+                // HINT 1: You can use saveValue to save the slot values.
+                // HINT 2: You can automate the recovery the next time the user
+                // invokes your skill, you can check if there was an error and skip
+                // right to the look up.
+
+            }).then(() => {
+                    // after we get a result, have Alexa speak.
+                    this.emit(':responseReady');
+                }
+            );
+        },
+
     'Unhandled': function () {
         this.response
             .speak(Helper.randomphrase(Speech.en.INTRO_UNHANDLED_TEXT))
             .listen(Helper.randomphrase(Speech.en.INTRO_UNHANDLED_TEXT));
-    }
+        }
     };
 
 
 // ====== End of Skill ==============================================================================================
 
 
-function getAstrosHttp(callback) {
+function getAstrosHttps(endpointUrl, callback) {
     //http://api.open-notify.org/astros.json
     //http://newsreel-edu.aot.tu-berlin.de/solr/d115/select?q=personalausweis&wt=json&indent=true
-    var options = {
-        //host: 'api.open-notify.org',
-        host: "newsreel-edu.aot.tu-berlin.de/solr/",
-        port: 80,
-        //path: '/astros.json',
-        path: "d115/select?q=personalausweis&wt=json&indent=true",
-        method: 'GET',
-        auth: "personal-assistent:AlexaAlexa0815."
-    };
-//
-//     var username = 'personal-assistent';
-//     var password = 'AlexaAlexa0815.';
-//     var auth = 'Basic ' + Buffer.from(username + ':' + password).toString('base64');
-// // new Buffer() is deprecated from v6
-//
-// // auth is: 'Basic VGVzdDoxMjM='
-//
-//     var header = {'Host': 'https://newsreel-edu.aot.tu-berlin.de/solr', 'Authorization': auth};
-//     var request = client.request('GET', '/', header);
 
-    // var req = http.request(options, res => {
-    var req = http.request(options, res => {
-        // console.log(http.request.getHeader())
+    var options = //"https://newsreel-edu.aot.tu-berlin.de/solr/"
+        {
+            host: url.parse(endpointUrl).hostname,
+            port: url.parse(endpointUrl).port,
+            path: url.parse(endpointUrl).path,
+            // host: "newsreel-edu.aot.tu-berlin.de/solr/",
+            // port: 443,
+            // path: "d115/select?q=personalausweis&wt=json&indent=true",
+            // //open api for astraunauts
+            // host: 'api.open-notify.org',
+            // port: 80,
+            // path: '/astros.json',
+            method: 'GET',
+            rejectUnauthorized: false,
+            auth: "personal-assistent:AlexaAlexa0815."
+        };
+
+    var req = https.request(options, res => {
+        // var req = https.request(options, res => {
+        console.log(`STATUS: ${res.statusCode}`);
+        console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
         res.setEncoding('utf8');
         var returnData = "";
 
@@ -745,11 +726,15 @@ function getAstrosHttp(callback) {
 
         res.on('end', () => {
             var result = JSON.parse(returnData);
-
-            callback(result);
+            console.log('No more data in response.');
+            //callback: error, data
+            return callback(null, result);
+            // callback(result);
 
         });
-
+        req.on('error', (e) => {
+            console.error(`problem with request: ${e.message}`);
+        });
     });
     req.end();
 }
@@ -759,176 +744,7 @@ function getAstrosHttp(callback) {
 
 
 // End Skill Code
-// Language Model  for reference
-// var interactionModel = [
-//     {
-//         "name": "AMAZON.CancelIntent",
-//         "samples": []
-//     },
-//     {
-//         "name": "AMAZON.HelpIntent",
-//         "samples": []
-//     },
-//     {
-//         "name": "AMAZON.StopIntent",
-//         "samples": []
-//     },
-//     {
-//         "name": "DL_AufenthaltstitelIntent",
-//         "slots": [],
-//         "samples": []
-//     },
-//     {
-//         "name": "BafoegIntent",
-//         "slots": [],
-//         "samples": []
-//     },
-//     {
-//         "name": "ApprobationIntent",
-//         "slots": [],
-//         "samples": []
-//     },
-//     {
-//         "name": "DL_generalIntent",
-//         "slots": [
-//             {
-//                 "name": "Dienstleistung",
-//                 "type": "EN_LIST_OF_PUBLIC_SVCS_BLN"
-//             },
-//             {
-//                 "name": "prerequisites",
-//                 "type": "EN_YES_NO_FLAG",
-//                 "samples": [
-//                     "{prerequisites} please"
-//                 ]
-//             }
-//         ],
-//         "samples": [
-//             "how do i {Dienstleistung}",
-//             "i want to {Dienstleistung}",
-//             "i would like to {Dienstleistung}"
-//         ]
-//     },
-//     {
-//         "name": "ST_BerlinQuestions",
-//         "slots": [],
-//         "samples": []
-//     },
-//     {
-//         "name": "ST_FutureTODOs",
-//         "slots": [
-//             {
-//                 "name": "DogName",
-//                 "type": "AMAZON.US_FIRST_NAME"
-//             },
-//             {
-//                 "name": "futureIntent",
-//                 "type": "Todo_List"
-//             }
-//         ],
-//         "samples": [
-//             "I need an apartment",
-//             "where can I {futureIntent}",
-//             "I want to go bathing",
-//             "I need a house",
-//             "I lost my Meldebscheinigung",
-//             "where do I find {DogName}",
-//             "where did my dog go",
-//             "where do I find my lost dog",
-//             "how can I find my dog",
-//             "I lost my dog",
-//             "ich habe ein Kind bekommen wo kann ich eine geburtsurkunde beantragen"
-//         ]
-//     },
-//     {
-//         "name": "LaunchRequest"
-//     }
-// ];
-// var intentsReference = [
-//     {
-//         "name": "AMAZON.CancelIntent",
-//         "samples": []
-//     },
-//     {
-//         "name": "AMAZON.HelpIntent",
-//         "samples": []
-//     },
-//     {
-//         "name": "AMAZON.StopIntent",
-//         "samples": []
-//     },
-//     {
-//         "name": "DL_AufenthaltstitelIntent",
-//         "slots": [],
-//         "samples": []
-//     },
-//     {
-//         "name": "BafoegIntent",
-//         "slots": [],
-//         "samples": []
-//     },
-//     {
-//         "name": "ApprobationIntent",
-//         "slots": [],
-//         "samples": []
-//     },
-//     {
-//         "name": "DL_generalIntent",
-//         "slots": [
-//             {
-//                 "name": "Dienstleistung",
-//                 "type": "EN_LIST_OF_PUBLIC_SVCS_BLN"
-//             },
-//             {
-//                 "name": "prerequisites",
-//                 "type": "EN_YES_NO_FLAG",
-//                 "samples": [
-//                     "{prerequisites} please"
-//                 ]
-//             }
-//         ],
-//         "samples": [
-//             "how do i {Dienstleistung}",
-//             "i want to {Dienstleistung}",
-//             "i would like to {Dienstleistung}"
-//         ]
-//     },
-//     {
-//         "name": "ST_BerlinQuestions",
-//         "slots": [],
-//         "samples": []
-//     },
-//     {
-//         "name": "ST_FutureTODOs",
-//         "slots": [
-//             {
-//                 "name": "DogName",
-//                 "type": "AMAZON.US_FIRST_NAME"
-//             },
-//             {
-//                 "name": "futureIntent",
-//                 "type": "Todo_List"
-//             }
-//         ],
-//         "samples": [
-//             "I need an apartment",
-//             "where can I {futureIntent}",
-//             "I want to go bathing",
-//             "I need a house",
-//             "I lost my Meldebscheinigung",
-//             "where do I find {DogName}",
-//             "where did my dog go",
-//             "where do I find my lost dog",
-//             "how can I find my dog",
-//             "I lost my dog",
-//             "ich habe ein Kind bekommen wo kann ich eine geburtsurkunde beantragen"
-//         ]
-//     },
-//     {
-//         "name": "LaunchRequest"
-//     }
-// ];
-//
+
 
 
 
@@ -1030,3 +846,118 @@ function getAstrosHttp(callback) {
 //     alexa.registerHandlers(handlers);
 //     alexa.execute();
 // };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ===== Strings =====
+// const defaultSpokenStrings = {
+//     'en':
+//         {
+//             GREETING_TEXT: [
+//                 'Welcome to Berlin',
+//                 'I can help you with a few public services.'
+//
+//             ],
+//             HELP_TEXT: //"You can try: 'alexa, until when is Standesamt Friedrichshain-Kreuzberg open today'" +
+//                 "Try asking me how to get your visa extended",
+//             UNHANDLED_TEXT: "Sorry, I didn't get that. You can try: 'alexa, how do I transfer my driving license to a german one?'" +
+//             " or 'alexa, ask Berlin D. E. when is the nearest city hall open today?'",
+//             STOP_TEXT: '',
+//             CANCEL_TEXT: [
+//                 "always at your service.",
+//                 "I'll try to get better next time"
+//             ],
+//             WIP_TEXT: "I'll find out about that and be ready for your question soon"
+//         },
+//     'de':
+//         {
+//             GREETING_TEXT: [
+//                 'Ich kann dir mit den zahlreichen Dienstleistungen der Stadt Berlin helfen! ' +
+//                 'Möchtest Du dich über Öffnungszeiten oder eine Dienstleistung informieren?',
+//                 'Willkommen in dem Hauptstadtportal. Was kann ich für dich tun?'
+//             ],
+//             HELP_TEXT: "Du kannst mich nach einer Dienstleistung fragen." +
+//             "Probiere zum Beispiel 'Anmeldung einer Wohnung' oder 'Ich möchte eine Wohnung anmelden.",
+//             UNHANDLED_TEXT: [
+//                 "Sorry, das habe ich nicht verstanden. Probiere mal: 'alexa, wann hat das Bürgeramt Venus auf?'" +
+//                 " oder 'Alexa, frag Berlin D. E. wann hat das Bürgeramt in der Nähe auf heute'.'",
+//                 'Pardon, das habe ich nicht richtig mitbekommen.'
+//             ],
+//             STOP_TEXT: [
+//                 "ich halte mich fern",
+//             ],
+//             CANCEL_TEXT: 'ich bin weg',
+//             WIP_TEXT: [
+//                 'Skill wird gerade entwickelt.',
+//                 'das berücksichtige ich gerne beim nächsten Milestone',
+//                 'ich mag es, wie du mich ausfragst. Du solltest eine Karriere im Usability Bereich in Erwägung ziehen.',
+//                 'ich werde zwar von einem mega entwickelt, aber leider geht das nicht mega schnell'
+//             ]
+//         }
+// };
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var hello = getAstrosHttps(hamada, (err,data) => {
+//
+//     console.log(data);
+//
+//    var outputSpeech = `There are currently ${data.response.length} astronauts in space. `;
+// for (var i = 0; i < data.people.length; i++) {
+//     if (i === 0) {
+//         //first record
+//         outputSpeech = outputSpeech + 'Their names are: ' + data.people[i].name + ', '
+//     } else if (i === data.people.length - 1) {
+//         //last record
+//         outputSpeech = outputSpeech + 'and ' + data.people[i].name + '.'
+//     } else {
+//         //middle record(s)
+//         outputSpeech = outputSpeech + data.people[i].name + ', '
+//     }
+// }
+
+// return data;
+
+// this.emit(':tell', outputSpeech);
+// });
+
+// console.log(hello);
+
+
+//
+// this.response
+// this.emit(':ask', startConversation, 'did that just work?');
+// .listen('Let us try again, ' + Helper.randomphrase(Speech.en.INTRO_HELP_TEXT));
+//     this.emit(':responseReady');
+// },

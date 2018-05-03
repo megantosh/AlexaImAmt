@@ -2,9 +2,76 @@
 \label{evaluation}
 %DELETEME: The evaluation chapter is one of the most important chapters of your work. Here, you will prove usability/efficiency of your approach by presenting and interpreting your results. You should discuss your results and interprete them, if possible. Drawing conclusions on the results will be one important point that your estimators will refer to when grading your work.
 
+
+
+\section{WienBot}
+
+\todo{
+-versteht nicht, wenn ich `perso' schreibe\\
+-verbose.. "warum möchten Sie aus der Stadt...\\
+-uses emojis\\
+-speech recognition happens on device (iOS)\\
+-use failed attempts of screenshots (new and old)
+
+}
+\section{GeorgiaGov}
+
+
+child care
+vs child custody. Sorry i didnt get that. (check first skizze)
+
+\begin{figure}[p]
+
+	\caption[Conversation Flow on Georgia.gov]{Activity Diagram of Conversation Flow on Georgia.gov}
+	\centering
+	\includegraphics[ height=\textheight]{Georgia2}
+	\label{astah:georgiaActivity}
+\end{figure}
+
+\todo{
+-This is how their model works:\\
+services are grouped into categories as seen on \href{http://www.georgia.gov}{georgia.gov}\\
+-Alexa catches from any sentence you say only the service grouping name.\\
+-then gives you a definition\\
+-then asks you if you want to hear about related services (in the format of FAQ)\\
+-possible examples: ``I am 17 and my parents are blind. How do I renew my license?''\\
+-it goes through this list and you can say yes and no if you want to hear about the `related' item.\\
+-of the related items are questions like `how much does it cost', `how much time does it take'. These are no explicitly put in the questions you can ask but they become clear if you have time to make conversation. (Kritikpunkt!)
+-then when it reaches the end of the list it says that it's over and if you want to have the phone number that is related tot this service grouping
+%
+%
+%
+-then the conversastion either ends or restarts.\\
+-you can ask questions only about service groupings\\
+%
+%
+-stop and cancel intent:
+\textit{Feel free to ask another question or say exit}
+-helpIntent:
+Ask me a question
+%
+repeat does
+%
+-reprompts are not very ueful and repetitive
+}
+
+
+This way, if a user does not see this service is relevant to them, they will say no and skip to the next
+
 \section{Alexa in General}
 Experian of Alexa as a whole \url{https://www.experian.com/innovation/thought-leadership/amazon-echo-consumer-survey.jsp}
 
+
+\todo{are Skills really going to make it?
+	
+	30,000 users a day in the US
+	\url{https://omr.com/en/amazon-alexa-skill-marketing/}
+	10,000 BVG
+
+}
+
+
+\todo{sometimes voice will hardly or never get what you want. try to tell alexa to play YAS. will always redirect you to something else}
 
 
 \todo{- wo hilft mir alexa, was mach ich lieber woanders?\\
@@ -102,6 +169,8 @@ usability metrics:
 %###################################################################################
 \section{Discussions}
 \label{discussions}
+
+\todo{will never get things like A\$ap Rocky, Y.A.S elli 3ala spotify not ay wa7da, or Ta3ala (egyptian arabic)}
 
 \todo{you mentioned in intro (structure of this thesis) that you will discuss ML approaches like term weighting}
 
