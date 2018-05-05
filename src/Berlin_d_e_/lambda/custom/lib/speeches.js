@@ -47,8 +47,11 @@ module.exports = {
                 //'Möchtest Du dich über Öffnungszeiten oder eine Dienstleistung informieren?',
                 'Willkommen in dem Hauptstadtportal. Was kann ich für dich tun?'
             ],
-            INTRO_HELP_TEXT: "Du kannst mich nach einem Dienstleistung fragen, die du zum Beispiel im Bürgeramt erledigen würdest." +
-            "Probiere mal 'Anmeldung einer Wohnung' oder 'Ich möchte eine Wohnung anmelden.",
+            INTRO_HELP_TEXT: ["Du kannst mich nach einer Dienstleistung fragen, die du zum Beispiel im Bürgeramt" +
+            " erledigen würdest. Probiere mal 'Anmeldung einer Wohnung' oder 'Ich möchte eine Wohnung anmelden.",
+            'Frag mich nach einem Ort oder Postleitzahl in Berlin und ich verrate dir, wo das ist'
+            ],
+
             INTRO_UNHANDLED_TEXT: [
                 "Sorry, das habe ich nicht verstanden. Probiere mal: 'alexa, wann hat das Bürgeramt Venus auf?'" +
                 " oder 'Alexa, frag Berlin D. E. wann hat das Bürgeramt in der Nähe auf heute'.'",

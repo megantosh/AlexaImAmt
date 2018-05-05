@@ -5,6 +5,7 @@
 // to start with from your model on https://alexa.design/skillcode
 // then handle the fulfilment inside each intent match
 
+// reprompts + cards best tested with a real Alexa-enabled device with screen!
 // More on available node events in Docu.js
 
 
@@ -82,23 +83,24 @@ exports.handler = function (event, context, callback) {
 //german interaction model
 const DE_handlers = {
 
-    //TODO doc
+    //Entry point: triggered when user says open Berlin Service (or other skill name)
     'LaunchRequest': function () {
         // try this line in combination with alexa.resources (notice the this.t(...))
         // let say = randomPhrase([this.t('WELCOME1'), this.t('WELCOME2'), this.t('WELCOME3')]) + ' ' + this.t('HELP');
 
-        let startConversation = " OK " +
+        let introAudio = " OK " +
             // "<audio src='https://s3.eu-central-1.amazonaws.com/megantosh/RegioSound-48kbps.mp3' /> " +
             //" <audio src='https://s3.amazonaws.com/my-ssml-samples/Flourish.mp3' /> " +
-            "<audio src='https://s3.amazonaws.com/ask-soundlibrary/office/amzn_sfx_typing_medium_02.mp3'/>" +
-            Helper.randomphrase(Speech.de.INTRO_GREETING_TEXT);
+            "<audio src='https://s3.amazonaws.com/ask-soundlibrary/office/amzn_sfx_typing_medium_02.mp3'/>";
 
-        this.emit(':ask', startConversation, Speech.de.HELP_TEXT)
-        // testable with a real Alexa-enabled device!
+        // alternatively, using the line below to avoid reprompts. (ResponseBuilder: remove . concat)
+        // this.emit(':ask', introAudio, Speech.de.HELP_TEXT)
+        this.response
+            .speak(introAudio + Helper.randomphrase(Speech.de.INTRO_GREETING_TEXT))
             .listen('Hmm.. ' + Helper.randomphrase(Speech.de.INTRO_HELP_TEXT));
-
-
         this.emit(':responseReady');
+
+        console.log("exited LaunchRquest");
     },
 
     //TODO doc
@@ -119,13 +121,18 @@ const DE_handlers = {
     //TODO
     'AMAZON.HelpIntent'         : function () {
 
-        var CustomIntents = Helper.getCustomIntents();
-        var MyIntent = randomPhrase(CustomIntents);
-        let say = 'Out of ' + CustomIntents.length + ' intents, here is one called, ' + MyIntent.name + ', just say, ' + MyIntent.samples[0];
+        let CustomIntents = Helper.getCustomIntents();
+        let MyIntent = randomPhrase(CustomIntents);
+        let MyIntentRandomSampleIndex = Math.floor(Math.random() * MyIntent.samples.length);
+        let say = 'Von den ' + CustomIntents.length + ' Themengruppen, die ich kenne, ' +
+            'kann ich dir ' + MyIntent.name + " vorschlagen. Probiere mal <emphasis level='strong'> " +
+            MyIntent.samples[MyIntentRandomSampleIndex] + " </emphasis> ";
+        let reprompt = "Versuche nochmal: " + MyIntent.samples[0];
+
         this.response
             .speak(say)
-            .listen('try again, ' + say)
-            .cardRenderer('Intent List', cardIntents(CustomIntents)); // , welcomeCardImg
+            .listen(reprompt)
+            .cardRenderer('Themengruppen', Helper.cardIntents(CustomIntents)); // , welcomeCardImg
 
         this.emit(':responseReady');
     },
@@ -450,21 +457,29 @@ const DE_handlers = {
     'LOC_WhereIsAreaOrPLZ_Intent': function () {
         console.log('Hello from LOC_Where Is Area Or PostLeitZahl_Intent. ');
         let say = '';
+        let cardInputText = '';
+        let heard_plz_district;
 
-        var slotStatus = '';
-        var resolvedSlot;
+        let slotStatus = '';
+        let resolvedSlot;
+        let verifiedSlot;
+
 
         //   SLOT: plz_district
         if (this.event.request.intent.slots.plz_district.value) {
-            const heard_plz_district = this.event.request.intent.slots.plz_district;
+            heard_plz_district = this.event.request.intent.slots.plz_district;
             slotStatus += heard_plz_district.value;
             resolvedSlot = resolveCanonical(heard_plz_district);
 
             console.log(heard_plz_district);
 
             //exception (Pun) intended!
-            if (heard_plz_district.value === 'Bielefeld')
-                slotStatus = "Bielefeld gibt's nicht ";
+            if (heard_plz_district.value === 'Bielefeld' ) //|| heard_plz_district.value ==='bielefeld')
+                slotStatus =
+                    // "<amazon:effect name='whispered'> " +
+                    "Bielefeld gibt's nicht. " +
+                    // "</amazon:effect>" +
+                    "<say-as interpret-as='interjection'>hihi</say-as>";
             //TODO Validator as Alexa makes up PLZs of her own!!
             //e.g. She would say "Reinickendorf Nord ist in Reinickendorf Nord"
             //e.g. She would say " 19388 ist in Pankow since Pankow has a PLZ with 13088
@@ -475,22 +490,28 @@ const DE_handlers = {
                 && (resolvedSlot != heard_plz_district.value)
                 && (Helper.listOfComboDistricts.indexOf(resolvedSlot) > -1)
             ) {
-                //TODO Validator resolves to many districts!
+                //TODO+ if Validator resolves to many districts!
+                //TODO+ ignore case
                 //then check if resolvedSlot is in the list of Bezirksämter
                 slotStatus += ' ist in Bezirksamt ' + resolvedSlot
-                // }
+                //TODO+ render a card of the wappen
+                verifiedSlot = 'in ' + resolvedSlot;
             } else {
                 slotStatus = 'Von diesem Ort habe ich nie in Berlin gehört.';
+                verifiedSlot = 'bestimmt nicht in der Landeshauptstadt!'
             }
         }
+
+        cardInputText = Helper.writeDigits(heard_plz_district.value);
+
+
 
 
         say += slotStatus;
 
         this.response
-            .speak(say);
-        //TODO render a card of the wappen
-//            .cardRenderer('Wo ist', heard_plz_district.value);
+            .speak(say)
+           .cardRenderer(cardInputText + ' ist ',  verifiedSlot);
 
 
         this.emit(':responseReady');
@@ -597,14 +618,6 @@ function delegateSlotCollection() {
 
 
 
-function cardIntents(iArray) {
-    var body = "";
-    for (var i = 0; i < iArray.length; i++) {
-        body += iArray[i].name + "\n";
-        body += "  '" + iArray[i].samples[0] + "'\n";
-    }
-    return (body);
-}
 
 const welcomeCardImg = {
     smallImageUrl: "https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/alexa-devs-skill/cards/skill-builder-720x480._TTH_.png",
