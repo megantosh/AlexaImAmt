@@ -31,7 +31,7 @@ module.exports = {
             "The skill did not quite understand what you wanted.  Do you want to try something else? "
             ]
             ,
-            INTRO_STOP_TEXT: '',
+            INTRO_STOP_TEXT: ['Tschü','ciao','Tschüss',' '],
             INTRO_CANCEL_TEXT: [
                 "always at your service.",
                 "I'll try to get better next time"

@@ -69,9 +69,9 @@ const DE_handlers = {
     //TODO: Make Alexa ask for help only the first few times
     'LaunchRequest': function () {
         //another sample
-        //" <audio src='https://s3.amazonaws.com/my-ssml-samples/Flourish.mp3' /> "
         let startConversation = " OK " +
             // "<audio src='https://s3.eu-central-1.amazonaws.com/megantosh/RegioSound-48kbps.mp3' /> " +
+            //" <audio src='https://s3.amazonaws.com/my-ssml-samples/Flourish.mp3' /> " +
             "<audio src='https://s3.amazonaws.com/ask-soundlibrary/office/amzn_sfx_typing_medium_02.mp3'/>" +
             Helper.randomphrase(Speech.de.INTRO_GREETING_TEXT);
 
@@ -121,7 +121,7 @@ const DE_handlers = {
 
 
 
-    //https://www.berlin.de/lageso/gesundheit/berufe-im-gesundheitswesen/akademisch/
+    https://www.berlin.de/lageso/gesundheit/berufe-im-gesundheitswesen/akademisch/
     'DL_Approbation_Intent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device

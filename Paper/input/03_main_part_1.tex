@@ -186,6 +186,15 @@ Setup in Java using Maven \footnote{\url{https://github.com/alexa/alexa-skills-k
 </dependency>
 \end{minted}
 
+ASK SDK for Java\footnote{\url{https://github.com/alexa/alexa-skills-kit-sdk-for-java}}
+
+
+
+Using another HTTPS endpoint:
+
+When deploying your service as an AWS Lambda function on AWS Lambda (a service offering by Amazon Web Services), you configure the function with a handler. You can create this handler by extending the SpeechletRequestStreamHandler class provided in the library. The handler then dispatches requests by calling the appropriate Speechlet methods (onLaunch(), onIntent(), and so on).
+When deploying your service as a web service on a cloud provider, you extend the SpeechletServlet class. This class is an implementation of a Java EE servlet that handles serializing and deserializing the body of the HTTP request and calls the appropriate Speechlet methods based on the request (onLaunch(), onIntent(), and so on).
+
 
 
 
