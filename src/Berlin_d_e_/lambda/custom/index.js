@@ -18,6 +18,9 @@ const Helper = require("./lib/helper.js");
 const Speech = require("./lib/speeches.js");
 const Card = require("./lib/cards.js");
 
+const de_DE_model = require('./lib/modelDuplicates/de-DE.json');
+const en_US_model = require('./lib/modelDuplicates/en-US.json');
+
 const http = require('http');
 const https = require('https');
 const url = require("url");
@@ -453,7 +456,7 @@ const DE_handlers = {
         this.emit(':responseReady');
     },
 
-
+    //Find a Berlin Postleitzahl (Postal Code) and tell to which district mayorship it belongs to
     'LOC_WhereIsAreaOrPLZ_Intent': function () {
         console.log('Hello from LOC_Where Is Area Or PostLeitZahl_Intent. ');
         let say = '';
@@ -490,11 +493,23 @@ const DE_handlers = {
                 && (resolvedSlot != heard_plz_district.value)
                 && (Helper.listOfComboDistricts.indexOf(resolvedSlot) > -1)
             ) {
+                //if a PLZ belongs to multiple districts
+                //TODO you want to use the list of Helpler.resolveMulti and verify it against the real hits.
+                //check if:
+                //de_DE_model.interactionModel.languageModel.types.name == Districts_PLZ_Combo_BER.
+                // parent node's values[i].name.value
+                // includes()
+                //de_DE_model.interactionModel.languageModel.types.name == Districts_PLZ_Combo_BER.
+                // parent node's values[i].name.synonyms
+
+                ///TODO you want to make a promise here to make it get the digits of a PLZ before it's rendered on card!
+
+
                 //TODO+ if Validator resolves to many districts!
                 //TODO+ ignore case
                 //then check if resolvedSlot is in the list of Bezirksämter
                 slotStatus += ' ist in Bezirksamt ' + resolvedSlot
-                //TODO+ render a card of the wappen
+                //TODO+ render a card of the Wappen
                 verifiedSlot = 'in ' + resolvedSlot;
             } else {
                 slotStatus = 'Von diesem Ort habe ich nie in Berlin gehört.';
@@ -502,9 +517,11 @@ const DE_handlers = {
             }
         }
 
-        cardInputText = Helper.writeDigits(heard_plz_district.value);
+        cardInputText =  Helper.writeDigits(heard_plz_district.value);
 
 
+        console.log(typeof cardInputText);
+        console.log(cardInputText);
 
 
         say += slotStatus;
