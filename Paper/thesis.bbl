@@ -115,12 +115,6 @@ Tobias Grossmann, Regine Oberecker, Stefan Koch, and Angela D~Friederici.
 \newblock \url{https://youtu.be/tAKbXEsZ4Iw?t=4m14s}, March 2017.
 \newblock Online Resource. Accessed on 15.04.2018.
 
-\bibitem{exist:aaron}
-{Humboldt Innovation}.
-\newblock
-  \url{http://www.existstartupgermany.com/why-berlin/testimonials/aaron-gmbh/},
-  2015.
-
 \bibitem{searchmetrics:blog}
 {Jan Grundmann, SearchMetrics}.
 \newblock Voice search im seo-check: Liest google home immer das erste
@@ -161,8 +155,10 @@ Will Knight.
 
 \bibitem{lomm:gov}
 {Malte Schwarzer, Jonas Düver, Danuta Ploch and Andreas Lommatzsch}.
-\newblock An interactive e-government question answering system, September
-  2016.
+\newblock An interactive e-government question answering system.
+\newblock
+  \url{https://www.researchgate.net/publication/308114384_An_Interactive_e-Government_Question_Answering_System},
+  September 2016.
 \newblock Online Resource. Accessed on 29.04.2018.
 
 \bibitem{forbes:govOutreach}
@@ -172,6 +168,7 @@ Will Knight.
 \newblock
   \url{https://www.forbes.com/sites/forbesagencycouncil/2017/10/02/social-media-as-a-vital-engagement-platform-for-government-outreach/#72dcbe864b29},
   October 2017.
+\newblock Online Resource. Accessed on 01.05.2018.
 
 \bibitem{fa:ir}
 {Meike Zehlike, Francesco Bonchi, Carlos Castillo, Sara Hajian, Mohamed
@@ -238,6 +235,14 @@ Laurie Sullivan.
   \url{https://www.mediapost.com/publications/article/291913/gartner-predicts-30-of-searches-without-a-screen.html},
   December 2017.
 \newblock Online Resource. Accessed on 12.2.2018.
+
+\bibitem{forbes:20bots}
+{Tomas Laurinavicius, Forbes Tech}.
+\newblock {20 Fun Facebook Messenger Bots To Play With Right Now}.
+\newblock
+  \url{https://www.forbes.com/sites/forbesagencycouncil/2017/10/02/social-media-as-a-vital-engagement-platform-for-government-outreach/#72dcbe864b29},
+  April 2017.
+\newblock Online Resource. Accessed on 02.12.2017.
 
 \bibitem{guidetochat}
 {Trushar Barot and Eytan Oren}.

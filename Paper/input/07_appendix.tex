@@ -2,7 +2,7 @@
 \label{appendices}
 %DELETEME: everything that does not fit into your work, e.g. a 5 page table that breaks the reading flow, should be placed here
 
-\todo{check bibstyle}
+\todo{check bibstyle - check all relevant docs in Lit review folder are included}
 
 \addcontentsline{toc}{section}{Product Branding Etymology}
 %excursus
@@ -40,15 +40,73 @@ More information: \url{https://stackoverflow.com/questions/42982159/differences-
 
 \section*{Documentation (Base) URLs}
 
-\todo{use a base url to avoid extensive text in footnotes with href such that a click would still redirect right\\ -kbase \\ -Alexa blogs}
-\subsection*{AWS}
+\todo{use a base url to avoid extensive text in footnotes with href such that a click would still redirect right\\ -kbase \\ -Alexa blogs\\
+\\
 AWS Glossary\\ \t{a\t{ws}}\href{www.apple.com}{\lstinline|/doing-something\#hej|}
 \url{https://docs.aws.amazon.com/general/latest/gr/glos-chap.html}
 
-\subsection*{ASK}
+}
 
-ASK Documentation\\ \t{a\t{sk}}\href{   }{\lstinline|   |}
-\url{https://developer.amazon.com/docs/custom-skills/}
+
+
+\subsection*{Amazon Web Services - \t{a\t{ws}}}
+
+
+\begin{flushleft}
+	\begin{tabularx}{\textwidth}{lX}
+
+
+
+
+AWS Glossary &
+\url{https://docs.aws.amazon.com/general/latest/gr/glos-chap.html}\\
+
+\end{tabularx}
+\end{flushleft}
+	
+
+
+\subsection*{Alexa Skills Kit - \t{a\t{sk}}}
+\begin{flushleft}
+	\begin{tabularx}{\textwidth}{l X}
+
+Documentation &
+\url{https://developer.amazon.com/docs/custom-skills/} \\
+
+
+\end{tabularx}
+\end{flushleft}
+
+\subsection*{GitHub Repositories - \t{GH}}
+
+
+\begin{flushleft}
+	\begin{tabularx}{\textwidth}{lX}
+		
+		
+A Skill Template with API Calls: & 
+\url{https://github.com/skilltemplates/api-starter-alexa}\\
+
+Node.js code &
+\url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs}\\
+
+Building Responses in Node.js & 
+\url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/wiki/Response-Building}\\
+
+
+Alexa Cookbook (maintained by Amazon Team) & 
+\url{https://github.com/alexa/alexa-cookbook/}\\
+
+Handling Responses (Multi-turn conversation) & 
+\url{https://github.com/alexa/alexa-cookbook/tree/master/handling-responses}\\
+		
+SSML Audio & 
+\url{https://github.com/alexa/alexa-cookbook/tree/0afbfcb8ddcd911e83216b4528b20f3a1628c99f/handling-responses/ssml-audio}\\
+		
+	\end{tabularx}
+\end{flushleft}
+
+
 
 %\t{a\t{sk}}\href{   }{\lstinline|   |}
 
@@ -371,7 +429,7 @@ source: \textsc{ASK Documentation} \footnote{\t{a\t{sk}}\href{https://developer.
 \textbf{Alexa Skills Kit}	&		\ref{ask:def}\\
 \textbf{Amazon Developer Console}&	\ref{ask:devconsole}\\
 
-\textbf{Application ID}		&	erklärung\\
+\textbf{Application ID}		&	required by Lambda. Skill ID in our context\\
 
 \textbf{Intent}				&		\ref{intents}\\
 \textbf{Interaction Model}	&		\ref{interactionMdl:def}, \ref{interactionModel}\\
@@ -387,7 +445,7 @@ source: \textsc{ASK Documentation} \footnote{\t{a\t{sk}}\href{https://developer.
 \textbf{Polly, Amazon Polly}&		\ref{aws:modules}\\
 \textbf{Public Service}			&	\ref{pubsvc}\\
 \textbf{Slot}				&		\ref{slots}\\
-\textbf{Skill ID}			&	erklärung\\
+\textbf{Skill ID}			&	amzn1.ask.skill.d7732837-fab2-42ff-a152-4eb0fc4ee646\\
 \textbf{Transcribe, Amazon Transcribe}	&		\ref{aws:modules}\\
 
 \textbf{Utterance}			&		\ref{utterances}\\
@@ -402,7 +460,7 @@ source: \textsc{ASK Documentation} \footnote{\t{a\t{sk}}\href{https://developer.
 
 \textbf{Bot}				&	Unless otherwise mentioned, a chatbot\\
 \textbf{Hitlist}			&	erklärung\\
-\textbf{Voice-first}		& an always-on, intelligent piece of hardware, where the primary interface is voice, both input and output.\\
+\textbf{Voice-first}		& \shortstack[l]{an always-on, intelligent piece of hardware, where the \\ primary interface is voice, both input and output.}\\
 
 %\textbf{abk}				&	erklärung\\
 %\textbf{abk}				&	erklärung\\

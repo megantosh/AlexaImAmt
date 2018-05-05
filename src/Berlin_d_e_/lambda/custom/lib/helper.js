@@ -9,28 +9,26 @@ const https = require("https");
 //const fetchUrl = require("fetch").fetchUrl;
 
 
-
-
-
 //  ===== Helper Functions partially from AWS =========================================================================
 
 exports.randomphrase = function randomPhrase(myArray) {
-    return(myArray[Math.floor(Math.random() * myArray.length)]);
+    return (myArray[Math.floor(Math.random() * myArray.length)]);
 }
 
 // returns slot resolved to an expected value if possible
-exports.resolveCanonical = function resolveCanonical(slot){
+exports.resolveCanonical = function resolveCanonical(slot) {
     try {
         var canonical = slot.resolutions.resolutionsPerAuthority[0].values[0].value.name;
-    } catch(err){
+    } catch (err) {
         console.log(err.message);
         var canonical = slot.value;
-    };
+    }
+    ;
     return canonical;
 };
 
 // used to emit :delegate to elicit or confirm Intent Slots
-exports.delegateSlotCollection = function delegateSlotCollection(){
+exports.delegateSlotCollection = function delegateSlotCollection() {
     console.log("current dialogState: " + this.event.request.dialogState);
     if (this.event.request.dialogState === "STARTED") {
         var updatedIntent = this.event.request.intent;
@@ -42,7 +40,7 @@ exports.delegateSlotCollection = function delegateSlotCollection(){
         this.emit(":delegate");
 
     } else {
-        console.log("returning: "+ JSON.stringify(this.event.request.intent));
+        console.log("returning: " + JSON.stringify(this.event.request.intent));
 
         return this.event.request.intent;
     }
@@ -51,20 +49,20 @@ exports.delegateSlotCollection = function delegateSlotCollection(){
 exports.getCustomIntents = function getCustomIntents() {
     var customIntents = [];
     for (let i = 0; i < intentsReference.length; i++) {
-        if(intentsReference[i].name.substring(0,7) != "AMAZON." && intentsReference[i].name !== "LaunchRequest" ) {
+        if (intentsReference[i].name.substring(0, 7) != "AMAZON." && intentsReference[i].name !== "LaunchRequest") {
             customIntents.push(intentsReference[i]);
         }
     }
-    return(customIntents);
+    return (customIntents);
 }
 exports.cardIntents = function cardIntents(iArray) {
-    var body = "";    for (var i = 0; i < iArray.length; i++) {
+    var body = "";
+    for (var i = 0; i < iArray.length; i++) {
         body += iArray[i].name + "\n";
         body += "  '" + iArray[i].samples[0] + "'\n";
     }
-    return(body);
+    return (body);
 }
-
 
 
 // ***********************************
@@ -98,7 +96,7 @@ exports.routeToIntent = function routeToIntent() {
 // ** Dialog Management
 // ***********************************
 
-exports.getSlotValues = function getSlotValues (filledSlots) {
+exports.getSlotValues = function getSlotValues(filledSlots) {
     //given event.request.intent.slots, a slots values object so you have
     //what synonym the person said - .synonym
     //what that resolved to - .resolved
@@ -106,40 +104,40 @@ exports.getSlotValues = function getSlotValues (filledSlots) {
     let slotValues = {};
 
     console.log('The filled slots: ' + JSON.stringify(filledSlots));
-    Object.keys(filledSlots).forEach(function(item) {
+    Object.keys(filledSlots).forEach(function (item) {
         //console.log("item in filledSlots: "+JSON.stringify(filledSlots[item]));
         var name = filledSlots[item].name;
         //console.log("name: "+name);
-        if(filledSlots[item]&&
+        if (filledSlots[item] &&
             filledSlots[item].resolutions &&
             filledSlots[item].resolutions.resolutionsPerAuthority[0] &&
             filledSlots[item].resolutions.resolutionsPerAuthority[0].status &&
-            filledSlots[item].resolutions.resolutionsPerAuthority[0].status.code ) {
+            filledSlots[item].resolutions.resolutionsPerAuthority[0].status.code) {
 
             switch (filledSlots[item].resolutions.resolutionsPerAuthority[0].status.code) {
                 case "ER_SUCCESS_MATCH":
                     slotValues[name] = {
-                        "synonym": filledSlots[item].value,
-                        "resolved": filledSlots[item].resolutions.resolutionsPerAuthority[0].values[0].value.name,
+                        "synonym"    : filledSlots[item].value,
+                        "resolved"   : filledSlots[item].resolutions.resolutionsPerAuthority[0].values[0].value.name,
                         "isValidated": true
                     };
                     break;
                 case "ER_SUCCESS_NO_MATCH":
                     slotValues[name] = {
-                        "synonym": filledSlots[item].value,
-                        "resolved": filledSlots[item].value,
-                        "isValidated":false
+                        "synonym"    : filledSlots[item].value,
+                        "resolved"   : filledSlots[item].value,
+                        "isValidated": false
                     };
                     break;
             }
         } else {
             slotValues[name] = {
-                "synonym": filledSlots[item].value,
-                "resolved": filledSlots[item].value,
+                "synonym"    : filledSlots[item].value,
+                "resolved"   : filledSlots[item].value,
                 "isValidated": false
             };
         }
-    },this);
+    }, this);
     //console.log("slot values: "+JSON.stringify(slotValues));
     return slotValues;
 }
@@ -153,7 +151,7 @@ exports.delegateSlotCollection = function delegateSlotCollection() {
     if (this.event.request.dialogState === "STARTED") {
         console.log("in STARTED");
         console.log(JSON.stringify(this.event));
-        var updatedIntent=this.event.request.intent;
+        var updatedIntent = this.event.request.intent;
         // optionally pre-fill slots: update the intent object with slot values
         // for which you have defaults, then return Dialog.Delegate with this
         // updated intent in the updatedIntent property
@@ -184,7 +182,7 @@ function disambiguateSlot() {
     let currentIntent = this.event.request.intent;
     let currentLocale = this.event.request.locale;
 
-    Object.keys(this.event.request.intent.slots).forEach(function(slotName) {
+    Object.keys(this.event.request.intent.slots).forEach(function (slotName) {
         let currentSlot = this.event.request.intent.slots[slotName];
         let slotValue = slotHasValue(this.event.request, currentSlot.name);
         if (currentSlot.confirmationStatus !== 'CONFIRMED' &&
@@ -198,7 +196,7 @@ function disambiguateSlot() {
                 // "mini" is a synonym for both "small" and "tiny" then ask "Did you
                 // want a small or tiny dog?" to get the user to tell you
                 // specifically what type mini dog (small mini or tiny mini).
-                if ( currentSlot.resolutions.resolutionsPerAuthority[0].values.length > 1) {
+                if (currentSlot.resolutions.resolutionsPerAuthority[0].values.length > 1) {
 
                     //give based on language
                     let prompt;
@@ -214,8 +212,8 @@ function disambiguateSlot() {
                     } else prompt = 'ermm ';
 
                     let size = currentSlot.resolutions.resolutionsPerAuthority[0].values.length;
-                    currentSlot.resolutions.resolutionsPerAuthority[0].values.forEach(function(element, index, arr) {
-                        prompt += ` ${(index == size -1) ? prompt_or_text : ' '} ${element.value.name}`;
+                    currentSlot.resolutions.resolutionsPerAuthority[0].values.forEach(function (element, index, arr) {
+                        prompt += ` ${(index == size - 1) ? prompt_or_text : ' '} ${element.value.name}`;
                     });
 
                     prompt += '?';
@@ -261,18 +259,11 @@ function slotHasValue(request, slotName) {
 }
 
 
-
-
 //TODO twilio SMS with link to book appointment page (CAPTCHA is in the way),
 
 //TODO parser to tell alexa which is the next free appointment...
 //this is possible with the class calendar on the website
 // siehe Note #hhibody > div:nth-child(3) > div.collapsible-body > div.calendar-table > div.row-fluid
-
-
-
-
-
 
 
 // ***********************************
@@ -281,8 +272,8 @@ function slotHasValue(request, slotName) {
 
 // make an http get request calls resolve upon completion and reject if there's an error.
 // returns a promise -
-exports.httpsGet = function httpsGet(options){
-    return new Promise(function(resolve, reject) {
+exports.httpsGet = function httpsGet(options) {
+    return new Promise(function (resolve, reject) {
         let request = https.request(options, response => {
             response.setEncoding('utf8');
             let returnData = "";
@@ -322,16 +313,15 @@ exports.httpsGet = function httpsGet(options){
 // Returns an object.
 exports.buildHttpGetOptions = function buildHttpGetOptions(params) {
     let options = {
-        hostname: "newsreel-edu.aot.tu-berlin.de",
-        path: "/solr/d115/" + params, //buildQueryString(params),
+        hostname          : "newsreel-edu.aot.tu-berlin.de",
+        path              : "/solr/d115/" + params, //buildQueryString(params),
         // port: port,
-        method: 'GET',
+        method            : 'GET',
         rejectUnauthorized: false,
-        auth: "personal-assistent:AlexaAlexa0815."
+        auth              : "personal-assistent:AlexaAlexa0815."
     };
     return options;
 }
-
 
 
 //TODO might (not) need export! - complete with petmatch params
@@ -339,7 +329,7 @@ exports.buildHttpGetOptions = function buildHttpGetOptions(params) {
 // Returns URI encoded string of parameters.
 function buildQueryString(params) {
     let paramList = '';
-    params.forEach( (paramGroup, index) => {
+    params.forEach((paramGroup, index) => {
         paramList += `${ index == 0 ? '?' : '&'}${encodeURIComponent(paramGroup[0])}=${encodeURIComponent(paramGroup[1])}`;
     });
     return paramList;
@@ -347,56 +337,164 @@ function buildQueryString(params) {
 }
 
 
+// an array to check against if a PLZ is in Berlin or not since Alexa gets the nearest answer and
+// resolves 89102 to Pankow or so!
 
+exports.listOfPLZAsDigits = ["10115", "10117", "10119", "10178", "10179", "10435", "10551", "10553", "10555", "10557",
+    "10559", "10623", "10785", "10787", "10963", "10969", "13347", "13349", "13351", "13353", "13355", "13357", "13359",
+    "13405", "13407", "13409", "10179", "10243", "10245", "10247", "10249", "10367", "10785", "10961", "10963", "10965",
+    "10967",
+    "10969", "10997", "10999", "12045", "10178", "10119", "10247", "10249", "10405", "10407", "10409", "10435", "10437",
+    "10439", "13051", "13053", "13086", "13088", "13089", "13125", "13127", "13129", "13156", "13158", "13159", "13187",
+    "13189", "10553", "10585", "10587", "10589", "10623", "10625", "10627", "10629", "10707", "10709", "10711", "10713",
+    "10715",
+    "10717", "10719", "10777", "10779", "10787", "10789", "10825", "13353", "13597", "13627", "13629", "14050", "14052",
+    "14053",
+    "14055", "14057", "14059", "14193", "14195", "14197", "14199", "13581", "13583", "13585", "13587", "13589", "13591",
+    "13593", "13595", "13597", "13599", "13627", "13629", "14052", "14089", "12157", "12161", "12163", "12165", "12167",
+    "12169", "12203", "12205", "12207", "12209", "12247", "12249", "12277", "12279", "14109", "14129", "14163", "14165",
+    "14167",
+    "14169", "14193", "14195", "14197", "14199", "10777", "10779", "10781", "10783", "10785", "10787", "10789", "10823",
+    "10825", "10827", "10829", "10965", "12099", "12101", "12103", "12105", "12107", "12109", "12157", "12159", "12161",
+    "12163", "12169", "12249", "12277", "12279", "12305", "12307", "12309", "12347", "14197", "10965", "10967", "12043",
+    "12045", "12047", "12049", "12051", "12053", "12055", "12057", "12059", "12099", "12107", "12305", "12347", "12349",
+    "12351",
+    "12353", "12355", "12357", "12359", "12435", "12437", "12439", "12459", "12487", "12489", "12524", "12526", "12527",
+    "12555", "12557", "12559", "12587", "12589", "12623", "", "12555", "12619", "12621", "12623", "12627", "12629",
+    "12679", "12681", "12683", "12685", "12687", "12689", "10315", "10317", "10318", "10319", "10365", "10367", "10369",
+    "13051", "13053", "13055", "13057", "13059", "13403", "13405", "13407", "13409", "13435", "13437", "13439", "13465",
+    "13467", "13469", "13503", "13505", "13507", "13509", "13599", "13629"];
 
+exports.listOfPLZ = ["eins null eins eins fünf", "eins null eins eins sieben", "eins null eins eins neun",
+    "eins null eins sieben acht", "eins null eins sieben neun", "eins null vier drei fünf", "eins null fünf fünf eins",
+    "eins null fünf fünf drei", "eins null fünf fünf fünf", "eins null fünf fünf sieben", "eins null fünf fünf neun",
+    "eins null sechs zwei drei", "eins null sieben acht fünf", "eins null sieben acht sieben",
+    "eins null neun sechs drei", "eins null neun sechs neun", "eins drei drei vier sieben", "eins drei drei vier neun",
+    "eins drei drei fünf eins", "eins drei drei fünf drei", "eins drei drei fünf fünf", "eins drei drei fünf sieben",
+    "eins drei drei fünf neun", "eins drei vier null fünf", "eins drei vier null sieben", "eins drei vier null neun",
+    "eins null eins sieben neun", "eins null zwei vier drei", "eins null zwei vier fünf", "eins null zwei vier sieben",
+    "eins null zwei vier neun", "eins null drei sechs sieben", "eins null sieben acht fünf",
+    "eins null neun sechs eins", "eins null neun sechs drei", "eins null neun sechs fünf",
+    "eins null neun sechs sieben", "eins null neun sechs neun", "eins null neun neun sieben",
+    "eins null neun neun neun", "eins zwei null vier fünf", "eins null eins sieben acht", "eins null eins eins neun",
+    "eins null zwei vier sieben", "eins null zwei vier neun", "eins null vier null fünf", "eins null vier null sieben",
+    "eins null vier null neun", "eins null vier drei fünf", "eins null vier drei sieben", "eins null vier drei neun",
+    "eins drei null fünf eins", "eins drei null fünf drei", "eins drei null acht sechs", "eins drei null acht acht",
+    "eins drei null acht neun", "eins drei eins zwei fünf", "eins drei eins zwei sieben", "eins drei eins zwei neun",
+    "eins drei eins fünf sechs", "eins drei eins fünf acht", "eins drei eins fünf neun", "eins drei eins acht sieben",
+    "eins drei eins acht neun", "eins null fünf fünf drei", "eins null fünf acht fünf", "eins null fünf acht sieben",
+    "eins null fünf acht neun", "eins null sechs zwei drei", "eins null sechs zwei fünf", "eins null sechs zwei sieben",
+    "eins null sechs zwei neun", "eins null sieben null sieben", "eins null sieben null neun",
+    "eins null sieben eins eins", "eins null sieben eins drei", "eins null sieben eins fünf",
+    "eins null sieben eins sieben", "eins null sieben eins neun", "eins null sieben sieben sieben",
+    "eins null sieben sieben neun", "eins null sieben acht sieben", "eins null sieben acht neun",
+    "eins null acht zwei fünf", "eins drei drei fünf drei", "eins drei fünf neun sieben", "eins drei sechs zwei sieben",
+    "eins drei sechs zwei neun", "eins vier null fünf null", "eins vier null fünf zwei", "eins vier null fünf drei",
+    "eins vier null fünf fünf", "eins vier null fünf sieben", "eins vier null fünf neun", "eins vier eins neun drei",
+    "eins vier eins neun fünf", "eins vier eins neun sieben", "eins vier eins neun neun", "eins drei fünf acht eins",
+    "eins drei fünf acht drei", "eins drei fünf acht fünf", "eins drei fünf acht sieben", "eins drei fünf acht neun",
+    "eins drei fünf neun eins", "eins drei fünf neun drei", "eins drei fünf neun fünf", "eins drei fünf neun sieben",
+    "eins drei fünf neun neun", "eins drei sechs zwei sieben", "eins drei sechs zwei neun", "eins vier null fünf zwei",
+    "eins vier null acht neun", "eins zwei eins fünf sieben", "eins zwei eins sechs eins", "eins zwei eins sechs drei",
+    "eins zwei eins sechs fünf", "eins zwei eins sechs sieben", "eins zwei eins sechs neun", "eins zwei zwei null drei",
+    "eins zwei zwei null fünf", "eins zwei zwei null sieben", "eins zwei zwei null neun", "eins zwei zwei vier sieben",
+    "eins zwei zwei vier neun", "eins zwei zwei sieben sieben", "eins zwei zwei sieben neun",
+    "eins vier eins null neun", "eins vier eins zwei neun", "eins vier eins sechs drei", "eins vier eins sechs fünf",
+    "eins vier eins sechs sieben", "eins vier eins sechs neun", "eins vier eins neun drei", "eins vier eins neun fünf",
+    "eins vier eins neun sieben", "eins vier eins neun neun", "eins null sieben sieben sieben",
+    "eins null sieben sieben neun", "eins null sieben acht eins", "eins null sieben acht drei",
+    "eins null sieben acht fünf", "eins null sieben acht sieben", "eins null sieben acht neun",
+    "eins null acht zwei drei", "eins null acht zwei fünf", "eins null acht zwei sieben", "eins null acht zwei neun",
+    "eins null neun sechs fünf", "eins zwei null neun neun", "eins zwei eins null eins", "eins zwei eins null drei",
+    "eins zwei eins null fünf", "eins zwei eins null sieben", "eins zwei eins null neun", "eins zwei eins fünf sieben",
+    "eins zwei eins fünf neun", "eins zwei eins sechs eins", "eins zwei eins sechs drei", "eins zwei eins sechs neun",
+    "eins zwei zwei vier neun", "eins zwei zwei sieben sieben", "eins zwei zwei sieben neun",
+    "eins zwei drei null fünf", "eins zwei drei null sieben", "eins zwei drei null neun", "eins zwei drei vier sieben",
+    "eins vier eins neun sieben", "eins null neun sechs fünf", "eins null neun sechs sieben",
+    "eins zwei null vier drei", "eins zwei null vier fünf", "eins zwei null vier sieben", "eins zwei null vier neun",
+    "eins zwei null fünf eins", "eins zwei null fünf drei", "eins zwei null fünf fünf", "eins zwei null fünf sieben",
+    "eins zwei null fünf neun", "eins zwei null neun neun", "eins zwei eins null sieben", "eins zwei drei null fünf",
+    "eins zwei drei vier sieben", "eins zwei drei vier neun", "eins zwei drei fünf eins", "eins zwei drei fünf drei",
+    "eins zwei drei fünf fünf", "eins zwei drei fünf sieben", "eins zwei drei fünf neun", "eins zwei vier drei fünf",
+    "eins zwei vier drei sieben", "eins zwei vier drei neun", "eins zwei vier fünf neun", "eins zwei vier acht sieben",
+    "eins zwei vier acht neun", "eins zwei fünf zwei vier", "eins zwei fünf zwei sechs", "eins zwei fünf zwei sieben",
+    "eins zwei fünf fünf fünf", "eins zwei fünf fünf sieben", "eins zwei fünf fünf neun", "eins zwei fünf acht sieben",
+    "eins zwei fünf acht neun", "eins zwei sechs zwei drei", "", "eins zwei fünf fünf fünf",
+    "eins zwei sechs eins neun", "eins zwei sechs zwei eins", "eins zwei sechs zwei drei",
+    "eins zwei sechs zwei sieben", "eins zwei sechs zwei neun", "eins zwei sechs sieben neun",
+    "eins zwei sechs acht eins", "eins zwei sechs acht drei", "eins zwei sechs acht fünf",
+    "eins zwei sechs acht sieben", "eins zwei sechs acht neun", "eins null drei eins fünf",
+    "eins null drei eins sieben", "eins null drei eins acht", "eins null drei eins neun", "eins null drei sechs fünf",
+    "eins null drei sechs sieben", "eins null drei sechs neun", "eins drei null fünf eins", "eins drei null fünf drei",
+    "eins drei null fünf fünf", "eins drei null fünf sieben", "eins drei null fünf neun", "eins drei vier null drei",
+    "eins drei vier null fünf", "eins drei vier null sieben", "eins drei vier null neun", "eins drei vier drei fünf",
+    "eins drei vier drei sieben", "eins drei vier drei neun", "eins drei vier sechs fünf",
+    "eins drei vier sechs sieben", "eins drei vier sechs neun", "eins drei fünf null drei", "eins drei fünf null fünf",
+    "eins drei fünf null sieben", "eins drei fünf null neun", "eins drei fünf neun neun", "eins drei sechs zwei neun"];
 
+exports.listOfAreas = ["Oberschöneweide", "müggelheim", "johannisthal", "friedrichshagen", "Baumschulenweg",
+    "Altglienicke", "schmöckwitz", "plänterwald", "niederschöneweide", "grünau", "bohnsdorf", "alt-treptow",
+    "adlershof", "Schöneweide", "köpenick", "Friedenau", "Mariendorf", "Marienfelde", "Lichtenrade", "Schöneberg",
+    "Tempelhof", "wannsee", "nikolassee", "lichterfelde", "dahlem", "Zehlendorf", "Steglitz", "Lankwitz",
+    "wilhelmstadt", "staaken", "siemensstadt", "haselhorst", "gatow", "Falkenhagener Feld", "Wasserstadt", "Kladow",
+    "waldmanslust", "lübars", "konradshöhe", "frohnau", "borgiswalde", "wittenau", "Heiligensee", "Märkisches Viertel",
+    "Tegel", "Hermsdorf", "Reinickendorf Ost", "malchow", "stadtrandsiedlung malchow", "heinersdorf", "blankenburg",
+    "wilhelmsruh", "rosenthal", "niederschönhausen", "blankenfelde", "alt-pankow", "französisch buchholz", "buchholz",
+    "Buch", "Karow", "Weißensee", "Prenzlauer Berg", "britz", "nord-neukölln", "gropiusstadt", "Buckow",
+    "Blaschkoallee", "Sonnenallee", "Zwickauer Damm", "Alt Buckow", "Rudow", "hansaviertel", "moabit", "gesundbrunnen",
+    "Wedding", "Tiergarten", "hellersdorf", "marzahn", "mahlsdorf", "Marzahner Promenade", "Helle Mitte", "Biesdorf",
+    "Malchow", "Falkenberg", "wartenberg", "neu hohen schönhausen", "hsh", "alt hohen schön Hausen", "fennpfuhl",
+    "alt-lichtenberg", "frierdrichsfelde", "karlshorst", "rummelsburg", "Zentrum Ikraus", "Am Obersee", "Käthe Kern",
+    "Anton Saefkow", "Große Leege ", "Alt Hohen Schön Hausen", "Tierparkcenter", "Normannen", "Egon - Erwin Kirsch ",
+    "Neu Hohen Schön Hausen", "friedrichshain", "S. O. sechsunddreißig", "boxhagen", "boxi", "stralau",
+    "Schlesische Straße", "Frankfurter Allee", "Kreuzberg", "Yorkstraße", "Charlottenburg", "Charlottenburg-Nord",
+    "Grunewald", "Halensee", "Schmargendorf", "Westend", "Wilmersdorf", "Halemweg", "Heerstraße", "Hohenzollerndamm",
+    "Wilmersdorfer"];
 
-
-
-
-
-
+exports.listOfComboDistricts = ["Friedrichshain-Kreuzberg", "Charlottenburg-Wilmersdorf", "Lichtenberg",
+    "Marzahn-Hellersdorf", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz-Zehlendorf",
+    "Tempelhof-Schöneberg", "Treptow-Köpenick"];
 
 
 // Language Model  for reference
 var interactionModel = [
     {
-        "name": "AMAZON.CancelIntent",
+        "name"   : "AMAZON.CancelIntent",
         "samples": []
     },
     {
-        "name": "AMAZON.HelpIntent",
+        "name"   : "AMAZON.HelpIntent",
         "samples": []
     },
     {
-        "name": "AMAZON.StopIntent",
+        "name"   : "AMAZON.StopIntent",
         "samples": []
     },
     {
-        "name": "DL_AufenthaltstitelIntent",
-        "slots": [],
+        "name"   : "DL_AufenthaltstitelIntent",
+        "slots"  : [],
         "samples": []
     },
     {
-        "name": "BafoegIntent",
-        "slots": [],
+        "name"   : "BafoegIntent",
+        "slots"  : [],
         "samples": []
     },
     {
-        "name": "ApprobationIntent",
-        "slots": [],
+        "name"   : "ApprobationIntent",
+        "slots"  : [],
         "samples": []
     },
     {
-        "name": "DL_generalIntent",
-        "slots": [
+        "name"   : "DL_generalIntent",
+        "slots"  : [
             {
                 "name": "Dienstleistung",
                 "type": "EN_LIST_OF_PUBLIC_SVCS_BLN"
             },
             {
-                "name": "prerequisites",
-                "type": "EN_YES_NO_FLAG",
+                "name"   : "prerequisites",
+                "type"   : "EN_YES_NO_FLAG",
                 "samples": [
                     "{prerequisites} please"
                 ]
@@ -409,13 +507,13 @@ var interactionModel = [
         ]
     },
     {
-        "name": "ST_BerlinQuestions",
-        "slots": [],
+        "name"   : "ST_BerlinQuestions",
+        "slots"  : [],
         "samples": []
     },
     {
-        "name": "ST_FutureTODOs",
-        "slots": [
+        "name"   : "ST_FutureTODOs",
+        "slots"  : [
             {
                 "name": "DogName",
                 "type": "AMAZON.US_FIRST_NAME"
@@ -445,45 +543,44 @@ var interactionModel = [
 ];
 
 
-
 var intentsReference = [
     {
-        "name": "AMAZON.CancelIntent",
+        "name"   : "AMAZON.CancelIntent",
         "samples": []
     },
     {
-        "name": "AMAZON.HelpIntent",
+        "name"   : "AMAZON.HelpIntent",
         "samples": []
     },
     {
-        "name": "AMAZON.StopIntent",
+        "name"   : "AMAZON.StopIntent",
         "samples": []
     },
     {
-        "name": "DL_AufenthaltstitelIntent",
-        "slots": [],
+        "name"   : "DL_AufenthaltstitelIntent",
+        "slots"  : [],
         "samples": []
     },
     {
-        "name": "BafoegIntent",
-        "slots": [],
+        "name"   : "BafoegIntent",
+        "slots"  : [],
         "samples": []
     },
     {
-        "name": "ApprobationIntent",
-        "slots": [],
+        "name"   : "ApprobationIntent",
+        "slots"  : [],
         "samples": []
     },
     {
-        "name": "DL_generalIntent",
-        "slots": [
+        "name"   : "DL_generalIntent",
+        "slots"  : [
             {
                 "name": "Dienstleistung",
                 "type": "EN_LIST_OF_PUBLIC_SVCS_BLN"
             },
             {
-                "name": "prerequisites",
-                "type": "EN_YES_NO_FLAG",
+                "name"   : "prerequisites",
+                "type"   : "EN_YES_NO_FLAG",
                 "samples": [
                     "{prerequisites} please"
                 ]
@@ -496,13 +593,13 @@ var intentsReference = [
         ]
     },
     {
-        "name": "ST_BerlinQuestions",
-        "slots": [],
+        "name"   : "ST_BerlinQuestions",
+        "slots"  : [],
         "samples": []
     },
     {
-        "name": "ST_FutureTODOs",
-        "slots": [
+        "name"   : "ST_FutureTODOs",
+        "slots"  : [
             {
                 "name": "DogName",
                 "type": "AMAZON.US_FIRST_NAME"
