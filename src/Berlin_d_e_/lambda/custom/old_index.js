@@ -1,4 +1,4 @@
-// Author: Mohamed Megahed
+{// Author: Mohamed Megahed
 
 //Step-by-step recommendation:
 //start with interaction model
@@ -6,22 +6,21 @@
 //then fulfill functions
 
 
+    const Helper = require("./lib/helper.js");
+    const Speech = require("./lib/speeches.js");
+    const Card = require("./lib/cards.js");
 
-const Helper = require("./lib/helper.js");
-const Speech = require("./lib/speeches.js");
-const Card = require("./lib/cards.js");
-
-const http = require('http');
-const https = require('https');
-const url = require("url");
-const Alexa = require("alexa-sdk");
-const AWS = require("aws-sdk");
+    const http = require('http');
+    const https = require('https');
+    const url = require("url");
+    const Alexa = require("alexa-sdk");
+    const AWS = require("aws-sdk");
 
 //replace with respective Skill ID from dev console (OPTIONAL).
-const APP_ID = 'amzn1.ask.skill.d7732837-fab2-42ff-a152-4eb0fc4ee646';
+    const APP_ID = 'amzn1.ask.skill.d7732837-fab2-42ff-a152-4eb0fc4ee646';
 //force use Ireland Server (at the time of dev, this was the closes
-AWS.config.update({region: "eu-west-1"});
-
+    AWS.config.update({region: "eu-west-1"});
+}
 const hamada= "http://newsreel-edu.aot.tu-berlin.de/solr/d115/select?q=personalausweis&wt=json&indent=true";
 
 
@@ -121,7 +120,7 @@ const DE_handlers = {
 
 
 
-    https://www.berlin.de/lageso/gesundheit/berufe-im-gesundheitswesen/akademisch/
+    // https://www.berlin.de/lageso/gesundheit/berufe-im-gesundheitswesen/akademisch/
     'DL_Approbation_Intent': function () {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported with a device
@@ -148,6 +147,13 @@ const DE_handlers = {
 
         this.emit(':responseReady');
     },
+
+
+
+
+
+
+
 
     // Anything else like Perso, etc. Check DE_LIST_OF_PUB_SVCs
     'DL_GeneralIntent': function () {
@@ -184,8 +190,6 @@ const DE_handlers = {
     },
     //This intent deals with D115 services No:
     //
-    //TODO ssml flüstern oder so
-    //https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html
 
     //TODO with ifElse forward to right intent if certain slots are fulfilled
     // a handler (like launchrequest) forwards with :

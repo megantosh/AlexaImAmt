@@ -111,6 +111,8 @@ const DE_handlers = {
         this.response
             .speak(Speech.de.INTRO_UNHANDLED_TEXT)
             .listen(Helper.randomphrase(Speech.de.INTRO_UNHANDLED_TEXT));
+        console.log("exited unhandledReq");
+
     },
 
     'AMAZON.CancelIntent': function () {
@@ -119,6 +121,8 @@ const DE_handlers = {
             .speak(Helper.randomphrase(Speech.de.INTRO_STOP_TEXT));
 
         this.emit(':responseReady');
+        console.log("exited cancelIntent");
+
     },
 
     //TODO
@@ -135,9 +139,11 @@ const DE_handlers = {
         this.response
             .speak(say)
             .listen(reprompt)
-            .cardRenderer('Themengruppen', Helper.cardIntents(CustomIntents)); // , welcomeCardImg
+            .cardRenderer('Themengruppen', Helper.cardIntents(CustomIntents));  // , Card.welcomeCardImg
 
         this.emit(':responseReady');
+        console.log("exited helpIntent");
+
     },
     'AMAZON.StopIntent'         : function () {
 
@@ -146,15 +152,18 @@ const DE_handlers = {
             .speak(say);
 
         this.emit(':responseReady');
+        console.log("exited stopIntent");
+
     },
 
     //This is the main intent our skill revolves around
     //To se what public services it handles, check "DE_PublicSvcs_Berlin" in interaction model
     'DL_General_Intent'         : function () {
         // delegate to Alexa to collect all the required slots
-        let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported
-                                            // with a device
-        let filledSlots = delegateSlotCollection.call(this, isTestingWithSimulator);
+
+        //autofill slots when using simulator, dialog management is only supportedwith a device
+        let isTestingWithSimulator = false;
+        let filledSlots = Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -167,16 +176,66 @@ const DE_handlers = {
         console.log(JSON.stringify(slotValues));
 
 
-        let speechOutput = 'You have filled 2 required slots. ' +
-            'Dienstleistung resolved to,  ' + slotValues.Dienstleistung.resolved + '. ' +
-            'prerequisites_flag resolved to,  ' + slotValues.prerequisites_flag.resolved + '. ';
 
-        console.log("Speech output: ", speechOutput);
-        this.response.speak(speechOutput);
-        this.emit(':responseReady');
+//TODO you want to change the parameter to what it has been resolved
 
-        this.emit(':responseReady');
+        // if(slotValues.Dienstleistung.resolved == 'Personalausweis beantragen'){
+        console.log(slotValues.Dienstleistung.resolved);
+
+        Helper.httpsGet(Helper.buildHttpGetOptions("select?q=personalausweis&wt=json&indent=true"))
+            .then(
+                response => {
+                    console.log(" RESULTS: ", JSON.stringify(response));
+
+                    let pubSvcName = JSON.stringify(response.response.docs[0].d115Name);
+                    console.log('pubSvcName: ' + pubSvcName);
+                    let pubSvcInfo = JSON.stringify(response.response.docs[0].d115Description);
+                    console.log('pubSvcInfo: ' + pubSvcInfo);
+
+                    //TODO you want to do all the replace and cleaning here
+
+                    // if( response.response.numFound > 0 ) {
+
+                        this.response.speak('Dienstname: '+ pubSvcName )//+ 'Beschreibung: ' + pubSvcInfo);
+                    // } else {
+                    //     this.response.speak("I'm sorry I could not find a match for a "
+                    //         + " dog");
+                    // }
+
+                    console.log("response: ", response);
+
+                }
+            ).catch( error => {
+            console.log(error);
+            this.response.speak("I'm really sorry. I'm unable to access part of my memory. Please try again later.");
+            // Part 3: Extra Credit 3: save all the slots and create an
+            // utterance so the user can pick up where they left off
+            // HINT 1: You can use saveValue to save the slot values.
+            // HINT 2: You can automate the recovery the next time the user
+            // invokes your skill, you can check if there was an error and skip
+            // right to the look up.
+
+        }).then(() => {
+                // after we get a result, have Alexa speak.
+                this.emit(':responseReady');
+            }
+        );
+    // }
     },
+
+
+
+
+    //                 let speechOutput = 'You have filled 2 required slots. ' +
+    //         'Dienstleistung resolved to,  ' + slotValues.Dienstleistung.resolved + '. ' +
+    //         'prerequisites_flag resolved to,  ' + slotValues.prerequisites_flag.resolved + '. ';
+    //
+    //     console.log("Speech output: ", speechOutput);
+    //     this.response.speak(speechOutput);
+    //     this.emit(':responseReady');
+    //
+    //     this.emit(':responseReady');
+    // },
 
 
     // a group of intents related to becoming a certified doctor in Berlin
@@ -198,7 +257,7 @@ const DE_handlers = {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported
                                             // with a device
-        let filledSlots = delegateSlotCollection.call(this, isTestingWithSimulator);
+        let filledSlots = Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -228,7 +287,7 @@ const DE_handlers = {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported
                                             // with a device
-        let filledSlots = delegateSlotCollection.call(this, isTestingWithSimulator);
+        let filledSlots = Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -258,7 +317,7 @@ const DE_handlers = {
         // delegate to Alexa to collect all the required slots
         let isTestingWithSimulator = false; //autofill slots when using simulator, dialog management is only supported
                                             // with a device
-        let filledSlots = delegateSlotCollection.call(this, isTestingWithSimulator);
+        let filledSlots = Helper.delegateSlotCollection.call(this, isTestingWithSimulator);
 
         if (!filledSlots) {
             return;
@@ -281,6 +340,8 @@ const DE_handlers = {
 
         this.emit(':responseReady');
     },
+
+    //TODO
     'LOC_General_Intent'        : function () {
         let say = 'Hello from LOC_General_Intent. ';
 
@@ -292,7 +353,7 @@ const DE_handlers = {
             const office_type = this.event.request.intent.slots.office_type;
             slotStatus += ' slot office_type was heard as ' + office_type.value + '. ';
 
-            resolvedSlot = resolveCanonical(office_type);
+            resolvedSlot = Helper.resolveCanonical(office_type);
 
             if (resolvedSlot != office_type.value) {
                 slotStatus += ' which resolved to ' + resolvedSlot;
@@ -306,7 +367,7 @@ const DE_handlers = {
             const office_name = this.event.request.intent.slots.office_name;
             slotStatus += ' slot office_name was heard as ' + office_name.value + '. ';
 
-            resolvedSlot = resolveCanonical(office_name);
+            resolvedSlot = Helper.resolveCanonical(office_name);
 
             if (resolvedSlot != office_name.value) {
                 slotStatus += ' which resolved to ' + resolvedSlot;
@@ -320,7 +381,7 @@ const DE_handlers = {
             const district_single_name = this.event.request.intent.slots.district_single_name;
             slotStatus += ' slot district_single_name was heard as ' + district_single_name.value + '. ';
 
-            resolvedSlot = resolveCanonical(district_single_name);
+            resolvedSlot = Helper.resolveCanonical(district_single_name);
 
             if (resolvedSlot != district_single_name.value) {
                 slotStatus += ' which resolved to ' + resolvedSlot;
@@ -334,7 +395,7 @@ const DE_handlers = {
             const district_combo_name = this.event.request.intent.slots.district_combo_name;
             slotStatus += ' slot district_combo_name was heard as ' + district_combo_name.value + '. ';
 
-            resolvedSlot = resolveCanonical(district_combo_name);
+            resolvedSlot = Helper.resolveCanonical(district_combo_name);
 
             if (resolvedSlot != district_combo_name.value) {
                 slotStatus += ' which resolved to ' + resolvedSlot;
@@ -348,7 +409,7 @@ const DE_handlers = {
             const dienstleistung = this.event.request.intent.slots.dienstleistung;
             slotStatus += ' slot dienstleistung was heard as ' + dienstleistung.value + '. ';
 
-            resolvedSlot = resolveCanonical(dienstleistung);
+            resolvedSlot = Helper.resolveCanonical(dienstleistung);
 
             if (resolvedSlot != dienstleistung.value) {
                 slotStatus += ' which resolved to ' + resolvedSlot;
@@ -362,7 +423,7 @@ const DE_handlers = {
             const telefonnummer = this.event.request.intent.slots.telefonnummer;
             slotStatus += ' slot telefonnummer was heard as ' + telefonnummer.value + '. ';
 
-            resolvedSlot = resolveCanonical(telefonnummer);
+            resolvedSlot = Helper.resolveCanonical(telefonnummer);
 
             if (resolvedSlot != telefonnummer.value) {
                 slotStatus += ' which resolved to ' + resolvedSlot;
@@ -382,6 +443,7 @@ const DE_handlers = {
 
         this.emit(':responseReady');
     },
+
     'LOC_IsSvcAvlbl_Intent'     : function () {
         let say = 'Hello from LOC_IsSvcAvlbl_Intent. ';
 
@@ -393,7 +455,7 @@ const DE_handlers = {
             const dienstleistung = this.event.request.intent.slots.dienstleistung;
             slotStatus += ' slot dienstleistung was heard as ' + dienstleistung.value + '. ';
 
-            resolvedSlot = resolveCanonical(dienstleistung);
+            resolvedSlot = Helper.resolveCanonical(dienstleistung);
 
             if (resolvedSlot != dienstleistung.value) {
                 slotStatus += ' which resolved to ' + resolvedSlot;
@@ -407,7 +469,7 @@ const DE_handlers = {
             const officeType = this.event.request.intent.slots.officeType;
             slotStatus += ' slot officeType was heard as ' + officeType.value + '. ';
 
-            resolvedSlot = resolveCanonical(officeType);
+            resolvedSlot = Helper.resolveCanonical(officeType);
 
             if (resolvedSlot != officeType.value) {
                 slotStatus += ' which resolved to ' + resolvedSlot;
@@ -421,7 +483,7 @@ const DE_handlers = {
             const district = this.event.request.intent.slots.district;
             slotStatus += ' slot district was heard as ' + district.value + '. ';
 
-            resolvedSlot = resolveCanonical(district);
+            resolvedSlot = Helper.resolveCanonical(district);
 
             if (resolvedSlot != district.value) {
                 slotStatus += ' which resolved to ' + resolvedSlot;
@@ -435,7 +497,7 @@ const DE_handlers = {
             const onlineAntrag = this.event.request.intent.slots.onlineAntrag;
             slotStatus += ' slot onlineAntrag was heard as ' + onlineAntrag.value + '. ';
 
-            resolvedSlot = resolveCanonical(onlineAntrag);
+            resolvedSlot = Helper.resolveCanonical(onlineAntrag);
 
             if (resolvedSlot != onlineAntrag.value) {
                 slotStatus += ' which resolved to ' + resolvedSlot;
@@ -457,6 +519,7 @@ const DE_handlers = {
     },
 
     //Find a Berlin Postleitzahl (Postal Code) and tell to which district mayorship it belongs to
+    //Ask "Wo ist Kreuzberg, 10 5 8 7, Lichtenberg, 1 0 9 9 9 "
     'LOC_WhereIsAreaOrPLZ_Intent': function () {
         console.log('Hello from LOC_Where Is Area Or PostLeitZahl_Intent. ');
         let say = '';
@@ -473,7 +536,7 @@ const DE_handlers = {
         if (this.event.request.intent.slots.plz_district.value) {
             heard_plz_district = this.event.request.intent.slots.plz_district;
             slotStatus += heard_plz_district.value;
-            resolvedSlot = resolveCanonical(heard_plz_district);
+            resolvedSlot = Helper.resolveCanonical(heard_plz_district);
 
             console.log('heard: ' + heard_plz_district.value);
             console.log('canonical: ' + resolvedSlot);
@@ -508,7 +571,7 @@ const DE_handlers = {
                         &&
                         (Helper.listOfComboDistrictsNoHyphens.includes(heard_plz_district.value.toLowerCase()))
                     ) {
-                        slotStatus += ' ist ein Bezirksamt Berlins';
+                        slotStatus += ' ist einer der zwölf Bezirksämter Berlins';
                         verifiedSlot = 'Bezirksamt';
                     } else {
                         slotStatus += ' ist in Bezirksamt ' + resolvedSlot;
@@ -516,7 +579,7 @@ const DE_handlers = {
                 }
             } else {
                 slotStatus = 'Von diesem Ort habe ich nie in Berlin gehört.';
-                verifiedSlot = 'hier bestimmt nüscht!'
+                verifiedSlot = 'In der Bundeshauptstadt bestimmt nüscht!'
             }
         }
 
@@ -559,6 +622,8 @@ const DE_handlers = {
 
         this.emit(':responseReady');
     },
+
+
     'ST_BerlinStats_Intent'      : function () {
         let say = 'Hello from ST_BerlinStats_Intent. ';
 
@@ -570,7 +635,7 @@ const DE_handlers = {
             const statistic = this.event.request.intent.slots.statistic;
             slotStatus += ' slot statistic was heard as ' + statistic.value + '. ';
 
-            resolvedSlot = resolveCanonical(statistic);
+            resolvedSlot = Helper.resolveCanonical(statistic);
 
             if (resolvedSlot != statistic.value) {
                 slotStatus += ' which resolved to ' + resolvedSlot;
@@ -601,7 +666,7 @@ const DE_handlers = {
             const smalltalk = this.event.request.intent.slots.smalltalk;
             slotStatus += ' slot smalltalk was heard as ' + smalltalk.value + '. ';
 
-            resolvedSlot = resolveCanonical(smalltalk);
+            resolvedSlot = Helper.resolveCanonical(smalltalk);
 
             if (resolvedSlot != smalltalk.value) {
                 slotStatus += ' which resolved to ' + resolvedSlot;
@@ -625,47 +690,6 @@ const DE_handlers = {
 
 //  ------ Helper Functions -----------------------------------------------
 
-function randomPhrase(myArray) {
-    return (myArray[Math.floor(Math.random() * myArray.length)]);
-}
-
-// returns slot resolved to an expected value if possible
-function resolveCanonical(slot) {
-    try {
-        var canonical = slot.resolutions.resolutionsPerAuthority[0].values[0].value.name;
-    } catch (err) {
-        console.log(err.message);
-        var canonical = slot.value;
-    }
-    return canonical;
-}
-
-// used to emit :delegate to elicit or confirm Intent Slots
-function delegateSlotCollection() {
-    console.log("current dialogState: " + this.event.request.dialogState);
-    if (this.event.request.dialogState === "STARTED") {
-        var updatedIntent = this.event.request.intent;
-
-        this.emit(":delegate");
-
-    } else if (this.event.request.dialogState !== "COMPLETED") {
-
-        this.emit(":delegate");
-
-    } else {
-        console.log("returning: " + JSON.stringify(this.event.request.intent));
-
-        return this.event.request.intent;
-    }
-}
-
-
-
-
-const welcomeCardImg = {
-    smallImageUrl: "https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/alexa-devs-skill/cards/skill-builder-720x480._TTH_.png",
-    largeImageUrl: "https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/alexa-devs-skill/cards/skill-builder-1200x800._TTH_.png"
-};
 
 
 // ***********************************
@@ -745,39 +769,39 @@ function getSlotValues(filledSlots) {
     return slotValues;
 }
 
-// This function delegates multi-turn dialogs to Alexa.
-// For more information about dialog directives see the link below.
-// https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html
-function delegateSlotCollection() {
-    console.log("in delegateSlotCollection");
-    console.log("current dialogState: " + this.event.request.dialogState);
-
-    if (this.event.request.dialogState === "STARTED") {
-        console.log("in STARTED");
-        console.log(JSON.stringify(this.event));
-        var updatedIntent = this.event.request.intent;
-        // optionally pre-fill slots: update the intent object with slot values
-        // for which you have defaults, then return Dialog.Delegate with this
-        // updated intent in the updatedIntent property
-
-        disambiguateSlot.call(this);
-        console.log("disambiguated: " + JSON.stringify(this.event));
-        this.emit(":delegate", updatedIntent);
-    } else if (this.event.request.dialogState !== "COMPLETED") {
-        console.log("in not completed");
-        //console.log(JSON.stringify(this.event));
-
-        disambiguateSlot.call(this);
-        this.emit(":delegate", updatedIntent);
-    } else {
-        console.log("in completed");
-        //console.log("returning: "+ JSON.stringify(this.event.request.intent));
-        // Dialog is now complete and all required slots should be filled,
-        // so call your normal intent handler.
-        return this.event.request.intent.slots;
-    }
-    return null;
-}
+// // This function delegates multi-turn dialogs to Alexa.
+// // For more information about dialog directives see the link below.
+// // https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html
+// function delegateSlotCollection() {
+//     console.log("in delegateSlotCollection");
+//     console.log("current dialogState: " + this.event.request.dialogState);
+//
+//     if (this.event.request.dialogState === "STARTED") {
+//         console.log("in dialog STARTED");
+//         console.log(JSON.stringify(this.event));
+//         var updatedIntent = this.event.request.intent;
+//         // optionally pre-fill slots: update the intent object with slot values
+//         // for which you have defaults, then return Dialog.Delegate with this
+//         // updated intent in the updatedIntent property
+//
+//         disambiguateSlot.call(this);
+//         console.log("disambiguated: " + JSON.stringify(this.event));
+//         this.emit(":delegate", updatedIntent);
+//     } else if (this.event.request.dialogState !== "COMPLETED") {
+//         console.log("in dialog not completed");
+//         //console.log(JSON.stringify(this.event));
+//
+//         disambiguateSlot.call(this);
+//         this.emit(":delegate", updatedIntent);
+//     } else {
+//         console.log("in dialog completed");
+//         //console.log("returning: "+ JSON.stringify(this.event.request.intent));
+//         // Dialog is now complete and all required slots should be filled,
+//         // so call your normal intent handler.
+//         return this.event.request.intent.slots;
+//     }
+//     return null;
+// }
 
 // If the user said a synonym that maps to more than one value, we need to ask
 // the user for clarification. Disambiguate slot will loop through all slots and
@@ -850,6 +874,17 @@ function slotHasValue(request, slotName) {
 }
 
 // End Skill Code
+
+
+
+// ------ Next Steps -----------------------------------------------
+
+
+//TODO: Make Alexa ask for help only the first few times
+//TODO use resolveMulti to get when an Ort s in two Bezirksämter
+
+
+
 
 
 

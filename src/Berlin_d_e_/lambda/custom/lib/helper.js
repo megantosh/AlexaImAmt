@@ -46,13 +46,14 @@ exports.randomphrase = function randomPhrase(myArray) {
 
 // returns slot resolved to first expected value if possible (i.e. best match)
 exports.resolveCanonical = function resolveCanonical(slot) {
+    let canonical;
     try {
         //TODO changed from var!
-        console.log('canonical vorsicht');
-        let canonical = slot.resolutions.resolutionsPerAuthority[0].values[0].value.name;
+        console.log('resolving canonical value - chgd frm var2let');
+        canonical = slot.resolutions.resolutionsPerAuthority[0].values[0].value.name;
     } catch (err) {
         console.log(err.message);
-        let canonical = slot.value;
+        canonical = slot.value;
     }
     return canonical;
 };
@@ -92,6 +93,11 @@ exports.delegateSlotCollection = function delegateSlotCollection() {
         return this.event.request.intent;
     }
 }
+
+
+
+
+
 
 
 //return a list of defined custom intents in the model based on user's locale
@@ -206,7 +212,6 @@ exports.writeDigits = function writeDigits(inputText, locale){
     console.log(outputDigits);
     return outputDigits.toUpperCase();
 }
-
 
 
 exports.coatOfArmsSelector = function (resolved) {
