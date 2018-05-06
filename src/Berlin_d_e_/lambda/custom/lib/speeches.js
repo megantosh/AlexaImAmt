@@ -8,7 +8,7 @@ module.exports = {
 
 
     //do not use "Leider ist etwas schief gelaufen" - reserved for wifi drops
-
+    //Phoneme: pɪˈkɑːn
 //****************************************************************
 // Defaults
 //****************************************************************
@@ -34,7 +34,7 @@ module.exports = {
             "The skill did not quite understand what you wanted.  Do you want to try something else? "
             ]
             ,
-            INTRO_STOP_TEXT: ['Tschü','ciao','Tschüss',' '],
+            INTRO_STOP_TEXT: ['Goodbye', 'Have a good one!'],
             INTRO_CANCEL_TEXT: [
                 "always at your service.",
                 "I'll try to get better next time"
@@ -44,24 +44,27 @@ module.exports = {
     'de':
         {
             INTRO_GREETING_TEXT: [
-                'Ich kann dir mit den zahlreichen Dienstleistungen der Stadt Berlin helfen! ' +
-                'worüber möchtest du dich informieren?',
+                'Ich kann Ihnen mit den zahlreichen Dienstleistungen der Stadt Berlin helfen! ' +
+                'worüber möchten Sie sich informieren?',
                 //'Über welche Dienstleistung möchtest du dich informieren?',
                 //'Möchtest Du dich über Öffnungszeiten oder eine Dienstleistung informieren?',
-                'Willkommen in dem Hauptstadtportal. Was kann ich für dich tun?'
+                'Willkommen in dem Hauptstadtportal. Was kann ich für Sie tun?'
             ],
-            INTRO_HELP_TEXT: ["Du kannst mich nach einer Dienstleistung fragen, die du zum Beispiel im Bürgeramt" +
-            " erledigen würdest. Probiere mal 'Anmeldung einer Wohnung' oder 'Ich möchte eine Wohnung anmelden.",
-            'Frag mich nach einem Ort oder Postleitzahl in Berlin und ich verrate dir, wo das ist'
+            INTRO_HELP_TEXT: ["Sie können mich nach einer Dienstleistung fragen, die Sie zum Beispiel im Bürgeramt" +
+            " erledigen würdest. Versuchen Sie mal 'Anmeldung einer Wohnung' oder 'Ich möchte eine Wohnung anmelden.",
+            'Fragen Sie mich nach einem Ort oder einer Postleitzahl in Berlin und ich verrate Ihnen, wo das ist'
             ],
 
             INTRO_UNHANDLED_TEXT: [
-                "Sorry, das habe ich nicht verstanden. Probiere mal: 'alexa, wann hat das Bürgeramt Venus auf?'" +
-                " oder 'Alexa, frag Berlin D. E. wann hat das Bürgeramt in der Nähe auf heute'.'",
+                "Sorry, das habe ich nicht verstanden. " +
+                // "Probieren Sie mal: " +
+                // "'alexa, wann hat das Bürgeramt Venus auf?'" +
+                // " oder 'Alexa, frag Berlin D. E. wann hat das Bürgeramt in der Nähe auf heute'.'",
                 'Pardon, das habe ich nicht richtig mitbekommen.'
             ],
-            INTRO_STOP_TEXT: '',
-            INTRO_CANCEL_TEXT: 'ich bin weg',
+            INTRO_STOP_TEXT: ["Haben Sie sonst noch nen Wunsch?",
+                "sonst noch <phoneme alphabet='ipa'  ph='n'>n</phoneme> Wunsch?"],
+            INTRO_CANCEL_TEXT: ['Ciao','Tschü','Schönen Tag Ihnen!', "Wiederseh'n!"],
             INTRO_WIP_TEXT: [
                 //TODO - change before submission
                 'Skill wird gerade entwickelt.',

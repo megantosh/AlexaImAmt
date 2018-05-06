@@ -33,7 +33,7 @@
           ]
         },
         {
-          "name": "DL_General_Intent",
+          "name": "DL_General_Intent_Allgemeine_Fragen",
           "slots": [
             {
               "name": "Dienstleistung",
@@ -83,18 +83,7 @@
             }
           ],
           "samples": [
-            "ich brauche die {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich brauche die {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich brauche die {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich brauche die {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich brauche die {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich brauche die {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich brauche die {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich brauche die {Dienstleistung}  {description_flag} abgeben",
-            "ich brauche die {Dienstleistung}  {description_flag} anmelden",
-            "ich brauche die {Dienstleistung}  {description_flag} beantragen",
-            "ich brauche die {Dienstleistung}  {description_flag} bekommen",
-            "ich brauche die {Dienstleistung}  {description_flag} erhalten",
+
             "ich brauche die {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich brauche die {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich brauche die {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -155,18 +144,7 @@
             "ich brauche die {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich brauche die {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich brauche die {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich brauche das {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich brauche das {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich brauche das {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich brauche das {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich brauche das {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich brauche das {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich brauche das {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich brauche das {Dienstleistung}  {description_flag} abgeben",
-            "ich brauche das {Dienstleistung}  {description_flag} anmelden",
-            "ich brauche das {Dienstleistung}  {description_flag} beantragen",
-            "ich brauche das {Dienstleistung}  {description_flag} bekommen",
-            "ich brauche das {Dienstleistung}  {description_flag} erhalten",
+
             "ich brauche das {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich brauche das {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich brauche das {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -227,18 +205,7 @@
             "ich brauche das {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich brauche das {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich brauche das {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich brauche den {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich brauche den {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich brauche den {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich brauche den {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich brauche den {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich brauche den {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich brauche den {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich brauche den {Dienstleistung}  {description_flag} abgeben",
-            "ich brauche den {Dienstleistung}  {description_flag} anmelden",
-            "ich brauche den {Dienstleistung}  {description_flag} beantragen",
-            "ich brauche den {Dienstleistung}  {description_flag} bekommen",
-            "ich brauche den {Dienstleistung}  {description_flag} erhalten",
+
             "ich brauche den {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich brauche den {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich brauche den {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -299,18 +266,7 @@
             "ich brauche den {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich brauche den {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich brauche den {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich brauche ein {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich brauche ein {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich brauche ein {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich brauche ein {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich brauche ein {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich brauche ein {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich brauche ein {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich brauche ein {Dienstleistung}  {description_flag} abgeben",
-            "ich brauche ein {Dienstleistung}  {description_flag} anmelden",
-            "ich brauche ein {Dienstleistung}  {description_flag} beantragen",
-            "ich brauche ein {Dienstleistung}  {description_flag} bekommen",
-            "ich brauche ein {Dienstleistung}  {description_flag} erhalten",
+
             "ich brauche ein {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich brauche ein {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich brauche ein {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -2531,18 +2487,7 @@
             "ich will mein {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich will mein {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich will mein {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich will meinem {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich will meinem {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich will meinem {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich will meinem {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich will meinem {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich will meinem {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich will meinem {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich will meinem {Dienstleistung}  {description_flag} abgeben",
-            "ich will meinem {Dienstleistung}  {description_flag} anmelden",
-            "ich will meinem {Dienstleistung}  {description_flag} beantragen",
-            "ich will meinem {Dienstleistung}  {description_flag} bekommen",
-            "ich will meinem {Dienstleistung}  {description_flag} erhalten",
+
             "ich will meinem {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich will meinem {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich will meinem {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -2603,9 +2548,6 @@
             "ich will meinem {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich will meinem {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich will meinem {Dienstleistung}  {book_appointment_flag} erhalten",
-
-
-
             "ich brauche die {Dienstleistung} {extension_flag}",
             "ich brauche die {Dienstleistung} anmelden",
             "ich brauche die {Dienstleistung} anzumelden",
@@ -2984,9 +2926,6 @@
             "ich will meinen {Dienstleistung} bekommen",
             "ich will meinen {Dienstleistung} erhalten",
             "ich will meinen {Dienstleistung} melden",
-
-
-
             "nach der {extension_flag} {Dienstleistung} in {location}",
             "nach der {extension_flag} {Dienstleistung}",
             "nach der {Dienstleistung} in {location}",
@@ -3019,10 +2958,6 @@
             "nach meinem {extension_flag} {Dienstleistung}",
             "nach meinem {Dienstleistung} in {location}",
             "nach meinem {Dienstleistung}",
-
-
-
-
             "{description_flag} der {extension_flag} {Dienstleistung} in {location} {extension_flag}",
             "{description_flag} der {extension_flag} {Dienstleistung} in {location} abgeben",
             "{description_flag} der {extension_flag} {Dienstleistung} in {location} beantragen",
@@ -3890,7 +3825,7 @@
           ]
         },
         {
-          "name": "DL_Approbation_Intent",
+          "name": "DL_Approbation_Intent_Fragen_zum_Thema_zulassung_im_Gesundheitswesen",
           "slots": [
             {
               "name": "BerufGesundheit",
@@ -3938,7 +3873,7 @@
           ]
         },
         {
-          "name": "DL_Aufenthaltstitel_Intent",
+          "name": "DL_Aufenthaltstitel_Intent_Fragen_zur_Aufenthalt_fuer_Auslaender",
           "slots": [
             {
               "name": "registered_in_berlin",
@@ -4014,7 +3949,7 @@
           ]
         },
         {
-          "name": "DL_Bafoeg_Intent",
+          "name": "DL_Bafoeg_Intent_Fragen_zum_BAfoeG",
           "slots": [
             {
               "name": "bafoegType",
@@ -4062,7 +3997,7 @@
           ]
         },
         {
-          "name": "LOC_General_Intent",
+          "name": "LOC_General_Intent_Fragen_zu_einer_Behoerde",
           "slots": [
             {
               "name": "office_type",
@@ -4101,7 +4036,7 @@
           ]
         },
         {
-          "name": "LOC_IsSvcAvlbl_Intent",
+          "name": "LOC_IsSvcAvlbl_Intent_Fragen_ob_ein_dienst_verfuegbar_ist",
           "slots": [
             {
               "name": "dienstleistung",
@@ -4133,7 +4068,7 @@
           ]
         },
         {
-          "name": "LOC_WhereIsAreaOrPLZ_Intent",
+          "name": "LOC_WhereIsAreaOrPLZ_Intent_Postleitzahl_und_Ortssuche",
           "slots": [
             {
               "name": "plz_district",
@@ -4149,7 +4084,7 @@
           ]
         },
         {
-          "name": "ST_BerlinStats_Intent",
+          "name": "ST_BerlinStats_Intent_Fakten_und_zahlen_ueber_Berlin",
           "slots": [
             {
               "name": "statistic",
@@ -4163,9 +4098,8 @@
             "wie viele {statistic} hat berlin"
           ]
         },
-
         {
-          "name": "ST_FromChatbot_Intent",
+          "name": "ST_FromChatbot_Intent_Fragen_ueber_mich_als_Alexa_im_Amt",
           "slots": [
             {
               "name": "smalltalk",
@@ -6441,7 +6375,6 @@
                   "zehn neun neun neun ",
                   "zwölf null vier fünf ",
                   "zehn eins sieben acht "
-
                 ]
               }
             },
@@ -6834,6 +6767,7 @@
               "name": {
                 "value": "ja",
                 "synonyms": [
+                  "wie lange dauert die Bearbeitung",
                   "super",
                   "perfekt",
                   "top",
@@ -7033,6 +6967,11 @@
           "values": [
             {
               "name": {
+                "value": "ortsteile"
+              }
+            },
+            {
+              "name": {
                 "value": "dienstleistungen",
                 "synonyms": [
                   "services"
@@ -7111,7 +7050,7 @@
     "dialog": {
       "intents": [
         {
-          "name": "DL_Approbation_Intent",
+          "name": "DL_Approbation_Intent_Fragen_zum_Thema_zulassung_im_Gesundheitswesen",
           "confirmationRequired": false,
           "prompts": {},
           "slots": [
@@ -7136,7 +7075,7 @@
           ]
         },
         {
-          "name": "DL_General_Intent",
+          "name": "DL_General_Intent_Allgemeine_Fragen",
           "confirmationRequired": false,
           "prompts": {},
           "slots": [
@@ -7210,7 +7149,7 @@
           ]
         },
         {
-          "name": "DL_Aufenthaltstitel_Intent",
+          "name": "DL_Aufenthaltstitel_Intent_Fragen_zur_Aufenthalt_fuer_Auslaender",
           "confirmationRequired": false,
           "prompts": {},
           "slots": [
@@ -7297,7 +7236,7 @@
           ]
         },
         {
-          "name": "DL_Bafoeg_Intent",
+          "name": "DL_Bafoeg_Intent_Fragen_zum_BAfoeG",
           "confirmationRequired": false,
           "prompts": {},
           "slots": [
@@ -7322,7 +7261,7 @@
           ]
         },
         {
-          "name": "LOC_IsSvcAvlbl_Intent",
+          "name": "LOC_IsSvcAvlbl_Intent_Fragen_ob_ein_dienst_verfuegbar_ist",
           "confirmationRequired": true,
           "prompts": {
             "confirmation": "Confirm.Intent.1007786953231"

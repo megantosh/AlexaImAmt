@@ -26,6 +26,7 @@ const https = require('https');
 const url = require("url");
 const Alexa = require("alexa-sdk");
 const AWS = require("aws-sdk");
+const util = require('util');
 
 // the name we call the skill with by saying "Alexa, (open|ask|tell|...) <invocationName>
 // has to consist of at least two words, small letters - read guidelines
@@ -100,7 +101,11 @@ const DE_handlers = {
         // this.emit(':ask', introAudio, Speech.de.HELP_TEXT)
         this.response
             .speak(introAudio + Helper.randomphrase(Speech.de.INTRO_GREETING_TEXT))
-            .listen('Hmm.. ' + Helper.randomphrase(Speech.de.INTRO_HELP_TEXT));
+        // this.emit(('AMAZON.HelpIntent'));
+        // alternatively, if you don't want to use the HelpIntent, if it's too verbose for you
+            .listen('Hmm.. ' + Helper.randomphrase(Speech.de.INTRO_HELP_TEXT) + '<p> Wenn Sie Unterstützung brauchen,' +
+                " sagen Sie <emphasis level=\'moderate\'>   Hilfe  </emphasis> </p>");
+        // this.emit(('AMAZON.HelpIntent'));
         this.emit(':responseReady');
 
         console.log("exited LaunchRquest");
@@ -109,16 +114,16 @@ const DE_handlers = {
     //TODO doc
     'Unhandled': function () {
         this.response
-            .speak(Speech.de.INTRO_UNHANDLED_TEXT)
+            .speak(Helper.randomphrase(Speech.de.INTRO_UNHANDLED_TEXT[0]))
             .listen(Helper.randomphrase(Speech.de.INTRO_UNHANDLED_TEXT));
-        console.log("exited unhandledReq");
+        console.log("exited unhandledRequest");
 
     },
 
     'AMAZON.CancelIntent': function () {
         this.response
         //TODO
-            .speak(Helper.randomphrase(Speech.de.INTRO_STOP_TEXT));
+            .speak(Helper.randomphrase(Speech.de.INTRO_CANCEL_TEXT));
 
         this.emit(':responseReady');
         console.log("exited cancelIntent");
@@ -128,18 +133,35 @@ const DE_handlers = {
     //TODO
     'AMAZON.HelpIntent'         : function () {
 
-        let CustomIntents = Helper.getCustomIntents();
-        let MyIntent = randomPhrase(CustomIntents);
+        let CustomIntents = Helper.getCustomIntents('de_DE');
+        let MyIntent = Helper.randomphrase(CustomIntents);
+        // let MyIntent = CustomIntents[9];
+        // console.log("keys of Intent: " + Object.keys(MyIntent))
+        console.log("Inspection : " + util.inspect(MyIntent))
+
+
         let MyIntentRandomSampleIndex = Math.floor(Math.random() * MyIntent.samples.length);
-        let say = 'Von den ' + CustomIntents.length + ' Themengruppen, die ich kenne, ' +
-            'kann ich dir ' + MyIntent.name + " vorschlagen. Probiere mal <emphasis level='strong'> " +
-            MyIntent.samples[MyIntentRandomSampleIndex] + " </emphasis> ";
-        let reprompt = "Versuche nochmal: " + MyIntent.samples[0];
+        let MyReadableIntent = Helper.extractHumanReadableIntent(MyIntent.name);
+        let MyReadableSample = Helper.extractHumanReadableSample(MyIntent.samples[MyIntentRandomSampleIndex],'de_de');
+        console.log('type of my readable sample: ' + typeof MyReadableSample);
+
+        let cardTemplate = Helper.cardIntents(CustomIntents);
+
+
+        let say = "<p> Von den " +
+            CustomIntents.length + //TODO replace with "mehreren". User couldn't care less how much we offer,
+            ' Themengruppen, die ich kenne, ' +
+            "kann ich Ihnen diesen vorschlagen </p>" + MyReadableIntent + " . Versuchen Sie mal " +
+            "<emphasis level='moderate'> " +
+             + MyReadableSample +
+            " </emphasis> "
+        ;
+        let reprompt = "Versuchen Sie nochmal. Zum Beispiel : " + Helper.extractHumanReadableSample(MyIntent.samples[0], 'de_DE');
 
         this.response
             .speak(say)
             .listen(reprompt)
-            .cardRenderer('Themengruppen', Helper.cardIntents(CustomIntents));  // , Card.welcomeCardImg
+            .cardRenderer('Themengruppen', cardTemplate, Card.logo);  //remove card if too big
 
         this.emit(':responseReady');
         console.log("exited helpIntent");
@@ -147,7 +169,7 @@ const DE_handlers = {
     },
     'AMAZON.StopIntent'         : function () {
 
-        let say = 'Goodbye.';
+        let say = Speech.de.INTRO_STOP_TEXT;
         this.response
             .speak(say);
 
@@ -193,10 +215,14 @@ const DE_handlers = {
                     console.log('pubSvcInfo: ' + pubSvcInfo);
 
                     //TODO you want to do all the replace and cleaning here
+                    pubSvcInfo = Helper.reformatHTMLtoAlexaFriendly(pubSvcInfo);
+                    pubSvcInfo = pubSvcInfo.substr(0,400);
+
+                    console.log(pubSvcInfo);
 
                     // if( response.response.numFound > 0 ) {
 
-                        this.response.speak('Dienstname: '+ pubSvcName )//+ 'Beschreibung: ' + pubSvcInfo);
+                        this.response.speak('Dienstname: '+ pubSvcName + 'Beschreibung: ' + pubSvcInfo);
                     // } else {
                     //     this.response.speak("I'm sorry I could not find a match for a "
                     //         + " dog");

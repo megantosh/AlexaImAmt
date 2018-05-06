@@ -176,6 +176,9 @@ using state of the art standards in TF/IDF for seach queries
 
 
 \subsection*{Alternatives}
+
+
+\subsubsection{Using Java}
 Setup in Java using Maven \footnote{\url{https://github.com/alexa/alexa-skills-kit-sdk-for-java/wiki/Setting-Up-The-ASK-SDK}}
 
 \begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{java}
@@ -187,6 +190,22 @@ Setup in Java using Maven \footnote{\url{https://github.com/alexa/alexa-skills-k
 \end{minted}
 
 ASK SDK for Java\footnote{\url{https://github.com/alexa/alexa-skills-kit-sdk-for-java}}
+
+
+
+In this example service writes information to a log and then calls a method to return a welcome response.
+\href{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html\#launchrequest}{\lstinline|handle-requests-sent-by-alexa.html\#launchrequest|}
+\begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{java}
+
+@Override
+public SpeechletResponse onLaunch(final LaunchRequest request, final Session session)
+throws SpeechletException {
+	
+	log.info("onLaunch requestId={}, sessionId={}", request.getRequestId(),
+	session.getSessionId());
+	return getWelcomeResponse();
+}
+\end{minted}
 
 
 

@@ -29,37 +29,39 @@
 \BOOKMARK [1][-]{section.5.4}{Alexa in the Eye of the Beholder}{chapter.5}% 29
 \BOOKMARK [0][-]{chapter.6}{Skill Design}{}% 30
 \BOOKMARK [1][-]{section.6.1}{Frameworks and Data Structures}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.2}{Challenges}{chapter.6}% 32
-\BOOKMARK [1][-]{section.6.3}{Design Guidelines and Documentations}{chapter.6}% 33
-\BOOKMARK [0][-]{chapter.7}{Design Best Practices}{}% 34
-\BOOKMARK [1][-]{section.7.1}{For Voice Assistants in the Use Case of Alexa}{chapter.7}% 35
-\BOOKMARK [1][-]{section.7.2}{For GUI Chatbots}{chapter.7}% 36
-\BOOKMARK [0][-]{chapter.8}{Skill Implementation}{}% 37
-\BOOKMARK [1][-]{section.8.1}{Setup}{chapter.8}% 38
-\BOOKMARK [1][-]{section.8.2}{Features}{chapter.8}% 39
-\BOOKMARK [2][-]{subsection.8.2.1}{Creating SSML and Audio}{section.8.2}% 40
-\BOOKMARK [2][-]{subsection.8.2.2}{Checking the Next available appointment}{section.8.2}% 41
-\BOOKMARK [1][-]{section.8.3}{Code Analysis}{chapter.8}% 42
-\BOOKMARK [1][-]{section.8.4}{Testing}{chapter.8}% 43
-\BOOKMARK [1][-]{section.8.5}{Deployment}{chapter.8}% 44
-\BOOKMARK [1][-]{section.8.6}{Approval and Publishing}{chapter.8}% 45
-\BOOKMARK [1][-]{section.8.7}{Debugging / Troubleshooting}{chapter.8}% 46
-\BOOKMARK [1][-]{section.8.8}{Documentation Updates}{chapter.8}% 47
-\BOOKMARK [0][-]{chapter.9}{Evaluation}{}% 48
-\BOOKMARK [1][-]{section.9.1}{WienBot}{chapter.9}% 49
-\BOOKMARK [1][-]{section.9.2}{GeorgiaGov}{chapter.9}% 50
-\BOOKMARK [1][-]{section.9.3}{Alexa in General}{chapter.9}% 51
-\BOOKMARK [1][-]{section.9.4}{Metrics}{chapter.9}% 52
-\BOOKMARK [1][-]{section.9.5}{Results}{chapter.9}% 53
-\BOOKMARK [1][-]{section.9.6}{Discussions}{chapter.9}% 54
-\BOOKMARK [0][-]{chapter.10}{Conclusion and Future Work}{}% 55
-\BOOKMARK [1][-]{section.10.1}{Summary}{chapter.10}% 56
-\BOOKMARK [1][-]{section.10.2}{Conclusion}{chapter.10}% 57
-\BOOKMARK [1][-]{section.10.3}{Future Work}{chapter.10}% 58
-\BOOKMARK [0][-]{section.10.3}{Bibliography}{}% 59
-\BOOKMARK [0][-]{chapter*.80}{Appendices}{}% 60
-\BOOKMARK [1][-]{chapter*.81}{Product Branding Etymology}{chapter*.80}% 61
-\BOOKMARK [1][-]{section*.82}{Lex vs. Alexa Skills}{chapter*.80}% 62
-\BOOKMARK [1][-]{section*.87}{JSON Query code structure}{chapter*.80}% 63
-\BOOKMARK [1][-]{figure.caption.89}{Abbreviations}{chapter*.80}% 64
-\BOOKMARK [1][-]{section*.90}{Glossary}{chapter*.80}% 65
+\BOOKMARK [2][-]{subsubsection.6.1.0.1}{Using Java}{section.6.1}% 32
+\BOOKMARK [1][-]{section.6.2}{Challenges}{chapter.6}% 33
+\BOOKMARK [1][-]{section.6.3}{Design Guidelines and Documentations}{chapter.6}% 34
+\BOOKMARK [0][-]{chapter.7}{Design Best Practices}{}% 35
+\BOOKMARK [1][-]{section.7.1}{For Voice Assistants in the Use Case of Alexa}{chapter.7}% 36
+\BOOKMARK [1][-]{section.7.2}{For GUI Chatbots}{chapter.7}% 37
+\BOOKMARK [0][-]{chapter.8}{Skill Implementation}{}% 38
+\BOOKMARK [1][-]{section.8.1}{Setup}{chapter.8}% 39
+\BOOKMARK [1][-]{section.8.2}{Code Analysis}{chapter.8}% 40
+\BOOKMARK [1][-]{section.8.3}{Features}{chapter.8}% 41
+\BOOKMARK [2][-]{subsection.8.3.1}{Creating SSML and Audio}{section.8.3}% 42
+\BOOKMARK [2][-]{subsection.8.3.2}{Checking the Next available appointment}{section.8.3}% 43
+\BOOKMARK [2][-]{subsection.8.3.3}{Card Templates}{section.8.3}% 44
+\BOOKMARK [1][-]{section.8.4}{Testing}{chapter.8}% 45
+\BOOKMARK [1][-]{section.8.5}{Deployment}{chapter.8}% 46
+\BOOKMARK [1][-]{section.8.6}{Approval and Publishing}{chapter.8}% 47
+\BOOKMARK [1][-]{section.8.7}{Debugging / Troubleshooting}{chapter.8}% 48
+\BOOKMARK [1][-]{section.8.8}{Documentation Updates}{chapter.8}% 49
+\BOOKMARK [0][-]{chapter.9}{Evaluation}{}% 50
+\BOOKMARK [1][-]{section.9.1}{WienBot}{chapter.9}% 51
+\BOOKMARK [1][-]{section.9.2}{GeorgiaGov}{chapter.9}% 52
+\BOOKMARK [1][-]{section.9.3}{Alexa in General}{chapter.9}% 53
+\BOOKMARK [1][-]{section.9.4}{Metrics}{chapter.9}% 54
+\BOOKMARK [1][-]{section.9.5}{Results}{chapter.9}% 55
+\BOOKMARK [1][-]{section.9.6}{Discussions}{chapter.9}% 56
+\BOOKMARK [0][-]{chapter.10}{Conclusion and Future Work}{}% 57
+\BOOKMARK [1][-]{section.10.1}{Summary}{chapter.10}% 58
+\BOOKMARK [1][-]{section.10.2}{Conclusion}{chapter.10}% 59
+\BOOKMARK [1][-]{section.10.3}{Future Work}{chapter.10}% 60
+\BOOKMARK [0][-]{section.10.3}{Bibliography}{}% 61
+\BOOKMARK [0][-]{chapter*.80}{Appendices}{}% 62
+\BOOKMARK [1][-]{chapter*.81}{Product Branding Etymology}{chapter*.80}% 63
+\BOOKMARK [1][-]{section*.82}{Lex vs. Alexa Skills}{chapter*.80}% 64
+\BOOKMARK [1][-]{section*.87}{JSON Query code structure}{chapter*.80}% 65
+\BOOKMARK [1][-]{figure.caption.89}{Abbreviations}{chapter*.80}% 66
+\BOOKMARK [1][-]{section*.90}{Glossary}{chapter*.80}% 67

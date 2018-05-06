@@ -33,7 +33,7 @@
           ]
         },
         {
-          "name": "DL_General_Intent",
+          "name": "DL_General_Intent_Allgemeine_Fragen",
           "slots": [
             {
               "name": "Dienstleistung",
@@ -2603,9 +2603,6 @@
             "ich will meinem {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich will meinem {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich will meinem {Dienstleistung}  {book_appointment_flag} erhalten",
-
-
-
             "ich brauche die {Dienstleistung} {extension_flag}",
             "ich brauche die {Dienstleistung} anmelden",
             "ich brauche die {Dienstleistung} anzumelden",
@@ -2984,9 +2981,6 @@
             "ich will meinen {Dienstleistung} bekommen",
             "ich will meinen {Dienstleistung} erhalten",
             "ich will meinen {Dienstleistung} melden",
-
-
-
             "nach der {extension_flag} {Dienstleistung} in {location}",
             "nach der {extension_flag} {Dienstleistung}",
             "nach der {Dienstleistung} in {location}",
@@ -3019,10 +3013,6 @@
             "nach meinem {extension_flag} {Dienstleistung}",
             "nach meinem {Dienstleistung} in {location}",
             "nach meinem {Dienstleistung}",
-
-
-
-
             "{description_flag} der {extension_flag} {Dienstleistung} in {location} {extension_flag}",
             "{description_flag} der {extension_flag} {Dienstleistung} in {location} abgeben",
             "{description_flag} der {extension_flag} {Dienstleistung} in {location} beantragen",
@@ -3890,7 +3880,7 @@
           ]
         },
         {
-          "name": "DL_Approbation_Intent",
+          "name": "DL_Approbation_Intent_Fragen_zum_Thema_zulassung_im_Gesundheitswesen",
           "slots": [
             {
               "name": "BerufGesundheit",
@@ -3938,7 +3928,7 @@
           ]
         },
         {
-          "name": "DL_Aufenthaltstitel_Intent",
+          "name": "DL_Aufenthaltstitel_Intent_Fragen_zur_Aufenthalt_fuer_Auslaender",
           "slots": [
             {
               "name": "registered_in_berlin",
@@ -4014,7 +4004,7 @@
           ]
         },
         {
-          "name": "DL_Bafoeg_Intent",
+          "name": "DL_Bafoeg_Intent_Fragen_zum_BAfoeG",
           "slots": [
             {
               "name": "bafoegType",
@@ -4062,7 +4052,7 @@
           ]
         },
         {
-          "name": "LOC_General_Intent",
+          "name": "LOC_General_Intent_Fragen_zu_einer_Behoerde",
           "slots": [
             {
               "name": "office_type",
@@ -4101,7 +4091,7 @@
           ]
         },
         {
-          "name": "LOC_IsSvcAvlbl_Intent",
+          "name": "LOC_IsSvcAvlbl_Intent_Fragen_ob_ein_dienst_verfuegbar_ist",
           "slots": [
             {
               "name": "dienstleistung",
@@ -4133,7 +4123,7 @@
           ]
         },
         {
-          "name": "LOC_WhereIsAreaOrPLZ_Intent",
+          "name": "LOC_WhereIsAreaOrPLZ_Intent_Postleitzahl_und_Ortssuche",
           "slots": [
             {
               "name": "plz_district",
@@ -4149,7 +4139,7 @@
           ]
         },
         {
-          "name": "ST_BerlinStats_Intent",
+          "name": "ST_BerlinStats_Intent_Fakten_und_zahlen_ueber_Berlin",
           "slots": [
             {
               "name": "statistic",
@@ -4163,9 +4153,8 @@
             "wie viele {statistic} hat berlin"
           ]
         },
-
         {
-          "name": "ST_FromChatbot_Intent",
+          "name": "ST_FromChatbot_Intent_Fragen_ueber_mich_als_Alexa_im_Amt",
           "slots": [
             {
               "name": "smalltalk",
@@ -5868,7 +5857,22 @@
                   "alt-treptow",
                   "adlershof",
                   "Schöneweide",
-                  "köpenick"
+                  "köpenick",
+                  "zwölf vier drei fünf ",
+                  "zwölf vier drei sieben ",
+                  "zwölf vier drei neun ",
+                  "zwölf vier fünf neun ",
+                  "zwölf vier acht sieben ",
+                  "zwölf vier acht neun ",
+                  "zwölf fünf zwei vier ",
+                  "zwölf fünf zwei sechs ",
+                  "zwölf fünf zwei sieben ",
+                  "zwölf fünf fünf fünf ",
+                  "zwölf fünf fünf sieben ",
+                  "zwölf fünf fünf neun ",
+                  "zwölf fünf acht sieben ",
+                  "zwölf fünf acht neun ",
+                  "zwölf sechs zwei drei "
                 ]
               }
             },
@@ -5912,7 +5916,38 @@
                   "eins vier eins neun sieben ",
                   "Lichtenrade",
                   "Schöneberg",
-                  "Tempelhof"
+                  "Tempelhof",
+                  "zehn sieben sieben sieben ",
+                  "zehn sieben sieben neun ",
+                  "zehn sieben acht eins ",
+                  "zehn sieben acht drei ",
+                  "zehn sieben acht fünf ",
+                  "zehn sieben acht sieben ",
+                  "zehn sieben acht neun ",
+                  "zehn acht zwei drei ",
+                  "zehn acht zwei fünf ",
+                  "zehn acht zwei sieben ",
+                  "zehn acht zwei neun ",
+                  "zehn neun sechs fünf ",
+                  "zwölf null neun neun ",
+                  "zwölf eins null eins ",
+                  "zwölf eins null drei ",
+                  "zwölf eins null fünf ",
+                  "zwölf eins null sieben ",
+                  "zwölf eins null neun ",
+                  "zwölf eins fünf sieben ",
+                  "zwölf eins fünf neun ",
+                  "zwölf eins sechs eins ",
+                  "zwölf eins sechs drei ",
+                  "zwölf eins sechs neun ",
+                  "zwölf zwei vier neun ",
+                  "zwölf zwei sieben sieben ",
+                  "zwölf zwei sieben neun ",
+                  "zwölf drei null fünf ",
+                  "zwölf drei null sieben ",
+                  "zwölf drei null neun ",
+                  "zwölf drei vier sieben ",
+                  "vierzehn eins neun sieben "
                 ]
               }
             },
@@ -5950,7 +5985,31 @@
                   "dahlem",
                   "Zehlendorf",
                   "Steglitz",
-                  "Lankwitz"
+                  "Lankwitz",
+                  "zwölf eins fünf sieben ",
+                  "zwölf eins sechs eins ",
+                  "zwölf eins sechs drei ",
+                  "zwölf eins sechs fünf ",
+                  "zwölf eins sechs sieben ",
+                  "zwölf eins sechs neun ",
+                  "zwölf zwei null drei ",
+                  "zwölf zwei null fünf ",
+                  "zwölf zwei null sieben ",
+                  "zwölf zwei null neun ",
+                  "zwölf zwei vier sieben ",
+                  "zwölf zwei vier neun ",
+                  "zwölf zwei sieben sieben ",
+                  "zwölf zwei sieben neun ",
+                  "vierzehn eins null neun ",
+                  "vierzehn eins zwei neun ",
+                  "vierzehn eins sechs drei ",
+                  "vierzehn eins sechs fünf ",
+                  "vierzehn eins sechs sieben ",
+                  "vierzehn eins sechs neun ",
+                  "vierzehn eins neun drei ",
+                  "vierzehn eins neun fünf ",
+                  "vierzehn eins neun sieben ",
+                  "vierzehn eins neun neun "
                 ]
               }
             },
@@ -5979,7 +6038,21 @@
                   "gatow",
                   "Falkenhagener Feld",
                   "Wasserstadt",
-                  "Kladow"
+                  "Kladow",
+                  "dreizehn fünf acht eins ",
+                  "dreizehn fünf acht drei ",
+                  "dreizehn fünf acht fünf ",
+                  "dreizehn fünf acht sieben ",
+                  "dreizehn fünf acht neun ",
+                  "dreizehn fünf neun eins ",
+                  "dreizehn fünf neun drei ",
+                  "dreizehn fünf neun fünf ",
+                  "dreizehn fünf neun sieben ",
+                  "dreizehn fünf neun neun ",
+                  "dreizehn sechs zwei sieben ",
+                  "dreizehn sechs zwei neun ",
+                  "vierzehn null fünf zwei ",
+                  "vierzehn null acht neun "
                 ]
               }
             },
@@ -6011,9 +6084,25 @@
                   "wittenau",
                   "Heiligensee",
                   "Märkisches Viertel",
-                  "Tegel",
-                  "Hermsdorf",
-                  "Reinickendorf Ost"
+                  "tegel",
+                  "hermsdorf",
+                  "reinickendorf Ost",
+                  "dreizehn vier null drei ",
+                  "dreizehn vier null fünf ",
+                  "dreizehn vier null sieben ",
+                  "dreizehn vier null neun ",
+                  "dreizehn vier drei fünf ",
+                  "dreizehn vier drei sieben ",
+                  "dreizehn vier drei neun ",
+                  "dreizehn vier sechs fünf ",
+                  "dreizehn vier sechs sieben ",
+                  "dreizehn vier sechs neun ",
+                  "dreizehn fünf null drei ",
+                  "dreizehn fünf null fünf ",
+                  "dreizehn fünf null sieben ",
+                  "dreizehn fünf null neun ",
+                  "dreizehn fünf neun neun ",
+                  "dreizehn sechs zwei neun "
                 ]
               }
             },
@@ -6057,7 +6146,29 @@
                   "Buch",
                   "Karow",
                   "Weißensee",
-                  "Prenzlauer Berg"
+                  "Prenzlauer Berg",
+                  "zehn eins eins neun ",
+                  "zehn zwei vier sieben ",
+                  "zehn zwei vier neun ",
+                  "zehn vier null fünf ",
+                  "zehn vier null sieben ",
+                  "zehn vier null neun ",
+                  "zehn vier drei fünf ",
+                  "zehn vier drei sieben ",
+                  "zehn vier drei neun ",
+                  "dreizehn null fünf eins ",
+                  "dreizehn null fünf drei ",
+                  "dreizehn null acht sechs ",
+                  "dreizehn null acht acht ",
+                  "dreizehn null acht neun ",
+                  "dreizehn eins zwei fünf ",
+                  "dreizehn eins zwei sieben ",
+                  "dreizehn eins zwei neun ",
+                  "dreizehn eins fünf sechs ",
+                  "dreizehn eins fünf acht ",
+                  "dreizehn eins fünf neun ",
+                  "dreizehn eins acht sieben ",
+                  "dreizehn eins acht neun "
                 ]
               }
             },
@@ -6094,7 +6205,28 @@
                   "Sonnenallee",
                   "Zwickauer Damm",
                   "Alt Buckow",
-                  "Rudow"
+                  "Rudow",
+                  "zehn neun sechs fünf ",
+                  "zehn neun sechs sieben ",
+                  "zwölf null vier drei ",
+                  "zwölf null vier fünf ",
+                  "zwölf null vier sieben ",
+                  "zwölf null vier neun ",
+                  "zwölf null fünf eins ",
+                  "zwölf null fünf drei ",
+                  "zwölf null fünf fünf ",
+                  "zwölf null fünf sieben ",
+                  "zwölf null fünf neun ",
+                  "zwölf null neun neun ",
+                  "zwölf eins null sieben ",
+                  "zwölf drei null fünf ",
+                  "zwölf drei vier sieben ",
+                  "zwölf drei vier neun ",
+                  "zwölf drei fünf eins ",
+                  "zwölf drei fünf drei ",
+                  "zwölf drei fünf fünf ",
+                  "zwölf drei fünf sieben ",
+                  "zwölf drei fünf neun "
                 ]
               }
             },
@@ -6132,7 +6264,33 @@
                   "eins drei vier null sieben ",
                   "eins drei vier null neun ",
                   "Wedding",
-                  "Tiergarten"
+                  "Tiergarten",
+                  "zehn eins eins fünf ",
+                  "zehn eins eins sieben ",
+                  "zehn eins eins neun ",
+                  "zehn eins sieben acht ",
+                  "zehn eins sieben neun ",
+                  "zehn vier drei fünf ",
+                  "zehn fünf fünf eins ",
+                  "zehn fünf fünf drei ",
+                  "zehn fünf fünf fünf ",
+                  "zehn fünf fünf sieben ",
+                  "zehn fünf fünf neun ",
+                  "zehn sechs zwei drei ",
+                  "zehn sieben acht fünf ",
+                  "zehn sieben acht sieben ",
+                  "zehn neun sechs drei ",
+                  "zehn neun sechs neun ",
+                  "dreizehn drei vier sieben ",
+                  "dreizehn drei vier neun ",
+                  "dreizehn drei fünf eins ",
+                  "dreizehn drei fünf drei ",
+                  "dreizehn drei fünf fünf ",
+                  "dreizehn drei fünf sieben ",
+                  "dreizehn drei fünf neun ",
+                  "dreizehn vier null fünf ",
+                  "dreizehn vier null sieben ",
+                  "dreizehn vier null neun "
                 ]
               }
             },
@@ -6157,7 +6315,19 @@
                   "eins zwei sechs acht neun ",
                   "Marzahner Promenade",
                   "Helle Mitte",
-                  "Biesdorf"
+                  "Biesdorf",
+                  "zwölf fünf fünf fünf ",
+                  "zwölf sechs eins neun ",
+                  "zwölf sechs zwei eins ",
+                  "zwölf sechs zwei drei ",
+                  "zwölf sechs zwei sieben ",
+                  "zwölf sechs zwei neun ",
+                  "zwölf sechs sieben neun ",
+                  "zwölf sechs acht eins ",
+                  "zwölf sechs acht drei ",
+                  "zwölf sechs acht fünf ",
+                  "zwölf sechs acht sieben ",
+                  "zwölf sechs acht neun "
                 ]
               }
             },
@@ -6197,7 +6367,21 @@
                   "Tierparkcenter",
                   "Normannen",
                   "Egon - Erwin Kirsch ",
-                  "Neu Hohen Schön Hausen"
+                  "Neu Hohen Schön Hausen",
+                  "Hohenschönhausen",
+                  "H S H",
+                  "zehn drei eins fünf ",
+                  "zehn drei eins sieben ",
+                  "zehn drei eins acht ",
+                  "zehn drei eins neun ",
+                  "zehn drei sechs fünf ",
+                  "zehn drei sechs sieben ",
+                  "zehn drei sechs neun ",
+                  "dreizehn null fünf eins ",
+                  "dreizehn null fünf drei ",
+                  "dreizehn null fünf fünf ",
+                  "dreizehn null fünf sieben ",
+                  "dreizehn null fünf neun "
                 ]
               }
             },
@@ -6229,7 +6413,23 @@
                   "Schlesische Straße",
                   "Frankfurter Allee",
                   "Kreuzberg",
-                  "Yorkstraße"
+                  "Yorkstraße",
+                  "zehn eins sieben neun ",
+                  "zehn zwei vier drei ",
+                  "zehn zwei vier fünf ",
+                  "zehn zwei vier sieben ",
+                  "zehn zwei vier neun ",
+                  "zehn drei sechs sieben ",
+                  "zehn sieben acht fünf ",
+                  "zehn neun sechs eins ",
+                  "zehn neun sechs drei ",
+                  "zehn neun sechs fünf ",
+                  "zehn neun sechs sieben ",
+                  "zehn neun sechs neun ",
+                  "zehn neun neun sieben ",
+                  "zehn neun neun neun ",
+                  "zwölf null vier fünf ",
+                  "zehn eins sieben acht "
                 ]
               }
             },
@@ -6281,7 +6481,41 @@
                   "Halemweg",
                   "Heerstraße",
                   "Hohenzollerndamm",
-                  "Wilmersdorfer"
+                  "Wilmersdorfer",
+                  "zehn fünf fünf drei ",
+                  "zehn fünf acht fünf ",
+                  "zehn fünf acht sieben ",
+                  "zehn fünf acht neun ",
+                  "zehn sechs zwei drei ",
+                  "zehn sechs zwei fünf ",
+                  "zehn sechs zwei sieben ",
+                  "zehn sechs zwei neun ",
+                  "zehn sieben null sieben ",
+                  "zehn sieben null neun ",
+                  "zehn sieben eins eins ",
+                  "zehn sieben eins drei ",
+                  "zehn sieben eins fünf ",
+                  "zehn sieben eins sieben ",
+                  "zehn sieben eins neun ",
+                  "zehn sieben sieben sieben ",
+                  "zehn sieben sieben neun ",
+                  "zehn sieben acht sieben ",
+                  "zehn sieben acht neun ",
+                  "zehn acht zwei fünf ",
+                  "dreizehn drei fünf drei ",
+                  "dreizehn fünf neun sieben ",
+                  "dreizehn sechs zwei sieben ",
+                  "dreizehn sechs zwei neun ",
+                  "vierzehn null fünf null ",
+                  "vierzehn null fünf zwei ",
+                  "vierzehn null fünf drei ",
+                  "vierzehn null fünf fünf ",
+                  "vierzehn null fünf sieben ",
+                  "vierzehn null fünf neun ",
+                  "vierzehn eins neun drei ",
+                  "vierzehn eins neun fünf ",
+                  "vierzehn eins neun sieben ",
+                  "vierzehn eins neun neun "
                 ]
               }
             }
@@ -6588,6 +6822,7 @@
               "name": {
                 "value": "ja",
                 "synonyms": [
+                  "wie lange dauert die Bearbeitung",
                   "super",
                   "perfekt",
                   "top",
@@ -6787,6 +7022,11 @@
           "values": [
             {
               "name": {
+                "value": "ortsteile"
+              }
+            },
+            {
+              "name": {
                 "value": "dienstleistungen",
                 "synonyms": [
                   "services"
@@ -6865,7 +7105,7 @@
     "dialog": {
       "intents": [
         {
-          "name": "DL_Approbation_Intent",
+          "name": "DL_Approbation_Intent_Fragen_zum_Thema_zulassung_im_Gesundheitswesen",
           "confirmationRequired": false,
           "prompts": {},
           "slots": [
@@ -6890,7 +7130,7 @@
           ]
         },
         {
-          "name": "DL_General_Intent",
+          "name": "DL_General_Intent_Allgemeine_Fragen",
           "confirmationRequired": false,
           "prompts": {},
           "slots": [
@@ -6964,7 +7204,7 @@
           ]
         },
         {
-          "name": "DL_Aufenthaltstitel_Intent",
+          "name": "DL_Aufenthaltstitel_Intent_Fragen_zur_Aufenthalt_fuer_Auslaender",
           "confirmationRequired": false,
           "prompts": {},
           "slots": [
@@ -7051,7 +7291,7 @@
           ]
         },
         {
-          "name": "DL_Bafoeg_Intent",
+          "name": "DL_Bafoeg_Intent_Fragen_zum_BAfoeG",
           "confirmationRequired": false,
           "prompts": {},
           "slots": [
@@ -7076,7 +7316,7 @@
           ]
         },
         {
-          "name": "LOC_IsSvcAvlbl_Intent",
+          "name": "LOC_IsSvcAvlbl_Intent_Fragen_ob_ein_dienst_verfuegbar_ist",
           "confirmationRequired": true,
           "prompts": {
             "confirmation": "Confirm.Intent.1007786953231"

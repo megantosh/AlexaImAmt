@@ -24,6 +24,9 @@ const myFirstPromise = new Promise((resolve, reject) => {
 const https = require("https");
 //alternatively, use fetch module in case of cookies handling, redirect etc
 //const fetchUrl = require("fetch").fetchUrl;
+const util = require('util');
+
+
 
 //TODO b4s duplicate latest models into modelDuplicates
 const de_DE_model = require('./modelDuplicates/de-DE.json');
@@ -52,7 +55,7 @@ exports.resolveCanonical = function resolveCanonical(slot) {
         console.log('resolving canonical value - chgd frm var2let');
         canonical = slot.resolutions.resolutionsPerAuthority[0].values[0].value.name;
     } catch (err) {
-        console.log(err.message);
+        console.log('Slot Value unresolved: ' + err.message);
         canonical = slot.value;
     }
     return canonical;
@@ -101,7 +104,7 @@ exports.delegateSlotCollection = function delegateSlotCollection() {
 
 
 //return a list of defined custom intents in the model based on user's locale
-exports.getCustomIntents = function getCustomIntents() {
+exports.getCustomIntents = function getCustomIntents(currentLocale) {
     let all_intentsArray;
     // dynamic referencing to the direct interaction model
     // TODO+ add other language models as they become available
@@ -111,6 +114,8 @@ exports.getCustomIntents = function getCustomIntents() {
         all_intentsArray = en_US_intentsArray;
     else all_intentsArray = de_DE_intentsArray.concat(en_US_intentsArray);
 
+    console.log("All available Intents : " + util.inspect(all_intentsArray));
+
     let customIntents = [];
     for (let i = 0; i < all_intentsArray.length; i++) {
         if (all_intentsArray[i].name.substring(0, 7) != "AMAZON." && all_intentsArray[i].name !== "LaunchRequest") {
@@ -118,6 +123,12 @@ exports.getCustomIntents = function getCustomIntents() {
         }
     }
 
+    console.log('Type of CustomIntents: ' + typeof customIntents)
+    console.log('Contents: ' + customIntents);
+        console.log(util.inspect(customIntents,false,null));
+    // for (i = 0; i < customIntents.length; i++){
+    //
+    // }
     return (customIntents);
 }
 
@@ -489,6 +500,75 @@ function slotHasValue(request, slotName) {
 //TODO parser to tell alexa which is the next free appointment...
 //this is possible with the class calendar on the website
 // siehe Note #hhibody > div:nth-child(3) > div.collapsible-body > div.calendar-table > div.row-fluid
+
+
+
+// ***********************************
+// ** String Cleaners
+// ***********************************
+
+exports.reformatHTMLtoAlexaFriendly = function (inputString) {
+    inputString = '<p> ' + inputString;
+    inputString = inputString.replace(/<br\s*[\/]?>/gi, '</p> <p>');
+    inputString = inputString.replace(/.\n/g,'.');
+    inputString = inputString.replace(/ -/g,'.');
+
+    //Apply SSML or remove with /<\/?strong>/g
+    // inputString = inputString.replace(/<\/?strong>/g,'<prosody volume="x-loud">');
+    inputString = inputString.replace(/<\/?strong>/g,'.');
+
+    return inputString;
+    }
+
+// <br />\n
+
+exports.extractHumanReadableIntent = function (IntentName){
+    console.log('caught name: ' + IntentName);
+    if(IntentName.includes('_Intent_'))
+        IntentName = IntentName.split('_Intent_')[1];
+    IntentName = IntentName.replace(/_/gi, ' ');
+    IntentName = IntentName.replace(/oe/g, 'ö');
+    IntentName = IntentName.replace(/ae/g, 'ä');
+    IntentName = IntentName.replace(/ue/g, 'ü');
+    IntentName = IntentName.replace(/AE/g, 'Ä');
+    IntentName = IntentName.replace(/OE/g, 'Ö');
+    IntentName = IntentName.replace(/UE/g, 'Ü');
+    return IntentName;
+
+}
+
+exports.extractHumanReadableSample = function (utterance, locale) {
+    console.log('caught utterance: ' + utterance);
+
+    switch(locale) {
+        case 'de_DE':
+            // if (utterance.toLowercase().indexOf("{dienstleistung} " >= 0)){
+            utterance= utterance.replace(/ {dienstleistung}/gi, ", dann Name Der Dienstleistung, beispielsweise \'Perso\' "); //dann....
+            utterance= utterance.replace(/ {extension_flag}/gi, " verlängern ");
+            utterance= utterance.replace(/ {prerequisites_flag}/gi, " Wie geht das denn mit ");//Bedingungen muss ich erfüllen für
+            utterance= utterance.replace(/ {description_flag}/gi, " Was bedeutet ");
+            utterance= utterance.replace(/ {required_docs_flag}/gi, " Welche Unterlagen brauche ich für ");
+            utterance= utterance.replace(/ {costs_flag}/gi, " Was kostet ");
+            utterance= utterance.replace(/ {processing_time_flag}/gi, " Wie lange dauert die Bearbeitung für ");
+            utterance= utterance.replace(/ {book_appointment_flag}/gi, " Ich möchte einen Termin buchen für");
+            utterance= utterance.replace(/ {onlineAntrag}/gi, " online ");
+            utterance= utterance.replace(/ {plz_district}/gi, " zehn neun neun neun ");
+            utterance= utterance.replace(/ {location}/gi, " Kreuzberg ");
+            utterance= utterance.replace(/ {BerufGesundheit}/gi, " Arzt ");
+            utterance= utterance.replace(/ {bafoegType}/gi, " Bafög ");
+            utterance= utterance.replace(/ {citizenship}/gi, " als Ägypter ");
+            utterance= utterance.replace(/ {smalltalk}/gi, " Wie siehst du denn aus? ");
+            utterance= utterance.replace(/ {statistic}/gi, " Bezirksämter ");
+
+
+
+        case 'en_US':
+            // if (utterance.toLowercase().indexOf("{dienstleistung} " >= 0))
+                utterance= utterance.replace(/{dienstleistung}/gi, ", then Name of the Service, then ");
+    }
+
+        return utterance;
+}
 
 
 // ***********************************

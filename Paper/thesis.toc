@@ -30,6 +30,7 @@
 \contentsline {section}{\numberline {5.4}Alexa in the Eye of the Beholder}{38}{section.5.4}
 \contentsline {chapter}{\numberline {6}Skill Design}{40}{chapter.6}
 \contentsline {section}{\numberline {6.1}Frameworks and Data Structures}{42}{section.6.1}
+\contentsline {subsubsection}{\numberline {6.1.0.1}Using Java}{43}{subsubsection.6.1.0.1}
 \contentsline {section}{\numberline {6.2}Challenges}{45}{section.6.2}
 \contentsline {section}{\numberline {6.3}Design Guidelines and Documentations}{45}{section.6.3}
 \contentsline {chapter}{\numberline {7}Design Best Practices}{46}{chapter.7}
@@ -37,11 +38,12 @@
 \contentsline {section}{\numberline {7.2}For GUI Chatbots}{54}{section.7.2}
 \contentsline {chapter}{\numberline {8}Skill Implementation}{57}{chapter.8}
 \contentsline {section}{\numberline {8.1}Setup}{57}{section.8.1}
-\contentsline {section}{\numberline {8.2}Features}{61}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Creating SSML and Audio}{61}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Checking the Next available appointment}{61}{subsection.8.2.2}
-\contentsline {section}{\numberline {8.3}Code Analysis}{61}{section.8.3}
-\contentsline {section}{\numberline {8.4}Testing}{61}{section.8.4}
+\contentsline {section}{\numberline {8.2}Code Analysis}{61}{section.8.2}
+\contentsline {section}{\numberline {8.3}Features}{61}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Creating SSML and Audio}{61}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Checking the Next available appointment}{61}{subsection.8.3.2}
+\contentsline {subsection}{\numberline {8.3.3}Card Templates}{61}{subsection.8.3.3}
+\contentsline {section}{\numberline {8.4}Testing}{62}{section.8.4}
 \contentsline {section}{\numberline {8.5}Deployment}{62}{section.8.5}
 \contentsline {section}{\numberline {8.6}Approval and Publishing}{62}{section.8.6}
 \contentsline {section}{\numberline {8.7}Debugging / Troubleshooting}{62}{section.8.7}
