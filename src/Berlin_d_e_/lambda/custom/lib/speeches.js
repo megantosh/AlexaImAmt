@@ -65,6 +65,10 @@ module.exports = {
                 'das berücksichtige ich gerne beim nächsten Milestone',
                 'ich mag es, wie du mich ausfragst. Du solltest eine Karriere im Usability Bereich in Erwägung ziehen.',
                 'ich werde zwar von einem mega entwickelt, aber leider geht das nicht mega schnell'
+            ],
+            BEFORE_ENDING_SESSION_TEXT: [
+                'kann ich sonst behilflich sein?',
+                'sonst noch ein Wunsch?'
             ]
         }
 

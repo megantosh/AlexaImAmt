@@ -7,6 +7,59 @@ exports.welcomeCardImg = {
 };
 
 
+exports.berlinWappen = {
+    'charlottenburg_wilmersdorf' : {
+        smallImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Coat_of_arms_of_Charlottenburg-Wilmersdorf.svg/81px-Coat_of_arms_of_Charlottenburg-Wilmersdorf.svg.png",
+        largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Coat_of_arms_of_Charlottenburg-Wilmersdorf.svg/572px-Coat_of_arms_of_Charlottenburg-Wilmersdorf.svg.png"
+    },
+    'friedrichshain_kreuzberg' : {
+        smallImageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Coat_of_arms_of_borough_Friedrichshain-Kreuzberg.svg/81px-Coat_of_arms_of_borough_Friedrichshain-Kreuzberg.svg.png",
+        largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Coat_of_arms_of_borough_Friedrichshain-Kreuzberg.svg/572px-Coat_of_arms_of_borough_Friedrichshain-Kreuzberg.svg.png"
+    },
+    'lichtenberg' : {
+        smallImageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Coat_of_arms_of_borough_Lichtenberg.svg/81px-Coat_of_arms_of_borough_Lichtenberg.svg.png",
+        largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Coat_of_arms_of_borough_Lichtenberg.svg/572px-Coat_of_arms_of_borough_Lichtenberg.svg.png"
+    },
+    'marzahn_hellersdorf': {
+        smallImageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Coat_of_arms_of_borough_Marzahn-Hellersdorf.svg/81px-Coat_of_arms_of_borough_Marzahn-Hellersdorf.svg.png",
+        largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Coat_of_arms_of_borough_Marzahn-Hellersdorf.svg/572px-Coat_of_arms_of_borough_Marzahn-Hellersdorf.svg.png"
+    },
+    'mitte': {
+        smallImageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Coat_of_arms_of_borough_Mitte.svg/81px-Coat_of_arms_of_borough_Mitte.svg.png",
+        largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Coat_of_arms_of_borough_Mitte.svg/572px-Coat_of_arms_of_borough_Mitte.svg.png"
+    },
+    'neukölln': {
+        smallImageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Coat_of_arms_of_borough_Neukoelln.svg/81px-Coat_of_arms_of_borough_Neukoelln.svg.png",
+        largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Coat_of_arms_of_borough_Neukoelln.svg/572px-Coat_of_arms_of_borough_Neukoelln.svg.png"
+    },
+    'pankow': {
+        smallImageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Coat_of_arms_of_borough_Pankow.svg/81px-Coat_of_arms_of_borough_Pankow.svg.png",
+        largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Coat_of_arms_of_borough_Pankow.svg/572px-Coat_of_arms_of_borough_Pankow.svg.png"
+    },
+    'reinickendorf':{
+        smallImageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Coat_of_arms_of_borough_Reinickendorf.svg/81px-Coat_of_arms_of_borough_Reinickendorf.svg.png",
+        largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Coat_of_arms_of_borough_Reinickendorf.svg/572px-Coat_of_arms_of_borough_Reinickendorf.svg.png"
+    },
+    'spandau':{
+        smallImageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Coat_of_arms_of_borough_Spandau.svg/81px-Coat_of_arms_of_borough_Spandau.svg.png",
+        largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Coat_of_arms_of_borough_Spandau.svg/572px-Coat_of_arms_of_borough_Spandau.svg.png"
+    },
+    'steglitz_zehlendorf': {
+        smallImageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Coat_of_arms_of_borough_Steglitz-Zehlendorf.svg/81px-Coat_of_arms_of_borough_Steglitz-Zehlendorf.svg.png",
+        largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Coat_of_arms_of_borough_Steglitz-Zehlendorf.svg/572px-Coat_of_arms_of_borough_Steglitz-Zehlendorf.svg.png"
+    },
+    'tempelhof_schöneberg': {
+        smallImageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Coat_of_arms_of_borough_Tempelhof-Schoeneberg.svg/81px-Coat_of_arms_of_borough_Tempelhof-Schoeneberg.svg.png",
+        largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Coat_of_arms_of_borough_Tempelhof-Schoeneberg.svg/572px-Coat_of_arms_of_borough_Tempelhof-Schoeneberg.svg.png"
+    },
+    'treptow_köpenick':{
+        smallImageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Coat_of_arms_of_borough_Treptow-Koepenick.svg/81px-Coat_of_arms_of_borough_Treptow-Koepenick.svg.png",
+        largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Coat_of_arms_of_borough_Treptow-Koepenick.svg/572px-Coat_of_arms_of_borough_Treptow-Koepenick.svg.png"
+    }
+}
+
+
+
 //each card uses two variables. remember to reference them in the card by index
 exports.defaultCardStrings = {
     'de':

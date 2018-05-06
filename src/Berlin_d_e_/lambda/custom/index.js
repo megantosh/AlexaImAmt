@@ -57,17 +57,17 @@ exports.handler = function (event, context, callback) {
     // If you ever want to change this in the future, uncomment line below and languageStrings.
     // alexa.resources = languageStrings;
 
-    var locale = event.request.locale;
+    let currLocale = event.request.locale;
     console.log(event)
     // registration for a multiligual skill - will define speech output based on locale
     // an extended alexa.registerHandlers(handlers, h1, h2); //you can register multiple handlers at once like here
-    if (locale == 'de-DE') {
+    if (currLocale == 'de-DE') {
         alexa.registerHandlers(DE_handlers);
         console.log('registered german handler');
-    } else if (locale == 'fr-FR') {
+    } else if (currLocale == 'fr-FR') {
         alexa.registerHandlers(FR_handlers);
         console.log('registered french handler');
-    } else { //basically if locale.toString().startsWith('en')
+    } else { //basically if currLocale.startsWith('en')
         alexa.registerHandlers(EN_US_handlers);
         console.log('registered US-English handler');
     }
@@ -461,6 +461,7 @@ const DE_handlers = {
         console.log('Hello from LOC_Where Is Area Or PostLeitZahl_Intent. ');
         let say = '';
         let cardInputText = '';
+        let cardImg;
         let heard_plz_district;
 
         let slotStatus = '';
@@ -488,39 +489,52 @@ const DE_handlers = {
             //e.g. She would say " 19388 ist in Pankow since Pankow has a PLZ with 13088
             //check if heard_plz_district is in the list of districts (in Strings)
             else if (
-                ((Helper.listOfPLZ.indexOf(heard_plz_district.value) > -1 ) ||
-                    (Helper.listOfAreas.includes(heard_plz_district.value)))
-                && (resolvedSlot != heard_plz_district.value)
-                && (Helper.listOfComboDistricts.indexOf(resolvedSlot) > -1)
+                ((Helper.listOfPLZ.indexOf(heard_plz_district.value) > -1 ) || //is a valid postal code (PLZ)
+                    (Helper.listOfAreas.includes(heard_plz_district.value)) || //or an area (Ortsteil)
+                    (Helper.listOfComboDistrictsNoHyphens.includes(heard_plz_district.value)))
             ) {
-                //if a PLZ belongs to multiple districts
-                //TODO you want to use the list of Helpler.resolveMulti and verify it against the real hits.
-                //check if:
-                //de_DE_model.interactionModel.languageModel.types.name == Districts_PLZ_Combo_BER.
-                // parent node's values[i].name.value
-                // includes()
-                //de_DE_model.interactionModel.languageModel.types.name == Districts_PLZ_Combo_BER.
-                // parent node's values[i].name.synonyms
+                if (resolvedSlot != heard_plz_district.value
+                    && (Helper.listOfComboDistricts.indexOf(resolvedSlot) > -1)
+                ) {
 
-                ///TODO you want to make a promise here to make it get the digits of a PLZ before it's rendered on card!
+                    //if a PLZ belongs to multiple districts
+                    //TODO you want to use the list of Helpler.resolveMulti and verify it against the real hits.
+                    //check if:
+                    //de_DE_model.interactionModel.languageModel.types.name == Districts_PLZ_Combo_BER.
+                    // parent node's values[i].name.value
+                    // includes()
+                    //de_DE_model.interactionModel.languageModel.types.name == Districts_PLZ_Combo_BER.
+                    // parent node's values[i].name.synonyms
+
+                    ///TODO you want to make a promise here to make it get the digits of a PLZ before it's rendered on card!
 
 
-                //TODO+ if Validator resolves to many districts!
-                //TODO+ ignore case
-                //then check if resolvedSlot is in the list of Bezirksämter
-                slotStatus += ' ist in Bezirksamt ' + resolvedSlot
-                //TODO+ render a card of the Wappen
-                verifiedSlot = 'in ' + resolvedSlot;
+                    //TODO+ if Validator resolves to many districts!
+                    //TODO+ ignore case
+                    //then check if resolvedSlot is in the list of Bezirksämter
+                    slotStatus += ' ist in Bezirksamt ' + resolvedSlot
+                    //TODO+ render a card of the Wappen
+                    verifiedSlot = 'in ' + resolvedSlot;
+                } else {
+                    slotStatus += ' ist ein Bezirksamt Berlins';
+                    //TODO 'und hat die Ortsteile ...'.
+                    //TODO+ render a card of the Wappen
+                    verifiedSlot = resolvedSlot;
+                }
             } else {
                 slotStatus = 'Von diesem Ort habe ich nie in Berlin gehört.';
                 verifiedSlot = 'bestimmt nicht in der Landeshauptstadt!'
             }
         }
 
-        cardInputText =  Helper.writeDigits(heard_plz_district.value);
+        let thepromise = new Promise(function(resolve,reject) {
+
+        });
+
+        cardInputText =  Helper.writeDigits(heard_plz_district.value, 'de_DE');
 
 
-        console.log(typeof cardInputText);
+        // console.log(typeof cardInputText); returns string
         console.log(cardInputText);
 
 
@@ -528,8 +542,8 @@ const DE_handlers = {
 
         this.response
             .speak(say)
-           .cardRenderer(cardInputText + ' ist ',  verifiedSlot);
-
+            .cardRenderer(cardInputText + ' ist ',  verifiedSlot, Card.berlinWappen.charlottenburg_wilmersdorf)
+            .listen(Helper.randomphrase(Speech.de.BEFORE_ENDING_SESSION_TEXT));
 
         this.emit(':responseReady');
     },

@@ -129,78 +129,80 @@ exports.cardIntents = function cardIntents(iArray) {
 
 
 
-exports.writeDigits = function writeDigits(inputText){
-    let outputDigits = '';
+exports.writeDigits = function writeDigits(inputText, locale){
+    let outputDigits = inputText;
 
-    console.log('converting: ' + inputText + ' to digits.');
+    console.log('converting: ' + inputText + ' to digits if possible.');
+    console.log('using Handler locale: ' + locale);
 
     // WARN: do not extend and avoid the next line!
     // inputText.String.prototype.replaceAll('eins', '1');
 
     // DE
-    outputDigits = inputText.replace(/null/gi , '0');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/eins/gi , '1');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/zwei/gi , '2');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/zwo/gi , '2');   // just in case
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/drei/gi , '3');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/vier/gi , '4');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/fünf/gi , '5');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/sechs/gi , '6');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/sieben/gi , '7');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/acht/gi , '8');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/neun/gi , '9');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/zehn/gi , '10');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/elf/gi , '11');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/zwölf/gi , '12');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/dreizehn/gi , '13');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/vierzehn/gi , '14');
-    console.log('converted: ' + outputDigits);
-    outputDigits = outputDigits.replace(/fünfzehn/gi , '15');
-    console.log('converted: ' + outputDigits);
-
-
-    // EN
-    outputDigits = inputText.replace(/zero/gi , '0');
-    outputDigits = outputDigits.replace(/oh/gi , '0');    // TODO not sure how it's transcribed
-    outputDigits = outputDigits.replace(/one/gi , '1');
-    outputDigits = outputDigits.replace(/two/gi , '2');
-    outputDigits = outputDigits.replace(/three/gi , '3');
-    outputDigits = outputDigits.replace(/four/gi , '4');
-    outputDigits = outputDigits.replace(/five/gi , '5');
-    outputDigits = outputDigits.replace(/six/gi , '6');
-    outputDigits = outputDigits.replace(/seven/gi , '7');
-    outputDigits = outputDigits.replace(/eight/gi , '8');
-    outputDigits = outputDigits.replace(/nine/gi , '9');
-    outputDigits = outputDigits.replace(/ten/gi , '10');
-    outputDigits = outputDigits.replace(/eleven/gi , '11');
-    outputDigits = outputDigits.replace(/twelve/gi , '12');
-    outputDigits = outputDigits.replace(/thirteen/gi , '13');
-    outputDigits = outputDigits.replace(/fourteen/gi , '14');
-    outputDigits = outputDigits.replace(/fifteen/gi , '15');
+    if (locale =='de_DE') {
+        outputDigits = outputDigits.replace(/null/gi, '0');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/eins/gi, '1');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/zwei/gi, '2');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/zwo/gi, '2');   // just in case
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/drei/gi, '3');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/vier/gi, '4');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/fünf/gi, '5');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/sechs/gi, '6');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/sieben/gi, '7');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/acht/gi, '8');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/neun/gi, '9');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/zehn/gi, '10');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/elf/gi, '11');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/zwölf/gi, '12');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/dreizehn/gi, '13');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/vierzehn/gi, '14');
+        // console.log('converted: ' + outputDigits);
+        outputDigits = outputDigits.replace(/fünfzehn/gi, '15');
+        // console.log('converted: ' + outputDigits);
+    } else if (locale == 'en_US') {
+        outputDigits = outputDigits.replace(/zero/gi, '0');
+        outputDigits = outputDigits.replace(/oh/gi, '0');    // TODO not sure how it's transcribed
+        outputDigits = outputDigits.replace(/one/gi, '1');
+        outputDigits = outputDigits.replace(/two/gi, '2');
+        outputDigits = outputDigits.replace(/three/gi, '3');
+        outputDigits = outputDigits.replace(/four/gi, '4');
+        outputDigits = outputDigits.replace(/five/gi, '5');
+        outputDigits = outputDigits.replace(/six/gi, '6');
+        outputDigits = outputDigits.replace(/seven/gi, '7');
+        outputDigits = outputDigits.replace(/eight/gi, '8');
+        outputDigits = outputDigits.replace(/nine/gi, '9');
+        outputDigits = outputDigits.replace(/ten/gi, '10');
+        outputDigits = outputDigits.replace(/eleven/gi, '11');
+        outputDigits = outputDigits.replace(/twelve/gi, '12');
+        outputDigits = outputDigits.replace(/thirteen/gi, '13');
+        outputDigits = outputDigits.replace(/fourteen/gi, '14');
+        outputDigits = outputDigits.replace(/fifteen/gi, '15');
+    }
 
     if(outputDigits.toLowerCase().includes(('a'||'b'||'c'||'d'||'e'||'f'||'g'||'h'||'i'||'j'||'k'||'l'||'m'||'n'||'o'||
-            'p'||'q'||'r'||'s'||'t'||'u'||'w'||'w'||'x'||'y'||'z')))
+            'p'||'q'||'r'||'s'||'t'||'u'||'w'||'w'||'x'||'y'||'z'))
+        && listOfNoHyphenAreas.includes(outputDigits.toLowerCase()) == false )
         outputDigits = outputDigits.replace(' ', '-');
     else if (outputDigits.startsWith('1'))
-        outputDigits.replace(" " , '');
+        outputDigits.replace(/\s /g, '');
 
-
-    return outputDigits;
+    console.log(outputDigits);
+    return outputDigits.toUpperCase();
 }
 
 
@@ -479,6 +481,9 @@ function buildQueryString(params) {
 
 // an array to check against if a PLZ is in Berlin or not since Alexa gets the nearest answer and
 // resolves 89102 to Pankow or so!
+
+
+const listOfNoHyphenAreas = ['prenzlauer berg'];
 
 exports.listOfPLZAsDigits = ["10115", "10117", "10119", "10178", "10179", "10435", "10551", "10553", "10555", "10557",
     "10559", "10623", "10785", "10787", "10963", "10969", "13347", "13349", "13351", "13353", "13355", "13357", "13359",
@@ -1020,3 +1025,8 @@ exports.listOfAreas = ["oberschöneweide", "müggelheim", "johannisthal", "fried
 exports.listOfComboDistricts = ["Friedrichshain-Kreuzberg", "Charlottenburg-Wilmersdorf", "Lichtenberg",
     "Marzahn-Hellersdorf", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz-Zehlendorf",
     "Tempelhof-Schöneberg", "Treptow-Köpenick"];
+
+// we prefer to keep them in this order because these are proper names. Anne-Luise != Luise-Anne
+exports.listOfComboDistrictsNoHyphens = ["Friedrichshain Kreuzberg", "Charlottenburg Wilmersdorf", "Lichtenberg",
+    "Marzahn Hellersdorf", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz Zehlendorf",
+    "Tempelhof Schöneberg", "Treptow Köpenick"];
