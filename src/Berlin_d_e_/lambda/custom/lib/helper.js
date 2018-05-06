@@ -139,7 +139,7 @@ exports.writeDigits = function writeDigits(inputText, locale){
     // inputText.String.prototype.replaceAll('eins', '1');
 
     // DE
-    if (locale =='de_DE') {
+    if (locale =='de_DE' && !blacklist.includes(inputText)) {
         outputDigits = outputDigits.replace(/null/gi, '0');
         // console.log('converted: ' + outputDigits);
         outputDigits = outputDigits.replace(/eins/gi, '1');
@@ -174,7 +174,7 @@ exports.writeDigits = function writeDigits(inputText, locale){
         // console.log('converted: ' + outputDigits);
         outputDigits = outputDigits.replace(/fünfzehn/gi, '15');
         // console.log('converted: ' + outputDigits);
-    } else if (locale == 'en_US') {
+    } else if (locale == 'en_US' && blacklist.includes(inputText)) {
         outputDigits = outputDigits.replace(/zero/gi, '0');
         outputDigits = outputDigits.replace(/oh/gi, '0');    // TODO not sure how it's transcribed
         outputDigits = outputDigits.replace(/one/gi, '1');
@@ -198,14 +198,92 @@ exports.writeDigits = function writeDigits(inputText, locale){
             'p'||'q'||'r'||'s'||'t'||'u'||'w'||'w'||'x'||'y'||'z'))
         && listOfNoHyphenAreas.includes(outputDigits.toLowerCase()) == false )
         outputDigits = outputDigits.replace(' ', '-');
-    else if (outputDigits.startsWith('1'))
-        outputDigits.replace(/\s /g, '');
+    // else if (outputDigits.startsWith('1'))
+        outputDigits = outputDigits.replace(/ +/g, '');
+    // or .replace(/\s+/g, '');
+
 
     console.log(outputDigits);
     return outputDigits.toUpperCase();
 }
 
 
+
+exports.coatOfArmsSelector = function (resolved) {
+    let cardImg;
+
+    try {
+        if (resolved == 'Charlottenburg-Wilmersdorf')
+            cardImg = Card.berlinWappen.charlottenburg_wilmersdorf;
+        else if (resolved == 'Friedrichshain-Kreuzberg')
+            cardImg = Card.berlinWappen.friedrichshain_kreuzberg;
+        else if (resolved == 'Lichtenberg')
+            cardImg = Card.berlinWappen.lichtenberg;
+        else if (resolved == 'Marzahn-Hellersdorf')
+            cardImg = Card.berlinWappen.marzahn_hellersdorf;
+        else if (resolved == 'Mitte')
+            cardImg = Card.berlinWappen.mitte;
+        else if (resolved == 'Neukölln')
+            cardImg = Card.berlinWappen.neukölln;
+        else if (resolved == 'Pankow')
+            cardImg = Card.berlinWappen.pankow;
+        else if (resolved == 'Reinickendorf')
+            cardImg = Card.berlinWappen.reinickendorf;
+        else if (resolved == 'Spandau')
+            cardImg = Card.berlinWappen.spandau;
+        else if (resolved == 'Steglitz-Zehlendorf')
+            cardImg = Card.berlinWappen.steglitz_zehlendorf;
+        else if (resolved == 'Tempelhof-Schöneberg')
+            cardImg = Card.berlinWappen.tempelhof_schöneberg;
+        else if (resolved == 'Treptow-Köpenick')
+            cardImg = Card.berlinWappen.treptow_köpenick;
+        else cardImg = Card.logo;
+    } catch (err) {
+        console.log(err.message);
+    } finally {
+        return cardImg;
+    }
+
+
+
+}
+
+
+exports.coatOfArmsTextSelector = function (resolved) {
+    let cardImg;
+
+    try {
+        if (resolved == 'Charlottenburg-Wilmersdorf')
+            cardImg = 'charlottenburg_wilmersdorf';
+        else if (resolved == 'Friedrichshain-Kreuzberg')
+            cardImg = 'friedrichshain_kreuzberg';
+        else if (resolved == 'Lichtenberg')
+            cardImg = 'lichtenberg';
+        else if (resolved == 'Marzahn-Hellersdorf')
+            cardImg = 'marzahn_hellersdorf';
+        else if (resolved == 'Mitte')
+            cardImg = 'mitte';
+        else if (resolved == 'Neukölln')
+            cardImg = 'neukölln';
+        else if (resolved == 'Pankow')
+            cardImg = 'pankow';
+        else if (resolved == 'Reinickendorf')
+            cardImg = 'reinickendorf';
+        else if (resolved == 'Spandau')
+            cardImg = 'spandau';
+        else if (resolved == 'Steglitz-Zehlendorf')
+            cardImg = 'steglitz_zehlendorf';
+        else if (resolved == 'Tempelhof-Schöneberg')
+            cardImg = 'tempelhof_schöneberg';
+        else if (resolved == 'Treptow-Köpenick')
+            cardImg = 'treptow_köpenick';
+        else cardImg = 'logo';
+    } catch (err) {
+        console.log(err.message);
+    } finally {
+        return cardImg;
+    }
+}
 
 // ***********************************
 // ** Helper functions from
@@ -482,6 +560,7 @@ function buildQueryString(params) {
 // an array to check against if a PLZ is in Berlin or not since Alexa gets the nearest answer and
 // resolves 89102 to Pankow or so!
 
+const blacklist = ['SO sechsunddreissig', 'S. O. sechsundreißig', 's o sechs und dreissig', 's. o. sechsunddreissig']
 
 const listOfNoHyphenAreas = ['prenzlauer berg'];
 
@@ -1020,13 +1099,14 @@ exports.listOfAreas = ["oberschöneweide", "müggelheim", "johannisthal", "fried
     "neu hohen schön hausen", "friedrichshain", "SO sechs und dreißig", "boxhagen", "boxi", "stralau",
     "schlesische straße", "frankfurter allee", "kreuzberg", "yorkstraße", "charlottenburg", "charlottenburg Nord",
     "grunewald", "halensee", "schmargendorf", "westend", "wilmersdorf", "halemweg", "heerstraße", "hohenzollerndamm",
-    "wilmersdorfer"];
+    "wilmersdorfer", "h s h"];
 
 exports.listOfComboDistricts = ["Friedrichshain-Kreuzberg", "Charlottenburg-Wilmersdorf", "Lichtenberg",
     "Marzahn-Hellersdorf", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz-Zehlendorf",
     "Tempelhof-Schöneberg", "Treptow-Köpenick"];
 
 // we prefer to keep them in this order because these are proper names. Anne-Luise != Luise-Anne
-exports.listOfComboDistrictsNoHyphens = ["Friedrichshain Kreuzberg", "Charlottenburg Wilmersdorf", "Lichtenberg",
-    "Marzahn Hellersdorf", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz Zehlendorf",
-    "Tempelhof Schöneberg", "Treptow Köpenick"];
+exports.listOfComboDistrictsNoHyphens = ["friedrichshain kreuzberg", "charlottenburg wilmersdorf", "lichtenberg",
+    "marzahn hellersdorf", "mitte", "neukölln", "pankow", "reinickendorf", "spandau", "steglitz zehlendorf",
+    "tempelhof schöneberg", "treptow köpenick"];
+

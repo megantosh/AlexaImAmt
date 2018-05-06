@@ -7,6 +7,11 @@ exports.welcomeCardImg = {
 };
 
 
+exports.logo = {
+    smallImageUrl: "https://s3.eu-central-1.amazonaws.com/megantosh/Berlin_Logo.svg.png",
+    largeImageUrl: "https://s3.eu-central-1.amazonaws.com/megantosh/BerlinBig+transparent.png"
+}
+
 exports.berlinWappen = {
     'charlottenburg_wilmersdorf' : {
         smallImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Coat_of_arms_of_Charlottenburg-Wilmersdorf.svg/81px-Coat_of_arms_of_Charlottenburg-Wilmersdorf.svg.png",
@@ -55,6 +60,10 @@ exports.berlinWappen = {
     'treptow_köpenick':{
         smallImageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Coat_of_arms_of_borough_Treptow-Koepenick.svg/81px-Coat_of_arms_of_borough_Treptow-Koepenick.svg.png",
         largeImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Coat_of_arms_of_borough_Treptow-Koepenick.svg/572px-Coat_of_arms_of_borough_Treptow-Koepenick.svg.png"
+    },
+    'logo': {
+        smallImageUrl: "https://s3.eu-central-1.amazonaws.com/megantosh/Berlin_Logo.svg.png",
+        largeImageUrl: "https://s3.eu-central-1.amazonaws.com/megantosh/BerlinBig+transparent.png"
     }
 }
 

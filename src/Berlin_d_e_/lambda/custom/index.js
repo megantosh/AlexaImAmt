@@ -461,12 +461,12 @@ const DE_handlers = {
         console.log('Hello from LOC_Where Is Area Or PostLeitZahl_Intent. ');
         let say = '';
         let cardInputText = '';
-        let cardImg;
         let heard_plz_district;
 
         let slotStatus = '';
         let resolvedSlot;
         let verifiedSlot;
+        let resolvedSlotWappen;
 
 
         //   SLOT: plz_district
@@ -475,7 +475,16 @@ const DE_handlers = {
             slotStatus += heard_plz_district.value;
             resolvedSlot = resolveCanonical(heard_plz_district);
 
-            console.log(heard_plz_district);
+            console.log('heard: ' + heard_plz_district.value);
+            console.log('canonical: ' + resolvedSlot);
+            console.log(
+                'is a valid postal code (PLZ): ' +  Helper.listOfPLZ.indexOf(heard_plz_district.value) > -1  + '\n' +
+                'is an area (Ortsteil): ' + Helper.listOfAreas.includes(heard_plz_district.value) + '\n' +
+                'is a Bezirksamt: ' + Helper.listOfComboDistricts.includes(heard_plz_district.value) + '\n' +
+                'is a Bezirksamt w Hyphens: ' + Helper.listOfComboDistrictsNoHyphens.includes(heard_plz_district.value) + '\n' +
+                'is an area and not a Bezirksamt: ' + resolvedSlot != heard_plz_district.value + '\n' +
+                'is included in list of Bezirksämter ' + Helper.listOfComboDistricts.indexOf(resolvedSlot) > -1
+        );
 
             //exception (Pun) intended!
             if (heard_plz_district.value === 'Bielefeld' ) //|| heard_plz_district.value ==='bielefeld')
@@ -491,58 +500,61 @@ const DE_handlers = {
             else if (
                 ((Helper.listOfPLZ.indexOf(heard_plz_district.value) > -1 ) || //is a valid postal code (PLZ)
                     (Helper.listOfAreas.includes(heard_plz_district.value)) || //or an area (Ortsteil)
-                    (Helper.listOfComboDistrictsNoHyphens.includes(heard_plz_district.value)))
-            ) {
-                if (resolvedSlot != heard_plz_district.value
-                    && (Helper.listOfComboDistricts.indexOf(resolvedSlot) > -1)
+                    (Helper.listOfComboDistricts.includes(heard_plz_district.value)) || //or a Bezirksamt
+                    (Helper.listOfComboDistrictsNoHyphens.includes(heard_plz_district.value))) //or a Bezirksamt
                 ) {
-
-                    //if a PLZ belongs to multiple districts
-                    //TODO you want to use the list of Helpler.resolveMulti and verify it against the real hits.
-                    //check if:
-                    //de_DE_model.interactionModel.languageModel.types.name == Districts_PLZ_Combo_BER.
-                    // parent node's values[i].name.value
-                    // includes()
-                    //de_DE_model.interactionModel.languageModel.types.name == Districts_PLZ_Combo_BER.
-                    // parent node's values[i].name.synonyms
-
-                    ///TODO you want to make a promise here to make it get the digits of a PLZ before it's rendered on card!
-
-
-                    //TODO+ if Validator resolves to many districts!
-                    //TODO+ ignore case
-                    //then check if resolvedSlot is in the list of Bezirksämter
-                    slotStatus += ' ist in Bezirksamt ' + resolvedSlot
-                    //TODO+ render a card of the Wappen
-                    verifiedSlot = 'in ' + resolvedSlot;
-                } else {
-                    slotStatus += ' ist ein Bezirksamt Berlins';
-                    //TODO 'und hat die Ortsteile ...'.
-                    //TODO+ render a card of the Wappen
-                    verifiedSlot = resolvedSlot;
+                    if (
+                        resolvedSlot.toUpperCase() == heard_plz_district.value.toUpperCase()
+                        &&
+                        (Helper.listOfComboDistrictsNoHyphens.includes(heard_plz_district.value.toLowerCase()))
+                    ) {
+                        slotStatus += ' ist ein Bezirksamt Berlins';
+                        verifiedSlot = 'Bezirksamt';
+                    } else {
+                        slotStatus += ' ist in Bezirksamt ' + resolvedSlot;
+                        verifiedSlot = resolvedSlot;
                 }
             } else {
                 slotStatus = 'Von diesem Ort habe ich nie in Berlin gehört.';
-                verifiedSlot = 'bestimmt nicht in der Landeshauptstadt!'
+                verifiedSlot = 'hier bestimmt nüscht!'
             }
         }
 
-        let thepromise = new Promise(function(resolve,reject) {
 
-        });
+
+
+        //if a PLZ belongs to multiple districts
+        //TODO you want to use the list of Helpler.resolveMulti and verify it against the real hits.
+        //check if:
+        //de_DE_model.interactionModel.languageModel.types.name == Districts_PLZ_Combo_BER.
+        // parent node's values[i].name.value
+        // includes()
+        //de_DE_model.interactionModel.languageModel.types.name == Districts_PLZ_Combo_BER.
+        // parent node's values[i].name.synonyms
+
+
+
+        //TODO+ if Validator resolves to many districts!
+        //TODO+ ignore case
+        //then check if resolvedSlot is in the list of Bezirksämter
+
+        //TODO 'und hat die Ortsteile ...'.
+        //TODO+ render a card of the Wappen
 
         cardInputText =  Helper.writeDigits(heard_plz_district.value, 'de_DE');
 
 
         // console.log(typeof cardInputText); returns string
-        console.log(cardInputText);
+        // console.log(cardInputText);
+        // console.log(Helper.coatOfArmsSelector(resolvedSlot));
+        resolvedSlotWappen = Helper.coatOfArmsTextSelector(resolvedSlot);
 
 
         say += slotStatus;
 
         this.response
             .speak(say)
-            .cardRenderer(cardInputText + ' ist ',  verifiedSlot, Card.berlinWappen.charlottenburg_wilmersdorf)
+            .cardRenderer(cardInputText,  verifiedSlot, Card.berlinWappen[resolvedSlotWappen])
             .listen(Helper.randomphrase(Speech.de.BEFORE_ENDING_SESSION_TEXT));
 
         this.emit(':responseReady');

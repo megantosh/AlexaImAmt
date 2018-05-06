@@ -6,6 +6,9 @@ const invocationName = "Berlin";
 
 module.exports = {
 
+
+    //do not use "Leider ist etwas schief gelaufen" - reserved for wifi drops
+
 //****************************************************************
 // Defaults
 //****************************************************************
