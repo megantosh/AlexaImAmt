@@ -6,9 +6,13 @@
         {
           "name": "AMAZON.CancelIntent",
           "samples": [
+            "quatsch",
             "probieren wir es erneuert",
             "probieren wir es nochmal",
-            "lass uns nochmal versuchen"
+            "lass uns nochmal versuchen",
+            "vergiss es",
+            "cancel",
+            "alles klar"
           ]
         },
         {
@@ -26,10 +30,17 @@
         {
           "name": "AMAZON.StopIntent",
           "samples": [
+            "restart",
+            "verlassen",
+            "escape",
+            "quit",
+            "exit",
+            "stopp",
             "okay das reicht",
-            "alles klar",
             "sei still",
-            "hör auf"
+            "hör auf",
+            "stop",
+            "stoop"
           ]
         },
         {
@@ -56,10 +67,7 @@
             },
             {
               "name": "prerequisites_flag",
-              "type": "DE_Y_N_Prereq",
-              "samples": [
-                "{prerequisites_flag}"
-              ]
+              "type": "DE_Y_N_Prereq"
             },
             {
               "name": "required_docs_flag",
@@ -83,18 +91,6 @@
             }
           ],
           "samples": [
-            "ich brauche die {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich brauche die {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich brauche die {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich brauche die {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich brauche die {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich brauche die {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich brauche die {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich brauche die {Dienstleistung}  {description_flag} abgeben",
-            "ich brauche die {Dienstleistung}  {description_flag} anmelden",
-            "ich brauche die {Dienstleistung}  {description_flag} beantragen",
-            "ich brauche die {Dienstleistung}  {description_flag} bekommen",
-            "ich brauche die {Dienstleistung}  {description_flag} erhalten",
             "ich brauche die {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich brauche die {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich brauche die {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -155,18 +151,6 @@
             "ich brauche die {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich brauche die {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich brauche die {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich brauche das {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich brauche das {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich brauche das {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich brauche das {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich brauche das {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich brauche das {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich brauche das {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich brauche das {Dienstleistung}  {description_flag} abgeben",
-            "ich brauche das {Dienstleistung}  {description_flag} anmelden",
-            "ich brauche das {Dienstleistung}  {description_flag} beantragen",
-            "ich brauche das {Dienstleistung}  {description_flag} bekommen",
-            "ich brauche das {Dienstleistung}  {description_flag} erhalten",
             "ich brauche das {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich brauche das {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich brauche das {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -227,18 +211,6 @@
             "ich brauche das {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich brauche das {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich brauche das {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich brauche den {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich brauche den {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich brauche den {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich brauche den {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich brauche den {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich brauche den {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich brauche den {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich brauche den {Dienstleistung}  {description_flag} abgeben",
-            "ich brauche den {Dienstleistung}  {description_flag} anmelden",
-            "ich brauche den {Dienstleistung}  {description_flag} beantragen",
-            "ich brauche den {Dienstleistung}  {description_flag} bekommen",
-            "ich brauche den {Dienstleistung}  {description_flag} erhalten",
             "ich brauche den {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich brauche den {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich brauche den {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -299,18 +271,6 @@
             "ich brauche den {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich brauche den {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich brauche den {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich brauche ein {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich brauche ein {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich brauche ein {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich brauche ein {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich brauche ein {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich brauche ein {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich brauche ein {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich brauche ein {Dienstleistung}  {description_flag} abgeben",
-            "ich brauche ein {Dienstleistung}  {description_flag} anmelden",
-            "ich brauche ein {Dienstleistung}  {description_flag} beantragen",
-            "ich brauche ein {Dienstleistung}  {description_flag} bekommen",
-            "ich brauche ein {Dienstleistung}  {description_flag} erhalten",
             "ich brauche ein {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich brauche ein {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich brauche ein {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -371,18 +331,6 @@
             "ich brauche ein {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich brauche ein {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich brauche ein {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich brauche eine {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich brauche eine {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich brauche eine {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich brauche eine {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich brauche eine {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich brauche eine {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich brauche eine {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich brauche eine {Dienstleistung}  {description_flag} abgeben",
-            "ich brauche eine {Dienstleistung}  {description_flag} anmelden",
-            "ich brauche eine {Dienstleistung}  {description_flag} beantragen",
-            "ich brauche eine {Dienstleistung}  {description_flag} bekommen",
-            "ich brauche eine {Dienstleistung}  {description_flag} erhalten",
             "ich brauche eine {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich brauche eine {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich brauche eine {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -443,18 +391,6 @@
             "ich brauche eine {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich brauche eine {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich brauche eine {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich brauche mein {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich brauche mein {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich brauche mein {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich brauche mein {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich brauche mein {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich brauche mein {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich brauche mein {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich brauche mein {Dienstleistung}  {description_flag} abgeben",
-            "ich brauche mein {Dienstleistung}  {description_flag} anmelden",
-            "ich brauche mein {Dienstleistung}  {description_flag} beantragen",
-            "ich brauche mein {Dienstleistung}  {description_flag} bekommen",
-            "ich brauche mein {Dienstleistung}  {description_flag} erhalten",
             "ich brauche mein {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich brauche mein {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich brauche mein {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -515,18 +451,6 @@
             "ich brauche mein {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich brauche mein {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich brauche mein {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich brauche meinem {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich brauche meinem {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich brauche meinem {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich brauche meinem {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich brauche meinem {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich brauche meinem {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich brauche meinem {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich brauche meinem {Dienstleistung}  {description_flag} abgeben",
-            "ich brauche meinem {Dienstleistung}  {description_flag} anmelden",
-            "ich brauche meinem {Dienstleistung}  {description_flag} beantragen",
-            "ich brauche meinem {Dienstleistung}  {description_flag} bekommen",
-            "ich brauche meinem {Dienstleistung}  {description_flag} erhalten",
             "ich brauche meinem {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich brauche meinem {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich brauche meinem {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -587,18 +511,6 @@
             "ich brauche meinem {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich brauche meinem {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich brauche meinem {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich benötige die {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich benötige die {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich benötige die {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich benötige die {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich benötige die {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich benötige die {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich benötige die {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich benötige die {Dienstleistung}  {description_flag} abgeben",
-            "ich benötige die {Dienstleistung}  {description_flag} anmelden",
-            "ich benötige die {Dienstleistung}  {description_flag} beantragen",
-            "ich benötige die {Dienstleistung}  {description_flag} bekommen",
-            "ich benötige die {Dienstleistung}  {description_flag} erhalten",
             "ich benötige die {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich benötige die {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich benötige die {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -659,18 +571,6 @@
             "ich benötige die {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich benötige die {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich benötige die {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich benötige das {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich benötige das {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich benötige das {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich benötige das {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich benötige das {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich benötige das {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich benötige das {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich benötige das {Dienstleistung}  {description_flag} abgeben",
-            "ich benötige das {Dienstleistung}  {description_flag} anmelden",
-            "ich benötige das {Dienstleistung}  {description_flag} beantragen",
-            "ich benötige das {Dienstleistung}  {description_flag} bekommen",
-            "ich benötige das {Dienstleistung}  {description_flag} erhalten",
             "ich benötige das {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich benötige das {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich benötige das {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -731,18 +631,6 @@
             "ich benötige das {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich benötige das {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich benötige das {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich benötige den {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich benötige den {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich benötige den {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich benötige den {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich benötige den {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich benötige den {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich benötige den {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich benötige den {Dienstleistung}  {description_flag} abgeben",
-            "ich benötige den {Dienstleistung}  {description_flag} anmelden",
-            "ich benötige den {Dienstleistung}  {description_flag} beantragen",
-            "ich benötige den {Dienstleistung}  {description_flag} bekommen",
-            "ich benötige den {Dienstleistung}  {description_flag} erhalten",
             "ich benötige den {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich benötige den {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich benötige den {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -803,18 +691,6 @@
             "ich benötige den {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich benötige den {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich benötige den {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich benötige ein {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich benötige ein {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich benötige ein {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich benötige ein {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich benötige ein {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich benötige ein {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich benötige ein {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich benötige ein {Dienstleistung}  {description_flag} abgeben",
-            "ich benötige ein {Dienstleistung}  {description_flag} anmelden",
-            "ich benötige ein {Dienstleistung}  {description_flag} beantragen",
-            "ich benötige ein {Dienstleistung}  {description_flag} bekommen",
-            "ich benötige ein {Dienstleistung}  {description_flag} erhalten",
             "ich benötige ein {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich benötige ein {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich benötige ein {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -875,18 +751,6 @@
             "ich benötige ein {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich benötige ein {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich benötige ein {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich benötige eine {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich benötige eine {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich benötige eine {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich benötige eine {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich benötige eine {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich benötige eine {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich benötige eine {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich benötige eine {Dienstleistung}  {description_flag} abgeben",
-            "ich benötige eine {Dienstleistung}  {description_flag} anmelden",
-            "ich benötige eine {Dienstleistung}  {description_flag} beantragen",
-            "ich benötige eine {Dienstleistung}  {description_flag} bekommen",
-            "ich benötige eine {Dienstleistung}  {description_flag} erhalten",
             "ich benötige eine {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich benötige eine {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich benötige eine {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -947,18 +811,6 @@
             "ich benötige eine {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich benötige eine {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich benötige eine {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich benötige mein {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich benötige mein {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich benötige mein {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich benötige mein {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich benötige mein {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich benötige mein {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich benötige mein {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich benötige mein {Dienstleistung}  {description_flag} abgeben",
-            "ich benötige mein {Dienstleistung}  {description_flag} anmelden",
-            "ich benötige mein {Dienstleistung}  {description_flag} beantragen",
-            "ich benötige mein {Dienstleistung}  {description_flag} bekommen",
-            "ich benötige mein {Dienstleistung}  {description_flag} erhalten",
             "ich benötige mein {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich benötige mein {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich benötige mein {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1019,18 +871,6 @@
             "ich benötige mein {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich benötige mein {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich benötige mein {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich benötige meinem {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich benötige meinem {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich benötige meinem {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich benötige meinem {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich benötige meinem {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich benötige meinem {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich benötige meinem {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich benötige meinem {Dienstleistung}  {description_flag} abgeben",
-            "ich benötige meinem {Dienstleistung}  {description_flag} anmelden",
-            "ich benötige meinem {Dienstleistung}  {description_flag} beantragen",
-            "ich benötige meinem {Dienstleistung}  {description_flag} bekommen",
-            "ich benötige meinem {Dienstleistung}  {description_flag} erhalten",
             "ich benötige meinem {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich benötige meinem {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich benötige meinem {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1091,18 +931,6 @@
             "ich benötige meinem {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich benötige meinem {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich benötige meinem {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich möchte die {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich möchte die {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich möchte die {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich möchte die {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich möchte die {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich möchte die {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich möchte die {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich möchte die {Dienstleistung}  {description_flag} abgeben",
-            "ich möchte die {Dienstleistung}  {description_flag} anmelden",
-            "ich möchte die {Dienstleistung}  {description_flag} beantragen",
-            "ich möchte die {Dienstleistung}  {description_flag} bekommen",
-            "ich möchte die {Dienstleistung}  {description_flag} erhalten",
             "ich möchte die {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich möchte die {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich möchte die {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1163,18 +991,6 @@
             "ich möchte die {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich möchte die {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich möchte die {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich möchte das {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich möchte das {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich möchte das {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich möchte das {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich möchte das {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich möchte das {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich möchte das {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich möchte das {Dienstleistung}  {description_flag} abgeben",
-            "ich möchte das {Dienstleistung}  {description_flag} anmelden",
-            "ich möchte das {Dienstleistung}  {description_flag} beantragen",
-            "ich möchte das {Dienstleistung}  {description_flag} bekommen",
-            "ich möchte das {Dienstleistung}  {description_flag} erhalten",
             "ich möchte das {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich möchte das {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich möchte das {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1235,18 +1051,6 @@
             "ich möchte das {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich möchte das {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich möchte das {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich möchte den {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich möchte den {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich möchte den {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich möchte den {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich möchte den {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich möchte den {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich möchte den {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich möchte den {Dienstleistung}  {description_flag} abgeben",
-            "ich möchte den {Dienstleistung}  {description_flag} anmelden",
-            "ich möchte den {Dienstleistung}  {description_flag} beantragen",
-            "ich möchte den {Dienstleistung}  {description_flag} bekommen",
-            "ich möchte den {Dienstleistung}  {description_flag} erhalten",
             "ich möchte den {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich möchte den {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich möchte den {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1307,18 +1111,6 @@
             "ich möchte den {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich möchte den {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich möchte den {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich möchte ein {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich möchte ein {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich möchte ein {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich möchte ein {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich möchte ein {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich möchte ein {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich möchte ein {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich möchte ein {Dienstleistung}  {description_flag} abgeben",
-            "ich möchte ein {Dienstleistung}  {description_flag} anmelden",
-            "ich möchte ein {Dienstleistung}  {description_flag} beantragen",
-            "ich möchte ein {Dienstleistung}  {description_flag} bekommen",
-            "ich möchte ein {Dienstleistung}  {description_flag} erhalten",
             "ich möchte ein {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich möchte ein {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich möchte ein {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1379,18 +1171,6 @@
             "ich möchte ein {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich möchte ein {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich möchte ein {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich möchte eine {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich möchte eine {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich möchte eine {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich möchte eine {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich möchte eine {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich möchte eine {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich möchte eine {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich möchte eine {Dienstleistung}  {description_flag} abgeben",
-            "ich möchte eine {Dienstleistung}  {description_flag} anmelden",
-            "ich möchte eine {Dienstleistung}  {description_flag} beantragen",
-            "ich möchte eine {Dienstleistung}  {description_flag} bekommen",
-            "ich möchte eine {Dienstleistung}  {description_flag} erhalten",
             "ich möchte eine {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich möchte eine {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich möchte eine {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1451,18 +1231,6 @@
             "ich möchte eine {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich möchte eine {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich möchte eine {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich möchte mein {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich möchte mein {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich möchte mein {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich möchte mein {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich möchte mein {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich möchte mein {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich möchte mein {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich möchte mein {Dienstleistung}  {description_flag} abgeben",
-            "ich möchte mein {Dienstleistung}  {description_flag} anmelden",
-            "ich möchte mein {Dienstleistung}  {description_flag} beantragen",
-            "ich möchte mein {Dienstleistung}  {description_flag} bekommen",
-            "ich möchte mein {Dienstleistung}  {description_flag} erhalten",
             "ich möchte mein {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich möchte mein {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich möchte mein {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1523,18 +1291,6 @@
             "ich möchte mein {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich möchte mein {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich möchte mein {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich möchte meinem {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich möchte meinem {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich möchte meinem {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich möchte meinem {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich möchte meinem {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich möchte meinem {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich möchte meinem {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich möchte meinem {Dienstleistung}  {description_flag} abgeben",
-            "ich möchte meinem {Dienstleistung}  {description_flag} anmelden",
-            "ich möchte meinem {Dienstleistung}  {description_flag} beantragen",
-            "ich möchte meinem {Dienstleistung}  {description_flag} bekommen",
-            "ich möchte meinem {Dienstleistung}  {description_flag} erhalten",
             "ich möchte meinem {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich möchte meinem {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich möchte meinem {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1595,18 +1351,6 @@
             "ich möchte meinem {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich möchte meinem {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich möchte meinem {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich muss die {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich muss die {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich muss die {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich muss die {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich muss die {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich muss die {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich muss die {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich muss die {Dienstleistung}  {description_flag} abgeben",
-            "ich muss die {Dienstleistung}  {description_flag} anmelden",
-            "ich muss die {Dienstleistung}  {description_flag} beantragen",
-            "ich muss die {Dienstleistung}  {description_flag} bekommen",
-            "ich muss die {Dienstleistung}  {description_flag} erhalten",
             "ich muss die {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich muss die {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich muss die {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1667,18 +1411,6 @@
             "ich muss die {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich muss die {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich muss die {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich muss das {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich muss das {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich muss das {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich muss das {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich muss das {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich muss das {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich muss das {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich muss das {Dienstleistung}  {description_flag} abgeben",
-            "ich muss das {Dienstleistung}  {description_flag} anmelden",
-            "ich muss das {Dienstleistung}  {description_flag} beantragen",
-            "ich muss das {Dienstleistung}  {description_flag} bekommen",
-            "ich muss das {Dienstleistung}  {description_flag} erhalten",
             "ich muss das {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich muss das {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich muss das {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1739,18 +1471,6 @@
             "ich muss das {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich muss das {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich muss das {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich muss den {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich muss den {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich muss den {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich muss den {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich muss den {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich muss den {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich muss den {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich muss den {Dienstleistung}  {description_flag} abgeben",
-            "ich muss den {Dienstleistung}  {description_flag} anmelden",
-            "ich muss den {Dienstleistung}  {description_flag} beantragen",
-            "ich muss den {Dienstleistung}  {description_flag} bekommen",
-            "ich muss den {Dienstleistung}  {description_flag} erhalten",
             "ich muss den {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich muss den {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich muss den {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1811,18 +1531,6 @@
             "ich muss den {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich muss den {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich muss den {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich muss ein {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich muss ein {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich muss ein {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich muss ein {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich muss ein {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich muss ein {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich muss ein {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich muss ein {Dienstleistung}  {description_flag} abgeben",
-            "ich muss ein {Dienstleistung}  {description_flag} anmelden",
-            "ich muss ein {Dienstleistung}  {description_flag} beantragen",
-            "ich muss ein {Dienstleistung}  {description_flag} bekommen",
-            "ich muss ein {Dienstleistung}  {description_flag} erhalten",
             "ich muss ein {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich muss ein {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich muss ein {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1883,18 +1591,6 @@
             "ich muss ein {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich muss ein {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich muss ein {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich muss eine {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich muss eine {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich muss eine {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich muss eine {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich muss eine {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich muss eine {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich muss eine {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich muss eine {Dienstleistung}  {description_flag} abgeben",
-            "ich muss eine {Dienstleistung}  {description_flag} anmelden",
-            "ich muss eine {Dienstleistung}  {description_flag} beantragen",
-            "ich muss eine {Dienstleistung}  {description_flag} bekommen",
-            "ich muss eine {Dienstleistung}  {description_flag} erhalten",
             "ich muss eine {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich muss eine {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich muss eine {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -1955,18 +1651,6 @@
             "ich muss eine {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich muss eine {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich muss eine {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich muss mein {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich muss mein {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich muss mein {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich muss mein {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich muss mein {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich muss mein {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich muss mein {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich muss mein {Dienstleistung}  {description_flag} abgeben",
-            "ich muss mein {Dienstleistung}  {description_flag} anmelden",
-            "ich muss mein {Dienstleistung}  {description_flag} beantragen",
-            "ich muss mein {Dienstleistung}  {description_flag} bekommen",
-            "ich muss mein {Dienstleistung}  {description_flag} erhalten",
             "ich muss mein {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich muss mein {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich muss mein {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -2027,18 +1711,6 @@
             "ich muss mein {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich muss mein {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich muss mein {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich muss meinem {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich muss meinem {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich muss meinem {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich muss meinem {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich muss meinem {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich muss meinem {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich muss meinem {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich muss meinem {Dienstleistung}  {description_flag} abgeben",
-            "ich muss meinem {Dienstleistung}  {description_flag} anmelden",
-            "ich muss meinem {Dienstleistung}  {description_flag} beantragen",
-            "ich muss meinem {Dienstleistung}  {description_flag} bekommen",
-            "ich muss meinem {Dienstleistung}  {description_flag} erhalten",
             "ich muss meinem {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich muss meinem {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich muss meinem {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -2099,18 +1771,6 @@
             "ich muss meinem {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich muss meinem {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich muss meinem {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich will die {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich will die {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich will die {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich will die {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich will die {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich will die {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich will die {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich will die {Dienstleistung}  {description_flag} abgeben",
-            "ich will die {Dienstleistung}  {description_flag} anmelden",
-            "ich will die {Dienstleistung}  {description_flag} beantragen",
-            "ich will die {Dienstleistung}  {description_flag} bekommen",
-            "ich will die {Dienstleistung}  {description_flag} erhalten",
             "ich will die {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich will die {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich will die {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -2171,18 +1831,6 @@
             "ich will die {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich will die {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich will die {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich will das {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich will das {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich will das {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich will das {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich will das {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich will das {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich will das {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich will das {Dienstleistung}  {description_flag} abgeben",
-            "ich will das {Dienstleistung}  {description_flag} anmelden",
-            "ich will das {Dienstleistung}  {description_flag} beantragen",
-            "ich will das {Dienstleistung}  {description_flag} bekommen",
-            "ich will das {Dienstleistung}  {description_flag} erhalten",
             "ich will das {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich will das {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich will das {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -2243,18 +1891,6 @@
             "ich will das {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich will das {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich will das {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich will den {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich will den {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich will den {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich will den {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich will den {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich will den {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich will den {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich will den {Dienstleistung}  {description_flag} abgeben",
-            "ich will den {Dienstleistung}  {description_flag} anmelden",
-            "ich will den {Dienstleistung}  {description_flag} beantragen",
-            "ich will den {Dienstleistung}  {description_flag} bekommen",
-            "ich will den {Dienstleistung}  {description_flag} erhalten",
             "ich will den {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich will den {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich will den {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -2315,18 +1951,6 @@
             "ich will den {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich will den {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich will den {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich will ein {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich will ein {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich will ein {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich will ein {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich will ein {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich will ein {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich will ein {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich will ein {Dienstleistung}  {description_flag} abgeben",
-            "ich will ein {Dienstleistung}  {description_flag} anmelden",
-            "ich will ein {Dienstleistung}  {description_flag} beantragen",
-            "ich will ein {Dienstleistung}  {description_flag} bekommen",
-            "ich will ein {Dienstleistung}  {description_flag} erhalten",
             "ich will ein {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich will ein {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich will ein {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -2387,18 +2011,6 @@
             "ich will ein {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich will ein {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich will ein {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich will eine {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich will eine {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich will eine {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich will eine {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich will eine {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich will eine {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich will eine {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich will eine {Dienstleistung}  {description_flag} abgeben",
-            "ich will eine {Dienstleistung}  {description_flag} anmelden",
-            "ich will eine {Dienstleistung}  {description_flag} beantragen",
-            "ich will eine {Dienstleistung}  {description_flag} bekommen",
-            "ich will eine {Dienstleistung}  {description_flag} erhalten",
             "ich will eine {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich will eine {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich will eine {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -2459,18 +2071,6 @@
             "ich will eine {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich will eine {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich will eine {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich will mein {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich will mein {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich will mein {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich will mein {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich will mein {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich will mein {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich will mein {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich will mein {Dienstleistung}  {description_flag} abgeben",
-            "ich will mein {Dienstleistung}  {description_flag} anmelden",
-            "ich will mein {Dienstleistung}  {description_flag} beantragen",
-            "ich will mein {Dienstleistung}  {description_flag} bekommen",
-            "ich will mein {Dienstleistung}  {description_flag} erhalten",
             "ich will mein {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich will mein {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich will mein {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -2531,18 +2131,6 @@
             "ich will mein {Dienstleistung}  {book_appointment_flag} beantragen",
             "ich will mein {Dienstleistung}  {book_appointment_flag} bekommen",
             "ich will mein {Dienstleistung}  {book_appointment_flag} erhalten",
-            "ich will meinem {Dienstleistung}  {description_flag} in {location} {extension_flag}",
-            "ich will meinem {Dienstleistung}  {description_flag} in {location} abgeben",
-            "ich will meinem {Dienstleistung}  {description_flag} in {location} anmelden",
-            "ich will meinem {Dienstleistung}  {description_flag} in {location} beantragen",
-            "ich will meinem {Dienstleistung}  {description_flag} in {location} bekommen",
-            "ich will meinem {Dienstleistung}  {description_flag} in {location} erhalten",
-            "ich will meinem {Dienstleistung}  {description_flag} {extension_flag}",
-            "ich will meinem {Dienstleistung}  {description_flag} abgeben",
-            "ich will meinem {Dienstleistung}  {description_flag} anmelden",
-            "ich will meinem {Dienstleistung}  {description_flag} beantragen",
-            "ich will meinem {Dienstleistung}  {description_flag} bekommen",
-            "ich will meinem {Dienstleistung}  {description_flag} erhalten",
             "ich will meinem {Dienstleistung}  {prerequisites_flag} in {location} {extension_flag}",
             "ich will meinem {Dienstleistung}  {prerequisites_flag} in {location} abgeben",
             "ich will meinem {Dienstleistung}  {prerequisites_flag} in {location} anmelden",
@@ -4046,6 +3634,8 @@
             }
           ],
           "samples": [
+            "ich möchte einen {bafoegType}",
+            "ich möchte Bafög bekommen",
             "ich möchte {bafoegType}",
             "ich will bafög beantragen",
             "Ich möchte Bafög"
@@ -4095,7 +3685,10 @@
           "slots": [
             {
               "name": "dienstleistung",
-              "type": "DE_PublicSvcs_Berlin"
+              "type": "DE_PublicSvcs_Berlin",
+              "samples": [
+                "{dienstleistung}"
+              ]
             },
             {
               "name": "officeType",
@@ -7126,13 +6719,50 @@
               "prompts": {
                 "elicitation": "Elicit.Slot.194404890129.1162370056458"
               }
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "DE_Y_N_Prereq",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "DE_Y_N_RequiredDocs",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "costs_flag",
+              "type": "DE_Y_N_Cost",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "DE_Y_N_ProcessTime",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "DE_Y_N_BookAppointment",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
             }
           ]
         },
         {
           "name": "DL_General_Intent_Allgemeine_Fragen",
-          "confirmationRequired": false,
-          "prompts": {},
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1063378847829"
+          },
           "slots": [
             {
               "name": "Dienstleistung",
@@ -7154,10 +6784,8 @@
               "name": "prerequisites_flag",
               "type": "DE_Y_N_Prereq",
               "confirmationRequired": false,
-              "elicitationRequired": true,
-              "prompts": {
-                "elicitation": "Elicit.Slot.871265382017.1447005972347"
-              }
+              "elicitationRequired": false,
+              "prompts": {}
             },
             {
               "name": "book_appointment_flag",
@@ -7221,8 +6849,10 @@
               "name": "partner_eu_flag",
               "type": "DE_Y_N_Flag",
               "confirmationRequired": false,
-              "elicitationRequired": false,
-              "prompts": {}
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.792939959590.1135221861350"
+              }
             },
             {
               "name": "citizenship",
@@ -7312,6 +6942,41 @@
               "prompts": {
                 "elicitation": "Elicit.Slot.170695308429.1485160893156"
               }
+            },
+            {
+              "name": "extension_flag",
+              "type": "DE_Y_N_Extension",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "DE_Y_N_RequiredDocs",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "costs_flag",
+              "type": "DE_Y_N_Cost",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "DE_Y_N_ProcessTime",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "DE_Y_N_BookAppointment",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
             }
           ]
         },
@@ -7326,8 +6991,10 @@
               "name": "dienstleistung",
               "type": "DE_PublicSvcs_Berlin",
               "confirmationRequired": false,
-              "elicitationRequired": false,
-              "prompts": {}
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1155478739065.1184681475347"
+              }
             },
             {
               "name": "officeType",
@@ -7360,7 +7027,7 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "ich verstehe du suchst nach einer Approbation für einen akademischen Beruf im Gesundheitswesen. Welcher soll der sein?"
+            "value": "ich verstehe Sie suchst nach einer Approbation für einen akademischen Beruf im Gesundheitswesen. Welcher soll der sein?"
           }
         ]
       },
@@ -7369,15 +7036,15 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "ich gehe davon aus, dass deine Examen in Berlin waren?"
+            "value": "ich gehe davon aus, dass Ihre Examen in Berlin waren?"
           },
           {
             "type": "PlainText",
-            "value": "und deine prüfung dafür ist schon in Berlin bestanden?"
+            "value": "und Ihre prüfung dafür ist schon in Berlin bestanden?"
           },
           {
             "type": "PlainText",
-            "value": "Hast du dafür deine Prüfung in Berlin abgelegt?"
+            "value": "Haben Sie dafür Ihre Prüfung in Berlin abgelegt?"
           }
         ]
       },
@@ -7386,11 +7053,11 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "Du weißt wahrscheinlich schon, dass du dafür in Berlin angemeldet sein musst. Bist du in Berlin schon angemeldet?"
+            "value": "Sie wissen schon, dass Sie dafür in Berlin angemeldet sein müssen. Sind Sie?"
           },
           {
             "type": "PlainText",
-            "value": "Um diese Angelegenheit zu bearbeiten, musst du in Berlin angemeldet sein. Bist du in Berlin angemeldet?"
+            "value": "Um diese Angelegenheit zu bearbeiten, müssen Sie in Berlin angemeldet sein. Ist das der Fall?"
           }
         ]
       },
@@ -7399,11 +7066,7 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "Super. ich brauche etwas mehr information über dich, wenn ich darf. Ich gehe davon aus, du verrätst mir nur die Staatsbürgerschaft, mit der du den Antrag stellen willst.  Also.. Was ist deine Staatsbürgerschaft?"
-          },
-          {
-            "type": "PlainText",
-            "value": "OK, mit welcher Staatsbürgerschaft willst du verfahren?"
+            "value": "OK, Welche Staatsbürgerschaft haben Sie. Wenn mehrere, mit welcher Staatsbürgerschaft wollen Sie verfahren?"
           }
         ]
       },
@@ -7412,7 +7075,7 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "und was ist der Aufenthaltszweck?"
+            "value": "und was ist Ihr Aufenthaltszweck in Berlin?"
           }
         ]
       },
@@ -7421,11 +7084,11 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "soll ich dir was über die Voraussetzungen dazu erzählen?"
+            "value": "soll ich Ihnene was über die Voraussetzungen dazu erzählen?"
           },
           {
             "type": "PlainText",
-            "value": "magst du dich über die Voraussetzungen informieren?"
+            "value": "Möchten Sie sich über die Voraussetzungen dazu informieren?"
           }
         ]
       },
@@ -7443,11 +7106,11 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "soll ich dir was über die Voraussetzungen dazu erzählen?"
+            "value": "soll ich Ihnen was über die Voraussetzungen dazu erzählen?"
           },
           {
             "type": "PlainText",
-            "value": "magst du dich über die Voraussetztungen informieren?"
+            "value": "Möchten Sie sich über die Voraussetzungen dazu informieren?"
           }
         ]
       },
@@ -7474,7 +7137,7 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "Ich kann dir bei mehrere Bafög-Dienste helfen. Ist das für einen Schüler, einen Auszubildenden, fürs Ausland oder keins davon?"
+            "value": "Ich kann Ihnen bei mehrere Bafög-Dienste helfen. Ist das für einen Schüler, einen Auszubildenden, fürs Ausland oder keins davon?"
           }
         ]
       },
@@ -7483,11 +7146,11 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "Ich hab den Namen der Dienstleistung nicht ganz verstanden. Magst du das nochmal wiederholen?"
+            "value": "Ich hab den Namen der Dienstleistung nicht ganz verstanden. Mögen Sie das nochmal wiederholen?"
           },
           {
             "type": "PlainText",
-            "value": "welche Dienstleistung meinst du genau?"
+            "value": "welche Dienstleistung meinen Sie genau?"
           }
         ]
       },
@@ -7496,11 +7159,11 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "Ich kann dir sagen, welche Bedingungen dafür erfüllt sein müssen. soll ich das?"
+            "value": "Ich kann Ihnen sagen, welche Bedingungen dafür erfüllt sein müssen. soll ich?"
           },
           {
             "type": "PlainText",
-            "value": "Magst du dich über die Voraussetzungen Informieren?"
+            "value": "Möchten Sie sich über die Voraussetzungen Informieren?"
           },
           {
             "type": "PlainText",
@@ -7514,6 +7177,41 @@
           {
             "type": "PlainText",
             "value": "Du suchst {dienstleistung} in {district}"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1063378847829",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{Dienstleistung} , korrekt?"
+          },
+          {
+            "type": "PlainText",
+            "value": "{Dienstleistung} . Richtig?"
+          },
+          {
+            "type": "PlainText",
+            "value": "{Dienstleistung} hab ich verstanden. Richtig?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.792939959590.1135221861350",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sind Sie mit einem E U Bürger verheiratet, verpartnert oder ist einer Ihrer Kinder E U Bürger?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1155478739065.1184681475347",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Welche Dienstleistung meinen sie bitte?"
           }
         ]
       }

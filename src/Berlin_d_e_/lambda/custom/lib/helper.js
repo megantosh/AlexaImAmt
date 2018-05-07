@@ -134,12 +134,22 @@ exports.getCustomIntents = function getCustomIntents(currentLocale) {
 
 
 
-exports.cardIntents = function cardIntents(iArray) {
+exports.cardIntents = function cardIntents(iArray, locale) {
     let body = "";
-    for (let i = 0; i < iArray.length; i++) {
-        body += iArray[i].name + "\n";
-        body += "  '" + iArray[i].samples[0] + "'\n";
-    }
+    let i = Math.floor(Math.random() * iArray.length);
+    let j = Math.floor(Math.random() * iArray.length);
+//    use a for loop only in conjunction with a card display template, otherwise the same screen is boring every time!
+//    for (let i = 0; i < iArray.length; i++) {
+
+    body += exports.extractHumanReadableIntent(iArray[i].name) + "\n\n";
+    body += "  > " +
+            exports.extractHumanReadableSample(iArray[i].samples[iArray.length * Math.floor(Math.random())], locale) + "\n\n";
+
+    body += exports.extractHumanReadableIntent(iArray[j].name) + "\n\n";
+    body += "  > " +
+            exports.extractHumanReadableSample(iArray[j].samples[iArray.length * Math.floor(Math.random())], locale) + "\n\n";
+
+
     return (body);
 }
 
@@ -225,7 +235,7 @@ exports.writeDigits = function writeDigits(inputText, locale){
 }
 
 
-exports.coatOfArmsSelector = function (resolved) {
+exports.coatOfArmsSelector = function coatOfArmsSelector(resolved) {
     let cardImg;
 
     try {
@@ -265,7 +275,7 @@ exports.coatOfArmsSelector = function (resolved) {
 }
 
 
-exports.coatOfArmsTextSelector = function (resolved) {
+exports.coatOfArmsTextSelector = function coatOfArmsTextSelector(resolved) {
     let cardImg;
 
     try {
@@ -313,6 +323,7 @@ exports.coatOfArmsTextSelector = function (resolved) {
 
 // after doing the logic in new session,
 // route to the proper intent
+// so far not used since we do not retain over sessions
 
 exports.routeToIntent = function routeToIntent() {
 
@@ -374,7 +385,7 @@ exports.getSlotValues = function getSlotValues(filledSlots) {
             };
         }
     }, this);
-    //console.log("slot values: "+JSON.stringify(slotValues));
+    console.log("slot values: "+JSON.stringify(slotValues));
     return slotValues;
 }
 // This function delegates multi-turn dialogs to Alexa.
@@ -443,7 +454,7 @@ function disambiguateSlot() {
                         prompt_or_text = ' or';
                     } else if (currentLocale == 'de-DE') {
                         console.log('wir suchen disambiguations auf deutsch')
-                        prompt = 'Meinst du:  ';
+                        prompt = 'Meinen Sie:  ';
                         prompt_or_text = '? oder '
                     } else prompt = 'ermm ';
 
@@ -507,22 +518,46 @@ function slotHasValue(request, slotName) {
 // ** String Cleaners
 // ***********************************
 
-exports.reformatHTMLtoAlexaFriendly = function (inputString) {
+exports.reformatHTMLtoAlexaFriendly = function reformatHTMLtoAlexaFriendly(inputString) {
+
+    //regex ref
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+    //remove hyperlinks
+    // https://stackoverflow.com/questions/960156/regex-in-javascript-to-remove-links
+    inputString = inputString.replace(/<a\b[^>]*>(.*?)<\/a>/gi, '');
+
+    //remove unnecessary words:
+    inputString = inputString.replace(/Mehr zum Thema: /gi, '');
+
     inputString = '<p> ' + inputString;
     inputString = inputString.replace(/<br\s*[\/]?>/gi, '</p> <p>');
-    inputString = inputString.replace(/.\n/g,'.');
-    inputString = inputString.replace(/ -/g,'.');
+    inputString = inputString.replace(/\n./g,'.');
+    inputString = inputString.replace(/\n/g,'.');
+    inputString = inputString.replace(/\ -\ /g,'.');
+    inputString = inputString.replace(/\\n/g, '');
+    inputString = inputString.replace(/<p>\n<\/p>/,'');
+    inputString = inputString.replace(/<ul\ class=\\"list\\">/gi, '');
+    inputString = inputString.replace(/<ul\ class=\\\"list\\\">/gi, '');
+    inputString = inputString.replace(/<\/ul>/gi, '');
+    inputString = inputString.replace(/<ul class="list">(.*?)<\/ul>/g, function(a,s){return s;});
+    inputString = inputString.replace(/<li>/gi, '. ');
+    inputString = inputString.replace(/<\/li>/gi, '');
+    inputString = inputString.replace(/&quot;/gi, ' " ');
+
+
 
     //Apply SSML or remove with /<\/?strong>/g
     // inputString = inputString.replace(/<\/?strong>/g,'<prosody volume="x-loud">');
     inputString = inputString.replace(/<\/?strong>/g,'.');
+    inputString += ' </p>';
 
     return inputString;
     }
 
 // <br />\n
 
-exports.extractHumanReadableIntent = function (IntentName){
+exports.extractHumanReadableIntent = function extractHumanReadableIntent(IntentName){
     console.log('caught name: ' + IntentName);
     if(IntentName.includes('_Intent_'))
         IntentName = IntentName.split('_Intent_')[1];
@@ -537,35 +572,51 @@ exports.extractHumanReadableIntent = function (IntentName){
 
 }
 
-exports.extractHumanReadableSample = function (utterance, locale) {
+
+exports.extractHumanReadableSample = function extractHumanReadableSample(utterance, locale) {
+    let possibleLocations = exports.listOfAreas.concat(exports.listOfPLZ) ;
+
     console.log('caught utterance: ' + utterance);
+    console.log('type of utterance: ' + typeof utterance);
+    console.log('utterance inspection: '+  util.inspect(utterance));
+
 
     switch(locale) {
         case 'de_DE':
             // if (utterance.toLowercase().indexOf("{dienstleistung} " >= 0)){
-            utterance= utterance.replace(/ {dienstleistung}/gi, ", dann Name Der Dienstleistung, beispielsweise \'Perso\' "); //dann....
+            utterance= utterance.replace(/ {Dienstleistung}/gi, ", dann Name Der Dienstleistung, beispielsweise" +
+                " \'Perso\' "); //dann....
             utterance= utterance.replace(/ {extension_flag}/gi, " verlängern ");
-            utterance= utterance.replace(/ {prerequisites_flag}/gi, " Wie geht das denn mit ");//Bedingungen muss ich erfüllen für
+            utterance= utterance.replace(/ {prerequisites_flag}/gi, ". Was brauche ich dafür? ");//Bedingungen muss
+            // ich erfüllen für
             utterance= utterance.replace(/ {description_flag}/gi, " Was bedeutet ");
             utterance= utterance.replace(/ {required_docs_flag}/gi, " Welche Unterlagen brauche ich für ");
             utterance= utterance.replace(/ {costs_flag}/gi, " Was kostet ");
             utterance= utterance.replace(/ {processing_time_flag}/gi, " Wie lange dauert die Bearbeitung für ");
             utterance= utterance.replace(/ {book_appointment_flag}/gi, " Ich möchte einen Termin buchen für");
             utterance= utterance.replace(/ {onlineAntrag}/gi, " online ");
-            utterance= utterance.replace(/ {plz_district}/gi, " zehn neun neun neun ");
+            //TODO randomphrase(possibleLocations); //zehn neun neun neun
+            utterance= utterance.replace(/ {plz_district}/gi,  ' zehn neun neun neun');
             utterance= utterance.replace(/ {location}/gi, " Kreuzberg ");
             utterance= utterance.replace(/ {BerufGesundheit}/gi, " Arzt ");
             utterance= utterance.replace(/ {bafoegType}/gi, " Bafög ");
             utterance= utterance.replace(/ {citizenship}/gi, " als Ägypter ");
-            utterance= utterance.replace(/ {smalltalk}/gi, " Wie siehst du denn aus? ");
-            utterance= utterance.replace(/ {statistic}/gi, " Bezirksämter ");
+            utterance= utterance.replace(/ {smalltalk}/gi, " Wie siehst du denn aus? ");  //TODO geht nicht!
+            utterance= utterance.replace(/{smalltalk}/gi, " Wie siehst du denn aus? ");  //TODO geht nicht!
+            utterance= utterance.replace(/{smalltalk}/gi, " Wie siehst du denn aus? ");  //TODO geht nicht!
 
 
+            utterance= utterance.replace(/ {statistic}/gi, " dann zum beispiel Bezirksämter ");
+            utterance= utterance.replace(/ {district_combo_name}/gi, " zum beispiel Charlottenburg ");
+            break;
 
         case 'en_US':
             // if (utterance.toLowercase().indexOf("{dienstleistung} " >= 0))
-                utterance= utterance.replace(/{dienstleistung}/gi, ", then Name of the Service, then ");
+                utterance= utterance.replace(/{Dienstleistung}/gi, ", then Name of the Service, then ");
+            break;
     }
+
+    console.log('human-readable utterance: ' + utterance);
 
         return utterance;
 }
@@ -649,7 +700,7 @@ const blacklist = ['SO sechsunddreissig', 'S. O. sechsundreißig', 's o sechs un
 
 const listOfNoHyphenAreas = ['prenzlauer berg'];
 
-exports.listOfPLZAsDigits = ["10115", "10117", "10119", "10178", "10179", "10435", "10551", "10553", "10555", "10557",
+exports.listOfPLZAsDigits =  ["10115", "10117", "10119", "10178", "10179", "10435", "10551", "10553", "10555", "10557",
     "10559", "10623", "10785", "10787", "10963", "10969", "13347", "13349", "13351", "13353", "13355", "13357", "13359",
     "13405", "13407", "13409", "10179", "10243", "10245", "10247", "10249", "10367", "10785", "10961", "10963", "10965",
     "10967",
@@ -1178,7 +1229,7 @@ exports.listOfAreas = ["oberschöneweide", "müggelheim", "johannisthal", "fried
     "buch", "karow", "weißensee", "prenzlauer berg", "britz", "nord neukölln", "gropiusstadt", "buckow",
     "blaschkoallee", "sonnenallee", "zwickauer damm", "alt buckow", "rudow", "hansaviertel", "moabit", "gesundbrunnen",
     "wedding", "tiergarten", "hellersdorf", "marzahn", "mahlsdorf", "marzahner promenade", "helle mitte", "biesdorf",
-    "malchow", "falkenberg", "wartenberg", "neu hohen schönhausen", "hsh", "alt hohen schön hausen", "fennpfuhl",
+    "malchow", "falkenberg", "wartenberg", "neu hohen schönhausen", "hohenschönhausen", "hsh", "alt hohen schön hausen", "fennpfuhl",
     "alt lichtenberg", "frierdrichsfelde", "karlshorst", "rummelsburg", "zentrum ikraus", "am obersee", "käthe kern",
     "anton saefkow", "große leege ", "alt hohen schön hausen", "tierparkcenter", "normannen", "egon erwin kirsch",
     "neu hohen schön hausen", "friedrichshain", "SO sechs und dreißig", "boxhagen", "boxi", "stralau",

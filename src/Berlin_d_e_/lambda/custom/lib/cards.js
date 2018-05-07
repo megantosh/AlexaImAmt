@@ -12,6 +12,11 @@ exports.logo = {
     largeImageUrl: "https://s3.eu-central-1.amazonaws.com/megantosh/BerlinBig+transparent.png"
 }
 
+exports.logosimple = {
+    smallImageUrl: "https://s3.eu-central-1.amazonaws.com/megantosh/Berlin_Logo.svg.png",
+    largeImageUrl: "https://s3.eu-central-1.amazonaws.com/megantosh/Berlin_Logo.svg.png",
+}
+
 exports.berlinWappen = {
     'charlottenburg_wilmersdorf' : {
         smallImageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Coat_of_arms_of_Charlottenburg-Wilmersdorf.svg/81px-Coat_of_arms_of_Charlottenburg-Wilmersdorf.svg.png",

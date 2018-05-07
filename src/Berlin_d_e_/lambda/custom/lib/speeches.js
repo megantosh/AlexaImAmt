@@ -1,6 +1,6 @@
 const Helper = require("./helper.js");
 // //WARNING: appending 'http', 'https' breaks the URL object
-const base_solr_url = 'newsreel-edu.aot.tu-berlin.de/solr/'
+const base_solr_url = 'newsreel-edu.aot.tu-berlin.de/solr/';
 const base_web_url = 'service.berlin.de';
 const invocationName = "Berlin";
 
@@ -51,7 +51,8 @@ module.exports = {
                 'Willkommen in dem Hauptstadtportal. Was kann ich für Sie tun?'
             ],
             INTRO_HELP_TEXT: ["Sie können mich nach einer Dienstleistung fragen, die Sie zum Beispiel im Bürgeramt" +
-            " erledigen würdest. Versuchen Sie mal 'Anmeldung einer Wohnung' oder 'Ich möchte eine Wohnung anmelden.",
+            " erledigen würden. Versuchen Sie mal 'Ich möchte einen Perso beantragen' oder 'Ich möchte eine Wohnung" +
+            " anmelden. Am Besten in ganzen sätzen.",
             'Fragen Sie mich nach einem Ort oder einer Postleitzahl in Berlin und ich verrate Ihnen, wo das ist'
             ],
 
@@ -62,14 +63,19 @@ module.exports = {
                 // " oder 'Alexa, frag Berlin D. E. wann hat das Bürgeramt in der Nähe auf heute'.'",
                 'Pardon, das habe ich nicht richtig mitbekommen.'
             ],
-            INTRO_STOP_TEXT: ["Haben Sie sonst noch nen Wunsch?",
+            INTRO_STOP_TEXT: ['Ciao','<say-as interpret-as=\'interjection\'>tschö</say-as>','Schönen Tag Ihnen!', "Wiederseh'n!"],
+            INTRO_CANCEL_TEXT_START: ["Haben Sie sonst noch nen Wunsch?", "Weitere Fragen?",
                 "sonst noch <phoneme alphabet='ipa'  ph='n'>n</phoneme> Wunsch?"],
-            INTRO_CANCEL_TEXT: ['Ciao','Tschü','Schönen Tag Ihnen!', "Wiederseh'n!"],
+            INTRO_CANCEL_TEXT_END : ["Ansonsten verdrücke ich mich jetzt. ","Wenn nicht, dann sage ich mal bis" +
+            " demnächst" , "Sonst trete ich nun aus dem Amt zurück"],
+            SMALLTALK_BAUJAHR: ["Mein Baujahr? Wenn man mich erst zu ende gebaut hat, dann können wir darüber reden.",
+            "Lassen wir die Fragen Baujahr beiseite. Soweit ich Sie über <emphasis level=\'moderate\'> Ihren" +
+            " </emphasis> frage, jault die ganze Stadt von Datenschutz und so."],
             INTRO_WIP_TEXT: [
                 //TODO - change before submission
                 'Skill wird gerade entwickelt.',
                 'das berücksichtige ich gerne beim nächsten Milestone',
-                'ich mag es, wie du mich ausfragst. Du solltest eine Karriere im Usability Bereich in Erwägung ziehen.',
+                'ich mag es, wie Sie mich ausfragen. Sie sollten eine Karriere im Usability Bereich in Erwägung ziehen.',
                 'ich werde zwar von einem mega entwickelt, aber leider geht das nicht mega schnell'
             ],
             BEFORE_ENDING_SESSION_TEXT: [
