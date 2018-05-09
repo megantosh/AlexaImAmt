@@ -1,0 +1,118 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "de-DE": {
+          "summary": "Ein Skill über die öffentlichen Dienstleistungen des Service-Portals Berlin.de",
+          "examplePhrases": [
+            "Alexa, frag Berlin Service wie bekomme ich einen Perso?",
+            "Wo ist 10243?",
+            "Ich möchte BAföG beantragen"
+          ],
+          "keywords": [
+            "Government",
+            "Berlin",
+            "Service",
+            "Bürger",
+            "Anmeldung",
+            "Personalausweis",
+            "Dienst",
+            "Öffentlich",
+            "Dienstleistung",
+            "service.berlin.de",
+            "berlin.de",
+            "Reisepass",
+            "Berliner",
+            "Hauptstadtportal",
+            "hauptstadt",
+            "deutschland",
+            "regierung",
+            "verwaltung",
+            "politik",
+            "bürgermeister",
+            "offiziell",
+            "Stadt",
+            "Verwaltung",
+            "Stadtverwaltung",
+            "Senatsverwaltung",
+            "senat"
+          ],
+          "name": "Berlin Service",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/8772/e0fefd4dea7e48c095aaecf7f36870ac/APP_ICON?versionId=wZXQr4j3dpJrjMvHVKASkKBWhcfNv5xO&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1525758134&Signature=rEy0wkZy4TnXaLJbUdlHoL0MdpA%3D",
+          "description": "Dieser Skill dient neben dem Bürgertelefon 115 als zusätzlicher Kanal für Bürgerinnen und Bürger, auch Ihnen, schnell und komfortabel bei ihren Anliegen zu unterstützen, auch außerhalb der 115-Service-Zeiten.\n\nDer Skill greift auf die umfangreiche Wissensbasis des Service-Portals zu. Gleichzeitig simuliert er Dialoge mit einem Mitarbeiter des Bürgertelefons 115, in dem durch Nachfragen gezielt auf Anliegen der Nutzer eingegangen werden kann.\n\nDer Dialog läuft wie ein Live-Chat ab. Sie formulieren Ihre Frage, das System antwortet sofort oder präzisiert gegebenenfalls das Anliegen durch Rückfragen oder Auswahlmöglichkeiten. Sie erhalten ausführliche Antworten zu entsprechenden Dienstleistungen und Standorten sowie Hinweise zu notwendigen Unterlagen und Voraussetzungen. Im Anschluss können Sie den Dialog durch Folgefragen fortsetzen oder eine neue Frage stellen.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/67e8/efa9ffe95e824087b27913c9acd0903b/APP_ICON_LARGE?versionId=AS2202vnP._kMdLoWeThQH4lO2_983PY&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1525758134&Signature=NgNqhs%2FLhUlZOKJ1pmReVcCHqVM%3D"
+        },
+        "en-US": {
+          "summary": "A skill about the public services of the service portal Berlin.de",
+          "examplePhrases": [
+            "Alexa, ask  ber lynn  how do I extend my residence permit?",
+            "How do I transfer my driving license to a german one?",
+            "How do  I extend my visa?"
+          ],
+          "keywords": [
+            "Government",
+            "Berlin",
+            "Service",
+            "Bürger",
+            "Anmeldung",
+            "Personalausweis",
+            "Dienst",
+            "Öffentlich",
+            "Dienstleistung",
+            "service.berlin.de",
+            "berlin.de",
+            "Reisepass",
+            "Berliner",
+            "Hauptstadtportal",
+            "hauptstadt",
+            "deutschland",
+            "regierung",
+            "verwaltung",
+            "politik",
+            "bürgermeister",
+            "offiziell",
+            "Stadt",
+            "Verwaltung",
+            "Stadtverwaltung",
+            "Senatsverwaltung",
+            "senat"
+          ],
+          "name": "Berlin Service",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/55fa/e687212462ee4427921abdd93fcb4dd2/APP_ICON?versionId=owPya9ypRe1OygUOrH5ZzC8f6yosmiHD&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1525758134&Signature=hlTqU95qw8A2lC5SrukLcuksiWo%3D",
+          "description": "A very helpful skill in the making. we call it ber lynn. But it's actually Berlin 😄",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/3c8e/4adae13e3f2e405ca9b3dbe2d6f65264/APP_ICON_LARGE?versionId=2hFtcLitQaedGuMhq9hf41UNr9bBKHhz&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1525758134&Signature=Heq%2FurGNnlDoMpcQ3kIZcvH1CPw%3D"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Where is Kreuzberg, help",
+      "category": "ORGANIZERS_AND_ASSISTANTS",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "de-DE": {
+          "termsOfUseUrl": "https://www.berlin.de/wir-ueber-uns/agb/",
+          "privacyPolicyUrl": "https://www.berlin.de/wir-ueber-uns/agb/datenschutz/5243112-4219234-erklaerung-zum-datenschutz-20180301.html"
+        },
+        "en-US": {
+          "termsOfUseUrl": "https://www.berlin.de/wir-ueber-uns/agb/",
+          "privacyPolicyUrl": "https://www.berlin.de/wir-ueber-uns/agb/datenschutz/5243112-4219234-erklaerung-zum-datenschutz-20180301.html"
+        }
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

@@ -1,0 +1,4525 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "berlin service",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "quatsch",
+            "probieren wir es erneuert",
+            "probieren wir es nochmal",
+            "lass uns nochmal versuchen",
+            "vergiss es",
+            "cancel",
+            "alles klar"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "sag mir ein paar beispiele",
+            "die Dienstleistung habe ich nicht im kopf",
+            "kenn den namen nicht",
+            "weiss nicht was ich genau suche",
+            "ich weiss nicht was ich suche",
+            "hilf mir auf die Spur",
+            "Hilfe"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "restart",
+            "verlassen",
+            "escape",
+            "quit",
+            "exit",
+            "stopp",
+            "okay das reicht",
+            "sei still",
+            "hör auf",
+            "stop",
+            "stoop"
+          ]
+        },
+        {
+          "name": "DL_General_Intent_Allgemeine_Fragen",
+          "slots": [
+            {
+              "name": "Dienstleistung",
+              "type": "DE_PublicSvcs_Berlin",
+              "samples": [
+                "ich will {Dienstleistung}",
+                "{Dienstleistung} beantragen",
+                "antrag auf {Dienstleistung}",
+                "ich möchte {Dienstleistung}",
+                "{Dienstleistung}"
+              ]
+            },
+            {
+              "name": "description_flag",
+              "type": "DL_Y_N_Descr"
+            },
+            {
+              "name": "extension_flag",
+              "type": "DE_Y_N_Extension"
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "DE_Y_N_Prereq"
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "DE_Y_N_RequiredDocs"
+            },
+            {
+              "name": "costs_flag",
+              "type": "DE_Y_N_Cost"
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "DE_Y_N_ProcessTime"
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "DE_Y_N_BookAppointment"
+            },
+            {
+              "name": "location",
+              "type": "Districts_PLZ_Combo_BER"
+            }
+          ],
+          "samples": [
+            "ich brauche die {Dienstleistung} {extension_flag}",
+            "ich brauche die {Dienstleistung} anmelden",
+            "ich brauche die {Dienstleistung} anzumelden",
+            "ich brauche die {Dienstleistung} beantragen",
+            "ich brauche die {Dienstleistung} bekommen",
+            "ich brauche die {Dienstleistung} erhalten",
+            "ich brauche die {Dienstleistung} melden",
+            "ich brauche das {Dienstleistung} {extension_flag}",
+            "ich brauche das {Dienstleistung} anmelden",
+            "ich brauche das {Dienstleistung} anzumelden",
+            "ich brauche das {Dienstleistung} beantragen",
+            "ich brauche das {Dienstleistung} bekommen",
+            "ich brauche das {Dienstleistung} erhalten",
+            "ich brauche das {Dienstleistung} melden",
+            "ich brauche den {Dienstleistung} {extension_flag}",
+            "ich brauche den {Dienstleistung} anmelden",
+            "ich brauche den {Dienstleistung} anzumelden",
+            "ich brauche den {Dienstleistung} beantragen",
+            "ich brauche den {Dienstleistung} bekommen",
+            "ich brauche den {Dienstleistung} erhalten",
+            "ich brauche den {Dienstleistung} melden",
+            "ich brauche ein {Dienstleistung} {extension_flag}",
+            "ich brauche ein {Dienstleistung} anmelden",
+            "ich brauche ein {Dienstleistung} anzumelden",
+            "ich brauche ein {Dienstleistung} beantragen",
+            "ich brauche ein {Dienstleistung} bekommen",
+            "ich brauche ein {Dienstleistung} erhalten",
+            "ich brauche ein {Dienstleistung} melden",
+            "ich brauche eine {Dienstleistung} {extension_flag}",
+            "ich brauche eine {Dienstleistung} anmelden",
+            "ich brauche eine {Dienstleistung} anzumelden",
+            "ich brauche eine {Dienstleistung} beantragen",
+            "ich brauche eine {Dienstleistung} bekommen",
+            "ich brauche eine {Dienstleistung} erhalten",
+            "ich brauche eine {Dienstleistung} melden",
+            "ich brauche einen {Dienstleistung} {extension_flag}",
+            "ich brauche einen {Dienstleistung} anmelden",
+            "ich brauche einen {Dienstleistung} anzumelden",
+            "ich brauche einen {Dienstleistung} beantragen",
+            "ich brauche einen {Dienstleistung} bekommen",
+            "ich brauche einen {Dienstleistung} erhalten",
+            "ich brauche einen {Dienstleistung} melden",
+            "ich brauche mein {Dienstleistung} {extension_flag}",
+            "ich brauche mein {Dienstleistung} anmelden",
+            "ich brauche mein {Dienstleistung} anzumelden",
+            "ich brauche mein {Dienstleistung} beantragen",
+            "ich brauche mein {Dienstleistung} bekommen",
+            "ich brauche mein {Dienstleistung} erhalten",
+            "ich brauche mein {Dienstleistung} melden",
+            "ich brauche meine {Dienstleistung} {extension_flag}",
+            "ich brauche meine {Dienstleistung} anmelden",
+            "ich brauche meine {Dienstleistung} anzumelden",
+            "ich brauche meine {Dienstleistung} beantragen",
+            "ich brauche meine {Dienstleistung} bekommen",
+            "ich brauche meine {Dienstleistung} erhalten",
+            "ich brauche meine {Dienstleistung} melden",
+            "ich brauche meinen {Dienstleistung} {extension_flag}",
+            "ich brauche meinen {Dienstleistung} anmelden",
+            "ich brauche meinen {Dienstleistung} anzumelden",
+            "ich brauche meinen {Dienstleistung} beantragen",
+            "ich brauche meinen {Dienstleistung} bekommen",
+            "ich brauche meinen {Dienstleistung} erhalten",
+            "ich brauche meinen {Dienstleistung} melden",
+            "ich benötige die {Dienstleistung} {extension_flag}",
+            "ich benötige die {Dienstleistung} anmelden",
+            "ich benötige die {Dienstleistung} anzumelden",
+            "ich benötige die {Dienstleistung} beantragen",
+            "ich benötige die {Dienstleistung} bekommen",
+            "ich benötige die {Dienstleistung} erhalten",
+            "ich benötige die {Dienstleistung} melden",
+            "ich benötige das {Dienstleistung} {extension_flag}",
+            "ich benötige das {Dienstleistung} anmelden",
+            "ich benötige das {Dienstleistung} anzumelden",
+            "ich benötige das {Dienstleistung} beantragen",
+            "ich benötige das {Dienstleistung} bekommen",
+            "ich benötige das {Dienstleistung} erhalten",
+            "ich benötige das {Dienstleistung} melden",
+            "ich benötige den {Dienstleistung} {extension_flag}",
+            "ich benötige den {Dienstleistung} anmelden",
+            "ich benötige den {Dienstleistung} anzumelden",
+            "ich benötige den {Dienstleistung} beantragen",
+            "ich benötige den {Dienstleistung} bekommen",
+            "ich benötige den {Dienstleistung} erhalten",
+            "ich benötige den {Dienstleistung} melden",
+            "ich benötige ein {Dienstleistung} {extension_flag}",
+            "ich benötige ein {Dienstleistung} anmelden",
+            "ich benötige ein {Dienstleistung} anzumelden",
+            "ich benötige ein {Dienstleistung} beantragen",
+            "ich benötige ein {Dienstleistung} bekommen",
+            "ich benötige ein {Dienstleistung} erhalten",
+            "ich benötige ein {Dienstleistung} melden",
+            "ich benötige eine {Dienstleistung} {extension_flag}",
+            "ich benötige eine {Dienstleistung} anmelden",
+            "ich benötige eine {Dienstleistung} anzumelden",
+            "ich benötige eine {Dienstleistung} beantragen",
+            "ich benötige eine {Dienstleistung} bekommen",
+            "ich benötige eine {Dienstleistung} erhalten",
+            "ich benötige eine {Dienstleistung} melden",
+            "ich benötige einen {Dienstleistung} {extension_flag}",
+            "ich benötige einen {Dienstleistung} anmelden",
+            "ich benötige einen {Dienstleistung} anzumelden",
+            "ich benötige einen {Dienstleistung} beantragen",
+            "ich benötige einen {Dienstleistung} bekommen",
+            "ich benötige einen {Dienstleistung} erhalten",
+            "ich benötige einen {Dienstleistung} melden",
+            "ich benötige mein {Dienstleistung} {extension_flag}",
+            "ich benötige mein {Dienstleistung} anmelden",
+            "ich benötige mein {Dienstleistung} anzumelden",
+            "ich benötige mein {Dienstleistung} beantragen",
+            "ich benötige mein {Dienstleistung} bekommen",
+            "ich benötige mein {Dienstleistung} erhalten",
+            "ich benötige mein {Dienstleistung} melden",
+            "ich benötige meine {Dienstleistung} {extension_flag}",
+            "ich benötige meine {Dienstleistung} anmelden",
+            "ich benötige meine {Dienstleistung} anzumelden",
+            "ich benötige meine {Dienstleistung} beantragen",
+            "ich benötige meine {Dienstleistung} bekommen",
+            "ich benötige meine {Dienstleistung} erhalten",
+            "ich benötige meine {Dienstleistung} melden",
+            "ich benötige meinen {Dienstleistung} {extension_flag}",
+            "ich benötige meinen {Dienstleistung} anmelden",
+            "ich benötige meinen {Dienstleistung} anzumelden",
+            "ich benötige meinen {Dienstleistung} beantragen",
+            "ich benötige meinen {Dienstleistung} bekommen",
+            "ich benötige meinen {Dienstleistung} erhalten",
+            "ich benötige meinen {Dienstleistung} melden",
+            "ich möchte die {Dienstleistung} {extension_flag}",
+            "ich möchte die {Dienstleistung} anmelden",
+            "ich möchte die {Dienstleistung} anzumelden",
+            "ich möchte die {Dienstleistung} beantragen",
+            "ich möchte die {Dienstleistung} bekommen",
+            "ich möchte die {Dienstleistung} erhalten",
+            "ich möchte die {Dienstleistung} melden",
+            "ich möchte das {Dienstleistung} {extension_flag}",
+            "ich möchte das {Dienstleistung} anmelden",
+            "ich möchte das {Dienstleistung} anzumelden",
+            "ich möchte das {Dienstleistung} beantragen",
+            "ich möchte das {Dienstleistung} bekommen",
+            "ich möchte das {Dienstleistung} erhalten",
+            "ich möchte das {Dienstleistung} melden",
+            "ich möchte den {Dienstleistung} {extension_flag}",
+            "ich möchte den {Dienstleistung} anmelden",
+            "ich möchte den {Dienstleistung} anzumelden",
+            "ich möchte den {Dienstleistung} beantragen",
+            "ich möchte den {Dienstleistung} bekommen",
+            "ich möchte den {Dienstleistung} erhalten",
+            "ich möchte den {Dienstleistung} melden",
+            "ich möchte ein {Dienstleistung} {extension_flag}",
+            "ich möchte ein {Dienstleistung} anmelden",
+            "ich möchte ein {Dienstleistung} anzumelden",
+            "ich möchte ein {Dienstleistung} beantragen",
+            "ich möchte ein {Dienstleistung} bekommen",
+            "ich möchte ein {Dienstleistung} erhalten",
+            "ich möchte ein {Dienstleistung} melden",
+            "ich möchte eine {Dienstleistung} {extension_flag}",
+            "ich möchte eine {Dienstleistung} anmelden",
+            "ich möchte eine {Dienstleistung} anzumelden",
+            "ich möchte eine {Dienstleistung} beantragen",
+            "ich möchte eine {Dienstleistung} bekommen",
+            "ich möchte eine {Dienstleistung} erhalten",
+            "ich möchte eine {Dienstleistung} melden",
+            "ich möchte einen {Dienstleistung} {extension_flag}",
+            "ich möchte einen {Dienstleistung} anmelden",
+            "ich möchte einen {Dienstleistung} anzumelden",
+            "ich möchte einen {Dienstleistung} beantragen",
+            "ich möchte einen {Dienstleistung} bekommen",
+            "ich möchte einen {Dienstleistung} erhalten",
+            "ich möchte einen {Dienstleistung} melden",
+            "ich möchte mein {Dienstleistung} {extension_flag}",
+            "ich möchte mein {Dienstleistung} anmelden",
+            "ich möchte mein {Dienstleistung} anzumelden",
+            "ich möchte mein {Dienstleistung} beantragen",
+            "ich möchte mein {Dienstleistung} bekommen",
+            "ich möchte mein {Dienstleistung} erhalten",
+            "ich möchte mein {Dienstleistung} melden",
+            "ich möchte meine {Dienstleistung} {extension_flag}",
+            "ich möchte meine {Dienstleistung} anmelden",
+            "ich möchte meine {Dienstleistung} anzumelden",
+            "ich möchte meine {Dienstleistung} beantragen",
+            "ich möchte meine {Dienstleistung} bekommen",
+            "ich möchte meine {Dienstleistung} erhalten",
+            "ich möchte meine {Dienstleistung} melden",
+            "ich möchte meinen {Dienstleistung} {extension_flag}",
+            "ich möchte meinen {Dienstleistung} anmelden",
+            "ich möchte meinen {Dienstleistung} anzumelden",
+            "ich möchte meinen {Dienstleistung} beantragen",
+            "ich möchte meinen {Dienstleistung} bekommen",
+            "ich möchte meinen {Dienstleistung} erhalten",
+            "ich möchte meinen {Dienstleistung} melden",
+            "ich muss die {Dienstleistung} {extension_flag}",
+            "ich muss die {Dienstleistung} anmelden",
+            "ich muss die {Dienstleistung} anzumelden",
+            "ich muss die {Dienstleistung} beantragen",
+            "ich muss die {Dienstleistung} bekommen",
+            "ich muss die {Dienstleistung} erhalten",
+            "ich muss die {Dienstleistung} melden",
+            "ich muss das {Dienstleistung} {extension_flag}",
+            "ich muss das {Dienstleistung} anmelden",
+            "ich muss das {Dienstleistung} anzumelden",
+            "ich muss das {Dienstleistung} beantragen",
+            "ich muss das {Dienstleistung} bekommen",
+            "ich muss das {Dienstleistung} erhalten",
+            "ich muss das {Dienstleistung} melden",
+            "ich muss den {Dienstleistung} {extension_flag}",
+            "ich muss den {Dienstleistung} anmelden",
+            "ich muss den {Dienstleistung} anzumelden",
+            "ich muss den {Dienstleistung} beantragen",
+            "ich muss den {Dienstleistung} bekommen",
+            "ich muss den {Dienstleistung} erhalten",
+            "ich muss den {Dienstleistung} melden",
+            "ich muss ein {Dienstleistung} {extension_flag}",
+            "ich muss ein {Dienstleistung} anmelden",
+            "ich muss ein {Dienstleistung} anzumelden",
+            "ich muss ein {Dienstleistung} beantragen",
+            "ich muss ein {Dienstleistung} bekommen",
+            "ich muss ein {Dienstleistung} erhalten",
+            "ich muss ein {Dienstleistung} melden",
+            "ich muss eine {Dienstleistung} {extension_flag}",
+            "ich muss eine {Dienstleistung} anmelden",
+            "ich muss eine {Dienstleistung} anzumelden",
+            "ich muss eine {Dienstleistung} beantragen",
+            "ich muss eine {Dienstleistung} bekommen",
+            "ich muss eine {Dienstleistung} erhalten",
+            "ich muss eine {Dienstleistung} melden",
+            "ich muss einen {Dienstleistung} {extension_flag}",
+            "ich muss einen {Dienstleistung} anmelden",
+            "ich muss einen {Dienstleistung} anzumelden",
+            "ich muss einen {Dienstleistung} beantragen",
+            "ich muss einen {Dienstleistung} bekommen",
+            "ich muss einen {Dienstleistung} erhalten",
+            "ich muss einen {Dienstleistung} melden",
+            "ich muss mein {Dienstleistung} {extension_flag}",
+            "ich muss mein {Dienstleistung} anmelden",
+            "ich muss mein {Dienstleistung} anzumelden",
+            "ich muss mein {Dienstleistung} beantragen",
+            "ich muss mein {Dienstleistung} bekommen",
+            "ich muss mein {Dienstleistung} erhalten",
+            "ich muss mein {Dienstleistung} melden",
+            "ich muss meine {Dienstleistung} {extension_flag}",
+            "ich muss meine {Dienstleistung} anmelden",
+            "ich muss meine {Dienstleistung} anzumelden",
+            "ich muss meine {Dienstleistung} beantragen",
+            "ich muss meine {Dienstleistung} bekommen",
+            "ich muss meine {Dienstleistung} erhalten",
+            "ich muss meine {Dienstleistung} melden",
+            "ich muss meinen {Dienstleistung} {extension_flag}",
+            "ich muss meinen {Dienstleistung} anmelden",
+            "ich muss meinen {Dienstleistung} anzumelden",
+            "ich muss meinen {Dienstleistung} beantragen",
+            "ich muss meinen {Dienstleistung} bekommen",
+            "ich muss meinen {Dienstleistung} erhalten",
+            "ich muss meinen {Dienstleistung} melden",
+            "ich muss mich die {Dienstleistung} {extension_flag}",
+            "ich muss mich die {Dienstleistung} anmelden",
+            "ich muss mich die {Dienstleistung} anzumelden",
+            "ich muss mich die {Dienstleistung} beantragen",
+            "ich muss mich die {Dienstleistung} bekommen",
+            "ich muss mich die {Dienstleistung} erhalten",
+            "ich muss mich die {Dienstleistung} melden",
+            "ich muss mich das {Dienstleistung} {extension_flag}",
+            "ich muss mich das {Dienstleistung} anmelden",
+            "ich muss mich das {Dienstleistung} anzumelden",
+            "ich muss mich das {Dienstleistung} beantragen",
+            "ich muss mich das {Dienstleistung} bekommen",
+            "ich muss mich das {Dienstleistung} erhalten",
+            "ich muss mich das {Dienstleistung} melden",
+            "ich muss mich den {Dienstleistung} {extension_flag}",
+            "ich muss mich den {Dienstleistung} anmelden",
+            "ich muss mich den {Dienstleistung} anzumelden",
+            "ich muss mich den {Dienstleistung} beantragen",
+            "ich muss mich den {Dienstleistung} bekommen",
+            "ich muss mich den {Dienstleistung} erhalten",
+            "ich muss mich den {Dienstleistung} melden",
+            "ich muss mich ein {Dienstleistung} {extension_flag}",
+            "ich muss mich ein {Dienstleistung} anmelden",
+            "ich muss mich ein {Dienstleistung} anzumelden",
+            "ich muss mich ein {Dienstleistung} beantragen",
+            "ich muss mich ein {Dienstleistung} bekommen",
+            "ich muss mich ein {Dienstleistung} erhalten",
+            "ich muss mich ein {Dienstleistung} melden",
+            "ich muss mich eine {Dienstleistung} {extension_flag}",
+            "ich muss mich eine {Dienstleistung} anmelden",
+            "ich muss mich eine {Dienstleistung} anzumelden",
+            "ich muss mich eine {Dienstleistung} beantragen",
+            "ich muss mich eine {Dienstleistung} bekommen",
+            "ich muss mich eine {Dienstleistung} erhalten",
+            "ich muss mich eine {Dienstleistung} melden",
+            "ich muss mich einen {Dienstleistung} {extension_flag}",
+            "ich muss mich einen {Dienstleistung} anmelden",
+            "ich muss mich einen {Dienstleistung} anzumelden",
+            "ich muss mich einen {Dienstleistung} beantragen",
+            "ich muss mich einen {Dienstleistung} bekommen",
+            "ich muss mich einen {Dienstleistung} erhalten",
+            "ich muss mich einen {Dienstleistung} melden",
+            "ich muss mich mein {Dienstleistung} {extension_flag}",
+            "ich muss mich mein {Dienstleistung} anmelden",
+            "ich muss mich mein {Dienstleistung} anzumelden",
+            "ich muss mich mein {Dienstleistung} beantragen",
+            "ich muss mich mein {Dienstleistung} bekommen",
+            "ich muss mich mein {Dienstleistung} erhalten",
+            "ich muss mich mein {Dienstleistung} melden",
+            "ich muss mich meine {Dienstleistung} {extension_flag}",
+            "ich muss mich meine {Dienstleistung} anmelden",
+            "ich muss mich meine {Dienstleistung} anzumelden",
+            "ich muss mich meine {Dienstleistung} beantragen",
+            "ich muss mich meine {Dienstleistung} bekommen",
+            "ich muss mich meine {Dienstleistung} erhalten",
+            "ich muss mich meine {Dienstleistung} melden",
+            "ich muss mich meinen {Dienstleistung} {extension_flag}",
+            "ich muss mich meinen {Dienstleistung} anmelden",
+            "ich muss mich meinen {Dienstleistung} anzumelden",
+            "ich muss mich meinen {Dienstleistung} beantragen",
+            "ich muss mich meinen {Dienstleistung} bekommen",
+            "ich muss mich meinen {Dienstleistung} erhalten",
+            "ich muss mich meinen {Dienstleistung} melden",
+            "ich will die {Dienstleistung} {extension_flag}",
+            "ich will die {Dienstleistung} anmelden",
+            "ich will die {Dienstleistung} anzumelden",
+            "ich will die {Dienstleistung} beantragen",
+            "ich will die {Dienstleistung} bekommen",
+            "ich will die {Dienstleistung} erhalten",
+            "ich will die {Dienstleistung} melden",
+            "ich will das {Dienstleistung} {extension_flag}",
+            "ich will das {Dienstleistung} anmelden",
+            "ich will das {Dienstleistung} anzumelden",
+            "ich will das {Dienstleistung} beantragen",
+            "ich will das {Dienstleistung} bekommen",
+            "ich will das {Dienstleistung} erhalten",
+            "ich will das {Dienstleistung} melden",
+            "ich will den {Dienstleistung} {extension_flag}",
+            "ich will den {Dienstleistung} anmelden",
+            "ich will den {Dienstleistung} anzumelden",
+            "ich will den {Dienstleistung} beantragen",
+            "ich will den {Dienstleistung} bekommen",
+            "ich will den {Dienstleistung} erhalten",
+            "ich will den {Dienstleistung} melden",
+            "ich will ein {Dienstleistung} {extension_flag}",
+            "ich will ein {Dienstleistung} anmelden",
+            "ich will ein {Dienstleistung} anzumelden",
+            "ich will ein {Dienstleistung} beantragen",
+            "ich will ein {Dienstleistung} bekommen",
+            "ich will ein {Dienstleistung} erhalten",
+            "ich will ein {Dienstleistung} melden",
+            "ich will eine {Dienstleistung} {extension_flag}",
+            "ich will eine {Dienstleistung} anmelden",
+            "ich will eine {Dienstleistung} anzumelden",
+            "ich will eine {Dienstleistung} beantragen",
+            "ich will eine {Dienstleistung} bekommen",
+            "ich will eine {Dienstleistung} erhalten",
+            "ich will eine {Dienstleistung} melden",
+            "ich will einen {Dienstleistung} {extension_flag}",
+            "ich will einen {Dienstleistung} anmelden",
+            "ich will einen {Dienstleistung} anzumelden",
+            "ich will einen {Dienstleistung} beantragen",
+            "ich will einen {Dienstleistung} bekommen",
+            "ich will einen {Dienstleistung} erhalten",
+            "ich will einen {Dienstleistung} melden",
+            "ich will mein {Dienstleistung} {extension_flag}",
+            "ich will mein {Dienstleistung} anmelden",
+            "ich will mein {Dienstleistung} anzumelden",
+            "ich will mein {Dienstleistung} beantragen",
+            "ich will mein {Dienstleistung} bekommen",
+            "ich will mein {Dienstleistung} erhalten",
+            "ich will mein {Dienstleistung} melden",
+            "ich will meine {Dienstleistung} {extension_flag}",
+            "ich will meine {Dienstleistung} anmelden",
+            "ich will meine {Dienstleistung} anzumelden",
+            "ich will meine {Dienstleistung} beantragen",
+            "ich will meine {Dienstleistung} bekommen",
+            "ich will meine {Dienstleistung} erhalten",
+            "ich will meine {Dienstleistung} melden",
+            "ich will meinen {Dienstleistung} {extension_flag}",
+            "ich will meinen {Dienstleistung} anmelden",
+            "ich will meinen {Dienstleistung} anzumelden",
+            "ich will meinen {Dienstleistung} beantragen",
+            "ich will meinen {Dienstleistung} bekommen",
+            "ich will meinen {Dienstleistung} erhalten",
+            "ich will meinen {Dienstleistung} melden",
+            "nach der {extension_flag} {Dienstleistung} in {location}",
+            "nach der {extension_flag} {Dienstleistung}",
+            "nach der {Dienstleistung} in {location}",
+            "nach der {Dienstleistung}",
+            "nach den {extension_flag} {Dienstleistung} in {location}",
+            "nach den {extension_flag} {Dienstleistung}",
+            "nach den {Dienstleistung} in {location}",
+            "nach den {Dienstleistung}",
+            "nach dem {extension_flag} {Dienstleistung} in {location}",
+            "nach dem {extension_flag} {Dienstleistung}",
+            "nach dem {Dienstleistung} in {location}",
+            "nach dem {Dienstleistung}",
+            "nach einen {extension_flag} {Dienstleistung} in {location}",
+            "nach einen {extension_flag} {Dienstleistung}",
+            "nach einen {Dienstleistung} in {location}",
+            "nach einen {Dienstleistung}",
+            "nach einem {extension_flag} {Dienstleistung} in {location}",
+            "nach einem {extension_flag} {Dienstleistung}",
+            "nach einem {Dienstleistung} in {location}",
+            "nach einem {Dienstleistung}",
+            "nach mein {extension_flag} {Dienstleistung} in {location}",
+            "nach mein {extension_flag} {Dienstleistung}",
+            "nach mein {Dienstleistung} in {location}",
+            "nach mein {Dienstleistung}",
+            "nach meiner {extension_flag} {Dienstleistung} in {location}",
+            "nach meiner {extension_flag} {Dienstleistung}",
+            "nach meiner {Dienstleistung} in {location}",
+            "nach meiner {Dienstleistung}",
+            "nach meinem {extension_flag} {Dienstleistung} in {location}",
+            "nach meinem {extension_flag} {Dienstleistung}",
+            "nach meinem {Dienstleistung} in {location}",
+            "nach meinem {Dienstleistung}",
+            "{description_flag} der {extension_flag} {Dienstleistung} in {location} {extension_flag}",
+            "{description_flag} der {extension_flag} {Dienstleistung} in {location} abgeben",
+            "{description_flag} der {extension_flag} {Dienstleistung} in {location} beantragen",
+            "{description_flag} der {extension_flag} {Dienstleistung} in {location} bekommen",
+            "{description_flag} der {extension_flag} {Dienstleistung} in {location} erhalten",
+            "{description_flag} der {extension_flag} {Dienstleistung} in {location} melden",
+            "{description_flag} der {extension_flag} {Dienstleistung} {extension_flag}",
+            "{description_flag} der {extension_flag} {Dienstleistung} abgeben",
+            "{description_flag} der {extension_flag} {Dienstleistung} beantragen",
+            "{description_flag} der {extension_flag} {Dienstleistung} bekommen",
+            "{description_flag} der {extension_flag} {Dienstleistung} erhalten",
+            "{description_flag} der {extension_flag} {Dienstleistung} melden",
+            "{description_flag} der {Dienstleistung} in {location} {extension_flag}",
+            "{description_flag} der {Dienstleistung} in {location} abgeben",
+            "{description_flag} der {Dienstleistung} in {location} beantragen",
+            "{description_flag} der {Dienstleistung} in {location} bekommen",
+            "{description_flag} der {Dienstleistung} in {location} erhalten",
+            "{description_flag} der {Dienstleistung} in {location} melden",
+            "{description_flag} der {Dienstleistung} {extension_flag}",
+            "{description_flag} der {Dienstleistung} abgeben",
+            "{description_flag} der {Dienstleistung} beantragen",
+            "{description_flag} der {Dienstleistung} bekommen",
+            "{description_flag} der {Dienstleistung} erhalten",
+            "{description_flag} der {Dienstleistung} melden",
+            "{description_flag} die {extension_flag} {Dienstleistung} in {location} {extension_flag}",
+            "{description_flag} die {extension_flag} {Dienstleistung} in {location} abgeben",
+            "{description_flag} die {extension_flag} {Dienstleistung} in {location} beantragen",
+            "{description_flag} die {extension_flag} {Dienstleistung} in {location} bekommen",
+            "{description_flag} die {extension_flag} {Dienstleistung} in {location} erhalten",
+            "{description_flag} die {extension_flag} {Dienstleistung} in {location} melden",
+            "{description_flag} die {extension_flag} {Dienstleistung} {extension_flag}",
+            "{description_flag} die {extension_flag} {Dienstleistung} abgeben",
+            "{description_flag} die {extension_flag} {Dienstleistung} beantragen",
+            "{description_flag} die {extension_flag} {Dienstleistung} bekommen",
+            "{description_flag} die {extension_flag} {Dienstleistung} erhalten",
+            "{description_flag} die {extension_flag} {Dienstleistung} melden",
+            "{description_flag} die {Dienstleistung} in {location} {extension_flag}",
+            "{description_flag} die {Dienstleistung} in {location} abgeben",
+            "{description_flag} die {Dienstleistung} in {location} beantragen",
+            "{description_flag} die {Dienstleistung} in {location} bekommen",
+            "{description_flag} die {Dienstleistung} in {location} erhalten",
+            "{description_flag} die {Dienstleistung} in {location} melden",
+            "{description_flag} die {Dienstleistung} {extension_flag}",
+            "{description_flag} die {Dienstleistung} abgeben",
+            "{description_flag} die {Dienstleistung} beantragen",
+            "{description_flag} die {Dienstleistung} bekommen",
+            "{description_flag} die {Dienstleistung} erhalten",
+            "{description_flag} die {Dienstleistung} melden",
+            "{description_flag} ein {extension_flag} {Dienstleistung} in {location} {extension_flag}",
+            "{description_flag} ein {extension_flag} {Dienstleistung} in {location} abgeben",
+            "{description_flag} ein {extension_flag} {Dienstleistung} in {location} beantragen",
+            "{description_flag} ein {extension_flag} {Dienstleistung} in {location} bekommen",
+            "{description_flag} ein {extension_flag} {Dienstleistung} in {location} erhalten",
+            "{description_flag} ein {extension_flag} {Dienstleistung} in {location} melden",
+            "{description_flag} ein {extension_flag} {Dienstleistung} {extension_flag}",
+            "{description_flag} ein {extension_flag} {Dienstleistung} abgeben",
+            "{description_flag} ein {extension_flag} {Dienstleistung} beantragen",
+            "{description_flag} ein {extension_flag} {Dienstleistung} bekommen",
+            "{description_flag} ein {extension_flag} {Dienstleistung} erhalten",
+            "{description_flag} ein {extension_flag} {Dienstleistung} melden",
+            "{description_flag} ein {Dienstleistung} in {location} {extension_flag}",
+            "{description_flag} ein {Dienstleistung} in {location} abgeben",
+            "{description_flag} ein {Dienstleistung} in {location} beantragen",
+            "{description_flag} ein {Dienstleistung} in {location} bekommen",
+            "{description_flag} ein {Dienstleistung} in {location} erhalten",
+            "{description_flag} ein {Dienstleistung} in {location} melden",
+            "{description_flag} ein {Dienstleistung} {extension_flag}",
+            "{description_flag} ein {Dienstleistung} abgeben",
+            "{description_flag} ein {Dienstleistung} beantragen",
+            "{description_flag} ein {Dienstleistung} bekommen",
+            "{description_flag} ein {Dienstleistung} erhalten",
+            "{description_flag} ein {Dienstleistung} melden",
+            "{description_flag} eine {extension_flag} {Dienstleistung} in {location} {extension_flag}",
+            "{description_flag} eine {extension_flag} {Dienstleistung} in {location} abgeben",
+            "{description_flag} eine {extension_flag} {Dienstleistung} in {location} beantragen",
+            "{description_flag} eine {extension_flag} {Dienstleistung} in {location} bekommen",
+            "{description_flag} eine {extension_flag} {Dienstleistung} in {location} erhalten",
+            "{description_flag} eine {extension_flag} {Dienstleistung} in {location} melden",
+            "{description_flag} eine {extension_flag} {Dienstleistung} {extension_flag}",
+            "{description_flag} eine {extension_flag} {Dienstleistung} abgeben",
+            "{description_flag} eine {extension_flag} {Dienstleistung} beantragen",
+            "{description_flag} eine {extension_flag} {Dienstleistung} bekommen",
+            "{description_flag} eine {extension_flag} {Dienstleistung} erhalten",
+            "{description_flag} eine {extension_flag} {Dienstleistung} melden",
+            "{description_flag} eine {Dienstleistung} in {location} {extension_flag}",
+            "{description_flag} eine {Dienstleistung} in {location} abgeben",
+            "{description_flag} eine {Dienstleistung} in {location} beantragen",
+            "{description_flag} eine {Dienstleistung} in {location} bekommen",
+            "{description_flag} eine {Dienstleistung} in {location} erhalten",
+            "{description_flag} eine {Dienstleistung} in {location} melden",
+            "{description_flag} eine {Dienstleistung} {extension_flag}",
+            "{description_flag} eine {Dienstleistung} abgeben",
+            "{description_flag} eine {Dienstleistung} beantragen",
+            "{description_flag} eine {Dienstleistung} bekommen",
+            "{description_flag} eine {Dienstleistung} erhalten",
+            "{description_flag} eine {Dienstleistung} melden",
+            "{description_flag} meine {extension_flag} {Dienstleistung} in {location} {extension_flag}",
+            "{description_flag} meine {extension_flag} {Dienstleistung} in {location} abgeben",
+            "{description_flag} meine {extension_flag} {Dienstleistung} in {location} beantragen",
+            "{description_flag} meine {extension_flag} {Dienstleistung} in {location} bekommen",
+            "{description_flag} meine {extension_flag} {Dienstleistung} in {location} erhalten",
+            "{description_flag} meine {extension_flag} {Dienstleistung} in {location} melden",
+            "{description_flag} meine {extension_flag} {Dienstleistung} {extension_flag}",
+            "{description_flag} meine {extension_flag} {Dienstleistung} abgeben",
+            "{description_flag} meine {extension_flag} {Dienstleistung} beantragen",
+            "{description_flag} meine {extension_flag} {Dienstleistung} bekommen",
+            "{description_flag} meine {extension_flag} {Dienstleistung} erhalten",
+            "{description_flag} meine {extension_flag} {Dienstleistung} melden",
+            "{description_flag} meine {Dienstleistung} in {location} {extension_flag}",
+            "{description_flag} meine {Dienstleistung} in {location} abgeben",
+            "{description_flag} meine {Dienstleistung} in {location} beantragen",
+            "{description_flag} meine {Dienstleistung} in {location} bekommen",
+            "{description_flag} meine {Dienstleistung} in {location} erhalten",
+            "{description_flag} meine {Dienstleistung} in {location} melden",
+            "{description_flag} meine {Dienstleistung} {extension_flag}",
+            "{description_flag} meine {Dienstleistung} abgeben",
+            "{description_flag} meine {Dienstleistung} beantragen",
+            "{description_flag} meine {Dienstleistung} bekommen",
+            "{description_flag} meine {Dienstleistung} erhalten",
+            "{description_flag} meine {Dienstleistung} melden",
+            "{description_flag} meinen {extension_flag} {Dienstleistung} in {location} {extension_flag}",
+            "{description_flag} meinen {extension_flag} {Dienstleistung} in {location} abgeben",
+            "{description_flag} meinen {extension_flag} {Dienstleistung} in {location} beantragen",
+            "{description_flag} meinen {extension_flag} {Dienstleistung} in {location} bekommen",
+            "{description_flag} meinen {extension_flag} {Dienstleistung} in {location} erhalten",
+            "{description_flag} meinen {extension_flag} {Dienstleistung} in {location} melden",
+            "{description_flag} meinen {extension_flag} {Dienstleistung} {extension_flag}",
+            "{description_flag} meinen {extension_flag} {Dienstleistung} abgeben",
+            "{description_flag} meinen {extension_flag} {Dienstleistung} beantragen",
+            "{description_flag} meinen {extension_flag} {Dienstleistung} bekommen",
+            "{description_flag} meinen {extension_flag} {Dienstleistung} erhalten",
+            "{description_flag} meinen {extension_flag} {Dienstleistung} melden",
+            "{description_flag} meinen {Dienstleistung} in {location} {extension_flag}",
+            "{description_flag} meinen {Dienstleistung} in {location} abgeben",
+            "{description_flag} meinen {Dienstleistung} in {location} beantragen",
+            "{description_flag} meinen {Dienstleistung} in {location} bekommen",
+            "{description_flag} meinen {Dienstleistung} in {location} erhalten",
+            "{description_flag} meinen {Dienstleistung} in {location} melden",
+            "{description_flag} meinen {Dienstleistung} {extension_flag}",
+            "{description_flag} meinen {Dienstleistung} abgeben",
+            "{description_flag} meinen {Dienstleistung} beantragen",
+            "{description_flag} meinen {Dienstleistung} bekommen",
+            "{description_flag} meinen {Dienstleistung} erhalten",
+            "{description_flag} meinen {Dienstleistung} melden"
+          ]
+        },
+        {
+          "name": "DL_Approbation_Intent_Fragen_zum_Thema_Zulassung_im_Gesundheitswesen",
+          "slots": [
+            {
+              "name": "BerufGesundheit",
+              "type": "DE_BerufGesudheit",
+              "samples": [
+                "ein {BerufGesundheit} soll es sein",
+                "ein {BerufGesundheit}",
+                "{BerufGesundheit}"
+              ]
+            },
+            {
+              "name": "pruefungInBerlin",
+              "type": "DE_Y_N_Flag",
+              "samples": [
+                "{pruefungInBerlin}"
+              ]
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "DE_Y_N_Prereq"
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "DE_Y_N_RequiredDocs"
+            },
+            {
+              "name": "costs_flag",
+              "type": "DE_Y_N_Cost"
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "DE_Y_N_ProcessTime"
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "DE_Y_N_BookAppointment"
+            }
+          ],
+          "samples": [
+            "ich brauche eine zulassung als {BerufGesundheit}",
+            "wie kann ich mich zum {BerufGesundheit} zertifizieren",
+            "ich möchte mich als {BerufGesundheit} zertifizieren lassen",
+            "ich will {BerufGesundheit} werden",
+            "ich möchte eine approbation als {BerufGesundheit}"
+          ]
+        },
+        {
+          "name": "DL_Aufenthaltstitel_Intent_Fragen_zur_Aufenthalt_fuer_Auslaender",
+          "slots": [
+            {
+              "name": "registered_in_berlin",
+              "type": "DE_Y_N_Flag",
+              "samples": [
+                "{registered_in_berlin}"
+              ]
+            },
+            {
+              "name": "partner_eu_flag",
+              "type": "DE_Y_N_Flag"
+            },
+            {
+              "name": "citizenship",
+              "type": "DE_Countries_Citizenships",
+              "samples": [
+                "ich habe einen {citizenship} pass",
+                "mit der {citizenship}",
+                "ich bin {citizenship}",
+                "ich komme aus {citizenship}",
+                "{citizenship}"
+              ]
+            },
+            {
+              "name": "residence_purpose",
+              "type": "DE_ResidencePurposes",
+              "samples": [
+                "ich bin {residence_purpose}",
+                "ich {residence_purpose}",
+                "ich werde {residence_purpose}",
+                "ich möchte {residence_purpose}",
+                "{residence_purpose}"
+              ]
+            },
+            {
+              "name": "extension_flag",
+              "type": "DE_Y_N_Extension",
+              "samples": [
+                "{extension_flag}"
+              ]
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "DE_Y_N_Prereq",
+              "samples": [
+                "{prerequisites_flag}"
+              ]
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "DE_Y_N_RequiredDocs"
+            },
+            {
+              "name": "costs_flag",
+              "type": "DE_Y_N_Cost"
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "DE_Y_N_ProcessTime"
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "DE_Y_N_BookAppointment"
+            }
+          ],
+          "samples": [
+            "{prerequisites_flag} meine Aufenthalt in Deutschland {extension_flag}",
+            "{prerequisites_flag} meinen Aufenthaltstitel {extension_flag}",
+            "ich will meine Aufenthalt in Deutschland {extension_flag}",
+            "ich möchte meinen Aufenthaltstitel {extension_flag}",
+            "ich will meinen Aufenthaltstitel länger machen",
+            "kann ich meinen Aufenthaltstitel jetzt {extension_flag}"
+          ]
+        },
+        {
+          "name": "DL_Bafoeg_Intent_Fragen_zum_BAfoeG",
+          "slots": [
+            {
+              "name": "bafoegType",
+              "type": "DE_BafoegTypes",
+              "samples": [
+                "für {bafoegType}",
+                "keine Ahnung ich bin {bafoegType}",
+                "keine ahnung {bafoegType}",
+                "ich bin {bafoegType}",
+                "{bafoegType}"
+              ]
+            },
+            {
+              "name": "extension_flag",
+              "type": "DE_Y_N_Extension"
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "DE_Y_N_Prereq",
+              "samples": [
+                "{prerequisites_flag}"
+              ]
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "DE_Y_N_RequiredDocs"
+            },
+            {
+              "name": "costs_flag",
+              "type": "DE_Y_N_Cost"
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "DE_Y_N_ProcessTime"
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "DE_Y_N_BookAppointment"
+            }
+          ],
+          "samples": [
+            "ich möchte einen {bafoegType}",
+            "ich möchte Bafög bekommen",
+            "ich möchte {bafoegType}",
+            "ich will bafög beantragen",
+            "Ich möchte Bafög"
+          ]
+        },
+        {
+          "name": "LOC_General_Intent_Fragen_zu_einer_Behoerde",
+          "slots": [
+            {
+              "name": "office_type",
+              "type": "DE_OfficeTypes"
+            },
+            {
+              "name": "office_name",
+              "type": "DE_Office_Names_BER"
+            },
+            {
+              "name": "district_single_name",
+              "type": "Districts_Single_BER"
+            },
+            {
+              "name": "district_combo_name",
+              "type": "Districts_PLZ_Combo_BER"
+            },
+            {
+              "name": "dienstleistung",
+              "type": "DE_PublicSvcs_Berlin"
+            },
+            {
+              "name": "telefonnummer",
+              "type": "DE_Y_N_Tel"
+            }
+          ],
+          "samples": [
+            "wo bekomme ich eine {dienstleistung} in {district_combo_name}",
+            "wo bekomme ich eine {dienstleistung}",
+            "wo bekomme ich ein {dienstleistung}",
+            "wo kann ich {dienstleistung}",
+            "wo kann ich {dienstleistung} bekommen",
+            "wo kann ich {dienstleistung} beantragen",
+            "wo kann ich {dienstleistung} abgeben",
+            "wo kann ich {dienstleistung} anmelden"
+          ]
+        },
+        {
+          "name": "LOC_IsSvcAvlbl_Intent_Fragen_ob_ein_dienst_verfuegbar_ist",
+          "slots": [
+            {
+              "name": "dienstleistung",
+              "type": "DE_PublicSvcs_Berlin",
+              "samples": [
+                "{dienstleistung}"
+              ]
+            },
+            {
+              "name": "officeType",
+              "type": "DE_OfficeTypes"
+            },
+            {
+              "name": "district",
+              "type": "Districts_PLZ_Combo_BER"
+            },
+            {
+              "name": "onlineAntrag",
+              "type": "DE_Y_N_Online_or_Appointment"
+            }
+          ],
+          "samples": [
+            "bekomme ich {dienstleistung} auch {onlineAntrag}",
+            "kann ich {dienstleistung} in {district} beantagen",
+            "kann man {dienstleistung} in {district} bekommen",
+            "kriege ich {dienstleistung} in {district}",
+            "bekomme ich {dienstleistung} in {district}",
+            "{dienstleistung} in {officeType} {district}",
+            "kann ich {dienstleistung} in {officeType} {district} beantragen",
+            "kriege ich {dienstleistung} in {officeType} {district}",
+            "bekomme ich {dienstleistung} in {officeType} {district}"
+          ]
+        },
+        {
+          "name": "LOC_WhereIsAreaOrPLZ_Intent_Postleitzahl_und_Ortssuche",
+          "slots": [
+            {
+              "name": "plz_district",
+              "type": "Districts_PLZ_Combo_BER"
+            }
+          ],
+          "samples": [
+            "zu welchem stadtteil gehört {plz_district}",
+            "Zu welchem Ort gehört {plz_district}",
+            "In welchem Ortsteil ist {plz_district}",
+            "In welchem Stadtteil ist {plz_district}",
+            "wo ist {plz_district}"
+          ]
+        },
+        {
+          "name": "ST_BerlinStats_Intent_Fakten_und_zahlen_ueber_Berlin",
+          "slots": [
+            {
+              "name": "statistic",
+              "type": "DE_CityFacts"
+            }
+          ],
+          "samples": [
+            "wieviel {statistic} gibt es heute in der stadt",
+            "wie viele {statistic} gibt es in der Stadt",
+            "wieviel {statistic} gibt es in berlin",
+            "wie viele {statistic} hat berlin"
+          ]
+        },
+        {
+          "name": "ST_FromChatbot_Intent_Fragen_ueber_mich_als_Alexa_im_Amt",
+          "slots": [
+            {
+              "name": "smalltalk",
+              "type": "DE_SmallTalk"
+            }
+          ],
+          "samples": [
+            "{smalltalk}"
+          ]
+        },
+        {
+          "name": "DL_Costs_Intent_Was_kostet_eine_Dienstleistung",
+          "slots": [
+            {
+              "name": "costs_flag",
+              "type": "DE_Y_N_Cost"
+            },
+            {
+              "name": "Dienstleistung",
+              "type": "DE_PublicSvcs_Berlin"
+            },
+            {
+              "name": "extension_flag",
+              "type": "DE_Y_N_Extension"
+            }
+          ],
+          "samples": [
+            "{costs_flag} meinen {Dienstleistung} {extension_flag}",
+            "{costs_flag} eine {Dienstleistung}"
+          ]
+        },
+        {
+          "name": "DL_Prereq_Intent_Was_muss_ich_erfuellen_fuer_die_Dienstleistung",
+          "slots": [
+            {
+              "name": "prerequisites_flag",
+              "type": "DE_Y_N_Prereq"
+            },
+            {
+              "name": "Dienstleistung",
+              "type": "DE_PublicSvcs_Berlin"
+            }
+          ],
+          "samples": [
+            "{prerequisites_flag} eine {Dienstleistung}"
+          ]
+        },
+        {
+          "name": "DL_ReqDocs_Intent_Welche_Unterlagen_sind_noetig",
+          "slots": [
+            {
+              "name": "required_docs_flag",
+              "type": "DE_Y_N_RequiredDocs"
+            },
+            {
+              "name": "Dienstleistung",
+              "type": "DE_PublicSvcs_Berlin"
+            }
+          ],
+          "samples": [
+            "{required_docs_flag} für {Dienstleistung}"
+          ]
+        },
+        {
+          "name": "DL_Book_Intent_Termin_buchen_fuer_eine_Dienstleistung",
+          "slots": [
+            {
+              "name": "book_appointment_intent",
+              "type": "DE_Y_N_BookAppointment"
+            },
+            {
+              "name": "Dienstleistung",
+              "type": "DE_PublicSvcs_Berlin"
+            }
+          ],
+          "samples": [
+            "{book_appointment_intent} für {Dienstleistung}",
+
+            "{book_appointment_intent} der {Dienstleistung} abgeben",
+            "{book_appointment_intent} der {Dienstleistung} beantragen",
+            "{book_appointment_intent} der {Dienstleistung} bekommen",
+            "{book_appointment_intent} der {Dienstleistung} erhalten",
+
+            "{book_appointment_intent} meinen {Dienstleistung} melden"
+          ]
+        },
+        {
+          "name": "DL_Processing_Time_Intent_Wie_lange_ist_die_Bearbeitungsdauer",
+          "slots": [
+            {
+              "name": "processing_time_flag",
+              "type": "DE_Y_N_ProcessTime"
+            },
+            {
+              "name": "Dienstleistung",
+              "type": "DE_PublicSvcs_Berlin"
+            }
+          ],
+          "samples": [
+            "{processing_time_flag} die {Dienstleistung}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "DE_PublicSvcs_Berlin",
+          "values": [
+            {
+              "name": {
+                "value": "Hort-Gutschein - Erweiterung"
+              }
+            },
+            {
+              "name": {
+                "value": "Schwerbehindertenausweis",
+                "synonyms": [
+                  "behinderungsausweis",
+                  "behindertenausweis"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Eheschließung - anmelden",
+                "synonyms": [
+                  "heiraten"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gewerbe - anmeldung"
+              }
+            },
+            {
+              "name": {
+                "value": "steuererklärung abgeben",
+                "synonyms": [
+                  "steuern",
+                  "steuererklärung"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Hund anmelden"
+              }
+            },
+            {
+              "name": {
+                "value": "Reisepass beantragen",
+                "synonyms": [
+                  "travel dokument",
+                  "Pass"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Personalausweis beantragen",
+                "synonyms": [
+                  "ausweis",
+                  "perso"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Anmeldung einer Wohnung",
+                "synonyms": [
+                  "eine Meldebscheinigung",
+                  "eine Wohnungsanmeldung",
+                  "mich melden",
+                  "mich im Bürgeramt",
+                  "mich selbst",
+                  "mich",
+                  "eine Wohnung",
+                  "meine Freundin",
+                  "mein Freund",
+                  "meine Familie",
+                  "meine Wohnung",
+                  "jemanden",
+                  "wohnsitz",
+                  "eine anmeldung",
+                  "Wohnungsanmeldung"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_BerufGesudheit",
+          "values": [
+            {
+              "name": {
+                "value": "Zahnarzt",
+                "synonyms": [
+                  "arzt",
+                  "Zahnärztin"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Tierarzt",
+                "synonyms": [
+                  "Tierärztin"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Psychotherapeut",
+                "synonyms": [
+                  "psychologin",
+                  "psychologen",
+                  "psycholog",
+                  "Psychologische Psychotherapeutin"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kinder - und Jugendlichenpsychotherapeut",
+                "synonyms": [
+                  "JugendlichenTherapeutin",
+                  "Kindertherapeutin",
+                  "Therapeutin für Jugendliche und Kinder",
+                  "Therapeutin für Kinder und Jugendliche",
+                  "Therapeutin für Jugendliche",
+                  "Therapeutin für Kinder",
+                  "JugendlichenTherapeut",
+                  "Kindertherapeut",
+                  "Therapeut für Jugendliche und Kinder",
+                  "Therapeut für Kinder und Jugendliche",
+                  "Therapeut für Jugendliche",
+                  "Therapeut für Kinder"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Apotheker",
+                "synonyms": [
+                  "Apothekerin"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Arzt",
+                "synonyms": [
+                  "Frau Doktor",
+                  "Herr Doktor",
+                  "Doktor",
+                  "Ärztin"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_BafoegTypes",
+          "values": [
+            {
+              "name": {
+                "value": "studium",
+                "synonyms": [
+                  "bafög für studierende",
+                  "studi bafög",
+                  "hochschul bafög",
+                  "uni Bafög",
+                  "bafög fürs Studium",
+                  "keins",
+                  "ganz normal bafög",
+                  "Studenten Bafög",
+                  "ein normaler Bafög",
+                  "keinen davon",
+                  "keins davon"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "auslands bafög"
+              }
+            },
+            {
+              "name": {
+                "value": "meister bafög",
+                "synonyms": [
+                  "Ausbildungsförderung bei beruflicher Aufstiegsfortbildung"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "schüler bafög"
+              }
+            },
+            {
+              "name": {
+                "value": "studenten Bafög",
+                "synonyms": [
+                  "studierenden Bafög"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_ResidencePurposes",
+          "values": [
+            {
+              "id": "324282",
+              "name": {
+                "value": "Aufenthaltskarte für Familienangehörige von Bürgern der EU (außer Deutschland) und des EWR - Ausstellung",
+                "synonyms": [
+                  "Aufenthalt EU Familien Mitglied",
+                  "Aufenthaltskarte Familienmitglied EU",
+                  "Aufenthaltskarte EU"
+                ]
+              }
+            },
+            {
+              "id": "324659",
+              "name": {
+                "value": "Blaue Karte EU",
+                "synonyms": [
+                  "EU aufenthaltstitel",
+                  "blue Card",
+                  "Blaue Karte"
+                ]
+              }
+            },
+            {
+              "id": "305244",
+              "name": {
+                "value": "Studium",
+                "synonyms": [
+                  "student",
+                  "Studiumvisum",
+                  "fürs Studium",
+                  "zum Studium"
+                ]
+              }
+            },
+            {
+              "id": "324859",
+              "name": {
+                "value": "aus humanitären Gründen",
+                "synonyms": [
+                  "Migrant",
+                  "Flüchtling",
+                  "Asylant",
+                  "Asyl"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_Countries_Citizenships",
+          "values": [
+            {
+              "id": "423",
+              "name": {
+                "value": "Afghanistan"
+              }
+            },
+            {
+              "id": "287",
+              "name": {
+                "value": "Ägypten",
+                "synonyms": [
+                  "ägyptische",
+                  "ägypterin",
+                  "ägypter",
+                  "ägyptisch"
+                ]
+              }
+            },
+            {
+              "id": "121",
+              "name": {
+                "value": "Albanien"
+              }
+            },
+            {
+              "id": "221",
+              "name": {
+                "value": "Algerien"
+              }
+            },
+            {
+              "id": "123",
+              "name": {
+                "value": "Andorra"
+              }
+            },
+            {
+              "id": "223",
+              "name": {
+                "value": "Angola"
+              }
+            },
+            {
+              "id": "320",
+              "name": {
+                "value": "Antigua und Barbuda"
+              }
+            },
+            {
+              "id": "274",
+              "name": {
+                "value": "Äquatorialguinea"
+              }
+            },
+            {
+              "id": "323",
+              "name": {
+                "value": "Argentinien"
+              }
+            },
+            {
+              "id": "422",
+              "name": {
+                "value": "Armenien"
+              }
+            },
+            {
+              "id": "425",
+              "name": {
+                "value": "Aserbaidschan"
+              }
+            },
+            {
+              "id": "225",
+              "name": {
+                "value": "Äthiopien"
+              }
+            },
+            {
+              "id": "523",
+              "name": {
+                "value": "Australien"
+              }
+            },
+            {
+              "id": "324",
+              "name": {
+                "value": "Bahamas"
+              }
+            },
+            {
+              "id": "424",
+              "name": {
+                "value": "Bahrain"
+              }
+            },
+            {
+              "id": "460",
+              "name": {
+                "value": "Bangladesch"
+              }
+            },
+            {
+              "id": "322",
+              "name": {
+                "value": "Barbados"
+              }
+            },
+            {
+              "id": "169",
+              "name": {
+                "value": "Belarus"
+              }
+            },
+            {
+              "id": "330",
+              "name": {
+                "value": "Belize"
+              }
+            },
+            {
+              "id": "229",
+              "name": {
+                "value": "Benin"
+              }
+            },
+            {
+              "id": "426",
+              "name": {
+                "value": "Bhutan"
+              }
+            },
+            {
+              "id": "326",
+              "name": {
+                "value": "Bolivien"
+              }
+            },
+            {
+              "id": "122",
+              "name": {
+                "value": "Bosnien und Herzegowina"
+              }
+            },
+            {
+              "id": "227",
+              "name": {
+                "value": "Botsuana"
+              }
+            },
+            {
+              "id": "327",
+              "name": {
+                "value": "Brasilien"
+              }
+            },
+            {
+              "id": "295",
+              "name": {
+                "value": "britisches Überseegebiet in Afrika"
+              }
+            },
+            {
+              "id": "395",
+              "name": {
+                "value": "britisches Überseegebiet in Amerika"
+              }
+            },
+            {
+              "id": "495",
+              "name": {
+                "value": "britisches Überseegebiet in Asien"
+              }
+            },
+            {
+              "id": "595",
+              "name": {
+                "value": "britisches Überseegebiet in Australien"
+              }
+            },
+            {
+              "id": "195",
+              "name": {
+                "value": "britisches Überseegebiet in Europa"
+              }
+            },
+            {
+              "id": "429",
+              "name": {
+                "value": "Brunei Darussalam"
+              }
+            },
+            {
+              "id": "258",
+              "name": {
+                "value": "Burkina Faso"
+              }
+            },
+            {
+              "id": "291",
+              "name": {
+                "value": "Burundi"
+              }
+            },
+            {
+              "id": "332",
+              "name": {
+                "value": "Chile"
+              }
+            },
+            {
+              "id": "479",
+              "name": {
+                "value": "China"
+              }
+            },
+            {
+              "id": "527",
+              "name": {
+                "value": "Cookinseln"
+              }
+            },
+            {
+              "id": "334",
+              "name": {
+                "value": "Costa Rica"
+              }
+            },
+            {
+              "id": "231",
+              "name": {
+                "value": "Côte d'Ivoire"
+              }
+            },
+            {
+              "id": "333",
+              "name": {
+                "value": "Dominica"
+              }
+            },
+            {
+              "id": "335",
+              "name": {
+                "value": "Dominikanische Republik"
+              }
+            },
+            {
+              "id": "230",
+              "name": {
+                "value": "Dschibuti"
+              }
+            },
+            {
+              "id": "336",
+              "name": {
+                "value": "Ecuador"
+              }
+            },
+            {
+              "id": "337",
+              "name": {
+                "value": "El Salvador"
+              }
+            },
+            {
+              "id": "224",
+              "name": {
+                "value": "Eritrea"
+              }
+            },
+            {
+              "id": "526",
+              "name": {
+                "value": "Fidschi"
+              }
+            },
+            {
+              "id": "236",
+              "name": {
+                "value": "Gabun"
+              }
+            },
+            {
+              "id": "237",
+              "name": {
+                "value": "Gambia"
+              }
+            },
+            {
+              "id": "430",
+              "name": {
+                "value": "Georgien"
+              }
+            },
+            {
+              "id": "238",
+              "name": {
+                "value": "Ghana"
+              }
+            },
+            {
+              "id": "340",
+              "name": {
+                "value": "Grenada"
+              }
+            },
+            {
+              "id": "345",
+              "name": {
+                "value": "Guatemala"
+              }
+            },
+            {
+              "id": "261",
+              "name": {
+                "value": "Guinea"
+              }
+            },
+            {
+              "id": "259",
+              "name": {
+                "value": "Guinea-Bissau"
+              }
+            },
+            {
+              "id": "328",
+              "name": {
+                "value": "Guyana"
+              }
+            },
+            {
+              "id": "346",
+              "name": {
+                "value": "Haiti"
+              }
+            },
+            {
+              "id": "347",
+              "name": {
+                "value": "Honduras"
+              }
+            },
+            {
+              "id": "436",
+              "name": {
+                "value": "Indien"
+              }
+            },
+            {
+              "id": "437",
+              "name": {
+                "value": "Indonesien"
+              }
+            },
+            {
+              "id": "438",
+              "name": {
+                "value": "Irak"
+              }
+            },
+            {
+              "id": "439",
+              "name": {
+                "value": "Iran, Islamische Republik"
+              }
+            },
+            {
+              "id": "441",
+              "name": {
+                "value": "Israel"
+              }
+            },
+            {
+              "id": "355",
+              "name": {
+                "value": "Jamaika"
+              }
+            },
+            {
+              "id": "442",
+              "name": {
+                "value": "Japan"
+              }
+            },
+            {
+              "id": "421",
+              "name": {
+                "value": "Jemen"
+              }
+            },
+            {
+              "id": "445",
+              "name": {
+                "value": "Jordanien"
+              }
+            },
+            {
+              "id": "446",
+              "name": {
+                "value": "Kambodscha"
+              }
+            },
+            {
+              "id": "262",
+              "name": {
+                "value": "Kamerun"
+              }
+            },
+            {
+              "id": "348",
+              "name": {
+                "value": "Kanada"
+              }
+            },
+            {
+              "id": "242",
+              "name": {
+                "value": "Kap Verde"
+              }
+            },
+            {
+              "id": "444",
+              "name": {
+                "value": "Kasachstan"
+              }
+            },
+            {
+              "id": "447",
+              "name": {
+                "value": "Katar"
+              }
+            },
+            {
+              "id": "243",
+              "name": {
+                "value": "Kenia"
+              }
+            },
+            {
+              "id": "450",
+              "name": {
+                "value": "Kirgisistan"
+              }
+            },
+            {
+              "id": "530",
+              "name": {
+                "value": "Kiribati"
+              }
+            },
+            {
+              "id": "349",
+              "name": {
+                "value": "Kolumbien"
+              }
+            },
+            {
+              "id": "244",
+              "name": {
+                "value": "Komoren"
+              }
+            },
+            {
+              "id": "246",
+              "name": {
+                "value": "Kongo, Demokratische Republik"
+              }
+            },
+            {
+              "id": "434",
+              "name": {
+                "value": "Korea, Demokratische Volksrepublik"
+              }
+            },
+            {
+              "id": "467",
+              "name": {
+                "value": "Korea, Republik"
+              }
+            },
+            {
+              "id": "150",
+              "name": {
+                "value": "Kosovo"
+              }
+            },
+            {
+              "id": "351",
+              "name": {
+                "value": "Kuba"
+              }
+            },
+            {
+              "id": "448",
+              "name": {
+                "value": "Kuwait"
+              }
+            },
+            {
+              "id": "449",
+              "name": {
+                "value": "Laos, Demokratische Volksrepublik"
+              }
+            },
+            {
+              "id": "226",
+              "name": {
+                "value": "Lesotho"
+              }
+            },
+            {
+              "id": "451",
+              "name": {
+                "value": "Libanon"
+              }
+            },
+            {
+              "id": "247",
+              "name": {
+                "value": "Liberia"
+              }
+            },
+            {
+              "id": "248",
+              "name": {
+                "value": "Libyen"
+              }
+            },
+            {
+              "id": "249",
+              "name": {
+                "value": "Madagaskar"
+              }
+            },
+            {
+              "id": "256",
+              "name": {
+                "value": "Malawi"
+              }
+            },
+            {
+              "id": "482",
+              "name": {
+                "value": "Malaysia"
+              }
+            },
+            {
+              "id": "454",
+              "name": {
+                "value": "Malediven"
+              }
+            },
+            {
+              "id": "251",
+              "name": {
+                "value": "Mali"
+              }
+            },
+            {
+              "id": "252",
+              "name": {
+                "value": "Marokko"
+              }
+            },
+            {
+              "id": "544",
+              "name": {
+                "value": "Marshallinseln"
+              }
+            },
+            {
+              "id": "239",
+              "name": {
+                "value": "Mauretanien"
+              }
+            },
+            {
+              "id": "253",
+              "name": {
+                "value": "Mauritius"
+              }
+            },
+            {
+              "id": "144",
+              "name": {
+                "value": "Mazedonien"
+              }
+            },
+            {
+              "id": "353",
+              "name": {
+                "value": "Mexiko"
+              }
+            },
+            {
+              "id": "545",
+              "name": {
+                "value": "Mikronesien, Föder. Staaten"
+              }
+            },
+            {
+              "id": "146",
+              "name": {
+                "value": "Moldau, Republik"
+              }
+            },
+            {
+              "id": "147",
+              "name": {
+                "value": "Monaco"
+              }
+            },
+            {
+              "id": "457",
+              "name": {
+                "value": "Mongolei"
+              }
+            },
+            {
+              "id": "140",
+              "name": {
+                "value": "Montenegro"
+              }
+            },
+            {
+              "id": "254",
+              "name": {
+                "value": "Mosambik"
+              }
+            },
+            {
+              "id": "427",
+              "name": {
+                "value": "Myanmar"
+              }
+            },
+            {
+              "id": "267",
+              "name": {
+                "value": "Namibia"
+              }
+            },
+            {
+              "id": "531",
+              "name": {
+                "value": "Nauru"
+              }
+            },
+            {
+              "id": "458",
+              "name": {
+                "value": "Nepal"
+              }
+            },
+            {
+              "id": "536",
+              "name": {
+                "value": "Neuseeland"
+              }
+            },
+            {
+              "id": "354",
+              "name": {
+                "value": "Nicaragua"
+              }
+            },
+            {
+              "id": "255",
+              "name": {
+                "value": "Niger"
+              }
+            },
+            {
+              "id": "232",
+              "name": {
+                "value": "Nigeria"
+              }
+            },
+            {
+              "id": "533",
+              "name": {
+                "value": "Niue"
+              }
+            },
+            {
+              "id": "525",
+              "name": {
+                "value": "Nördliche Marianen"
+              }
+            },
+            {
+              "id": "456",
+              "name": {
+                "value": "Oman"
+              }
+            },
+            {
+              "id": "461",
+              "name": {
+                "value": "Pakistan"
+              }
+            },
+            {
+              "id": "537",
+              "name": {
+                "value": "Palau"
+              }
+            },
+            {
+              "id": "357",
+              "name": {
+                "value": "Panama"
+              }
+            },
+            {
+              "id": "538",
+              "name": {
+                "value": "Papua-Neuguinea"
+              }
+            },
+            {
+              "id": "359",
+              "name": {
+                "value": "Paraguay"
+              }
+            },
+            {
+              "id": "361",
+              "name": {
+                "value": "Peru"
+              }
+            },
+            {
+              "id": "462",
+              "name": {
+                "value": "Philippinen"
+              }
+            },
+            {
+              "id": "265",
+              "name": {
+                "value": "Ruanda"
+              }
+            },
+            {
+              "id": "160",
+              "name": {
+                "value": "Russische Föderation"
+              }
+            },
+            {
+              "id": "524",
+              "name": {
+                "value": "Salomonen"
+              }
+            },
+            {
+              "id": "257",
+              "name": {
+                "value": "Sambia"
+              }
+            },
+            {
+              "id": "543",
+              "name": {
+                "value": "Samoa"
+              }
+            },
+            {
+              "id": "156",
+              "name": {
+                "value": "San Marino"
+              }
+            },
+            {
+              "id": "268",
+              "name": {
+                "value": "Sao Tome und Principe"
+              }
+            },
+            {
+              "id": "472",
+              "name": {
+                "value": "Saudi-Arabien"
+              }
+            },
+            {
+              "id": "269",
+              "name": {
+                "value": "Senegal"
+              }
+            },
+            {
+              "id": "170",
+              "name": {
+                "value": "Serbien"
+              }
+            },
+            {
+              "id": "271",
+              "name": {
+                "value": "Seychellen"
+              }
+            },
+            {
+              "id": "272",
+              "name": {
+                "value": "Sierra Leone"
+              }
+            },
+            {
+              "id": "233",
+              "name": {
+                "value": "Simbabwe"
+              }
+            },
+            {
+              "id": "474",
+              "name": {
+                "value": "Singapur"
+              }
+            },
+            {
+              "id": "273",
+              "name": {
+                "value": "Somalia"
+              }
+            },
+            {
+              "id": "299",
+              "name": {
+                "value": "sonstige afrikanische Staaten"
+              }
+            },
+            {
+              "id": "399",
+              "name": {
+                "value": "sonstige amerikanische Staaten"
+              }
+            },
+            {
+              "id": "499",
+              "name": {
+                "value": "sonstige asiatische Staaten"
+              }
+            },
+            {
+              "id": "599",
+              "name": {
+                "value": "sonstige australische Staaten"
+              }
+            },
+            {
+              "id": "199",
+              "name": {
+                "value": "sonstige europäische Staaten"
+              }
+            },
+            {
+              "id": "431",
+              "name": {
+                "value": "Sri Lanka"
+              }
+            },
+            {
+              "id": "370",
+              "name": {
+                "value": "St. Kitts und Nevis"
+              }
+            },
+            {
+              "id": "366",
+              "name": {
+                "value": "St. Lucia"
+              }
+            },
+            {
+              "id": "369",
+              "name": {
+                "value": "St. Vincent und die Grenadinen"
+              }
+            },
+            {
+              "id": "263",
+              "name": {
+                "value": "Südafrika"
+              }
+            },
+            {
+              "id": "276",
+              "name": {
+                "value": "Sudan"
+              }
+            },
+            {
+              "id": "278",
+              "name": {
+                "value": "Südsudan"
+              }
+            },
+            {
+              "id": "364",
+              "name": {
+                "value": "Suriname"
+              }
+            },
+            {
+              "id": "281",
+              "name": {
+                "value": "Swasiland"
+              }
+            },
+            {
+              "id": "475",
+              "name": {
+                "value": "Syrien (Familienname A - E)"
+              }
+            },
+            {
+              "id": "473",
+              "name": {
+                "value": "Syrien (Familienname F - Z)"
+              }
+            },
+            {
+              "id": "470",
+              "name": {
+                "value": "Tadschikistan"
+              }
+            },
+            {
+              "id": "465",
+              "name": {
+                "value": "Taiwan"
+              }
+            },
+            {
+              "id": "282",
+              "name": {
+                "value": "Tansania, Verein. Republik"
+              }
+            },
+            {
+              "id": "476",
+              "name": {
+                "value": "Thailand"
+              }
+            },
+            {
+              "id": "483",
+              "name": {
+                "value": "Timor-Leste"
+              }
+            },
+            {
+              "id": "283",
+              "name": {
+                "value": "Togo"
+              }
+            },
+            {
+              "id": "541",
+              "name": {
+                "value": "Tonga"
+              }
+            },
+            {
+              "id": "371",
+              "name": {
+                "value": "Trinidad und Tobago"
+              }
+            },
+            {
+              "id": "284",
+              "name": {
+                "value": "Tschad"
+              }
+            },
+            {
+              "id": "285",
+              "name": {
+                "value": "Tunesien"
+              }
+            },
+            {
+              "id": "TK",
+              "name": {
+                "value": "Türkei",
+                "synonyms": [
+                  "turkisch",
+                  "türisch",
+                  "türkin",
+                  "türke"
+                ]
+              }
+            },
+            {
+              "id": "471",
+              "name": {
+                "value": "Turkmenistan"
+              }
+            },
+            {
+              "id": "540",
+              "name": {
+                "value": "Tuvalu"
+              }
+            },
+            {
+              "id": "286",
+              "name": {
+                "value": "Uganda"
+              }
+            },
+            {
+              "id": "166",
+              "name": {
+                "value": "Ukraine"
+              }
+            },
+            {
+              "id": "365",
+              "name": {
+                "value": "Uruguay"
+              }
+            },
+            {
+              "id": "477",
+              "name": {
+                "value": "Usbekistan"
+              }
+            },
+            {
+              "id": "532",
+              "name": {
+                "value": "Vanuatu"
+              }
+            },
+            {
+              "id": "167",
+              "name": {
+                "value": "Vatikanstadt"
+              }
+            },
+            {
+              "id": "367",
+              "name": {
+                "value": "Venezuela"
+              }
+            },
+            {
+              "id": "469",
+              "name": {
+                "value": "Vereinigte Arabische Emirate"
+              }
+            },
+            {
+              "id": "368",
+              "name": {
+                "value": "Vereinigte Staaten von Amerika"
+              }
+            },
+            {
+              "id": "432",
+              "name": {
+                "value": "Vietnam"
+              }
+            },
+            {
+              "id": "289",
+              "name": {
+                "value": "Zentralafrikanische Republik"
+              }
+            },
+            {
+              "name": {
+                "value": "Island"
+              }
+            },
+            {
+              "name": {
+                "value": "Liechtenstein"
+              }
+            },
+            {
+              "name": {
+                "value": "Norwegen"
+              }
+            },
+            {
+              "name": {
+                "value": "Belgien"
+              }
+            },
+            {
+              "name": {
+                "value": "Bulgarien"
+              }
+            },
+            {
+              "name": {
+                "value": "Dänemark",
+                "synonyms": [
+                  "däne",
+                  "dänin"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Estland"
+              }
+            },
+            {
+              "name": {
+                "value": "Finnland"
+              }
+            },
+            {
+              "name": {
+                "value": "Frankreich"
+              }
+            },
+            {
+              "name": {
+                "value": "Griechenland"
+              }
+            },
+            {
+              "name": {
+                "value": "Irland"
+              }
+            },
+            {
+              "name": {
+                "value": "Italien"
+              }
+            },
+            {
+              "name": {
+                "value": "Kroatien"
+              }
+            },
+            {
+              "name": {
+                "value": "Lettlan"
+              }
+            },
+            {
+              "name": {
+                "value": "Litauen"
+              }
+            },
+            {
+              "name": {
+                "value": "Luxemburg"
+              }
+            },
+            {
+              "name": {
+                "value": "Malta"
+              }
+            },
+            {
+              "id": "NL",
+              "name": {
+                "value": "Niederlande",
+                "synonyms": [
+                  "niederländin",
+                  "Niederländer",
+                  "holländin",
+                  "holländerin",
+                  "holländer"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Österreich"
+              }
+            },
+            {
+              "name": {
+                "value": "Polen"
+              }
+            },
+            {
+              "name": {
+                "value": "Portugal"
+              }
+            },
+            {
+              "name": {
+                "value": "Rumänien"
+              }
+            },
+            {
+              "name": {
+                "value": "Schweden"
+              }
+            },
+            {
+              "name": {
+                "value": "Slowakei"
+              }
+            },
+            {
+              "name": {
+                "value": "Slowenien"
+              }
+            },
+            {
+              "name": {
+                "value": "Spanien"
+              }
+            },
+            {
+              "name": {
+                "value": "Tschechien"
+              }
+            },
+            {
+              "name": {
+                "value": "Ungarn"
+              }
+            },
+            {
+              "id": "UK",
+              "name": {
+                "value": "Vereinigtes Königreich",
+                "synonyms": [
+                  "United Kingdom",
+                  "Großbritannien",
+                  "nordire",
+                  "welsch",
+                  "schotin",
+                  "schote",
+                  "schottisch",
+                  "englisch",
+                  "britannier",
+                  "britannien",
+                  "britische",
+                  "britisch",
+                  "britin",
+                  "brite"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Zypern"
+              }
+            },
+            {
+              "id": "DE",
+              "name": {
+                "value": "deutschland",
+                "synonyms": [
+                  "schland",
+                  "deutsche",
+                  "deutsch"
+                ]
+              }
+            },
+            {
+              "id": "158",
+              "name": {
+                "value": "Schweiz",
+                "synonyms": [
+                  "helvetica",
+                  "schweizerisch",
+                  "schweizerische",
+                  "schweizerin",
+                  "schweizer",
+                  "schwiez"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_OfficeTypes",
+          "values": [
+            {
+              "name": {
+                "value": "amtsanwaltschaft"
+              }
+            },
+            {
+              "name": {
+                "value": "staatsanwaltschaft"
+              }
+            },
+            {
+              "name": {
+                "value": "Universität",
+                "synonyms": [
+                  "H. T. W.",
+                  "F. U. ",
+                  "T. U. ",
+                  "H. U.",
+                  "Hochschule für Technik und Wirtschaft",
+                  "H. T. W. Berlin",
+                  "F. U. Berlin",
+                  "H. U. Berlin",
+                  "T. U. Berlin",
+                  "Freie Universität Berlin",
+                  "Humboldt Universität zu Berlin",
+                  "Technische Universität Berlin"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Senatsverwaltung"
+              }
+            },
+            {
+              "name": {
+                "value": "IT Dienstleistungszentrum",
+                "synonyms": [
+                  "ITDZ"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Amtsgericht",
+                "synonyms": [
+                  "gericht"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Landesamt für Gesundheit und Soziales",
+                "synonyms": [
+                  "La Ge So",
+                  "sosial",
+                  "social",
+                  "sociale"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Bezirksamt"
+              }
+            },
+            {
+              "name": {
+                "value": "Bürgeramt"
+              }
+            },
+            {
+              "name": {
+                "value": "Finanzamt"
+              }
+            },
+            {
+              "name": {
+                "value": "Ausländerbehörde",
+                "synonyms": [
+                  "Labo"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_Office_Names_BER",
+          "values": [
+            {
+              "name": {
+                "value": "pur"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Districts_Single_BER",
+          "values": [
+            {
+              "name": {
+                "value": "ist gerade nicht nützlich als Liste"
+              }
+            },
+            {
+              "name": {
+                "value": "purpur"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Districts_PLZ_Combo_BER",
+          "values": [
+            {
+              "name": {
+                "value": "Treptow-Köpenick",
+                "synonyms": [
+                  "eins zwei vier drei fünf ",
+                  "eins zwei vier drei sieben ",
+                  "eins zwei vier drei neun ",
+                  "eins zwei vier fünf neun ",
+                  "eins zwei vier acht sieben ",
+                  "eins zwei vier acht neun ",
+                  "eins zwei fünf zwei vier ",
+                  "eins zwei fünf zwei sechs ",
+                  "eins zwei fünf zwei sieben ",
+                  "eins zwei fünf fünf fünf ",
+                  "eins zwei fünf fünf sieben ",
+                  "eins zwei fünf fünf neun ",
+                  "eins zwei fünf acht sieben ",
+                  "eins zwei fünf acht neun ",
+                  "eins zwei sechs zwei drei ",
+                  "Oberschöneweide",
+                  "müggelheim",
+                  "johannisthal",
+                  "friedrichshagen",
+                  "Baumschulenweg",
+                  "Altglienicke",
+                  "schmöckwitz",
+                  "plänterwald",
+                  "niederschöneweide",
+                  "grünau",
+                  "bohnsdorf",
+                  "alt-treptow",
+                  "adlershof",
+                  "Schöneweide",
+                  "köpenick",
+                  "zwölf vier drei fünf ",
+                  "zwölf vier drei sieben ",
+                  "zwölf vier drei neun ",
+                  "zwölf vier fünf neun ",
+                  "zwölf vier acht sieben ",
+                  "zwölf vier acht neun ",
+                  "zwölf fünf zwei vier ",
+                  "zwölf fünf zwei sechs ",
+                  "zwölf fünf zwei sieben ",
+                  "zwölf fünf fünf fünf ",
+                  "zwölf fünf fünf sieben ",
+                  "zwölf fünf fünf neun ",
+                  "zwölf fünf acht sieben ",
+                  "zwölf fünf acht neun ",
+                  "zwölf sechs zwei drei "
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Tempelhof-Schöneberg",
+                "synonyms": [
+                  "Friedenau",
+                  "Mariendorf",
+                  "Marienfelde",
+                  "eins null sieben sieben sieben ",
+                  "eins null sieben sieben neun ",
+                  "eins null sieben acht eins ",
+                  "eins null sieben acht drei ",
+                  "eins null sieben acht fünf ",
+                  "eins null sieben acht sieben ",
+                  "eins null sieben acht neun ",
+                  "eins null acht zwei drei ",
+                  "eins null acht zwei fünf ",
+                  "eins null acht zwei sieben ",
+                  "eins null acht zwei neun ",
+                  "eins null neun sechs fünf ",
+                  "eins zwei null neun neun ",
+                  "eins zwei eins null eins ",
+                  "eins zwei eins null drei ",
+                  "eins zwei eins null fünf ",
+                  "eins zwei eins null sieben ",
+                  "eins zwei eins null neun ",
+                  "eins zwei eins fünf sieben ",
+                  "eins zwei eins fünf neun ",
+                  "eins zwei eins sechs eins ",
+                  "eins zwei eins sechs drei ",
+                  "eins zwei eins sechs neun ",
+                  "eins zwei zwei vier neun ",
+                  "eins zwei zwei sieben sieben ",
+                  "eins zwei zwei sieben neun ",
+                  "eins zwei drei null fünf ",
+                  "eins zwei drei null sieben ",
+                  "eins zwei drei null neun ",
+                  "eins zwei drei vier sieben ",
+                  "eins vier eins neun sieben ",
+                  "Lichtenrade",
+                  "Schöneberg",
+                  "Tempelhof",
+                  "zehn sieben sieben sieben ",
+                  "zehn sieben sieben neun ",
+                  "zehn sieben acht eins ",
+                  "zehn sieben acht drei ",
+                  "zehn sieben acht fünf ",
+                  "zehn sieben acht sieben ",
+                  "zehn sieben acht neun ",
+                  "zehn acht zwei drei ",
+                  "zehn acht zwei fünf ",
+                  "zehn acht zwei sieben ",
+                  "zehn acht zwei neun ",
+                  "zehn neun sechs fünf ",
+                  "zwölf null neun neun ",
+                  "zwölf eins null eins ",
+                  "zwölf eins null drei ",
+                  "zwölf eins null fünf ",
+                  "zwölf eins null sieben ",
+                  "zwölf eins null neun ",
+                  "zwölf eins fünf sieben ",
+                  "zwölf eins fünf neun ",
+                  "zwölf eins sechs eins ",
+                  "zwölf eins sechs drei ",
+                  "zwölf eins sechs neun ",
+                  "zwölf zwei vier neun ",
+                  "zwölf zwei sieben sieben ",
+                  "zwölf zwei sieben neun ",
+                  "zwölf drei null fünf ",
+                  "zwölf drei null sieben ",
+                  "zwölf drei null neun ",
+                  "zwölf drei vier sieben ",
+                  "vierzehn eins neun sieben "
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Steglitz-Zehlendorf",
+                "synonyms": [
+                  "eins zwei eins fünf sieben ",
+                  "eins zwei eins sechs eins ",
+                  "eins zwei eins sechs drei ",
+                  "eins zwei eins sechs fünf ",
+                  "eins zwei eins sechs sieben ",
+                  "eins zwei eins sechs neun ",
+                  "eins zwei zwei null drei ",
+                  "eins zwei zwei null fünf ",
+                  "eins zwei zwei null sieben ",
+                  "eins zwei zwei null neun ",
+                  "eins zwei zwei vier sieben ",
+                  "eins zwei zwei vier neun ",
+                  "eins zwei zwei sieben sieben ",
+                  "eins zwei zwei sieben neun ",
+                  "eins vier eins null neun ",
+                  "eins vier eins zwei neun ",
+                  "eins vier eins sechs drei ",
+                  "eins vier eins sechs fünf ",
+                  "eins vier eins sechs sieben ",
+                  "eins vier eins sechs neun ",
+                  "eins vier eins neun drei ",
+                  "eins vier eins neun fünf ",
+                  "eins vier eins neun sieben ",
+                  "eins vier eins neun neun ",
+                  "wannsee",
+                  "nikolassee",
+                  "lichterfelde",
+                  "dahlem",
+                  "Zehlendorf",
+                  "Steglitz",
+                  "Lankwitz",
+                  "zwölf eins fünf sieben ",
+                  "zwölf eins sechs eins ",
+                  "zwölf eins sechs drei ",
+                  "zwölf eins sechs fünf ",
+                  "zwölf eins sechs sieben ",
+                  "zwölf eins sechs neun ",
+                  "zwölf zwei null drei ",
+                  "zwölf zwei null fünf ",
+                  "zwölf zwei null sieben ",
+                  "zwölf zwei null neun ",
+                  "zwölf zwei vier sieben ",
+                  "zwölf zwei vier neun ",
+                  "zwölf zwei sieben sieben ",
+                  "zwölf zwei sieben neun ",
+                  "vierzehn eins null neun ",
+                  "vierzehn eins zwei neun ",
+                  "vierzehn eins sechs drei ",
+                  "vierzehn eins sechs fünf ",
+                  "vierzehn eins sechs sieben ",
+                  "vierzehn eins sechs neun ",
+                  "vierzehn eins neun drei ",
+                  "vierzehn eins neun fünf ",
+                  "vierzehn eins neun sieben ",
+                  "vierzehn eins neun neun "
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Spandau",
+                "synonyms": [
+                  "eins drei fünf acht eins ",
+                  "eins drei fünf acht drei ",
+                  "eins drei fünf acht fünf ",
+                  "eins drei fünf acht sieben ",
+                  "eins drei fünf acht neun ",
+                  "eins drei fünf neun eins ",
+                  "eins drei fünf neun drei ",
+                  "eins drei fünf neun fünf ",
+                  "eins drei fünf neun sieben ",
+                  "eins drei fünf neun neun ",
+                  "eins drei sechs zwei sieben ",
+                  "eins drei sechs zwei neun ",
+                  "eins vier null fünf zwei ",
+                  "eins vier null acht neun ",
+                  "wilhelmstadt",
+                  "staaken",
+                  "siemensstadt",
+                  "haselhorst",
+                  "gatow",
+                  "Falkenhagener Feld",
+                  "Wasserstadt",
+                  "Kladow",
+                  "dreizehn fünf acht eins ",
+                  "dreizehn fünf acht drei ",
+                  "dreizehn fünf acht fünf ",
+                  "dreizehn fünf acht sieben ",
+                  "dreizehn fünf acht neun ",
+                  "dreizehn fünf neun eins ",
+                  "dreizehn fünf neun drei ",
+                  "dreizehn fünf neun fünf ",
+                  "dreizehn fünf neun sieben ",
+                  "dreizehn fünf neun neun ",
+                  "dreizehn sechs zwei sieben ",
+                  "dreizehn sechs zwei neun ",
+                  "vierzehn null fünf zwei ",
+                  "vierzehn null acht neun "
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Reinickendorf",
+                "synonyms": [
+                  "eins drei vier null drei ",
+                  "eins drei vier null fünf ",
+                  "eins drei vier null sieben ",
+                  "eins drei vier null neun ",
+                  "eins drei vier drei fünf ",
+                  "eins drei vier drei sieben ",
+                  "eins drei vier drei neun ",
+                  "eins drei vier sechs fünf ",
+                  "eins drei vier sechs sieben ",
+                  "eins drei vier sechs neun ",
+                  "eins drei fünf null drei ",
+                  "eins drei fünf null fünf ",
+                  "eins drei fünf null sieben ",
+                  "eins drei fünf null neun ",
+                  "eins drei fünf neun neun ",
+                  "eins drei sechs zwei neun ",
+                  "waldmanslust",
+                  "lübars",
+                  "konradshöhe",
+                  "frohnau",
+                  "borgiswalde",
+                  "wittenau",
+                  "Heiligensee",
+                  "Märkisches Viertel",
+                  "tegel",
+                  "hermsdorf",
+                  "reinickendorf Ost",
+                  "dreizehn vier null drei ",
+                  "dreizehn vier null fünf ",
+                  "dreizehn vier null sieben ",
+                  "dreizehn vier null neun ",
+                  "dreizehn vier drei fünf ",
+                  "dreizehn vier drei sieben ",
+                  "dreizehn vier drei neun ",
+                  "dreizehn vier sechs fünf ",
+                  "dreizehn vier sechs sieben ",
+                  "dreizehn vier sechs neun ",
+                  "dreizehn fünf null drei ",
+                  "dreizehn fünf null fünf ",
+                  "dreizehn fünf null sieben ",
+                  "dreizehn fünf null neun ",
+                  "dreizehn fünf neun neun ",
+                  "dreizehn sechs zwei neun "
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Pankow",
+                "synonyms": [
+                  "eins null eins eins neun ",
+                  "eins null zwei vier sieben ",
+                  "eins null zwei vier neun ",
+                  "eins null vier null fünf ",
+                  "eins null vier null sieben ",
+                  "eins null vier null neun ",
+                  "eins null vier drei fünf ",
+                  "eins null vier drei sieben ",
+                  "eins null vier drei neun ",
+                  "eins drei null fünf eins ",
+                  "eins drei null fünf drei ",
+                  "eins drei null acht sechs ",
+                  "eins drei null acht acht ",
+                  "eins drei null acht neun ",
+                  "eins drei eins zwei fünf ",
+                  "eins drei eins zwei sieben ",
+                  "eins drei eins zwei neun ",
+                  "eins drei eins fünf sechs ",
+                  "eins drei eins fünf acht ",
+                  "eins drei eins fünf neun ",
+                  "eins drei eins acht sieben ",
+                  "eins drei eins acht neun ",
+                  "malchow",
+                  "stadtrandsiedlung malchow",
+                  "heinersdorf",
+                  "blankenburg",
+                  "wilhelmsruh",
+                  "rosenthal",
+                  "niederschönhausen",
+                  "blankenfelde",
+                  "alt-pankow",
+                  "französisch buchholz",
+                  "buchholz",
+                  "Buch",
+                  "Karow",
+                  "Weißensee",
+                  "Prenzlauer Berg",
+                  "zehn eins eins neun ",
+                  "zehn zwei vier sieben ",
+                  "zehn zwei vier neun ",
+                  "zehn vier null fünf ",
+                  "zehn vier null sieben ",
+                  "zehn vier null neun ",
+                  "zehn vier drei fünf ",
+                  "zehn vier drei sieben ",
+                  "zehn vier drei neun ",
+                  "dreizehn null fünf eins ",
+                  "dreizehn null fünf drei ",
+                  "dreizehn null acht sechs ",
+                  "dreizehn null acht acht ",
+                  "dreizehn null acht neun ",
+                  "dreizehn eins zwei fünf ",
+                  "dreizehn eins zwei sieben ",
+                  "dreizehn eins zwei neun ",
+                  "dreizehn eins fünf sechs ",
+                  "dreizehn eins fünf acht ",
+                  "dreizehn eins fünf neun ",
+                  "dreizehn eins acht sieben ",
+                  "dreizehn eins acht neun "
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Neukölln",
+                "synonyms": [
+                  "britz",
+                  "nord-neukölln",
+                  "gropiusstadt",
+                  "Buckow",
+                  "eins null neun sechs fünf ",
+                  "eins null neun sechs sieben ",
+                  "eins zwei null vier drei ",
+                  "eins zwei null vier fünf ",
+                  "eins zwei null vier sieben ",
+                  "eins zwei null vier neun ",
+                  "eins zwei null fünf eins ",
+                  "eins zwei null fünf drei ",
+                  "eins zwei null fünf fünf ",
+                  "eins zwei null fünf sieben ",
+                  "eins zwei null fünf neun ",
+                  "eins zwei null neun neun ",
+                  "eins zwei eins null sieben ",
+                  "eins zwei drei null fünf ",
+                  "eins zwei drei vier sieben ",
+                  "eins zwei drei vier neun ",
+                  "eins zwei drei fünf eins ",
+                  "eins zwei drei fünf drei ",
+                  "eins zwei drei fünf fünf ",
+                  "eins zwei drei fünf sieben ",
+                  "eins zwei drei fünf neun ",
+                  "Blaschkoallee",
+                  "Sonnenallee",
+                  "Zwickauer Damm",
+                  "Alt Buckow",
+                  "Rudow",
+                  "zehn neun sechs fünf ",
+                  "zehn neun sechs sieben ",
+                  "zwölf null vier drei ",
+                  "zwölf null vier fünf ",
+                  "zwölf null vier sieben ",
+                  "zwölf null vier neun ",
+                  "zwölf null fünf eins ",
+                  "zwölf null fünf drei ",
+                  "zwölf null fünf fünf ",
+                  "zwölf null fünf sieben ",
+                  "zwölf null fünf neun ",
+                  "zwölf null neun neun ",
+                  "zwölf eins null sieben ",
+                  "zwölf drei null fünf ",
+                  "zwölf drei vier sieben ",
+                  "zwölf drei vier neun ",
+                  "zwölf drei fünf eins ",
+                  "zwölf drei fünf drei ",
+                  "zwölf drei fünf fünf ",
+                  "zwölf drei fünf sieben ",
+                  "zwölf drei fünf neun "
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Mitte",
+                "synonyms": [
+                  "hansaviertel",
+                  "moabit",
+                  "gesundbrunnen",
+                  "eins null eins eins fünf ",
+                  "eins null eins eins sieben ",
+                  "eins null eins eins neun ",
+                  "eins null eins sieben acht ",
+                  "eins null eins sieben neun ",
+                  "eins null vier drei fünf ",
+                  "eins null fünf fünf eins ",
+                  "eins null fünf fünf drei ",
+                  "eins null fünf fünf fünf ",
+                  "eins null fünf fünf sieben ",
+                  "eins null fünf fünf neun ",
+                  "eins null sechs zwei drei ",
+                  "eins null sieben acht fünf ",
+                  "eins null sieben acht sieben ",
+                  "eins null neun sechs drei ",
+                  "eins null neun sechs neun ",
+                  "eins drei drei vier sieben ",
+                  "eins drei drei vier neun ",
+                  "eins drei drei fünf eins ",
+                  "eins drei drei fünf drei ",
+                  "eins drei drei fünf fünf ",
+                  "eins drei drei fünf sieben ",
+                  "eins drei drei fünf neun ",
+                  "eins drei vier null fünf ",
+                  "eins drei vier null sieben ",
+                  "eins drei vier null neun ",
+                  "Wedding",
+                  "Tiergarten",
+                  "zehn eins eins fünf ",
+                  "zehn eins eins sieben ",
+                  "zehn eins eins neun ",
+                  "zehn eins sieben acht ",
+                  "zehn eins sieben neun ",
+                  "zehn vier drei fünf ",
+                  "zehn fünf fünf eins ",
+                  "zehn fünf fünf drei ",
+                  "zehn fünf fünf fünf ",
+                  "zehn fünf fünf sieben ",
+                  "zehn fünf fünf neun ",
+                  "zehn sechs zwei drei ",
+                  "zehn sieben acht fünf ",
+                  "zehn sieben acht sieben ",
+                  "zehn neun sechs drei ",
+                  "zehn neun sechs neun ",
+                  "dreizehn drei vier sieben ",
+                  "dreizehn drei vier neun ",
+                  "dreizehn drei fünf eins ",
+                  "dreizehn drei fünf drei ",
+                  "dreizehn drei fünf fünf ",
+                  "dreizehn drei fünf sieben ",
+                  "dreizehn drei fünf neun ",
+                  "dreizehn vier null fünf ",
+                  "dreizehn vier null sieben ",
+                  "dreizehn vier null neun "
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Marzahn-Hellersdorf",
+                "synonyms": [
+                  "hellersdorf",
+                  "marzahn",
+                  "mahlsdorf",
+                  "eins zwei fünf fünf fünf ",
+                  "eins zwei sechs eins neun ",
+                  "eins zwei sechs zwei eins ",
+                  "eins zwei sechs zwei drei ",
+                  "eins zwei sechs zwei sieben ",
+                  "eins zwei sechs zwei neun ",
+                  "eins zwei sechs sieben neun ",
+                  "eins zwei sechs acht eins ",
+                  "eins zwei sechs acht drei ",
+                  "eins zwei sechs acht fünf ",
+                  "eins zwei sechs acht sieben ",
+                  "eins zwei sechs acht neun ",
+                  "Marzahner Promenade",
+                  "Helle Mitte",
+                  "Biesdorf",
+                  "zwölf fünf fünf fünf ",
+                  "zwölf sechs eins neun ",
+                  "zwölf sechs zwei eins ",
+                  "zwölf sechs zwei drei ",
+                  "zwölf sechs zwei sieben ",
+                  "zwölf sechs zwei neun ",
+                  "zwölf sechs sieben neun ",
+                  "zwölf sechs acht eins ",
+                  "zwölf sechs acht drei ",
+                  "zwölf sechs acht fünf ",
+                  "zwölf sechs acht sieben ",
+                  "zwölf sechs acht neun "
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Lichtenberg",
+                "synonyms": [
+                  "Malchow",
+                  "Falkenberg",
+                  "wartenberg",
+                  "neu hohen schönhausen",
+                  "hsh",
+                  "alt hohen schön Hausen",
+                  "fennpfuhl",
+                  "alt-lichtenberg",
+                  "frierdrichsfelde",
+                  "karlshorst",
+                  "rummelsburg",
+                  "eins null drei eins fünf ",
+                  "eins null drei eins sieben ",
+                  "eins null drei eins acht ",
+                  "eins null drei eins neun ",
+                  "eins null drei sechs fünf ",
+                  "eins null drei sechs sieben ",
+                  "eins null drei sechs neun ",
+                  "eins drei null fünf eins ",
+                  "eins drei null fünf drei ",
+                  "eins drei null fünf fünf ",
+                  "eins drei null fünf sieben ",
+                  "eins drei null fünf neun ",
+                  "Zentrum Ikraus",
+                  "Am Obersee",
+                  "Käthe Kern",
+                  "Anton Saefkow",
+                  "Große Leege ",
+                  "Alt Hohen Schön Hausen",
+                  "Tierparkcenter",
+                  "Normannen",
+                  "Egon - Erwin Kirsch ",
+                  "Neu Hohen Schön Hausen",
+                  "Hohenschönhausen",
+                  "H S H",
+                  "zehn drei eins fünf ",
+                  "zehn drei eins sieben ",
+                  "zehn drei eins acht ",
+                  "zehn drei eins neun ",
+                  "zehn drei sechs fünf ",
+                  "zehn drei sechs sieben ",
+                  "zehn drei sechs neun ",
+                  "dreizehn null fünf eins ",
+                  "dreizehn null fünf drei ",
+                  "dreizehn null fünf fünf ",
+                  "dreizehn null fünf sieben ",
+                  "dreizehn null fünf neun "
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Friedrichshain-Kreuzberg",
+                "synonyms": [
+                  "friedrichshain",
+                  "S. O. sechsunddreißig",
+                  "boxi",
+                  "boxhagen",
+                  "stralau",
+                  "eins null eins sieben neun ",
+                  "eins null zwei vier drei ",
+                  "eins null zwei vier fünf ",
+                  "eins null zwei vier sieben ",
+                  "eins null zwei vier neun ",
+                  "eins null drei sechs sieben ",
+                  "eins null sieben acht fünf ",
+                  "eins null neun sechs eins ",
+                  "eins null neun sechs drei ",
+                  "eins null neun sechs fünf ",
+                  "eins null neun sechs sieben ",
+                  "eins null neun sechs neun ",
+                  "eins null neun neun sieben ",
+                  "eins null neun neun neun ",
+                  "eins zwei null vier fünf ",
+                  "eins null eins sieben acht ",
+                  "Schlesische Straße",
+                  "Frankfurter Allee",
+                  "Kreuzberg",
+                  "Yorkstraße",
+                  "zehn eins sieben neun ",
+                  "zehn zwei vier drei ",
+                  "zehn zwei vier fünf ",
+                  "zehn zwei vier sieben ",
+                  "zehn zwei vier neun ",
+                  "zehn drei sechs sieben ",
+                  "zehn sieben acht fünf ",
+                  "zehn neun sechs eins ",
+                  "zehn neun sechs drei ",
+                  "zehn neun sechs fünf ",
+                  "zehn neun sechs sieben ",
+                  "zehn neun sechs neun ",
+                  "zehn neun neun sieben ",
+                  "zehn neun neun neun ",
+                  "zwölf null vier fünf ",
+                  "zehn eins sieben acht "
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Charlottenburg-Wilmersdorf",
+                "synonyms": [
+                  "Charlottenburg",
+                  "Charlottenburg-Nord",
+                  "Grunewald",
+                  "Halensee",
+                  "Schmargendorf",
+                  "Westend",
+                  "Wilmersdorf",
+                  "eins null fünf fünf drei ",
+                  "eins null fünf acht fünf ",
+                  "eins null fünf acht sieben ",
+                  "eins null fünf acht neun ",
+                  "eins null sechs zwei drei ",
+                  "eins null sechs zwei fünf ",
+                  "eins null sechs zwei sieben ",
+                  "eins null sechs zwei neun ",
+                  "eins null sieben null sieben ",
+                  "eins null sieben null neun ",
+                  "eins null sieben eins eins ",
+                  "eins null sieben eins drei ",
+                  "eins null sieben eins fünf ",
+                  "eins null sieben eins sieben ",
+                  "eins null sieben eins neun ",
+                  "eins null sieben sieben sieben ",
+                  "eins null sieben sieben neun ",
+                  "eins null sieben acht sieben ",
+                  "eins null sieben acht neun ",
+                  "eins null acht zwei fünf ",
+                  "eins drei drei fünf drei ",
+                  "eins drei fünf neun sieben ",
+                  "eins drei sechs zwei sieben ",
+                  "eins drei sechs zwei neun ",
+                  "eins vier null fünf null ",
+                  "eins vier null fünf zwei ",
+                  "eins vier null fünf drei ",
+                  "eins vier null fünf fünf ",
+                  "eins vier null fünf sieben ",
+                  "eins vier null fünf neun ",
+                  "eins vier eins neun drei ",
+                  "eins vier eins neun fünf ",
+                  "eins vier eins neun sieben ",
+                  "eins vier eins neun neun ",
+                  "Halemweg",
+                  "Heerstraße",
+                  "Hohenzollerndamm",
+                  "Wilmersdorfer",
+                  "zehn fünf fünf drei ",
+                  "zehn fünf acht fünf ",
+                  "zehn fünf acht sieben ",
+                  "zehn fünf acht neun ",
+                  "zehn sechs zwei drei ",
+                  "zehn sechs zwei fünf ",
+                  "zehn sechs zwei sieben ",
+                  "zehn sechs zwei neun ",
+                  "zehn sieben null sieben ",
+                  "zehn sieben null neun ",
+                  "zehn sieben eins eins ",
+                  "zehn sieben eins drei ",
+                  "zehn sieben eins fünf ",
+                  "zehn sieben eins sieben ",
+                  "zehn sieben eins neun ",
+                  "zehn sieben sieben sieben ",
+                  "zehn sieben sieben neun ",
+                  "zehn sieben acht sieben ",
+                  "zehn sieben acht neun ",
+                  "zehn acht zwei fünf ",
+                  "dreizehn drei fünf drei ",
+                  "dreizehn fünf neun sieben ",
+                  "dreizehn sechs zwei sieben ",
+                  "dreizehn sechs zwei neun ",
+                  "vierzehn null fünf null ",
+                  "vierzehn null fünf zwei ",
+                  "vierzehn null fünf drei ",
+                  "vierzehn null fünf fünf ",
+                  "vierzehn null fünf sieben ",
+                  "vierzehn null fünf neun ",
+                  "vierzehn eins neun drei ",
+                  "vierzehn eins neun fünf ",
+                  "vierzehn eins neun sieben ",
+                  "vierzehn eins neun neun "
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_Y_N_Flag",
+          "values": [
+            {
+              "id": "FALSE",
+              "name": {
+                "value": "nein",
+                "synonyms": [
+                  "natürlich nicht",
+                  "definitiv nicht",
+                  "auf keinen fall",
+                  "nee du",
+                  "nee",
+                  "nö"
+                ]
+              }
+            },
+            {
+              "id": "TRUE",
+              "name": {
+                "value": "ja",
+                "synonyms": [
+                  "perfekt",
+                  "top",
+                  "super",
+                  "warum nicht",
+                  "bitte",
+                  "ja schon",
+                  "selbstverständlich",
+                  "aber ja",
+                  "natürlich",
+                  "sicher",
+                  "jawohl",
+                  "jaaa",
+                  "jo",
+                  "jap",
+                  "yeah",
+                  "yep"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DL_Y_N_Descr",
+          "values": [
+            {
+              "id": "TRUE",
+              "name": {
+                "value": "ja",
+                "synonyms": [
+                  "was bedeutet das",
+                  "was heisst",
+                  "was heißt",
+                  "was ist",
+                  "was bedeutet",
+                  "was ist ein",
+                  "was ist eine"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_Y_N_Extension",
+          "values": [
+            {
+              "name": {
+                "value": "nein",
+                "synonyms": [
+                  "natürlich nicht",
+                  "definitiv nicht",
+                  "auf keinen fall",
+                  "nee du",
+                  "nee",
+                  "nö",
+                  "nein danke",
+                  "bitte nicht",
+                  "lieber nicht"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "ja",
+                "synonyms": [
+                  "eine Verlängerung beantragen",
+                  "verlängern",
+                  "länger machen",
+                  "zweiten",
+                  "ummelden",
+                  "neuen",
+                  "yep",
+                  "yeah",
+                  "jap",
+                  "jo",
+                  "jaaaa",
+                  "jawohl",
+                  "sicher",
+                  "natürlich",
+                  "aber ja",
+                  "selbstverständlich",
+                  "ja schon",
+                  "ja bitte",
+                  "bitte",
+                  "warum nicht"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_Y_N_Prereq",
+          "values": [
+            {
+              "id": "FALSE",
+              "name": {
+                "value": "nein",
+                "synonyms": [
+                  "natürlich nicht",
+                  "definitiv nicht",
+                  "auf keinen Fall",
+                  "nee du",
+                  "nee",
+                  "nö",
+                  "nein danke",
+                  "lieber nicht",
+                  "bitte nicht"
+                ]
+              }
+            },
+            {
+              "id": "TRUE",
+              "name": {
+                "value": "ja",
+                "synonyms": [
+                  "welche voraussetzungen Sind nötig für",
+                  "was muss ich dafür machen um",
+                  "wie geht das denn",
+                  "wie geht das denn mit",
+                  "welche Bedingungen muss ich erfüllt haben",
+                  "perfekt",
+                  "top",
+                  "super",
+                  "welche Bedingung muss erfüllt werden",
+                  "welche Bedingung muss ich erfüllen",
+                  "was muss ich machen",
+                  "yep",
+                  "yeah",
+                  "jap",
+                  "jo",
+                  "jaaaa",
+                  "jawohl",
+                  "sicher",
+                  "natürlich",
+                  "aber ja",
+                  "selbstverständlich",
+                  "ja schon",
+                  "warum nicht",
+                  "ja bitte",
+                  "bitte",
+                  "wie kann ich",
+                  "wie bekomme ich",
+                  "wie bekomm ich",
+                  "wie ist das mit",
+                  "wie funktioniert",
+                  "wie mache ich",
+                  "wie geht das mit"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_Y_N_RequiredDocs",
+          "values": [
+            {
+              "id": "FALSE",
+              "name": {
+                "value": "nein",
+                "synonyms": [
+                  "natürlich nicht",
+                  "definitiv nicht",
+                  "auf keinen Fall",
+                  "nee du",
+                  "nee",
+                  "nö",
+                  "nein danke",
+                  "bitte nicht",
+                  "lieber nicht"
+                ]
+              }
+            },
+            {
+              "id": "TRUE",
+              "name": {
+                "value": "ja",
+                "synonyms": [
+                  "perfekt",
+                  "top",
+                  "super",
+                  "was benötige ich",
+                  "welche Unterlagen sind nötig",
+                  "welche Unterlagen sind notwendig",
+                  "was muss ich dem bürgeramt mit",
+                  "was muss ich die die behörde mitbringen",
+                  "was muss ich dem finanzamt mitbringen",
+                  "was bringe ich mit",
+                  "was muss ich mitbringen",
+                  "was muss ich dafür mitbringen",
+                  "welche dokumente benötige ich",
+                  "Dokumente",
+                  "Unterlagen",
+                  "die nötigen Unterlagen",
+                  "was braucht meine Freundin",
+                  "was sind die Unterlagen",
+                  "was wäre nötig",
+                  "welche Unterlagen braucht man",
+                  "welche Dokumente brauche ich",
+                  "welche Unterlagen brauche ich",
+                  "was brauche ich"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_Y_N_Cost",
+          "values": [
+            {
+              "id": "FALSE",
+              "name": {
+                "value": "nein",
+                "synonyms": [
+                  "natürlich nicht",
+                  "definitiv nicht",
+                  "auf keine fall",
+                  "nee du",
+                  "nee",
+                  "nö",
+                  "nein danke",
+                  "bitte nicht",
+                  "lieber nicht"
+                ]
+              }
+            },
+            {
+              "id": "TRUE",
+              "name": {
+                "value": "ja",
+                "synonyms": [
+                  "was koscht",
+                  "perfekt",
+                  "top",
+                  "super",
+                  "warum nicht",
+                  "was kostet",
+                  "wie viel kostet",
+                  "in der tat",
+                  "yep",
+                  "yeah",
+                  "jap",
+                  "jo",
+                  "jaaaa",
+                  "jawohl",
+                  "sicher",
+                  "natürlich",
+                  "gerne",
+                  "aber ja",
+                  "selbstverständlich",
+                  "ja schon",
+                  "warum nicht",
+                  "bitte"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_Y_N_ProcessTime",
+          "values": [
+            {
+              "id": "FALSE",
+              "name": {
+                "value": "nein",
+                "synonyms": [
+                  "nee",
+                  "nee du",
+                  "definitiv nicht",
+                  "natürlich nicht",
+                  "auf keinen Fall",
+                  "bitte nicht",
+                  "lieber nicht",
+                  "nein danke"
+                ]
+              }
+            },
+            {
+              "id": "TRUE",
+              "name": {
+                "value": "ja",
+                "synonyms": [
+                  "wie lange dauert die Bearbeitung",
+                  "super",
+                  "perfekt",
+                  "top",
+                  "und wie",
+                  "yep",
+                  "yeah",
+                  "jap",
+                  "jo",
+                  "jaaaa",
+                  "jawohl",
+                  "sicher",
+                  "natürlich",
+                  "aber ja",
+                  "selbstverständlich",
+                  "ja schon",
+                  "warum nicht",
+                  "bitte",
+                  "wieviel Zeit braucht",
+                  "wie lange muss",
+                  "wie lange",
+                  "wieviel Zeit",
+                  "wie lange dauert",
+                  "wie lange braucht"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_Y_N_Tel",
+          "values": [
+            {
+              "id": "FALSE",
+              "name": {
+                "value": "nein",
+                "synonyms": [
+                  "nee",
+                  "nee du",
+                  "definitiv nicht",
+                  "natürlich nicht",
+                  "auf keinen Fall",
+                  "bitte nicht",
+                  "lieber nicht",
+                  "nein danke"
+                ]
+              }
+            },
+            {
+              "id": "TRUE",
+              "name": {
+                "value": "ja",
+                "synonyms": [
+                  "top",
+                  "super",
+                  "perfekt",
+                  "yeah",
+                  "ja bitte",
+                  "ja",
+                  "büronummer",
+                  "nummer",
+                  "telefonnummer",
+                  "hast du die Telefonnummer vom",
+                  "was ist die Telefonnummer von",
+                  "was ist die Nummer",
+                  "wie ist die Telefonnummer"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_Y_N_BookAppointment",
+          "values": [
+            {
+              "id": "FALSE",
+              "name": {
+                "value": "nein",
+                "synonyms": [
+                  "natürlich nicht",
+                  "definitiv nicht",
+                  "auf keine fall",
+                  "nein danke",
+                  "bitte nicht",
+                  "lieber nicht",
+                  "ne du",
+                  "nö"
+                ]
+              }
+            },
+            {
+              "id": "TRUE",
+              "name": {
+                "value": "ja",
+                "synonyms": [
+                  "wie buche ich einen online termin",
+                  "wie buche ich einen termin",
+                  "ich möchte einen termin buchen",
+                  "eine Terminbuchung durchführen",
+                  "einen Termin erhalten",
+                  "einen Termin bekommen",
+                  "termin buchen",
+                  "top",
+                  "super",
+                  "perfekt",
+                  "yep",
+                  "yeah",
+                  "jap",
+                  "jo",
+                  "jaaaa",
+                  "jawohl",
+                  "natürlich",
+                  "sicher",
+                  "selbstverständlich",
+                  "ja schon",
+                  "warum nicht",
+                  "bitte",
+                  "termin bei der Behörde",
+                  "termin bekommen",
+                  "einen Termin buchen"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_Y_N_Online_or_Appointment",
+          "values": [
+            {
+              "id": "FALSE",
+              "name": {
+                "value": "nein",
+                "synonyms": [
+                  "nee",
+                  "nee du",
+                  "definitiv nicht",
+                  "natürlich nicht",
+                  "auf keinen Fall",
+                  "bitte nicht",
+                  "lieber nicht",
+                  "nein danke"
+                ]
+              }
+            },
+            {
+              "id": "TRUE",
+              "name": {
+                "value": "ja",
+                "synonyms": [
+                  "super",
+                  "perfekt",
+                  "top",
+                  "ohne termin",
+                  "ohne Vorsprachetermin",
+                  "keine persönliche Vorsprache",
+                  "ohne gehen zu müssen",
+                  "ohne ins Bürgeramt zu müssen",
+                  "online ohne in die Behörde gehen zu müssen",
+                  "online",
+                  "ohne ins Amt gehen zu müssen"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_List_Todos",
+          "values": [
+            {
+              "name": {
+                "value": "angeln gehen"
+              }
+            },
+            {
+              "name": {
+                "value": "kirsche pflücken gehen"
+              }
+            },
+            {
+              "name": {
+                "value": "wandern gehen"
+              }
+            },
+            {
+              "name": {
+                "value": "Baden gehen"
+              }
+            },
+            {
+              "name": {
+                "value": "Wohnung"
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_CityFacts",
+          "values": [
+            {
+              "name": {
+                "value": "ortsteile"
+              }
+            },
+            {
+              "name": {
+                "value": "dienstleistungen",
+                "synonyms": [
+                  "services"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "häuser"
+              }
+            },
+            {
+              "name": {
+                "value": "fahrräder"
+              }
+            },
+            {
+              "name": {
+                "value": "autos"
+              }
+            },
+            {
+              "name": {
+                "value": "einwohner"
+              }
+            }
+          ]
+        },
+        {
+          "name": "DE_SmallTalk",
+          "values": [
+            {
+              "name": {
+                "value": "erzähl von dir selbst",
+                "synonyms": [
+                  "sich vorzustellen",
+                  "wer bist du",
+                  "stelle dich vor",
+                  "beschreibe dich",
+                  "erzähl mir mehr über dich",
+                  "Wie ist dein Name",
+                  "erzähle mir über dich",
+                  "ich will mehr über dich wissen",
+                  "Wie heißt du",
+                  "erzähl etwas von dir"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "wann hat man dich gebaut",
+                "synonyms": [
+                  "nach ihrem Alter",
+                  "wann wurdest du gemacht",
+                  "was ist dein Alter",
+                  "wie alt bist du",
+                  "wie lange gibt es dich schon",
+                  "wann wurdest du geboren"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "hiiiiii",
+                "synonyms": [
+                  "moin",
+                  "hallo",
+                  "halllooo"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "DL_Approbation_Intent_Fragen_zum_Thema_Zulassung_im_Gesundheitswesen",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "BerufGesundheit",
+              "type": "DE_BerufGesudheit",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.731925008572.784370516716"
+              }
+            },
+            {
+              "name": "pruefungInBerlin",
+              "type": "DE_Y_N_Flag",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.194404890129.1162370056458"
+              }
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "DE_Y_N_Prereq",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "DE_Y_N_RequiredDocs",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "costs_flag",
+              "type": "DE_Y_N_Cost",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "DE_Y_N_ProcessTime",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "DE_Y_N_BookAppointment",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "DL_General_Intent_Allgemeine_Fragen",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1063378847829"
+          },
+          "slots": [
+            {
+              "name": "Dienstleistung",
+              "type": "DE_PublicSvcs_Berlin",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.37057223086.1411141577006"
+              }
+            },
+            {
+              "name": "extension_flag",
+              "type": "DE_Y_N_Extension",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "DE_Y_N_Prereq",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "DE_Y_N_BookAppointment",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "costs_flag",
+              "type": "DE_Y_N_Cost",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "DE_Y_N_RequiredDocs",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "DE_Y_N_ProcessTime",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "description_flag",
+              "type": "DL_Y_N_Descr",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "location",
+              "type": "Districts_PLZ_Combo_BER",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "DL_Aufenthaltstitel_Intent_Fragen_zur_Aufenthalt_fuer_Auslaender",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "registered_in_berlin",
+              "type": "DE_Y_N_Flag",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.705370932563.596480606902"
+              }
+            },
+            {
+              "name": "partner_eu_flag",
+              "type": "DE_Y_N_Flag",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.792939959590.1135221861350"
+              }
+            },
+            {
+              "name": "citizenship",
+              "type": "DE_Countries_Citizenships",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.705370932563.1089481707959"
+              }
+            },
+            {
+              "name": "residence_purpose",
+              "type": "DE_ResidencePurposes",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.705370932563.1198061985282"
+              }
+            },
+            {
+              "name": "extension_flag",
+              "type": "DE_Y_N_Extension",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.705370932563.650345028907"
+              }
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "DE_Y_N_Prereq",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.705370932563.860066613759"
+              }
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "DE_Y_N_RequiredDocs",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "costs_flag",
+              "type": "DE_Y_N_Cost",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "DE_Y_N_BookAppointment",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "DE_Y_N_ProcessTime",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "DL_Bafoeg_Intent_Fragen_zum_BAfoeG",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "bafoegType",
+              "type": "DE_BafoegTypes",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.168106136677.669735754293"
+              }
+            },
+            {
+              "name": "prerequisites_flag",
+              "type": "DE_Y_N_Prereq",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.170695308429.1485160893156"
+              }
+            },
+            {
+              "name": "extension_flag",
+              "type": "DE_Y_N_Extension",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "required_docs_flag",
+              "type": "DE_Y_N_RequiredDocs",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "costs_flag",
+              "type": "DE_Y_N_Cost",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "processing_time_flag",
+              "type": "DE_Y_N_ProcessTime",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "book_appointment_flag",
+              "type": "DE_Y_N_BookAppointment",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "LOC_IsSvcAvlbl_Intent_Fragen_ob_ein_dienst_verfuegbar_ist",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1007786953231"
+          },
+          "slots": [
+            {
+              "name": "dienstleistung",
+              "type": "DE_PublicSvcs_Berlin",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1155478739065.1184681475347"
+              }
+            },
+            {
+              "name": "officeType",
+              "type": "DE_OfficeTypes",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "district",
+              "type": "Districts_PLZ_Combo_BER",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "onlineAntrag",
+              "type": "DE_Y_N_Online_or_Appointment",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "DL_Book_Intent_Termin_buchen_fuer_eine_Dienstleistung",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.271750879554"
+          },
+          "slots": [
+            {
+              "name": "book_appointment_intent",
+              "type": "DE_Y_N_BookAppointment",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "Dienstleistung",
+              "type": "DE_PublicSvcs_Berlin",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.731925008572.784370516716",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ich verstehe Sie suchst nach einer Approbation für einen akademischen Beruf im Gesundheitswesen. Welcher soll der sein?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.194404890129.1162370056458",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ich gehe davon aus, dass Ihre Examen in Berlin waren?"
+          },
+          {
+            "type": "PlainText",
+            "value": "und Ihre prüfung dafür ist schon in Berlin bestanden?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Haben Sie dafür Ihre Prüfung in Berlin abgelegt?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.705370932563.596480606902",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sie wissen schon, dass Sie dafür in Berlin angemeldet sein müssen. Sind Sie?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Um diese Angelegenheit zu bearbeiten, müssen Sie in Berlin angemeldet sein. Ist das der Fall?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.705370932563.1089481707959",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "OK, Welche Staatsbürgerschaft haben Sie. Wenn mehrere, mit welcher Staatsbürgerschaft wollen Sie verfahren?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.705370932563.1198061985282",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "und was ist Ihr Aufenthaltszweck in Berlin?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.705370932563.860066613759",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "soll ich Ihnene was über die Voraussetzungen dazu erzählen?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Möchten Sie sich über die Voraussetzungen dazu informieren?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.705370932563.650345028907",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ist das eine Verlängerung eines bestehenden Aufenthaltstitels?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.170695308429.1485160893156",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "soll ich Ihnen was über die Voraussetzungen dazu erzählen?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Möchten Sie sich über die Voraussetzungen dazu informieren?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.113281863374.444968324898",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ist es dein erster Antrag?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.168106136677.750157661408",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ist das für einen Schüler?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.168106136677.669735754293",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ich kann Ihnen bei mehrere Bafög-Dienste helfen. Ist das für einen Schüler, einen Auszubildenden, fürs Ausland oder keins davon?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.37057223086.1411141577006",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ich hab den Namen der Dienstleistung nicht ganz verstanden. Mögen Sie das nochmal wiederholen?"
+          },
+          {
+            "type": "PlainText",
+            "value": "welche Dienstleistung meinen Sie genau?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.871265382017.1447005972347",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ich kann Ihnen sagen, welche Bedingungen dafür erfüllt sein müssen. soll ich?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Möchten Sie sich über die Voraussetzungen Informieren?"
+          },
+          {
+            "type": "PlainText",
+            "value": "wollen wir die voraussetzungen gemeinsam durchgehen?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1007786953231",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Du suchst {dienstleistung} in {district}"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1063378847829",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{Dienstleistung} , korrekt?"
+          },
+          {
+            "type": "PlainText",
+            "value": "{Dienstleistung} . Richtig?"
+          },
+          {
+            "type": "PlainText",
+            "value": "{Dienstleistung} hab ich verstanden. Richtig?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.792939959590.1135221861350",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sind Sie mit einem E U Bürger verheiratet, verpartnert oder ist einer Ihrer Kinder E U Bürger?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1155478739065.1184681475347",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Welche Dienstleistung meinen sie bitte?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.271750879554",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sie möchten einen Termin für die Dienstleistung {Dienstleistung} also.."
+          }
+        ]
+      }
+    ]
+  }
+}
