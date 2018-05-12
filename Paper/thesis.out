@@ -8,40 +8,40 @@
 \BOOKMARK [0][-]{chapter.2}{Background and Related Work}{}% 8
 \BOOKMARK [1][-]{section.2.1}{Topology of Chatbots and Voice Assistants}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.2}{Digitalisation in the Public Sector}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.3}{Worldwide Examples of Bots in E-Government}{chapter.2}% 11
-\BOOKMARK [2][-]{subsection.2.3.1}{WienBot}{section.2.3}% 12
-\BOOKMARK [2][-]{subsection.2.3.2}{GeorgiaGov}{section.2.3}% 13
-\BOOKMARK [1][-]{section.2.4}{Berlin as a Use Case}{chapter.2}% 14
-\BOOKMARK [0][-]{chapter.3}{The Voice as a User Interface}{}% 15
-\BOOKMARK [1][-]{section.3.1}{GUI vs. VUI}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.2}{Utility of Voice}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.3}{Why Can't AI Understand Us}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.4}{VUI Semantics}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.5}{Terminology}{chapter.3}% 20
-\BOOKMARK [0][-]{chapter.4}{State of the Art}{}% 21
-\BOOKMARK [1][-]{section.4.1}{Analogies to the Introduction of Web 2.0}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.2}{Development Models}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.3}{Choice of Platform}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{Amazon's Ecosystem}{}% 25
-\BOOKMARK [1][-]{section.5.1}{Amazon Web Services + Alexa}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{AWS Modules as Alexa's Building Blocks }{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.3}{Skill Structure}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.4}{Alexa in the Eye of the Beholder}{chapter.5}% 29
-\BOOKMARK [0][-]{chapter.6}{Skill Design}{}% 30
-\BOOKMARK [1][-]{section.6.1}{Frameworks and Data Structures}{chapter.6}% 31
-\BOOKMARK [2][-]{subsubsection.6.1.0.1}{Using Java}{section.6.1}% 32
-\BOOKMARK [1][-]{section.6.2}{Challenges}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.3}{Design Guidelines and Documentations}{chapter.6}% 34
-\BOOKMARK [0][-]{chapter.7}{Design Best Practices}{}% 35
-\BOOKMARK [1][-]{section.7.1}{For Voice Assistants in the Use Case of Alexa}{chapter.7}% 36
-\BOOKMARK [1][-]{section.7.2}{For GUI Chatbots}{chapter.7}% 37
-\BOOKMARK [0][-]{chapter.8}{Skill Implementation}{}% 38
-\BOOKMARK [1][-]{section.8.1}{Setup}{chapter.8}% 39
-\BOOKMARK [1][-]{section.8.2}{Code Analysis}{chapter.8}% 40
-\BOOKMARK [1][-]{section.8.3}{Features}{chapter.8}% 41
-\BOOKMARK [2][-]{subsection.8.3.1}{Creating SSML and Audio}{section.8.3}% 42
-\BOOKMARK [2][-]{subsection.8.3.2}{Checking the Next available appointment}{section.8.3}% 43
-\BOOKMARK [2][-]{subsection.8.3.3}{Card Templates}{section.8.3}% 44
+\BOOKMARK [1][-]{section.2.3}{Evaluation of Governments Presence in the Cloud}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.4}{Worldwide Examples of Bots in E-Government}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.5}{Berlin as a Use Case}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{The Voice as a User Interface}{}% 14
+\BOOKMARK [1][-]{section.3.1}{GUI vs. VUI}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Utility of Voice}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{Why Can't AI Understand Us}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.4}{VUI Semantics}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.5}{Terminology}{chapter.3}% 19
+\BOOKMARK [0][-]{chapter.4}{State of the Art}{}% 20
+\BOOKMARK [1][-]{section.4.1}{Analogies to the Introduction of Web 2.0}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.2}{Development Models}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.3}{Choice of Platform}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Amazon's Ecosystem}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Amazon Web Services + Alexa}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.2}{AWS Modules as Alexa's Building Blocks }{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.3}{Skill Structure}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.4}{Alexa in the Eye of the Beholder}{chapter.5}% 28
+\BOOKMARK [0][-]{chapter.6}{Skill Design}{}% 29
+\BOOKMARK [1][-]{section.6.1}{Frameworks and Data Structures}{chapter.6}% 30
+\BOOKMARK [2][-]{subsubsection.6.1.0.1}{Using Java}{section.6.1}% 31
+\BOOKMARK [1][-]{section.6.2}{Challenges}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.3}{Design Guidelines and Documentations}{chapter.6}% 33
+\BOOKMARK [0][-]{chapter.7}{Design Best Practices}{}% 34
+\BOOKMARK [1][-]{section.7.1}{For Voice Assistants in the Use Case of Alexa}{chapter.7}% 35
+\BOOKMARK [1][-]{section.7.2}{For GUI Chatbots}{chapter.7}% 36
+\BOOKMARK [0][-]{chapter.8}{Skill Implementation}{}% 37
+\BOOKMARK [1][-]{section.8.1}{Setup}{chapter.8}% 38
+\BOOKMARK [1][-]{section.8.2}{Code Analysis}{chapter.8}% 39
+\BOOKMARK [1][-]{section.8.3}{Features}{chapter.8}% 40
+\BOOKMARK [2][-]{subsection.8.3.1}{Creating SSML and Audio}{section.8.3}% 41
+\BOOKMARK [2][-]{subsection.8.3.2}{Checking the Next available appointment}{section.8.3}% 42
+\BOOKMARK [2][-]{subsection.8.3.3}{Card Templates}{section.8.3}% 43
+\BOOKMARK [2][-]{subsection.8.3.4}{Utterances generator}{section.8.3}% 44
 \BOOKMARK [1][-]{section.8.4}{Testing}{chapter.8}% 45
 \BOOKMARK [1][-]{section.8.5}{Deployment}{chapter.8}% 46
 \BOOKMARK [1][-]{section.8.6}{Approval and Publishing}{chapter.8}% 47
@@ -59,9 +59,9 @@
 \BOOKMARK [1][-]{section.10.2}{Conclusion}{chapter.10}% 59
 \BOOKMARK [1][-]{section.10.3}{Future Work}{chapter.10}% 60
 \BOOKMARK [0][-]{section.10.3}{Bibliography}{}% 61
-\BOOKMARK [0][-]{chapter*.80}{Appendices}{}% 62
-\BOOKMARK [1][-]{chapter*.81}{Product Branding Etymology}{chapter*.80}% 63
-\BOOKMARK [1][-]{section*.82}{Lex vs. Alexa Skills}{chapter*.80}% 64
-\BOOKMARK [1][-]{section*.87}{JSON Query code structure}{chapter*.80}% 65
-\BOOKMARK [1][-]{figure.caption.89}{Abbreviations}{chapter*.80}% 66
-\BOOKMARK [1][-]{section*.90}{Glossary}{chapter*.80}% 67
+\BOOKMARK [0][-]{chapter*.93}{Appendices}{}% 62
+\BOOKMARK [1][-]{chapter*.94}{Product Branding Etymology}{chapter*.93}% 63
+\BOOKMARK [1][-]{section*.95}{Lex vs. Alexa Skills}{chapter*.93}% 64
+\BOOKMARK [1][-]{section*.100}{JSON Query code structure}{chapter*.93}% 65
+\BOOKMARK [1][-]{figure.caption.102}{Abbreviations}{chapter*.93}% 66
+\BOOKMARK [1][-]{section*.103}{Glossary}{chapter*.93}% 67

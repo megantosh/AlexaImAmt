@@ -42,12 +42,6 @@ George Anders.
 \newblock {\em Alexa Dev Chat Podcast}, November 2017.
 \newblock Online Resource. Accessed on 13.02.2018.
 
-\bibitem{wiki:mvc}
-Wikipedia contributors.
-\newblock Model-view-controller.
-\newblock
-  \url{https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller}.
-
 \bibitem{wiki:nlp}
 Wikipedia contributors.
 \newblock History of natural language processing --- wikipedia{,} the free
@@ -56,6 +50,14 @@ Wikipedia contributors.
   \url{https://en.wikipedia.org/w/index.php?title=History_of_natural_language_processing&oldid=795750930},
   2017.
 \newblock Online Resource. Accessed on 14.02.2018.
+
+\bibitem{wiki:mvc}
+Wikipedia contributors.
+\newblock Model-view-controller.
+\newblock
+  \url{https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller},
+  March 2017.
+\newblock Online Resource. Accessed on 12.02.2018.
 
 \bibitem{wiki:gartnerreports}
 Wikipedia contributors.
@@ -115,6 +117,11 @@ Tobias Grossmann, Regine Oberecker, Stefan Koch, and Angela D~Friederici.
 \newblock \url{https://youtu.be/tAKbXEsZ4Iw?t=4m14s}, March 2017.
 \newblock Online Resource. Accessed on 15.04.2018.
 
+\bibitem{pi:egypt}
+Privacy International.
+\newblock State of privacy egypt.
+\newblock Online Resource. Accessed on 18.01.2018.
+
 \bibitem{searchmetrics:blog}
 {Jan Grundmann, SearchMetrics}.
 \newblock Voice search im seo-check: Liest google home immer das erste
@@ -155,11 +162,10 @@ Will Knight.
 
 \bibitem{lomm:gov}
 {Malte Schwarzer, Jonas Düver, Danuta Ploch and Andreas Lommatzsch}.
-\newblock An interactive e-government question answering system.
-\newblock
-  \url{https://www.researchgate.net/publication/308114384_An_Interactive_e-Government_Question_Answering_System},
-  September 2016.
-\newblock Online Resource. Accessed on 29.04.2018.
+\newblock {An Interactive e-Government Question Answering System}.
+\newblock In {\em Proc. of the LWDA conference, Track Information Retrieval,
+  Potsdam, Germany}, LWDA '16, pages 74--82. CEUR Workshop Proceedings, 2016.
+\newblock Online Resource. Accessed on 09.05.2018.
 
 \bibitem{forbes:govOutreach}
 {Matt Anthes, Forbes Agency Council}.
@@ -181,13 +187,25 @@ Will Knight.
 {Memo Döring}.
 \newblock Alexa dev days.
 \newblock \url{http://alexadevday.com/BER/DevPortal}, April 2018.
-\newblock remarks in Workshop.
+\newblock Remarks in Workshop.
 
 \bibitem{mindmeldReport}
 {MindMeld, Cisco Systems}.
 \newblock Intelligent voice assistants research report, q1 2016.
 \newblock \url{http://info.mindmeld.com/survey2016q1.html}, 2016.
 \newblock Online Resource. Accessed on 30.04.2018.
+
+\bibitem{nilephish}
+{Mohamed Megahed and Vasilis Ververis}.
+\newblock {Surveillance, Blocks and Phishing in the Nile}, March 2018.
+
+\bibitem{afte:eg}
+{Mohammad El-Taher}.
+\newblock {Closing Windows.. Censorship Of The Internet In Egypt}.
+\newblock
+  {\url{https://afteegypt.org/digital_freedoms-2/2018/02/19/14655-afteegypt.html?lang=en}},
+  February 2018.
+\newblock Online Resource. Accessed on 11.05.2018.
 
 \bibitem{cnbcAlexa}
 NBC.
@@ -202,6 +220,10 @@ NBC.
 \newblock {Advice on Building Voice Experiences from Alexa’s Former Head of
   Product}, December {2017}.
 \newblock Online Resource. Accessed on 29.04.2018.
+
+\bibitem{hassmannMlr:berlina}
+{Sebastian Hansmann, Marcel Müller}.
+\newblock Chatbots in egovernance, 2017.
 
 \bibitem{aws_website}
 Amazon~Web Services.
@@ -235,6 +257,12 @@ Laurie Sullivan.
   \url{https://www.mediapost.com/publications/article/291913/gartner-predicts-30-of-searches-without-a-screen.html},
   December 2017.
 \newblock Online Resource. Accessed on 12.2.2018.
+
+\bibitem{aws:pubsecsum}
+{Tim Hearn and Paul Bockelman}.
+\newblock Transform government it with vmware cloud on aws, an integrated
+  hybrid solution, April 2018.
+\newblock Quotes from attended conference.
 
 \bibitem{forbes:20bots}
 {Tomas Laurinavicius, Forbes Tech}.

@@ -165,7 +165,13 @@ The concept behind modularisation in Node.js is to keep Node's core small, effic
 %###################################################################################
 
 \subsection*{Apache Solr}
+\label{Solr}
+\todo{show each core structure. you mention this in the implementation section}
 w lucene w tika w nutch wel habal da if required
+
+the API endpoint was originally created for the Virtual Citizen Assistant, likely through a crawler (e.g. Apache Nutch) that parses the information from the Berlin city portal and places it into the respective nodes. The latest information we obtained about the chatbot system entails that the API updates its information periodically, based on the services offered on the Berlin website. 
+...as a web app and appears to be built from information offered on the Berlin.de websites. The information is organised in 6 cores, each containing information related to different content the chatbot can provide. These are listed below. More information about each core's content is discussed in Section \ref{frameworks_structs}.
+
 
 using state of the art standards in TF/IDF for seach queries
 
@@ -353,13 +359,13 @@ Based on our own exploration and through a growing voice design guide offered to
 
 
 \subsection*{Design before Implementation}
-Since the Skill code usually starts small, it might be tempting to just work in iterations, develop for one scenario and then think of what else is needed as we go.
+Since the Skill code usually starts small, it might be tempting to work in iterations, develop for one scenario and then think of what else is needed as we go.
 As with any complex piece of software, it is very important to have a clear focus on the sequence of our workflow. Design takes an important role in this since it is the base upon which we build our Skill. If we have a bad design, we will end up getting stuck during the implementation. Good voice design means writing down full conversation flows, sentence variations, highlighting order of words, eliminating unnecessary utterances that could result in overfitting, letting Alexa deal with the dialogue management instead of using too many utterances.
 
 In the code part, it might be useful to use routers, intercepts, or both.
-Routers can be thought of as `super-handlers' that would route our words to an intent, no matter what we say in whichever order. They can be thought of as keyword-sensitive listeners. Intercepts can be thought of blocks as code that would perform before and/or after a certain router takes us to a certain intent.
+Routers can be thought of as `super-handlers' that route our words to an intent, no matter what we say in whichever order. They can be thought of as keyword-sensitive listeners. Intercepts can be thought of blocks as code that would perform before and/or after a certain router takes us to a certain intent.
 
-The initial checklist can grow quickly and immensely but can also become very theoretical. Therefore, it is for every developer to figure out how to move to the VUI paradigm step by step with regard to what is important to them.
+The initial checklist can grow quickly and immensely but can also become very theoretical. It is therefore for every developer to figure out how to adapt to the VUI paradigm based on the fields of implementation and languages relevant to them. %step by step with regard to what is important to them.
 
 
 
@@ -383,9 +389,9 @@ When we are prompting for values, they are in a canonical order for how words sh
 	\overbrace{every \ Saturday}^\text{time}
 	\]
 
-Many other examples are not actual rules, but more de facto	in the language, so we would use them because of our linguistic logic justifies it as a right pattern, which eventually make us speak a language. There are many rules regarding shapes, abstract concepts. When we build programmatically, it is possible to get lost in the order of words in a sentence or even in the order of sentences.
+Many other examples are not actual rules, but more de facto	in the language, so we would use them because of our linguistic logic justifies it as a sound pattern, which eventually make us speak a language. There are many rules regarding shapes and abstract concepts. When we build an conversation script (interaction model) programmatically, it is possible that one would get lost in the order of words in a sentence or even in the order of sentences. Since this can result for instance in sentences that are too close to each other in different intents, this would confuse the system and should be avoided to keep intent groups apart.
 
-Of course since this changes in every language, it is important not to take one language model and just fit it into another language, since there is much more that goes into that. For instance, it would not be very common to take a `en-US' language model and fit it into a French one, where the temperature scales or other units are made for another locale.
+Since this changes in every language, it is important not to take one language model and just fit it into another language, since there is much more that goes into that. For instance, it would not be very common to take a `en-US' language model and fit it into a French one, where the temperature scales or other units are made for another locale.
 
 
 \subsection*{Question wording}
@@ -493,7 +499,7 @@ Moreover, retaining session should also be considered within an intent, such tha
 %\end{quotation}
 
 
-\noindent Alexa should still understand that we are asking within the \mintinline{java}{'OscarsIntent'} and differentiate between an \mintinline{java}{'actor'} slot and a \mintinline{java}{'director'} slot to match it within the same intent to the right query response.
+\noindent Alexa should still understand that we are asking within the '\mintinline{java}{OscarsIntent}' and differentiate between an '\mintinline{java}{actor}' slot and a '\mintinline{java}{director}' slot to match it within the same intent to the right query response.
 This is only doable by retaining context.
 
 

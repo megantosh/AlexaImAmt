@@ -2,42 +2,50 @@
 \label{maintwo}
 
 In this chapter we present our implementation and hands-on experience throughout.
-The code is available on \inote{github, the new amazon account? ...}
-There are many ways to perform a setup, several languages we can use to programme 
-our Skill and throughout the development process some of these steps were changed. We present the most recent interfaces and implementation possibility using Node.js on AWS Lambda, However, this is very likely to change in a near future.
+The code is available on Github (see Chapter \ref{introduction}) with plans for development beyond this thesis. A copy is attached to this work, but cannot fully operate as a standalone software. The runtime environment is offered through the Alexa Skills kit %\inote{github, the new amazon account? ...}
+There are many ways to perform setup, several languages we can use to programme 
+our Skill and throughout the development process some of these steps were changed. We present the most recent interfaces and implementation possibility using Node.js hosted on AWS Lambda %, However, this is very likely to change in a near future.
 
 \section{Setup}
 
 
-\todo{codechunks different labeling??
-}
+%\todo{codechunks different labeling??
+%}
 
 \subsection*{Minimum Requirements}
+For the environment setup, the following tools and credentials are necessary:
+
+\subsubsection*{Amazon Account}
+We use it in conjunction with AWS and the Alexa Developer Console. Any account previously created for the Amazon store is usable \footnote{e.g. from here  \url{https://aws.amazon.com/de/resources/create-account/}} as well as to test our skill. Once the account is activated on the developer console, the Skills in development become automatically reachable on any Alexa-enabled device linked to the same account (as an end-user).
+	
+\subsubsection*{Command Line Tools}
 \begin{itemize}
-	\item[Amazon Account] We use it in conjunction with AWS and the Alexa Developer Console \footnote{create one from anywhere on the Amazon Website, e.g. here \url{https://aws.amazon.com/de/resources/create-account/}} as well as to test our skill. Once we activate our account on the developer console, the skills we develop become automatically reachable on any Alexa-enabled device linked to our account (as an end-user).
-	
-	\item[Command Line] - \textbf{Python 3} or\textbf{ Ruby 4} need to be installed as a foundation for ASK CLI and AWS CLI.\\
-	- A package manager such as Pip Installs Packages (\textbf{PIP}) for Python or \textbf{RubyGems} for Ruby.\\
-	- Depending on OS, further packages and package managers might need to be installed, e.g. Command-Line Tools for Xcode and Homebrew on the Mac. This will be prompted throughout the installation.
-	\inote{brew, easyinstall python / win}
-	
-	
-	\item[API] Our endpoint provides us with JSON responses to the queries we do through a RESTful interface from within our Lambda function (back-end code) \footnote{rechable on:\url{https://newsreel-edu.aot.tu-berlin.de/solr}}.
-	
-	\item[Audio] An encoder to create 48kpbs constant bitrate MP3-Format. ffmpeg\footnote{convert by running \lstinline|$ ffmpeg -i <inFile> -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 <outFile.mp3>|} or Audacity \footnote{\url{http://www.audacityteam.org/}} can be used to convert to an Alexa-friendly file format like in the \textsc{ASK Documentation}\footnote{\url{https://developer.amazon.com/de/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html\#h3_converting_mp3}}.
-	
+ \item \textbf{Python 3} or\textbf{ Ruby 4} need to be installed as a foundation for ASK CLI and AWS CLI.\\
+\item  A package manager such as Pip Installs Packages (\textbf{PIP}) for Python or \textbf{RubyGems} for Ruby.\\
+\item  Depending on OS, further packages and package managers might need to be installed. (e.g. for macOS: Command-Line Tools for Xcode, Homebrew, easyinstall). These will be prompted throughout the installation process.
+%\inote{brew, easyinstall python / win}
+
 \end{itemize}
 
+	
+\subsubsection*{API} 
+As introduced in Section \ref{Solr}, Our endpoint is a Solr Server that provides us with JSON responses to the queries we do through a RESTful interface from within the Lambda function (hosting back-end code) \footnote{reachable at the time of development on:\url{https://newsreel-edu.aot.tu-berlin.de/solr}}. Since the API endpoint was originally created for the Virtual Citizen Assistant, we need to readjust its output to meet Alexa's requirements.
 
-\subsection*{Creating AWS Credentials}
 
-With the Amazon account we just created (or already have), we will proceed with extending it to become a developer account. As we move within the free tier of AWS, no charges were applied. However, a credit card might be required for eventual future billings if the tier limitations were exceeded. We mention pricing schemes in Section \ref{choiceOfPlatform} \footnote{More information on pricing available on: \url{https://aws.amazon.com/de/pricing/}}. 
+	
+\subsubsection*{Audio} An encoder to create 48kpbs constant bitrate MP3-Format. Audacity \footnote{\url{http://www.audacityteam.org/}} or ffmpeg\footnote{convert by running \lstinline|$ ffmpeg -i <inFile> -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 <outFile.mp3>|} can be used to convert to an Alexa-friendly file format like in the \textsc{ASK Documentation}\footnote{\url{https://developer.amazon.com/de/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html\#h3_converting_mp3}}.
+	
+
+
+\subsection*{Managing AWS Credentials}
+
+With the Amazon account we just created (or already have), we will proceed to extend it for developer registration. As we move within the free tier of AWS, no charges were applied. However, a credit card might be required for eventual future billings if the tier limitations were exceeded. We mention pricing schemes in Section \ref{choiceOfPlatform} \footnote{More information on pricing available on: \url{https://aws.amazon.com/de/pricing/}}. Developer registration needs to happen on AWS website\footnote{\url{http://aws.amazon.com}} as well as on the Amazon Developer Portal\footnote{\url{https://developer.amazon.com}} where a some information is required such as company name and business sector. From this point on, anything that manages the back-end of our skill will be associated with AWS Modules, primarily Lambda. Skill configuration and interaction model are hosted on Alexa Skills Kit separately, i.e. managed through the Amazon Developer Console. During the development process, Alexa Skills Kit diverged from the Amazon Developer Console and has become a separate entity called Alexa Console. While still hierarchically belonging to the Amazon Developer Console and reachable from the same domain, except for the developer profile, all skill-related information we need to use are modifiable from within the Alexa Console\footnote{\url{https://developer.amazon.com/alexa-skills-kit}}
 
 \subsubsection*{Generating Access Keys}~\label{accesskeys}
-Linking happens through a private and public key pair - the \textbf{access key}.
-Combination of an \textit{access key ID} (like \lstinline|AK..7EXAMPLE|) and a \textit{secret access key} (e.g \lstinline|{wJalrXUt..I/K7..G/bPx..YEXAMPLEKEY|). We use access keys to sign API requests that you make to AWS.
+Linking happens through a private and public key pair - the \textbf{access keys} consisting of a
+combination of an \textit{access key ID} (like \lstinline|AK..7EXAMPLE|) and a \textit{secret access key} (e.g \lstinline|{wJalrXUt..I/K7..G/bPx..YEXAMPLEKEY|). We use access keys to sign API requests that you make to AWS.
 
-Creating Access Keys is described in the \textsc{AWS Documentation}\footnote{\url{https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html}}
+Creating Access Keys is described in the \textsc{AWS Documentation}\footnote{\url{https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html}}. At this time we interact with the IAM Module from AWS (Identity Access Management), which defines roles of each member in an organisation and partners linked to it, who can gain different levels of access to each module capabilites. Since we are only making basic use of AWS modules and our Lambda instance interacts only with our own API, there is no harm in using 
 
 
 \subsection*{Initialising The Development Environment}

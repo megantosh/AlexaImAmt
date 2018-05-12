@@ -1,22 +1,26 @@
 \select@language {UKenglish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Voice Trends}}{9}{figure.caption.9}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces E-Government Development Index in Europe}}{10}{figure.caption.10}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces United Nations Online Service Index (Top 30)}}{11}{figure.caption.11}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Conversation with WienBot}}{13}{figure.caption.12}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Georgia.gov Popular Topics}}{16}{figure.caption.15}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Primary Nodes of \mintinline {java}{Dienstleistungen.json}\relax }}{18}{figure.caption.17}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Secondary Nodes of \mintinline {java}{Dienstleistungen.json}\relax }}{19}{figure.caption.18}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Policy-Making strategies}}{12}{figure.caption.12}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Conversation with WienBot}}{15}{figure.caption.14}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Georgia.gov Popular Topics}}{18}{figure.caption.18}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Startup Interface of the Virtual Citizen Assistant}}{20}{figure.caption.20}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces File Structure of \lstinline |Dienstleistungen.json|}}{21}{figure.caption.22}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Secondary Nodes of \mintinline {java}{Dienstleistungen.json} show relevant follow-up nodes to the primary service nodes\relax }}{22}{figure.caption.23}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces simplified demonstration of nodes traversal}}{22}{figure.caption.24}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Alexa Skills by Volume (2016)}}{29}{figure.caption.31}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Alexa Skills by Volume (2016)}}{36}{figure.caption.40}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Interaction Between AWS Modules (Coffee Bot)}}{35}{figure.caption.36}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces K-means Clusters Example}}{55}{figure.caption.70}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Interaction Between AWS Modules (Coffee Bot)}}{42}{figure.caption.45}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Conversation Flow on Georgia.gov}}{65}{figure.caption.79}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces K-means Clusters Example}}{65}{figure.caption.79}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {10.1}{\ignorespaces HTTPS Request Body Syntax}}{83}{figure.caption.89}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Conversation Flow on Georgia.gov}}{76}{figure.caption.92}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {10.1}{\ignorespaces HTTPS Request Body Syntax}}{94}{figure.caption.102}
