@@ -4,74 +4,6 @@
 
 
 
-\todo{\textit{moved from availability section in choice of platform:}\\
-We choose to offer our skill only in Germany because our Skill's functionality is specific only within this geographical region. For that we configure the Skill to handle English (US) and German.\\
-Consequently we will two interaction models and two handlers. \\
-say why we do it like this 3ashan each language group has a different interest although we can do a handler function for two languages but we prefer not to 3ashan ne3melha schöne und nicht systematische implementierung.
-}
-
-
-
-
-
-
-
-
-
-
-
-\begin{table}[h]
-	\caption[Interaction Model Schema]{\href{https://developer.amazon.com/docs/smapi/interaction-model-schema.html}{Interaction Model Schema (Skill Management API)~\cite{alexaDesignGuide} }}\label{interactionModel}
-	\begin{tabularx}{\textwidth}{|l | l l l | }
-		Field	&	Type	&	Description		&	Required \\ \hline
-		\lstinline|languageModel| &	object	& Conversational primitives for the skill	& yes\\
-		\_\_\lstinline|invocationName| &	object	& Invocation name of the skill	& yes\\
-		\_\_\lstinline|intents| &	array	& Intents and their slots	& yes\\
-		\_\_\_\_\lstinline|slots| (Intent Slots) & array & List of slots within the intent	& no\\
-		\_\_\lstinline|types| &	array	& Custom slot types		& no\\
-		\_\_\lstinline|samples|	& array	 & Sample utterances for the intent	& no\\
-		
-		dialog & & & \\
-		elicitationRequired & & & \\
-		elicitation & & & \\
-		type (slot type) & & & \\
-		name (slot name) & & & \\
-		
-		prompts & & & \\
-		\_\_ id  & & & \\
-		\_\_\_\_variations  & & & \\
-		\_\_\_\_\_\_type  & & & \\
-		\_\_\_\_\_\_value  & & & \\ \hline
-		
-	\end{tabularx}			
-\end{table}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -114,6 +46,8 @@ It's important to say that they do not transcribe, but do term weighting etc, a 
 
 
 
+
+
 \todo{MAGENTA\\
 	-AL: Ich w\"urde erst etwas die Algorithmen und Datenstrukturen (Textanalyse, JSON, ggf. Graphen beschreiben). \\
 	-AL: Anschlie{\ss}end die Frameworks vorstellen\\ 
@@ -125,11 +59,100 @@ It's important to say that they do not transcribe, but do term weighting etc, a 
 	\url{https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}
 	\url{https://www.itdz-berlin.de/}
 }
-\section{Frameworks and Data Structures}~\label{frameworks_structs}
+
+
+
+
+
+before we proceed, information:
+
+Abtastrate für Telefon-Audio (8 kHz)
+Amazon Lex unterstützt die folgenden Formate für den Audioeingang: LPCM und Opus. Unterstützte Formate für den Audioausgang: MPEG, OGG und PCM.
+
+Verwendung nur über das Internet möglich
+
+behalten den Kontext
+It tells you what utterances were missed
+
+
+
+\section{Design Choices}
+
+option: make two versions of it - wa7ed only focused on the info, the other is a module on top of it for entertainment
+
+How to optimize, e.g. making a longer session
+- z.B. with this Microsoft way to make a bot session last for a long time and start a session w keda 3ashan ye3mel sense of the context around it (conversation before and after)
+- give a suggested answer
+
+
+
+developer’s role:
+clarity
+spontenaety
+competence
+
+As such, we need to create an interaction model that takes care of wording order and a fulfilment that has competent error handling paths. The more complex the Skill gets, the more important to make error handling integrate in the code. Excessive logging is not bad as long as it does not get too confusing
+
+
+We start with an utterance, see which intent it can relate to.  that's why it is better to separate utterances by intent
+
+
+\todo{\textit{moved from availability section in choice of platform:}\\
+	We choose to offer our skill only in Germany because our Skill's functionality is specific only within this geographical region. For that we configure the Skill to handle English (US) and German.\\
+	Consequently we will two interaction models and two handlers. \\
+	say why we do it like this 3ashan each language group has a different interest although we can do a handler function for two languages but we prefer not to 3ashan ne3melha schöne und nicht systematische implementierung.
+}
+
+
+
+\todo{dann UML Diag showing interaction}
+
+
+\begin{table}[h]
+	\caption[Interaction Model Schema]{\href{https://developer.amazon.com/docs/smapi/interaction-model-schema.html}{Interaction Model Schema (Skill Management API)~\cite{alexaDesignGuide} }}\label{interactionModel}
+	\begin{tabularx}{\textwidth}{|l | l l l | }
+		Field	&	Type	&	Description		&	Required \\ \hline
+		\lstinline|languageModel| &	object	& Conversational primitives for the skill	& yes\\
+		\_\_\lstinline|invocationName| &	object	& Invocation name of the skill	& yes\\
+		\_\_\lstinline|intents| &	array	& Intents and their slots	& yes\\
+		\_\_\_\_\lstinline|slots| (Intent Slots) & array & List of slots within the intent	& no\\
+		\_\_\lstinline|types| &	array	& Custom slot types		& no\\
+		\_\_\lstinline|samples|	& array	 & Sample utterances for the intent	& no\\
+		
+		dialog & & & \\
+		elicitationRequired & & & \\
+		elicitation & & & \\
+		type (slot type) & & & \\
+		name (slot name) & & & \\
+		
+		prompts & & & \\
+		\_\_ id  & & & \\
+		\_\_\_\_variations  & & & \\
+		\_\_\_\_\_\_type  & & & \\
+		\_\_\_\_\_\_value  & & & \\ \hline
+		
+	\end{tabularx}			
+\end{table}
+
+discuss  Interaction model
+- remove arzt from tierarzt
+- psychologischer psycholog
+- put postleitzahlen in synonyms
+- separate amtsanwltschaft from staatsanwaltschaft 
+-put super, great
+
+problem with list of nationalities - british territories in africa, asia, who says that? 'südsee'
+
+
+
 
 %###################################################################################
 %###################### Topic B             ########################################
 %###################################################################################
+
+\section{Frameworks and Data Structures}~\label{frameworks_structs}
+
+
 
 \subsection*{Node.js}
 \label{nodejs:def}
@@ -147,7 +170,8 @@ The concept behind modularisation in Node.js is to keep Node's core small, effic
 
 \end{itemize}
 
-
+\todo{explain promises, design pattern of functions that take two parameters, request, callback -     (req, res)           -    callback, executed as the method is ready and not blocking
+}
 
 \todo{ below }
 
@@ -158,6 +182,17 @@ The concept behind modularisation in Node.js is to keep Node's core small, effic
 	- Event driven like listener-observer model, emit\\
 	- list emits table here: \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md#response-vs-responsebuilder}\\
 	- explain directives, we use dialog directives like this: \t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html\#delegate}{\lstinline|/dialog-interface-reference.html\#delegate|}	
+
+
+Alexa provides an SDK in the form of a wrapper. Import with
+
+
+
+\begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{javascript}
+
+const alexa = require 'alexa_sdk'
+\end{minted}
+
 
 
 %###################################################################################
@@ -291,6 +326,23 @@ answethepublic.com
 
 
 \section{Challenges}
+
+
+\subsection*{Interpolation from Virtual Citizen Assistant}
+first one: we start of with finding a way to interpoloate our model
+direkte übernahme ist nicht möglich, da die nodes nicht einheitlich geparsed werden kuönnen (fees etc)
+
+- I also do not have any documentation of the current bot
+
+
+\subsection*{Environment}
+- problem is: if i use screenshots and amazon changes the interface (in the process)
+
+
+
+
+when i say hohenschönhausen or hohen schön hausen
+
 
 \textcolor{magenta}{
 - und L\"osungen daf\"ur\\

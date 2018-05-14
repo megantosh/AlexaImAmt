@@ -32,6 +32,18 @@ We use it in conjunction with AWS and the Alexa Developer Console. Any account p
 As introduced in Section \ref{Solr}, Our endpoint is a Solr Server that provides us with JSON responses to the queries we do through a RESTful interface from within the Lambda function (hosting back-end code) \footnote{reachable at the time of development on:\url{https://newsreel-edu.aot.tu-berlin.de/solr}}. Since the API endpoint was originally created for the Virtual Citizen Assistant, we need to readjust its output to meet Alexa's requirements.
 
 
+\todo{
+Technology:	Lucene
+spell check. unscharfe suche
+…Tika / detect language / … it’s the golden standard
+Solr
+Data Structure: XML datei, (hierarchical)
+
+}
+
+
+
+
 	
 \subsubsection*{Audio} An encoder to create 48kpbs constant bitrate MP3-Format. Audacity \footnote{\url{http://www.audacityteam.org/}} or ffmpeg\footnote{convert by running \lstinline|$ ffmpeg -i <inFile> -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 <outFile.mp3>|} can be used to convert to an Alexa-friendly file format like in the \textsc{ASK Documentation}\footnote{\url{https://developer.amazon.com/de/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html\#h3_converting_mp3}}.
 	
@@ -50,7 +62,17 @@ Creating Access Keys is described in the \textsc{AWS Documentation}\footnote{\ur
 
 \subsection*{Initialising The Development Environment}
 
-As minimum package requirements can vary a lot between one OS and another, using a virtual machine is suggested for teams. AWS offers Elastic Compute Cloud (EC2) as a service for virtual machines in the cloud. Although this step is mainly for performing command-line prompts later on, if opting for that, it is convenient to avail a web browser inside the virtual machine instance. Otherwise for browser communication the tool we are going to use will generate links that we would need to copy and paste into a browser outside of the virtual machine to link it with the Amazon account we use.
+As minimum package requirements can vary a lot between one OS and another, using a virtual machine is suggested for teams. AWS offers Elastic Compute Cloud (EC2) as a service for virtual machines in the cloud. Although this step is mainly for performing command-line prompts later on, if opting for that, it is convenient to avail a web browser inside the virtual machine instance. Otherwise, for browser communication the tool we are using generates links that we would need to copy and paste into a browser outside of the virtual machine to link it with the Amazon account we use.
+
+
+\todo{creating lambda alone}
+my link to Amazon Developer Forums
+\url{https://forums.developer.amazon.com/questions/87860/ask-cli-eu-lambda-region.html?childToView=164883#answer-164883}
+
+\todo{cmd --no-browser\\
+	setting up lambda alone not based on skill, since we want to use Ireland not US. so we create a new function and give it the IAM role
+	lambda\_Execution\_basic
+}
 
 
 \subsection*{Installing Command-Line Tools}
@@ -202,19 +224,12 @@ A LaunchRequest always starts a new session.
 
 
 
+
+
+
 jsons sent/received in appendix
 \ref{jsonFromAlexa}
 
-
-
-
-
-
-legal things like the EU-partner rule.
-eu rules override local
-bas u cant explain it to people 3ashan they have to be give the choice.
-el mawdou3 mo3aqqad but codified here
-\url{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02004L0038-20110616}
 
 
 
@@ -229,6 +244,36 @@ el mawdou3 mo3aqqad but codified here
 
 %\section{Code Analysis}
 \section[Features]{Feature Implementations}
+
+
+
+\subsection*{Intent Implementation}
+[ ] for deployment, certain intents have to be added and fulfilled (HELP, STOP, …)
+
+
+
+\subsubsection*{Guessing the right Location}
+PLZ oder Stegltz - geocoordinates
+
+
+
+\subsection*{Making the right conversation}
+
+
+
+legal things like the EU-partner rule.
+eu rules override local
+bas u cant explain it to people 3ashan they have to be give the choice.
+el mawdou3 mo3aqqad but codified here
+\url{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02004L0038-20110616}
+
+
+
+
+
+\subsection*{Randomising Alexa's Utterances}
+What’s next doesn’t look what came before
+
 
 
 \subsection*{Creating SSML and Audio}
@@ -264,6 +309,9 @@ unhandled always calls or never
 
 continuous testing during development, noch nicht evaulation, although the same techniques are pretty much used afterwards. Requires 10 users a day to generate
 
+
+Postman
+
 \todo{history API - Dave isbitzkis tweet}
 \mintinline{bash}{$ ask api intent-requests-history <-s|--skill-id <skillId>> [--filters <value>] [--max-results <value>] [--sort-direction <value>] [--sort-field <value>] [--next-token <value>]}
 
@@ -284,6 +332,9 @@ https://developer.amazon.com/docs/smapi/intent-request-history.html
 	\todo{mention that 3ashan homa store w keda fal mawdou3 lazem yekoun mo7kam w 7agat homa bey7ebouha and the reasons why things could get rejected according to their policy and some scenarios}
 
 \section{Debugging / Troubleshooting}
+
+
+\section{troubleshooting}
 
 \todo{API TLS certificate. No base64
 	just \mintinline{javascript}{rejectUnauthorized: false}

@@ -1831,13 +1831,15 @@ it s not suprising to see synergy effects on the market. Recent news about
 Amazon and Microsoft agreeing to make their voice assistants talk to each other \cite{amznMicrosoft} is one such comparison to how different operating systems today exchange common file formats to do the same tasks differently\\
 
 
-\subsection*{From End-Users' Point}
+\subsection*{From End-Users' Point (Convenience and Purpose)}
 
 Before we evaluate platforms in terms of software development, we research the question of evaluating the platform from the customer's point of view. For this we look into empirical data from previous evaluations, then complement it with our own survey. 
 
-In his thesis project, Osman \cite{osman:siri} surveys Siri, Cortana and Google Assistants with respect to their user-friendliness using Attrakdiff and other procedures. The research quantifies the perception of 24 interviewees (13 women and 11 men between 18-35 years of age) about the voice,  the human aspect of the voice assistant, pragmatic, hedonistic and other qualities. It also tests the reactance of the subjects with ratios about knowing vs. using the voice assistant.
+In his thesis project, Osman \cite{osman:siri} surveys Siri, Cortana and Google Assistants with respect to their user-friendliness using Attrakdiff and other procedures. The research quantifies perceptions of 24 interviewees (13 women and 11 men between 18-35 years of age) about the voice,  the human aspect of the voice assistant, pragmatic, hedonistic and other qualities. It also tests the reactance of the subjects with ratios about knowing vs. using the voice assistant.
 
-Though the research does not recommend a certain platform, it hints that different platform adapt a different characteristic (especially with regard to wit practicality), which trigger different emotions on different users. Already in 2016, the study shows that the names of the voice assistants sound familiar to the sampled subjects.
+Though the research does not recommend a certain platform, it hints that different platform adapt a different characteristic (especially with regard to wit practicality), which trigger different emotions on different users. Already in 2016, the study shows that the names of the three voice assistants sound familiar to the sampled subjects.
+
+Given its reputation among assistants, Siri has been criticised for its inflexibility and often not understanding more specific commands. Dormhel suggests improvements on translations from English \cite{dormhell:siri} which discourages us to develop for the platform in German if it has a weak foundation.
 
 Other sources indicate that ``AI platforms by Google, Apple, Microsoft, and Amazon all show different strengths. Google Assistant is the best on wide-ranging search commands.'' \cite{mit:Alexa} %Apple’s Siri and Microsoft’s Cortana have other talents. 
 As Alexa is particularly talented with shopping commands \cite{mit:Alexa}, the platform revolves well around sustaining a conversation''. %does particularly well with shopping commands.
@@ -1857,13 +1859,16 @@ Additionally, there are a few plugins in the making to create a voice profile fo
 %	
 %}
 
-\subsection*{From Developer's Point}
+\subsection*{From Developer's Point (Cost and Availability)}
 
 The perspective of third-party development focuses mainly on availability of APIs and SDKs. With the exception of Siri being tied to a relatively closed platform and require knowledge of Swift or ObjectiveC, Siri can only be executed if an app is installed on the iOS device.
 %an SDK for developing apps that are installed on the iOS devices and 
-Moreover, a 99 US\$ one-time fee to become an active developer able to publish on the AppStore is a prerequisite. Alexa and Google demonstrate more freedom with the option to not need to pay any fee until after the 3rd-party software is in production. This is another reason that gets us attracted to both platforms.
+Moreover, a 99 US\$ one-time fee to become an active developer able to publish on the AppStore is a prerequisite.
+Likewise, Microsoft's Azure Services are available with a 30-day trial period, followed by a subscription scheme.
+Alexa and Google demonstrate more flexible models with a free tier option %the option to not need to pay any fee 
+until after the 3rd-party software is in production. This is another reason that gets us attracted to both platforms. Further, with Alexa and AWS, promoting ads that play from within the Skill has additional costs, but there is a possibility for developers to make a small profit from the Skill once it gets a substantial user base. A developer's guide is available in English and partly in German.
 
-Also, their higher user base promise a higher likelihood for a developed solution to be used on the respective hardware (Android devices, Alexa-enabled devices).
+Also, their larger user base promise a higher likelihood for a developed solution to be used on the respective hardware (Android devices, Alexa-enabled devices).
 Especially with Amazon Skills launching in Germany only since February 2017, we expect that our solution could fill a market gap. Figure \ref{skillsbyvol} demonstrates how an Alexa Skill could cater for an unsaturated market.
 
 
@@ -1876,11 +1881,11 @@ Especially with Amazon Skills launching in Germany only since February 2017, we 
 \end{figure}
 
 
-For Google, the option of using Dialogflow\footnote{\url{https://dialogflow.com/}} (formerly API.ai) was excluded as it was explored in the equivalent project by Hassmann and Müller \cite{hassmannMlr:berlina}.\\
+As the motivation behind this project is partly to evaluate development for an e-Government service on a new platform, with the Google assistant the option of using Dialogflow\footnote{\url{https://dialogflow.com/}} (formerly API.ai) was excluded as it was explored in the equivalent project by Hassmann and Müller \cite{hassmannMlr:berlina}.\\
 
 
 
-With Amazon having an obscure position to data and privacy as opposed to Apple and Siri, this gets us to question how Amazon protects personal data. During the AWS Public Sector Summit 2018 in Brussels, Belgium many answers were provided clearing doubts about the company's compliance to the GDPR and its Cloud Computing Compliance Controls Catalog (C5) attestations as a proof of high standards for different forms of data protection (e.g. resale to partners and third-parties and responsibility on cyberattacks) \cite{aws:pubsecsum}
+With Amazon having an obscure position to data and privacy as opposed to Apple and Siri, this gets us to question how Amazon protects personal data. During the first AWS Public Sector Summit 2018 in Brussels, Belgium with a considerable presence of the European Commission in panels, presentations and workshops, many answers were provided clearing doubts about the company's compliance to the GDPR and its Cloud Computing Compliance Controls Catalog (C5) attestations as a proof of high standards for different forms of data protection (e.g. resale to partners and third-parties and responsibility on cyberattacks) \cite{aws:pubsecsum}
 
 
 \subsection*{Conducted Survey}
@@ -1946,10 +1951,31 @@ The survey aims at understanding potential customers' expectations while evaluat
 
 %
 %
+
+
+%\begin{figure}[b]
+%	%	\centering
+%	\caption[Survey Results]{\textsc{Demographics \& Use of a Voice assistant} - Results of conducted survey for 34 participants for the development of an Alexa Skill}	
+%	
+%\end{figure}
+
+
+
 \begin{figure}[h!]
-%	\centering
-	\caption[Survey Results]{\textsc{Demographics \& Use of a Voice assistant} - Results of conducted survey for 34 participants for the development of an Alexa Skill}
-	
+	\centering
+
+\caption[Survey Results - Demographics \& Use]{\textsc{Demographics \& Use of a Voice assistant} - Results of conducted survey for 34 participants for the development of an Alexa Skill}
+
+
+
+
+	\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/0}
+\end{subfigure}
+
+
+
 	
 	\begin{subfigure}[b]{\linewidth}
 		%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
@@ -1962,23 +1988,44 @@ The survey aims at understanding potential customers' expectations while evaluat
 		
 	\begin{subfigure}[b]{\linewidth}
 		%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
-		\includegraphics[width=\linewidth]{questi/2}
+		\includegraphics[width=\linewidth]{questi/2-0}
 	\end{subfigure}
 	
 
+
+	\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/2-1}
+\end{subfigure}	
+	
+	
+	
+	
 
 \end{figure}
 
 
 
 
-\begin{figure}[h!]
+\begin{figure}[p]
 	%	\centering
-	\caption[Survey Results (cont'd)]{ \textsc{Berlin.de City Portal, the Virtual Citizen Assistant and Activities on Alexa} - Results of conducted survey for 34 participants for the development of an Alexa Skill}
+	\caption[Survey Results - Berlin City Portal and Chatbot]{ \textsc{Berlin.de City Portal, the Virtual Citizen Assistant and Activities on Alexa} - Results of conducted survey for 34 participants for the development of an Alexa Skill}
 	
+
+			
 
 	
 	
+	
+
+%\begin{subfigure}[b]{\linewidth}
+%	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+%	\includegraphics[width=\linewidth]{questi/}
+%\end{subfigure}	
+%
+%
+
+
 
 
 \begin{subfigure}[b]{0.3\textwidth}
@@ -2012,6 +2059,13 @@ The survey aims at understanding potential customers' expectations while evaluat
 	\includegraphics[width=\linewidth]{questi/5-1}
 \end{subfigure}
 
+
+\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/5}
+\end{subfigure}
+
+
 \end{figure}
 
 
@@ -2022,15 +2076,8 @@ The survey aims at understanding potential customers' expectations while evaluat
 
 \begin{figure}[h!]
 	%	\centering
-	\caption[Survey Results (cont'd)]{ \textsc{Activities on Alexa and a Voice Assistant for the city's authorities} - Results of conducted survey for 34 participants for the development of an Alexa Skill}
+	\caption[Survey Results - Activities on Alexa / Assistant for Berlin]{ \textsc{Activities on Alexa and a Voice Assistant for the city's authorities} - Results of conducted survey for 34 participants for the development of an Alexa Skill}
 
-
-
-
-\begin{subfigure}[b]{\linewidth}
-	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
-	\includegraphics[width=\linewidth]{questi/5}
-\end{subfigure}
 
 
 
@@ -2040,11 +2087,75 @@ The survey aims at understanding potential customers' expectations while evaluat
 \end{subfigure}
 
 
+
+
+
+\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/6-2}
+\end{subfigure}
+
+
+\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/7}
+\end{subfigure}
+
+
+%
+%
+%\begin{subfigure}[b]{\linewidth}
+%	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+%	\includegraphics[width=\linewidth]{questi/7}
+%\end{subfigure}
+
+
+
+\begin{subfigure}[t]{0.7\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=0.7\linewidth]{questi/8}
+\end{subfigure}
+
+
+\begin{subfigure}[b]{0.29\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/9}
+\end{subfigure}
+
+
+
+\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/9}
+\end{subfigure}
+
+
+
+
+\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/12}
+\end{subfigure}
+
+
+\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/10}
+\end{subfigure}
+
+
+
+\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/11}
+\end{subfigure}
+
+
 \end{figure}
 
 
 
-
+\clearpage
 
 The survey is carried out using LimeSurvey, an open tool (for educational purposes) with extensive analysis tools and the ability to export to statistics software such as R, SPSS and any tool accepting CSV file format. It lays out a foundation for future metrics if used in parts and on larger amounts of interviewees.
 
@@ -2115,30 +2226,42 @@ After deciding that the voice assistant solution will take the shape of an Alexa
 	
 	
 %	\item[
-	\subsection*{Ecosystem}
+	\subsection*{Microservices as Building Blocks} %and Helpers}
 %	] 
-	While we can use our own building blocks, AWS offers a good combination with the Alexa Skills Kit, from asset hosting to availing virtual machine instances 
+	While we can use our own building blocks, AWS offers a good combination with the Alexa Skills Kit, from asset hosting to availing virtual machine instances. 
 	
+
 %	\item[
+	\subsection*{Availability based on Language and Local Store}
+%	] 
+based on an excerpt from ASK documentation: Availability \footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/develop-skills-in-multiple-languages.html}{\lstinline|/develop-skills-in-multiple-languages.html|}} of a Skill depends on the Amazon store selected. An Amazon store is linked to the primary shipping address on the account if provided, otherwise it depends on the initial settings provided through the device from which an account was set up from (e.g. IP-Address, device language settings). With our configuration set to German, 
+%	
+%	\begin{itemize}
+%		
+%		\item \space 
+[A Skill hosted on the German store only with an interaction model in locales `de\_DE' and `en\_US' can be made] \space available  [.. with the] selected country distribution [before deployment] \cite{alexaDesignGuide}.
+It can be used with an account linked to the German store to a device language set in German (Germany) or English (U.S.) 
+%		\item \space[It] can be used by customers in Germany who have set their devices to use German.
+%		\item \space[It] can be used by customers in Germany who have set their devices to use English (UK).
+%		\item \space
+		[It] cannot be used by customers in Germany who have set their devices to use English (U.K.) or any other language
+		%.
+%		\item \space [It] cannot be used by customers 
+		and not by an account with German (Germany) or English (U.K)
+		in any other country, regardless of the language they've selected for their devices.
+		
+%	\end{itemize}
+	
+	
+	
+	%	\item[
 	\subsection*{Programming Language}
-%	] 
-	Chooing a programming language is relevant, as we have an already implemented template from the Virtual Citizen Assistant which we want to use. At the same time, trying out a new language is a key incentive to start this project. Given that we have the freedom of choice with Alexa Skills between Java, Node.js framework (JavaScript), C\# and Python, we look at available resources for each language. Node.js prove to be the most resourceful as will be discussed in Chapter \ref{maintwo}. As a secure alternative, the Alexa SDK for Java comes second to Node.js's as opposed to C\# which has no SDK for Alexa. With Java and ECMAScript having similar syntax, the arguments towards development on this framework is strengthened.
-	
-%	\item[
-	\subsection*{(Human) Language}
-%	] 
-based on an excerpt from ASK documentation: Availability \footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/develop-skills-in-multiple-languages.html}{\lstinline|/develop-skills-in-multiple-languages.html|}}
-	
-	
-	\begin{itemize}
-		
-		\item \space [A Skill hosted on the German store only with an interaction model in locales `de\_DE' and `en\_UK' can be made] \space available  [.. with the] selected country distribution [before deployment].
-		\item \space[It] can be used by customers in Germany who have set their devices to use German.
-		\item \space[It] can be used by customers in Germany who have set their devices to use English (UK).
-		\item \space[It] cannot be used by customers in Germany who have set their devices to use English (US) or any other language.
-		\item \space [It] cannot be used by customers in any other country, regardless of the language they've selected for their devices.
-		
-	\end{itemize}
+	%	] 
+	Choosing a programming language is relevant %, as we have an 
+	with respect to the already implemented template of %the 
+	Virtual Citizen Assistant %which we want to use 
+	intended to extend. At the same time, trying out a new language is a key incentive to start this project. Given that we have the %freedom of 
+	choice with Alexa Skills between Java, Node.js framework (JavaScript), C\# and Python, we look at available resources for each language. Node.js proves to be the most resourceful as will be discussed in Chapter \ref{maintwo}. As a secure alternative, the Alexa SDK for Java comes second to Node.js's as opposed to C\#, for which no Alexa SDK exists. With Java and ECMAScript having similar syntax, the arguments to develop on this framework is strengthened.
 	
 %\end{itemize}
 
@@ -2635,13 +2758,15 @@ while the hardware models stated above are possibilities for testing, too, they 
 %	\item[
 \subsubsection*{Alexa App}
 %	] 
-	designed to be a control unit that operates most Alexa-enabled devices, is not an Alexa interface\footnote{yet (although this will change soon)}. However, apart from being a tool apart from Amazon's website to install Skills and manage accounts linked to Amazon (for music streaming and other related content-based services), it is a very useful tool to track the history of conversation that took place through a respective Amazon account. We use it mainly to hear what we said and see how the text was interpreted using Lex's NLU engine. It helps for checking homonyms and nuanced utterances.
+	designed to be a control unit that operates most Alexa-enabled devices, is not an Alexa interface%\footnote{yet (although this will change soon)}. 
+	, but rather a screen for Alexa devices without one (e.g. Echo Dot) and where account linking happens. Apart from being a tool apart from Amazon's website to install Skills and manage accounts linked to Amazon (for music streaming and other related content-based services), it is a very useful tool to track the history of conversation that took place through a respective Amazon account. We use it mainly to hear what we said and see how the text was interpreted using Lex's NLU engine. It helps for checking homonyms and nuanced utterances.
 	
+	By being able to listen to the voice recording and transcribed audio as well as the cards displayed, we can understand the context in which Alexa is unable to match the wording to an intent. This option is available through \textbf{Settings \textgreater Alexa Account: History} 
 	
 %	\item[
 	\subsubsection*{EchoSim.io}
 %	]
-	 ``a browser-based online community tool for developers that simulates the look and feel of an Amazon Echo'' \footnote{\url{https://echosim.io/}}. %started from a hackathon
+	 ``a browser-based online community tool for developers that simulates the look and feel of an Amazon Echo'' \footnote{\url{https://echosim.io/}}. Started as an inmplementation in a hackathon, this tool is very similar in use to the Alexa Simulator. At the beginning of this project, Alexa Simulator was not as powerful as it is now, making EchoSim a good variant for testing. %of using it, the A 
 	
 %	\item[
 	\subsubsection*{Reverb App}
@@ -2657,6 +2782,12 @@ while the hardware models stated above are possibilities for testing, too, they 
 	\subsubsection*{CLI Simulator}
 %	] 
 	the command-line tool of the aforementioned simulator. Accepts strings and file uploads from the CLI and returns responses to the same interface. Obviously because the Skill is a web service in the cloud, the CLI also requires an internet connection \footnote{running command \lstinline|$ ask simulate --text <inputText> --locale <inputLocale>|}.
+	
+	
+	%	\item[
+	\subsubsection*{Postman}
+	%	] 
+	Postman is the request/response simulator we use to interact with our API before our Skill exists. It is primarily helpful in our context to visualise GET/POST requests.
 	
 %\end{itemize}
 
@@ -2692,12 +2823,18 @@ A conversation starts with any of the four wake words below, followed by the lau
 
 
 
-\section{Summary}
-
 With this insight we are able to test our Alexa Skill through various methods, depending on the test type. Tests should be run individually and combined. We also have a separation of concerns between development and tests for the interaction model as well as the Skill back end code.
 
 
 
+\section{Summary}
+Now that we have a thorough understanding of how AWS modules interact together, we are capable of determining the modules we will need in our Skill. With Lex, Polly, and Transcribe already put together to become the core of Alexa, we will designate our use of Lambda to implement the intent fulfilment and S3 to host stored assets (e.g. audio and images) we will need for the Skill. As we intend not to store sessions nor retain information from it, we will not use DynamoDB or any equivalent DBMS. Cloudwatch will help us log our Skill for back end and some front end tests (e.g. to see if Alexa transcribes our Audio the way we want). IAM is be used implicitly to set up the roles our Lambda function will take.  We use all testing software depending on whether we are testing Alexa's understanding, the way displays information on the screen (using cards), the way speech text sounds like and others. Noteworthy is that as much as the way conversation happens slightly differently with each of the device in Table \ref{alexaDeviceTable} due to how a session is kept or not (devices with button press do not give a reprompt), images display differently on each of the listed devices.% listed in Table \ref{alexaDeviceTable}.
+Moreover, with the given Skill structure we know how to approach development and change Skill configurations %and dependencies  
+programmatically
+or through the web interfaces (Alexa Developer Console - web, ASK and AWS CLIs - locally). 
+Finally, having agreed to develop on Alexa and using AWS, we are aware of the agreements that allow Amazon to retain and process ``audio, interactions, and other data in the cloud to provide and improve our services'' \footnote{UK Conditions and Use of Sale: \url{https://www.amazon.co.uk/gp/help/customer/display.html/ref=footer_cou?ie=UTF8&nodeId=1040616&pop-up=1}\\
+Other Alexa terms and conditions found here: \url{https://www.amazon.co.uk/gp/help/customer/display.html/ref=hp_left_v4_sib?ie=UTF8&nodeId=201566380&pop-up=1}
+}.
 
 
 %Durchgestrichene bzw. lokalisierte/umbennante TODOs

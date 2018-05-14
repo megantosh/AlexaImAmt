@@ -1,5 +1,5 @@
-\BOOKMARK [0][-]{chapter*.6}{List of Figures}{}% 1
-\BOOKMARK [0][-]{chapter*.7}{List of Tables}{}% 2
+\BOOKMARK [0][-]{chapter*.5}{List of Figures}{}% 1
+\BOOKMARK [0][-]{chapter*.6}{List of Tables}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
 \BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.2}{The Analyzed Scenario}{chapter.1}% 5
@@ -35,35 +35,39 @@
 \BOOKMARK [1][-]{section.6.4}{Alexa in the Eye of the Beholder}{chapter.6}% 35
 \BOOKMARK [1][-]{section.6.5}{Summary}{chapter.6}% 36
 \BOOKMARK [0][-]{chapter.7}{Skill Design}{}% 37
-\BOOKMARK [1][-]{section.7.1}{Frameworks and Data Structures}{chapter.7}% 38
-\BOOKMARK [1][-]{section.7.2}{Challenges}{chapter.7}% 39
-\BOOKMARK [1][-]{section.7.3}{Design Guidelines and Documentations}{chapter.7}% 40
-\BOOKMARK [0][-]{chapter.8}{Design Best Practices}{}% 41
-\BOOKMARK [1][-]{section.8.1}{For Voice Assistants in the Use Case of Alexa}{chapter.8}% 42
-\BOOKMARK [1][-]{section.8.2}{For GUI Chatbots}{chapter.8}% 43
-\BOOKMARK [0][-]{chapter.9}{Skill Implementation}{}% 44
-\BOOKMARK [1][-]{section.9.1}{Setup}{chapter.9}% 45
-\BOOKMARK [1][-]{section.9.2}{Code Analysis}{chapter.9}% 46
-\BOOKMARK [1][-]{section.9.3}{Features}{chapter.9}% 47
-\BOOKMARK [1][-]{section.9.4}{Testing}{chapter.9}% 48
-\BOOKMARK [1][-]{section.9.5}{Deployment}{chapter.9}% 49
-\BOOKMARK [1][-]{section.9.6}{Approval and Publishing}{chapter.9}% 50
-\BOOKMARK [1][-]{section.9.7}{Debugging / Troubleshooting}{chapter.9}% 51
-\BOOKMARK [1][-]{section.9.8}{Documentation Updates}{chapter.9}% 52
-\BOOKMARK [0][-]{chapter.10}{Evaluation}{}% 53
-\BOOKMARK [1][-]{section.10.1}{Comparison with Existing Systems}{chapter.10}% 54
-\BOOKMARK [1][-]{section.10.2}{Alexa in General}{chapter.10}% 55
-\BOOKMARK [1][-]{section.10.3}{Metrics}{chapter.10}% 56
-\BOOKMARK [1][-]{section.10.4}{Results}{chapter.10}% 57
-\BOOKMARK [1][-]{section.10.5}{Discussions}{chapter.10}% 58
-\BOOKMARK [0][-]{chapter.11}{Conclusion and Future Work}{}% 59
-\BOOKMARK [1][-]{section.11.1}{Overview}{chapter.11}% 60
-\BOOKMARK [1][-]{section.11.2}{Conclusion}{chapter.11}% 61
-\BOOKMARK [1][-]{section.11.3}{Future Work}{chapter.11}% 62
-\BOOKMARK [0][-]{section.11.3}{Bibliography}{}% 63
-\BOOKMARK [0][-]{chapter*.142}{Appendices}{}% 64
-\BOOKMARK [1][-]{chapter*.143}{Product Branding Etymology}{chapter*.142}% 65
-\BOOKMARK [1][-]{section*.144}{Lex vs. Alexa Skills}{chapter*.142}% 66
-\BOOKMARK [1][-]{section*.149}{JSON Query code structure}{chapter*.142}% 67
-\BOOKMARK [1][-]{figure.caption.151}{Abbreviations}{chapter*.142}% 68
-\BOOKMARK [1][-]{section*.152}{Glossary}{chapter*.142}% 69
+\BOOKMARK [1][-]{section.7.1}{Design Choices}{chapter.7}% 38
+\BOOKMARK [1][-]{section.7.2}{Frameworks and Data Structures}{chapter.7}% 39
+\BOOKMARK [1][-]{section.7.3}{Challenges}{chapter.7}% 40
+\BOOKMARK [1][-]{section.7.4}{Design Guidelines and Documentations}{chapter.7}% 41
+\BOOKMARK [0][-]{chapter.8}{Design Best Practices}{}% 42
+\BOOKMARK [1][-]{section.8.1}{For Voice Assistants in the Use Case of Alexa}{chapter.8}% 43
+\BOOKMARK [1][-]{section.8.2}{For GUI Chatbots}{chapter.8}% 44
+\BOOKMARK [0][-]{chapter.9}{Skill Implementation}{}% 45
+\BOOKMARK [1][-]{section.9.1}{Setup}{chapter.9}% 46
+\BOOKMARK [1][-]{section.9.2}{Code Analysis}{chapter.9}% 47
+\BOOKMARK [1][-]{section.9.3}{Features}{chapter.9}% 48
+\BOOKMARK [1][-]{section.9.4}{Testing}{chapter.9}% 49
+\BOOKMARK [1][-]{section.9.5}{Deployment}{chapter.9}% 50
+\BOOKMARK [1][-]{section.9.6}{Approval and Publishing}{chapter.9}% 51
+\BOOKMARK [1][-]{section.9.7}{Debugging / Troubleshooting}{chapter.9}% 52
+\BOOKMARK [1][-]{section.9.8}{troubleshooting}{chapter.9}% 53
+\BOOKMARK [1][-]{section.9.9}{Documentation Updates}{chapter.9}% 54
+\BOOKMARK [0][-]{chapter.10}{Evaluation}{}% 55
+\BOOKMARK [1][-]{section.10.1}{Compliance}{chapter.10}% 56
+\BOOKMARK [1][-]{section.10.2}{Comparison with Existing Systems}{chapter.10}% 57
+\BOOKMARK [1][-]{section.10.3}{Alexa in General}{chapter.10}% 58
+\BOOKMARK [1][-]{section.10.4}{Metrics}{chapter.10}% 59
+\BOOKMARK [1][-]{section.10.5}{Results}{chapter.10}% 60
+\BOOKMARK [1][-]{section.10.6}{Discussions}{chapter.10}% 61
+\BOOKMARK [0][-]{chapter.11}{Conclusion and Future Work}{}% 62
+\BOOKMARK [1][-]{section.11.1}{Overview}{chapter.11}% 63
+\BOOKMARK [1][-]{section.11.2}{Conclusion}{chapter.11}% 64
+\BOOKMARK [1][-]{section.11.3}{Future Work}{chapter.11}% 65
+\BOOKMARK [0][-]{section.11.3}{Bibliography}{}% 66
+\BOOKMARK [0][-]{chapter*.148}{Appendices}{}% 67
+\BOOKMARK [0][-]{chapter.12}{Appendix}{}% 68
+\BOOKMARK [1][-]{section*.149}{Product Branding Etymology}{chapter.12}% 69
+\BOOKMARK [1][-]{section*.150}{Lex vs. Alexa Skills}{chapter.12}% 70
+\BOOKMARK [1][-]{section*.155}{JSON Query code structure}{chapter.12}% 71
+\BOOKMARK [1][-]{figure.caption.157}{Abbreviations}{chapter.12}% 72
+\BOOKMARK [1][-]{section*.158}{Glossary}{chapter.12}% 73
