@@ -173,7 +173,7 @@ the API endpoint was originally created for the Virtual Citizen Assistant, likel
 ...as a web app and appears to be built from information offered on the Berlin.de websites. The information is organised in 6 cores, each containing information related to different content the chatbot can provide. These are listed below. More information about each core's content is discussed in Section \ref{frameworks_structs}.
 
 
-using state of the art standards in TF/IDF for seach queries
+using state of the art standards in TF/IDF for seach queries - fields
 
 -Vorgehensweise: XML/JSON //- index über Lucene //- SolR Knoten...based on sth like when i say  ``am 10. august'  it gets me masalan events..aha august ist ein monat, monat relates to calendar, calendar relates to events
 
@@ -184,7 +184,7 @@ using state of the art standards in TF/IDF for seach queries
 \subsection*{Alternatives}
 
 
-\subsubsection{Using Java}
+\subsubsection*{Using Java}
 Setup in Java using Maven \footnote{\url{https://github.com/alexa/alexa-skills-kit-sdk-for-java/wiki/Setting-Up-The-ASK-SDK}}
 
 \begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{java}
@@ -333,8 +333,12 @@ cote d'ivoir, südsee (british territories overseas, ...)
 %}
 
 
-Throughout the model building process, we come across various nuances and details that might look subtle from a programming point of view. However, they very much can enrich or completely spoil the user experience, resulting in the users not returning to use our Skill (or chatbot / voice assistant in general) again and consequently result in 1-Star reviews technically killing the product.
+Throughout the model building process, we come across various nuances and details that might look subtle from a programming point of view. %However, they very much 
+These can enrich or % completely spoil
+heavily obstruct the user experience, resulting in the users not returning to use our Skill (or chatbot / voice assistant in general) % again 
+and consequently result in 1-Star reviews technically killing the product.
 
+In this chapter we survey best practices to maintain when building a chatbot or a voice assistant. In some cases it is necessary to separate the former from the latter to obtain better results.
 
 
 \section{For Voice Assistants in the Use Case of Alexa}
@@ -346,7 +350,12 @@ Throughout the model building process, we come across various nuances and detail
 
 %\inote{intro sentence: we talk about best practices for alexa then for chatbots allgemein (ergänzung through possible answers etc.)}
 
-It's important to understand and acknowledge that we are at the beginnings of VUI design, but are making very fast progress. The design process is full of swings and roundabouts, so we sometimes have to set our expectations a bit low sometimes, not expect fully optimised perfomance and many side effects sometimes.
+It's important to understand and acknowledge that we are at a turning point %beginnings of 
+in VUI design.%, but are making very 
+with the fast progress made, the design process is still %full of swings and roundabouts, 
+not streamlined. %so we sometimes have to 
+This might sometimes require setting our expectations a bit low, as side effects can occur since% there is still no such thing as a 
+performance of an AI today is hardly optimised to understand context like a human would. %perfomance and many  sometimes.
   
 Based on our own exploration and through a growing voice design guide offered to Alexa developers \footnote{\url{https://alexa.design/guide} \\ \href{https://developer.amazon.com/designing-for-voice/what-alexa-says/}{\lstinline|https://developer.amazon.com/designing-for-voice/what-alexa-says|}\\
 	\href{https://developer.amazon.com/designing-for-voice/design-process/}{\lstinline|https://developer.amazon.com/designing-for-voice//design-process/|}\\
@@ -389,7 +398,7 @@ When we are prompting for values, they are in a canonical order for how words sh
 	\overbrace{every \ Saturday}^\text{time}
 	\]
 
-Many other examples are not actual rules, but more de facto	in the language, so we would use them because of our linguistic logic justifies it as a sound pattern, which eventually make us speak a language. There are many rules regarding shapes and abstract concepts. When we build an conversation script (interaction model) programmatically, it is possible that one would get lost in the order of words in a sentence or even in the order of sentences. Since this can result for instance in sentences that are too close to each other in different intents, this would confuse the system and should be avoided to keep intent groups apart.
+Many other examples are not actual rules, but more de facto	in the language, so we would use them because of our linguistic logic justifies it as a sound pattern, which eventually make us speak a language. There are many rules regarding shapes and abstract concepts. When we build an conversation script (interaction model) programmatically, it is possible that one would mix up in the order of words in a sentence or even in the order of sentences. Since this can result for instance in sentences that are too close to each other in different intents, this would confuse the system and should be avoided to keep intent groups apart.
 
 Since this changes in every language, it is important not to take one language model and just fit it into another language, since there is much more that goes into that. For instance, it would not be very common to take a `en-US' language model and fit it into a French one, where the temperature scales or other units are made for another locale.
 
@@ -419,7 +428,7 @@ Alexa provides many tools for handling context, such as session attributes. This
 %\begin{quotation}
 \begin{flushright}
 \begin{tikzpicture}
-\calloutquote[author=Alexa,width=9.1cm,position={(0.5,0.2)},fill=gray!50,rounded corners]{
+\calloutquote[author=Alexa,width=9.1cm,position={(0.7,0.2)},fill=gray!50,rounded corners]{
 \textit{	``Okay, you need \{ingredient1\}, \{ingredient2\}, ...''}
 }
 \end{tikzpicture}
@@ -641,6 +650,9 @@ return inputArray[randomUtterance];
 
 
 
+In short, repetition can make a VUI sound dull or interesting and the choice of what to confirm vs. what to infer is best validated with A-B tests to different user groups.
+
+
 
 
 \subsection*{The Opposite of GUI}
@@ -780,10 +792,10 @@ While Alexa's presence in Germany is fairly recent giving a freer choice of name
 
 \subsection*{Designing for Natural Conversation}
 %blind spots in our head we lose sight of
-By having other users test the Skill conversation throughout the development process, many unnecessary scenarios can be circumvented and new ones unveil. The way we speak are blueprints of our verbal biases, as the way we use certain vocabulary is related to where we live, our own ideology or character, and who were interact with. We are used to only our own language or way conversation. As flexible as this can be, learning from others' missed intents can be helpful at all times. For instance, if we design a Skill to say a first name, someone might make the Skill say `Günther' or `Jacks' while someone else could make it say `Mama' or `Daddy', which are not in the predefined slot list \mintinline{java}{AMAZON_DE.FirstName} (we discuss lists thoroughly in Chapter \ref{maintwo}). Checking when and how a Skill fails is of great value to enhancing it.
+By having other users test the Skill conversation throughout the development process, many unnecessary scenarios can be circumvented and new ones unveil. The way we speak are blueprints of our verbal biases, as the way we use certain vocabulary is related to where we live, our own ideology or character, and who were interact with. We are used to only our own language or way conversation. As flexible as this can be, learning from others' missed intents can be helpful at all times. For instance, if we design a Skill to say a first name, someone might make the Skill say `Günther' or `Jacks' while someone else could make it say `Mama' or `Daddy', which are not in the predefined slot list \mintinline{java}{AMAZON_DE.FirstName} (we discuss lists thoroughly in Chapter \ref{maintwo}). Checking when and how a Skill fails is of great value to enhancing it.\\
 
 
-
+The aforementioned practices are even more powerful once combined. Before accepting or rejecting the trajectory of a guideline's results, we assess its relevance to our actual design.
 
 
 
@@ -791,6 +803,9 @@ By having other users test the Skill conversation throughout the development pro
 
 
 \section{For GUI Chatbots}
+
+
+
 
 
 While chatbots are not the primary focus of this work, here are a few notable considerations in addition to the ones above that go for Alexa Skills and any chatbot (as long as they do not contradict with the GUI paradigm).
@@ -801,9 +816,19 @@ While chatbots are not the primary focus of this work, here are a few notable co
 %}
 
 
-\subsection*{Keeping it Simple}
 
-A Skill or a chatbot that uses 1000 intents or does too many things is more likely to break. If we can break down the tasks into more modular intents / actions, we avoid this risk. Same goes for utterances. In our Skill this could mean we can make one Skill that only books appointments at public authorities and another that only provides information on the services. While it is possible to make a lot of these, it is most of the time better practice to make use of dialogue management and entity resolution and reduces false negatives.
+\hspace*{-\parindent}%
+\begin{minipage}[H]{\linewidth}
+
+%\begin{figure}[H]
+\begin{wrapfigure}{r}{6.5cm}
+	\caption[K-means Clusters Example] {K-means Clusters of Utterances, based on Deschamps \cite{botbestbractis}}
+	\label{clusters}
+	\centering
+	\includegraphics[width=6.5cm]{k-means-clustering-on-spherical-data-1v2} 
+\end{wrapfigure}
+%\end{figure}
+
 
 
 
@@ -812,12 +837,12 @@ Filling intents with expressions is equivalent to building a sentence classifier
 
 The key is making the utterances form non-overlapping clusters by maximising inter-cluster distance and avoid shapes like the overlapping between cluster 1 and 4
 
-\begin{figure}[H]
-	\caption[K-means Clusters Example] {K-means Clusters of Utterances, based on Deschamps \cite{botbestbractis}}
-	\label{clusters}
-	\centering
-	\includegraphics[width=8cm]{k-means-clustering-on-spherical-data-1v2} 
-\end{figure}
+\end{minipage}
+
+
+\subsection*{Keeping it Simple}
+
+A Skill or a chatbot that uses 1000 intents or does too many things is more likely to break. If we can break down the tasks into more modular intents / actions, we avoid this risk. Same goes for utterances. In our Skill this could mean we can make one Skill that only books appointments at public authorities and another that only provides information on the services. While it is possible to make a lot of these, it is most of the time better practice to make use of dialogue management and entity resolution and reduces false negatives.
 
 
 \subsection*{Allowing Surprises}
@@ -832,4 +857,4 @@ An effective way of giving the user an idea about a possible next step is to pro
 \\
 
 
-In Summary, chatbots and voice assistants are a specific type of computer programmes, which are worth developing guidelines for and following certain design patterns to obtain adequate results.
+In Summary, chatbots and voice assistants are a specific type of computer programmes, which are worth developing guidelines for and following certain design patterns to obtain adequate results. Guidelines differ in a case-by-case scenario based on implementation. Hence, it is important to consider these and include them in the design process.

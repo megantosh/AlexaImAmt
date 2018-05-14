@@ -233,7 +233,8 @@ We then choose a set of exemplary public services use cases with different level
 services should be handled using knowledge from an existing database operating the current \textsc{Virtual Citizen Assistant} discussed in Section \ref{blnusecase}.
 Difficulty is expressed as the required knowledge by the Skill to perform a user's request. This includes for instance the system's abilities to understand the district location intended by the user through only a postal code input.
 
-Further, we test the Skill using unit tests \sn{not required but nice to have} for the code and usability tests for the interaction model especially with the ability to identify and deal with different inputs from various users].
+Further, we test the Skill using some unit tests %\sn{not required but nice to have} 
+for the code, runtime scenarios and usability tests (mainly in the form of A-B Tests) for the interaction model especially with the ability to identify and deal with different inputs from various users].
 In the implementation, we already have the advantage of being part of Alexa's system to entertain the user with
 many small-talk abilities 
 %since we build on top of Alexa's 
@@ -248,12 +249,15 @@ In summary, these goals were defined for the system:
 	
 	\item We want to deliver differently relevant parts of information based on the service requested (e.g. cost, processing time).
 	
-	\item We want to communicate with an API endpoint that builds on the service catalogue of Berlin.de's \textsc{Virtual Citizen Assistant}.
+	\item We want to communicate with an API endpoint that builds on the service catalogue of Berlin.de's %\textsc{
+		Virtual Citizen Assistant
+%	}
+.
 	
 	\item We want to produce a scalable, modular system that can be extended in the future.
 \end{itemize}
 
-Further requirements are discussed in Chapter~\ref{mainone}.
+Further technical requirements are discussed in Chapter~\ref{mainone}.
 
 
 
@@ -297,18 +301,27 @@ show related work
 and introduce comparative examples
 through e-Government solutions in
 Vienna, Austria and Georgia, USA.
-We compare them to the current chatbot application \textsc{Virtual Citizen Assistant} available on \href{https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}{service.berlin.de} \footnote{\url{https://service.berlin.de/virtueller-assistent/}}, which we build our work on with the same underlying technology using Apache Solr.
+We compare them to the current chatbot application (the \textsc{Virtual Citizen Assistant}) available on \href{https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}{service.berlin.de} \footnote{\url{https://service.berlin.de/virtueller-assistent/}}, which we build our work on with the same underlying technology using Apache Solr as we discuss in Chapter \ref{blnusecase}.
 
 %we first introduce in Section 
 %
 
 Going beyond a theoretical analysis of the voice user interface paradigm in 
-\inote{Chapter} \ref{vui}
+%\inote{
+	Chapter 
+%} 
+\ref{vui}
 %then
 We shed light within the State of The Art context in 
-\inote{Chapter} \ref{stateofzart} 
-on the available platforms in Section \ref{choiceOfPlatform} and explain why we choose Amazon, going over the idea behind Alexa's Skills
-and explain the structure of Amazon and Amazon Web Services Ecosystem to operate Alexa in \inote{Chapter} \ref{amznecosys}
+%\inote{
+Chapter 
+%} 
+\ref{stateofzart} 
+on the available platforms in Section \ref{devmodels} and explain in the subsequent Section \ref{choiceOfPlatform} why we choose Amazon, going over the idea behind Alexa's Skills
+and explain the structure of Amazon and Amazon Web Services Ecosystem to operate Alexa in %\inote{
+Chapter 
+%} 
+\ref{amznecosys}
 
 %
 % then discuss related work as currently available. 
@@ -326,7 +339,11 @@ and explain the structure of Amazon and Amazon Web Services Ecosystem to operate
 In Chapter~\ref{mainone} we introduce our design of the Skill and discuss how it 
 %can overcome a few struggles with respect to 
 addresses
-redundant boilerplate code, small-talk abilities and briefly highlight some limitations of the system. We also present the frameworks and Application Programming Interfaces (APIs) we use in our own implementation, the prerequisites and artefacts provided initially through a breakdown into several cases simulating top common uses on Berlin's city portal \inote{mention section when it's written}.
+redundant boilerplate code, small-talk abilities and briefly highlight some limitations of the system. We also present the frameworks 
+%\inote{
+	and Application Programming Interfaces (APIs)
+%}
+ we use in our own implementation, the prerequisites and artefacts provided initially through a breakdown into several cases simulating top common uses on Berlin's City Portal. %\inote{mention section when it's written}.
 
 
 %its counterparts \inote{like , , but also limitations}. 
@@ -334,7 +351,9 @@ Chapter ~\ref{maintwo}
 %represents a detailed analysis of 
 explains our implementation solution. We elaborate in particular on how we deal with individual public services in the interaction model from front-end and back-end perspective, how we connect the web services together and analytically document the code structure, endpoints in addition to the deployment process.
 
-The related implementation code is available on \href{https://www.github.com/megantosh/AlexaImAmt}{GitHub} \footnote{\url{https://www.github.com/megantosh/AlexaImAmt} \todo{make sure this is final URL and is public before printing}} with a digital copy attached to this work. 
+The related implementation code is available on \href{https://www.github.com/megantosh/AlexaImAmt}{GitHub} \footnote{\url{https://www.github.com/megantosh/AlexaImAmt} 
+%	\todo{make sure this is final URL and is public before printing
+} with a digital copy attached to this work. 
 
 Chapter~\ref{evaluation} evaluates our implementation with respect to our target in the defined %\inote{4-5} 
 use cases. We base our evaluation models on a survey we conduct that helps us specify requirement details, as well as automated tests provided by the framewor we use in addition to usability, performance and unit tests. 

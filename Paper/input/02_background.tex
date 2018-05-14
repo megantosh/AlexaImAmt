@@ -246,9 +246,12 @@ As there are very few international regulations, it remains up to each federatio
 
 \begin{figure}[H]
 	\centering
+
+%\begin{wrapfigure}{r}{0.69\textwidth}
 	\caption[Policy-Making strategies]{In a common government Scenario, increasing demand and degreasing budget push against each other and require flexible resource allocation solution. With all these factors considered, a cloud-first approach can combine all elements in the policy-making decision. Based on Bockelman in \cite{aws:pubsecsum}}
 	\label{aws:policymaking}
 	\includegraphics[width=10cm]{Govcharts/ukhilo} 
+%\end{wrapfigure}
 \end{figure}
 
 When it comes to governments' operations in the cloud, we see different degrees of aversion to anticipating this relatively new concept. As cloud infrastructures can be quintessential in scalable operations, governments can be among number one users of cloud microservices, especially with demand variability in peak times that are not always easy to predict (Figure \ref{aws:policymaking}). Among the many benefits of cloud services, scalability is arguably the most convincing. By that we mean the ability of an operator to allocate resources or terminate them as needed to avoid extra costs and infrastructure maintenance.
@@ -632,23 +635,23 @@ We compare the Skill to the information on \url{www.georgia.gov} and realise tha
 
 %todo
 %wrapfigure}[10]{r}...
-\begin{wrapfigure}{r}{0.35\textwidth}
-	\begin{center}
-		%		\caption{Dynamic Content Warning}
-		%		\label{wienbot:webbot}
-		\includegraphics[width=0.5\textwidth]{DynCont}
-	\end{center}
-\end{wrapfigure}
+%\begin{wrapfigure}{r}{0.35\textwidth}
+%	\begin{center}
+%		%		\caption{Dynamic Content Warning}
+%		%		\label{wienbot:webbot}
+%		\includegraphics[width=0.5\textwidth]{DynCont}
+%	\end{center}
+%\end{wrapfigure}
 
 
-As mentioned on the Amazon website, the content data is dynamically generated. After familiarising ourselves with Alexa, we understand this means that the Skill is connected to an API not hosted through Amazon, giving the maker of the Skill the ability to change the information delivered through the Skill without Amazon's permission (more on permissions in Section \ref{devmodels} and \ref{approval}). The conversation flows dynamically, with Alexa engaging the user by asking them questions or listing options to which they need to answer with a `yes' or `no' to hear information on public service topics that to our knowledge listed on the popular topics section of the website \footnote{\url{https://georgia.gov/popular-topics}}. A view on the sitemap \footnote{\url{https://georgia.gov/sitemap}} shows that there are no other topics than the popular ones at least on the root level.
+As mentioned on the Amazon website, the content data is dynamically generated. After familiarising ourselves with Alexa, we understand this means that the Skill is connected to an API not hosted through Amazon, giving the maker of the Skill the ability to change the information delivered through the Skill without Amazon's permission (more on permissions in Sections \ref{devmodels} and \ref{approval}). The conversation flows dynamically, with Alexa engaging the user by asking them questions or listing options to which they need to answer with a `yes' or `no' to hear information on public service topics that to our knowledge listed on the popular topics section of the website \footnote{\url{https://georgia.gov/popular-topics}}. A view on the sitemap \footnote{\url{https://georgia.gov/sitemap}} shows that there are no other topics than the popular ones at least on the root level.
 
 
 
 
 %\begin{figure}[h!]
 
-\begin{wrapfigure}{r}{0.57\textwidth}
+\begin{wrapfigure}{r}{0.69\textwidth}
 	\begin{center}	
 	\caption[Georgia.gov Popular Topics]{Georgia.gov Popular Topics - Based on \href{https://georgia.gov/popular-topics}{georgia.gov/popular-topics}}
 	\label{georgiaList}
@@ -682,15 +685,18 @@ Each of the available topics is associated with one or many departments and rela
 %###################################################################################
 %###################### Use Case in detail  ########################################
 %###################################################################################
-\clearpage
-\section{Berlin as a Use Case}
+%\clearpage
+\chapter{Berlin as a Use Case}
 \label{blnusecase}
 As Schwarzer et al. state, few systems are available that ``enable Berlin’s citizens to get informed about governmental services'' \cite{lomm:gov}.
-As part of the modernisation process, the \textsc{Virtual Citizen Assistant (Virtueller Bürgerassistent)} was born in %\inote{developed by?} 
+As part of the modernisation process, the \textsc{Virtual Citizen Assistant - \emph{Virtueller Bürgerassistent}} was born in %\inote{developed by?} 
 the Information Retrieval and Machine Learning Competence Centre of the Technical University of Berlin's Distributed Artificial Intelligence Laboratory.
 
-\subsection*{D115}
-The German Ministry of Interior which operates the national hotline for citizen services D115\footnote{\url{http://www.115.de}} argues in its whitepaper on the service\cite{d115} that even with the widespread of internet use in the country, a telephone hotline is a valuable service. 70 \% of the D115 users use the internet according to a survey by the entity (2013). One of the main advantages of the service is that it offloads the lookup of information from the customers to its employees and guarantees that the customer will get the right answer concerning questions related to public services. Depending on the service, appointment bookings can be arranged (sometimes exculsively) through the hotline. Effectively, this means relying more on manual labour, which has a twofold impact for an administrative entity in the government. On one hand, D115 opens jobs in the labour market for public service employees as call centre representatives, strategists, editorial boards throughout Germany inter alia. For a government entity this speaks positively in terms of reducing unemployment rates. On the other hand, with a budget coming from taxpayers, there is a need to choose how to allocate this budget dynamically in a fashion that does not come to the disadvantage of societal segments.
+This chapter explores the running software of the Virtual Citizen Assistant in detail to analyse which artefacts can be reused. It also explains the context of the software from legal and operational perspective.
+
+\section{D115}
+\label{d115}
+The German Ministry of Interior which operates the national hotline for citizen services D115\footnote{\url{http://www.115.de}} argues in its whitepaper on the service\cite{d115} that even with the widespread of internet use in the country, a telephone hotline is a valuable service. 70 \% of the D115 users use the internet according to a survey by the entity (2013). One of the main advantages of the service is that it offloads the lookup of information from the customers to its employees and guarantees that the customer will get the right answer concerning questions related to public services. Depending on the service, appointment bookings can be arranged (sometimes exclusively) through the hotline. Effectively, this means relying more on manual labour, which has a twofold impact for an administrative entity in the government. On one hand, D115 opens jobs in the labour market for public service employees as call centre representatives, strategists, editorial boards throughout Germany inter alia. For a government entity this speaks positively in terms of reducing unemployment rates. On the other hand, with a budget coming from taxpayers, there is a need to choose how to allocate this budget dynamically in a fashion that does not come to the disadvantage of societal segments.
 
 Despite the heated worldwide debatable about technological advancement eradicating job opportunities, if we advocate to offer services compatible to serving users needs, the necessity to diversify the service catalogue remains prevalent. Including online services as a possible alternative, at least to include minority groups with hearing or visual disabilities is inarguably an important step towards a higher Online Service Index and EGDI respecitvely.
 
@@ -729,19 +735,53 @@ we then touch in Chapter \ref{mainone} on how we attain the same goals.
 
 
 
+\section{LeiKa}
+\label{leikaSec}
+
+In the German public administration system, most public services are carried out through each of the 16 States with very few services offered on a national level. As each State has a different bureaucratic structure, considered as the E-Government base for Germany, LeiKa \footnote{\url{https://de.wikipedia.org/wiki/LeiKa}} is a service catalogue and a way to standardise how different public organs of each State fit into the same legal framework for federal regulations. For instance, it is a requirement for each resident in Germany to register their current (permanent) address at a local authority. Registration differs based on the resident's legal status, e.g. due to a move of house within Germany, within the same State or a move from abroad. For a person who moves from abroad, further regulations apply based on their right to residence and the duration of the stay in Germany (short-term, long-term, permanent). These laws apply to nationals and foreigners (where another differentiation occurs between EU/EEA citizens and nationals of other countries). In that sense, there are different laws that may or may not apply for the same action (a registration of an address), e.g. Section 17 of The Federal Act of Registration \footnote{\url{https://www.gesetze-im-internet.de/englisch_bmg/index.html}} - \textit{Bundesmeldegesetz, BMG} in conjunction with Section 22 of The Asylum Act\footnote{\url{https://www.gesetze-im-internet.de/englisch_asylvfg/index.html}} - \textit{Asylgesetz, AsylG}. How this is carried out is left to each state to determine. In many states a foreigner can register themselves at the aliens office. In Berlin, foreigners are required to register only at a Bürgeramt. In order to make sure that the legal framework is covered through the services in every state, ensuring that the law is applied through an appropriate channel, LeiKa serves as a catalogue to keep track of how and through which organs the law is enforced.
+
+
+
+
+Similar to an IBAN without a checksum, LeiKa's key structure is divided into the following identifiers put together (Key System 2.0, Figure \ref{LeiKaKey}):
+\begin{wrapfigure}{l}{0.4\textwidth}
+	\caption[Leika Key System]{Leika Key System 2.0, based on \footnotemark, \footnotesize \copyright \href{https://de.wikipedia.org/wiki/Leika}{CC, Wikipedia}}
+	\label{LeiKaKey}
+	\includegraphics[width=5.9cm]{350px-LeiKa}
+\end{wrapfigure}
+\footnotetext{\url{http://www.gk-leika.de/}}
+
+\begin{flushleft}
+- Instance \quad \quad \quad \quad \quad \quad \space \space  - \textit{Instanz}\\
+- Service Object \quad \quad \quad  \space \space \space \space - \textit{Leistungsobjekt}\\
+- Service Grouping \quad \quad \space \space \space - \textit{Leistungsgruppierung}\\
+- Service Identifier (ID)   \space \space \space \space- \textit{Leistungskennung}\\
+%- Performance Object- \textit{Verrichtung}\\
+- Performing Entity \quad \quad \space \space - \textit{Verrichtung}\\
+- Performing Entity ID \quad \space - \textit{Verrichtungskennung}\\
+- Performing Entity Detail  - \textit{Verrichtungsdetail}\\
+\end{flushleft}
+
+Leika Keys are part of the data provided to the Virtual Citizen Assistant's back end and help us carry out an implementation not only for Berlin through its universal identification system using serial numbering.
+
+
+\section{Understanding The Virtual Citizen Assistant}
+
+
+
 
 \begin{figure}[H]
 	\centering
 	\caption[Startup Interface of the Virtual Citizen Assistant]{Screenshots of Startup Interface of the Virtual Citizen Assistant showing the initial interaction in a web browser.}
 	\label{vca:start}
-	\includegraphics[width=0.85\textwidth]{livebot2}
+	\includegraphics[width=0.95\textwidth]{livebot2}
 \end{figure}
 
-\subsection*{The Virtual Citizen Assistant and LeiKa}
 
-The Virtual Citizen Assistant starts with a greeting and an input field as seen in Figure \ref{vca:start}. Based on the question text entered by the user, a query goes to the Solr back-end and the responses from there are processed to deliver available options, which the user can choose from.
-Once a question is answered, the chatbot continues to ask if the user is interested in knowing more about topics related to the service, such as cost or processing time.
-The chatbot is a rich implementation with many features, e.g. the ability to decipher locations based from input postal codes (Postleizahl, PLZ) among many others. We use the features we extract as an orientation on how our voice assistant should be implemented and what inputs and outputs it needs to support. As we anticipate a voice-first approach, we also demonstrate how these should or should not be adapted in Section \ref{designalexa:bestprac}.
+The Virtual Citizen Assistant on Berlin.de starts with a greeting and an input field as seen in Figure \ref{vca:start}. Based on the question text entered by the user, a query goes to the Solr back-end and the responses from there are processed to deliver available options, which the user can choose from.
+Once a question is answered, the chatbot continues to ask if the user is interested in knowing more about sub-topics related to the service, such as cost or processing time.
+The chatbot is a rich implementation with many features, e.g. the ability to decipher locations based from input postal codes (Postleizahl, PLZ) and auto-correct among many others. We use such %extracted
+features as an orientation on how our voice assistant should be implemented and what inputs and outputs it needs to support. As we anticipate a voice-first approach, we also demonstrate how these should or should not be adapted in Section \ref{designalexa:bestprac}. As such, the logic behind an auto-correct feature for instance has to be re-engineered since spoken word is different than written text.\\
 
 %
 %~3andena fel voice el mawdou3 mokhtalef. ne7awel nakhod men dol bas fi 7agat we need to reimplement or rethink abl ma nakhodha blindly
@@ -749,14 +789,31 @@ The chatbot is a rich implementation with many features, e.g. the ability to dec
 
 
 
+\begin{wrapfigure}{l}{0.6\textwidth}
+	\caption[Virtual Service Assistant Modules]{Virtual Service Assistant - based on \footnotemark }
+	\label{vca:modules}
+	\includegraphics[width=8.32cm]{overview-serverAndContainers}
+\end{wrapfigure}
+
+
 %Having gained access to the source code of the chatbot and With the ability to deploy an instance of it locally
-By deploying an instance of the chatbot locally, we understand that it is built using Java for the Solr server implementation and Groovy, a Java-syntax-compatible OOP language, to operate a web app on top of Solr to handle user inputs and display answers formatted inside a web browser (e.g. links for navigation in the conversation and standard text). We also understand that the implementation is designed to include other services than the Berlin scenario. At the time of this research, another chatbot was in the making for the City of Hamburg. Both chatbots were able to connect with a third service that can serve in other domains if the user has questions beyond the scope of public services. A nutrition bot was taken as an example.
-In the service domain related to Berlin, we compile a few files relevant to our use-case, all of which are in JSON format. Java and Groovy code were not considered since we anticipate a different platform. Since JSON is an industry standard, we look for possibilities to parse this information into a system that can read them in and be structured to understand the file format. 
+By deploying an instance of the chatbot locally, we understand that it is built using Java for the Solr server implementation and Groovy, a Java-syntax-compatible OOP language, to operate a web app on top of Solr as an API to handle user inputs and display answers formatted inside a web browser (e.g. links for navigation in the conversation and standard text). We also understand that the implementation is designed to include States other than Berlin. At the time of this research, another chatbot was in the making for the City-State \footnote{\url{https://en.wikipedia.org/wiki/City-state}} of Hamburg (parallel to continuing development on Berlin Virtual Citizen Assistant). Both chatbots were able to connect with another partition of the web app that can serve in other domains if the user has questions beyond the scope of public services. A nutrition bot is as an example. Domains other than Berlin are not relevant to our work and are excluded from our scope of analysis.
+
+
+
+
+\footnotetext{some graphic elements adopted from Oracle Java Tutorials - \\ \url{https://docs.oracle.com/javaee/5/tutorial/doc/bnabo.html}}
+
+\section{Building a Voice Service on The Virtual Citizen Assistant}
+
+
+In the Berlin domain, we narrow down our compiled choice of files for reuse. At this initial stage we cannot depend on reusing code unless we can tailor our platform, yet to be chosen at this stage, to do so. This turned out to be partially applicable as our choice of platform in Section \ref{choiceOfPlatform} shows that we can mostly make the best use of data-containing files relevant to our use-case rather than scripts of application or business logic. Such data files exist in JSON format for the Virtual Citizen Assistant. Data is meant here as %files that contain mostly 
+content our voice assistant can operate with, ranging from names, URIs to addresses. Complex data types beyond integers and strings needed to be redefined for the new system to understand them. 
+Java and Groovy code were not considered at this stage since we anticipate a different programming language as per Section \ref{choiceOfPlatform}. Since JSON is an industry standard, we look for possibilities to parse this information into a system that can read them in and be structured to understand the file format. 
 %For their flexible 
 %structure relevant to our work.
 
-Starting with \mintinline{bash}{./ssds-data-berlin/json/dienstleistungen/} \mintinline{bash}{dienstleistung.json} (the file has been restructured since this version), we analyse the content of the nodes (Figure \ref{LeiKaJSON1}):
-
+Starting with \mintinline{bash}{./ssds-data-berlin/json/dienstleistungen/} \mintinline{bash}{dienstleistung.json} (the file has been reconstructed since this version to be included as a part of the Solr index, i.e. a core), we analyse the content of a few fields (as JSON objects / nodes) in Figures \ref{LeiKaJSON1} and \ref{LeiKaJSON2} to draft Tables \ref{dienstleistung:summary2}, \ref{dienstleistung:summary1} and \ref{dienstleistung:descr}. We introduce the remaining Solr index fields below.
 
 
 
@@ -778,206 +835,285 @@ Starting with \mintinline{bash}{./ssds-data-berlin/json/dienstleistungen/} \mint
 %							  \qroof{\textit{to use}}.CP ]]]]]]]
 
 \begin{figure}[H]
-	\caption[File Structure of \lstinline|Dienstleistungen.json|]{Primary Nodes of \mintinline{java}{Dienstleistungen.json} including metadata about each service, e.g. processing time and cost.}
+	\caption[File Structure of  \lstinline|Dienstleistungen.json|]{Primary Nodes of \mintinline{bash}{Dienstleistungen.json} including metadata about each service, e.g. processing time and cost.}
 	\label{LeiKaJSON1}
 	\includegraphics[width=0.9\textwidth]{DLprim}
 \end{figure}
 
-\begin{figure}[t]
-	\caption{Secondary Nodes of \mintinline{java}{Dienstleistungen.json} show relevant follow-up nodes to the primary service nodes}
+\begin{figure}[H]
+	\caption[Secondary Nodes of \mintinline{bash}{Dienstleistungen.json} ]{Secondary Nodes of \mintinline{bash}{Dienstleistungen.json} show relevant follow-up nodes to the primary node \mintinline{bash}{locations}}
 	\label{LeiKaJSON2}
 	\includegraphics[width=\textwidth]{DLsec}
 \end{figure}
 
-There are other files related to the districts locations (\mintinline{bash}{./ssds-data-berlin/json/districts.json}, the authorities' offices and their opening hours (\mintinline{bash}{./ssds-data-berlin/json/behoerden/behoerden.json} which will help us indirectly in our implementation later on. The web app revolves around the following algorithm: once a public service has been caught from the user's input, the chatbot shows the description of the service, followed by a series of questions beginning with a yes/no one to determine if the user is interested in knowing more about the cost of the service, followed by another to pompt if the chatbot should show information of other metadata of the service, e.g. processing time or which authorities are responsible to offering the service. The user navigates by clicking on the links provided inside the chatbot conversation. 
-The yes/no questions are translated as \textbf{intents}, which the users either wants to pursue or ignore.
 
-For a yes answer, the chatbot selects child nodes of a node it is currently pointing to, e.g. a service node and checks if it can show their content if these are not empty. If the user chooses not to pursue the intent, the chatbot skips to the next element (or node) in the loaded list from a JSON file as described above. With the modular structure of the nodes, the chatbot is allowed to traverse each service node and metadata nodes to display the proper information as seen in Figure \ref{chatbotnodes}.
 
-\begin{wrapfigure}{r}{0.5\textwidth}
-	\caption[simplified demonstration of nodes traversal]{simplified demonstration of how nodes are traversed in Virtual Citizen Assistant}
-	\label{chatbotnodes}
-	\includegraphics[width=7cm]{chatbotnodes}
-\end{wrapfigure}
 
-The content of these nodes is provided through the federal IT Service Centre Berlin (IT Dienstleistungszentrum) and is part of the %Federal Catalogue of Public Services (
-LeiKa%) 
-\footnote{\url{https://de.wikipedia.org/wiki/LeiKa}}. In a similar implementation for the Facebook chatbot Berlina (currently in Beta), Hassmann and Müller \cite{hassmannMlr:berlina} explore a similar implementation and conclude with the use of JSONs being a flexible foundation for development.
 
-From Back end side, the files mentioned above reporesent cores in a Solr index. The latest version of the underlying Solr server (May 2018) comprises the following cores:
 
-\begin{itemize}
-	\item \mintinline{bash}{d115}: An index core designed to query the latest public services available on Berlin.de. \\ Example services: ``Personalausweis beantragen - issuing a passport'', ``Blindenhilfe - monetary relief for the blind''.\\  This core initally included 616 nodes at the beginning of this research and now varies between 670 and 680 services depending on the original LeiKa. We will use this core later on as our primary API.
+
+\begin{flushleft}
+
+
+From back end side, the files mentioned above reporesent cores in a Solr index. The latest version of the underlying Solr server (May 2018) comprises the following cores:
+
+%\begin{itemize}
+%	\item 
+	\subsection*{\mintinline{bash}{d115}}
+%	 :
+	 An index core designed to query the latest public services available on Berlin.de. \\ Example services: ``\textit{Personalausweis beantragen} - issuing a passport'', ``\textit{Blindenhilfe} - monetary relief for the blind''.\\  This core initally included 616 nodes at the beginning of this research and now varies between 670 and 680 services depending on the original LeiKa. We will use this core later on as our primary API.
 	
-	\item \mintinline{bash}{d115Extern}: An index core designed to include external Hyperlinks outside the service.berlin.de subdomain.\\
-	Examples: ``Gentechnik - gene technology'' refers to 
+%	\item 
+\subsection*{\mintinline{bash}{d115Extern}}
+%	: 
+	An index core designed to include external Hyperlinks outside the service.berlin.de subdomain.\\
+	Examples: ``\textit{Gentechnik} - gene technology'' routes to 
 	\url{https://www.berlin.de/lageso/gesundheit/gesundheitsschutz/gentechnik/}
 	
-	\item \mintinline{bash}{d115Locations}: An index core designed to query locations of authority offices offering a public service (from the \lstinline|d115| core)``Kfz-Zulassungsbehörde-Lichtenberg"''
+%	\item 
+	\subsection*{\mintinline{bash}{d115Locations}}
+%	: 
+	An index core designed to query locations of authorities' offices offering a public service and their opening hours\\ %(from the \lstinline|d115| core)
+	e.g. ``Kfz-Zulassungsbehörde-Lichtenberg"''
+	the authorities' offices and their opening hours.\\
+	Based on (\mintinline{bash}{./ssds-data-berlin/json/behoerden/behoerden.json} which will help us indirectly in our implementation later on. 
 	
-	\item \mintinline{bash}{d115Spelling}: An index core designed to make the chatbot able to determine spelling mistakes in names of entities (e.g. offices, services) and automatically correct these in the conversation flow
 	
-	\item \mintinline{bash}{d115Topics}: An index core designed to query the database for topics. Each topic collects a set of services that are of the same interest group. For instance, a topic ``Ausländerangelegenheiten'' comprises all sorts of visa and residence permit types. Another topic on ``Auto und Verkehr'' includes services like parking options, paying fines and issuing a driver's licence.
+%	\item 
+	\subsection*{\mintinline{bash}{d115Spelling}}
+%	: 
+	An index core designed to make the chatbot able to determine spelling mistakes in names of entities (e.g. offices, services) and automatically correct these in the conversation flow
+	
+%	\item 
+	\subsection*{\mintinline{bash}{d115Topics}}
+%	: 
+	An index core designed to query the database for topics. Each topic collects a set of services that are of the same interest group. For instance, a topic ``Ausländerangelegenheiten'' comprises all sorts of visa and residence permit types. Another topic on ``Auto und Verkehr'' includes services like parking options, paying fines and issuing a driver's licence.
 	%trelated .
 	
-	\item \mintinline{bash}{smalltalk}: An index core designed to make the chatbot more interactive by including simple questions and answers to them not related to Berlin.de's service catalogue
-
+%	\item 
+	\subsection*{\mintinline{bash}{smalltalk}}
+%	: 
+	An index core designed to make the chatbot more interactive by including simple questions and answers to them not related to Berlin.de's service catalogue
 	
 	
-\end{itemize}
+	
+%\end{itemize}
 
-Noteworthy is that in the German public administration system, most public services are carried out through each of the 16 States with very few services offered on a national level. LeiKa is a way to standardise how public service organs of each State fit into the same legal framework for federal regulations. For instance, it is a requirement for each resident in Germany to register themselves at a local authority. How this is carried out is left to each state to determine. In many states a foreigner can register themselves at the aliens office. In Berlin, foreigners are required to register only at a Bürgeramt. In order to make sure that the legal framework is covered through the services in every state, LeiKa serves as a catalogue to keep track of how and through which organs the law is enforced.
+
+\end{flushleft}
 
 
-We cover here an excerpt of the node elements we will later use %more or less in the same structure of the JSON file containing the interaction model:\\
+
+
+Tables \ref{dienstleistung:summary2} and \ref{dienstleistung:summary1} represent the Solr index cores available on \mintinline{bash}{/home/ssds/ssds-solr/data/cores/} and show the fields (child nodes) of each core on Solr, as it is important to have the structure of these files for our implementation.%, the next table contains all %a compact form of each core.
+We refer to our Solr instance from now on as the API, since it is built and operates independently from the Groovy web app and only delivers the results to it. Hence, it offers an opportunity to be shared by another programme, rendering it into a standalone API endpoint that can be hosted on its own server as will be discussed in Chapter \ref{maintwo}.
+
+In Table \ref{dienstleistung:descr} we cover an excerpt of most node elements we will later use %more or less in the same structure of the JSON file containing the interaction model:\\
 in a similar structure for our own front- and back-end. 
-As it is important to have the structure of these files for our implementation, the next table contains a compact form of each core.
+
+After understanding the links between the API and the sitemap of the Berlin City Portal, we draw a few connections summarised in Table \ref{BerlinSiteMap} to understand how we can proceed with the API and eventually modify or expand it with additional parsers such as Apache Nutch or other runtime parsers (e.g. to find the next appointment, since this is not provided by the API) to suit our voice service solution.
 
 
 
 
-%
-%\todo{-\textbf{Theorie}\\
-%	-summarize LeiKA infobroschuere(BMI08324screenBarrierefrei.pdf)\\
-%	-Welche Daten gibt es?\\	  
-%	-Was sind die Erwartungen?\\ 	
-%}
 
 
-\todo{
-%	\textbf{current berlin.de bot - What to include?}\\
-%	- dienstleistungen.json structure %(finding the info through hierarchical nodes)\\
-%	- interpreting the nodes as intents, Solr cores\\
-%	- traversing the nodes (one level up then to next node)\\
-	- no session/no persistence\\
-%	- explain how the json nodes map to intents and cores in solr etc
+
+\begin{table}[H]
+	\caption[Structure of API]{Structure of API - Solr cores 1-5, version (\textit{ver.}) and relevance (rel.) to our implementation. \textbf{Boldfaced entries} are explained in Table \ref{dienstleistung:descr}}
+	\label{dienstleistung:summary2}
+	\begin{tabu} to \textwidth{|X[3]|X|X[10]|}
+		\hline
+		Core Name, \textit{Ver.,} rel. & No. Entries & Fields for each entry (by Order of Child Nodes)\\ \hline \hline
+		
 	
-	%x	x	x
-	%ooo ooo ooo
-	%try first, go to second (kosten, zeit, rechtsgrundlage, ..) skip one if it has already been suggested.. hinweis..that is built into the xml
-	%
-	%the live service is different than the one at DAI
-	
-%	- webapp using groovy\\
-%	- what to mention about AllInclusive?
-%	- whatever it is, it should go here or before it can go in implementation section.\\
-%	- structure of Hitlist on berlin.de  is provided by ITDZ \\
-%	- explain LeiKa old and new JSON as an intro to API\\
-}
-
-
-
-
-
-
-
-%\todo {change this into a table and add a tree list like the interaction model in appendix\\
-
-
-
-
-
-
-\begin{table}[htbp]
-	\caption[Structure of Solr Cores]{Structure of Solr cores 1-2}
-	\label{dienstleistung:summary1}
-	\begin{tabu} to \textwidth{|X[2]|X|X[7]|}
-%		& & \\ \hline 
-		Core Name & No. Entries & Child Nodes for each entry\\ \hline \hline
-		\lstinline|d115| & 671 & 
-			\begin{tabu} to 5cm {ll}
-						\lstinline|id|  & \lstinline|d115Url|\\ \lstinline|d115Name| &
-						\lstinline|ssdsAll| \\ 
-						\lstinline|d115Description| & \lstinline|d115Synonym| \\ \lstinline|d115Position| &  \lstinline|d115InfoLaw|\\ \lstinline|d115Prerequisites| &  \lstinline|d115Requirements|\\  
-						\lstinline|d115Forms| &  \lstinline|d115Fees|\\ \lstinline|d115ProcessTime| &  \lstinline|d115AppointmentLink| \\ \lstinline|d115ServiceLocations| &  \lstinline|d115ServiceLocationsJson|\\ \lstinline|d115ServiceResponsibility| &  \lstinline|d115ServiceResponsibilityAll| \\  \lstinline|d115OnlineProcessingLink| &  \lstinline|leikaId|\\ \lstinline|leikaName| &  \lstinline|leikaGruppe| \\  \lstinline|leikaKennung| &  \lstinline|leikaVerrichtung| \\ \lstinline|leikaVerrichtungDetail| &  \lstinline|leikaSynonym| \\  \lstinline|ssdsName| &  \lstinline|ssdsLemma| \\ \lstinline|ssdsLongName| & \lstinline|ssdsGruppe| \\ \lstinline|ssdsGruppeDict| &  \lstinline|ssdsKennung| \\  \lstinline|ssdsKennungDict|& \lstinline|ssdsSynonym| \\  \lstinline|ssdsSynonymDict| &  \lstinline|_version_|\\
-
-
-			\end{tabu} \\ \hline
+		
+		%can be moved as a cell to next page 0 will then produce one complete page. do not add any extra line lest the page number gets overwritten
+		
+				\lstinline|d115| \footnotesize{\textit{426,} \quad \quad \quad very relevant} & 672 & 
+		\begin{tabu} to 5cm {ll}
+			\textbf{\lstinline|id|}  & \textbf{\lstinline|d115Url|} \\ \textbf{\lstinline|d115Name|} &
+			\lstinline|ssdsAll| \\ 
+			\textbf{\lstinline|d115Description|} & \lstinline|d115Synonym| \\ \lstinline|d115Position| &  \textbf{\lstinline|d115InfoLaw|}\\ \textbf{\lstinline|d115Prerequisites|} &  \textbf{\lstinline|d115Requirements|}\\  
+			\lstinline|d115Forms| & \textbf{ \lstinline|d115Fees|}\\ \textbf{\lstinline|d115ProcessTime|} &  \lstinline|d115AppointmentLink| \\ \lstinline|d115ServiceLocations| &  \lstinline|d115ServiceLocationsJson|\\ \lstinline|d115ServiceResponsibility| &  \lstinline|d115ServiceResponsibilityAll| \\  \lstinline|d115OnlineProcessingLink| &  \textbf{\lstinline|leikaId|}\\ \lstinline|leikaName| &  \lstinline|leikaGruppe| \\  \lstinline|leikaKennung| &  \lstinline|leikaVerrichtung| \\ \lstinline|leikaVerrichtungDetail| &  \lstinline|leikaSynonym| \\  \lstinline|ssdsName| &  \lstinline|ssdsLemma| \\ \lstinline|ssdsLongName| & \lstinline|ssdsGruppe| \\ \lstinline|ssdsGruppeDict| &  \lstinline|ssdsKennung| \\  \lstinline|ssdsKennungDict|& \lstinline|ssdsSynonym| \\  \lstinline|ssdsSynonymDict| &  \lstinline|_version_|\\
+			
+			
+		\end{tabu} \\ \hline
 		
 		
 		
-
 		
-		\lstinline|d115Locations| & 560 & 
-
-	\begin{tabu} to 5cm {ll}
-	\lstinline|id|  & \lstinline|d115Url|\\ \lstinline|d115Name| &
-	\lstinline|d115LongName| \\ 
-	\lstinline|d115Type| & \lstinline|d115SuperType| \\ \lstinline|d115District| &  \lstinline|d115SuperDistrict|\\ \lstinline|d115AddressHouseNumber| &  \lstinline|d115AddressCity|\\  
-	\lstinline|d115AddressStreet| &  \lstinline|d115AddressPostalCode|\\ \lstinline|d115AddressGeo| &  \lstinline|d115AddressNote| \\ \lstinline|d115AddressUrgentEndDate| &  \lstinline|d115TransitTram|\\ \lstinline|d115AccessibilityElevator| &  \lstinline|d115AccessibilityAccess| \\  \lstinline|d115AccessibilityParking| &  \lstinline|d115AccessibilityWc|\\ \lstinline|d115ContactEmail| &  \lstinline|d115ContactFax| \\  \lstinline|d115ContactPhone| &  \lstinline|d115ContactWebInfo| \\ \lstinline|d115ContactCompetence| &  \lstinline|d115ContactSignedMail| \\  \lstinline|d115ContactSignedMailLink| &  \lstinline|d115Payment| \\ \lstinline|d115PaymentCode| & \lstinline|d115AppointmentNote| \\ \lstinline|d115OpeningTimesMonday| &  \lstinline|d115OpeningTimesTuesday| \\  \lstinline|d115OpeningTimesWednesday|& \lstinline|d115OpeningTimesThursday| \\  \lstinline|d115OpeningTimesFriday| &  \lstinline|d115OpeningTimesSpecial|\\
-	\lstinline|d115LocationServices| &  \lstinline|d115LocationServicesJson| \\ \lstinline|_version_|& \\
-	
-	
-	\end{tabu}
+		
+		
+		
+		
+		\lstinline|d115Extern| \footnotesize{\textit{396,} semi-relevant} & 1488 & 
+		\begin{tabu} to 5cm {lll}
+			\lstinline|id| &  \lstinline|d115Topic| & \lstinline|d115Name| \\  
+			\lstinline|d115Link| & \lstinline|d115Keywords| & \lstinline|_version_|\\ 
+		\end{tabu}
 		\\ \hline
 		
-
+		
+		\lstinline|d115Spelling| \footnotesize{\textit{678}, semi-relevant}  & 1233 & 
+		\begin{tabu} to 5cm {ll}
+			\lstinline|id| &  \lstinline|complex object| \footnotesize{(irrelevant)} \\ 
+			\lstinline|_root_|  & \lstinline|_version_|\\ 
+		\end{tabu}
+		\\ \hline
+		
+		
+		\lstinline|d115Topics|  \footnotesize{\textit{426,} semi-relevant} & 167 & 
+		\begin{tabu} to 5cm {lll}
+			\lstinline|id| &  \lstinline|d115Name|  & \lstinline|d115Path|  \\ 
+			\lstinline|d115Keywords| &
+			\lstinline|d115Links|  & \lstinline|_version_|\\ 
+		\end{tabu}
+		\\ \hline
+		
+		\lstinline|smalltalk|  \footnotesize{\textit{396,} semi-relevant} & 1366 & 
+		\begin{tabu} to 5cm {lll}
+			\lstinline|id| &  \lstinline|smalltalkAnswers|   &
+			\lstinline|smalltalkQuestion| \\
+			\lstinline|_root_|  & \lstinline|_version_|\\ 
+		\end{tabu}
+		\\ \hline
+		
+		
+		
+		
 	\end{tabu}
 \end{table}
 
-		Tables \ref{dienstleistung:summary1} and \ref{dienstleistung:summary2} are available on \mintinline{bash}{/home/ssds/ssds-solr/data/cores/}
-
-\begin{table}[htbp]
-	\caption[Structure of Solr Cores (cont'd)]{Structure of Solr cores 3-6 (cont'd)}
-	\label{dienstleistung:summary2}
-	\begin{tabu} to \textwidth{|X[2]|X|X[7]|}
 
 
 
-\lstinline|d115Extern| & 1488 & 
-\begin{tabu} to 5cm {lll}
-	\lstinline|id| &  \lstinline|d115Topic| & \lstinline|d115Name| \\  \lstinline|d115Link| & \lstinline|d115Keywords| & \lstinline|_version_|\\ 
-\end{tabu}
-\\ \hline
-
-
-\lstinline|d115Extern| & 1232 & 
-\begin{tabu} to 5cm {lll}
-	\lstinline|id| &  \lstinline|d115Topic| & \lstinline|d115Name| \\  \lstinline|d115Link| & \lstinline|d115Keywords| & \lstinline|_version_|\\ 
-\end{tabu}
-\\ \hline
 
 
 
-\end{tabu}
+
+
+\begin{table}[H]
+	\caption[Structure of API (cont'd)]{Structure of API (cont'd) - Solr cores no. 6 (last),  version (\textit{ver.}) and relevance (rel.) to our implementation. }
+	\label{dienstleistung:summary1}
+	\begin{tabu} to \textwidth{|X[3]|X|X[10]|}
+		%		& & \\ 
+		\hline 
+		Core Name, \textit{Ver.,} rel. & No. Entries & Fields for each entry (by Order of Child Nodes)\\ \hline \hline
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		\lstinline|d115Locations| \footnotesize{\textit{426,} relevant} & 560 & 
+		
+		\begin{tabu} to 5cm {ll}
+			\lstinline|id|  & \lstinline|d115Url|\\ \lstinline|d115Name| &
+			\lstinline|d115LongName| \\ 
+			\lstinline|d115Type| & \lstinline|d115SuperType| \\ \lstinline|d115District| &  \lstinline|d115SuperDistrict|\\ \lstinline|d115AddressHouseNumber| &  \lstinline|d115AddressCity|\\  
+			\lstinline|d115AddressStreet| &  \lstinline|d115AddressPostalCode|\\ \lstinline|d115AddressGeo| &  \lstinline|d115AddressNote| \\ \lstinline|d115AddressUrgentEndDate| &  \lstinline|d115TransitTram|\\ \lstinline|d115AccessibilityElevator| &  \lstinline|d115AccessibilityAccess| \\  \lstinline|d115AccessibilityParking| &  \lstinline|d115AccessibilityWc|\\ \lstinline|d115ContactEmail| &  \lstinline|d115ContactFax| \\  \lstinline|d115ContactPhone| &  \lstinline|d115ContactWebInfo| \\ \lstinline|d115ContactCompetence| &  \lstinline|d115ContactSignedMail| \\  \lstinline|d115ContactSignedMailLink| &  \lstinline|d115Payment| \\ \lstinline|d115PaymentCode| & \lstinline|d115AppointmentNote| \\ \lstinline|d115OpeningTimesMonday| &  \lstinline|d115OpeningTimesTuesday| \\  \lstinline|d115OpeningTimesWednesday|& \lstinline|d115OpeningTimesThursday| \\  \lstinline|d115OpeningTimesFriday| &  \lstinline|d115OpeningTimesSpecial|\\
+			\lstinline|d115LocationServices| &  \lstinline|d115LocationServicesJson| \\ \lstinline|_version_|& \\
+			
+			
+		\end{tabu}
+		\\ \hline
+		
+		
+	\end{tabu}
 \end{table}
 
 
 
 
 
-\begin{table}[htbp]
-	\caption[Relevant Nodes in API Query Results]{Relevant Nodes in Solr API Query Results \mintinline{java}{Dienstleistungen.json} in D115 Core }
+
+\begin{table}[H]
+	\caption[URL structure of Berlin.de]{Structure of Berlin City Portal URLs. We use these to collect additional information beyond the API's content (i.e. Solr fields).  \\ Base URL:  \url{https://service.berlin.de/}}
+	\label{BerlinSiteMap}
+	\begin{tabu} to \textwidth{X[5]|X[3]  X[8]}
+%		\hline
+		Web Page displays & URL Path & Suffix \\ \hline \hline
+		
+		a public service & dienstleistung/ & \lstinline|id| \\ \hline
+	
+
+		an %municipality / 
+		authority homepage & behoerden/ & variable, \quad \space \space no base URL, external link\\	\hline
+		
+		
+			
+		a service location & standort/ & \lstinline|d115ServiceLocation|\\ %\hline
+		
+		
+%	\hline	
+	\end{tabu}
+\end{table}
+
+
+
+
+%htbp
+\begin{table}[H]
+	\caption[Relevant Nodes in API Query Results]{Relevant nodes in Solr API query results in core \mintinline{bash}{d115}, based on \mintinline{bash}{Dienstleistungen.json} usable in our implementation - at the example of a public service called: ``Fiktionsbescheinigung''}
 	\label{dienstleistung:descr}
-	\begin{tabu} to \textwidth{|X|X|X[2]|}
-		key\textless type \textgreater & ex. Value & description\\ \hline \hline
+	
+	\begin{tabu} to \textwidth{X[3]|X[11]}
+%		\hline
+		Key\textless Type \textgreater  & \footnotesize{\textit{ \textcolor{red}{[Omitted Text]} \textsf{in} Example Value }} | Description | \textbf{Remarks on Syntax}  \\ \hline \hline
 		
-		\lstinline|id|  \lstinline|<int>| & 326233 & public service ID % on \href{https://service.berlin.de}{service.berlin.de} 
-		\\
+		\shortstack[l]{\textcolor{white}{text}\\\lstinline|id| \\ \lstinline|<int>| }& \shortstack[l]{\textcolor{white}{text}\\ \footnotesize{\textit{326233}} \\ public service ID % on \href{https://service.berlin.de}{service.berlin.de} 
+	}\\
+		\hline
 		
-		\lstinline|d115URL| %URL 
-		\lstinline|<string>| & \shortstack[l]{https://service.berlin\\.de/dienstleistung/\\326233/}
-		& link to public service URL % on  \href{https://service.berlin.de}{service.berlin.de} 
-		\\
+		\shortstack[l]{\textcolor{white}{text}\\\lstinline|d115URL|  \\%URL 
+		\lstinline|<string>| } & \shortstack[l]{\textcolor{white}{text}\\ \footnotesize{\textit{https://service.berlin.de/dienstleistung/326233/}}\\
+		 link to public service URL % on  \href{https://service.berlin.de}{service.berlin.de} 
+		 \\ \textbf{URL structure includes \mintinline{bash}{id} - See Table \ref{BerlinSiteMap} }
+	}\\
 		
-		\lstinline|d115Name| \lstinline|<string>|  &  Fiktions-bescheinigung % Fiktionsbescheinigung 
-		& public service name as listed on Berlin.de %\href{https://service.berlin.de}{service.berlin.de/dienstleistungen} 
-		\\		
+		\hline
+		\shortstack[l]{\textcolor{white}{text}\\ \lstinline|d115Name|\\ \lstinline|<string>| }  & \shortstack[l]{\textcolor{white}{text}\\ \footnotesize{\textit{Fiktionsbescheinigung}} % Fiktionsbescheinigung 
+		\\ public service name as listed on Berlin.de %\href{https://service.berlin.de}{service.berlin.de/dienstleistungen} 
+	}\\		
+		\hline
 		
-		\lstinline|ssdsAll <string>| & ... & \shortstack[l]{additional captive search terms,\\ synonyms used by Virtueller \\ Bürgerassistent. Found to be \\ helpful in conversations \\ with the chatbot} \\		
+%		\shortstack[l]{\textcolor{white}{text}\\ \lstinline|ssdsAll| \\ \lstinline|<string>| } 
+%		& \shortstack[l]{\textcolor{white}{text}\\ 
+%			\footnotesize{\textit{``Fiktionsbescheinigung'',
+%			``Eine [...] ausgestellt, wenn [...] weil \textless br /\textgreater \backslash n \texless br / \textgreater \backslash n \textless ul class= \backslash ``list\backslash ''\textgreater \textless li\textgreater Unterlagen [...]'',}} 
+%		\\
+%			\footnotesize{\textit{[...], "Visum",	"Fiktionsbescheinigung", "\S 81 \textcolor{red}{[...]} ::: false ::: http://[...]",[...]
+%		}
+%	}
+%		\\ additional captive search terms, synonyms used by \\ Virtueller  Bürgerassistent. Found to be helpful in conversations \\ with the chatbot
+%	} \\		
 		
-		\shortstack[l]{\lstinline|d115Description| \\ \lstinline|<string>|}  &... & \shortstack[l]{Introductory paragraph from \\the service web page \\ 
-		Includes HTML tags}
-		\\ %like <\backslash br> and <ul ...> \\		
-		
-		\inote{uncomment} & \inote{more as} & \inote{needed in next draft}  \\
+		\shortstack[l]{\textcolor{white}{text} \\ \\\lstinline|d115Description| \\ \lstinline|<string>| } & \shortstack[l]{ \textcolor{white}{text} \\
+			\footnotesize{\textit{``Eine Fiktionsbescheinigung wird ausgestellt, wenn über einen \textcolor{red}{[...]}''}}\\
+			 Introductory paragraph about the service web page \\ 
+			\textbf{incl. HTML tags}
+	}\\ %like <\backslash br> and <ul ...> \\		
+		\hline
+%		\inote{uncomment}  \inote{more as} & \inote{needed in next draft}  \\
 		
 		%		
 		%		\mintinline{json}{d115Synonym} & \mintinline{json}{string} & ... & captive search terms, synonyms created by Virtueller Bürgerassistent \\		
 		%		
 		%		\mintinline{json}{d115Position} & \mintinline{json}{string} & ... & captive search terms, synonyms used by Virtueller Bürgerassistent \\		
 		%		
-		%		\mintinline{json}{d115InfoLaw} & \mintinline{json}{string} & ... & Legal base for offering this public service \\		
+			\shortstack[l]{  \textcolor{white}{text} \\ \lstinline|d115InfoLaw| \\ \lstinline|<string>|} & \shortstack[l]{
+					\textcolor{white}{text} \\
+					\footnotesize{\textit{\S 81 Aufenthaltsgesetz - AufenthG ::: false ::: http://www.gesetze-im-inter\textcolor{red}{[...]}
+					}} \\
+					 Legal base for offering this public service
+				} \\		
+			\hline
 		%		
 		%		\mintinline{json}{ssdsAll} & \mintinline{json}{string} & ... & captive search terms, synonyms used by Virtueller Bürgerassistent \\		
 		%		
@@ -1021,19 +1157,80 @@ As it is important to have the structure of these files for our implementation, 
 		%		\mintinline{java}{node} & \mintinline{java}{forms}  & \\
 		%		\mintinline{java}{node} & \mintinline{java}{authorities}  & \\
 		%		\mintinline{java}{node} & \mintinline{java}{meta}  & \\
+		
+		
+		
+		
+			\shortstack[l]{ \textcolor{white}{text}\\\lstinline|d115Prerequisites |%\\%\lstinline|<string>|
+			} & \shortstack[l]{
+			\textcolor{white}{text} \\
+			\footnotesize{\textit{``Persönliche Vorsprache ist erforderlich ::: false ::: '', \textcolor{red}{[...]}
+			}} \\
+			Conditions a citizen needs to fulfill in order to obtain the service\\
+			\textbf{incl. non-fluid text (unique patterns, parsed/encoded HTML)}
+		} \\
+	\hline
+	
+				\shortstack[l]{ \textcolor{white}{text}\\\lstinline|d115Requirements |%\\\lstinline|<string>|
+				} & \shortstack[l]{
+		\textcolor{white}{text} \\
+		\footnotesize{\textit{``Bisheriger Aufenthaltstitel ::: Soweit vorhanden, ist der \textcolor{red}{[...]} '', \textcolor{red}{[...]}
+		}} \\
+		Required document(-s) citizens need to present to obtain service\\
+			\textbf{incl. non-fluid text (unique patterns, parsed/encoded HTML)}
+	} \\
+		\hline
+		
+						\shortstack[l]{ \textcolor{white}{text}\\\lstinline|d115Fees |\\\lstinline|<string>|
+		} & \shortstack[l]{
+			\textcolor{white}{text} \\
+			\footnotesize{\textit{``Ab dem 01.09.2017:\textless br /\textgreater  \textcolor{red}{ [...]} ''
+			}} \\
+			Cost of the service\\
+			\textbf{incl. non-fluid text (unique patterns, parsed/encoded HTML)}\\
+			\textbf{variable free Text for same value, e.g. free services} \\
+				\textbf{cannot be explicitly read as primitive data type} \mintinline{text}{int/bool}
+		} \\		
+		\hline
+		
+		
+		
+		
+		\shortstack[l]{ \textcolor{white}{text}\\\lstinline|d115ProcessTime |\\\lstinline|<string>|
+		} & \shortstack[l]{
+			\textcolor{white}{text} \\
+			\footnotesize{\textit{``Die Fiktionsbescheinigung wird bei Vorsprache ausgestellt.''
+			}} \\
+			Time required to process the application for the service\\
+			\textbf{incl. non-fluid text (unique patterns, parsed/encoded HTML)}\\
+			\textbf{variable free Text for same value, e.g. immediate services} \\
+			\textbf{cannot be explicitly read as primitive data type} \mintinline{text}{int/bool}
+		} \\		
+		\hline
+		
+		
+		
+								\shortstack[l]{ \textcolor{white}{text}\\\lstinline|leikaId |\\\lstinline|<int>|
+		} & \shortstack[l]{
+			\textcolor{white}{text} \\
+			\footnotesize{\textit{99010008012000 
+			}} \\
+			LeiKa identifier as discussed in Section \ref{leikaSec}
+%			\\
+%			\textbf{incl. non-fluid text (unique patterns, parsed/encoded HTML)}\\
+%			\textbf{variable free Text for same value, e.g. free services} \\
+%			\textbf{cannot be explicitly read as Integer/Boolean}
+		} \\		
+
+		
+		
+%		\hline
 	\end{tabu}
 \end{table}
 
 
 
 
-\todo{
-	\textbf{API analysis}
-	- missing variables e.g. are required papers, \\
-	- flag: persönliche Vorsprache ja nein, ...\\
-	- started with 616 Intents %in \lstinline|data| node 
-	(now 685 or so), each containing \inote{Tableau}\\
-	- should I include the JSON samples from Appendix here? or just refer to them?}
 
 
 
@@ -1046,29 +1243,67 @@ As it is important to have the structure of these files for our implementation, 
 
 
 
-
-
-
-\todo{\textbf{summary and Ausblick}\\
-	- static system as the Dienstleistungen do not change regularly\\
-	-  as opposed to Versicherungsfirma z.B (ML tries to detect irregular patterns in case customer is lying).\\
-	- unfortunately forums vs. FAQs did not work. if I want assistance, I want the customer to tell me the model number - and forums have mostly Schrott!\\
-	- what the bot currently achieved is at least not give wrong answers, sometimes says idk but it doesn't confuse you.\\ %same attitude like in lmny shops 
-	- we talked about this in intro chapter. see if you want to mention again with a diff angle\\
-	-(nur unpassende antworten sind frustrierend!)\\
-}
+There are other elements not directly available in the Solr index as fields such as objects from \mintinline{bash}{./ssds-data-berlin/json/districts.json}, which displays each municipality - \textit{Bezirksamt} in relation to the districts - \textit{Ortsteile} and Postal codes - \textit{PLZ} it contains.  As these are helpful to our implementation structure, they make good candidates for a new object type (as discussed later in the interaction model, Chapter \ref{mainone}).  There are some naming ambiguities in the file structure that will need an implicit type inference. For instance, the type of location is only distinct through the name, e.g. `Lichtenberg' for the municipality and `Lichtenberg-sub' for the district.
+%related to the districts' locations (PLZ of an Ortsteil, 
 
 
 
 
 
-%\subsection*{D115 and The Currently Deployed ``Virtual Bürgerassistent''}
+
+\section{The Virtual Citzen Assistant at Runtime}
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+	\caption[simplified demonstration of nodes traversal]{simplified demonstration of how nodes are traversed in Virtual Citizen Assistant}
+	\label{chatbotnodes}
+	\includegraphics[width=7cm]{chatbotnodes}
+\end{wrapfigure}
+
+
+
+The web app revolves around the following algorithm: once a public service has been caught from the user's input, the chatbot shows the description of the service, followed by a series of questions beginning with a yes/no one to determine if the user is interested in knowing more about the cost of the service, followed by another to pompt if the chatbot should show information of other metadata of the service, e.g. processing time or which authorities are responsible to offering the service. The user navigates by clicking on the links provided inside the chatbot conversation. 
+The yes/no questions are translated as \textbf{intents}, which the users either wants to pursue or ignore.
+
+For a yes answer, the chatbot selects child nodes of a node it is currently pointing to, e.g. a service node and checks if it can show their content if these are not empty. If the user chooses not to pursue the intent, the chatbot skips to the next element (or node) in the loaded list from a JSON file as described above. With the modular structure of the nodes, the chatbot is allowed to traverse each service node and metadata nodes to display the proper information as seen in Figure \ref{chatbotnodes}.
+
+
+The content of these nodes is provided through the %Federal 
+IT Service Centre Berlin - \textit{IT Dienstleistungszentrum Berlin, ITDZ} and is part of  %Federal Catalogue of Public Services (
+LeiKa%)
+. In a similar implementation for the Facebook chatbot Berlina (currently in Beta), Hassmann and Müller \cite{hassmannMlr:berlina} explore a similar implementation and conclude with the use of JSONs being a flexible foundation for development.
+
+
+% moved leika up^^
+
+
+
+%
+%\todo{-\textbf{Theorie}\\
+%	-summarize LeiKA infobroschuere(BMI08324screenBarrierefrei.pdf)\\
+%	-Welche Daten gibt es?\\	  
+%	-Was sind die Erwartungen?\\ 	
+%}
+
+
 %\todo{
-%	- LeiKa
-
-%	-Use case im Detail\\
-%	- wie kann man die G\"ute des Systems beurteilen? \textbf{do not forget the surveyu made}\\   
-%	- Meist sollte man in diesem Kapitel die L\"osung schon im Auge haben, um die Erwartungen so zu formulieren, dass die L\"osung auch geeignet ist?\\ 
+%	\textbf{current berlin.de bot - What to include?}\\
+%	- dienstleistungen.json structure %(finding the info through hierarchical nodes)\\
+%	- interpreting the nodes as intents, Solr cores\\
+%	- traversing the nodes (one level up then to next node)\\
+%	- no session/no persistence\\
+%	- explain how the json nodes map to intents and cores in solr etc
+	
+	%x	x	x
+	%ooo ooo ooo
+	%try first, go to second (kosten, zeit, rechtsgrundlage, ..) skip one if it has already been suggested.. hinweis..that is built into the xml
+	%
+	%the live service is different than the one at DAI
+	
+%	- webapp using groovy\\
+%	- what to mention about AllInclusive?
+%	- whatever it is, it should go here or before it can go in implementation section.\\
+%	- structure of Hitlist on berlin.de  is provided by ITDZ \\
+%	- explain LeiKa old and new JSON as an intro to API\\
 %}
 
 
@@ -1077,11 +1312,76 @@ As it is important to have the structure of these files for our implementation, 
 
 
 
+%\todo {change this into a table and add a tree list like the interaction model in appendix\\
+
+
+
+
+%
+%
+%\todo{
+%	\textbf{API analysis}
+%	- missing variables e.g. are required papers, \\
+%	- flag: persönliche Vorsprache ja nein, ...\\
+%	- started with 616 Intents %in \lstinline|data| node 
+%	(now 685 or so), each containing \inote{Tableau}\\
+%	- should I include the JSON samples from Appendix here? or just refer to them?}
+%
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+%\todo{\textbf{summary and Ausblick}\\
+%	- static system as the Dienstleistungen do not change regularly\\
+%	-  as opposed to Versicherungsfirma z.B (ML tries to detect irregular patterns in case customer is lying).\\
+%	- 	- no session/no persistence\\
+%	- unfortunately forums vs. FAQs did not work. if I want assistance, I want the customer to tell me the model number - and forums have mostly Schrott!\\
+%	- what the bot currently achieved is at least not give wrong answers, sometimes says idk but it doesn't confuse you.\\ %same attitude like in lmny shops 
+%	- we talked about this in intro chapter. see if you want to mention again with a diff angle\\
+%	-(nur unpassende antworten sind frustrierend!)\\
+%}
+
+%\subsection*{D115 and The Currently Deployed ``Virtual Bürgerassistent''}
+%\todo{
+%	- LeiKa
+
+%	-Use case im Detail\\
+%	- wie kann man die G\"ute des Systems beurteilen? \textbf{do not forget the survey u made}\\   
+%	- Meist sollte man in diesem Kapitel die L\"osung schon im Auge haben, um die Erwartungen so zu formulieren, dass die L\"osung auch geeignet ist?\\ 
+%}
+
+
+\section{Summary}
+The Berlin use case is complex in the sense that there are many entangled entities and relationships between the hierarchy of the municipalities. Representing these in one hierarchical diagram is counter-productive due to the rich attributes to numerous special cases and the independence of each authority type of the other. LeiKa overcomes this challenged through a system of sectioned serial number for each office. Yet, understanding how each service operates remains a task to the developer to be able to gather an all-inclusive service strategy for a voice assistant. The modular structure of the Solr API is a helpful tool to send queries and get responses to the software solution we seek. A more in-depth look at the content shows potential adjustments required to adopt it to the solution we present.
+We discover that Berlin.de shows features of REST architecture such as unique identifiers for pages representing entities (locations, services) and pagination capabilities throughout the website (e.g. for appointment bookings).
+
+As such, operating a voice assistant as a new service could be delegated to D115 as an authority under the realm of the German Ministry of Interior with the help of the ITDZ, since both entities have the knowledge base and the content to power the service. As the content is subject to changes at any time, updates have to happen without the user having to update in order not to give customers obsolete information. This is part of D115's policy of assuring correct and helpful information is given. For any software solution we present, the guidelines summarized in Section \ref{d115} have to be adhered to. Accordingly, special attention has to be given about data collection. We show in our implementation (Chapter \ref{maintwo}) how we address this by not storing user sessions in any persistent form.
+We categorise our system as semi static, since only the content should be interchangeable through an independent API (Solr in our case). 
+
+As per D115's guidelines, we should be able to understand from special cases how to maintain a more well-rounded software that handles more specific cases, and not only give general information. As this requires more detail for requirements engineering (tender and performance specifications), we keep this implement for a future stage. This might involve uses of ML to detect patterns and irregularities
+
+Finally, with human interaction being a favourite option for customers, our software solution competes to present an alternative that is persuasive enough to lure customers to use it. For this, making it constantly available to the user with no waiting time on phone queues or in a public office gives a good starting point. And while the software does not have to understand everything the user says, it should be able to abstain from giving wrong answers at the least in order to yield objectively satisfied customers and no frustrations for receiving misleading or confusing information as discussed in Section \ref{pubsvc}.
+
+%could be held responsible for operating the 
+
+
+
+
+
+%Modularer aufbau... identical API
+%no sessions
+%
+%see appendix for all code
 
 
 
@@ -1127,8 +1427,8 @@ For a passenger at the airport or an employee between meetings,
 %as it would be for a  rushing to a meeting.
 it can be more effective to ask questions through conversation than transform them into a query then type them on a screen,
 %someone about the information you need quickly if you can ask it in a precise sentence quicker than you would write it, 
-or visually navigate on a web page / mobile application until we reach the information we want. In a 2016 Cisco Systems (formely MindMeld) survey \cite{mindmeldReport}, of 1800 users of voice assistants, 61\% see that the primary use of a voice assistant is when hands or vision is occupied.
-Today, this goes further beyond the simple use-cases to become an integral part of our fast-paced life, where we see companies like Ecobee getting around 40 percent of their sales through voice-based AI \cite{mit:Alexa} since their embrace about two years ago. The 10-year-old company's CEO elaborates that their customer “[...] have to fight traffic to get home, and then they have to feed the kids, diaper the baby, and who knows what else. [Ecobee] give them a hands-free way of getting something done while they’re in the midst of other tasks” \cite{mit:Alexa} .
+or visually navigate on a web page / mobile application until we reach the information we want. In a 2016 Cisco Systems (formerly MindMeld) survey \cite{mindmeldReport}, of 1800 users of voice assistants, 61\% see that the primary use of a voice assistant is when hands or vision is occupied.
+Today, this goes further beyond the simple use-cases to become an integral part of our fast-paced life, where we see companies like Ecobee getting around 40 percent of their sales through voice-based AI \cite{mit:Alexa} since their embrace about two years ago. The 10-year-old company's CEO elaborates that their customer “[...] have to fight traffic to get home, and then they have to feed the kids, diaper the baby, and who knows what else. [Ecobee] give them a hands-free way of getting something done while they're in the midst of other tasks” \cite{mit:Alexa} .
 
 
 Also, in terms of accessibility, blindness could sometimes make voice the only possible way to navigate or be aware of one's surroundings, e.g. a blind person crossing a street depends on the sounds coming from cars and traffic lights.
@@ -1153,11 +1453,11 @@ Therefore, it might not be most intuitive to apply the same concepts on VUI desi
 
 \section{Why Can't AI Understand Us}
 
-AI has made giants leaps in the last few years. Thanks to neural networks, bayesian approaches in classification, decision trees and many other theories, we are capable of performing rigorous analyses on datasets
+AI has made giants leaps in the last few years. Thanks to neural networks, Bayesian approaches in classification, decision trees and many other theories, we are capable of performing rigorous analyses on datasets
 Considering that speech is one of the most complex forms of data, there are still various challenges that do not have a single strategy to tackle.
 
 \begin{quotation}
-What makes voice-based AI so appealing to consumers is its promise to conform to us, to respond to the way we speak—and think—without requiring us to type on a keyboard or screen. That’s also what makes it so technically difficult to build. We aren’t at all orderly when we talk. Instead, we interrupt ourselves. We let thoughts dangle. We use words, nods, and grunts in odd ways, and we assume that we’re making sense even when we aren’t. \cite{mit:Alexa}
+What makes voice-based AI so appealing to consumers is its promise to conform to us, to respond to the way we speak—and think—without requiring us to type on a keyboard or screen. That's also what makes it so technically difficult to build. We aren't at all orderly when we talk. Instead, we interrupt ourselves. We let thoughts dangle. We use words, nods, and grunts in odd ways, and we assume that we're making sense even when we aren't. \cite{mit:Alexa}
 \end{quotation}
 
 When speech meets AI, there are a lot of language ambiguities to deal with and multiple contexts to understand. Since this is a field by its own and the amount of problems we can face with understanding natural language is unlimited, it is not the scope of this thesis. We only briefly survey a few categorical examples in the following:
@@ -1165,7 +1465,7 @@ When speech meets AI, there are a lot of language ambiguities to deal with and m
 	\item \textbf{Sytanx}: homonyms such as ``I \textit{present} you a \textit{present}.'' or ``The \textit{fly} wants to \textit{fly}''
 	%homophones, homograph
 	
-	\item \textbf{Sematics}: metaphors, sarcasm, puns such as ``it’s raining cats and dogs''
+	\item \textbf{Sematics}: metaphors, sarcasm, puns such as ``it's raining cats and dogs''
 	
 	\item \textbf{Underlying Sentiment}: such as ``oh yeah, sounds very exciting'' when it's not.
 	
@@ -1185,9 +1485,9 @@ When speech meets AI, there are a lot of language ambiguities to deal with and m
 %
 
 %\todo{
-%	- \textbf{Why can't robots understand us:} language ambiguities - the need to understand context\\ the facebook vid\\
-%--Syntactical: Homonyme\\ %fly, fly,  presently I’ll present you a present - now, give, gift
-%--Semantic:  Methaphors, %“it’s raining cats and dogs”
+%	- \textbf{Why can't robots understand us:} language ambiguities - the need to understand context\\ the Facebook vid\\
+%--Syntactical: Homonyme\\ %fly, fly,  presently I'll present you a present - now, give, gift
+%--Semantic:  Metaphors, %“it's raining cats and dogs”
 %sarcasm, %“oh yea, sounds very exciting”
 %and puns\\
 %--dialects: enunciations\\
@@ -1276,7 +1576,7 @@ We already unveiled in Section \ref{approachgoals} that Alexa will be the underl
 	As the wording a user picks to express his intent. For instance, to set the volume on a TV to quieter, we could say ``turn it down a nudge'', ``It's too loud'' or ``lower the volume''. Although all three sentences have the same meaning, linguistically, they are fully unrelated and only context makes us understand them, e.g. we have to know that ``it'' refers to the TV set in close proximity.
 	
 	\subsection*{Slot}~\label{slots}
-	As a variable fo a certain type we define in our programme that belongs to a category of items. For instance, when someone says they would like to order a \textit{large} coffee, they assume that there is the option to have a small coffee, too. And so large and small refer both to the size of the coffee. Programmatically, we define \mintinline{java}{large} and \mintinline{java}{small} to be of type \mintinline{java}{size} of the coffee. Similarly, if there is the option to order a tea and a Cappuccino, it would be only fair to define \mintinline{java}{cappuccino} and \mintinline{java}{tea} to be of type \mintinline{java}{beverage}. Consequently, \textbf{slots} can be defined to any part of the sentence, where a parameter (here beverage or size) can be grouped into \textbf{slot types}. 
+	As a variable of a certain type we define in our programme that belongs to a category of items. For instance, when someone says they would like to order a \textit{large} coffee, they assume that there is the option to have a small coffee, too. And so large and small refer both to the size of the coffee. Programmatically, we define \mintinline{java}{large} and \mintinline{java}{small} to be of type \mintinline{java}{size} of the coffee. Similarly, if there is the option to order a tea and a Cappuccino, it would be only fair to define \mintinline{java}{cappuccino} and \mintinline{java}{tea} to be of type \mintinline{java}{beverage}. Consequently, \textbf{slots} can be defined to any part of the sentence, where a parameter (here beverage or size) can be grouped into \textbf{slot types}. 
 
 %\end{itemize}
 
@@ -1317,33 +1617,112 @@ We already unveiled in Section \ref{approachgoals} that Alexa will be the underl
 	
 	
 	\subsection*{Synonym}~\label{synonym:def}
-	As a word that has the same meaning of another word that fills a slot. For instance, if we assume that a user says ``I want a \textbf{cup of jolt}'' they system should still be able to understand that they want a standard coffee. If, however, the user defines the type of coffee beans they want, such as `java' or `arabica', the system should still be able to differentiate between these and not consider them both as the plain `standard coffee', fulfilling a different intent. 
+	As a word that has the same meaning of another word that fills a slot. For instance, if we assume that a user says ``I want a \textbf{cup of jolt}'' they system should still be able to understand that they want a standard coffee. If, however, the user defines the type of coffee beans they want, such as `Java' or `Arabica', the system should still be able to differentiate between these and not consider them both as the plain `standard coffee', fulfilling a different intent. 
 	
 	\subsection*{Dialogue State}~\label{dialogState}
-	Like with a state machine, when we have a conversation with Alexa, the dialogue goes into states \mintinline{java}{STARTED}, \mintinline{java}{IN_PROGRESS} or \mintinline{java}{COMPLETED} in the \mintinline{java}{dialogState} property of the JSONs being exchanged with the Alexa client (e.g. an Echo Dot). This is helpful for delegating the dialogue to Alexa or handling it in our own code especially in a \hyperlink{multiturn:def}{multi-turn conversation}. More details about this interaction available in the \textsc{ASK documentation} \footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html\#scenario-delegate}{\lstinline|/dialog-interface-reference.html\#scenario-delegate|}}
+	Like with a state machine, when we have a conversation with Alexa, the dialogue goes into states \mintinline{java}{STARTED}, \mintinline{java}{IN_PROGRESS} or \mintinline{java}{COMPLETED} in the \mintinline{java}{dialogState} property of the JSONs being exchanged with the Alexa client (e.g. an Echo Dot). This is helpful for delegating the dialogue to Alexa or handling it in our own code especially in a %\hyperlink{multiturn:def}{
+		multi-turn conversation
+%	} 
+(see below). More details about this interaction available in the \textsc{ASK documentation} \footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html\#scenario-delegate}{\lstinline|/dialog-interface-reference.html\#scenario-delegate|}}
 	
 	
-	\todo{finish these. {More than just Amazon's def}}
+%	\todo{finish these. {More than just Amazon's def}}
 
 	\subsection*{Dialogue Directives}~\label{directives:def}
+	Taking advantage of the \mintinline{text}{DialogState} property, dialogue directives are a concept for dialogue management providing a mechanism to conduct dialogues in a multi-turn fashion via Alexa's interaction model directly with little programming effort 
+	Without dialog directives, we need to write the logic to collect all the slots (data) we need from users, effectively maintaing the whole session ourselves.
+	As such, dialogue directives are a clean way to manage sessions with one of three options: 
+	
+	\begin{itemize}
+		\item Delegating the collecting of required slots to Alexa
+		\item handling the multi-turn dialogue in the fulfilment code
+		\item using a hybrid of the above.
+
+	\end{itemize}
+	
+	
 	
 	\subsection*{Entity Resolution}~\label{entityRes:def}	
+	Entity Resolution enables us to use synonyms for slot values without the need to manage this concept in detail in our implementation code. As synonyms are part of the interaction model, resolving them becomes as easy as finding a canonical value in an object (as a complex data type). The concept of entity resolution additionally simplifies verifying that the user indeed said one of the synonyms to a slot value by confirmation utterances from Alexa.\\
+	Example: Using entity resolution, we manage to understand \textit{`Perso'} as a synonym to the word \textit{`Personalausweis'} by defining the relationship between both in the interaction model
 	
-	\subsection*{Fulfilment}~\label{fulfillment:def}
+	
+	\subsection*{Fulfilment}~\label{fulfillment:def}	
+	Building on the intents that the user gives to Alexa, we need to fulfil the command (after all the prompts and confirmations). This happens in our back end code. Fulfilment is what happens when our back end code runs. The code itself can vary in implementation using different programming languages like Java or Python, in hosting using our own HTTPS endpoint or a Lambda instance, and the result is what the programme delivers. This could range from changing the state of a device, e.g. turning a lamp on to making an API call that delivers text Alexa says. Programme implementation is very flexible to the developer's needs.
 	
 	\subsection*{Interaction Model}~\label{interactionMdl:def}
+	This is the Skill configuration, also considered as a front-end for the Skill. It is effectively a JSON file of a strict schema that contains all information about what the user says in terms of Utterances, Slots and their types (enumerations of Lists which Alexa tries to resolve our spoken text to). From Alexa's side of speaking, the interaction model only contains the prompts Alexa says to collect slots in the dialog management process (see dialog directives \ref{directives:def})
 	
 	\subsection*{Multi-Turn Conversation}~\label{multiturn:def}
+	A multi-turn (or multi-part) conversation is one, where a dialogue of more than one question and answer takes place. In Alexa's context, this is identified through the \mintinline{text}{dialogState} property and is responsible for collecting / verifying information before it being sent to the back end for fulfillment.\\
+	Example: For the intent \mintinline{text}{transfer_drivers_license}, which includes a required slot that needs the value \mintinline{text}{originOfLicense}, which is of type \mintinline{text}{countryList}, here is a possible 
 	
+	
+	
+	\begin{tikzpicture}
+	\calloutquote[width=8.6cm,position={(-0.7,0.2)},fill=lightgray!50,rounded corners]{
+		
+		\textit{``
+			Alexa, I want to transfer my driver's license 
+			''}
+	}
+	\end{tikzpicture}
+	%\end{quotation}
+	%
+	%\begin{quotation}
+	\begin{flushright}
+		\begin{tikzpicture}
+		\calloutquote[width=8.9cm,position={(0.5,0.2)},fill=gray!50,rounded corners]{
+			\textit{``
+				What country is your license issued in?
+				''}
+		}
+		\end{tikzpicture}
+	\end{flushright}
+	%\end{quotation}
+	
+	
+	%\begin{quotation}
+	\begin{tikzpicture}
+	\calloutquote[width=3.9cm,position={(-0.7,0.2)},fill=lightgray!50,rounded corners]{
+		
+		\textit{``
+			Mozambique
+			''}
+	}
+	\end{tikzpicture}
+	%\end{quotation}
+	%
+	%\begin{quotation}
+	\begin{flushright}
+		\begin{tikzpicture}
+		\calloutquote[width=7.9cm,position={(0.5,0.2)},fill=gray!50,rounded corners]{
+			\textit{``
+				Okay, \mintinline{java}{<fulfilment_response>}
+				''}
+		}
+		\end{tikzpicture}
+	\end{flushright}
+	%\end{quotation}
+	
+	
+	
+	
+	
+		
 	\subsection*{Over-answering}~\label{overanswering:def}
+	This is what happens when the user provides information that could fill a non-required slot.
+	We catch this information by providing all possible utterances a user can say. 
+	In the example above, if the  \mintinline{text}{originOfLicense} was not a required slot, Alexa would not prompt us to tell us where the license is issued. If we say in the first utterance to start the intent the name of the country the driver's license is issued in, we over-answer by giving Alexa that information. Depending on our application logic, we can make use of this to make our conversation smarter and not have Alexa ask for information the user already provided, making the voice assistant sound unreliable and primitive. For this, we need to anticipate this effect and include non-required slots in utterances the user might say.
 
 	\subsection*{Persistence and Memory}~\label{memory:def}
+	By persistence we mean retention of information that unfolds during a conversation session. As we do not use this concept, we consider our Alexa Skill having no memory, such that it will ask for information it might have asked for before. This is to comply with the D115 guidelines on providing anonymous information and not keeping record or storing any personal data from the user. In general, persistence can happen by storing the session information in a database. For this Amazon recommends the previously discussed DynamoDB (a NoSQL DBMS AWS microservice). Alternatives are open to developers.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\todo{
 %	- how do you think of designing voice when you have a mobile mindset\\
 %	- how do you think about screens when you have a mobile mindset and thinking about voice
-%	subtle differnce
+%	subtle difference
 %	
 %	- etkallem 3an el paradigm shift eli 7asal ma3 el mouse from cli if not already mentioned\\
 %	- then 3an el smartphones and the web from wap etc (deskop version, responsive design, two versions, em instead of pt, relative, starting with a tablet and a phone then anything relative to those then when the standards showed that there won't be an only 15 inch and a 12 inch there will be everything in between, we changed the idea to include continuous units in the spectrum and not only discrete units)
@@ -1352,10 +1731,12 @@ We already unveiled in Section \ref{approachgoals} that Alexa will be the underl
 %}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Summary}
 
-
-
-
+In short, 
+language is a construct that exceeds the representation of simple expressions in syntax and semantic rules.
+Conversation management  %is a very complex 
+breaks down the complexity of language and is used in most IVR systems. As we move from building grammars based on Chomskyan theories to resolving parts of a sentence to the nearest elicitations using ML, we introduce concepts and tools to do so. Like in any programming language, concepts need to be defined to have a standardised understanding and not be just related to one language (e.g. type inference is a concept and not a feature in JavaScript).  The interaction model of an Alexa Skill handles a generous amount of implementations to these concepts through a compact tree representation. This helps us to delegate the understanding of user's intents to Alexa as a black box and focus our work more on the fulfilment part. 
 
 
 
@@ -1371,35 +1752,43 @@ We already unveiled in Section \ref{approachgoals} that Alexa will be the underl
 \label{stateofzart}
 
 
+This chapter evaluates the possibilities we can combine with the previously discussed artefacts of the Virtual Citizen Asistant. Although we do not exclude a communication with web app at the beginning, we exchange the dependency in favour of the underlying API omitting one layer of communication. We start by positioning our expectations from an AI to then compare the Microsoft Bot Framework, Actions on Google to Alexa Skills Kit as potential underlying systems for our final product.
 
-
-\todo{intro sentence}
-
-
-
+%\sn{muss evtl weg bzw need to explain relevance}
+With these introductory definitions we try to lay out a scaffolding %foundation for a standard, which is still in an experimental phase.
+to contain a model for a natural language conversation. Hence we make assumptions on our requirements and explore the options that can suit these. We introduce our requirements in the following Section \ref{choiceOfPlatform} after we understand our current standing point.
 
 
 
 \section{Analogies to the Introduction of Web 2.0}
 
-\todo{web 2.0 was a weird word we didnt use and it became a hype then suddenly it disappeared after it has been defined.\\
-it started with RSS and HTML stardards upgrade and now it's totally obvious where it goes.\\
-no one uses RSS, but facebook and the idea of a feed would have not been born have we not started with RSS\\
-}
+%\todo{web 2.0 was a weird word we didn't use and it became a hype then suddenly it disappeared after it has been defined.\\
+%it started with RSS and HTML standards upgrade and now it's totally obvious where it goes.\\
+%no one uses RSS, but facebook and the idea of a feed would have not been born have we not started with RSS\\
+%}
+%
+%\todo{	
+%	- \textbf{wrap-up:} can bots replace services offered by humans?
+%	-- mention transition from facets (AltaVista) to metasearches to all-in-one (Google). \\
+%	-- chatbots as enablers in customer service industry\\
+%	-- conclusion: Although not impossible, it is a bit too far-fetched at this stage.\\}
+%
+%\todo{
+%	talk about sexism in AI - (why we are still at the beginning)
+%}
 
-\todo{	
-	- \textbf{wrap-up:} can bots replace serivces offered by humans?
-	-- mention transition from facets (Altavista) to metasearches to all-in-one (Google). \\
-	-- chatbots as enablers in customer service industry\\
-	-- conclusion: Although not impossible, it is a bit too far-fetched at this stage.\\}
 
-\todo{
-	talk about sexism in AI - (why we are still at the beginning)
-}
+Much like when tablets and smartphones were introduced to the market, the languages and framework used to render GUIs to the users had to adapt, which resulted into establishing HTML5 and CSS3 as new standards for the web. In that transition, %the experimental phase can be considered when 
+browsers had to render different versions of the same page or even different pages depending on the client. It started with a fixed amount of screen resolutions that rapidly grew within a few months. Offering a desktop and a mobile version was another transitory solution paving the way to %and finally to the spreading of 
+a display agnostic responsive design. Similarly, the MPEG4 H.264 codec accomplished a better adaptability and less battery consumption for video, which were success criteria to toppling the widespread of Adobe Flash on the web. %and so forth.
+When screen sizes and aspect ratios became also so diverse that it was hard to keep track of, websites % designers saw the importance of using different had to be equipped with relative measuring units to present the website correctly (e.g. percentages for CSS classes, ems for fonts, etc.)
+adapted in many ways. %To achieve this, many 
+The processed can be seen as an organic variation and selection.
 
-\sn{muss evtl weg bzw need to explain relevance}
-With these introductory definitions we try to lay out a foundation for a standard, which is still in an experimental phase. Much like when tablets and smartphones were introduced to the market, the languages and framework used to render GUIs for the users had to adapt, e.g. with HTML5 and CSS3. In that transition, the experimental phase can be considered when browsers had to render a different page depending on the client. It started with a certain few screen resolutions that can be fixed, to offering a desktop and a mobile version and finally to the spreading of responsive design, the MPEG4 H.264 codec for video and so forth. When screen sizes and aspect ratios became also so diverse that it was hard to keep track of, website designers saw the importance of using different relative measuring units to present the website correctly (e.g. percentages for CSS classes, ems for fonts, etc.)
+With the introduction of VUI for mass consumption and open development, similar undertakings are expected to happen \cite{alexapc18} until we get to acquire an advanced voice user experience. With diverse APIs available explicitly for VUI design, like Bespoken\footnote{\url{https://bespoken.io}} for performance monitoring and testing of a VUI and Sayspring \footnote{\url{https://www.sayspring.com}}
+for voice prototyping, we can utilise a few options which are likely to define new modelling and testing standards for VUI design and implementation. At the same time, we expect a few attempts to disappear in the process. Drawing analogies between RSS feeds and the news feed on all social medial platform, we can put the failure of one standard in perspective to the success of another stemming from the same idea. 
 
+As we have seen from previous examples on the web, particularly web searches being the most important, the shift of customers from AltaVista, Lycos, Yahoo! and MSN to Google, Yandex and others shows that marketing, expandability and maintaining quality are key factors to customer retention and survival.
 
 
 
@@ -1417,118 +1806,389 @@ With these introductory definitions we try to lay out a foundation for a standar
 
 \section[Development Models]{Development Models and Platforms}
 \label{devmodels}
-Chatbots have become available and more accessible to develop through numerous platform (for the same platform (Facebook), for your own platform(Lex), just a tool (Flask)). We no longer have to come up with the whole infrastructure.\\
-
-\todo{\textbf{by platform:}\\
-	-API.ai \\
-	Facebook Messenger Chatbots \\
-	-wit.ai \\
-	-motion.ai / Flask\\
-	
-	-this could belong here or somewhere else\\
-	\href{https://techcrunch.com/2017/08/30/amazon-and-microsoft-agree-their-voice-assistants-will-talk-to-each-other/}{Amazon and Microsoft agree their voice assistants will talk (to each other)}\\
-	- additional plugins are in the making, giving individual touch of sound based on profile (Alexa Podcast on the way to BXL)\\
-}
 
 
-\todo{moved from intro (was too detailed for up there):\\
-	- like Siri, Bixby, etc. \inote{put bixby somewhere else and be more precise on what u did based on section choice of platform} \\
-	- such as Microsoft Azure Bot Framework, Amazon Lex and API.ai,
-	- Amazon has an obscure position to data and privacy vs. siri e.g. (GDPR).\\
-	- some screenshots from Azure etc.\\
-	
-}
 
-\todo{Seif's BA!}
 
-\todo{
-	
-	from a user point of view:\\
-	\url{https://www.technologyreview.com/s/608571/alexa-understand-me/}
-	SUSTAINED CONVERSATION\\
-	In studies, AI platforms by Google, Apple, Microsoft, and Amazon all show different strengths. Google Assistant is the best on wide-ranging search commands. Apple’s Siri and Microsoft’s Cortana have other talents. Alexa does particularly well with shopping commands.\\
-	
-	Darren austin:\\ \url{https://venturebeat.com/2017/06/27/how-amazons-alexa-hooks-you/}
-	Alexa’s broader success resides in its ability to alleviate the stresses of an overbooked life. It’s the companion that’s always ready to engage.\\
-	
-}
+\begin{wrapfigure}{l}{0.48\textwidth}
+	\caption[VUI-Stack]{The VUI-Stack, showing the different layers a voice service can build on. Based on \cite{voicelabs}}
+	\label{vuistack}
+	\includegraphics[width=7cm]{Voice-Computing-Market-Map-NextView-1}
+\end{wrapfigure}
 
-\todo{Amazon German Skills have become available since feb 2017!}
+
+
+Chatbots have become available and more accessible to develop through numerous platform (for the same platform (e.g. Facebook), for our own standalone platform(e.g. Lex), or just a tool (Flask)). We no longer have to come up with the whole infrastructure.
+
+
+
+
+This gets us to understand that while it is possible to build a voice service from the ground up, all major platforms already supply the necessities to develop for an existing platform such that a lot of overhead is already implemented. VoiceLabs defines this as the VUI Stack (Figure \ref{vuistack}).
+
+Further, with each of the voice assistants platform becoming specialised in a different domain, %in a certain abilities
+it s not suprising to see synergy effects on the market. Recent news about
+%	-this could belong here or somewhere else\\
+Amazon and Microsoft agreeing to make their voice assistants talk to each other \cite{amznMicrosoft} is one such comparison to how different operating systems today exchange common file formats to do the same tasks differently\\
+
+
+\subsection*{From End-Users' Point}
+
+Before we evaluate platforms in terms of software development, we research the question of evaluating the platform from the customer's point of view. For this we look into empirical data from previous evaluations, then complement it with our own survey. 
+
+In his thesis project, Osman \cite{osman:siri} surveys Siri, Cortana and Google Assistants with respect to their user-friendliness using Attrakdiff and other procedures. The research quantifies the perception of 24 interviewees (13 women and 11 men between 18-35 years of age) about the voice,  the human aspect of the voice assistant, pragmatic, hedonistic and other qualities. It also tests the reactance of the subjects with ratios about knowing vs. using the voice assistant.
+
+Though the research does not recommend a certain platform, it hints that different platform adapt a different characteristic (especially with regard to wit practicality), which trigger different emotions on different users. Already in 2016, the study shows that the names of the voice assistants sound familiar to the sampled subjects.
+
+Other sources indicate that ``AI platforms by Google, Apple, Microsoft, and Amazon all show different strengths. Google Assistant is the best on wide-ranging search commands.'' \cite{mit:Alexa} %Apple’s Siri and Microsoft’s Cortana have other talents. 
+As Alexa is particularly talented with shopping commands \cite{mit:Alexa}, the platform revolves well around sustaining a conversation''. %does particularly well with shopping commands.
+
+Quoting Microsoft product manager about Alexa, we acknowledge that ``Alexa’s broader success resides in its ability to alleviate the stresses of an overbooked life. It’s the companion that’s always ready to engage''\cite{darrenAustin}.
+
+Additionally, there are a few plugins in the making to create a voice profile for Google and Alexa, giving an individual touch of sound based on a profile \cite{alexa_19}. This can have a wide-reaching  audience, for instance a voice assistant could mimic the sound and language of a person when they are not present. Likewise, a game can have a richer experience with its characters having different sounds.
+
+%
+%\todo{
+%	
+%	from a user point of view:\\
+%	\url{https://www.technologyreview.com/s/608571/alexa-understand-me/}
+%	SUSTAINED CONVERSATION\\
+%	In studies, \\
+%	
+%	
+%}
+
+\subsection*{From Developer's Point}
+
+The perspective of third-party development focuses mainly on availability of APIs and SDKs. With the exception of Siri being tied to a relatively closed platform and require knowledge of Swift or ObjectiveC, Siri can only be executed if an app is installed on the iOS device.
+%an SDK for developing apps that are installed on the iOS devices and 
+Moreover, a 99 US\$ one-time fee to become an active developer able to publish on the AppStore is a prerequisite. Alexa and Google demonstrate more freedom with the option to not need to pay any fee until after the 3rd-party software is in production. This is another reason that gets us attracted to both platforms.
+
+Also, their higher user base promise a higher likelihood for a developed solution to be used on the respective hardware (Android devices, Alexa-enabled devices).
+Especially with Amazon Skills launching in Germany only since February 2017, we expect that our solution could fill a market gap. Figure \ref{skillsbyvol} demonstrates how an Alexa Skill could cater for an unsaturated market.
+
+
+
 
 \begin{figure}[h]
-	\caption[Alexa Skills by Volume (2016)]{Alexa Skills by Volume (2016) \cite{voicelabs:trends}}
+	\caption[Alexa Skills by Volume (2016)]{Alexa Skills by Volume (2016) \cite{voicelabs:trends}. Categorised as part of the `local' section, the percentages demonstrate how an Alexa Skill as a choice could cater for an unsaturated market.}
 	\label{skillsbyvol}
 	\includegraphics[width=\textwidth]{AlexaPie1} 
 \end{figure}
 
-\todo{
-	Deep Learning (cp)\\
+
+For Google, the option of using Dialogflow\footnote{\url{https://dialogflow.com/}} (formerly API.ai) was excluded as it was explored in the equivalent project by Hassmann and Müller \cite{hassmannMlr:berlina}.\\
+
+
+
+With Amazon having an obscure position to data and privacy as opposed to Apple and Siri, this gets us to question how Amazon protects personal data. During the AWS Public Sector Summit 2018 in Brussels, Belgium many answers were provided clearing doubts about the company's compliance to the GDPR and its Cloud Computing Compliance Controls Catalog (C5) attestations as a proof of high standards for different forms of data protection (e.g. resale to partners and third-parties and responsibility on cyberattacks) \cite{aws:pubsecsum}
+
+
+\subsection*{Conducted Survey}
+
+In addition, we  survey 34 persons to validate our choice out of the preliminary interest in Alexa. 
+
+
+The survey aims at understanding potential customers' expectations while evaluating their current understanding of the possibility of a voice assistant for the e-Government sector. Titled `Usability of Voice Assistants', it is divided into the following question sets related to:
+
+%
+%\begin{table*}[H]
+%	\begin{tabu} to \textwidth {X X}
+
+
+
+
+
+\begin{table}[H]
+	\begin{tabular} {l l}
+		
+%				&
+%		\shortstack{question about if the \\ Virtual Citizen Assistant was used} \\
+		
+- Demographics &
+-	Use of a Voice Assistant \\	  
+-	Berlin.de City Portal &
+- 	Alexa as a Voice Assistant \\
+-	Voice Assistant for public services  &
+ -	Alexa Skills \\
+-	Linguistic Nuances (Utterances)\\
+%	&
+%		\includegraphics[width=5cm]{questi/q3}\\
+	\end{tabular}
+\end{table}
+%
+%
+%
+%\begin{wrapfigure}{r}{0.4\textwidth}
+%	\caption[Survey Results]{Survey results}
+%	\label{sur1}
+%	\includegraphics[width=7cm]{questi/q3}
+%\end{wrapfigure}
+%
+%
+%\begin{wrapfigure}
+%	\centering
+%	\caption[Voice Trends]{Trends of increasing use of voice as 
+%		\includegraphics[height=5cm]{} 	
+%		
+%	\end{figure}
+
+
+%
+%\begin{flushleft}
+%
+%\end{flushleft} 
+%&
+
+%	\end{tabu}
+%\end{table*}
+
+
+
+%
+%
+\begin{figure}[h!]
+%	\centering
+	\caption[Survey Results]{\textsc{Demographics \& Use of a Voice assistant} - Results of conducted survey for 34 participants for the development of an Alexa Skill}
 	
-	There’s an obvious problem with applying deep learning to language. It’s that words are arbitrary symbols, and as such they are fundamentally different from imagery.
-	https://www.technologyreview.com/s/602094/ais-language-problem/
-	. Two words can be similar in meaning while containing completely different letters, for instance; and the same word can mean various things in different contexts.
-}
+	
+	\begin{subfigure}[b]{\linewidth}
+		%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+		\includegraphics[width=\linewidth]{questi/1}
+	\end{subfigure}
+	
+	
+	
+	
+		
+	\begin{subfigure}[b]{\linewidth}
+		%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+		\includegraphics[width=\linewidth]{questi/2}
+	\end{subfigure}
+	
+
+
+\end{figure}
+
+
+
+
+\begin{figure}[h!]
+	%	\centering
+	\caption[Survey Results (cont'd)]{ \textsc{Berlin.de City Portal, the Virtual Citizen Assistant and Activities on Alexa} - Results of conducted survey for 34 participants for the development of an Alexa Skill}
+	
+
+	
+	
+
+
+\begin{subfigure}[b]{0.3\textwidth}
+	%		\caption{Voice-First \\ Device Footprint \cite{voicelabs}}
+	\includegraphics[height=6cm]{questi/q1} 	
+\end{subfigure}
+\begin{subfigure}[b]{0.3\textwidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[height=6cm]{questi/q2}
+\end{subfigure}
+\begin{subfigure}[t]{0.39\textwidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[height=3.8cm]{questi/q3}
+\end{subfigure}
+
+
+
+
+
+	
+\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/4}
+\end{subfigure}
+
+
+
+
+\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/5-1}
+\end{subfigure}
+
+\end{figure}
+
+
+
+
+
+
+
+\begin{figure}[h!]
+	%	\centering
+	\caption[Survey Results (cont'd)]{ \textsc{Activities on Alexa and a Voice Assistant for the city's authorities} - Results of conducted survey for 34 participants for the development of an Alexa Skill}
+
+
+
+
+\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/5}
+\end{subfigure}
+
+
+
+\begin{subfigure}[b]{\linewidth}
+	%		\caption[Global Monthly Active Users (Social Media vs. Messaging Apps]{Global Monthly Active Users \\ in Millions \cite{businsider}}
+	\includegraphics[width=\linewidth]{questi/6}
+\end{subfigure}
+
+
+\end{figure}
+
+
+
+
+
+The survey is carried out using LimeSurvey, an open tool (for educational purposes) with extensive analysis tools and the ability to export to statistics software such as R, SPSS and any tool accepting CSV file format. It lays out a foundation for future metrics if used in parts and on larger amounts of interviewees.
+
+By combining responses from two or more questions, we find correlations that give us the following key findings: 
+
+\begin{itemize}
+	
+	\item There is an equal demand for German and English as the VUI language.
+	
+	\item There is an existing user base for the Virtual Citizen Assistant that has potential to grow and extend to a voice assistant.
+\end{itemize}
+%
+%Further, the utterances section help us diversify the output of the voice assistant.\\
+
+
+We therefore decide to build an Alexa Skill after having confirmed that the number of users who have heard of Alexa and are using a VUI are the highest.
+
+
+% into the platform choice, 
+
+
+%
+%\todo{\textbf{by platform:}\\
+%	-API.ai \\
+%	Facebook Messenger Chatbots \\
+%	-wit.ai \\
+%	-motion.ai / Flask\\
+%}
+
+
+%\todo{moved from intro (was too detailed for up there):\\
+%	- like Siri, Bixby, etc. \inote{put bixby somewhere else and be more precise on what u did based on section choice of platform} \\
+%	- such as Microsoft Azure Bot Framework, Amazon Lex and API.ai,
+%
+%	- some screenshots from Azure etc.\\
+%	
+%}
+%
+%\todo{Seif's BA!}
+
+
+
+
+
+
+%
+%
+%
+%\todo{
+%	Deep Learning (cp)\\
+%	
+%	There’s an obvious problem with applying deep learning to language. It’s that words are arbitrary symbols, and as such they are fundamentally different from imagery.
+%	https://www.technologyreview.com/s/602094/ais-language-problem/
+%	. Two words can be similar in meaning while containing completely different letters, for instance; and the same word can mean various things in different contexts.
+%}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Choice of Platform} %comparison AWS vs. el ba2i
 \label{choiceOfPlatform}
 
-we made the decision based on Seif' bachelorarbeit
+After deciding that the voice assistant solution will take the shape of an Alexa Skill, we cover here some structural conditions we anticipate with this decision.
 
-\todo{I'll have to introduce Skills `officially' in this section for the first time (mentioned already with Georgia as app-like).\\
-	reference it in glossary in two places. here and later in Alexa + skills
-}
+%\begin{itemize}
+%	\item[
+	\subsection*{Secure Data Transfer}
+%	] 
+	Using Alexa Skills require a secure HTTPS endpoint. As AWS Lambda is a possible option (as a trusted trigger), we consider it in order not to have to manage any SSL certificates (except for at our API). For Lambda, the first million calls a month are for free. Charges apply per 10ms unit.
+	
+	
+%	\item[
+	\subsection*{Ecosystem}
+%	] 
+	While we can use our own building blocks, AWS offers a good combination with the Alexa Skills Kit, from asset hosting to availing virtual machine instances 
+	
+%	\item[
+	\subsection*{Programming Language}
+%	] 
+	Chooing a programming language is relevant, as we have an already implemented template from the Virtual Citizen Assistant which we want to use. At the same time, trying out a new language is a key incentive to start this project. Given that we have the freedom of choice with Alexa Skills between Java, Node.js framework (JavaScript), C\# and Python, we look at available resources for each language. Node.js prove to be the most resourceful as will be discussed in Chapter \ref{maintwo}. As a secure alternative, the Alexa SDK for Java comes second to Node.js's as opposed to C\# which has no SDK for Alexa. With Java and ECMAScript having similar syntax, the arguments towards development on this framework is strengthened.
+	
+%	\item[
+	\subsection*{(Human) Language}
+%	] 
+based on an excerpt from ASK documentation: Availability \footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/develop-skills-in-multiple-languages.html}{\lstinline|/develop-skills-in-multiple-languages.html|}}
+	
+	
+	\begin{itemize}
+		
+		\item \space [A Skill hosted on the German store only with an interaction model in locales `de\_DE' and `en\_UK' can be made] \space available  [.. with the] selected country distribution [before deployment].
+		\item \space[It] can be used by customers in Germany who have set their devices to use German.
+		\item \space[It] can be used by customers in Germany who have set their devices to use English (UK).
+		\item \space[It] cannot be used by customers in Germany who have set their devices to use English (US) or any other language.
+		\item \space [It] cannot be used by customers in any other country, regardless of the language they've selected for their devices.
+		
+	\end{itemize}
+	
+%\end{itemize}
 
 
-\todo{
-	here you can talk about alternatives like Microsoft, etc, compare \textbf{pricing scheme}, say why you chose Alexa (for its popularity mainly and because Api.ai was used in prev. proj.\\
-	%-AWS Lambda is free for the first one million calls per month\\
-	-need to manage any SSL certificates when using AWS Lambda (since the Alexa Skills Kit is a trusted trigger).\\
-	- \url{https://developer.amazon.com/blogs/post/Tx213D2XQIYH864/announcing-the-alexa-skills-kit-for-node-js} having an SDK is very imp (unavailable for C\# e.g.)\\
-	- bec. AWS is a whole established ecosystem.
-	- developing for Siri would require iOS knowledge on top\\
-	- Talk about features like Maintaining context(sesions), \textbf{Intent chaining}\\
+
+%we wanted something that is close enough to java in case we can use the methods in there but not java 3ashan neghayyar
+%
+%	- bec. AWS is a whole established ecosystem.
+%
+
+% , i.e. objects  had to be redefined since these 
+%we made the decision based on Seif' bachelorarbeit
+
+%we want to use as much code from Virtual Citizen assistant as possible
+
+%\todo{I'll have to introduce Skills `officially' in this section for the first time (mentioned already with Georgia as app-like).\\
+%	reference it in glossary in two places. here and later in Alexa + skills
+%}
+
+%
+%\todo{
+%	here you can talk about alternatives like Microsoft, etc, compare \textbf{pricing scheme}, say why you chose Alexa (for its popularity mainly and because Api.ai was used in prev. proj.\\
+%	%-AWS Lambda is free for the first one million calls per month\\
+
+%	- \url{https://developer.amazon.com/blogs/post/Tx213D2XQIYH864/announcing-the-alexa-skills-kit-for-node-js} having an SDK is very imp (unavailable for C\# e.g.)\\
+
 
 	
 %	- on top of that, alexa does this cool thing where it gives\\
 	
-}
+%}
 
 
-
-
-Before deciding to develop for Alexa, we consider several options and evaluate their advantages and suitability for our requirements.
-
-\todo{elaborate on pricing model in details}
-
-\begin{table}[H]
-	\begin{tabularx}{\textwidth}{r | l l l}
-		& Alexa  & API.ai & Microsoft Azure \\ \hline
-		price & free \footnote{Creating the skill is free, if using AWS to host the backend part (via Lambda): First million calls free per month} & free & free \\
-	\end{tabularx}
-\end{table}
-
+%
+%
+%Before deciding to develop for Alexa, we consider several options and evaluate their advantages and suitability for our requirements.
+%
+%\todo{elaborate on pricing model in details}
+%
+%\begin{table}[H]
+%	\begin{tabularx}{\textwidth}{r | l l l}
+%		& Alexa  & API.ai & Microsoft Azure \\ \hline
+%		price & free \footnote{Creating the skill is free, if using AWS to host the backend part (via Lambda): First million calls free per month} & free & free \\
+%	\end{tabularx}
+%\end{table}
+%
 
 
 %%%%%%%%%%%%
 
-\todo{	
-	
-	\textbf{Intent fulfilment}
-	%	-  Alexa Skills Kit+ Amazon Voice Services\\
-	- mention how ability to react to everything is centralized at alexa somewhere \textbf{i.e. talk about SKILLS}\\
-	- ability to retain sessions (explain requests/responses - GET/POST)\\
-	- fullfilling intents\\
-	- nested handlers\\
-	\\
-	skill service: code - business logic - handles json requests
-	skil interface: configuration (developer portal)
-	\\
-	- difference to Lex \& Polly : \href{https://stackoverflow.com/questions/42982159/differences-between-using-lex-and-alexa}{diff alexa lex} \\
-	
-	- Major prob: lex is not in german\\
-	- \href{https://www.youtube.com/watch?v=QxgdPI1B7rg}{Alexa Documentation}
-}
 
 
 
@@ -1537,25 +2197,13 @@ Before deciding to develop for Alexa, we consider several options and evaluate t
 
 
 
+%
+%
+%With Alexa as our choice, we agree to acknowledge the following considerations:
+%
+%
 
 
-With Alexa as our choice, we agree to acknowledge the following considerations:
-
-
-
-
-\subsubsection*{Availability (CP) \footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/develop-skills-in-multiple-languages.html}{\lstinline|/develop-skills-in-multiple-languages.html|}}}
-
-
-\begin{itemize}
-	
-	\item available only in the German skill store, due to the selected country distribution.
-	\item can be used by customers in Germany who have set their devices to use German.
-	\item can be used by customers in Germany who have set their devices to use English (UK).
-	\item cannot be used by customers in Germany who have set their devices to use English (US) or any other language.
-	\item cannot be used by customers in any other country, regardless of the language they've selected for their devices.
-	
-\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1576,7 +2224,7 @@ With Alexa as our choice, we agree to acknowledge the following considerations:
 %%%%%%%%%%%%%%%
 
 
-
+We understand the choice of platform is significant at an initial stage, since it decides on the architecture of the software we develop with. Given that we will have a constraint related to the number of users, we find through the conducted survey that Alexa Skills Kit and AWS are worth embracing as a bilateral ecosystem, to users and developers. In the next chapter, we familiarise ourselves with potential and limitations of this choice.
 
 
 \chapter{Amazon's Ecosystem}
@@ -1616,7 +2264,8 @@ It comes with agile abilities to adjust to various solution at a flexible scheme
 
 \subsection*{Alexa + Skills}
 \label{alexa:def}
-Alexa is a cloud-based voice service assistant platform by Amazon powering millions of devices \inote{with \{number of requests\} {daily|monthly}} on its own-branded IoT devices like the Echo, Echo Dot, Tap, FireTV as well as cross-platform through mobile apps available through  \href{https://itunes.apple.com/de/app/amazon-alexa/id944011620?l=en&mt=8}{Apple's AppStore for iOS} and  \href{https://play.google.com/store/apps/details?id=com.amazon.dee.app&hl=en}{Google Play Store for Android} devices. Unlike Apple's approach with Siri for instance \footnote{as know from its policy on  new software and hardware products like the case with the iPhone, the Mac and its other product lines}, where including support for third-party integration on iOS's Service Development Kit (SDK), Amazon decided with the launch of Alexa to include non-Amazon developers right from the start by introducing a multitude of (SDKs) around the platform as part of AWS, e.g. Alexa Skills Kit SDK discussed further below.
+Alexa is a cloud-based voice service assistant platform by Amazon powering millions of devices %\inote{with \{number of requests\} {daily|monthly}} 
+on its own-branded IoT devices like the Echo, Echo Dot, Tap, FireTV as well as cross-platform through mobile apps available through  \href{https://itunes.apple.com/de/app/amazon-alexa/id944011620?l=en&mt=8}{Apple's AppStore for iOS} and  \href{https://play.google.com/store/apps/details?id=com.amazon.dee.app&hl=en}{Google Play Store for Android} devices. Unlike Apple's approach with Siri for instance \footnote{as know from its policy on  new software and hardware products like the case with the iPhone, the Mac and its other product lines}, where including support for third-party integration on iOS's Service Development Kit (SDK), Amazon decided with the launch of Alexa to include non-Amazon developers right from the start by introducing a multitude of (SDKs) around the platform as part of AWS, e.g. Alexa Skills Kit SDK discussed further below.
 
 So far, though the separation of AWS and Alexa's environments is not linguistically intuitive with the company's name labelled on every service component \footnote{see Etymology in Annex \ref{etymology}}, \href{http://www.amazon.com}{Amazon.com, Inc.} offers an array of web services through AWS that summarize all building blocks necessary to operate Alexa as a software for end-users. Of course with the introduction of the aforementioned devices, it becomes intuitive to call these `Alexa devices' since their primary purpose is to operate as Alexa clients. We refer to Alexa here only as the service offered by Amazon to consumers. Consequently, although Alexa comes as a fully packaged service to end-users, we can reduce it to a compilation of many micro-services provided by AWS. As most of these are available separately in the form of Software as a Service (Saas), we conclude that AWS incorporates the following components required to make Alexa come together and becomes a consumer of its own web services platform. 
 
@@ -1628,114 +2277,227 @@ So far, though the separation of AWS and Alexa's environments is not linguistica
 
 \section{AWS Modules as Alexa's Building Blocks }
 \label{aws:modules}
-\todo{Legend: Module logos in Illustrator - they are used in graphic beneath}
+%\todo{Legend: Module logos in Illustrator - they are used in graphic beneath}
 %\inote{make logos as minipage objects or set as table / problem with footnotes}
 %\inote{in print, make sure the following list goes on a spread (odd then even page number) with the image at the end of it for clarity}
 
 listed in sequential order of importance, Alexa's service modules include but are not limited to: 
 
-\begin{enumerate}
+%\begin{enumerate}
 
-	\item[\href{https://aws.amazon.com/lex/}{\textbf{Lex}} \footnote{\url{https://aws.amazon.com/lex}}] \textit{for conversational interfaces using Natural Language Understanding, Text-to-Speech and Speech-to-Text} \\
-	``a service for building conversational interfaces into any application using voice and text''\cite{aws_website}.
-	Lex is the most important backbone to make Alexa possible and can be a main operator of another software package to create a whole new category of independent voice assistants and conversational bots. Independence denotes that  from a VUI Stack like Alexa's with the Echo devices and respective platform, software (Skills and APIs) built on top of it, or with  Siri, where the Hardware is the iOS-operating device and the software being an extension of the mobile apps using Apple's SDK. It would also mean adopting the Alexa API to a new kind of hardware, such as cars, which goes beyond the scope of this work. And while this independence means more flexibility in developing a solution of our own, this would often mean a much higher effort since we miss the opportunity of taking advantage of the already built and tested artefacts. The most critical argument against development with Lex directly is that it was not available in German at the time of this research. We therefore decide to use the Alexa Skills Kit with Alexa as a product and not as API, which ultimately takes advantage of Lex and the other components described below under the hood while still remaining in a familiar and commonly used environment. Lex and Alexa use the same deep learning techniques for natural language processing with the workflow described with the example in Figure \ref{lex_interactionExample} below. More information on Lex and its difference to Alexa are discussed in Appendix \ref{lexAlexa}.
+
+
 %	
 %	\begin{restoretext}
 %		\begin{flushright}
-%
-%			\includegraphics[width=1cm,height=1.1cm]{awslogos/lexlogo}
+\begin{wrapfigure}[2]{r}{1.2cm}
+	\includegraphics[width=1.1cm]{awslogos/lexlogo}
+\end{wrapfigure}
 %		\end{flushright}
 %
 %	\end{restoretext}
 
-	
-	
-	\item[\href{https://aws.amazon.com/polly/}{\textbf{Polly}} \footnote{\url{https://aws.amazon.com/polly}}] \textit{for speech synthesis\\}
+
+%	\item[
+\subsection*{
+	\href{https://aws.amazon.com/lex/}{\textbf{Lex}} \footnote{\url{https://aws.amazon.com/lex}}
+%	] 
+}
+	\textit{for conversational interfaces using Natural Language Understanding, Text-to-Speech and Speech-to-Text} \\
+	``a service for building conversational interfaces into any application using voice and text''\cite{aws_website}.
+	Lex is the most important backbone to make Alexa possible and can be a main operator of another software package to create a whole new category of independent voice assistants and conversational bots. Independence denotes that  from a VUI Stack like Alexa's with the Echo devices and respective platform, software (Skills and APIs) built on top of it, or with  Siri, where the Hardware is the iOS-operating device and the software being an extension of the mobile apps using Apple's SDK. It would also mean adopting the Alexa API to a new kind of hardware, such as cars, which goes beyond the scope of this work. And while this independence means more flexibility in developing a solution of our own, this would often mean a much higher effort since we miss the opportunity of taking advantage of the already built and tested artefacts. The most critical argument against development with Lex directly is that it was not available in German at the time of this research. We therefore decide to use the Alexa Skills Kit with Alexa as a product and not as API, which ultimately takes advantage of Lex and the other components described below under the hood while still remaining in a familiar and commonly used environment. Lex and Alexa use the same deep learning techniques for natural language processing with the workflow described with the example in Figure \ref{lex_interactionExample} below. Lex's difference to Alexa  is discussed in Appendix \ref{lexAlexa}.
+
+
+%	
+%	\begin{restoretext}
+%		\begin{flushright}
+\begin{wrapfigure}[2]{r}{1.2cm}
+		\includegraphics[width=1.06cm,height=0.9cm]{awslogos/pollylogo}
+\end{wrapfigure}
+
+%		\end{flushright}
+%	\end{restoretext}
+
+
+%	\item[
+\subsection*{
+\href{https://aws.amazon.com/polly/}{\textbf{Polly}} \footnote{\url{https://aws.amazon.com/polly}}
+%] 
+}
+\textit{for speech synthesis\\}
 	another ``service turn[ing] text into lifelike speech, allowing [developers] to create applications that talk'' \cite{aws_website} wile harnessing the power of deep learning. It is more or less the mouthpiece of Alexa built on top of speech synthesis algorithms.
 	
-%	
-%	\begin{restoretext}
-%		\begin{flushright}
-%		\includegraphics[width=1.06cm,height=0.9cm]{awslogos/pollylogo}
-%		\end{flushright}
-%	\end{restoretext}
+
 	
+	%	
+	%	\begin{restoretext}
+	%\begin{flushright}
+	\begin{wrapfigure}[2]{r}{1.2cm}
+		\includegraphics[width=1.4cm]{awslogos/transcribelogo}
+	\end{wrapfigure}
 	
-	\item[\href{https://aws.amazon.com/transcribe/}{\textbf{Transcribe}} \footnote{\url{https://aws.amazon.com/transcribe}}] \textit{for automatic speech recognition using Speech-to-Text}\\
+	%\end{flushright}
+	%	\end{restoretext}
+	
+	%	\item[
+	\subsection*{
+		\href{https://aws.amazon.com/transcribe/}{\textbf{Transcribe}} \footnote{\url{https://aws.amazon.com/transcribe}}
+%		]
+} 
+		\textit{for automatic speech recognition using Speech-to-Text}\\
 	which ``makes it easy for developers to add speech-to-text capability to [...] applications'' \cite{aws_website}. With Transcribe we are able to get text out of the user's voice before passing it into a format Alexa's backend would understand.
 	
-%	
-%	\begin{restoretext}
-%\begin{flushright}
-%	\includegraphics[width=1.2cm,height=0.9cm]{awslogos/transcribelogo}
-%\end{flushright}
-%	\end{restoretext}
+	
+	
+	%	
+	%	\begin{restoretext}
+	%\begin{flushright}
+	\begin{wrapfigure}[2]{r}{1.2cm}
+		\includegraphics[width=0.8cm,height=0.9cm]{awslogos/lambdalogo}
+	\end{wrapfigure}
+	
+	%\end{flushright}
+	%	\end{restoretext}
+	%
 	
 % \todo{don't mention I'm using lambda until design chapter 3}
 
-	\item[\href{https://aws.amazon.com/lambda/}{\textbf{Lambda}} \footnote{\url{https://aws.amazon.com/lambda}}] \textit{for intent fulfilment}\\
+%	\item[
+\subsection*{
+	\href{https://aws.amazon.com/lambda/}{\textbf{Lambda}} \footnote{\url{https://aws.amazon.com/lambda}}
+%	] 
+}
+	\textit{for intent fulfilment}\\
 	Although Lambda is a versatile ``service [built] for a variety of real-time serverless data processing systems'' \cite{aws_website}, it can be used as an integrated server instance to host back-end code for intent fulfilment.\\	 %\ref{intent_fulfilment}.
 	\textbf{Pricing:} First Million calls are free. Billing charges per operation millisecond.
 
 	
-%	
+
+
+
+	%	
 %	\begin{restoretext}
 %\begin{flushright}
-%	\includegraphics[width=0.8cm,height=0.9cm]{awslogos/lambdalogo}
+\begin{wrapfigure}[2]{r}{1.2cm}
+	\includegraphics[width=1cm]{awslogos/dynamodb}
+\end{wrapfigure}
+
 %\end{flushright}
 %	\end{restoretext}
 %
 
-
 %\todo{Dynamo not LAmbda here!!}
 
-\item[\href{https://aws.amazon.com/dynamodb/}{\textbf{DynamoDB}} \footnote{\url{https://aws.amazon.com/dynamodb}}] \textit{for persistence storage}\\
+%	\item[
+\subsection*{
+\href{https://aws.amazon.com/dynamodb/}{\textbf{DynamoDB}} \footnote{\url{https://aws.amazon.com/dynamodb}}
+%] 
+}
+\textit{for persistence storage}\\
 Acting as a very fast NoSQL database service while also using tables,
 Dynamo is very scalable and can be primarily used in the context of Alexa as a persistence holder for data collected during the interaction with the user to give Alexa a `memory'.
 
 
 
-\item[\href{https://aws.amazon.com/s3/}{\textbf{S3}} \footnote{\url{https://aws.amazon.com/s3}}] \textit{for resource storage}\\
-standing for simple storage service, it is a safe instance for cloud storage using buckets (namespaces) with various access management and encryption options. The first 5 GB can be stored for free.
+	%	
+%	\begin{restoretext}
+%\begin{flushright}
+\begin{wrapfigure}[2]{r}{1.2cm}
+	\includegraphics[width=0.93cm]{awslogos/s3}
+\end{wrapfigure}
+
+%\end{flushright}
+%	\end{restoretext}
+%
+
+%	\item[
+\subsection*{
+\href{https://aws.amazon.com/s3/}{\textbf{S3}} \footnote{\url{https://aws.amazon.com/s3}}
+%] 
+}
+\textit{for resource storage}\\
+standing for simple storage service, it is a safe instance for cloud storage using buckets (namespaces) with various access management and encryption options. \\ \textbf{Pricing:} The first 5 GB can be stored for free.
 
 
-	\item[\href{https://aws.amazon.com/iam/}{\textbf{CloudWatch}} \footnote{\url{https://aws.amazon.com/cloudwatch}}]
+
+	%	
+%	\begin{restoretext}
+%\begin{flushright}
+\begin{wrapfigure}[2]{r}{1.2cm}
+	\includegraphics[width=1.26cm,height=0.9cm]{awslogos/cloudwatchlogo}
+\end{wrapfigure}
+
+%\end{flushright}
+%	\end{restoretext}
+%
+
+	
+	%	\item[
+	\subsection*{
+		\href{https://aws.amazon.com/iam/}{\textbf{CloudWatch}} \footnote{\url{https://aws.amazon.com/cloudwatch}}
+	}
+%]
 	\textit{for event logging}\\
 	CloudWatch acts like the console for an operating system (OS). It monitors all low-level events happening within the AWS sphere. In combination with Lambda it comes as handy tool to log events resulting at runtime once a Lambda instance is called and its code being executed and is used for debugging.
 	
 	
 %	\begin{restoretext}
 %\begin{flushright}
-%	\includegraphics[width=1.26cm,height=0.9cm]{awslogos/cloudwatchlogo}
+\begin{wrapfigure}[2]{r}{1.2cm}
+	\includegraphics[width=1.26cm,height=0.85cm]{awslogos/cognitologo}
 %\end{flushright}
+\end{wrapfigure}
 %	\end{restoretext}
 
 
-	\item[\href{https://aws.amazon.com/iam/}{\textbf{IAM}} \footnote{\url{https://aws.amazon.com/iam}}]
+%	\item[
+\subsection*{
+\href{https://aws.amazon.com/iam/}{\textbf{IAM}} \footnote{\url{https://aws.amazon.com/iam}}
+%]
+}
 	\textit{for identity access management within AWS}\\
 	Identity Access Management (IAM) is a secondary service module regulating in the Alexa context in combination with Lambda the routing rights between internal Amazon endpoints. It also ensures compliance policies are enforced within and between AWS modules, as well as between AWS modules and other external services.
 %	
-%	
-%	\begin{restoretext}
-%\begin{flushright}
+%%	
+%%	\begin{restoretext}
+%\begin{wrapfigure}{r}{1.5cm}
+%%\begin{flushright}
 %	\includegraphics[width=1.36cm,height=0.85cm]{awslogos/cognitologo}
+%\end{wrapfigure}
+
 %\end{flushright}
 %	\end{restoretext}
 
 
-	\item[\href{https://aws.amazon.com/cognito/}{\textbf{Cognito}} \footnote{\url{https://aws.amazon.com/cognito}}]
-	\textit{for identity access management beyond AWS}\\
-	like the rest of AWS's platform, Cognito is a scalable service module to perform user authentication and can be used in combination with an external endpoint instead of Lambda.
-	
 %		\begin{restoretext}
 %\begin{flushright}
-%	\includegraphics[width=0.76cm,height=0.9cm]{awslogos/cognitologo_old}
+\begin{wrapfigure}[2]{r}{1.2cm}
+	\includegraphics[width=1.01cm]{awslogos/cognitologo_old}
+\end{wrapfigure}
 %\end{flushright}
 %	\end{restoretext}
+
+
+%	\item[
+\subsection*{
+\href{https://aws.amazon.com/cognito/}{\textbf{Cognito}} \footnote{\url{https://aws.amazon.com/cognito}}
+%]
+}
+	\textit{for identity access management beyond AWS}\\
+	like the rest of AWS's modules%platform
+	, Cognito is a %scalable 
+	service 
+	%module 
+	to perform user authentication and can be used in combination with an external endpoint instead of Lambda.\\
 	
-\end{enumerate}
+
+
+	
+%\end{enumerate}
 
 %\newpage
+\clearpage
+
 
 \begin{figure}[h!]
 	\caption[Interaction Between AWS Modules (Coffee Bot)]{Interaction between AWS modules in the use case of a ``Coffee Bot'' based on Niranjan \cite{aws:lex_webinar} }\label{lex_interactionExample}
@@ -1747,6 +2509,9 @@ standing for simple storage service, it is a safe instance for cloud storage usi
 %	\caption{Interaction between AWS modules in the use case of a ``Coffee Bot''}\label{lex_interactionExample}
 %	\includegraphics[width=10.5cm]{workflows/awstools.png}
 %\end{wrapfigure}
+
+
+
 
 Putting different combinations of these and other building blocks interactively together generates the model for Alexa. In a world increasingly operated by Internet of Things (IoT), we describe a possible interaction in the example here for a use case of a hypothetical chatbot that operates a coffee machine using some of these service modules (Figure \ref{lex_interactionExample}).  Although this graphic describes how an end user would combine these modules to set up their own chatbot, this is the same workflow that Alexa uses. Hence, with Amazon's use of its own micro-services we infer that takes advantage of these to build a whole new ecosystem putting Alexa Skill developers as producers, end-users as consumers, and the Amazon website and Alexa App as a marketplace to mediate between the products (Skills) the developers produce to their target customers (end-users, country-specific or worldwide). From a marketing perspective Amazon achieves through Alexa a vertical diversification of its product programme (where existing AWS services result in a new product expanding the value chain) while simultaneously offering an extension of its aggregator model (as opposed to a marketplace model)% https://www.feedough.com/difference-marketplace-business-model-aggregator-business-model/
  by playing as a mediator between the developer's role and that of the end-user's % (who of course could be developers, too)
@@ -1777,16 +2542,18 @@ of an application with several front-end and back-end components acting in a Dev
 		\subsubsection*{ASK CLI} %\lstinline|ask-cli| 
 		A Command-Line Interface tool that interacts with the Alexa Console skipping the web browser. %It is still in the making but
 		Although not at a stable release yet, it has numerous functions to creating, deploying and testing our Skills. %Download with 
-		Available through the Node Package Manager (NPM) \footnote{
+		Available from the Node Package Manager (NPM) \footnote{
 			through \lstinline|\$ npm install ask-cli| }
 		
 		%green because of the dollah
 		
 		\subsubsection*{Alexa Voice Service} %\inote{products independent from Alexa, not sure if it's worth mentioning}
 		 A service for accessing cloud-based Alexa capabilities with the support of AVS APIs, hardware kits, software tools, and documentation. Through the Alexa Voice Service Amazon has simplified the creation of conversational interfaces for device makers, allowing developers to add Alexa and intelligent voice control to new products for mobile phones and cars to smart speakers and home appliances.
-		 It simplifies building voice-forward products by handling complex speech recognition and natural language understanding in the cloud \footnote{\url{https://developer.amazon.com/alexa-voice-service}}
+		 It simplifies building voice-forward products by handling complex speech recognition and natural language understanding in the cloud \footnote{\url{https://developer.amazon.com/alexa-voice-service}}\\
 
 
+
+By exploring these products, building blocks, platforms and runtime environments, we have a deeper understanding of how to make use of these in our implementation and which know which tools to prioritise for development and testing. With microservices, the vast options Amazon offers through AWS and the Alexa Skills kit provide a powerful foundation to support DevOps.
 	
 
 
@@ -1800,16 +2567,25 @@ Not coincidently, these are the same languages supported by AWS Lambda %to devel
 
 Disregarding the programming language used for development, these statically generated files are included in the code:
 
-\begin{itemize}
+%\begin{itemize}
 
-\item[\mintinline{json}{skill.json}] The Skill manifest file including its publication name on the Amazon website, invocation name in each language, a description of the Skill readable by a human, author of the Skill and other properties
-\inote{maybe include our sample in Appendix}
+%\item[
+\subsection*{\mintinline{json}{skill.json}}
+%] 
+The Skill manifest file including its publication name on the Amazon website, invocation name in each language, a description of the Skill readable by a human, author of the Skill and other properties
+\inote{include our sample in Appendix?}
 
-\item[\mintinline{json}{<locale>.json}] The interaction model of the respective language. It is named after the locale the file is in and includes all slots, utterances, dialogues, custom defined slot types inter alia (file structure in Table \ref{interactionModel}).
+%\item[
+\subsection*{\mintinline{json}{<locale_code>.json}}
+%] 
+The interaction model of the respective language. It is named after the locale the file is in and includes all slots, utterances, dialogues, custom defined slot types inter alia (file structure in Table \ref{interactionModel}).
 
-\item[\mintinline{json}{<packageFile>}] A manifest file for required dependencies (installable through NPM for instance in the case of Node or Maven in the case of Java) for installation to run the web-app in Amazon's cloud.
+%\item[
+\subsection*{\mintinline{json}{<packageFile>}}
+%] 
+A manifest file for required dependencies (installable through NPM for instance in the case of Node or Maven in the case of Java) for installation to run the web-app in Amazon's cloud.
 
-\end{itemize}
+%\end{itemize}
 
 
 %\todo{remove clearpage before print}
@@ -1854,20 +2630,35 @@ The following devices are Alexa-enabled out of the box. The voice service is eit
 
 while the hardware models stated above are possibilities for testing, too, they do not always serve as a primary testing environment. There are sometimes more optimised ways to automate Skill testing, for instance by running scripts that would send the transcribed text in the appropriate JSON format. This is helpful for multi-turn conversations and retaining sessions, so that one does not need to repeat the full conversation until one reaches the test breakpoint.
 
-\begin{itemize}
+%\begin{itemize}
 	
-	\item[Alexa App] designed to be a control unit that operates most Alexa-enabled devices, is not an Alexa interface\footnote{yet (although this will change soon)}. However, apart from being a tool apart from Amazon's website to install Skills and manage accounts linked to Amazon (for music streaming and other related content-based services), it is a very useful tool to track the history of conversation that took place through a respective Amazon account. We use it mainly to hear what we said and see how the text was interpreted using Lex's NLU engine. It helps for checking homonyms and nuanced utterances.
+%	\item[
+\subsubsection*{Alexa App}
+%	] 
+	designed to be a control unit that operates most Alexa-enabled devices, is not an Alexa interface\footnote{yet (although this will change soon)}. However, apart from being a tool apart from Amazon's website to install Skills and manage accounts linked to Amazon (for music streaming and other related content-based services), it is a very useful tool to track the history of conversation that took place through a respective Amazon account. We use it mainly to hear what we said and see how the text was interpreted using Lex's NLU engine. It helps for checking homonyms and nuanced utterances.
 	
 	
-	\item[EchoSim.io] ``a browser-based online community tool for developers that simulates the look and feel of an Amazon Echo'' \footnote{\url{https://echosim.io/}}. %started from a hackathon
+%	\item[
+	\subsubsection*{EchoSim.io}
+%	]
+	 ``a browser-based online community tool for developers that simulates the look and feel of an Amazon Echo'' \footnote{\url{https://echosim.io/}}. %started from a hackathon
 	
-	\item[Reverb] An iOS / Android app, allowing the interaction with the Alexa instance linked to an Amazon account. Perfect option to make a qualifying device Alexa-enabled \footnote{\url{https://reverb.ai}}. 
+%	\item[
+	\subsubsection*{Reverb App}
+%	] 
+	An iOS / Android app, allowing the interaction with the Alexa instance linked to an Amazon account. Perfect option to make a qualifying device Alexa-enabled \footnote{\url{https://reverb.ai}}. 
 	
-	\item[Alexa Simulator] Alexa's own web-based online simulator giving JSON responses and voice feedback to the requests sent and is part of the ASK. We interact with it either through voice or with JSON requests. 
+%	\item[
+\subsubsection*{Alexa Simulator}
+%	] 
+	Alexa's own web-based online simulator giving JSON responses, card renderings and voice feedback to the requests sent and is part of ASK. We interact with it either through voice or with JSON requests. The JSONs it produces can be used as input for other tests, too. 
 	
-	\item[CLI Simulator] the command-line tool of the aforementioned simulator. Accepts strings and file uploads from the CLI and returns responses to the same interface. Obviously because the Skill is a web service in the cloud, the CLI also requires an internet connection \footnote{running command \lstinline|$ ask simulate --text <inputText> --locale <inputLocale>|}.
+%	\item[
+	\subsubsection*{CLI Simulator}
+%	] 
+	the command-line tool of the aforementioned simulator. Accepts strings and file uploads from the CLI and returns responses to the same interface. Obviously because the Skill is a web service in the cloud, the CLI also requires an internet connection \footnote{running command \lstinline|$ ask simulate --text <inputText> --locale <inputLocale>|}.
 	
-\end{itemize}
+%\end{itemize}
 
 
 
@@ -1901,9 +2692,9 @@ A conversation starts with any of the four wake words below, followed by the lau
 
 
 
+\section{Summary}
 
-
-
+With this insight we are able to test our Alexa Skill through various methods, depending on the test type. Tests should be run individually and combined. We also have a separation of concerns between development and tests for the interaction model as well as the Skill back end code.
 
 
 

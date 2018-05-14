@@ -40,12 +40,12 @@ More information: \url{https://stackoverflow.com/questions/42982159/differences-
 
 \section*{Documentation (Base) URLs}
 
-\todo{use a base url to avoid extensive text in footnotes with href such that a click would still redirect right\\ -kbase \\ -Alexa blogs\\
-\\
-AWS Glossary\\ \t{a\t{ws}}\href{www.apple.com}{\lstinline|/doing-something\#hej|}
-\url{https://docs.aws.amazon.com/general/latest/gr/glos-chap.html}
-
-}
+%\todo{use a base url to avoid extensive text in footnotes with href such that a click would still redirect right\\ -kbase \\ -Alexa blogs\\
+%\\
+%AWS Glossary\\ \t{a\t{ws}}\href{www.apple.com}{\lstinline|/doing-something\#hej|}
+%\url{https://docs.aws.amazon.com/general/latest/gr/glos-chap.html}
+%
+%}
 
 
 
@@ -53,7 +53,7 @@ AWS Glossary\\ \t{a\t{ws}}\href{www.apple.com}{\lstinline|/doing-something\#hej|
 
 
 \begin{flushleft}
-	\begin{tabularx}{\textwidth}{lX}
+	\begin{tabu} to \textwidth{X |X[2]}
 
 
 
@@ -61,30 +61,35 @@ AWS Glossary\\ \t{a\t{ws}}\href{www.apple.com}{\lstinline|/doing-something\#hej|
 AWS Glossary &
 \url{https://docs.aws.amazon.com/general/latest/gr/glos-chap.html}\\
 
-\end{tabularx}
+\end{tabu}
 \end{flushleft}
 	
 
 
 \subsection*{Alexa Skills Kit - \t{a\t{sk}}}
 \begin{flushleft}
-	\begin{tabularx}{\textwidth}{l   X}
+	\begin{tabu}to\textwidth{X |  X[2]}
 
 Documentation &
 \url{https://developer.amazon.com/docs/custom-skills/} \\
 
 
-Handling Requests &
-\href{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html}{\t{a\t{sk}}/handle-requests-sent-by-alexa.html}
+%Handling Requests & \url{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html}
+%
+%\href{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html}{\t{a\t{sk}}/handle-requests-sent-by-alexa.html}
 
-\end{tabularx}
+
+\hline
+
+
+\end{tabu}
 \end{flushleft}
 
 \subsection*{GitHub Repositories - \t{GH}}
 
 
 \begin{flushleft}
-	\begin{tabularx}{\textwidth}{lX}
+	\begin{tabu} to \textwidth {X | X[2]}
 		
 		
 A Skill Template with API Calls: & 
@@ -106,7 +111,7 @@ Handling Responses (Multi-turn conversation) &
 SSML Audio & 
 \url{https://github.com/alexa/alexa-cookbook/tree/0afbfcb8ddcd911e83216b4528b20f3a1628c99f/handling-responses/ssml-audio}\\
 		
-	\end{tabularx}
+	\end{tabu}
 \end{flushleft}
 
 
@@ -123,7 +128,7 @@ SSML Audio &
 \clearpage
 
 \addcontentsline{toc}{section}{JSON Query code structure}
-\section*{Outtakes from a JSON query node}
+\section*{Outtakes from a query response read as JSON by the Skill code (Solr Response for Table \ref{dienstleistung:descr})}
 \label{query:dl}
 
 HTML Tags inside Text
@@ -333,19 +338,27 @@ source: \textsc{ASK Documentation} \footnote{\t{a\t{sk}}\href{https://developer.
 \textbf{ARN}	&	Amazon Resource Name\\
 \textbf{ASCII}&	American Standard Code for Information Interchange\\% (Computer-Textstandard)\\
 \textbf{ASK}	&	Alexa Skills Kit\\
+\textbf{AsylG}	&	Asylgesetz, [German] Asylum Act\\
 \textbf{AVS}	&	Alexa Voice Service\\
 \textbf{AWS}	&	Amazon Web Serivces\\
 
 \textbf{B2B}	&	business-to-business\\
 \textbf{B2C}	&	business-to-consumer\\
+\textbf{BMG}	&	Bundesmeldegesetz, [German] Federal Act of Registration\\
 
+\textbf{ C5} & Cloud Computing Compliance Controls Catalog\\
+\textbf{CC}		&	Creative Commons Licence\\
 \textbf{CEO}	&	Chief Executive Officer\\
 \textbf{CIA}	&	Competitive Innovation Advantage\\
 \textbf{CLI}	&	Command-Line Interface\\
 \textbf{CSS}	&	Cascading Style Sheets\\
+\textbf{CSV}	&	Comma-separated values\\
 
 \textbf{DCG}	&	Discounted Cumulative Gain\\
+\textbf{DBMS}	&	Database Management System\\
 
+
+\textbf{EEA}		&	European Economic Area\\
 \textbf{EU}		&	European Union\\
 
 
@@ -358,8 +371,10 @@ source: \textsc{ASK Documentation} \footnote{\t{a\t{sk}}\href{https://developer.
 \textbf{HCI}	&	Human Capital Index\\
 \textbf{HTML}	&	Hyper-Text Markup Language\\
 
+\textbf{IBAN}	&	International Bank Account Number\\
 \textbf{IoT}	&	Internet of Things\\
 \textbf{ICT}	&	Informations and Communications Technology\\
+\textbf{ITDZ}	&	IT Service Centre Berlin - \textit{IT Dienstleistungszentrum Berlin}\\
 
 \textbf{IVR}	&	Interactive Voice Response\\
 
@@ -372,10 +387,16 @@ source: \textsc{ASK Documentation} \footnote{\t{a\t{sk}}\href{https://developer.
 services )\\
 
 
+\end{tabular}
+\begin{tabular}{ll}
+
+
 \textbf{ML}		&	Machine Learning\\
 \textbf{MP3}	&	Moving Picture Experts Group Layer-3 Audio (MPEG-3)\\
 \textbf{MVC}	&	Model-View-Controller\\
 \textbf{MVP}	&	Minimum Viable Product\\
+
+
 
 \textbf{NLP}	&	Natural Language Processing\\
 \textbf{NLU}	&	Natural Language Understanding\\
@@ -387,13 +408,17 @@ services )\\
 \textbf{PLZ}	&	Postleitzahl (Postal Code)\\
 
 \textbf{ROI}	&	Return on Investment\\
+\textbf{REST}	&	Representational State Transfer\\
 \textbf{SLA}	&	Service Level Agreement\\
+\shortstack[l]{\textbf{SSDS}\\ \textcolor{white}{x}}	&	\shortstack[l]{Semantische Sprachorientierte Dialogsysteme \\ (Name of underlying Software for Virtual Citizen Assistant)} \\
 \textbf{SSML}	&	Speech Synthesis Markup Language\\
 
 \textbf{TF-IDF}	&	Term Frequency - Inverted Document Frequency\\
 \textbf{TII}	&	Telecommunication Infrastructure Index\\
 
 \textbf{UN}		&	United Nations\\
+\textbf{URI}		&	Uniform Resource Identifier\\
+
 
 \textbf{VUI}	&	Voice User Interface\\
 
@@ -416,10 +441,17 @@ services )\\
 \textbf{appx}	&	approximately\\
 \textbf{app}	&	(Mobile or web) application\\
 \textbf{capex}	&	capital expenditure\\
+\textbf{cont'd}	&	continued\\
 \textbf{DevOps}	&	Development and Operations\\
 \textbf{excl.}	& 	excluding\\
+\textbf{ms}	& 	millisecond\\
+
+\textbf{no.}	& 	number\\
+
 \textbf{Inc.}	&	incorporation\\
-\textbf{opex}	& 	operating expense, operating expenditure, operational expense, operational expenditure \\
+\shortstack[l]{\textbf{opex} \\ \textcolor{white}{text}}	& 	\shortstack[l]{operating expense, operating expenditure,\\ operational expense, operational expenditure} \\
+\textbf{rel.}	&	relevance\\
+\textbf{ver.}	& 	version \\
 \end{tabular}
 \end{flushleft}
 
@@ -447,7 +479,7 @@ services )\\
 
 \textbf{Application ID}		&	required by Lambda. Skill ID in our context\\
 
-\textbf{capital expenditure}	&	cost of developing or providing non-consumable parts for the product or system.\\
+\shortstack[l]{\textbf{capital expenditure}\\ \textcolor{white}{x}}	&	\shortstack[l]{cost of developing or providing non-consumable parts for \\ the product or system}\\
 
 
 \textbf{Intent}				&		\ref{intents}\\

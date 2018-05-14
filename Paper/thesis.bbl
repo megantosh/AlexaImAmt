@@ -36,9 +36,23 @@ George Anders.
   June 2016.
 \newblock Online Resource. Accessed on 28.04.2018.
 
+\bibitem{darrenAustin}
+Darren Austin.
+\newblock How amazon’s alexa hooks you.
+\newblock
+  \url{https://venturebeat.com/2017/06/27/how-amazons-alexa-hooks-you/}, June
+  2017.
+\newblock Online Resource. Accessed on 30.04.2018.
+
 \bibitem{alexapc18}
 {Brian Roemmele, Dave Isbitski}.
 \newblock {Episode 018 - A Voice First Future with Brian Roemmele}.
+\newblock {\em Alexa Dev Chat Podcast}, November 2017.
+\newblock Online Resource. Accessed on 13.02.2018.
+
+\bibitem{alexa_19}
+{Brian Roemmele, Dave Isbitski}.
+\newblock {Episode 019 - Looking back at the Year in Voice and What's Next}.
 \newblock {\em Alexa Dev Chat Podcast}, November 2017.
 \newblock Online Resource. Accessed on 13.02.2018.
 
@@ -207,12 +221,22 @@ Will Knight.
   February 2018.
 \newblock Online Resource. Accessed on 11.05.2018.
 
+\bibitem{amznMicrosoft}
+{Natasha Lomas}.
+\newblock { Amazon and Microsoft agree their voice assistants will talk (to
+  each other)}.
+\newblock
+  {\url{https://techcrunch.com/2017/08/30/amazon-and-microsoft-agree-their-voice-assistants-will-talk-to-each-other}},
+  April 2018.
+\newblock Online Resource. Accessed on 30.04.2018.
+
 \bibitem{cnbcAlexa}
 NBC.
 \newblock Amazon's alexa had a breakout holiday — people even used echoes to
   buy more echoes.
 \newblock
-  \url{https://www.cnbc.com/2017/12/26/how-many-amazon-alexa-echoes-were-sold-over-the-2017-holidays.html}.
+  \url{https://www.cnbc.com/2017/12/26/how-many-amazon-alexa-echoes-were-sold-over-the-2017-holidays.html},
+  December 2017.
 \newblock Online Resource. Accessed on 15.02.2018.
 
 \bibitem{witlingo:bouzid}
@@ -224,6 +248,10 @@ NBC.
 \bibitem{hassmannMlr:berlina}
 {Sebastian Hansmann, Marcel Müller}.
 \newblock Chatbots in egovernance, 2017.
+
+\bibitem{osman:siri}
+{Seif Osman}.
+\newblock Comparison of intelligent personal assistants, 2016.
 
 \bibitem{aws_website}
 Amazon~Web Services.

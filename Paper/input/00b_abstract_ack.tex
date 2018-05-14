@@ -48,15 +48,14 @@
 %###################### Statement ############################
 %#############################################################
 \chapter*{Erkl{\"a}rung der Urheberschaft}
-\inote{this one needs to be signed for submission}\\ 
+%\inote{this one needs to be signed for submission}\\ 
 Ich erkläre hiermit an Eides statt, dass ich die vorliegende Arbeit ohne Hilfe Dritter und ohne Benutzung anderer als der angegebenen Hilfsmittel angefertigt habe; die aus fremden Quellen direkt oder indirekt übernommenen Gedanken sind als solche kenntlich gemacht. Die Arbeit wurde bisher in gleicher oder ähnlicher Form in keiner anderen Prüfungsbehörde vorgelegt und auch noch nicht veröffentlicht.
 
 
 \vspace{4cm}
 
 Ort, Datum \hfill Unterschrift\\
-Berlin, den \today
-
+	Berlin, \today  	\hfill \rule[0.5em]{15em}{0.5pt} % This prints a line to write the date
 
 %#############################################################
 %###################### Abstract  ############################
@@ -74,15 +73,23 @@ Berlin, den \today
 
 Though not a recent phenomenon, chatbots and voice assistants are increasingly gaining unprecedented attention as a successor for mobile and web applications. While still emerging with no defined standards or set protocols, with a hype on the rise, tensions between industry giants with products like Amazon's Alexa, Apple's Siri or the Google Assistant %or IBM's Watson 
 unveil new examples for providing an enriched user experience for consumers and businesses. The surrounding ecosystem also plays a major role in spreading the platforms available while exploring new horizons with alternative approaches and business models. Today, voice assistance are already present around indoor spaces, in the car or in our pockets on the go. 
-They live inside smartphones, on fancy TV sets or even as stand-alone devices. Yet, they are still a new terrain to discover and great potential to unleash in numerous contexts.\\ 
+They live inside smartphones, on fancy TV sets or even as stand-alone devices. Yet, they are still a new terrain to discover and great potential to unleash in numerous contexts. 
 
-One such scenarios involves the public sector. In this work, we explore the Alexa Skills Kit by Amazon in combination with respective services to develop a voice assistant for the local city council 
-giving a parallel experience to its current Virtual Citizen Assistant (Virtueller Bürgerassistent) %extending the current chatbot's functionality 
-available on \href{ https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}{http://service.berlin.de}. We touch on the technical challenges and possibilities in implementing a Software as a Service (SaaS) system for e-Government inquiries and analyse its usability as well as its effectiveness in replacing traditional information lookup. We then examine the goals we define for our use case to our achievement with the APIs and SDKs available at the time. With respect to those, we also report on the opportunities, challenges and limitations faced in the development process.\\
+One such scenarios involves the public sector. In this work, we create an Alexa Skill taking a critical approach to the artefacts provided by Amazon in combination with respective services and artefacts to develop a voice assistant for the local city council 
+giving a parallel experience to its current \textsc{Virtual Citizen Assistant} - \textit{Virtueller Bürgerassistent} %extending the current chatbot's functionality 
+available on %\href{ https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}{http://service.berlin.de}
+The Berlin City Portal website. We touch on the technical challenges and possibilities in implementing a Software as a Service (SaaS) system for e-Government inquiries and analyse its usability as well as its effectiveness as an additional option to traditional information lookup. Examine the goals we define through a survey, we conclude a high potential to adopt the Skill once published.
 
-Finally, we study the current state of voice assistants and service bots on the market and the future of this trend from a technical and a social point of view.
+With a critical approach to our use case %to our achievement with 
+given the APIs and SDKs available at the time, we are able to make the Skill simulate the telephone hotline D115 for many simple berlin services and provide a proof-of-concept that more complex issues can be handled through simple content management with no need for redeployment. %With respect to those, 
+we also report on the opportunities, challenges and limitations faced in the development process.
 
-\sn{conclusion: Das Ergebnis der Arbeit sollte man zum Schluss noch im Abstract ergänzen.}
+%Finally, we 
+With our study of the current state of voice assistants and service bots on the market, we give recommendation of best practices to develop a voice assistant. %and the future of this trend from a technical and a social point of view.
+
+
+
+%\sn{conclusion: Das Ergebnis der Arbeit sollte man zum Schluss noch im Abstract ergänzen.}
 %\note{Im Abstract sollte man aim/will/going to meiden. Besser: Einfach Präsens oder sogar Perfekt}
 %\note{Ich finde es besser, im Präsens zu schreiben: Also besser: We analyze oder We study (anstatt von going to)} 
 
@@ -96,27 +103,36 @@ Finally, we study the current state of voice assistants and service bots on the 
 %\note{contextual translation to German.}
 
 %Auch wenn Chatbots und Sprachassistenten keine Randerscheinung mehr sind, erlangen sie in letzter Zeit eine steigende Bedeutung als Nachfolder von mobilen Anwendungen und Web Applikationen. 
-Chatbots und Sprachassistenten sind nehmen ein wachsendes Interesse in den letzten zwei Jahren. % seit 2016.
+Chatbots und Sprachassistenten nehmen ein wachsendes Interesse in den letzten zwei Jahren. % seit 2016.
 %Trotz des Mangels an definierten Standards oder feste Protokolle, mit einer zunehmenden Aufmerksamkeit auf dem Markt herrscht große Konkurrenz. 
 Im Gegensatz zum öffentlichen Email-Protokoll, 
 %das auf ein öffentliches Protokoll basiert und fesgelegte Standards hat, die unterschiedlich implementiert werden können,
 konkurrieren Groß- und Kleinunternehmen auf eine universale Systemausprägung und diversifizieren mithilfe von künstlicher Intelligenz den Rahmen für den persönlichen Assistenten der Zukunft.
-Ob es durch Amazons Alexa, Apples Siri oder den Google Sprachassistenten hervorgeht, zeigen sich zahlreiche Beispiele, wie die Nutzererfahrung auf privaten oder Geschäftsebene weitgehend bereichert werden kann.
+Ob es durch Apples Siri, Cortana von Microsoft oder den Google Sprachassistenten hervorgeht, zeigen sich zahlreiche Beispiele, wie die Nutzererfahrung auf privaten oder Geschäftsebene weitgehend bereichert werden kann.
 %Mit Lock-in Effekten spielen Drittanbieter eine große Rolle bei der Verbreitung der einen oder anderen Plattform und sorgen für neue Interaktionsmodelle. 
-Der steigende Nutzen von Sprachassistenten zuhause, im Büro und unterwegs erlaubt viele neue Erkenntnisse und Erfahrungen, die dem Marktumfeld zu verdanken sind. \\
+Der steigende Nutzen von Sprachassistenten zuhause, im Büro und unterwegs erlaubt viele neue Erkenntnisse und Erfahrungen, die dem Marktumfeld zu verdanken sind. 
 
 
  
 %Auch im öffentlichen Dienst 
-Auch auf staatlicher Ebene wird dieser Nutzen vertreten und wertvoll eingeschätzt. In der folgenden Recherche untersuchen wir Alexa von Amazon im Zusammenhang mit anderen verfügbaren Plattformen und erweitern die Fähigkeiten des Sprachassistenten durch den Webauftritt des berliner Stadtportals (BerlinOnline) um weitere Dienste sowohl für die vielfältigen und mehrsprachigen Einwohner der Hauptstadt als auch deren Senatsverwaltung. Als Grundlage wird auf die Funktionalität des  \href{{http://service.berlin.de}}{Virutleen Bürgerassistenten Berlins}
+Auch auf staatlicher Ebene wird dieser Nutzen dank einer wachsenden Rolle von E-Government in der Gesellschaft vertreten. %und wertvoll eingeschätzt.
+Der Beitrag von Sprachassistenten hat einen Einfluss auf dem Onlinedienstindex eines Landes und trägt zu einer wichtigen Modernisierung im öffentlichen Wesen bei.
+
+In der folgenden Recherche untersuchen wir Alexa von Amazon im Zusammenhang mit anderen verfügbaren Plattformen und Artefakten. Wir erweitern die Fähigkeiten des Sprachassistenten durch den Webauftritt des berliner Stadtportals (BerlinOnline) %um weitere Dienste 
+sowohl für die vielfältigen und mehrsprachigen Einwohner der Hauptstadt als auch deren Senatsverwaltung. Als Grundlage wird auf die Funktionalität des  %\href{{http://service.berlin.de}}{
+	\textsc{Virutleen Bürgerassistenten} Berlins
+%}
 %Chatbots auf dem Stadtportal \href{ https://service.berlin.de/virtueller-assistent/virtueller-assistent-606279.php}{http://service.berlin.de}
 zurückgegriffen. Anhand dieses Anwendungsfalls werden die prinzipiellen Möglichkeiten und Herausforderungen bei der Implementierung eines Sprachassistenten für die Stadtverwaltung aus technischer und organisatorischer Sicht analysiert. Zusätzlich wird die Usability des Systems als Ergänzung für einen Abfragedienst in Erwägung gezogen. %Anschließend werden die erreichten Ziele mit den gesetzten Anforderungen in Perspektive gestellt. Darüber hinaus wird über Systemgrenzen sowie individuellen und systematischen Fehlerquellen berichtet, die bei der Entwicklung behandelt worden sind.\\
+Lösungen aus dem Chatbot der Stadt Wien sowie der Sprachassistent von Georgien, USA werden zum Vergleich betrachtet.
 
+
+Produkt dieser Arbeit ist ein Alexa Skill, welches die Basis des vorhandenen Chatbots nutzt, um Anfragen an der Berliner verwaltung zu beantworten sowie eine Umfrage zur vorläufigen Erfolgsbemessung des Produkts. Der Skill simuliert die Telefonhotline D115 für einfache Anfragen und zeigt, wie komplexere Themen auch nur durch Content-Management gehandhabt werden können. Die Umfrage unterstützt die Softwareentwicklung und zeigt, dass die Nachfrage nach einem Sprachassistenten in der Verwaltung einen hohen Erfolgspotential bei einer Inbetriebnahme verspricht. 
 
 %Schließleich nehmen wir den aktuellen Trend von Sprachassistenten und Chatbot-Dienste unter der Lupe und diskutieren eventuelle Zukunftentwicklung mit dem gegeben Stand jenseits des e-Governance Bereichs.
-\sn{conclusion: Ergebnis sollte zum Schluss noch im Abstract ergänzt werden.\\
-Keine Prozesse, sondern ergebnisse.\\
-keine temporale Adverbien}
+%\sn{conclusion: Ergebnis sollte zum Schluss noch im Abstract ergänzt werden.\\
+%Keine Prozesse, sondern ergebnisse.\\
+%keine temporale Adverbien}
 
 
 % outline, proposal, design specs
