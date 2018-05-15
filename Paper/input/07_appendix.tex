@@ -2,7 +2,7 @@
 \label{appendices}
 %DELETEME: everything that does not fit into your work, e.g. a 5 page table that breaks the reading flow, should be placed here
 
-\todo{check bibstyle - check all relevant docs in Lit review folder are included}
+%\todo{check bibstyle - check all relevant docs in Lit review folder are included}
 
 \addcontentsline{toc}{section}{Product Branding Etymology}
 %excursus
@@ -36,9 +36,9 @@ More information: \url{https://stackoverflow.com/questions/42982159/differences-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
+%\clearpage
 
-\section*{Documentation (Base) URLs}
+\section*{Documentation}
 
 %\todo{use a base url to avoid extensive text in footnotes with href such that a click would still redirect right\\ -kbase \\ -Alexa blogs\\
 %\\
@@ -48,8 +48,27 @@ More information: \url{https://stackoverflow.com/questions/42982159/differences-
 %}
 
 
+\subsection*{(Base) URLs}
+
+
+\begin{flushleft}
+	\begin{tabu} to \textwidth{X |X[2]}
+
+Amazon Web Services & \t{a\t{ws}} \\
+Alexa Skills Kit & \t{a\t{sk}} \\
+GitHub Repositories & \t{GH} \\
+Node.js Documenation & \url{https://nodejs.org/api/} \\
+JavaScript Documentation & \shortstack[l]{\url{https://developer.mozilla.org/en-US/docs/Web/JavaScript} \\(Mozzila Developer Network)}\\
+
+\end{tabu}
+\end{flushleft}
+
+
+
+
 
 \subsection*{Amazon Web Services - \t{a\t{ws}}}
+
 
 
 \begin{flushleft}
@@ -72,6 +91,14 @@ AWS Glossary &
 
 Documentation &
 \url{https://developer.amazon.com/docs/custom-skills/} \\
+
+Guidelines & \url{https://developer.amazon.com/designing-for-voice/what-alexa-says/}\\
+
+Glossary & \shortstack[l]{
+\url{https://developer.amazon.com/docs/ask-overviews/alexa-skills-kit-glossary.html}\\ \url{https://developer.amazon.com/designing-for-voice/glossary/}}\\
+
+
+
 CLI Reference &
 \url{https://developer.amazon.com/docs/smapi/ask-cli-command-reference.html}\\
 
@@ -79,18 +106,21 @@ Dialogue Interface Reference (Elicitation, Directives) &
 \url{https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html}\\
 
 Interaction Model Schema (Skill Management API) &
-\url{https://developer.amazon.com/docs/smapi/interaction-model-schema.html} and
-\url{https://developer.amazon.com/docs/custom-skills/create-the-interaction-model-for-your-skill.html}\\
+\shortstack[l]{\url{https://developer.amazon.com/docs/smapi/interaction-model-schema.html} \\
+\url{https://developer.amazon.com/docs/custom-skills/create-the-interaction-model-for-your-skill.html}}\\
 
 Slot Type Reference (Names, Dates, Times, Durations, Numbers - Language based)&
 \url{https://developer.amazon.com/docs/custom-skills/slot-type-reference.html}\\
 
-%Handling Requests & \url{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html}
+
+Utterances and Slot Types & \shortstack[l]{https://developer.amazon.com/docs/custom-skills/create-intents-utterances-and-slots.html \\  \url{https://developer.amazon.com/docs/custom-skills/best-practices-for-sample-utterances-and-custom-slot-type-values.html}}\\
+
+Handling Requests & \url{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html} \\
 %
 %\href{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html}{\t{a\t{sk}}/handle-requests-sent-by-alexa.html}
 
 
-\hline
+%\hline
 
 
 \end{tabu}
@@ -104,8 +134,8 @@ Slot Type Reference (Names, Dates, Times, Durations, Numbers - Language based)&
 		
 		
 A Skill Template with API Calls: & 
-\url{https://github.com/skilltemplates/api-starter-alexa} and 
-\url{https://http://skilltemplates.com}\\ 
+\shortstack[l]{\url{https://github.com/skilltemplates/api-starter-alexa} \\ 
+\url{https://http://skilltemplates.com}}\\ 
 Node.js code &
 \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs}\\
 
@@ -128,15 +158,17 @@ Dialog Management and Entity Resolution &
 Expanded Utterances from template &
 \url{https://github.com/alexa-js/alexa-utterances}\\
 
-Alexa Server Simulation (Deprecated) & 
-\url{https://github.com/alexa-js/alexa-app-server/tree/master/examples} and https://github.com/matt-kruse/alexa-app\\
+Alexa Server Simulation (Deprecated) & \shortstack[l]{
+\url{https://github.com/alexa-js/alexa-app-server/tree/master/examples} \\ \url{https://github.com/matt-kruse/alexa-app}}\\
 
 ASK for Java & \url{https://github.com/alexa/alexa-skills-kit-sdk-for-java}\\
 
-Sample Skill & \url{https://github.com/alexa/skill-sample-nodejs-fact} and \url{https://github.com/alexa/skill-sample-nodejs-howto/blob/master/instructions/1-voice-user-interface.md} and \url{https://github.com/alexa/skill-sample-nodejs-decision-tree}\\
+Sample Skills & \shortstack[l]{\url{https://github.com/alexa/skill-sample-nodejs-fact} \\ \url{https://github.com/alexa/skill-sample-nodejs-howto/blob/master/instructions/1-voice-user-interface.md} \\ \url{https://github.com/alexa/skill-sample-nodejs-decision-tree}}\\
+
+Multi-Turn Conversation (Decision Trees) & \url{https://github.com/alexa/skill-sample-nodejs-decision-tree}\\
 
 
-SDK Development & \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs}
+SDK Development & \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs}\\
 
 	\end{tabu}
 \end{flushleft}
