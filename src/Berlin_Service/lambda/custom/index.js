@@ -308,7 +308,6 @@ const DE_handlers = {
     },
 
 
-
     'DL_Costs_Intent_Was_kostet_eine_Dienstleistung': function () {
         // delegate to Alexa to collect all the required slots
         // here a confirmation of the service name
@@ -414,11 +413,6 @@ const DE_handlers = {
     },
 
 
-
-
-
-
-
     'DL_Prereq_Intent_Was_muss_ich_erfuellen_fuer_die_Dienstleistung': function () {
         // delegate to Alexa to collect all the required slots
         // here a confirmation of the service name
@@ -522,10 +516,6 @@ const DE_handlers = {
         );
         // }
     },
-
-
-
-
 
 
     'DL_Book_Intent_Termin_buchen_fuer_eine_Dienstleistung': function () {

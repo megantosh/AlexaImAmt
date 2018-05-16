@@ -56,9 +56,10 @@ More information: \url{https://stackoverflow.com/questions/42982159/differences-
 
 Amazon Web Services & \t{a\t{ws}} \\
 Alexa Skills Kit & \t{a\t{sk}} \\
-GitHub Repositories & \t{GH} \\
+GitHub Repositories & \t{gh} \\
 Node.js Documenation & \url{https://nodejs.org/api/} \\
-JavaScript Documentation & \shortstack[l]{\url{https://developer.mozilla.org/en-US/docs/Web/JavaScript} \\(Mozzila Developer Network)}\\
+JavaScript Documentation & \url{https://developer.mozilla.org/en-US/docs/Web/JavaScript} \\
+	& (Mozzila Developer Network)\\
 
 \end{tabu}
 \end{flushleft}
@@ -78,7 +79,7 @@ JavaScript Documentation & \shortstack[l]{\url{https://developer.mozilla.org/en-
 
 
 AWS Glossary &
-\url{https://docs.aws.amazon.com/general/latest/gr/glos-chap.html}\\
+\url{https://docs.aws.amazon.com/general/latest/gr/glos-chap.html}\\ 
 
 \end{tabu}
 \end{flushleft}
@@ -90,32 +91,38 @@ AWS Glossary &
 	\begin{tabu}to\textwidth{X |  X[2]}
 
 Documentation &
-\url{https://developer.amazon.com/docs/custom-skills/} \\
+\url{https://developer.amazon.com/docs/custom-skills/} \\ \hline
 
-Guidelines & \url{https://developer.amazon.com/designing-for-voice/what-alexa-says/}\\
+Guidelines & \url{https://developer.amazon.com/designing-for-voice/what-alexa-says/}\\ \hline
 
-Glossary & \shortstack[l]{
-\url{https://developer.amazon.com/docs/ask-overviews/alexa-skills-kit-glossary.html}\\ \url{https://developer.amazon.com/designing-for-voice/glossary/}}\\
+Glossary & 
+%\shortstack[l]{
+\url{https://developer.amazon.com/docs/ask-overviews/alexa-skills-kit-glossary.html}\\ & \url{https://developer.amazon.com/designing-for-voice/glossary/}\\ \hline
 
 
 
 CLI Reference &
-\url{https://developer.amazon.com/docs/smapi/ask-cli-command-reference.html}\\
+\url{https://developer.amazon.com/docs/smapi/ask-cli-command-reference.html}\\ \hline
 
 Dialogue Interface Reference (Elicitation, Directives) &
-\url{https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html}\\
+\url{https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html}\\ \hline
 
 Interaction Model Schema (Skill Management API) &
-\shortstack[l]{\url{https://developer.amazon.com/docs/smapi/interaction-model-schema.html} \\
-\url{https://developer.amazon.com/docs/custom-skills/create-the-interaction-model-for-your-skill.html}}\\
+%\shortstack[l]{
+	\url{https://developer.amazon.com/docs/smapi/interaction-model-schema.html} \\ 
+& \url{https://developer.amazon.com/docs/custom-skills/create-the-interaction-model-for-your-skill.html}\\ \hline
+
+SSML and Speechcons Reference &
+\url{https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html}\\ \hline
+
 
 Slot Type Reference (Names, Dates, Times, Durations, Numbers - Language based)&
-\url{https://developer.amazon.com/docs/custom-skills/slot-type-reference.html}\\
+\url{https://developer.amazon.com/docs/custom-skills/slot-type-reference.html}\\\hline
 
 
-Utterances and Slot Types & \shortstack[l]{https://developer.amazon.com/docs/custom-skills/create-intents-utterances-and-slots.html \\  \url{https://developer.amazon.com/docs/custom-skills/best-practices-for-sample-utterances-and-custom-slot-type-values.html}}\\
+Utterances and Slot Types & \url{https://developer.amazon.com/docs/custom-skills/create-intents-utterances-and-slots.html} \\  & \url{https://developer.amazon.com/docs/custom-skills/best-practices-for-sample-utterances-and-custom-slot-type-values.html}\\ \hline
 
-Handling Requests & \url{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html} \\
+Handling Requests & \url{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html} \\ \hline
 %
 %\href{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html}{\t{a\t{sk}}/handle-requests-sent-by-alexa.html}
 
@@ -134,42 +141,43 @@ Handling Requests & \url{https://developer.amazon.com/docs/custom-skills/handle-
 		
 		
 A Skill Template with API Calls: & 
-\shortstack[l]{\url{https://github.com/skilltemplates/api-starter-alexa} \\ 
-\url{https://http://skilltemplates.com}}\\ 
+\url{https://github.com/skilltemplates/api-starter-alexa} \\ 
+& \url{https://http://skilltemplates.com}\\  \hline
 Node.js code &
 \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs}\\
 
 Building Responses in Node.js & 
-\url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/wiki/Response-Building}\\
+\url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/wiki/Response-Building}\\ \hline
 
 
 Alexa Cookbook (maintained by Amazon Team) & 
-\url{https://github.com/alexa/alexa-cookbook/}\\
+\url{https://github.com/alexa/alexa-cookbook/}\\ \hline
 
 Handling Responses (Multi-turn conversation) & 
-\url{https://github.com/alexa/alexa-cookbook/tree/master/handling-responses}\\
+\url{https://github.com/alexa/alexa-cookbook/tree/master/handling-responses}\\ \hline
 		
 SSML Audio & 
-\url{https://github.com/alexa/alexa-cookbook/tree/0afbfcb8ddcd911e83216b4528b20f3a1628c99f/handling-responses/ssml-audio}\\
+\url{https://github.com/alexa/alexa-cookbook/tree/0afbfcb8ddcd911e83216b4528b20f3a1628c99f/handling-responses/ssml-audio}\\ \hline
 		
 Dialog Management and Entity Resolution &		
-		\url{https://github.com/alexa/skill-sample-nodejs-petmatch/tree/66cbb8029863444ffa7b51ce22528f29740854bc}\\
+		\url{https://github.com/alexa/skill-sample-nodejs-petmatch/tree/66cbb8029863444ffa7b51ce22528f29740854bc}\\ \hline
 
 Expanded Utterances from template &
-\url{https://github.com/alexa-js/alexa-utterances}\\
+\url{https://github.com/alexa-js/alexa-utterances}\\ \hline
 
-Alexa Server Simulation (Deprecated) & \shortstack[l]{
-\url{https://github.com/alexa-js/alexa-app-server/tree/master/examples} \\ \url{https://github.com/matt-kruse/alexa-app}}\\
+Alexa Server Simulation (Deprecated) & 
+\url{https://github.com/alexa-js/alexa-app-server/tree/master/examples} \\ 
+& \url{https://github.com/matt-kruse/alexa-app}\\ \hline
 
-ASK for Java & \url{https://github.com/alexa/alexa-skills-kit-sdk-for-java}\\
+ASK for Java & \url{https://github.com/alexa/alexa-skills-kit-sdk-for-java}\\ \hline
 
-Sample Skills & \shortstack[l]{\url{https://github.com/alexa/skill-sample-nodejs-fact} \\ \url{https://github.com/alexa/skill-sample-nodejs-howto/blob/master/instructions/1-voice-user-interface.md} \\ \url{https://github.com/alexa/skill-sample-nodejs-decision-tree}}\\
+Sample Skills & \url{https://github.com/alexa/skill-sample-nodejs-fact} \\ & \url{https://github.com/alexa/skill-sample-nodejs-howto/blob/master/instructions/1-voice-user-interface.md} \\ & \url{https://github.com/alexa/skill-sample-nodejs-decision-tree}\\ \hline
 
-Multi-Turn Conversation (Decision Trees) & \url{https://github.com/alexa/skill-sample-nodejs-decision-tree}\\
+Multi-Turn Conversation (Decision Trees) & \url{https://github.com/alexa/skill-sample-nodejs-decision-tree}\\ \hline
 
 
 SDK Development & \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs}\\
-
+ \hline
 	\end{tabu}
 \end{flushleft}
 
@@ -368,7 +376,7 @@ source: \textsc{ASK Documentation} \footnote{\t{a\t{sk}}\href{https://developer.
 %###################### Appendix A          ########################################
 %###################################################################################
 %uncomment, if desired
-\newpage
+%\newpage
 \addcontentsline{toc}{section}{Abbreviations}
 \section*{List of Acronyms and Abbreviations }
 \begin{flushleft}
@@ -402,6 +410,7 @@ source: \textsc{ASK Documentation} \footnote{\t{a\t{sk}}\href{https://developer.
 \textbf{AVS}	&	Alexa Voice Service\\
 \textbf{AWS}	&	Amazon Web Serivces\\
 
+\textbf{BAFöG}	&	Bundesausbildungsförderungsgesetz\\
 \textbf{B2B}	&	business-to-business\\
 \textbf{B2C}	&	business-to-consumer\\
 \textbf{BMG}	&	Bundesmeldegesetz, [German] Federal Act of Registration\\
@@ -485,7 +494,7 @@ services )\\
 
 \textbf{UN}		&	United Nations\\
 \textbf{URI}		&	Uniform Resource Identifier\\
-
+\textbf{UTF} & Unicode Transformation Format\\
 
 \textbf{VUI}	&	Voice User Interface\\
 
@@ -579,9 +588,9 @@ services )\\
 
 
 
-\textbf{Bot}				&	Unless otherwise mentioned, a chatbot\\
-\textbf{Hitlist}			&	erklärung\\
-\textbf{Voice-first}		& \shortstack[l]{an always-on, intelligent piece of hardware, where the \\ primary interface is voice, both input and output.}\\
+%\textbf{Bot}				&	Unless otherwise mentioned, a chatbot\\
+%\textbf{Hitlist}			&	erklärung\\
+%\textbf{Voice-first}		& \shortstack[l]{an always-on, intelligent piece of hardware, where the \\ primary interface is voice, both input and output.}\\
 
 %\textbf{abk}				&	erklärung\\
 %\textbf{abk}				&	erklärung\\

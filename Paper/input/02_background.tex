@@ -226,7 +226,7 @@ Hence, out of public interest, governments are advised not only to focus on digi
 Especially at times of change like with the introduction of autonomous driving and the regulations related to it, transparency is a continuous expectation from the people. As stated above, since transparency heavily relies on public presence, which in turn depends on availing more communication platforms, voice assistant services are definitely worthy of consideration in that context.
 
 
-\section{Evaluation of Governments Presence in the Cloud}
+\section{Evaluation of Government Presence in the Cloud}
 With fast-paced technological advancements, advocacy for a fair use policy is equally important to the consumers as to the industry responsible for spreading them. Raising awareness about the necessity for legal adjustments %new standards %and what is capable of 
 plays a determining role in policy-making and governance of ICT businesses. As we experience how personal data has become a valuable commodity to enterprises, advocating for tightening regulations to avoid misuse of such sensitive data has become crucial over the last years. In the search for methods of circumvention to new kinds of monopolies, cybercrime as well as other frauds and immoral breaches, several governments worldwide have addressed the potentials and threats of data collection for Information Systems in use with respect to different local contexts. 
 
@@ -248,7 +248,7 @@ As there are very few international regulations, it remains up to each federatio
 	\centering
 
 %\begin{wrapfigure}{r}{0.69\textwidth}
-	\caption[Policy-Making strategies]{In a common government Scenario, increasing demand and degreasing budget push against each other and require flexible resource allocation solution. With all these factors considered, a cloud-first approach can combine all elements in the policy-making decision. Based on Bockelman in \cite{aws:pubsecsum}}
+	\caption[Policy-Making strategies]{In a common government scenario, increasing demand and degreasing budget push against each other and require flexible resource allocation solution. With all these factors considered, a cloud-first approach can combine all elements in the policy-making decision. Description based on Bockelman in \cite{aws:pubsecsum}}
 	\label{aws:policymaking}
 	\includegraphics[width=10cm]{Govcharts/ukhilo} 
 %\end{wrapfigure}
@@ -352,6 +352,7 @@ A first look on the Vienna government website beyond the chatbot gives a very co
 }
 
 &
+
 \includegraphics[width=0.38\textwidth]{wienwebbot}
 	\end{tabular}	
 \end{table}
@@ -398,7 +399,7 @@ A first look on the Vienna government website beyond the chatbot gives a very co
 %\end{enumerate}
 
 \noindent Asking for the same service on the chatbot, we get a % completely 
-different overview as shown. % here. %Figure \ref{wienbot:webbot}
+different overview as shown above. % here. %Figure \ref{wienbot:webbot}
 %
 %\begin{figure}[h!]
 %	\label{wienbot:webbot}
@@ -675,9 +676,9 @@ Each of the available topics is associated with one or many departments and rela
 
 
 
+\section{Summary}
 
-
-
+The EGDI and OSI measure countries' performance with respect to online services. Germany has been in the top 25 countries for the past three years, maintaining an average position within Europe. With the GDPR in effect starting May 24, 2018, data regulations paving the way towards a fairer use policy in Germany and more governmental engagement online. Our use case can be compared to already existing examples from Wienbot and GeorgiaGov. This work incorporates common strategies between both interfaces, while investigating alternative methods to interact with the user as we look into our specific use case in Chapter \ref{blnusecase}. 
 
 
 
@@ -762,7 +763,7 @@ Similar to an IBAN without a checksum, LeiKa's key structure is divided into the
 - Performing Entity Detail  - \textit{Verrichtungsdetail}\\
 \end{flushleft}
 
-Leika Keys are part of the data provided to the Virtual Citizen Assistant's back end and help us carry out an implementation not only for Berlin through its universal identification system using serial numbering.
+Leika Keys are part of the data provided to the Virtual Citizen Assistant's back-end and help us carry out an implementation not only for Berlin through its universal identification system using serial numbering.
 
 
 \section{Understanding The Virtual Citizen Assistant}
@@ -804,7 +805,7 @@ By deploying an instance of the chatbot locally, we understand that it is built 
 
 \footnotetext{some graphic elements adopted from Oracle Java Tutorials - \\ \url{https://docs.oracle.com/javaee/5/tutorial/doc/bnabo.html}}
 
-\section{Building a Voice Service on The Virtual Citizen Assistant}
+\section[Data Structure I]{Building a Voice Service on The Virtual Citizen Assistant -  Data Structure I}
 
 
 In the Berlin domain, we narrow down our compiled choice of files for reuse. At this initial stage we cannot depend on reusing code unless we can tailor our platform, yet to be chosen at this stage, to do so. This turned out to be partially applicable as our choice of platform in Section \ref{choiceOfPlatform} shows that we can mostly make the best use of data-containing files relevant to our use-case rather than scripts of application or business logic. Such data files exist in JSON format for the Virtual Citizen Assistant. Data is meant here as %files that contain mostly 
@@ -835,7 +836,7 @@ Starting with \mintinline{bash}{./ssds-data-berlin/json/dienstleistungen/} \mint
 %							  \qroof{\textit{to use}}.CP ]]]]]]]
 
 \begin{figure}[H]
-	\caption[File Structure of  \lstinline|Dienstleistungen.json|]{Primary Nodes of \mintinline{bash}{Dienstleistungen.json} including metadata about each service, e.g. processing time and cost.}
+	\caption[Structure of  \mintinline{bash}{Dienstleistungen.json}]{Primary Nodes of \mintinline{bash}{Dienstleistungen.json} including metadata about each service, e.g. processing time and cost.}
 	\label{LeiKaJSON1}
 	\includegraphics[width=0.9\textwidth]{DLprim}
 \end{figure}
@@ -855,7 +856,7 @@ Starting with \mintinline{bash}{./ssds-data-berlin/json/dienstleistungen/} \mint
 \begin{flushleft}
 
 
-From back end side, the files mentioned above reporesent cores in a Solr index. The latest version of the underlying Solr server (May 2018) comprises the following cores:
+From back-end side, the files mentioned above reporesent cores in a Solr index. The latest version of the underlying Solr server (May 2018) comprises the following cores:
 
 %\begin{itemize}
 %	\item 
@@ -1065,7 +1066,7 @@ After understanding the links between the API and the sitemap of the Berlin City
 	
 	\begin{tabu} to \textwidth{X[3]|X[11]}
 %		\hline
-		Key\textless Type \textgreater  & \footnotesize{\textit{ \textcolor{red}{[Omitted Text]} \textsf{in} Example Value }} | Description | \textbf{Remarks on Syntax}  \\ \hline \hline
+		Key\textless Type \textgreater  & \footnotesize{\textit{ \textcolor{red}{[Omitted Text]}} \textsf{in} \textit{Example Value}}  | Description | \textbf{Remarks on Syntax}  \\ \hline \hline
 		
 		\shortstack[l]{\textcolor{white}{text}\\\lstinline|id| \\ \lstinline|<int>| }& \shortstack[l]{\textcolor{white}{text}\\ \footnotesize{\textit{326233}} \\ public service ID % on \href{https://service.berlin.de}{service.berlin.de} 
 	}\\
@@ -1254,7 +1255,7 @@ There are other elements not directly available in the Solr index as fields such
 \section{The Virtual Citzen Assistant at Runtime}
 
 \begin{wrapfigure}{l}{0.5\textwidth}
-	\caption[simplified demonstration of nodes traversal]{simplified demonstration of how nodes are traversed in Virtual Citizen Assistant}
+	\caption[Simplified Demonstration of Nodes' Traversal]{Simplified demonstration of how nodes are traversed in Virtual Citizen Assistant}
 	\label{chatbotnodes}
 	\includegraphics[width=7cm]{chatbotnodes}
 \end{wrapfigure}
@@ -1634,6 +1635,7 @@ We already unveiled in Section \ref{approachgoals} that Alexa will be the underl
 	As such, dialogue directives are a clean way to manage sessions with one of three options: 
 	
 	\begin{itemize}
+		\itemsep0em
 		\item Delegating the collecting of required slots to Alexa
 		\item handling the multi-turn dialogue in the fulfilment code
 		\item using a hybrid of the above.
@@ -1648,13 +1650,19 @@ We already unveiled in Section \ref{approachgoals} that Alexa will be the underl
 	
 	
 	\subsection*{Fulfilment}~\label{fulfillment:def}	
-	Building on the intents that the user gives to Alexa, we need to fulfil the command (after all the prompts and confirmations). This happens in our back end code. Fulfilment is what happens when our back end code runs. The code itself can vary in implementation using different programming languages like Java or Python, in hosting using our own HTTPS endpoint or a Lambda instance, and the result is what the programme delivers. This could range from changing the state of a device, e.g. turning a lamp on to making an API call that delivers text Alexa says. Programme implementation is very flexible to the developer's needs.
+	Building on the intents that the user gives to Alexa, we %need to 
+	fulfil the command (after all prompts and confirmations) %. This happens 
+	in our back-end code. %Fulfilment is what happens when our back-end code runs. 
+	The code itself can vary in implementation using different programming languages %like Java or Python, in 
+	or 
+	hosting %using our own HTTPS endpoint or a Lambda instance, 
+	and the result is what the programme delivers. This is flexible and could range from changing the state of a device, e.g. turning a lamp on to making an API call that delivers text Alexa says. %Programme implementation is very flexible to the developer's needs.
 	
 	\subsection*{Interaction Model}~\label{interactionMdl:def}
 	This is the Skill configuration, also considered as a front-end for the Skill. It is effectively a JSON file of a strict schema that contains all information about what the user says in terms of Utterances, Slots and their types (enumerations of Lists which Alexa tries to resolve our spoken text to). From Alexa's side of speaking, the interaction model only contains the prompts Alexa says to collect slots in the dialog management process (see dialog directives \ref{directives:def})
 	
 	\subsection*{Multi-Turn Conversation}~\label{multiturn:def}
-	A multi-turn (or multi-part) conversation is one, where a dialogue of more than one question and answer takes place. In Alexa's context, this is identified through the \mintinline{text}{dialogState} property and is responsible for collecting / verifying information before it being sent to the back end for fulfillment.\\
+	A multi-turn (or multi-part) conversation is one, where a dialogue of more than one question and answer takes place. In Alexa's context, this is identified through the \mintinline{text}{dialogState} property and is responsible for collecting / verifying information before it being sent to the back-end for fulfillment.\\
 	Example: For the intent \mintinline{text}{transfer_drivers_license}, which includes a required slot that needs the value \mintinline{text}{originOfLicense}, which is of type \mintinline{text}{countryList}, here is a possible 
 	
 	
@@ -2349,7 +2357,23 @@ It can be used with an account linked to the German store to a device language s
 %%%%%%%%%%%%%%%
 
 
-We understand the choice of platform is significant at an initial stage, since it decides on the architecture of the software we develop with. Given that we will have a constraint related to the number of users, we find through the conducted survey that Alexa Skills Kit and AWS are worth embracing as a bilateral ecosystem, to users and developers. In the next chapter, we familiarise ourselves with potential and limitations of this choice.
+\section{Summary}
+
+We understand the choice of platform is significant at an initial stage, since it decides on the architecture of the software we develop with. Given that we will have a constraint related to the number of users, we find through the conducted survey that Alexa Skills Kit and AWS are worth embracing as a bilateral ecosystem, to users and developers. Presenting the tangible options that have an interesting relationship with our use-case due to the spread of the platform or our predictions in its relevance as discussed through the comparative literature and preliminary survey results,
+in the next chapter, we familiarise ourselves with potential and limitations of this choice.
+We also have a questionnaire available for deeper analysis using the statistical indices obtained. With Likert scales modi and mean, the involved correlations can give us further predictions about potential use.
+
+
+
+
+
+%%%%%%%%%%%%% %%%%%%%%%%%%% %%%%%%%%%%%%% %%%%%%%%%%%%% %%%%%%%%%%%%% %%%%%%%%%%%%% 
+
+
+
+
+
+
 
 
 \chapter{Amazon's Ecosystem}
@@ -2682,7 +2706,7 @@ By exploring these products, building blocks, platforms and runtime environments
 	
 
 
-\section{Skill Structure}
+\section[Data Structure II]{Skill Structure - Data Structure II}
 
 
 %Finally, 
@@ -2697,8 +2721,8 @@ Disregarding the programming language used for development, these statically gen
 %\item[
 \subsection*{\mintinline{json}{skill.json}}
 %] 
-The Skill manifest file including its publication name on the Amazon website, invocation name in each language, a description of the Skill readable by a human, author of the Skill and other properties
-\inote{include our sample in Appendix?}
+The Skill manifest file including its publication name on the Amazon website, invocation name in each language, a description of the Skill readable by a human, author of the Skill and other properties.
+%\inote{include our sample in Appendix?}
 
 %\item[
 \subsection*{\mintinline{json}{<locale_code>.json}}
@@ -2717,6 +2741,7 @@ A manifest file for required dependencies (installable through NPM for instance 
 %\clearpage
 
 \section[Alexa in the Eye of the Beholder]{Alexa in the Eye of the Beholder - \\Interfaces and Operation}
+\label{testdevices}
 
 Briefly going over the options available to use Alexa, we present and compare the different Hardware product lines and software solutions developed by Amazon or compatible with their voice assistant in terms of usability configurations, i.e. presentation of voice and graphical interfaces.
 
@@ -2812,7 +2837,7 @@ A conversation starts with any of the four wake words below, followed by the lau
 	, \ \ \ \ 
 	\underbrace{\overbrace{ask}^{launch \ action}}_{\shortstack[l]{begin, launch, load\\open, play, resume\\run, start, tell, use}}
 	\ \ \ 
-	\underbrace{\overbrace{<my \ Skill>}^{invocation \ name}}_{\shortstack{Citizen \ Assistant \\ Georgia Gov}}
+	\underbrace{\overbrace{<my \ Skill>}^{invocation \ name}}_{\shortstack{Berlin \ Serivce \\ Georgia Gov}}
 	\ \ \
 	\underbrace{\overbrace{<to \ do \ something>}^{utterance}}_{\shortstack[r]{to tell me the costs of a license transfer\\how do I get my license transferred}}
 \]
@@ -2825,12 +2850,12 @@ A conversation starts with any of the four wake words below, followed by the lau
 
 
 
-With this insight we are able to test our Alexa Skill through various methods, depending on the test type. Tests should be run individually and combined. We also have a separation of concerns between development and tests for the interaction model as well as the Skill back end code.
+With this insight we are able to test our Alexa Skill through various methods, depending on the test type. Tests should be run individually and combined. We also have a separation of concerns between development and tests for the interaction model as well as the Skill back-end code.
 
 
 
 \section{Summary}
-Now that we have a thorough understanding of how AWS modules interact together, we are capable of determining the modules we will need in our Skill. With Lex, Polly, and Transcribe already put together to become the core of Alexa, we will designate our use of Lambda to implement the intent fulfilment and S3 to host stored assets (e.g. audio and images) we will need for the Skill. As we intend not to store sessions nor retain information from it, we will not use DynamoDB or any equivalent DBMS. Cloudwatch will help us log our Skill for back end and some front end tests (e.g. to see if Alexa transcribes our Audio the way we want). IAM is be used implicitly to set up the roles our Lambda function will take.  We use all testing software depending on whether we are testing Alexa's understanding, the way displays information on the screen (using cards), the way speech text sounds like and others. Noteworthy is that as much as the way conversation happens slightly differently with each of the device in Table \ref{alexaDeviceTable} due to how a session is kept or not (devices with button press do not give a reprompt), images display differently on each of the listed devices.% listed in Table \ref{alexaDeviceTable}.
+Now that we have a thorough understanding of how AWS modules interact together, we are capable of determining the modules we will need in our Skill. With Lex, Polly, and Transcribe already put together to become the core of Alexa, we will designate our use of Lambda to implement the intent fulfilment and S3 to host stored assets (e.g. audio and images) we will need for the Skill. As we intend not to store sessions nor retain information from it, we will not use DynamoDB or any equivalent DBMS. Cloudwatch will help us log our Skill for back-end and some front-end tests (e.g. to see if Alexa transcribes our Audio the way we want). IAM is be used implicitly to set up the roles our Lambda function will take.  We use all testing software depending on whether we are testing Alexa's understanding, the way displays information on the screen (using cards), the way speech text sounds like and others. Noteworthy is that as much as the way conversation happens slightly differently with each of the device in Table \ref{alexaDeviceTable} due to how a session is kept or not (devices with button press do not give a reprompt), images display differently on each of the listed devices.% listed in Table \ref{alexaDeviceTable}.
 Moreover, with the given Skill structure we know how to approach development and change Skill configurations %and dependencies  
 programmatically
 or through the web interfaces (Alexa Developer Console - web, ASK and AWS CLIs - locally). 

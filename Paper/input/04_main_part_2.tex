@@ -1,10 +1,15 @@
 \chapter{Skill Implementation}%: \inote{Kosten-/Terminabfrage}}
 \label{maintwo}
 
-In this chapter we present our implementation and hands-on experience throughout.
-The code is available on Github (see Chapter \ref{introduction}) with plans for development beyond this thesis. A copy is attached to this work, but cannot fully operate as a standalone software. The runtime environment is offered through the Alexa Skills kit %\inote{github, the new amazon account? ...}
-There are many ways to perform setup, several languages we can use to programme 
-our Skill and throughout the development process some of these steps were changed. We present the most recent interfaces and implementation possibility using Node.js hosted on AWS Lambda %, However, this is very likely to change in a near future.
+In this chapter we present our implementation solution through the code provided. %and hands-on experience throughout.
+%The code 
+%available 
+In addition, the project on Github (see Chapter \ref{introduction}) is expected to be maintained %with plans for development 
+beyond the scope of this thesis. A copy is attached to this work, but cannot fully operate as a standalone software given the dependencies it has to Alexa's SDK described in previous chapters. The runtime environment is offered through the ASK. %\inote{github, the new amazon account? ...}
+There are many ways to %perform setup
+set up the project, several languages we can use to programme 
+our Skill (Chapter \ref{mainone}) and throughout the development process some of these steps were altered from Amazon's side. %changed. 
+As mentioned, we settle for the most recent interfaces and implementation possibility using Node.js hosted on AWS Lambda. %, However, this is very likely to change in a near future.
 
 \section{Setup}
 
@@ -16,12 +21,13 @@ our Skill and throughout the development process some of these steps were change
 For the environment setup, the following tools and credentials are necessary:
 
 \subsubsection*{Amazon Account}
-We use it in conjunction with AWS and the Alexa Developer Console. Any account previously created for the Amazon store is usable \footnote{e.g. from here  \url{https://aws.amazon.com/de/resources/create-account/}} as well as to test our skill. Once the account is activated on the developer console, the Skills in development become automatically reachable on any Alexa-enabled device linked to the same account (as an end-user).
+We use it in conjunction with AWS and the Alexa Developer Console. Any account previously created for the Amazon store is usable \footnote{e.g. from here  \url{https://aws.amazon.com/de/resources/create-account/}} as well as to test our Skill. Once the account is activated on the developer console, the Skills in development become automatically reachable on any Alexa-enabled device linked to the same account (as an end-user). Their invocation names also precede those of installed Skills. If two Skills in development have the same invocation name, the first registered one will be invoked.
 	
 \subsubsection*{Command Line Tools}
 \begin{itemize}
- \item \textbf{Python 3} or\textbf{ Ruby 4} need to be installed as a foundation for ASK CLI and AWS CLI.\\
-\item  A package manager such as Pip Installs Packages (\textbf{PIP}) for Python or \textbf{RubyGems} for Ruby.\\
+\itemsep0em
+\item \textbf{Python 3} or\textbf{ Ruby 4} need to be installed as a foundation for ASK CLI and AWS CLI.
+\item  A package manager such as Pip Installs Packages (\textbf{PIP}) for Python or \textbf{RubyGems} for Ruby.
 \item  Depending on OS, further packages and package managers might need to be installed. (e.g. for macOS: Command-Line Tools for Xcode, Homebrew, easyinstall). These will be prompted throughout the installation process.
 %\inote{brew, easyinstall python / win}
 
@@ -29,53 +35,75 @@ We use it in conjunction with AWS and the Alexa Developer Console. Any account p
 
 	
 \subsubsection*{API} 
-As introduced in Section \ref{Solr}, Our endpoint is a Solr Server that provides us with JSON responses to the queries we do through a RESTful interface from within the Lambda function (hosting back-end code) \footnote{reachable at the time of development on:\url{https://newsreel-edu.aot.tu-berlin.de/solr}}. Since the API endpoint was originally created for the Virtual Citizen Assistant, we need to readjust its output to meet Alexa's requirements.
+As introduced in Section \ref{Solr}, Our endpoint is a Solr Server that provides us with JSON responses to the queries we do through a RESTful interface from within the Lambda function (hosting back-end code) \footnote{reachable at the time of development on:\\\url{https://newsreel-edu.aot.tu-berlin.de/solr}}. Since the API endpoint was originally created for the Virtual Citizen Assistant, we need to readjust its output to meet Alexa's requirements and host a second instance of it to make it reachable not only locally, but also for Lambda. The containing server is secured with SSL to meet with AWS's encryption standards.
 
-
-\todo{
-Technology:	Lucene
-spell check. unscharfe suche
-…Tika / detect language / … it’s the golden standard
-Solr
-Data Structure: XML datei, (hierarchical)
-
-}
+%
+%\todo{
+%Technology:	Lucene
+%spell check. unscharfe suche
+%…Tika / detect language / … it’s the golden standard
+%Solr
+%Data Structure: XML datei, (hierarchical)
+%
+%}
 
 
 
 
 	
-\subsubsection*{Audio} An encoder to create 48kpbs constant bitrate MP3-Format. Audacity \footnote{\url{http://www.audacityteam.org/}} or ffmpeg\footnote{convert by running \lstinline|$ ffmpeg -i <inFile> -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 <outFile.mp3>|} can be used to convert to an Alexa-friendly file format like in the \textsc{ASK Documentation}\footnote{\url{https://developer.amazon.com/de/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html\#h3_converting_mp3}}.
+\subsubsection*{Audio} An encoder to create 48kpbs constant bitrate MP3-Format. Audacity \footnote{\url{http://www.audacityteam.org/}} or FFmpeg\footnote{convert by running \lstinline|$ ffmpeg -i <inFile> -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 <outFile.mp3>|} can be used to convert to an Alexa-friendly file format like in the \textsc{ASK Documentation}\footnote{\url{https://developer.amazon.com/de/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html\#h3_converting_mp3}}.
 	
 
 
 \subsection*{Managing AWS Credentials}
 
-With the Amazon account we just created (or already have), we will proceed to extend it for developer registration. As we move within the free tier of AWS, no charges were applied. However, a credit card might be required for eventual future billings if the tier limitations were exceeded. We mention pricing schemes in Section \ref{choiceOfPlatform} \footnote{More information on pricing available on: \url{https://aws.amazon.com/de/pricing/}}. Developer registration needs to happen on AWS website\footnote{\url{http://aws.amazon.com}} as well as on the Amazon Developer Portal\footnote{\url{https://developer.amazon.com}} where a some information is required such as company name and business sector. From this point on, anything that manages the back-end of our skill will be associated with AWS Modules, primarily Lambda. Skill configuration and interaction model are hosted on Alexa Skills Kit separately, i.e. managed through the Amazon Developer Console. During the development process, Alexa Skills Kit diverged from the Amazon Developer Console and has become a separate entity called Alexa Console. While still hierarchically belonging to the Amazon Developer Console and reachable from the same domain, except for the developer profile, all skill-related information we need to use are modifiable from within the Alexa Console\footnote{\url{https://developer.amazon.com/alexa-skills-kit}}
+With the Amazon account we just created (or already acquired), we proceed to extend it for developer use by registering with AWS. %registration. 
+As we move within the free tier of AWS, no charges were applied. A credit card might be required for eventual future billings if the tier limitations were exceeded. We mention pricing schemes in Section \ref{devmodels}. More information on pricing available on AWS \footnote{\url{https://aws.amazon.com/de/pricing/}}. Developer registration needs to happen on AWS website\footnote{\url{http://aws.amazon.com}} as well as on the Amazon Developer Portal\footnote{\url{https://developer.amazon.com}} separately, where some additional information is required such as company name and business sector. A vendor ID required for use with Amazon is generated. From this point on, any code that manages the back-end of our skill will be associated with AWS Modules, primarily Lambda. Skill configuration and interaction model are hosted on Alexa Skills Kit separately, i.e. managed through the Amazon Developer Console. During the development process, Alexa Skills Kit diverged from the Amazon Developer Console and has become a separate entity called Alexa Console. While still hierarchically belonging to the Amazon Developer Console and reachable from the same domain, except for the developer profile, all Skill-related information we need to use are modifiable from within the Alexa Console\footnote{\url{https://developer.amazon.com/alexa-skills-kit}}. The separation from Lambda also means that code we need from the interaction model has to be duplicated from the Skill, since Lambda does not have access to Alexa Skill and can only be used as a trigger
 
 \subsubsection*{Generating Access Keys}~\label{accesskeys}
 Linking happens through a private and public key pair - the \textbf{access keys} consisting of a
-combination of an \textit{access key ID} (like \lstinline|AK..7EXAMPLE|) and a \textit{secret access key} (e.g \lstinline|{wJalrXUt..I/K7..G/bPx..YEXAMPLEKEY|). We use access keys to sign API requests that you make to AWS.
+combination of an \textit{access key ID} (like \lstinline|AK..7EXAMPLE|) and a \textit{secret access key} (e.g \lstinline|{wJalrXUt..I/K7..G/bPx..YEXAMPLEKEY|). We use access keys to sign API requests made to AWS.
 
-Creating Access Keys is described in the \textsc{AWS Documentation}\footnote{\url{https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html}}. At this time we interact with the IAM Module from AWS (Identity Access Management), which defines roles of each member in an organisation and partners linked to it, who can gain different levels of access to each module capabilites. Since we are only making basic use of AWS modules and our Lambda instance interacts only with our own API, there is no harm in using 
+Creating Access Keys is described in the \textsc{AWS Documentation}\footnote{\href{https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html}{\t{a\t{ws}}/\lstinline|/latest/gr/managing-aws-access-keys.html|}}. At this time we interact with the IAM Module from AWS (Identity Access Management) implicitly, which defines roles of each member in an organisation and partners linked to it, who can gain different levels of access to each module capabilities. Since we are only making basic use of AWS modules and our Lambda instance interacts only with our own API, there is no harm in using 
 
 
 \subsection*{Initialising The Development Environment}
 
-As minimum package requirements can vary a lot between one OS and another, using a virtual machine is suggested for teams. AWS offers Elastic Compute Cloud (EC2) as a service for virtual machines in the cloud. Although this step is mainly for performing command-line prompts later on, if opting for that, it is convenient to avail a web browser inside the virtual machine instance. Otherwise, for browser communication the tool we are using generates links that we would need to copy and paste into a browser outside of the virtual machine to link it with the Amazon account we use.
+As minimum package requirements can vary a lot between one OS and another, using a virtual machine is suggested for teams. AWS offers Elastic Compute Cloud (EC2) as a service for virtual machines in the cloud. Although this step is mainly for performing command-line prompts later on, %if opting for that, 
+with this option it is convenient to avail a web browser inside the virtual machine instance. Otherwise, for browser communication %the tool we are using
+AWS CLI generates URLs with the \mintinline{bash}{--no-browser} parameter that we %would need to copy and 
+paste into a browser outside of the virtual machine to link it with the Amazon account we use.
+
+%Once 
+
+\subsubsection*{Creating Lambda Instance}
+
+Although the ASK CLI makes it easy to perform multiple setup steps at once, at the time of this project, this option was not available. Having started with an AWS account in North Virginia as a server region as the only available server that accepts Alexa Skills as a trigger for Lambda, changing the server location to Ireland was complex in the sense that both servers are completely separated from one another \footnote{
+%my link to Amazon Developer Forums
+\url{https://forums.developer.amazon.com/questions/87860/ask-cli-eu-lambda-region.html?childToView=164883\#answer-164883}}.
+Hence the migration had to be done manually. Additionally, all CloudWatch logs are not transferable between regions. At the time of completion of this project, the AWS server based in Ireland (\mintinline{java}{eu-west-1}) % writing this th
+was the most preferable for latency. Moreover, as this project ends before AWS's terms were readjusted to accomodate with the GDPR, hosting on the Ireland server implied different regulations about code ownership and accessibility.
+
+Once a Lambda function is ready to be created, we assign it the role \mintinline{java}{lambda_Execution_basic} then link the trigger as an Alexa Skill.
+
+To make sure the Lambda instance is not invoked from nowhere else, we tie it to the Skill's resouce number in the trigger configuration.
+
+Verification through Application ID is described in the \textsc{ASK Documentation} \footnote{\href{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html\#request-verify}{\t{a\t{sk}}\lstinline|/handle-requests-sent-by-alexa.html\#request-verify|}}
 
 
-\todo{creating lambda alone}
-my link to Amazon Developer Forums
-\url{https://forums.developer.amazon.com/questions/87860/ask-cli-eu-lambda-region.html?childToView=164883#answer-164883}
-
-\todo{cmd --no-browser\\
-	setting up lambda alone not based on skill, since we want to use Ireland not US. so we create a new function and give it the IAM role
-	lambda\_Execution\_basic
-}
+%
+%\todo{creating lambda alone}
+%
+%
+%\todo{cmd --no-browser\\
+%	setting up lambda alone not based on skill, since we want to use Ireland not US. so we create a new function and give it the IAM role
+%	
+%}
 
 
 \subsection*{Installing Command-Line Tools}
+This script % offers an orientation on the configuration
+checks if resouces are available then installs the AWS and ASK CLIs.
 
 \begin{minted}[linenos,tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{bash}
 	$ which node			#check if installed
@@ -92,7 +120,7 @@ my link to Amazon Developer Forums
 \end{minted}
 
 
-
+\textsc{AWS documentation} \footnote{\href{https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html}{\t{a\t{ws}}/\lstinline|cli-chap-getting-started.html|}} provides more information on special configurations
 
 %\begin{minted}[linenos,tabsize=2,breaklines]{bash}
 
@@ -100,135 +128,171 @@ my link to Amazon Developer Forums
 
 
 \subsection*{Understanding the API Query parameters}
-HTTP(S) endpoint:
-\url{http://newsreel-edu.aot.tu-berlin.de/solr/#/d115}
-
-Rest Query
-Solr Syntax (only url. he knows solr better than i do)
-
-
-
+%HTTP(S) endpoint:
+%\url{http://newsreel-edu.aot.tu-berlin.de/solr/#/d115}
+Solr cores are accessible with the respective core name appended to the base URL.
+%Rest Query
+%Solr Syntax (only url. he knows solr better than i do)
+Query syntax can be passed as parameters in the URL, too, like in the following example.
 
 
 
+\url{https://newsreel-edu.aot.tu-berlin.de/solr/d115/select?q=ladenoeffnung*&wt=json&indent=true}
+\begin{enumerate}
+	\itemsep0em
+	\item \textbf{Credentials: } \mintinline{text}{username:password@}
+	\item \textbf{Base URL:} \mintinline{text}{newsreel-edu.aot.tu-berlin.de/solr}
+	\item  \textbf{Path:}	
+	\begin{itemize}
+		\itemsep0em
+		\item Core: \mintinline{text}{d115}
+		\item Query: \mintinline{javascript}{/select?q=} QueryText
+		\begin{itemize}
+\itemsep0em
+			\item Query Parameters: we can use usual Solr parameters in the API Calls (e.g. wildcards (*), concatenation (+), AND operator) \footnote{Available Syntax: \url{http://www.solrtutorial.com/solr-query-syntax.html}}.
+			\item MIME Type: \mintinline{text}{&wt=json}
+			\item Other Parameters: e.g. \mintinline{text}{&indent=true}
+					\end{itemize}
+		
+	\end{itemize}
+	
+\end{enumerate}
 
 
-step by step code analysis
 
-\url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md}
-
+%
+%
+%
+%
+%step by step code analysis
+%
+%\url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md}
+%
 
 
 
 %\subsection*{requirements}
+%
+%for audio (old)
+%
+%json format https://stackoverflow.com/questions/41776014/how-to-correctly-specify-ssml-in-an-alexa-skill-lambda-function
 
-for audio (old)
 
-json format https://stackoverflow.com/questions/41776014/how-to-correctly-specify-ssml-in-an-alexa-skill-lambda-function
 
 
+%
+%references:
+%
+%\url{https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html#audio}
 
 
 
-references:
+%blogs:
+%\url{https://developer.amazon.com/post/Tx3FXYSTHS579WO/Announcing-New-Alexa-Skills-Kit-ASK-Features-SSML-Audio-Tags-and-Developer-Porta}
 
-\url{https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html#audio}
+%With the JSON we have, we try to maximise its use, but we need to consider that with starting a Skill, it is better to start from scratch sometimes and as we go, we see what is the relevant information that we can integrate into our Skill.
+%
+%We analyze the output of the \textsc{Virtual Citizen Assistant } and realize it makes less sense to start with that, so we refer to the underlying endpoint. Since this is the Solr Server that delivers JSON objects and is more realistic to maneuver, we analyse the queries we can get from there. and try to fit it into our interaction model.
+%
+%Then we move on to the interaction model. On paper, we draft the use-cases to determine what are our intents first to group these into fewer intents than the services we have. Given that there are many public services related to a similar case, we design our Skill to make it possible to group them into less intents. The advantage of this is that it allows us to at least have fewer 'ServiceIntents' than the ever growing number of services, which means that we want to also be able to track new services as they get inserted into the catalogue to be able to either map them to old intents by extending these, or to introduce new intents if this does not work.
+%
+%
+%
+%\todo{ moved from intro\\
+%
+%
+%our now more than \inote{4}
+%scenarios:
+%\begin{itemize}
+%	\item a general scenario of predefined categories related to any service \tocite{hier schon erwähnen? \inote{(prerequisites, costs, documents, ...)}}
+%	\item special application on \textbf{Residence Registration} - ``Anmeldung einer Wohnung''
+%	\item special application on \textbf{Applying for a Residence Permit} - mutliple services related to ``Aufenthaltstitel''
+%	\item ``car registration'' -  special application on \textbf{Car Registration''} - multiple services  related to ``Kraftfahrzeug (KFZ)''
+%	%	\item[scenario 4] \inote{yet to be decided or if to implement}
+%\end{itemize}}
+%
+%%%%%%%%%%%%%%%%
+%
+%
+%
+%\todo{moved from AWS Micro-services list\\
+%
+%	We might as well use just our own, any other privately or cloud-based server solution to host our code and use it as an endpoint for our software, however choosing Lambda takes away the overhead of linking the front-end with the back-end of the Skill %program we develop (an Alexa Skill as we describe below). 
+%
+%}
+%
+%%%%%%%%%%%%
+%
+%
+%
+%
+%
+%
+%%\section{step-by-step}
+%
+%start with interaction model
+%then use builder
+%then fulfill functions
+%
+%
+%steps to git commit
+%deploy
+%clone
+%change in browser
+%change offline
 
 
+%if u use a browser, remember to keep the session active otherwise your model might get lost in the POST
 
-blogs:
-\url{https://developer.amazon.com/post/Tx3FXYSTHS579WO/Announcing-New-Alexa-Skills-Kit-ASK-Features-SSML-Audio-Tags-and-Developer-Porta}
 
-With the JSON we have, we try to maximise its use, but we need to consider that with starting a Skill, it is better to start from scratch sometimes and as we go, we see what is the relevant information that we can integrate into our Skill.
 
-We analyze the output of the \textsc{Virtual Citizen Assistant } and realize it makes less sense to start with that, so we refer to the underlying endpoint. Since this is the Solr Server that delivers JSON objects and is more realistic to maneuver, we analyse the queries we can get from there. and try to fit it into our interaction model.
 
-Then we move on to the interaction model. On paper, we draft the use-cases to determine what are our intents first to group these into fewer intents than the services we have. Given that there are many public services related to a similar case, we design our Skill to make it possible to group them into less intents. The advantage of this is that it allows us to at least have fewer 'ServiceIntents' than the ever growing number of services, which means that we want to also be able to track new services as they get inserted into the catalogue to be able to either map them to old intents by extending these, or to introduce new intents if this does not work.
 
 
 
-\todo{ moved from intro\\
 
 
-our now more than \inote{4}
-scenarios:
-\begin{itemize}
-	\item a general scenario of predefined categories related to any service \tocite{hier schon erwähnen? \inote{(prerequisites, costs, documents, ...)}}
-	\item special application on \textbf{Residence Registration} - ``Anmeldung einer Wohnung''
-	\item special application on \textbf{Applying for a Residence Permit} - mutliple services related to ``Aufenthaltstitel''
-	\item ``car registration'' -  special application on \textbf{Car Registration''} - multiple services  related to ``Kraftfahrzeug (KFZ)''
-	%	\item[scenario 4] \inote{yet to be decided or if to implement}
-\end{itemize}}
+%\todo{this goes after we have a lambda instance connected to our skill}
 
-%%%%%%%%%%%%%%%
 
 
 
-\todo{moved from AWS Micro-services list\\
 
-	We might as well use just our own, any other privately or cloud-based server solution to host our code and use it as an endpoint for our software, however choosing Lambda takes away the overhead of linking the front-end with the back-end of the Skill %program we develop (an Alexa Skill as we describe below). 
 
-}
 
-%%%%%%%%%%%
 
+%\section{Code Analysis}
 
 
+\subsection*{Event Emitters}
 
+In all Intent handlers, a common pattern is to generate speech output from Alexa with a certain result or question, then allow the user to speak or end the session as discussed in Section \ref{sessionduration}.
 
 
-%\section{step-by-step}
+As per description in Section \ref{nodejs:def} A \mintinline{java}{LaunchRequest} always starts a new session. Event Emitters can be categorised in the following Table \ref{evtemit}. 
+``The difference between \mintinline{text}{:ask/listen} and \mintinline{text}{:tell/speak} is that after a \mintinline{text}{:tell/speak} action, the session is ended without waiting for the user to provide more input'' \footnote{\href{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md}{\t{gh}/\lstinline|alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md|}}. %We will compare the two ways using response or using responseBuilder to create the response object in next section.
 
-start with interaction model
-then use builder
-then fulfill functions
+\begin{table}[H]
+	\caption{Event Emitters}
+	\label{evtemit}
+	\begin{tabu} to \linewidth {X[2] | X  X[3]| X[3]}
+Emitter Type & \multicolumn2{|c|}{Emitter Name} & Session Ends\\ \hline \hline
 
+\shortstack[l]{Speech Out \\ (only Alexa)} & \mintinline{text}{tell} & \shortstack[l]{ \mintinline{text}{speak} \\  \mintinline{text}{:responseready} } & \shortstack[l]{\mintinline{java}{true}\\(no wait for response)}\\ \hline
 
-steps to git commit
-deploy
-clone
-change in browser
-change offline
+\shortstack[l]{Speech Out / \\Recording} &  \mintinline{text}{ask} & \shortstack[l]{ \mintinline{text}{listen} \\  \mintinline{text}{:responseready} } & \shortstack[l]{\mintinline{java}{false}\\(conversation continues)}\\
 
+	\end{tabu}
+\end{table}
 
-if u use a browser, remember to keep the session active otherwise your model might get lost in the POST
+Effectively, an emitter sends a response to a JSON request (example in Appendix \ref{jsonFromAlexa}) with parameters that determine whether the session remains on or no, what the response includes and a device token to direct the response to the right Alexa-enabled device.
 
 
 
 
 
+%jsons sent/received in appendix
 
-
-
-
-\todo{this goes after we have a lambda instance connected to our skill}
-
-Verify through Application ID \footnote{\href{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html\#request-verify}{\t{a\t{sk}}\lstinline|/handle-requests-sent-by-alexa.html\#request-verify|}}
-
-
-
-
-
-
-
-
-\section{Code Analysis}
-
-from \url{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md}
-The difference between :ask/listen and :tell/speak is that after a :tell/speak action, the session is ended without waiting for the user to provide more input. We will compare the two ways using response or using responseBuilder to create the response object in next section.
-
-
-
-A LaunchRequest always starts a new session.
-
-
-
-
-
-
-
-jsons sent/received in appendix
-\ref{jsonFromAlexa}
 
 
 
@@ -248,44 +312,56 @@ jsons sent/received in appendix
 
 
 \subsection*{Intent Implementation}
-[ ] for deployment, certain intents have to be added and fulfilled (HELP, STOP, …)
+\textit{e.g. index.js \quad : \quad  DE\_handlers \quad :  \quad AMAZON.HelpIntent}\\
+% Wi, certain intents have to be added and fulfilled (HELP, STOP, …)
+As the actions resulting from \mintinline{java}{HelpIntent, StopIntent} and \mintinline{java}{CancelIntent}
+have to be decided on, we choose to make the \mintinline{java}{HelpIntent} for non-contextual help, giving the contextual help as a prompt inside each intent separately.
+The \mintinline{java}{StopIntent} terminates the Skill and the \mintinline{java}{CancelIntent} ask to restart to a new intent within the Skill.
 
+
+\subsubsection*{Making the right conversation}
+In certain intents like with a question about residence permit for non-EU residents, there is a pattern of questions to be asked in a given order as a public official would do. This is related to the law structure, given than certain regulations have precedence over others. In this example, the EU-partner rule is applicable, where EU laws supersedes local regulations.
+As such, if a non-EU/EEA resident wants to apply for a residence permit for any purpose and have an EU-partner (swiss regulations similar but have a different legal base), the residence purpose should be the Freedom of movement of an EU-citizen and their family and not the other reason the person is applying with.
+%legal things like the EU-partner rule.
+How EU rules override local ones is codified in
+% bas u cant explain it to people 3ashan they have to be give the choice.
+el mawdou3 mo3aqqad but codified in Directive 2004/38/EC \footnote{
+\url{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02004L0038-20110616}}.
+
+
+
+\subsection*{Dialogue Management}
+As we explained dialogue directives in Section \ref{directives:def}, we use them in our code to delegate a few responses to the interaction model \footnote{ \t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html\#delegate}{\lstinline|/dialog-interface-reference.html\#delegate|}	
+}
 
 
 \subsubsection*{Guessing the right Location}
-PLZ oder Stegltz - geocoordinates
-
-
-
-\subsection*{Making the right conversation}
-
-
-
-legal things like the EU-partner rule.
-eu rules override local
-bas u cant explain it to people 3ashan they have to be give the choice.
-el mawdou3 mo3aqqad but codified here
-\url{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02004L0038-20110616}
+\textit{e.g. index.js \quad : \quad  DE\_handlers \quad :  \quad LOC\_WhereIsAreaOrPLZ\_Intent}\\
+One of the Intents answers the question where a certain PLZ or district is in Berlin. It does not use geocoordinates but is sensitive to nuances in uttering a PLZ, as these are not always pronounced as individual digits but sometimes as a combination between a number and digits. For instance, in German we say ``Zehn Eins Eins Neun'' for 10119, which is a code belonging to two different districts. Alexa is able to determine this through elicitation as well as dealing with some special cases like when the number is outside of Berlin.
 
 
 
 
 
 \subsection*{Randomising Alexa's Utterances}
-What’s next doesn’t look what came before
+\textit{e.g. ./lib/helper.js \quad : \quad  \mintinline{text}{randomphrase()}} \\
+With word arrays, we are able to generate a random answer, such that every time the user expects a different answer from Alexa, simulating a natural conversation. %What’s next doesn’t look what came before
 
 
 
 \subsection*{Creating SSML and Audio}
+\textit{e.g. index.js \quad : \quad  DE\_handlers \quad :  \quad LaunchRequest}\\
+Used to generate sound effects during the conversation such as emphasising certain words or whispering and playing short audio clips \footnote{\href{https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html\#audio}{\t{a\t{sk}}\lstinline|/speech-synthesis-markup-language-ssml-reference.html\#audio|}}.
 
 
-\href{https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html#audio}{\t{a\t{sk}}\lstinline|/speech-synthesis-markup-language-ssml-reference.html#audio|}
+
+
 
 
 
 \subsection*{Checking the Next available appointment}
 
-Although this is a proof of concept, with an API extension from ITDZ's side, it is equally easy to implement a feature to look up next available appointments.
+With this work as a proof of concept, and an API extension from ITDZ's side, it is equally easy to implement a feature to look up next available appointments.
 The actual booking would require Alexa to send POST requests and persistently retain these on the API's side with the option to impement another feature to save the same appointment to the calendar linked to the Amazon account used with this Alexa instance. This might require account linking, too, if we need to pass the appointment data through the Skill to an online personal calendar endpoint, bypassing Alexa itself.
 
 Booking an appointment happens for now only through Berlin.de's website by starting at either \href{https://service.berlin.de/terminvereinbarung/termin/}{the appointment booking page} \footnote{\url{https://service.berlin.de/terminvereinbarung/termin/}} which links to the actual booking pages via choosing the service or the location where the service 
@@ -294,91 +370,80 @@ Booking an appointment happens for now only through Berlin.de's website by start
 
 \subsection*{Card Templates}
 
-Rendering the right template or a custome one \footnote{\href{https://developer.amazon.com/docs/custom-skills/display-interface-reference.html}{display-interface-reference.html}}
+%Rendering the right template or a custome one
+We can render a different template for each device type. For our purpose, the standard template is sufficient. Customisation can be useful with displaying longer texts. \footnote{\href{https://developer.amazon.com/docs/custom-skills/display-interface-reference.html}{\t{gh}/\mintinline{java}{display-interface-reference.html}}}
 
-\subsection*{Utterances generator}
-http://alexa-utter-gen.paperplane.io/
-https://github.com/tejashah88
-
-
-\todo
-unhandled always calls or never
+%
+%\todo
+%unhandled always calls or never
 
 
-\section{Testing}
+\section{Testing and Deployment}
 
-continuous testing during development, noch nicht evaulation, although the same techniques are pretty much used afterwards. Requires 10 users a day to generate
-
-
-Postman
-
-\todo{history API - Dave isbitzkis tweet}
-\mintinline{bash}{$ ask api intent-requests-history <-s|--skill-id <skillId>> [--filters <value>] [--max-results <value>] [--sort-direction <value>] [--sort-field <value>] [--next-token <value>]}
+continuous testing during development is vital before evaluating the system as a whole. % during development, noch nicht evaulation, although the same techniques are pretty much used afterwards. Requires 10 users a day to generate
+With the testing tools introduced in Section \ref{testdevices}, it is important to test not only every feature indiviually, but also in combination with other features already implemented.
 
 
 
-\url{https://developer.amazon.com/docs/smapi/ask-cli-command-reference.html#intent-requests-history-subcommand}
+The more complex the Skill gets, the more important to make error handling integrate in the code. Excessive logging does not affect the skill performance per se, as the user does not see the console logs. % is  good practice. % not bad as long as it does not get too confusing.
+All logs are visible on CloudWatch, with the ability to set alarms if certain warning levels were reached. CloudWatch logs can also show why some intents are never reached.
 
 
-https://developer.amazon.com/docs/smapi/intent-request-history.html
+
+%Postman
+
+%\todo{history API - Dave isbitzkis tweet}
+The Skill Management API provides short commands to check the intent history  \footnote{\$ \mintinline{bash}{ask api intent-requests-history <--skill-id <skillId>>}\\ \mintinline{text}{[--filters <value>] [--max-results <value>] [--sort-direction <value>] }
+\mintinline{text}{[--sort-field <value>] [--next-token <value>]}\\
 
 
-\section{Deployment}
-
-\section{Approval and Publishing}
-\label{approval}
-	Continuous Skill Approval is the process of Amazon deciding whether each uploaded version / update is still fit for purpose, make the skill better or worse in conjunction with other skills on the Store % or change things to worse partly
-	
-	\todo{mention that 3ashan homa store w keda fal mawdou3 lazem yekoun mo7kam w 7agat homa bey7ebouha and the reasons why things could get rejected according to their policy and some scenarios}
-
-\section{Debugging / Troubleshooting}
-
-
-\section{troubleshooting}
-
-\todo{API TLS certificate. No base64
-	just \mintinline{javascript}{rejectUnauthorized: false}
-	
+\url{https://developer.amazon.com/docs/smapi/ask-cli-command-reference.html\#intent-requests-history-subcommand} and \\ \url{https://developer.amazon.com/docs/smapi/intent-request-history.html}
 }
 
 
-\section{Documentation Updates}
-https://www.gitbook.com/join/tu-berlin/-LAZYgGmoeaEZGb8cYg2
-https://tu-berlin.gitbook.io/alexa/
 
-% Implementation as Facebook Messenger Bot / Google Action
-\textcolor{magenta}{
-- as an example for text\\
-- implementing the answer suggestions as buttons\\
-- passing data to the Bürgeramt terminseite\\
-https://console.dialogflow.com/api-client/ \\
-https://console.actions.google.com
-}
+
+
+For most test, deployment is needed.
+We deploy eiher the whole Skill or in parts, depending on where we implement a new feature
+
+\begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{bash}
+
+ask deploy -t|--target lambda
+\end{minted}
+
+deploys only the lambda function, shortening the time required for rebuilding the interaction model.
+%\section{Deployment}
+
+Once a Skill is ready for publishing, it can proceed to approval, 
+	%Continuous Skill 
+%approval is 
+the process of Amazon deciding whether each uploaded version / update is still fit for purpose, make the skill better or worse in conjunction with other skills on the Store % or change things to worse partly
+
+
+
 
 
 %Solr is not secure (ein kleines thing in future work)
-Solr has to be secure
-\url{https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteEndpoints.html#WebsiteRestEndpointDiff}
+%Solr has to be secure
+%\url{https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteEndpoints.html#WebsiteRestEndpointDiff}
+
+%
+%Hey:
+%
+%do this set up as prerequisites first
+%as a deployment script
+%
+%- install aws cli
+%- install ask cli
+%- set up a profile on AWS
+%- ask init etc.
 
 
-Hey:
-
-do this set up as prerequisites first
-as a deployment script
-
-- install aws cli
-- install ask cli
-- set up a profile on AWS
-- ask init etc.
-
-https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
-
-There is no AWS credential setup yet, do you want to continue the initialization?
-
-https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html
-
-
-
+%
+%There is no AWS credential setup yet, do you want to continue the initialization?
+%
+%https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html
 
 
 
@@ -403,53 +468,123 @@ https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-lin
 
 
 
-Manage IAM roles (User, groups, rights, policies etc.)
-
-
-all logs go onto cloudwatch
-including when the request is not right etc...can be helpful to know what users want, beyond testing
 
 
 
+%Manage IAM roles (User, groups, rights, policies etc.)
 
 
-amazon does not disclose avaliable values for their slot types (lists), but they give you examples here
-%https://developer.amazon.com/docs/custom-skills/slot-type-reference.html#h2_extend_types
-
-
-===
-
-finally, we had to resolve to the information publicly available to tailor custom scenarios
+%all logs go onto cloudwatch
+%including when the request is not right etc...can be helpful to know what users want, beyond testing
 
 
 
- ===
-once you upload the new lambda, the old one is gone, unless you version it like this:
-https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html
+
+
+%amazon does not disclose avaliable values for their slot types (lists), but they give you examples here
+%%https://developer.amazon.com/docs/custom-skills/slot-type-reference.html#h2_extend_types
+
+
+%===
+
+%finally, we had to resolve to the information publicly available to tailor custom scenarios
+
+
+%-====inserted
 
 
 
-====
-
-first i got screwed over with this Big nerd ranch then this happened: alexa-skill module
-- so don't use this tutorial, although very helpful for a beginner and makes you understand what happens under the hood, it has been abstracted in many other function and the logic is no longer the same. - which explains why no one starred it
-
-https://github.com/matt-kruse/alexa-app
-
-https://www.bignerdranch.com/blog/developing-alexa-skills-locally-with-nodejs-deploying-your-skill-to-staging/
+\section{Challenges}
+\label{challenges:design}
 
 
 
-\todo{
-	OnLaunch\\
-	IntentHandler\\
-	intent is triggered by utterence\\
-	account verlinkungen etc\\
-}
+Throughout the implementation process, many challenges were faced with respect to the runtime environment and the constant changes from Amazon.
+In the following are some of the encountered  obstacles.
 
-Prob with outdated tutorials
+\subsection*{Interaction Model}
+Building the interaction model on the web is a long process. %could take a long time. 
+As login sessions need to be refreshed, once a session is expired, changes in the model in the browser can get lost. This was fixed by receiving a warning once trying to save the model only recently.
+It can also get confusing to deploy from two different locations (CLI and web browser) without knowing which is the most up-to-date. 
+% can Sessions were not active and changes were gone but amazon fixed that later giving a warning message
 
-\todo{
-eventually mention here: \\
-as we mentioned Amazon's strong take on constant changes, we will go over the workarounds and circumventions to retain a working version of the Skill we present, discuss the downside of adaptability to these changes \inote{(constantly basastem nafsi 3ala 7aga gedida)}
-}
+\subsection*{Interpolation from Virtual Citizen Assistant}
+%first one: we start of with finding a way to interpoloate our model
+%direkte übernahme ist nicht möglich, da die nodes nicht einheitlich geparsed werden kuönnen (fees etc)
+Finding a solution to map the structure of the Virtual Citizen Assistant is not straightforward as there exists little documentation resources for the programme.
+%- I also do not have any documentation of the current bot
+Also, with the data in the API not coherent (e.g. Fees do not have the same data type and structure), makes it not an immediate takeover.
+
+\subsection*{Environment}
+%- problem is: if i use screenshots and amazon changes the interface (in the process)
+%As the developer console changed interfaces
+As many interfaces were changed by Amazon, knowing how to operate the new interface requires an extra amount of time to relearn the new functions and their locations.
+
+\subsection*{Transcription}
+With only some of the concepts of Alexa's methodology known, the software is a black box and not predictable. How Alexa's NLU engine transcribes a user's voice can become problematic with long constructed words. In German, `Hohenschönhausen' or `hohen schön hausen' is one such examples.
+
+
+%\textcolor{magenta}{
+%	- und L\"osungen daf\"ur\\
+%	- eine \"Uberf\"uhrung in Alexa, not writing everything new in alexa. such that when you want to do it in another system what do u want to integrate?\\
+%	- use external web service maybe? in case that helps instead of alexa doing everything..\\
+%	- konten hosting to be on alexa\\
+%	- \"Ahnlichkeitsma{\ss}e -levenstein-distanz, IFTTT
+%}
+
+%ending an utterance with a Fragezeichen
+%Error: There was a problem with your request: ``werden?'' in the sample utterance ``TestIntent was soll aus dieser Skill werden?'' is invalid. Sample utterances can consist of only unicode characters, spaces, periods for abbreviations, underscores, possessive apostrophes, and hyphens.
+%
+%do not use "?"
+
+\subsection*{Provided Data}
+problems with countrylist
+cote d'ivoir, südsee (british territories overseas, ...)
+
+
+
+
+% ===
+% mentioned in prev. chap but not as challenge
+%once you upload the new lambda, the old one is gone, unless you version it like this:
+%https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html
+%
+%
+%
+%====
+
+\subsection*{Outdated Resources}
+Online resources are rich but are not always up-to-date. %While it's hard for a beginner with no knowledge of the current status of
+With new features from Amazon launched almost weekly, keeping with the trend requires a dedicated amount of time.
+While outdated resources are not relevant for development, they can provide a good understand on how a Skill operates. %the best 
+%
+%first i got screwed over with this Big nerd ranch then this happened: alexa-skill module
+%- so don't use this tutorial, although very helpful for a beginner and makes you understand what happens under the hood, it has been abstracted in many other function and the logic is no longer the same. - which explains why no one starred it
+%
+%https://github.com/matt-kruse/alexa-app
+%
+%https://www.bignerdranch.com/blog/developing-alexa-skills-locally-with-nodejs-deploying-your-skill-to-staging/
+
+%
+%
+%\todo{
+%	OnLaunch\\
+%	IntentHandler\\
+%	intent is triggered by utterence\\
+%	account verlinkungen etc\\
+%}
+%
+%Prob with outdated tutorials
+%
+%\todo{
+%eventually mention here: \\
+%as we mentioned Amazon's strong take on constant changes, we will go over the workarounds and circumventions to retain a working version of the Skill we present, discuss the downside of adaptability to these changes \inote{(constantly basastem nafsi 3ala 7aga gedida)}
+%}
+
+
+
+\section{Summary}
+
+In short, the development of a Skill for an E-Government solution is feasible with the aforementioned considerations. The submitted code is a viable product which can be used for further development to produce a useful Skill to Alexa user in Berlin. With this example, similiar implementations can be done for other cities of the same information capacity.
+
+

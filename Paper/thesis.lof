@@ -1,0 +1,39 @@
+\select@language {ngerman}
+\select@language {ngerman}
+\select@language {UKenglish}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Voice Trends}}{10}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces E-Government Development Index in Europe}}{11}{figure.caption.9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces United Nations Online Service Index (Top 30)}}{12}{figure.caption.10}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Policy-Making strategies}}{13}{figure.caption.11}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Conversation with WienBot}}{16}{figure.caption.13}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Georgia.gov Popular Topics}}{19}{figure.caption.16}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Leika Key System}}{23}{figure.caption.17}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Startup Interface of the Virtual Citizen Assistant}}{24}{figure.caption.18}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Virtual Service Assistant Modules}}{25}{figure.caption.19}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Structure of \mintinline {bash}{Dienstleistungen.json}}}{26}{figure.caption.20}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Secondary Nodes of \mintinline {bash}{Dienstleistungen.json} }}{26}{figure.caption.21}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Simplified Demonstration of Nodes' Traversal}}{31}{figure.caption.32}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces VUI-Stack}}{42}{figure.caption.45}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Alexa Skills by Volume (2016)}}{44}{figure.caption.48}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Survey Results - Demographics \& Use}}{45}{figure.caption.51}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Survey Results - Berlin City Portal and Chatbot}}{46}{figure.caption.52}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Survey Results - Activities on Alexa / Assistant for Berlin}}{47}{figure.caption.53}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Interaction Between AWS Modules (Coffee Bot)}}{55}{figure.caption.78}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Hook Model Steps}}{64}{figure.caption.97}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Interaction Model}}{68}{figure.caption.108}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Interaction Model vs. Skill Code}}{70}{figure.caption.111}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Brainstorming Tool Example}}{73}{figure.caption.118}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces K-means Clusters Example}}{83}{figure.caption.137}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Conversation Flow on Georgia.gov}}{96}{figure.caption.171}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {11.1}{\ignorespaces HTTPS Request Body Syntax}}{119}{figure.caption.182}

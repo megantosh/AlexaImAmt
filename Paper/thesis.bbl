@@ -98,6 +98,10 @@ Alexa Skills~Kit documentation.
   {January} {2017}.
 \newblock Online Resource. Accessed on 10.03.2018.
 
+\bibitem{eyal:hook}
+Nir Eyal.
+\newblock {}hooked: How to build habit-forming products.
+
 \bibitem{gartnerpreds17}
 Gartner.
 \newblock Gartner reveals top predictions for it organizations and users in
@@ -271,6 +275,11 @@ Amazon~Web Services.
   2018.
 \newblock Online Resource. Accessed on 25.01.2018.
 
+\bibitem{experian}
+{Sheryl Ong and Aaron Suplizio, Experian Information Solutions, Inc.}
+\newblock {Amazon Echo Study and Findings}, May {2016}.
+\newblock Online Resource. Accessed on 29.04.2018.
+
 \bibitem{statistasmartphones}
 Statista.
 \newblock Smartphone user penetration as percentage of total global population
@@ -292,6 +301,15 @@ Laurie Sullivan.
   \url{https://www.mediapost.com/publications/article/291913/gartner-predicts-30-of-searches-without-a-screen.html},
   December 2017.
 \newblock Online Resource. Accessed on 12.2.2018.
+
+\bibitem{medium:skillmarketing}
+Jess Thornhill.
+\newblock Nobody cares about your amazon alexa skill - so here’s how to make
+  them.
+\newblock
+  \url{https://medium.com/the-mission/nobody-cares-about-your-amazon-alexa-skill-ac14bd080327},
+  July 2017.
+\newblock Online Resource. Accessed on 14.04.2018.
 
 \bibitem{aws:pubsecsum}
 {Tim Hearn and Paul Bockelman}.
