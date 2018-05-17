@@ -5,9 +5,9 @@
 
 
 
-This chapter lays out the first details of our Skill implementation. We discuss the choices we need to take and why we take them in the first section, going over the framework requirements in which we do this implementation, to finally introduce the interaction model, also known for being the skill configuration, based on which we fulfill the intents in the Skill's back-end implementation (Chapter \ref{maintwo}). We also provide guidance on best practices during the whole process in Section \ref{designGuide}.
+This chapter lays out the first details of our Skill implementation. We discuss the choices we need to take and why we take them in the first section, going over the framework requirements in which we do this implementation, to finally introduce the interaction model, also known for being the skill configuration, based on which we fulfill the intents in the Skill's back-end implementation (Chapter \ref{maintwo}). We also provide guidance on best practices during the whole process in Section \ref{designGuide} and \ref{chatguide}.
 
-Before proceeding, we state that Alexa gives the limitation of recording audio for transcription at a bit rate of 8kHz using the file formats LPCM and Opus for input and MPEG, OGG and PCM for output. Using the Skill is only possible through an internet connection. There are options to keep the context (session) alive for only 8 seconds, extendible by another 8 second for re-prompts to give the user enough time to think and answer. and Finally, knowing that Alexa uses term weighting to understand the user, we are able to find out what utterances were missed, e.g. through the options described previously in Chapter \ref{amznecosys}. 
+Before proceeding, we state that Alexa gives the limitation of recording audio for transcription at a bit rate of 8kHz using the file formats LPCM and Opus for input and MPEG, OGG and PCM for output. Using the Skill is only possible through an internet connection. There are options to keep the context (session) alive for only 8 seconds, extendible by another 8 second for re-prompts to give the user enough time to think and answer. Finally, knowing that Alexa uses term weighting to understand the user, we are able to find out what utterances were missed, e.g. through the options described previously in Chapter \ref{amznecosys}. 
 
 
 %
@@ -79,7 +79,7 @@ Skill design is crucial for the later development stages, as it gives us an over
 \item \textbf{What should the Skill do?\\}
 In our case: Look up information about services and book appointments.
 \item  \textbf{How should it do it?\\}
-In our case: It should connect to the API, make GET requests to receive the most recent information and read out the relevant parts from the JSON nodes (as the response's structure was discussed earlier in Table \ref{dienstleistung:descr}), while maintaining a conversational flow that is not redundant or too complex to the user. In a next step, it should also be able to create appointments on Berlin.de's endpoint through POST requests connect to the user's calendar to save these.
+In our case: It should connect to the API, make GET requests to receive the most recent information and read out the relevant parts from the JSON nodes (as the response's structure was discussed earlier in Table \ref{dienstleistung:descr}), while maintaining a conversational flow that is not redundant or too complex to the user. In a next step, it should also be able to create appointments on Berlin.de's endpoint through POST requests and connect to the user's calendar to save these.
 
 \item \textbf{Through what conversational interaction does the user get to invoke that action?}\\
 In our case: The user can ask Alexa directly to book an appointment or get to find out more about the service through a series of questions (Multi-turn conversation, see Section \ref{multiturn:def}).
@@ -111,13 +111,13 @@ Although it would speak as an advantage for a voice assistant if it can automati
 %- answer suggestions functionality in chatbot equivalent
 
 \subsection*{Sentence length}
-For this we use a maximum of two sentences per action and keep them not shorter than three words (e.g. ``I want \mintinline{java}{service_name}'') and not longer than 30 words, with an of 10 words that a user needs to make sure they get the appropriate answer.
+For this we use a maximum of two sentences per action and keep them not shorter than three words (e.g. ``I want \mintinline{java}{service_name}'') and not longer than 30 words, with a mode of 10 words that a user needs to make sure they get the appropriate answer.
 As we know it is common to miss the correct intent, we implement an  \mintinline{java}{Unhandled} intent. This is not a must but it assures that we 
 %The next step is to 
 attempt to get around the user's frustration by making the bot at least more human in the answers it gives if no intent was found.	
 
 \subsection*{Skill availability,  languages and dialects used}
-Since we see the demand for both English and German prevalent in the survey, we start with a German model and implement in the equivalent english model services that are more related to residents of foreign countries, since the service catalogue is more relevant to this audience (e.g. residence permits, transfer or driving licence, registration).
+Since we see the demand for both English and German prevalent in the survey, we start with a German model and implement in the equivalent English model services that are more related to residents of foreign countries, since the service catalogue is more relevant to this audience (e.g. residence permits, transfer of driving licence, registration).
 %- Alexa Skill will work in Germany in english and german -> add english after german
 
 
@@ -150,7 +150,7 @@ This coincides with giving a hook for this skill and any other skill revolving a
 
 \subsection*{Session duration}
 \label{sessionduration}
-With A-B tests we determine the optimal duration of a session (8 vs. 16 seconds) based on each question. and do not apply a general rule for it. The upside of keeping a session longer is that the conversation context will remain longer. On the downside, it might clog the user from using Alexa in a different context as well as giving the impression of `spying' on the user for an extended time if it is not necessary to keep the session alive. Adjusting whether the session should remain for an extended time happens through the JSON request property \mintinline{javascript}{{'ShouldEndSession' = 'false'}}
+With A-B tests we determine the optimal duration of a session (8 vs. 16 seconds) based on each question. and do not apply a general rule for it. The upside of keeping a session longer is that the conversation context will remain longer. On the downside, it might clog the user from using Alexa in a different context as well as giving the impression of `spying' on the user for an extended time if it is not necessary to keep the session alive. Adjusting whether the session should remain for an extended time happens through the JSON request property \mintinline{text}{{'ShouldEndSession' = 'false'}}
 
 
 \subsection*{Alexa's reprompts and utterances}
@@ -198,13 +198,13 @@ After all, the user should feel the competence of the Skill to be convinced of u
 As such, we need to create an interaction model that takes care of wording order and a fulfilment that has competent error handling paths. 
 
 \subsection*{What intents represent}
- As it is better to separate utterances by intents (Section \ref{designGuide}), we start with an utterance, see which intent it can relate to. 
+ As it is better to separate utterances by intents (Section \ref{designGuide}), we start with an utterance, then see which intent it can relate to. 
  There are several ways to structure intents, depending on how we define them. After many trials on the categorisation of intents, we group intents based on what a user's question revolves about in each of the topics. Hence, the intents map to the sections of the Berlin City Portal service sections:
  \begin{itemize}
  	\itemsep0em
 \item General Inquiry
 \item Prerequisites
-\item required documents
+\item Required documents
 \item Costs
 \item Processing Time
  \end{itemize}
@@ -222,7 +222,7 @@ This is one example that shows how each model should represent no more than one 
 
 
 \subsection*{Slot Types}
-Many of the slot types are not available on Amazon, which means we have to create them. We transpose some of the lists obtained from the Virtual Citizen Assistant and create our own based on other formats provided either through csv files (e.g. for PLZ values) or through the parsing the berling website directly and importing the list into a slot type with minimal string modifications to match our model requirements (e.g. with Citizenships). Problems with this approach are discussed in Section \ref{challenges:design}. \\
+Many of the slot types are not available on Amazon, which means we have to create them. We transpose some of the lists obtained from the Virtual Citizen Assistant and create our own based on other formats provided either through csv files (e.g. for PLZ values) or through the parsing the Berlin website directly and importing the list into a slot type with minimal string modifications to match our model requirements (e.g. with Citizenships). Problems with this approach are discussed in Section \ref{challenges:design}. \\
 
 
 
@@ -327,7 +327,7 @@ From an implementation standpoint, as soon as Alexa was able to find the intent 
 \begin{figure}[h!]
 	\centering
 	\caption[Interaction Model vs. Skill Code]{A representation of intents in our interaction model in conjunction with the intent implementation in the Skill code}
-	\label{interactionModel:bild}
+	\label{interactionModel:bild2}
 	\includegraphics[width=\linewidth]{interback}
 	
 	
@@ -343,7 +343,7 @@ From an implementation standpoint, as soon as Alexa was able to find the intent 
 %	- explain directives, we use dialog directives like this: \t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html\#delegate}{\lstinline|/dialog-interface-reference.html\#delegate|}	
 
 
-An event-driven design pattern for Node.js can be compared to the listener-observer pattern in Java. Alexa also has its own builder pattern (response builder \footnote{a list of fireable events: %available events to fire/emit:
+An event-driven design pattern for Node.js can be compared to the listener-observer pattern in Java. Alexa also has its own builder pattern (response builder~\footnote{a list of fireable events: %available events to fire/emit:
 	 \href{https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/blob/master/Readme.md\#response-vs-responsebuilder}{\t{gh}/\lstinline|Readme.md\#response-vs-responsebuilder|}}).
 
 
@@ -370,7 +370,7 @@ Lastly, there are three types of requests that can handled through the Node.js S
 
 \subsubsection*{Alternative: Java as a Programming Language }
 Apart from Python as a programming language, Java is a feasible option with extensive documentation and implemented emitters.
-Setup works in Java using Maven by requiring the Alexa Skills Kit as a dependency \footnote{\href{https://github.com/alexa/alexa-skills-kit-sdk-for-java/wiki/Setting-Up-The-ASK-SDK}{\t{gh}/\lstinline|/Setting-Up-The-ASK-SDK|}}.
+Setup works in Java using Maven by requiring the Alexa Skills Kit as a dependency~\footnote{\href{https://github.com/alexa/alexa-skills-kit-sdk-for-java/wiki/Setting-Up-The-ASK-SDK}{\t{gh}/\lstinline|/Setting-Up-The-ASK-SDK|}}.
 
 \begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{java}
 <dependency>
@@ -380,13 +380,12 @@ Setup works in Java using Maven by requiring the Alexa Skills Kit as a dependenc
 </dependency>
 \end{minted}
 
-This makes ASK work as a wrapper analogous to Node.js.
-\footnote{ASK SDK for Java: %\url{https://github.com/alexa/alexa-skills-kit-sdk-for-java}}
+This makes ASK work as a wrapper analogous to Node.js~\footnote{ASK SDK for Java: %\url{https://github.com/alexa/alexa-skills-kit-sdk-for-java}}
 \href{https://github.com/alexa/alexa-skills-kit-sdk-for-java}{\t{gh}/\lstinline|/alexa-skills-kit-sdk-for-java|}
-}
+}.
 
 
-In this example, the web service writes information to a log and then calls a method to return a welcome response \footnote{\href{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html\#launchrequest}{ \t{a\t{sk}}/\lstinline|handle-requests-sent-by-alexa.html\#launchrequest|}} \cite{alexaDesignGuide}.
+In this example, the web service writes information to a log and then calls a method to return a welcome response~\footnote{\href{https://developer.amazon.com/docs/custom-skills/handle-requests-sent-by-alexa.html\#launchrequest}{ \t{a\t{sk}}/\lstinline|handle-requests-sent-by-alexa.html\#launchrequest|}} \cite{alexaDesignGuide}.
 \begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{java}
 
 @Override
@@ -435,14 +434,14 @@ With the structure of cores from Tables \ref{dienstleistung:summary2} and \ref{d
 
 
 \subsubsection*{Alternative: SwaggerHub}
- ``Swagger is the world’s largest framework of API developer tools for the OpenAPI Specification(OAS), enabling development across the entire API lifecycle, from design and documentation, to test and deployment'' \footnote{\url{https://swagger.io}}. 
- If a new more specialised API for the voice assistant is required, SwaggerHub is another option to use to deliver JSON responses for requests we send from within Lambda 
+ ``Swagger is the world’s largest framework of API developer tools for the OpenAPI Specification(OAS), enabling development across the entire API lifecycle, from design and documentation, to test and deployment''~\footnote{\url{https://swagger.io}}. 
+ If a new more specialised API for the voice assistant is required, SwaggerHub is another option to use to deliver JSON responses for requests we send from within Lambda. 
 
 
 \subsection*{AWS Lambda}
 
 Lambda offers an all-in-one solution as discussed in Section \ref{aws:modules}. Conversely, one of its drawbacks is that it does not automatically keep versions of previous deployments. 
-Thereupon, creating own version can be tedious \footnote{\href{https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html}{\t{a\t{ws}}/\lstinline|lambda/latest/dg/versioning-aliases.html|}} since deploying to lambda does not happen infrequently throughout. % it is possible to deploy frequ
+Thereupon, creating own versions can be tedious~\footnote{\href{https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html}{\t{a\t{ws}}/\lstinline|lambda/latest/dg/versioning-aliases.html|}} since deploying to Lambda does not happen infrequently throughout. % it is possible to deploy frequ
 
 
 \subsubsection*{Alternative: using another HTTPS endpoint}
@@ -459,9 +458,9 @@ Of the additional APIs we explore briefly (not implemented in code) % were able 
 	\itemsep0em
 	\item \textbf{Sayspring:} which helps prototyping and building the voice interfaces for Amazon Alexa and Google Assistant apps.
 	\item \textbf{OAuth:} for account liking 
-\item \textbf{SSML Builder} for correct SSML tags, since these can be misencoded with conversion between UTF8, Hexadecimals and HTML (e.g. \mintinline{html}{&amp}) \footnote{\url{https://npm.runkit.com/ssml-builder}}
+\item \textbf{SSML Builder} for correct SSML tags, since these can be misencoded with conversion between UTF8, Hexadecimals and HTML (e.g. \mintinline{html}{&amp})~\footnote{\url{https://npm.runkit.com/ssml-builder}}
 \item \textbf{Deutsche Post} for PLZ\footnote{\url{https://www.npmjs.com/package/deutsche-post}}
-\item \textbf{Utterances generator} \footnote{\url{http://alexa-utter-gen.paperplane.io/}and{https://github.com/tejashah88
+\item \textbf{Utterances generator}~\footnote{\url{http://alexa-utter-gen.paperplane.io/}and{https://github.com/tejashah88
 }} to create more utterances using alternate patterns.
 
 
@@ -548,7 +547,7 @@ Of the additional APIs we explore briefly (not implemented in code) % were able 
 \label{designGuide}
 
 
-In order to publish the Skill, the design process requires a thorough understanding Alexa's guidelines\footnote{ {\url{https://developer.amazon.com/designing-for-voice/what-alexa-says/}}}. A list of relevant documentation is appended to this work in Chapter \ref{appendices}. Granted that some practices are adopted into the implemented Skill, this section presents extensive cases which we use for our design.\\
+In order to publish the Skill, the design process requires a thorough understanding of Alexa's guidelines\footnote{ {\url{https://developer.amazon.com/designing-for-voice/what-alexa-says/}}}. A list of relevant documentation is appended to this work in the appendix. Granted that some practices are adopted into the implemented Skill, this section presents extensive cases which we use for our design.\\
 %
 %\todo{
 %	list all guidelines and docus here\\
@@ -589,10 +588,10 @@ It's important to understand and acknowledge that we are at a turning point %beg
 in VUI design.%, but are making very 
 with the fast progress made, the design process is still %full of swings and roundabouts, 
 not streamlined. %so we sometimes have to 
-This might sometimes require setting our expectations a bit low, as side effects can occur since% there is still no such thing as a 
+This might sometimes require setting our expectations a bit low, as side effects can occur since % there is still no such thing as a 
 performance of an AI today is hardly optimised to understand context like a human would. %perfomance and many  sometimes.
   
-Based on our own exploration and through a growing voice design guide offered to Alexa developers \footnote{\url{https://alexa.design/guide} \\ \href{https://developer.amazon.com/designing-for-voice/what-alexa-says/}{\lstinline|https://developer.amazon.com/designing-for-voice/what-alexa-says|}\\
+Based on our own exploration and through a growing voice design guide offered to Alexa developers~\footnote{\url{https://alexa.design/guide} \\ \href{https://developer.amazon.com/designing-for-voice/what-alexa-says/}{\lstinline|https://developer.amazon.com/designing-for-voice/what-alexa-says|}\\
 	\href{https://developer.amazon.com/designing-for-voice/design-process/}{\lstinline|https://developer.amazon.com/designing-for-voice//design-process/|}\\
 	\href{https://developer.amazon.com/designing-for-voice/voice-design-checklist}{\lstinline|https://developer.amazon.com/designing-for-voice/voice-design-checklist|}
 } as well as personal recommendation from Alexa evangelist Memo Döring \cite{memo:devDay}, we share a few good practices to consider before starting and throughout the development process. These are concerned partly with building the interaction model, as well as with the fulfilment back-end. Many of them also apply to voice assistants other than Alexa
@@ -751,11 +750,11 @@ This is only doable by retaining context.
 Before we avail our skill to another country, it is important to check that the other country does not already have its own skill before we do double the amount of work. And as discussed above, things like linguistic and local changes beyond the classical imperial/metric systems (e.g. shoe sizes) could come into account.
 
 \subsubsection*{Asking for permission}
-As mentioned above about taking the least necessary information to give the user the right answer, we want to manage a good balance on the trade-off between security on usability. If we ask the user to make complicated passwords and use tokens etc, no one will use our software. If we make the software too easily accessible, we might jeopardise its success for security problems. Same applies to the downside between functionality to levering specificity. As we do not want Alexa to spill a secret, we would not want to have someone in the room walking accidentally past hearing Alexa say how much money is in our bank account. So Alexa should not in that case start the Skill with your account balance in the greeting message. We also do not want our neighbour next door be able to unlock our car with a generic command or one they may overhear.
+As mentioned above about taking the least necessary information to give the user the right answer, we want to manage a good balance on the trade-off between security on usability. If we ask the user to make complicated passwords and use tokens, no one will use our software. If we make the software too easily accessible, we might jeopardise its success for security problems. The same applies to the downside between functionality to levering specificity. As we do not want Alexa to spill a secret, we would not want to have someone in the room walking accidentally past hearing Alexa say how much money is in our bank account. So Alexa should not in that case start the Skill with your account balance in the greeting message. We also do not want our neighbour next door be able to unlock our car with a generic command or one they may overhear.
 
 \subsubsection*{One Breath}
 If we cannot speak out a sentence Alexa can say in one breath, it is too long and should be broken down. Same goes for what Alexa would expect as input. %Audible also doesn't use voice synthesizers to read out books
-So we should speak out a list in one go, but instead list up to three items and prompt the use to ask for more if they want. Context in that respect is also important. If our Skill wants to list public offices nearby, it does not make sense sometimes to mention the office if it is not open by the time we would get there for instance. That's why APIs have to be studied well before they are just linked to a Skill unlike the case with GUI where the user can scroll
+So we should speak out a list in one go, but instead list up to three items and prompt the user to ask for more if they want. Context in that respect is also important. If our Skill wants to list public offices nearby, it does not make sense sometimes to mention the office if it is not open by the time we would get there for instance. That's why APIs have to be studied well before they are just linked to a Skill unlike the case with GUI where the user can scroll
 
 Opposite to the GUI paradigm, more is not necessarily better.
 
@@ -802,7 +801,7 @@ We want the user to know with subtle hints that we are talking in the Skill abou
 
 %\end{quotation}
 
-\noindent This allows us without unnecessary back and forth confirmations to make sure that Alexa understood us right, since if she got a wrong airport code for \textbf{Cairns (CNS)} instead of \textbf{Cairo (CAI)} her answer would be:
+\noindent This allows us without unnecessary back and forth confirmations to make sure that Alexa understood us right, since if it got a wrong airport code for \textbf{Cairns (CNS)} instead of \textbf{Cairo (CAI)} her answer would be:
 
 % \begin{quotation}
 \begin{flushright}
@@ -896,7 +895,7 @@ Whenever we think of wanting to teach the user to stick to something, we should 
 \subsubsection*{Speech Synthesis Markup Language (SSML) and Other Effects}
 SSML is a great industry-standard tool to make sound variations and add human-like effects to the conversation and are encouraged. Although not all tags are supported by all systems, Alexa offers an broad range of sounds.
 
-We should hence not exclude use of audio clips etc, music, music and speech together. Alexa also integrates Speechcons. These are certain words or phrases pronounced by Alexa more expressively. Here is an example of how these look different to a string:
+We should hence not exclude use of audio clips, music, music and speech together. Alexa also integrates Speechcons. These are certain words or phrases pronounced by Alexa more expressively. Here is an example of how these look different to a string:
 
 \begin{minted}[tabsize=2, bgcolor=bgkolor, breaklines, fontsize=\footnotesize]{xml}
 <speak>
@@ -907,7 +906,7 @@ Sometimes when I think of all those best practices, I just say,
 
 
 
-\noindent Speechcons are available in German \footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/speechcon-reference-interjections-english-us.html}{\lstinline|/speechcon-reference-interjections-english-us.html|}} and English \footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/speechcon-reference-interjections-german.html}{\lstinline|/speechcon-reference-interjections-german.html|}}
+\noindent Speechcons are available in German~\footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/speechcon-reference-interjections-english-us.html}{\lstinline|/speechcon-reference-interjections-english-us.html|}} and English~\footnote{\t{a\t{sk}}\href{https://developer.amazon.com/docs/custom-skills/speechcon-reference-interjections-german.html}{\lstinline|/speechcon-reference-interjections-german.html|}}
 
 \noindent Also, Polly can change the sound of the character behind Alexa, which is commonly used in games with multiple users.
 
@@ -930,7 +929,7 @@ Sometimes when I think of all those best practices, I just say,
 
 
 \subsubsection*{Flavours, Pointers, Acknowledgement of Feedback}
-Giving the user a feeling that they are not talking to a rigid machine, or even adding more `manners' to the language, like when we want to ask Alexa to buy some clothes for us, she would sound better if she says 
+Giving the user a feeling that they are not talking to a rigid machine, or even adding more `manners' to the language, like when we want to ask Alexa to buy some clothes for us, it would sound better if it says 
 
 
 %\begin{quotation}
@@ -981,7 +980,7 @@ Giving the user a feeling that they are not talking to a rigid machine, or even 
 
 
 \subsubsection*{Building flexible Paths}
-Also known as the graph- vs. frame-based design problem, since we have no idea what the user will say and cannot limit their choices through certain buttons on a screen etc, we want to be as captive as we can to what they say. For instance, a good Alexa Skill should be able to handle when the user says
+Also known as the graph- vs. frame-based design problem, since we have no idea what the user will say and cannot limit their choices through certain buttons on a screen, we want to be as captive as we can to what they say. For instance, a good Alexa Skill should be able to handle when the user says
 
 %\begin{quotation}
 \begin{tikzpicture}
@@ -1038,7 +1037,7 @@ The aforementioned practices are even more powerful once combined. Before accept
 
 
 \subsection*{For GUI Chatbots}
-
+\label{chatguide}
 
 
 
@@ -1070,20 +1069,20 @@ While chatbots are not the primary focus of this work, here are a few notable co
 \subsubsection*{Classification of Intents}
 Filling intents with expressions is equivalent to building a sentence classifier: Whenever a user sends a new sentence to [our] bot, it will be classified into one of the intents. [We] can visualize [our] bot training as a set of [k-means] clusters: large circles  in a two-dimensional space, one circle per intent and incoming sentences are assigned to one of the circles as in Figure \ref{clusters} \cite{botbestbractis}.
 
-The key is making the utterances form non-overlapping clusters by maximising inter-cluster distance and avoid shapes like the overlapping between cluster 1 and 4
+The key is making the utterances form non-overlapping clusters by maximising inter-cluster distance and avoid shapes like the overlapping between clusters 1 and 4.
 
 \end{minipage}
 
 
 \subsubsection*{Keeping it Simple}
 
-A Skill or a chatbot that uses 1000 intents or does too many things is more likely to break. If we can break down the tasks into more modular intents / actions, we avoid this risk. Same goes for utterances. In our Skill this could mean we can make one Skill that only books appointments at public authorities and another that only provides information on the services. While it is possible to make a lot of these, it is most of the time better practice to make use of dialogue management and entity resolution and reduces false negatives.
+A Skill or a chatbot that uses 1000 intents or does too many things is more likely to break. If we can break down the tasks into more modular intents / actions, we avoid this risk. Same goes for utterances. In our Skill this could mean we can make one Skill that only books appointments at public authorities and another that only provides information on the services. While it is possible to make a lot of these, it is most of the time better practice to make use of dialogue management and entity resolution and reduce false negatives.
 
 
 \subsubsection*{Allowing Surprises}
 Even when the user says words that do not match to an intent, although we do not want to handle that, we should still be able to respond with an answer that is equally random to the user as the request is to Alexa / the chatbot. For example if we launch a Skill checking for flights and we ask it to order pizza, we can still educate the user about a new thing they were not expected to hear or tell them a joke. Since the user was expecting to challenge or break the Skill/Bo\, they would get surprised if they end up learning about something new or have a laugh instead.
 
-Moreover, if we are able to find in a log (works in case of using Alexa with Lambda) what are the common `unusual' uses to our Skill and route them to a response that would make the user laugh or just be surpirsed. Even Better would be if the process works through ML.
+Moreover, if we are able to find in a log (works in case of using Alexa with Lambda) what are the common `unusual' uses to our Skill and route them to a response that would make the user laugh or just be surpirsed. Even better would be if the process works through ML.
 
 
 \subsubsection*{Showing Clear Structure}
@@ -1092,7 +1091,7 @@ An effective way of giving the user an idea about a possible next step is to pro
 \\
 
 \section{Summary}
-In Summary, chatbots and voice assistants are a specific type of computer programmes, which are worth developing guidelines for and following certain design patterns to obtain adequate results. Guidelines differ in a case-by-case scenario based on implementation. Hence, it is important to consider these and include them in the design process.
+In summary, chatbots and voice assistants are a specific type of computer programme, which are worth developing guidelines for and following certain design patterns to obtain adequate results. Guidelines differ in a case-by-case scenario based on implementation. Hence, it is important to consider these and include them in the design process.
 
 With an established interaction model we are ready to conceptualise the requirements for our fulfilment functions (intent handlers). 
-Separating the implementation of the back-end from the front-end is desirable for work in teams. Yet, the experience in this project showed a gradual shift from front-end to back-end also helpful in an iterative approach if the speech scenario is incomplete.
+Separating the implementation of the back-end from the front-end is desirable for work in teams. Yet, the experience in this project showed a gradual shift from front-end to back-end was also helpful in an iterative approach if the speech scenario is incomplete.

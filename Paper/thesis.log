@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  16 MAY 2018 06:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.13)  17 MAY 2018 06:46
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1576,11 +1576,7 @@ runsystem(which pygmentize && touch thesis.aex)...executed.
 runsystem(rm thesis.aex)...executed.
 
 
-(./thesis.aux
-
-LaTeX Warning: Label `interactionModel:bild' multiply defined.
-
-)
+(./thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 210.
@@ -1718,13 +1714,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<gfx/template/TUBerlin_Logo_rot_hell.pdf, id=279, 4741.715pt x 3529.185pt>
+<gfx/template/TUBerlin_Logo_rot_hell.pdf, id=259, 4741.715pt x 3529.185pt>
 File: gfx/template/TUBerlin_Logo_rot_hell.pdf Graphic file (type pdf)
 <use gfx/template/TUBerlin_Logo_rot_hell.pdf>
 Package pdftex.def Info: gfx/template/TUBerlin_Logo_rot_hell.pdf  used on input
  line 23.
 (pdftex.def)             Requested size: 62.73549pt x 46.68877pt.
-<gfx/template/aot_logo.pdf, id=280, 838.2025pt x 535.86098pt>
+<gfx/template/aot_logo.pdf, id=260, 838.2025pt x 535.86098pt>
 File: gfx/template/aot_logo.pdf Graphic file (type pdf)
 <use gfx/template/aot_logo.pdf>
 Package pdftex.def Info: gfx/template/aot_logo.pdf  used on input line 23.
@@ -1796,122 +1792,38 @@ Package babel Info: Redefining ngerman shorthand "~
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
  [5
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
  [6
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 152.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 152.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 152.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 149.
- [7]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 149.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 149.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 149.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 149.
- [8]
+(babel)             in language  on input line 152.
+ [7] [8
 
-Package xcolor Warning: Incompatible color definition on input line 156.
-
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 156.
-LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 156.
-LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 156.
-LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 156.
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 156.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsphv.fd
-File: omsphv.fd 
-)
-
-LaTeX Font Warning: Font shape `OMS/phv/bx/sc' undefined
-(Font)              using `OMS/phv/m/n' instead
-(Font)              for symbol `textbackslash' on input line 156.
-
-LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 156.
-LaTeX Font Info:    Font shape `OMS/phv/bx/sc' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 156.
-
-Package xcolor Warning: Incompatible color definition on input line 160.
-
-
-Package xcolor Warning: Incompatible color definition on input line 160.
-
-
-Package xcolor Warning: Incompatible color definition on input line 160.
-
-
-Package xcolor Warning: Incompatible color definition on input line 161.
-
-
-Package xcolor Warning: Incompatible color definition on input line 162.
-
-
-Package xcolor Warning: Incompatible color definition on input line 162.
-
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 162.
-LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 162.
-LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 162.
-LaTeX Font Info:    Try loading font information for U+mvs on input line 162.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/marvosym/umvs.fd)
-
-Package xcolor Warning: Incompatible color definition on input line 162.
-
-LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 162.
-
-Package xcolor Warning: Incompatible color definition on input line 163.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--166
-
- []
-
-) [9
-
-] [10
+]) [9] [10
 
 ] (./thesis.toc [11] [12])
 \tf@toc=\write11
@@ -1919,11 +1831,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--166
 
  [13] [14
 
-] (./thesis.lof
+]
+(./thesis.lof
 \openout6 = `thesis.pyg'.
 
-
-(./_minted-thesis/default-pyg-prefix.pygstyle)
+ (./_minted-thesis/default-pyg-prefix.pygstyle)
 (./_minted-thesis/default.pygstyle)
 (./_minted-thesis/E6013E15CCAF9B0A9FC563669848521B9F014CDCC252D787938A66F94A2C2
 8CF.pygtex
@@ -1941,13 +1853,12 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 
  [15
 
-] [16
-
-] (./thesis.lot)
+] [16] (./thesis.lot)
 \tf@lot=\write13
 \openout13 = `thesis.lot'.
 
  [17
+
 
 ] (./input/01_introduction.tex
 Chapter 1.
@@ -1965,7 +1876,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
 [5]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 249.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 251.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -1975,19 +1886,19 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ]
 Chapter 2.
 [9]
-<gfx/voicegrows.png, id=628, 102.3825pt x 254.9525pt>
+<gfx/voicegrows.png, id=600, 102.3825pt x 254.9525pt>
 File: gfx/voicegrows.png Graphic file (type png)
 <use gfx/voicegrows.png>
 Package pdftex.def Info: gfx/voicegrows.png  used on input line 87.
 (pdftex.def)             Requested size: 57.13228pt x 142.26378pt.
-<gfx/messaging_apps_social_networks.png, id=632, 651.43375pt x 412.54124pt>
+<gfx/messaging_apps_social_networks.png, id=604, 651.43375pt x 412.54124pt>
 File: gfx/messaging_apps_social_networks.png Graphic file (type png)
 <use gfx/messaging_apps_social_networks.png>
 Package pdftex.def Info: gfx/messaging_apps_social_networks.png  used on input 
 line 91.
 (pdftex.def)             Requested size: 224.64548pt x 142.26378pt.
  [10 <./gfx/voicegrows.png> <./gfx/messaging_apps_social_networks.png>]
-<gfx/Govcharts/TopTenEUeGov.png, id=649, 662.475pt x 315.1775pt>
+<gfx/Govcharts/TopTenEUeGov.png, id=620, 662.475pt x 315.1775pt>
 File: gfx/Govcharts/TopTenEUeGov.png Graphic file (type png)
 <use gfx/Govcharts/TopTenEUeGov.png>
 Package pdftex.def Info: gfx/Govcharts/TopTenEUeGov.png  used on input line 195
@@ -1995,13 +1906,13 @@ Package pdftex.def Info: gfx/Govcharts/TopTenEUeGov.png  used on input line 195
 (pdftex.def)             Requested size: 418.25368pt x 198.98608pt.
 
 [11 <./gfx/Govcharts/TopTenEUeGov.png>]
-<gfx/Govcharts/osicopy.png, id=663, 607.5498pt x 138.2766pt>
+<gfx/Govcharts/osicopy.png, id=634, 607.5498pt x 138.2766pt>
 File: gfx/Govcharts/osicopy.png Graphic file (type png)
 <use gfx/Govcharts/osicopy.png>
 Package pdftex.def Info: gfx/Govcharts/osicopy.png  used on input line 211.
 (pdftex.def)             Requested size: 418.25368pt x 95.19572pt.
  [12 <./gfx/Govcharts/osicopy.png>]
-<gfx/Govcharts/ukhilo.png, id=675, 681.54625pt x 378.41376pt>
+<gfx/Govcharts/ukhilo.png, id=647, 681.54625pt x 378.41376pt>
 File: gfx/Govcharts/ukhilo.png Graphic file (type png)
 <use gfx/Govcharts/ukhilo.png>
 Package pdftex.def Info: gfx/Govcharts/ukhilo.png  used on input line 253.
@@ -2015,22 +1926,22 @@ rk -[] on -[] the -[] digital -[]
 
 [13 <./gfx/Govcharts/ukhilo.png>] [14]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 315.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 316.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 315.
+(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 316.
  [15]
-<gfx/4Bots.png, id=727, 3013.2575pt x 1339.0025pt>
+<gfx/4Bots.png, id=699, 3013.2575pt x 1339.0025pt>
 File: gfx/4Bots.png Graphic file (type png)
 <use gfx/4Bots.png>
-Package pdftex.def Info: gfx/4Bots.png  used on input line 329.
+Package pdftex.def Info: gfx/4Bots.png  used on input line 330.
 (pdftex.def)             Requested size: 418.25368pt x 185.84499pt.
-<gfx/wienwebbot.png, id=728, 938.50626pt x 773.89125pt>
+<gfx/wienwebbot.png, id=700, 938.50626pt x 773.89125pt>
 File: gfx/wienwebbot.png Graphic file (type png)
 <use gfx/wienwebbot.png>
-Package pdftex.def Info: gfx/wienwebbot.png  used on input line 356.
+Package pdftex.def Info: gfx/wienwebbot.png  used on input line 357.
 (pdftex.def)             Requested size: 158.93843pt x 131.052pt.
 
-Overfull \hbox (19.52621pt too wide) in paragraph at lines 338--358
+Overfull \hbox (19.52621pt too wide) in paragraph at lines 339--359
 [][] 
  []
 
@@ -2104,96 +2015,97 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
-
-
-LaTeX Warning: Reference `approval' on page 18 undefined on input line 648.
-
-[18]
-Underfull \hbox (badness 2772) in paragraph at lines 657--657
+ [18]
+Underfull \hbox (badness 2772) in paragraph at lines 661--661
 []\OT1/ptm/m/n/12 Figure 2.6: |Geor-gia.gov Pop-u-lar Top-ics - Based on
  []
 
-<gfx/GeorgiaWebsiteMock4.png, id=763, 1031.855pt x 620.3175pt>
+<gfx/GeorgiaWebsiteMock4.png, id=734, 1031.855pt x 620.3175pt>
 File: gfx/GeorgiaWebsiteMock4.png Graphic file (type png)
 <use gfx/GeorgiaWebsiteMock4.png>
-Package pdftex.def Info: gfx/GeorgiaWebsiteMock4.png  used on input line 660.
+Package pdftex.def Info: gfx/GeorgiaWebsiteMock4.png  used on input line 664.
 (pdftex.def)             Requested size: 283.97356pt x 170.71652pt.
 
-Underfull \hbox (badness 3460) in paragraph at lines 668--669
+Underfull \hbox (badness 3460) in paragraph at lines 672--673
 [][]\OT1/ptm/m/n/12 Each of the avail-
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 668--669
+Underfull \hbox (badness 1028) in paragraph at lines 672--673
 \OT1/ptm/m/n/12 ments and relates to a
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 668--669
+Underfull \hbox (badness 2680) in paragraph at lines 672--673
 \OT1/ptm/m/n/12 sec-tion. At the bot-
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 668--669
+Underfull \hbox (badness 3635) in paragraph at lines 672--673
 \OT1/ptm/m/n/12 tom of the page, af-
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 668--669
+Underfull \hbox (badness 1655) in paragraph at lines 672--673
 \OT1/ptm/m/n/12 vices are lis-ted. The
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 668--669
+Underfull \hbox (badness 1735) in paragraph at lines 672--673
 \OT1/ptm/m/n/12 Skill re-flects the same
  []
 
-[19 <./gfx/GeorgiaWebsiteMock4.png>] [20]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19 <./gfx/GeorgiaWebsiteMock4.png>] [20]
 Chapter 3.
 [21
 
 ] [22]
-<gfx/350px-LeiKa.png, id=819, 351.3125pt x 138.5175pt>
+<gfx/350px-LeiKa.png, id=790, 351.3125pt x 138.5175pt>
 File: gfx/350px-LeiKa.png Graphic file (type png)
 <use gfx/350px-LeiKa.png>
-Package pdftex.def Info: gfx/350px-LeiKa.png  used on input line 751.
+Package pdftex.def Info: gfx/350px-LeiKa.png  used on input line 755.
 (pdftex.def)             Requested size: 167.87108pt x 66.19173pt.
 
-Overfull \hbox (0.57217pt too wide) in paragraph at lines 751--752
+Overfull \hbox (0.57217pt too wide) in paragraph at lines 755--756
 [][] 
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 747--752
+Underfull \hbox (badness 4378) in paragraph at lines 751--756
 []\OT1/ptm/m/n/12 Similar to an IBAN without a check-sum, LeiKa's key struc-tur
 e is di-
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 747--752
+Underfull \hbox (badness 1147) in paragraph at lines 751--756
 \OT1/ptm/m/n/12 vided into the fol-low-ing iden-ti-fi-ers put to-gether (Key Sy
 s-tem 2.0, Fig-ure []3.1[]):
  []
 
 [23 <./gfx/350px-LeiKa.png>]
-<gfx/livebot2.png, id=830, 1445.4pt x 853.1875pt>
+<gfx/livebot2.png, id=801, 1445.4pt x 853.1875pt>
 File: gfx/livebot2.png Graphic file (type png)
 <use gfx/livebot2.png>
-Package pdftex.def Info: gfx/livebot2.png  used on input line 778.
+Package pdftex.def Info: gfx/livebot2.png  used on input line 783.
 (pdftex.def)             Requested size: 397.3397pt x 234.54266pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 782--786
+Underfull \hbox (badness 10000) in paragraph at lines 787--791
 
  []
 
-<gfx/overview-serverAndContainers.png, id=835, 563.10374pt x 377.41pt>
+<gfx/overview-serverAndContainers.png, id=806, 563.10374pt x 377.41pt>
 File: gfx/overview-serverAndContainers.png Graphic file (type png)
 <use gfx/overview-serverAndContainers.png>
 Package pdftex.def Info: gfx/overview-serverAndContainers.png  used on input li
-ne 796.
+ne 801.
 (pdftex.def)             Requested size: 236.72713pt x 158.66084pt.
-[24 <./gfx/livebot2.png>]
-Underfull \hbox (badness 1789) in paragraph at lines 801--802
+[24
+
+ <./gfx/livebot2.png>]
+Underfull \hbox (badness 1789) in paragraph at lines 806--807
 \OT1/ptm/m/n/12 compatible OOP lan-guage, to
  []
 
@@ -2207,7 +2119,7 @@ Underfull \hbox (badness 1789) in paragraph at lines 801--802
 
 (./_minted-thesis/5C2B06EB5F1EE3E3CFB0BEE39A73FA569F014CDCC252D787938A66F94A2C2
 8CF.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 817--818
+Underfull \hbox (badness 10000) in paragraph at lines 822--823
 []\OT1/ptm/m/n/12 Starting with []
  []
 
@@ -2216,7 +2128,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 817--818
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.818 
+l.823 
        <./gfx/overview-serverAndContainers.png>]
 \openout6 = `thesis.pyg'.
 
@@ -2228,10 +2140,10 @@ l.818
 
 (./_minted-thesis/E6013E15CCAF9B0A9FC563669848521B9F014CDCC252D787938A66F94A2C2
 8CF.pygtex)
-<gfx/DLprim.png, id=858, 1521.685pt x 433.62pt>
+<gfx/DLprim.png, id=829, 1521.685pt x 433.62pt>
 File: gfx/DLprim.png Graphic file (type png)
 <use gfx/DLprim.png>
-Package pdftex.def Info: gfx/DLprim.png  used on input line 841.
+Package pdftex.def Info: gfx/DLprim.png  used on input line 846.
 (pdftex.def)             Requested size: 376.42575pt x 107.2667pt.
 \openout6 = `thesis.pyg'.
 
@@ -2253,10 +2165,10 @@ Package pdftex.def Info: gfx/DLprim.png  used on input line 841.
 
 (./_minted-thesis/371E5B91A7AF79E1BFFDFEA8E5A624459F014CDCC252D787938A66F94A2C2
 8CF.pygtex)
-<gfx/DLsec.png, id=859, 3356.54pt x 360.34625pt>
+<gfx/DLsec.png, id=830, 3356.54pt x 360.34625pt>
 File: gfx/DLsec.png Graphic file (type png)
 <use gfx/DLsec.png>
-Package pdftex.def Info: gfx/DLsec.png  used on input line 847.
+Package pdftex.def Info: gfx/DLsec.png  used on input line 852.
 (pdftex.def)             Requested size: 418.25368pt x 44.9002pt.
 \openout6 = `thesis.pyg'.
 
@@ -2301,63 +2213,63 @@ LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <14.4> not available
 
 (./_minted-thesis/2DC52B342652347E1203CB8BC9D52E279F014CDCC252D787938A66F94A2C2
 8CF.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 909--911
+Underfull \hbox (badness 10000) in paragraph at lines 914--916
 []\OT1/ptm/m/n/12 Tables []3.1[] and []3.2[] rep-res-ent the Solr in-dex cores 
 avail-able on
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 909--911
+Underfull \hbox (badness 1533) in paragraph at lines 914--916
 [] \OT1/ptm/m/n/12 and show the fields (child nodes)
  []
 
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 986--986
+[27] (/usr/local/texlive/2016/texmf-dist/tex/latex/marvosym/umvs.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 991--991
 []\OT1/ptm/m/n/12 No.
  []
 
 
-Overfull \hbox (6.80595pt too wide) in paragraph at lines 986--986
+Overfull \hbox (6.80595pt too wide) in paragraph at lines 991--991
 \OT1/ptm/m/n/12 Entries| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 986--986
+Underfull \hbox (badness 10000) in paragraph at lines 991--991
 [][][][][][] \OT1/ptm/m/it/10 426,
  []
 
 
-Overfull \hbox (6.50475pt too wide) in paragraph at lines 986--986
+Overfull \hbox (6.50475pt too wide) in paragraph at lines 991--991
 [][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 986--986
+Underfull \hbox (badness 10000) in paragraph at lines 991--991
 [][][][][][] \OT1/ptm/m/it/10 396,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 986--986
+Underfull \hbox (badness 10000) in paragraph at lines 991--991
 [][][][][][] \OT1/ptm/m/it/10 426,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 986--986
+Underfull \hbox (badness 10000) in paragraph at lines 991--991
 [][][][][][] \OT1/ptm/m/it/10 396,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1029--1029
+Underfull \hbox (badness 10000) in paragraph at lines 1034--1034
 []\OT1/ptm/m/n/12 No.
  []
 
 
-Overfull \hbox (6.80595pt too wide) in paragraph at lines 1029--1029
+Overfull \hbox (6.80595pt too wide) in paragraph at lines 1034--1034
 \OT1/ptm/m/n/12 Entries| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1029--1029
+Underfull \hbox (badness 10000) in paragraph at lines 1034--1034
 [][][][][][]
  []
 
@@ -2390,31 +2302,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 (./_minted-thesis/49F96038F20AA062772267B640A18D799F014CDCC252D787938A66F94A2C2
 8CF.pygtex)
-Overfull \hbox (3.19954pt too wide) in paragraph at lines 1229--1229
+Overfull \hbox (3.19954pt too wide) in paragraph at lines 1234--1234
 [][]| 
  []
 
 
-Overfull \hbox (5.01884pt too wide) in paragraph at lines 1229--1229
+Overfull \hbox (5.01884pt too wide) in paragraph at lines 1234--1234
 [][] 
  []
 
 
-Overfull \hbox (2.44405pt too wide) in paragraph at lines 1229--1229
+Overfull \hbox (2.44405pt too wide) in paragraph at lines 1234--1234
 [][]| 
  []
 
 
-Overfull \hbox (2.44405pt too wide) in paragraph at lines 1229--1229
-[][]| 
- []
-
-\openout6 = `thesis.pyg'.
-
-
-(./_minted-thesis/BC5A7D8589CCC50500BAD811F8CD7DC91F2D8067E0A256B6FCF34360A44AF
-D35.pygtex)
-Overfull \hbox (2.44405pt too wide) in paragraph at lines 1229--1229
+Overfull \hbox (2.44405pt too wide) in paragraph at lines 1234--1234
 [][]| 
  []
 
@@ -2423,7 +2326,16 @@ Overfull \hbox (2.44405pt too wide) in paragraph at lines 1229--1229
 
 (./_minted-thesis/BC5A7D8589CCC50500BAD811F8CD7DC91F2D8067E0A256B6FCF34360A44AF
 D35.pygtex)
-Overfull \hbox (2.44405pt too wide) in paragraph at lines 1229--1229
+Overfull \hbox (2.44405pt too wide) in paragraph at lines 1234--1234
+[][]| 
+ []
+
+\openout6 = `thesis.pyg'.
+
+
+(./_minted-thesis/BC5A7D8589CCC50500BAD811F8CD7DC91F2D8067E0A256B6FCF34360A44AF
+D35.pygtex)
+Overfull \hbox (2.44405pt too wide) in paragraph at lines 1234--1234
 [][]| 
  []
 
@@ -2436,10 +2348,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 (./_minted-thesis/3D15FD7AEE72877F10823C95622517979F014CDCC252D787938A66F94A2C2
 8CF.pygtex) [30]
-<gfx/chatbotnodes.png, id=907, 441.65pt x 277.035pt>
+<gfx/chatbotnodes.png, id=879, 441.65pt x 277.035pt>
 File: gfx/chatbotnodes.png Graphic file (type png)
 <use gfx/chatbotnodes.png>
-Package pdftex.def Info: gfx/chatbotnodes.png  used on input line 1260.
+Package pdftex.def Info: gfx/chatbotnodes.png  used on input line 1265.
 (pdftex.def)             Requested size: 199.16928pt x 124.93513pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2449,7 +2361,7 @@ Chapter 4.
 [33
 
 ] [34]
-LaTeX Font Info:    Try loading font information for T3+ptm on input line 1473.
+LaTeX Font Info:    Try loading font information for T3+ptm on input line 1478.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/tipa/t3ptm.fd
 File: t3ptm.fd 2001/12/31 TIPA font definitions
@@ -2486,10 +2398,10 @@ File: t3ptm.fd 2001/12/31 TIPA font definitions
 (./_minted-thesis/CB572C793C8C84679308221685659F9BC510B94EE6CCF891C78770A70AACE
 74D.pygtex)
 
-LaTeX Warning: Command \! invalid in math mode on input line 1599.
+LaTeX Warning: Command \! invalid in math mode on input line 1604.
 
 
-LaTeX Warning: Command \! invalid in math mode on input line 1599.
+LaTeX Warning: Command \! invalid in math mode on input line 1604.
 
 [37]
 \openout6 = `thesis.pyg'.
@@ -2513,7 +2425,7 @@ LaTeX Warning: Command \! invalid in math mode on input line 1599.
 (./_minted-thesis/C98F6356D0A4C1F6A3F452E5D7C6C2DEC510B94EE6CCF891C78770A70AACE
 74D.pygtex)
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1627.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1632.
 
 \openout6 = `thesis.pyg'.
 
@@ -2569,7 +2481,7 @@ LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <12> not available
 
 (./_minted-thesis/A41C18C9821F7C7D4F64DDC4ADD99C6D1F2D8067E0A256B6FCF34360A44AF
 D35.pygtex) [39]
-Underfull \hbox (badness 10000) in paragraph at lines 1726--1728
+Underfull \hbox (badness 10000) in paragraph at lines 1731--1733
 
  []
 
@@ -2578,129 +2490,129 @@ Chapter 5.
 [41
 
 ]
-<gfx/Voice-Computing-Market-Map-NextView-1.png, id=1002, 722.7pt x 542.025pt>
+<gfx/Voice-Computing-Market-Map-NextView-1.png, id=976, 722.7pt x 542.025pt>
 File: gfx/Voice-Computing-Market-Map-NextView-1.png Graphic file (type png)
 <use gfx/Voice-Computing-Market-Map-NextView-1.png>
 Package pdftex.def Info: gfx/Voice-Computing-Market-Map-NextView-1.png  used on
- input line 1824.
+ input line 1829.
 (pdftex.def)             Requested size: 199.16928pt x 149.37575pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1836--1840
+Underfull \hbox (badness 10000) in paragraph at lines 1841--1845
 
  []
 
 [42 <./gfx/Voice-Computing-Market-Map-NextView-1.png>] [43]
-<gfx/AlexaPie1.jpg, id=1032, 682.55pt x 294.09875pt>
+<gfx/AlexaPie1.jpg, id=1006, 682.55pt x 294.09875pt>
 File: gfx/AlexaPie1.jpg Graphic file (type jpg)
 <use gfx/AlexaPie1.jpg>
-Package pdftex.def Info: gfx/AlexaPie1.jpg  used on input line 1888.
+Package pdftex.def Info: gfx/AlexaPie1.jpg  used on input line 1893.
 (pdftex.def)             Requested size: 418.25368pt x 180.22119pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1892--1893
+Underfull \hbox (badness 10000) in paragraph at lines 1897--1898
 
  []
 
 [44 <./gfx/AlexaPie1.jpg>]
-<gfx/questi/0.png, id=1043, 1131.22626pt x 221.82875pt>
+<gfx/questi/0.png, id=1017, 1131.22626pt x 221.82875pt>
 File: gfx/questi/0.png Graphic file (type png)
 <use gfx/questi/0.png>
-Package pdftex.def Info: gfx/questi/0.png  used on input line 1984.
+Package pdftex.def Info: gfx/questi/0.png  used on input line 1989.
 (pdftex.def)             Requested size: 418.25368pt x 82.01779pt.
-<gfx/questi/1.png, id=1044, 1131.22626pt x 218.8175pt>
+<gfx/questi/1.png, id=1018, 1131.22626pt x 218.8175pt>
 File: gfx/questi/1.png Graphic file (type png)
 <use gfx/questi/1.png>
-Package pdftex.def Info: gfx/questi/1.png  used on input line 1992.
+Package pdftex.def Info: gfx/questi/1.png  used on input line 1997.
 (pdftex.def)             Requested size: 418.25368pt x 80.90443pt.
-<gfx/questi/2-0.png, id=1045, 1140.26pt x 218.8175pt>
+<gfx/questi/2-0.png, id=1019, 1140.26pt x 218.8175pt>
 File: gfx/questi/2-0.png Graphic file (type png)
 <use gfx/questi/2-0.png>
-Package pdftex.def Info: gfx/questi/2-0.png  used on input line 2001.
+Package pdftex.def Info: gfx/questi/2-0.png  used on input line 2006.
 (pdftex.def)             Requested size: 418.25368pt x 80.26337pt.
-<gfx/questi/2-1.png, id=1046, 1140.26pt x 253.94875pt>
+<gfx/questi/2-1.png, id=1020, 1140.26pt x 253.94875pt>
 File: gfx/questi/2-1.png Graphic file (type png)
 <use gfx/questi/2-1.png>
-Package pdftex.def Info: gfx/questi/2-1.png  used on input line 2007.
+Package pdftex.def Info: gfx/questi/2-1.png  used on input line 2012.
 (pdftex.def)             Requested size: 418.25368pt x 93.14969pt.
-<gfx/questi/q1.png, id=1047, 372.39125pt x 527.9725pt>
+<gfx/questi/q1.png, id=1021, 372.39125pt x 527.9725pt>
 File: gfx/questi/q1.png Graphic file (type png)
 <use gfx/questi/q1.png>
-Package pdftex.def Info: gfx/questi/q1.png  used on input line 2042.
+Package pdftex.def Info: gfx/questi/q1.png  used on input line 2047.
 (pdftex.def)             Requested size: 120.40636pt x 170.71652pt.
-<gfx/questi/q2.png, id=1048, 360.34625pt x 550.055pt>
+<gfx/questi/q2.png, id=1022, 360.34625pt x 550.055pt>
 File: gfx/questi/q2.png Graphic file (type png)
 <use gfx/questi/q2.png>
-Package pdftex.def Info: gfx/questi/q2.png  used on input line 2046.
+Package pdftex.def Info: gfx/questi/q2.png  used on input line 2051.
 (pdftex.def)             Requested size: 111.83813pt x 170.71652pt.
-<gfx/questi/q3.png, id=1049, 334.24875pt x 213.79875pt>
+<gfx/questi/q3.png, id=1023, 334.24875pt x 213.79875pt>
 File: gfx/questi/q3.png Graphic file (type png)
 <use gfx/questi/q3.png>
-Package pdftex.def Info: gfx/questi/q3.png  used on input line 2050.
+Package pdftex.def Info: gfx/questi/q3.png  used on input line 2055.
 (pdftex.def)             Requested size: 169.03143pt x 108.12054pt.
 
-Overfull \hbox (5.91277pt too wide) in paragraph at lines 2050--2051
+Overfull \hbox (5.91277pt too wide) in paragraph at lines 2055--2056
 [][] 
  []
 
-<gfx/questi/4.png, id=1050, 1055.945pt x 557.08125pt>
+<gfx/questi/4.png, id=1024, 1055.945pt x 557.08125pt>
 File: gfx/questi/4.png Graphic file (type png)
 <use gfx/questi/4.png>
-Package pdftex.def Info: gfx/questi/4.png  used on input line 2060.
+Package pdftex.def Info: gfx/questi/4.png  used on input line 2065.
 (pdftex.def)             Requested size: 418.25368pt x 220.65245pt.
-<gfx/questi/5-1.png, id=1051, 1048.91875pt x 222.8325pt>
+<gfx/questi/5-1.png, id=1025, 1048.91875pt x 222.8325pt>
 File: gfx/questi/5-1.png Graphic file (type png)
 <use gfx/questi/5-1.png>
-Package pdftex.def Info: gfx/questi/5-1.png  used on input line 2068.
+Package pdftex.def Info: gfx/questi/5-1.png  used on input line 2073.
 (pdftex.def)             Requested size: 418.25368pt x 88.8526pt.
-<gfx/questi/5.png, id=1052, 1067.99pt x 238.8925pt>
+<gfx/questi/5.png, id=1026, 1067.99pt x 238.8925pt>
 File: gfx/questi/5.png Graphic file (type png)
 <use gfx/questi/5.png>
-Package pdftex.def Info: gfx/questi/5.png  used on input line 2074.
+Package pdftex.def Info: gfx/questi/5.png  used on input line 2079.
 (pdftex.def)             Requested size: 418.25368pt x 93.55772pt.
 
-LaTeX Warning: Float too large for page by 38.74908pt on input line 2078.
+LaTeX Warning: Float too large for page by 38.74908pt on input line 2083.
 
-<gfx/questi/6.png, id=1053, 1155.31625pt x 260.975pt>
+<gfx/questi/6.png, id=1027, 1155.31625pt x 260.975pt>
 File: gfx/questi/6.png Graphic file (type png)
 <use gfx/questi/6.png>
-Package pdftex.def Info: gfx/questi/6.png  used on input line 2095.
+Package pdftex.def Info: gfx/questi/6.png  used on input line 2100.
 (pdftex.def)             Requested size: 418.25368pt x 94.47656pt.
-<gfx/questi/6-2.png, id=1054, 1155.31625pt x 260.975pt>
+<gfx/questi/6-2.png, id=1028, 1155.31625pt x 260.975pt>
 File: gfx/questi/6-2.png Graphic file (type png)
 <use gfx/questi/6-2.png>
-Package pdftex.def Info: gfx/questi/6-2.png  used on input line 2104.
+Package pdftex.def Info: gfx/questi/6-2.png  used on input line 2109.
 (pdftex.def)             Requested size: 418.25368pt x 94.47656pt.
-<gfx/questi/7.png, id=1055, 1157.32375pt x 606.265pt>
+<gfx/questi/7.png, id=1029, 1157.32375pt x 606.265pt>
 File: gfx/questi/7.png Graphic file (type png)
 <use gfx/questi/7.png>
-Package pdftex.def Info: gfx/questi/7.png  used on input line 2110.
+Package pdftex.def Info: gfx/questi/7.png  used on input line 2115.
 (pdftex.def)             Requested size: 418.25368pt x 219.09706pt.
-<gfx/questi/8.png, id=1056, 753.81625pt x 278.03876pt>
+<gfx/questi/8.png, id=1030, 753.81625pt x 278.03876pt>
 File: gfx/questi/8.png Graphic file (type png)
 <use gfx/questi/8.png>
-Package pdftex.def Info: gfx/questi/8.png  used on input line 2125.
+Package pdftex.def Info: gfx/questi/8.png  used on input line 2130.
 (pdftex.def)             Requested size: 292.77629pt x 107.98497pt.
-<gfx/questi/9.png, id=1057, 366.36874pt x 290.08376pt>
+<gfx/questi/9.png, id=1031, 366.36874pt x 290.08376pt>
 File: gfx/questi/9.png Graphic file (type png)
 <use gfx/questi/9.png>
-Package pdftex.def Info: gfx/questi/9.png  used on input line 2131.
+Package pdftex.def Info: gfx/questi/9.png  used on input line 2136.
 (pdftex.def)             Requested size: 121.29076pt x 96.03334pt.
-<gfx/questi/12.png, id=1058, 341.275pt x 269.005pt>
+<gfx/questi/12.png, id=1032, 341.275pt x 269.005pt>
 File: gfx/questi/12.png Graphic file (type png)
 <use gfx/questi/12.png>
-Package pdftex.def Info: gfx/questi/12.png  used on input line 2146.
+Package pdftex.def Info: gfx/questi/12.png  used on input line 2151.
 (pdftex.def)             Requested size: 125.47737pt x 98.90227pt.
-<gfx/questi/10.png, id=1059, 363.3575pt x 275.0275pt>
+<gfx/questi/10.png, id=1033, 363.3575pt x 275.0275pt>
 File: gfx/questi/10.png Graphic file (type png)
 <use gfx/questi/10.png>
-Package pdftex.def Info: gfx/questi/10.png  used on input line 2152.
+Package pdftex.def Info: gfx/questi/10.png  used on input line 2157.
 (pdftex.def)             Requested size: 125.47737pt x 94.97272pt.
-<gfx/questi/11.png, id=1060, 373.395pt x 275.0275pt>
+<gfx/questi/11.png, id=1034, 373.395pt x 275.0275pt>
 File: gfx/questi/11.png Graphic file (type png)
 <use gfx/questi/11.png>
-Package pdftex.def Info: gfx/questi/11.png  used on input line 2159.
+Package pdftex.def Info: gfx/questi/11.png  used on input line 2164.
 (pdftex.def)             Requested size: 121.29076pt x 89.33672pt.
 
-LaTeX Warning: Float too large for page by 93.90721pt on input line 2164.
+LaTeX Warning: Float too large for page by 93.90721pt on input line 2169.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2720,89 +2632,89 @@ Chapter 6.
 Underfull \vbox (badness 1721) has occurred while \output is active []
 
  [51]
-<gfx/awslogos/lexlogo.png, id=1130, 71.26625pt x 79.29625pt>
+<gfx/awslogos/lexlogo.png, id=1104, 71.26625pt x 79.29625pt>
 File: gfx/awslogos/lexlogo.png Graphic file (type png)
 <use gfx/awslogos/lexlogo.png>
-Package pdftex.def Info: gfx/awslogos/lexlogo.png  used on input line 2443.
+Package pdftex.def Info: gfx/awslogos/lexlogo.png  used on input line 2448.
 (pdftex.def)             Requested size: 31.2982pt x 34.8239pt.
 
 [52 <./gfx/awslogos/lexlogo.png>]
-<gfx/awslogos/pollylogo.png, id=1149, 88.33pt x 74.2775pt>
+<gfx/awslogos/pollylogo.png, id=1125, 88.33pt x 74.2775pt>
 File: gfx/awslogos/pollylogo.png Graphic file (type png)
 <use gfx/awslogos/pollylogo.png>
-Package pdftex.def Info: gfx/awslogos/pollylogo.png  used on input line 2464.
+Package pdftex.def Info: gfx/awslogos/pollylogo.png  used on input line 2469.
 (pdftex.def)             Requested size: 30.15984pt x 25.60762pt.
-<gfx/awslogos/transcribelogo.png, id=1154, 84.315pt x 60.4659pt>
+<gfx/awslogos/transcribelogo.png, id=1130, 84.315pt x 60.4659pt>
 File: gfx/awslogos/transcribelogo.png Graphic file (type png)
 <use gfx/awslogos/transcribelogo.png>
 Package pdftex.def Info: gfx/awslogos/transcribelogo.png  used on input line 24
-85.
+90.
 (pdftex.def)             Requested size: 39.83368pt x 28.56657pt.
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 2485--2486
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 2490--2491
 [][] 
  []
 
-<gfx/awslogos/lambdalogo.png, id=1159, 50.1875pt x 54.2025pt>
+<gfx/awslogos/lambdalogo.png, id=1135, 50.1875pt x 54.2025pt>
 File: gfx/awslogos/lambdalogo.png Graphic file (type png)
 <use gfx/awslogos/lambdalogo.png>
-Package pdftex.def Info: gfx/awslogos/lambdalogo.png  used on input line 2505.
+Package pdftex.def Info: gfx/awslogos/lambdalogo.png  used on input line 2510.
 (pdftex.def)             Requested size: 22.76259pt x 25.6075pt.
-<gfx/awslogos/dynamodb.png, id=1164, 113.42375pt x 128.48pt>
+<gfx/awslogos/dynamodb.png, id=1140, 113.42375pt x 128.48pt>
 File: gfx/awslogos/dynamodb.png Graphic file (type png)
 <use gfx/awslogos/dynamodb.png>
-Package pdftex.def Info: gfx/awslogos/dynamodb.png  used on input line 2531.
+Package pdftex.def Info: gfx/awslogos/dynamodb.png  used on input line 2536.
 (pdftex.def)             Requested size: 28.45274pt x 32.22969pt.
 [53 <./gfx/awslogos/pollylogo.png> <./gfx/awslogos/transcribelogo.png> <./gfx/a
 wslogos/lambdalogo.png>]
-<gfx/awslogos/s3.png, id=1186, 204.765pt x 247.92625pt>
+<gfx/awslogos/s3.png, id=1162, 204.765pt x 247.92625pt>
 File: gfx/awslogos/s3.png Graphic file (type png)
 <use gfx/awslogos/s3.png>
-Package pdftex.def Info: gfx/awslogos/s3.png  used on input line 2555.
+Package pdftex.def Info: gfx/awslogos/s3.png  used on input line 2560.
 (pdftex.def)             Requested size: 26.46085pt x 32.03482pt.
-<gfx/awslogos/cloudwatchlogo.png, id=1190, 82.3075pt x 59.22125pt>
+<gfx/awslogos/cloudwatchlogo.png, id=1166, 82.3075pt x 59.22125pt>
 File: gfx/awslogos/cloudwatchlogo.png Graphic file (type png)
 <use gfx/awslogos/cloudwatchlogo.png>
 Package pdftex.def Info: gfx/awslogos/cloudwatchlogo.png  used on input line 25
-76.
+81.
 (pdftex.def)             Requested size: 35.85118pt x 25.6074pt.
 
-Overfull \hbox (1.70796pt too wide) in paragraph at lines 2576--2577
+Overfull \hbox (1.70796pt too wide) in paragraph at lines 2581--2582
 [][] 
  []
 
-<gfx/awslogos/cognitologo.png, id=1194, 93.34875pt x 61.22874pt>
+<gfx/awslogos/cognitologo.png, id=1170, 93.34875pt x 61.22874pt>
 File: gfx/awslogos/cognitologo.png Graphic file (type png)
 <use gfx/awslogos/cognitologo.png>
-Package pdftex.def Info: gfx/awslogos/cognitologo.png  used on input line 2596.
+Package pdftex.def Info: gfx/awslogos/cognitologo.png  used on input line 2601.
 
 (pdftex.def)             Requested size: 35.85034pt x 24.1846pt.
 
-Overfull \hbox (1.70712pt too wide) in paragraph at lines 2596--2598
+Overfull \hbox (1.70712pt too wide) in paragraph at lines 2601--2603
 [][] 
  []
 
-<gfx/awslogos/cognitologo_old.jpg, id=1198, 140.525pt x 166.6225pt>
+<gfx/awslogos/cognitologo_old.jpg, id=1174, 140.525pt x 166.6225pt>
 File: gfx/awslogos/cognitologo_old.jpg Graphic file (type jpg)
 <use gfx/awslogos/cognitologo_old.jpg>
 Package pdftex.def Info: gfx/awslogos/cognitologo_old.jpg  used on input line 2
-624.
+629.
 (pdftex.def)             Requested size: 28.73712pt x 34.07393pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2635--2641
+Underfull \hbox (badness 10000) in paragraph at lines 2640--2646
 
  []
 
 [54 <./gfx/awslogos/dynamodb.png> <./gfx/awslogos/s3.png> <./gfx/awslogos/cloud
 watchlogo.png> <./gfx/awslogos/cognitologo.png> <./gfx/awslogos/cognitologo_old
 .jpg>]
-<gfx/workflows/awstools.png, id=1227, 2190.1825pt x 1247.66125pt>
+<gfx/workflows/awstools.png, id=1203, 2190.1825pt x 1247.66125pt>
 File: gfx/workflows/awstools.png Graphic file (type png)
 <use gfx/workflows/awstools.png>
-Package pdftex.def Info: gfx/workflows/awstools.png  used on input line 2654.
+Package pdftex.def Info: gfx/workflows/awstools.png  used on input line 2659.
 (pdftex.def)             Requested size: 421.10086pt x 239.87569pt.
 
-Overfull \hbox (2.84718pt too wide) in paragraph at lines 2654--2655
+Overfull \hbox (2.84718pt too wide) in paragraph at lines 2659--2660
  [][] 
  []
 
@@ -2828,7 +2740,7 @@ Overfull \hbox (2.84718pt too wide) in paragraph at lines 2654--2655
 74D.pygtex) [55
 
  <./gfx/workflows/awstools.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2700--2702
+Underfull \hbox (badness 10000) in paragraph at lines 2711--2713
 
  []
 
@@ -2848,7 +2760,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2700--2702
 
 (./_minted-thesis/132E2194045C27EA32ACC64D4B42F31A70CC6C1C1E15B6F542B78520F42B0
 135.pygtex) [57]
-Overfull \hbox (0.87128pt too wide) in alignment at lines 2766--2766
+Overfull \hbox (0.87128pt too wide) in alignment at lines 2777--2777
 [][][][][] 
  []
 
@@ -2856,32 +2768,32 @@ Overfull \hbox (0.87128pt too wide) in alignment at lines 2766--2766
 
 LaTeX Font Warning: Font shape `OML/ptm/bx/n' undefined
 (Font)              using `OML/ptm/m/it' instead
-(Font)              for symbol `textgreater' on input line 2791.
+(Font)              for symbol `textgreater' on input line 2802.
 
 LaTeX Font Info:    Font shape `OML/ptm/m/it' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2791.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2802.
 
 [59]
-Overfull \hbox (11.92981pt too wide) detected at line 2843
+Overfull \hbox (11.92981pt too wide) detected at line 2854
 []\OML/cmm/m/it/12 ;     []    []    []
  []
 
 
-Underfull \hbox (badness 1454) in paragraph at lines 2864--2864
+Underfull \hbox (badness 1454) in paragraph at lines 2875--2875
 [][][]\OT1/ptm/m/n/10 UK Con-di-tions and Use of Sale: []$\OT1/pcr/m/n/10 https
  : / / www\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 amazon\OML/cmm/m/it/10 :\OT1/pcr/m/
 n/10 co\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 uk / gp / help / customer /
  []
 
 
-Underfull \hbox (badness 4805) in paragraph at lines 2864--2864
+Underfull \hbox (badness 4805) in paragraph at lines 2875--2875
 \OT1/ptm/m/n/10 Other Al-exa terms and con-di-tions found here: []$\OT1/pcr/m/n
 /10 https : / / www\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 amazon\OML/cmm/m/it/10 :\O
 T1/pcr/m/n/10 co\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 uk / gp / help /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2864--2864
+Underfull \hbox (badness 10000) in paragraph at lines 2875--2875
 \OT1/pcr/m/n/10 customer / display\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 html / ref 
 = hp[]left[]v4[]sib?ie = UTF8&nodeId = 201566380&pop -[]
  []
@@ -2891,7 +2803,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2864--2864
 ]
 Chapter 7.
 [63]
-<gfx/hook.png, id=1321, 1021.8175pt x 600.2425pt>
+<gfx/hook.png, id=1299, 1021.8175pt x 600.2425pt>
 File: gfx/hook.png Graphic file (type png)
 <use gfx/hook.png>
 Package pdftex.def Info: gfx/hook.png  used on input line 97.
@@ -2909,8 +2821,8 @@ Package pdftex.def Info: gfx/hook.png  used on input line 97.
 \openout6 = `thesis.pyg'.
 
 
-(./_minted-thesis/81FB1DDD572BD179252924575A9CA8515A82DC94FB77EA8342E1841C38248
-09C.pygtex
+(./_minted-thesis/81FB1DDD572BD179252924575A9CA8511F2D8067E0A256B6FCF34360A44AF
+D35.pygtex
 LaTeX Font Info:    Try loading font information for TS1+pcr on input line 2.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
@@ -2935,7 +2847,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
 (./_minted-thesis/66A9D5C3726551F0D489CC93F39316D19F014CDCC252D787938A66F94A2C2
 8CF.pygtex)
-<gfx/interactmo.png, id=1353, 1284.8pt x 803.0pt>
+<gfx/interactmo.png, id=1331, 1284.8pt x 803.0pt>
 File: gfx/interactmo.png Graphic file (type png)
 <use gfx/interactmo.png>
 Package pdftex.def Info: gfx/interactmo.png  used on input line 237.
@@ -2970,7 +2882,7 @@ ript / Reference /
 D35.pygtex) [69
 
 ]
-<gfx/interback.png, id=1385, 1244.65pt x 241.90375pt>
+<gfx/interback.png, id=1363, 1244.65pt x 241.90375pt>
 File: gfx/interback.png Graphic file (type png)
 <use gfx/interback.png>
 Package pdftex.def Info: gfx/interback.png  used on input line 331.
@@ -3048,13 +2960,13 @@ LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
 
 (./_minted-thesis/D91866C77114A90C69F8F792DB1854BA510C2324B3B5F463BE8689D819933
 6CD.pygtex)
-<gfx/answerzpub.png, id=1432, 1045.9075pt x 1006.76125pt>
+<gfx/answerzpub.png, id=1410, 1045.9075pt x 1006.76125pt>
 File: gfx/answerzpub.png Graphic file (type png)
 <use gfx/answerzpub.png>
-Package pdftex.def Info: gfx/answerzpub.png  used on input line 478.
+Package pdftex.def Info: gfx/answerzpub.png  used on input line 477.
 (pdftex.def)             Requested size: 376.42575pt x 362.3416pt.
  [72]
-Underfull \hbox (badness 10000) in paragraph at lines 551--559
+Underfull \hbox (badness 10000) in paragraph at lines 550--558
 
  []
 
@@ -3067,14 +2979,14 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 668.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 667.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 668.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 667.
 \openout6 = `thesis.pyg'.
 
 
@@ -3172,17 +3084,17 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no , in font nullfont!
  [80]
 Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 976.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 975.
 Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no , in font nullfont!
@@ -3202,7 +3114,7 @@ Missing character: There is no , in font nullfont!
 
 (./_minted-thesis/4A3570BEA845536AF21A676119D3F205C510B94EE6CCF891C78770A70AACE
 74D.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 1030--1031
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
 
  []
 
@@ -3210,20 +3122,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 1030--1031
 Underfull \vbox (badness 1668) has occurred while \output is active []
 
  [82]
-<gfx/k-means-clustering-on-spherical-data-1v2.png, id=1526, 527.9725pt x 399.49
+<gfx/k-means-clustering-on-spherical-data-1v2.png, id=1502, 527.9725pt x 399.49
 25pt>
 File: gfx/k-means-clustering-on-spherical-data-1v2.png Graphic file (type png)
 <use gfx/k-means-clustering-on-spherical-data-1v2.png>
 Package pdftex.def Info: gfx/k-means-clustering-on-spherical-data-1v2.png  used
- on input line 1063.
+ on input line 1062.
 (pdftex.def)             Requested size: 184.9429pt x 139.93419pt.
 
-Underfull \hbox (badness 3364) in paragraph at lines 1073--1074
+Underfull \hbox (badness 3364) in paragraph at lines 1072--1073
 \OT1/ptm/m/n/12 overlapping clusters by max-im-ising inter-
  []
 
 [83 <./gfx/k-means-clustering-on-spherical-data-1v2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1090--1093
+Underfull \hbox (badness 10000) in paragraph at lines 1089--1092
 
  []
 
@@ -3232,7 +3144,7 @@ Chapter 8.
 [85
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
 [][][][]$\OT1/pcr/m/n/10 https : / / developer\OML/cmm/m/it/10 :\OT1/pcr/m/n/10
  amazon\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 com / de / docs / custom -[] skills / 
 speech -[]
@@ -3242,9 +3154,19 @@ speech -[]
 \openout6 = `thesis.pyg'.
 
 
+(./_minted-thesis/2E9A81856D0A9FB8264B03D2C71AD21F1F2D8067E0A256B6FCF34360A44AF
+D35.pygtex)
+\openout6 = `thesis.pyg'.
+
+
 (./_minted-thesis/62B1CB5C32C0184B8884576CF68C842F9F014CDCC252D787938A66F94A2C2
-8CF.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
+8CF.pygtex) [87]
+\openout6 = `thesis.pyg'.
+
+
+(./_minted-thesis/C2578BE27DD24956000185C8DA24224C1F2D8067E0A256B6FCF34360A44AF
+D35.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 [][][] []$\OT1/pcr/m/n/10 https : / / forums\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 d
 eveloper\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 amazon\OML/cmm/m/it/10 :\OT1/pcr/m/n/
 10 com / questions / 87860 / ask -[] cli -[] eu -[]
@@ -3254,13 +3176,13 @@ eveloper\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 amazon\OML/cmm/m/it/10 :\OT1/pcr/m/n/
 
 
 (./_minted-thesis/6D7B2703A6CC2C3B3B599784644723BCC510B94EE6CCF891C78770A70AACE
-74D.pygtex) [87]
+74D.pygtex)
 \openout6 = `thesis.pyg'.
 
 
 (./_minted-thesis/8A47E232EC23CCAEC6EE31263284F7C1C510B94EE6CCF891C78770A70AACE
 74D.pygtex)
-Underfull \hbox (badness 3068) in paragraph at lines 87--88
+Underfull \hbox (badness 3068) in paragraph at lines 90--91
 []\OT1/ptm/m/n/12 Once a Lambda func-tion is ready to be cre-ated, we as-sign i
 t the role
  []
@@ -3269,11 +3191,8 @@ t the role
 
 
 (./_minted-thesis/C03619F9EE204A2ED0ABEDBCD7DD1A1D9F014CDCC252D787938A66F94A2C2
-8CF.pygtex)
-Underfull \vbox (badness 1132) has occurred while \output is active []
-
- [88]
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+8CF.pygtex) [88]
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 [][]$\OT1/pcr/m/n/12 https : / / newsreel -[] edu\OML/cmm/m/it/12 :\OT1/pcr/m/n
 /12 aot\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 tu -[] berlin\OML/cmm/m/it/12 :\OT1/pc
 r/m/n/12 de / solr / d115 / select?q =
@@ -3394,7 +3313,7 @@ D35.pygtex)
 
 (./_minted-thesis/F730FDD38B133D5FC6B9101B79C0A916C510B94EE6CCF891C78770A70AACE
 74D.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 329--329
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
 [][][] []$\OT1/pcr/m/n/10 https : / / eur -[] lex\OML/cmm/m/it/10 :\OT1/pcr/m/n
 /10 europa\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 eu / legal -[] content / EN / TXT/?
 uri = CELEX :
@@ -3426,17 +3345,17 @@ D35.pygtex)
 
 (./_minted-thesis/AB577C1D08F37E6F4EFDD1AA25CD141A1F2D8067E0A256B6FCF34360A44AF
 D35.pygtex)
-Overfull \hbox (1.74632pt too wide) in paragraph at lines 401--401
+Overfull \hbox (1.74632pt too wide) in paragraph at lines 405--405
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--401
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--401
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
 [][]$\OT1/pcr/m/n/10 https : / / developer\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 ama
 zon\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 com / docs / smapi / ask -[] cli -[] comma
 nd -[]
@@ -3446,489 +3365,252 @@ nd -[]
 
 
 (./_minted-thesis/3AA2F149B4F454705B754B1BA54A8A819F014CDCC252D787938A66F94A2C2
-8CF.pygtex) [92]) (./input/05_evaluation.tex [93] [94
+8CF.pygtex) [92]
+\openout6 = `thesis.pyg'.
+
+
+(./_minted-thesis/499FF08ACDC1A19A5D5B6944318BED2E1F2D8067E0A256B6FCF34360A44AF
+D35.pygtex) [93]) (./input/05_evaluation.tex [94]
+Chapter 9.
+\openout6 = `thesis.pyg'.
+
+
+(./_minted-thesis/6F232C85F32A08915A8CA763D1E548ED1F2D8067E0A256B6FCF34360A44AF
+D35.pygtex) [95
 
 ]
-Chapter 9.
-
-Package xcolor Warning: Incompatible color definition on input line 14.
+\openout6 = `thesis.pyg'.
 
 
-Package xcolor Warning: Incompatible color definition on input line 14.
+(./_minted-thesis/00AC923AF619A88BCB56333D140CC5161F2D8067E0A256B6FCF34360A44AF
+D35.pygtex)
+\openout6 = `thesis.pyg'.
 
 
-Package xcolor Warning: Incompatible color definition on input line 14.
+(./_minted-thesis/BCF6FF51A7C76FF7FB5A911A4CC011D41F2D8067E0A256B6FCF34360A44AF
+D35.pygtex) [96] [97]
+\openout6 = `thesis.pyg'.
 
 
-Package xcolor Warning: Incompatible color definition on input line 34.
+(./_minted-thesis/A155A87379F7B369EFB64194E16AEFB61F2D8067E0A256B6FCF34360A44AF
+D35.pygtex)
+\openout6 = `thesis.pyg'.
 
 
-Package xcolor Warning: Incompatible color definition on input line 34.
-
-
-Package xcolor Warning: Incompatible color definition on input line 34.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
- []
-
-<gfx/Georgia2.png, id=1698, 302.0886pt x 791.5974pt>
+(./_minted-thesis/C9CD55F55548E3D1F2FCF3C3F8922DE21F2D8067E0A256B6FCF34360A44AF
+D35.pygtex)
+<gfx/Georgia2.png, id=1700, 302.0886pt x 791.71785pt>
 File: gfx/Georgia2.png Graphic file (type png)
 <use gfx/Georgia2.png>
-Package pdftex.def Info: gfx/Georgia2.png  used on input line 52.
-(pdftex.def)             Requested size: 223.03961pt x 584.43573pt.
-
-LaTeX Warning: Float too large for page by 17.40552pt on input line 54.
-
-
-Package xcolor Warning: Incompatible color definition on input line 81.
-
-
-Package xcolor Warning: Incompatible color definition on input line 81.
-
-
-Package xcolor Warning: Incompatible color definition on input line 81.
-
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 81.
-[95] [96 <./gfx/Georgia2.png>]
-
-Package xcolor Warning: Incompatible color definition on input line 96.
-
-
-Package xcolor Warning: Incompatible color definition on input line 96.
-
-
-Package xcolor Warning: Incompatible color definition on input line 96.
-
-
-Package xcolor Warning: Incompatible color definition on input line 98.
-
-
-Package xcolor Warning: Incompatible color definition on input line 98.
-
-
-Package xcolor Warning: Incompatible color definition on input line 98.
-
-
-Package xcolor Warning: Incompatible color definition on input line 101.
-
-
-Package xcolor Warning: Incompatible color definition on input line 101.
-
-
-Package xcolor Warning: Incompatible color definition on input line 101.
-
-
-Package xcolor Warning: Incompatible color definition on input line 105.
-
-
-Package xcolor Warning: Incompatible color definition on input line 105.
-
-
-Package xcolor Warning: Incompatible color definition on input line 105.
-
-
-Package xcolor Warning: Incompatible color definition on input line 118.
-
-
-Package xcolor Warning: Incompatible color definition on input line 118.
-
-
-Package xcolor Warning: Incompatible color definition on input line 118.
-
-[97]
-
-Package xcolor Warning: Incompatible color definition on input line 124.
-
-
-Package xcolor Warning: Incompatible color definition on input line 124.
-
-
-Package xcolor Warning: Incompatible color definition on input line 124.
-
-
-Package xcolor Warning: Incompatible color definition on input line 139.
-
-
-Package xcolor Warning: Incompatible color definition on input line 139.
-
-
-Package xcolor Warning: Incompatible color definition on input line 139.
-
-
-Underfull \hbox (badness 1412) in paragraph at lines 139--139
-\OT1/phv/m/n/10.95 time series a-b test-ing weight-ing use of cor-rel-a-tions i
-n the legal sys-
- []
-
-
-Underfull \hbox (badness 4981) in paragraph at lines 139--139
-\OT1/phv/m/n/10.95 - see how many use the skill after pub-lish-ing tiny-url.com
-/AlexaBln
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--139
-[]$\OT1/pcr/m/n/10.95 https : / / umfrage\OML/cmm/m/it/10.95 :\OT1/pcr/m/n/10.9
-5 hu -[] berlin\OML/cmm/m/it/10.95 :\OT1/pcr/m/n/10.95 de / index\OML/cmm/m/it/
-10.95 :\OT1/pcr/m/n/10.95 php / 879458?lang = en$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
-\OT1/ptm/m/n/12 https://www.wien.gv.at/bot/ http://www.vienna.at/wienbot-chatbo
-t-der-stadt-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
-\OT1/ptm/m/n/12 wien-informiert-als-virtueller-beamter/5590853 https://digitalc
-ity.wien/wienbot-
- []
-
-[98]
-
-Package xcolor Warning: Incompatible color definition on input line 200.
-
-
-Package xcolor Warning: Incompatible color definition on input line 200.
-
-
-Package xcolor Warning: Incompatible color definition on input line 200.
-
-
-Package xcolor Warning: Incompatible color definition on input line 202.
-
-
-Package xcolor Warning: Incompatible color definition on input line 202.
-
-
-Package xcolor Warning: Incompatible color definition on input line 202.
-
-
-Package xcolor Warning: Incompatible color definition on input line 211.
-
-
-Package xcolor Warning: Incompatible color definition on input line 211.
-
-
-Package xcolor Warning: Incompatible color definition on input line 211.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
-[]\OT1/phv/m/n/10.95 alexa ask geor-gia if u cant in-stall it, here is a video 
-ht-
- []
-
-[99]
-
-Package xcolor Warning: Incompatible color definition on input line 239.
-
-
-Package xcolor Warning: Incompatible color definition on input line 239.
-
-
-Package xcolor Warning: Incompatible color definition on input line 239.
-
-
-Package xcolor Warning: Incompatible color definition on input line 244.
-
-
-Package xcolor Warning: Incompatible color definition on input line 244.
-
-
-Package xcolor Warning: Incompatible color definition on input line 244.
-
-) (./input/06_conclusion.tex [100] [101] [102
+Package pdftex.def Info: gfx/Georgia2.png  used on input line 128.
+(pdftex.def)             Requested size: 223.00273pt x 584.43573pt.
+
+
+LaTeX Warning: Float too large for page by 31.90552pt on input line 130.
+
+<gfx/metrics/0.png, id=1701, 1284.8pt x 803.0pt>
+File: gfx/metrics/0.png Graphic file (type png)
+<use gfx/metrics/0.png>
+Package pdftex.def Info: gfx/metrics/0.png  used on input line 177.
+(pdftex.def)             Requested size: 376.42575pt x 235.26558pt.
+<gfx/metrics/1.png, id=1702, 1284.8pt x 803.0pt>
+File: gfx/metrics/1.png Graphic file (type png)
+<use gfx/metrics/1.png>
+Package pdftex.def Info: gfx/metrics/1.png  used on input line 185.
+(pdftex.def)             Requested size: 376.42575pt x 235.26558pt.
+<gfx/metrics/2.png, id=1703, 1284.8pt x 803.0pt>
+File: gfx/metrics/2.png Graphic file (type png)
+<use gfx/metrics/2.png>
+Package pdftex.def Info: gfx/metrics/2.png  used on input line 209.
+(pdftex.def)             Requested size: 376.42575pt x 235.26558pt.
+<gfx/metrics/3-1c.png, id=1704, 512.91624pt x 283.0575pt>
+File: gfx/metrics/3-1c.png Graphic file (type png)
+<use gfx/metrics/3-1c.png>
+Package pdftex.def Info: gfx/metrics/3-1c.png  used on input line 217.
+(pdftex.def)             Requested size: 338.78087pt x 186.96104pt.
+[98] [99 <./gfx/Georgia2.png>] [100 <./gfx/metrics/0.png> <./gfx/metrics/1.png>
+] [101 <./gfx/metrics/2.png> <./gfx/metrics/3-1c.png>])
+(./input/06_conclusion.tex [102
 
 ]
 Chapter 10.
 
-Package xcolor Warning: Incompatible color definition on input line 29.
-
-
-Package xcolor Warning: Incompatible color definition on input line 29.
-
-
-Package xcolor Warning: Incompatible color definition on input line 29.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+[]\OT1/ptm/m/n/12 Figure 10.1:
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 57.
-
-
-Package xcolor Warning: Incompatible color definition on input line 57.
-
-
-Package xcolor Warning: Incompatible color definition on input line 57.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--57
-
+Underfull \hbox (badness 2608) in paragraph at lines 12--12
+|\OT1/ptm/m/n/12 Mi-crosoft Of-fice
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--57
-
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+\OT1/ptm/m/n/12 Clippy as an
  []
 
 
-Underfull \vbox (badness 1377) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+\OT1/ptm/m/n/12 an in-ter-act-ive
+ []
 
- [103]
+<gfx/clippy.jpg, id=1736, 712.6625pt x 474.77374pt>
+File: gfx/clippy.jpg Graphic file (type jpg)
+<use gfx/clippy.jpg>
+Package pdftex.def Info: gfx/clippy.jpg  used on input line 15.
+(pdftex.def)             Requested size: 85.35826pt x 56.86172pt.
+[103
 
-Package xcolor Warning: Incompatible color definition on input line 66.
-
-
-Package xcolor Warning: Incompatible color definition on input line 66.
-
-
-Package xcolor Warning: Incompatible color definition on input line 66.
-
-
-Package xcolor Warning: Incompatible color definition on input line 82.
-
-
-Package xcolor Warning: Incompatible color definition on input line 82.
-
-
-Package xcolor Warning: Incompatible color definition on input line 82.
-
-
-Package xcolor Warning: Incompatible color definition on input line 120.
-
-
-Package xcolor Warning: Incompatible color definition on input line 120.
-
-
-Package xcolor Warning: Incompatible color definition on input line 120.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
-
+ <./gfx/clippy.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[][][] \OT1/ptm/m/n/10 More in-form-a-tion: []$\OT1/pcr/m/n/10 https : / / stac
+koverflow\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 com / questions / 42982159 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
-
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]$\OT1/pcr/m/n/10 https : / / aws\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 amazon\OML/
+cmm/m/it/10 :\OT1/pcr/m/n/10 com / about -[] aws / whats -[] new / 2017 / 09 / 
+export -[] your -[] amazon -[]
  []
 
-[104]
-
-Package xcolor Warning: Incompatible color definition on input line 130.
-
-
-Package xcolor Warning: Incompatible color definition on input line 130.
-
-
-Package xcolor Warning: Incompatible color definition on input line 130.
-
-
-Package xcolor Warning: Incompatible color definition on input line 158.
-
-
-Package xcolor Warning: Incompatible color definition on input line 158.
-
-
-Package xcolor Warning: Incompatible color definition on input line 158.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
-[]\OT1/ptm/m/n/12 Educate your-self about AWS role in gov-ern-ment, e.g. AWS pu
-b-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
-\OT1/ptm/m/n/12 lic sec-tor sum-mit, Wash-ing-ton D. C., June 20-21, 2018 []$\O
-T1/pcr/m/n/12 https : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
-\OT1/pcr/m/n/12 aws\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 amazon\OML/cmm/m/it/12 :\O
-T1/pcr/m/n/12 com / summits / public -[] sector -[] summit -[] washington -[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
-\OT1/pcr/m/n/12 dc -[] 2018/?sc[]channel = em&sc[]campaign = EMEA[]WWPS[]NL[]ci
-ty -[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
-\OT1/pcr/m/n/12 on -[] a -[] cloud -[] innovation -[] challenge[]2018051&sc[]me
-dium =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
-\OT1/pcr/m/n/12 em[]86380&sc[]content = REG[]nl[]wwps&sc[]geo = emea&sc[]countr
-y =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
-\OT1/pcr/m/n/12 de&sc[]outcome = reg&trk = em[]86380&trkCampaign = aws -[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
-\OT1/pcr/m/n/12 ps -[] summit -[] dc -[] 2018 -[] de -[] cityonacloud[]em&trk =
- aws -[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
-\OT1/pcr/m/n/12 ps -[] summit -[] dc -[] 2018 -[] de -[] cityonacloud[]em&mkt[]
-tok =
- []
-
-
-Overfull \hbox (1367.34557pt too wide) in paragraph at lines 182--185
-\OT1/pcr/m/n/12 eyJpIjoiTVdVNU9UZzVORGsyWVdFMCIsInQiOiJ5WVdNa0t1MytnVnEyUDgwXC9
-WZjdrU3ltdnhYU0t6dzYrTWxZcFlESVpCUnB5T1B0ekV1VFFRNmpyV0Nsblo5Vm5FaXhGbmV6UzhRNH
-ZtdEltWnBjNmthRXpLZTY4RVNOOGJCMjNSUjg0XC9KbGZlOVRVNmM1d1F2UlhHTFBvRDhCV2d2UzY3b
-EdYNFJNYVRyQ2NmYTg5QT09In0 %
- []
-
-[105]
-
-Package xcolor Warning: Incompatible color definition on input line 191.
-
-
-Package xcolor Warning: Incompatible color definition on input line 191.
-
-
-Package xcolor Warning: Incompatible color definition on input line 191.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 191--191
-\OT1/phv/m/n/10.95 angabe of events i went to: sum-mit and dev day (work-shop)
- []
-
-) [106] (./thesis.bbl
+[104] [105]) [106] (./thesis.bbl
 Underfull \hbox (badness 1226) in paragraph at lines 4--8
 \OT1/pcr/m/n/12 voice -[] search -[] trends/$[]\OT1/ptm/m/n/12 , April 2018.  O
 n-line Re-source. Ac-cessed on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--23
+Underfull \hbox (badness 10000) in paragraph at lines 21--27
 \OT1/pcr/m/n/12 / / www\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 statistik -[] berlin -
 [] brandenburg\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 de / publikationen /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+Underfull \hbox (badness 10000) in paragraph at lines 29--34
 []\OT1/ptm/m/n/12 George An-ders.  \Al-exa, Un-der-stand Me".  []$\OT1/pcr/m/n/
 12 https : / /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+Underfull \hbox (badness 10000) in paragraph at lines 29--34
 \OT1/pcr/m/n/12 www\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 technologyreview\OML/cmm/m
 /it/12 :\OT1/pcr/m/n/12 com / s / 608571 / alexa -[] understand -[] me/$[]\OT1/
 ptm/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 1484) in paragraph at lines 32--38
+Underfull \hbox (badness 1484) in paragraph at lines 36--42
 []\OT1/ptm/m/n/12 Annett Witte, Friedrich-Naumann-Stiftung f[]ur die Freiheit. 
  Freiheit.org -
  []
 
 
-Underfull \hbox (badness 3323) in paragraph at lines 32--38
+Underfull \hbox (badness 3323) in paragraph at lines 36--42
 \OT1/ptm/m/n/12 Digitalisierung.  []$\OT1/pcr/m/n/12 https : / / http : / / sho
 p\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 freiheit\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 or
 g / download /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--46
+Underfull \hbox (badness 10000) in paragraph at lines 44--50
 []\OT1/ptm/m/n/12 Darren Aus-tin.  How amazon's al-exa hooks you.  []$\OT1/pcr/
 m/n/12 https : / /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--46
+Underfull \hbox (badness 10000) in paragraph at lines 44--50
 \OT1/pcr/m/n/12 venturebeat\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 2017 / 06 / 
 27 / how -[] amazons -[] alexa -[] hooks -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--67
-\OT1/pcr/m/n/12 History[]of[]natural[]language[]processing&oldid = 795750930$[]
-\OT1/ptm/m/n/12 ,
+Underfull \hbox (badness 2894) in paragraph at lines 58--65
+[]\OT1/ptm/m/n/12 Brian Roemmele, Dave Is-bit-ski.  Epis-ode 019 - Look-ing bac
+k at the
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 58--65
+\OT1/ptm/m/n/12 Year in Voice and What's Next, Al-exa Dev Chat Pod-cast.  []$\O
+T1/pcr/m/n/12 https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--65
+\OT1/pcr/m/n/12 / / soundcloud\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / user -[] 
+652822799 / episode -[] 018 -[] a -[] voice -[]
+ []
+
+
+Underfull \hbox (badness 5231) in paragraph at lines 58--65
+\OT1/pcr/m/n/12 first -[] future -[] with -[] brian -[] roemmele$[]\OT1/ptm/m/n
+/12 , Novem-ber 2017.  On-line
  []
 
 [107
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 69--75
-[]\OT1/ptm/m/n/12 Wikipedia con-trib-ut-ors.  Model-view-controller.  []$\OT1/p
+Underfull \hbox (badness 10000) in paragraph at lines 67--73
+[]\OT1/ptm/m/n/12 Wikipedia con-trib-ut-ors.  His-tory of Nat-ural Lan-guage Pr
+o-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--73
+\OT1/ptm/m/n/12 cessing.  []$\OT1/pcr/m/n/12 https : / / en\OML/cmm/m/it/12 :\O
+T1/pcr/m/n/12 wikipedia\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 org / w / index\OML/cm
+m/m/it/12 :\OT1/pcr/m/n/12 php?title =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--73
+\OT1/pcr/m/n/12 History[]of[]natural[]language[]processing&oldid = 795750930$[]
+\OT1/ptm/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--81
+[]\OT1/ptm/m/n/12 Wikipedia con-trib-ut-ors.  Model-View-Controller.  []$\OT1/p
 cr/m/n/12 https : / /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--75
+Underfull \hbox (badness 10000) in paragraph at lines 75--81
 \OT1/pcr/m/n/12 en\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 wikipedia\OML/cmm/m/it/12 :
 \OT1/pcr/m/n/12 org / wiki / Model % E2 % 80 % 93view % E2 % 80 %
  []
 
 
-Underfull \hbox (badness 5446) in paragraph at lines 90--92
-[]\OT1/ptm/m/n/12 Dries Buytaert.  []$\OT1/pcr/m/n/12 https : / / dri\OML/cmm/m
-/it/12 :\OT1/pcr/m/n/12 es / think -[] beyond -[] with -[] acquia -[]
+Underfull \hbox (badness 10000) in paragraph at lines 83--89
+[]\OT1/ptm/m/n/12 Wikipedia con-trib-ut-ors.  Us-age Share of Op-er-at-ing Sys-
+
  []
 
 
-Underfull \hbox (badness 7468) in paragraph at lines 94--100
+Underfull \hbox (badness 10000) in paragraph at lines 83--89
+\OT1/ptm/m/n/12 tems.  []$\OT1/pcr/m/n/12 https : / / en\OML/cmm/m/it/12 :\OT1/
+pcr/m/n/12 wikipedia\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 org / w / index\OML/cmm/m
+/it/12 :\OT1/pcr/m/n/12 php?title =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--89
+\OT1/pcr/m/n/12 Usage[]share[]of[]operating[]systems&oldid = 825514016$[]\OT1/p
+tm/m/n/12 , 2018.
+ []
+
+
+Underfull \hbox (badness 7468) in paragraph at lines 96--102
 []\OT1/ptm/m/n/12 Eunji \Jinny" Seo.  19 Best UX Prac-tices for Build-ing Chat-
 bots.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--100
+Underfull \hbox (badness 10000) in paragraph at lines 96--102
 []$\OT1/pcr/m/n/12 https : / / chatbotsmagazine\OML/cmm/m/it/12 :\OT1/pcr/m/n/1
 2 com / 19 -[] best -[] practices -[] for -[]
- []
-
-
-Underfull \hbox (badness 5446) in paragraph at lines 113--119
-[]\OT1/ptm/m/n/12 Georg Ber-ger, RBB On-line.  Gen-iale k[]opfe - wohnen der zu
-kunft.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--119
-[]$\OT1/pcr/m/n/12 https : / / rbb -[] online\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 
-de / abenschau / archiv / 20180416[]1930 /
- []
-
-
-Underfull \hbox (badness 2894) in paragraph at lines 113--119
-\OT1/pcr/m/n/12 sahin -[] Albayrak\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 html$[]\OT1
-/ptm/m/n/12 , April 2018.  On-line Re-source. Ac-cessed on
  []
 
 
@@ -3962,21 +3644,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--151
  []
 
 
-Underfull \hbox (badness 3058) in paragraph at lines 153--158
-[]\OT1/ptm/m/n/12 Judy Gold-smith and Nich-olas Mat-tei.  Sci-ence fic-tion as 
-an in-tro-duc-
+Underfull \hbox (badness 2512) in paragraph at lines 153--158
+[]\OT1/ptm/m/n/12 Judy Gold-smith and Nich-olas Mat-tei.  Sci-ence Fic-tion as 
+an In-tro-duc-
  []
 
 
-Underfull \hbox (badness 2744) in paragraph at lines 153--158
-\OT1/ptm/m/n/12 tion to ai re-search.  []$\OT1/pcr/m/n/12 https : / / pdfs\OML/
+Underfull \hbox (badness 1215) in paragraph at lines 153--158
+\OT1/ptm/m/n/12 tion to AI Re-search.  []$\OT1/pcr/m/n/12 https : / / pdfs\OML/
 cmm/m/it/12 :\OT1/pcr/m/n/12 semanticscholar\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 o
 rg / fdd1 /
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 160--166
-[]\OT1/ptm/m/n/12 Will Knight.  Ai's lan-guage prob-lem.  []$\OT1/pcr/m/n/12 ht
+[]\OT1/ptm/m/n/12 Will Knight.  AI's Lan-guage Prob-lem.  []$\OT1/pcr/m/n/12 ht
 tps : / /
  []
 
@@ -3988,8 +3670,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 160--166
  []
 
 
-Underfull \hbox (badness 4967) in paragraph at lines 174--179
-[]\OT1/ptm/m/n/12 Luke Dorm-hel.  6 things Apple should do to fix Siri.  []$\OT
+Underfull \hbox (badness 3428) in paragraph at lines 174--179
+[]\OT1/ptm/m/n/12 Luke Dorm-hel.  6 things Apple Should Do To Fix Siri.  []$\OT
 1/pcr/m/n/12 https :
  []
 
@@ -4001,8 +3683,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--179
  []
 
 
-Underfull \hbox (badness 6493) in paragraph at lines 181--187
-[]\OT1/ptm/m/n/12 M. Ballve.  Mes-saging apps are now big-ger than so-cial net-
+Underfull \hbox (badness 2772) in paragraph at lines 181--187
+[]\OT1/ptm/m/n/12 M. Ballve.  Mes-saging Apps Are Now Big-ger Than So-cial Net-
 works.
  []
 
@@ -4046,8 +3728,8 @@ n-ter-net In
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 236--243
-\OT1/pcr/m/n/12 microsoft -[] agree -[] their -[] voice -[] assistants -[] will
- -[] talk -[] to -[]
+\OT1/pcr/m/n/12 and -[] microsoft -[] agree -[] their -[] voice -[] assistants 
+-[] will -[] talk -[]
  []
 
 
@@ -4065,13 +3747,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 245--252
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 284--291
-\OT1/pcr/m/n/12 global -[] smartphone -[] penetration -[] per -[] capita -[] si
-nce -[] 2005/$[]\OT1/ptm/m/n/12 ,
+\OT1/pcr/m/n/12 203734 / global -[] smartphone -[] penetration -[] per -[] capi
+ta -[] since -[]
  []
 
 [110]
-Underfull \hbox (badness 1590) in paragraph at lines 298--304
-[]\OT1/ptm/m/n/12 Laurie Sul-li-van.  Gart-ner pre-dicts 30 []$\OT1/pcr/m/n/12 
+Underfull \hbox (badness 1509) in paragraph at lines 298--304
+[]\OT1/ptm/m/n/12 Laurie Sul-li-van.  Gart-ner Pre-dicts 30 []$\OT1/pcr/m/n/12 
 https : / / www\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 mediapost\OML/cmm/m/it/12 :\OT
 1/pcr/m/n/12 com /
  []
@@ -4119,383 +3801,375 @@ Underfull \hbox (badness 10000) in paragraph at lines 336--342
 OML/cmm/m/it/12 :\OT1/pcr/m/n/12 org / sites / Internet / Documents /
  []
 
-
-Underfull \hbox (badness 3769) in paragraph at lines 357--362
+[111]
+Underfull \hbox (badness 3769) in paragraph at lines 364--369
 \OT1/pcr/m/n/12 day / 25 -[] of -[] 16 -[] 24s -[] use -[] voice -[] search -[]
  on -[] mobile/$[]\OT1/ptm/m/n/12 , June 2016.
  []
 
-[111]) (./input/07_appendix.tex [112]
-Chapter 11.
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{thebibliography}
+                           
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 7.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-[][][] \OT1/ptm/m/n/10 More in-form-a-tion: []$\OT1/pcr/m/n/10 https : / / stac
-koverflow\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 com / questions / 42982159 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-[]$\OT1/pcr/m/n/10 https : / / aws\OML/cmm/m/it/10 :\OT1/pcr/m/n/10 amazon\OML/
-cmm/m/it/10 :\OT1/pcr/m/n/10 com / about -[] aws / whats -[] new / 2017 / 09 / 
-export -[] your -[] amazon -[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [113
+) (./input/07_appendix.tex [112] [113
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 64--64
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 moz
 illa\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 org / en -[] US /
  []
 
-LaTeX Font Info:    Font shape `OML/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 71.
+[114
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--84
+]
+LaTeX Font Info:    Font shape `OML/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 65.
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 [][]$\OT1/pcr/m/n/12 https : / / docs\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 aws\OML/
 cmm/m/it/12 :\OT1/pcr/m/n/12 amazon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / gene
 ral /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / docs /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / docs /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/pcr/m/n/12 ask -[] overviews / alexa -[] skills -[] kit -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / docs /
  []
 
 
-Underfull \hbox (badness 1253) in paragraph at lines 133--133
+Underfull \hbox (badness 1253) in paragraph at lines 130--130
 []\OT1/ptm/m/n/12 Dialogue In-ter-face Ref-er-
  []
 
 
-Underfull \hbox (badness 2809) in paragraph at lines 133--133
+Underfull \hbox (badness 2809) in paragraph at lines 130--130
 \OT1/ptm/m/n/12 ence (Eli-cit-a-tion, Dir-ect-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / docs /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/pcr/m/n/12 custom -[] skills / dialog -[] interface -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / docs /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/pcr/m/n/12 docs / custom -[] skills / create -[] the -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/pcr/m/n/12 interaction -[] model -[] for -[] your -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []\OT1/ptm/m/n/12 SSML and Speech-cons
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / docs /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/pcr/m/n/12 custom -[] skills / speech -[] synthesis -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []\OT1/ptm/m/n/12 Slot Type Ref-er-ence
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/ptm/m/n/12 (Names, Dates, Times,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/ptm/m/n/12 Dur-a-tions, Num-bers -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/pcr/m/n/12 docs / custom -[] skills / slot -[] type -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / docs /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/pcr/m/n/12 custom -[] skills / create -[] intents -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / docs /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/pcr/m/n/12 custom -[] skills / best -[] practices -[] for -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/pcr/m/n/12 sample -[] utterances -[] and -[] custom -[] slot -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 [][]$\OT1/pcr/m/n/12 https : / / developer\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 ama
 zon\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / docs /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 \OT1/pcr/m/n/12 custom -[] skills / handle -[] requests -[] sent -[]
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [114]
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 skilltemplates /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa / alexa -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 []\OT1/ptm/m/n/12 Building Re-sponses in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa / alexa -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 \OT1/pcr/m/n/12 skills -[] kit -[] sdk -[] for -[] nodejs / wiki /
  []
 
 
-Underfull \hbox (badness 6961) in paragraph at lines 181--181
+Underfull \hbox (badness 6961) in paragraph at lines 178--178
 []\OT1/ptm/m/n/12 Alexa Cook-book (main-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa / alexa -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 []\OT1/ptm/m/n/12 Handling Re-sponses
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa / alexa -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 \OT1/pcr/m/n/12 cookbook / tree / master / handling -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 \OT1/pcr/m/n/12 alexa -[] cookbook / tree /
  []
 
 
-Overfull \hbox (32.63075pt too wide) in paragraph at lines 181--181
+Overfull \hbox (32.63075pt too wide) in paragraph at lines 178--178
 \OT1/pcr/m/n/12 0afbfcb8ddcd911e83216b4528b20f3a1628c99f /
  []
 
 
-Underfull \hbox (badness 4316) in paragraph at lines 181--181
+Underfull \hbox (badness 4316) in paragraph at lines 178--178
 []\OT1/ptm/m/n/12 Dialog Man-age-ment and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa / skill -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 \OT1/pcr/m/n/12 sample -[] nodejs -[] petmatch / tree /
  []
 
 
-Overfull \hbox (25.43076pt too wide) in paragraph at lines 181--181
+Overfull \hbox (25.43076pt too wide) in paragraph at lines 178--178
 \OT1/pcr/m/n/12 66cbb8029863444ffa7b51ce22528f29740854bc$[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa -[] js / alexa -[]
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 181--181
+Underfull \hbox (badness 4686) in paragraph at lines 178--178
 []\OT1/ptm/m/n/12 Alexa Server Sim-u-la-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa -[] js / alexa -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 matt -[] kruse / alexa -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa / alexa -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa / skill -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa / skill -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 \OT1/pcr/m/n/12 sample -[] nodejs -[] howto / blob / master /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 \OT1/pcr/m/n/12 instructions / 1 -[] voice -[] user -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa / skill -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 []\OT1/ptm/m/n/12 Multi-Turn Con-ver-sa-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa / skill -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 [][]$\OT1/pcr/m/n/12 https : / / github\OML/cmm/m/it/12 :\OT1/pcr/m/n/12 com / 
 alexa / alexa -[]
  []
 
+[115
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [115]
-[116]
+] [116]
 \openout4 = `thesis.pyg'.
 
 
@@ -4556,39 +4230,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (25.9055pt too high) has occurred while \output is active []
 
 
-[120] [121]
-Overfull \hbox (52.51527pt too wide) in paragraph at lines 546--603
-[]  
- []
-
-) [122]
+[120] [121]) [122]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A7399A59F8A4B781BA15A37315E377D8;4298.
+(rerunfilecheck)             Checksum: FA8CEE35A4DF012CDA4085046001683B;4009.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
 runsystem(rm thesis.pyg)...executed.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 282.
  ) 
 Here is how much of TeX's memory you used:
- 30850 strings out of 492985
- 583603 string characters out of 6132585
- 822475 words of memory out of 5000000
- 32820 multiletter control sequences out of 15000+600000
- 70685 words of font info for 145 fonts, out of 8000000 for 9000
+ 30855 strings out of 492985
+ 585885 string characters out of 6132585
+ 825675 words of memory out of 5000000
+ 32802 multiletter control sequences out of 15000+600000
+ 54250 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,30n,73p,2020b,1740s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not ex
@@ -4607,19 +4270,16 @@ xmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2016/texmf-dist/f
 onts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
 e1/urw/courier/ucrro8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/
-helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helveti
-c/uhvbo8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr
-8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
-/public/tipa/xipa10.pfb>
-Output written on thesis.pdf (139 pages, 4219187 bytes).
+helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/u
+tmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/tipa/xipa10.pfb>
+Output written on thesis.pdf (139 pages, 4842156 bytes).
 PDF statistics:
- 2299 PDF objects out of 2487 (max. 8388607)
- 1930 compressed objects within 20 object streams
- 530 named destinations out of 1000 (max. 500000)
- 817 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2277 PDF objects out of 2487 (max. 8388607)
+ 1902 compressed objects within 20 object streams
+ 540 named destinations out of 1000 (max. 500000)
+ 802 words of extra memory for PDF output out of 10000 (max. 10000000)
 

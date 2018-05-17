@@ -2,13 +2,17 @@
 
 \bibitem{voicelabs:trends}
 {Adam Marchick, Alpine.ai}.
-\newblock Voice search trends.
+\newblock {Voice Search Trends}.
 \newblock \url{https://alpine.ai/voice-search-trends/}, April 2018.
 \newblock Online Resource. Accessed on 16.04.2018.
 
+\bibitem{alexaDesignGuide}
+{Alexa Skills Kit Documentation}.
+\newblock \url{https://alexa.design/build}.
+
 \bibitem{voicelabs}
 {Alpine.ai (VoiceLabs)}.
-\newblock The 2017 voice report.
+\newblock {The 2017 Voice Report}.
 \newblock \url{https://alpine.ai/2017/01/15/the-2017-voice-report-by-alpine/},
   January 2017.
 \newblock Online Resource. Accessed on 16.02.2018.
@@ -46,20 +50,22 @@ Darren Austin.
 
 \bibitem{alexapc18}
 {Brian Roemmele, Dave Isbitski}.
-\newblock {Episode 018 - A Voice First Future with Brian Roemmele}.
-\newblock {\em Alexa Dev Chat Podcast}, November 2017.
+\newblock {Episode 018 - A Voice First Future with Brian Roemmele, Alexa Dev
+  Chat Podcast}, November 2017.
 \newblock Online Resource. Accessed on 13.02.2018.
 
 \bibitem{alexa_19}
 {Brian Roemmele, Dave Isbitski}.
-\newblock {Episode 019 - Looking back at the Year in Voice and What's Next}.
-\newblock {\em Alexa Dev Chat Podcast}, November 2017.
+\newblock {Episode 019 - Looking back at the Year in Voice and What's Next,
+  Alexa Dev Chat Podcast}.
+\newblock \url
+  {https://soundcloud.com/user-652822799/episode-018-a-voice-first-future-with-brian-roemmele},
+  November 2017.
 \newblock Online Resource. Accessed on 13.02.2018.
 
 \bibitem{wiki:nlp}
 Wikipedia contributors.
-\newblock History of natural language processing --- wikipedia{,} the free
-  encyclopedia.
+\newblock {History of Natural Language Processing}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=History_of_natural_language_processing&oldid=795750930},
   2017.
@@ -67,7 +73,7 @@ Wikipedia contributors.
 
 \bibitem{wiki:mvc}
 Wikipedia contributors.
-\newblock Model-view-controller.
+\newblock {Model-View-Controller}.
 \newblock
   \url{https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller},
   March 2017.
@@ -75,19 +81,15 @@ Wikipedia contributors.
 
 \bibitem{wiki:gartnerreports}
 Wikipedia contributors.
-\newblock Usage share of operating systems --- wikipedia{,} the free
-  encyclopedia.
+\newblock {Usage Share of Operating Systems}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Usage_share_of_operating_systems&oldid=825514016},
   2018.
 \newblock Online Resource. Accessed on 14.02.2018.
 
-\bibitem{alexaDesignGuide}
-Alexa Skills~Kit documentation.
-\newblock \url{https://alexa.design/build}.
-
 \bibitem{dries:georgia}
 {Dries Buytaert}.
+\newblock {Thinking Beyond with Acquia Labs, Blog Entry}.
 \newblock \url{https://dri.es/think-beyond-with-acquia-labs}.
 
 \bibitem{uxbot}
@@ -100,22 +102,20 @@ Alexa Skills~Kit documentation.
 
 \bibitem{eyal:hook}
 Nir Eyal.
-\newblock {}hooked: How to build habit-forming products.
+\newblock {Hooked: How to Build Habit-Forming Products}, November 2014.
+\newblock 1591847788.
 
 \bibitem{gartnerpreds17}
 Gartner.
-\newblock Gartner reveals top predictions for it organizations and users in
-  2017 and beyond.
+\newblock {Gartner Reveals Top Predictions for IT Organizations and Users in
+  2017 and Beyond}.
 \newblock \url{https://www.gartner.com/newsroom/id/3482117}, October 2017.
 \newblock Online Resource. Accessed on 15.02.2018.
 
 \bibitem{dai:cl}
 {Georg Berger, RBB Online}.
-\newblock Geniale köpfe - wohnen der zukunft.
-\newblock
-  \url{https://rbb-online.de/abenschau/archiv/20180416_1930/sahin-Albayrak.html},
-  April 2018.
-\newblock Online Resource. Accessed on 16.04.2018.
+\newblock Geniale köpfe - wohnen der zukunft, April 2018.
+\newblock Accessed on 16.04.2018.
 
 \bibitem{d115}
 {Gesch\"afts- und Koordinierungsstelle 115 im Bundesministerium des Innern}.
@@ -130,8 +130,8 @@ Tobias Grossmann, Regine Oberecker, Stefan Koch, and Angela D~Friederici.
 
 \bibitem{aws:lex_webinar}
 {Hira Niranjan, Amazon Web Services Webinar Channel}.
-\newblock Introducing amazon lex: Service for building voice/text chatbots -
-  march 2017 aws online tech talks.
+\newblock {Introducing Amazon Lex: Service for Building Voice/Text Chatbots -
+  March 2017 AWS Online Tech Talks}.
 \newblock \url{https://youtu.be/tAKbXEsZ4Iw?t=4m14s}, March 2017.
 \newblock Online Resource. Accessed on 15.04.2018.
 
@@ -151,14 +151,14 @@ Privacy International.
 
 \bibitem{Starwars}
 {Judy Goldsmith and Nicholas Mattei}.
-\newblock Science fiction as an introduction to ai research.
+\newblock {Science Fiction as an Introduction to AI Research}.
 \newblock
   \url{https://pdfs.semanticscholar.org/fdd1/41aac65e9c412e7804b930ca81db327c26b5.pdf},
   2011.
 
 \bibitem{mit:AILang}
 Will Knight.
-\newblock Ai’s language problem.
+\newblock {AI’s Language Problem}.
 \newblock
   \url{https://www.technologyreview.com/s/602094/ais-language-problem/}, August
   2016.
@@ -172,14 +172,14 @@ Will Knight.
 
 \bibitem{dormhell:siri}
 {Luke Dormhel}.
-\newblock {6 things Apple should do to fix Siri}.
+\newblock {6 things Apple Should Do To Fix Siri}.
 \newblock {\url{https://www.cultofmac.com/530975/6-ways-improve-siri/}},
   February 2018.
 \newblock Online Resource. Accessed on 18.02.2018.
 
 \bibitem{businsider}
 {M. Ballve}.
-\newblock Messaging apps are now bigger than social networks.
+\newblock {Messaging Apps Are Now Bigger Than Social Networks}.
 \newblock \url
   {http://www.businessinsider.de/the-messaging-app-report-2015-11?r=US&IR=T},
   September 2016.
@@ -221,7 +221,7 @@ Will Knight.
 \newblock Online Resource. Accessed on 30.04.2018.
 
 \bibitem{nilephish}
-{Mohamed Megahed and Vasilis Ververis}.
+{Mohamed Megahed}.
 \newblock {Surveillance, Blocks and Phishing in the Nile}, March 2018.
 
 \bibitem{afte:eg}
@@ -234,8 +234,8 @@ Will Knight.
 
 \bibitem{amznMicrosoft}
 {Natasha Lomas}.
-\newblock { Amazon and Microsoft agree their voice assistants will talk (to
-  each other)}.
+\newblock { Amazon and Microsoft Agree Their Voice Assistants Will Talk (To
+  Each Other)}.
 \newblock
   {\url{https://techcrunch.com/2017/08/30/amazon-and-microsoft-agree-their-voice-assistants-will-talk-to-each-other}},
   April 2018.
@@ -258,11 +258,11 @@ NBC.
 
 \bibitem{hassmannMlr:berlina}
 {Sebastian Hansmann, Marcel Müller}.
-\newblock Chatbots in egovernance, 2017.
+\newblock {Chatbots in eGovernance}, 2017.
 
 \bibitem{osman:siri}
 {Seif Osman}.
-\newblock Comparison of intelligent personal assistants, 2016.
+\newblock {Comparison of Intelligent Personal Assistants}, 2016.
 
 \bibitem{aws_website}
 Amazon~Web Services.
@@ -282,8 +282,8 @@ Amazon~Web Services.
 
 \bibitem{statistasmartphones}
 Statista.
-\newblock Smartphone user penetration as percentage of total global population
-  from 2014 to 2020.
+\newblock {Smartphone User Penetration As Percentage of Total Global Population
+  From 2014 to 2020}.
 \newblock
   \url{https://www.statista.com/statistics/203734/global-smartphone-penetration-per-capita-since-2005/},
   November 2016.
@@ -296,7 +296,7 @@ Statista.
 
 \bibitem{searchblog}
 Laurie Sullivan.
-\newblock Gartner predicts 30% of searches without a screen in 4 years.
+\newblock {Gartner Predicts 30% Of Searches Without A Screen In 4 Years}.
 \newblock
   \url{https://www.mediapost.com/publications/article/291913/gartner-predicts-30-of-searches-without-a-screen.html},
   December 2017.
@@ -304,8 +304,8 @@ Laurie Sullivan.
 
 \bibitem{medium:skillmarketing}
 Jess Thornhill.
-\newblock Nobody cares about your amazon alexa skill - so here’s how to make
-  them.
+\newblock {Nobody Cares About Your Amazon Alexa Skill - So Here’s How To Make
+  Them}.
 \newblock
   \url{https://medium.com/the-mission/nobody-cares-about-your-amazon-alexa-skill-ac14bd080327},
   July 2017.
@@ -342,8 +342,8 @@ Jess Thornhill.
 
 \bibitem{voysis:report}
 {Voysis, Retail TouchPoints}.
-\newblock {Voice grows louder: Retailers prepare for the rise of voice search
-  in mobile commerce}.
+\newblock {Voice grows louder: Retailers Prepare For The Rise of Voice Search
+  in Mobile Commerce}.
 \newblock \url{http://voysis.com/reports/voice-grows-louder-report-voysis.pdf},
   {2017}.
 \newblock Online Resource. Accessed on 29.04.2018.
@@ -352,6 +352,13 @@ Jess Thornhill.
 Joseph Weizenbaum.
 \newblock {\em Computer Power and Human Reason: From Judgment to Calculation}.
 \newblock W. H. Freeman \& Co., New York, 1976.
+
+\bibitem{lei}
+{Xinyu Lei, Guan-Hua Tu, Alex X. Liu, Kamran Al, Chi-Yu Li, Tian Xie}.
+\newblock {The Insecurity of Home Digital Voice Assistants – Amazon Alexa as
+  a Case Study}.
+\newblock \url{https://arxiv.org/pdf/1712.03327.pdf}, Apri {2018}.
+\newblock Online Resource. Accessed on 16.05.2018.
 
 \bibitem{globalwebindex}
 Katie Young.
